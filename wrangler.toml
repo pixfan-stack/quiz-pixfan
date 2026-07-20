@@ -1,0 +1,23 @@
+# Cloudflare Pages configuration for Quiz PixFan
+# See: https://developers.cloudflare.com/pages/functions/bindings/
+
+[vars]
+# Application configuration
+VITE_APP_URL = "https://quiz-pixfan.pages.dev"
+VITE_ENABLE_REMOTE_SCORES = true
+
+[build]
+command = "npm run build"
+
+pages_build_output_dir = "dist"
+
+# D1 Database binding for high scores
+[[d1_databases]]
+binding = "DB"
+database_name = "quiz-pixfan-scores"
+database_id = "106190e3-515c-48ed-869a-d4b7c72a0796"
+
+# KV Namespace binding (alternative to D1, uncomment if using KV instead)
+# [[kv_namespaces]]
+# binding = "QUIZ_SCORES"
+# id = "YOUR_KV_NAMESPACE_ID_HERE"

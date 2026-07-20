@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Quiz PixFan",
+    "tagline": "Quiz photo. Partagez votre score."
+  },
+  "nav": {
+    "home": "Accueil",
+    "language": "Langue"
+  },
+  "home": {
+    "welcome": "Choisissez un quiz pour commencer",
+    "selectQuiz": "Sélectionner un quiz",
+    "start": "Lancer le quiz",
+    "questionsCount": "{{count}} questions",
+    "bestScore": "Meilleur score : {{score}} %",
+    "settings": "Paramètres",
+    "timerMode": "Mode chronométré",
+    "antiCheat": "Anti-triche",
+    "off": "Désactivé"
+  },
+  "quiz": {
+    "progress": "Question {{current}} / {{total}}",
+    "singleChoice": "Choisissez une réponse",
+    "multipleChoice": "Sélectionnez toutes les bonnes réponses",
+    "submit": "Vérifier",
+    "next": "Question suivante",
+    "finish": "Voir les résultats",
+    "correct": "Correct !",
+    "incorrect": "Incorrect",
+    "partial": "Partiellement correct",
+    "explanation": "Explication",
+    "time": "Temps : {{seconds}} s",
+    "streak": "Série : {{count}}",
+    "timerRemaining": "{{seconds}}s restantes",
+    "tabSwitches": "{{count}} changement(s) d'onglet"
+  },
+  "result": {
+    "title": "Vos résultats",
+    "score": "Score : {{score}} / {{total}}",
+    "percentage": "{{percent}} %",
+    "timeTaken": "Temps écoulé : {{seconds}} s",
+    "timeLabel": "Temps",
+    "maxStreak": "Meilleure série : {{count}}",
+    "streakLabel": "Meilleure série",
+    "newHighScore": "Nouveau record !",
+    "previousBest": "Ancien record : {{percent}} %",
+    "message_perfect": "Score parfait ! Vous êtes un génie !",
+    "message_great": "Excellent ! Presque parfait !",
+    "message_good": "Bien joué ! Continuez à vous entraîner !",
+    "message_ok": "Pas mal — réessayez pour faire mieux !",
+    "message_low": "Continuez d'apprendre — vous ferez mieux la prochaine fois !",
+    "shareTitle": "Partager mon score",
+    "exportImage": "Exporter en image",
+    "retry": "Réessayer",
+    "backHome": "Retour aux quiz",
+    "share_twitter": "Partager sur X",
+    "share_facebook": "Partager sur Facebook",
+    "share_linkedin": "Partager sur LinkedIn",
+    "share_whatsapp": "Partager sur WhatsApp",
+    "statsLabel": "Statistiques du quiz"
+  },
+  "share": {
+    "text": "J'ai obtenu {{score}}/{{total}} ({{percent}} %) au quiz « {{quizTitle}} » ! Peux-tu battre mon score ?",
+    "hashtags": "quiz,defi"
+  },
+  "highscore": {
+    "label": "Record",
+    "none": "Aucun score"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "error": "Une erreur est survenue.",
+    "questions": "questions",
+    "accessibilitySkipToContent": "Aller au contenu principal",
+    "accessibilitySkipToMain": "Aller au quiz principal",
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair"
+  }
+}

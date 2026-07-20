@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "Quiz PixFan",
+    "tagline": "Photography quizzes. Share your score."
+  },
+  "nav": {
+    "home": "Home",
+    "language": "Language"
+  },
+  "home": {
+    "welcome": "Choose a quiz to get started",
+    "selectQuiz": "Select a quiz",
+    "start": "Start quiz",
+    "questionsCount": "{{count}} questions",
+    "bestScore": "Best score: {{score}}%",
+    "settings": "Settings",
+    "timerMode": "Timer mode",
+    "antiCheat": "Anti-cheat",
+    "off": "Off"
+  },
+  "quiz": {
+    "progress": "Question {{current}} / {{total}}",
+    "singleChoice": "Select one answer",
+    "multipleChoice": "Select all that apply",
+    "submit": "Check answer",
+    "next": "Next question",
+    "finish": "See results",
+    "correct": "Correct!",
+    "incorrect": "Incorrect",
+    "partial": "Partially correct",
+    "explanation": "Explanation",
+    "time": "Time: {{seconds}}s",
+    "streak": "Streak: {{count}}",
+    "timerRemaining": "{{seconds}}s remaining",
+    "tabSwitches": "{{count}} tab switch(es)"
+  },
+  "result": {
+    "title": "Your results",
+    "score": "Score: {{score}} / {{total}}",
+    "percentage": "{{percent}}%",
+    "timeTaken": "Time taken: {{seconds}}s",
+    "timeLabel": "Time",
+    "maxStreak": "Best streak: {{count}}",
+    "streakLabel": "Best streak",
+    "newHighScore": "New high score!",
+    "previousBest": "Previous best: {{percent}}%",
+    "message_perfect": "Perfect score! You're a genius!",
+    "message_great": "Great job! Almost perfect!",
+    "message_good": "Nice work! Keep practicing!",
+    "message_ok": "Not bad — try again to improve!",
+    "message_low": "Keep learning — you'll do better next time!",
+    "shareTitle": "Share your score",
+    "exportImage": "Export as image",
+    "retry": "Try again",
+    "backHome": "Back to quizzes",
+    "share_twitter": "Share on X",
+    "share_facebook": "Share on Facebook",
+    "share_linkedin": "Share on LinkedIn",
+    "share_whatsapp": "Share on WhatsApp",
+    "statsLabel": "Quiz statistics"
+  },
+  "share": {
+    "text": "I scored {{score}}/{{total}} ({{percent}}%) on \"{{quizTitle}}\"! Can you beat my score?",
+    "hashtags": "quiz,challenge"
+  },
+  "highscore": {
+    "label": "Best",
+    "none": "No score yet"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "questions": "questions",
+    "accessibilitySkipToContent": "Skip to main content",
+    "accessibilitySkipToMain": "Skip to quiz main",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
+  }
+}

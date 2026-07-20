@@ -1,0 +1,68 @@
+/**
+ * Quiz domain types.
+ *
+ * HOW TO ADD A NEW QUIZ / QUESTIONS:
+ * 1. Open src/data/questions.json
+ * 2. Add a new object to the top-level "quizzes" array (or append questions
+ *    to an existing quiz).
+ * 3. Every user-facing string must have both "fr" and "en" fields.
+ * 4. For single-choice: type = "single", correctAnswers has exactly one id.
+ * 5. For multiple-choice: type = "multiple", correctAnswers has one or more ids.
+ * 6. Answer "id" values must be unique within a question.
+ */
+
+/** Localized string pair (extend with more locales if needed). */
+export interface LocalizedString {
+  en: string;
+  fr: string;
+}
+
+export type QuestionType = 'single' | 'multiple';
+
+export interface Answer {
+  id: string;
+  text: LocalizedString;
+}
+
+export interface Question {
+  id: string;
+  type: QuestionType;
+  text: LocalizedString;
+  answers: Answer[];
+  /** IDs of correct answers (one for single, one+ for multiple). */
+  correctAnswers: string[];
+  /** Optional explanation shown after the user submits. */
+  explanation?: LocalizedString;
+}
+
+export interface Quiz {
+  id: string;
+  title: LocalizedString;
+  description: LocalizedString;
+  questions: Question[];
+}
+
+export interface QuizzesData {
+  quizzes: Quiz[];
+}
+
+/** Runtime result for one finished quiz attempt. */
+export interface QuizResult {
+  quizId: string;
+  correctCount: number;
+  totalQuestions: number;
+  percentage: number;
+  timeTakenSeconds: number;
+  maxStreak: number;
+  isNewHighScore: boolean;
+  previousBest: number | null;
+}
+
+/** Local high-score record stored in localStorage. */
+export interface HighScoreRecord {
+  quizId: string;
+  percentage: number;
+  correctCount: number;
+  totalQuestions: number;
+  updatedAt: string; // ISO date
+}

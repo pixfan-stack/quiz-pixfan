@@ -1,0 +1,5553 @@
+{
+  "quizzes": [
+    {
+      "id": "exposure-basics",
+      "title": {
+        "en": "Exposure Triangle",
+        "fr": "Triangle d'exposition"
+      },
+      "description": {
+        "en": "Master aperture, shutter speed and ISO — the three pillars of every photo.",
+        "fr": "Maîtrisez ouverture, vitesse d'obturation et ISO — les trois piliers de chaque photo."
+      },
+      "questions": [
+        {
+          "id": "exp-1",
+          "type": "single",
+          "text": {
+            "en": "What does a larger aperture (e.g. f/1.8 vs f/11) mainly do?",
+            "fr": "Que fait principalement une grande ouverture (ex. f/1.8 vs f/11) ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Lets in more light and reduces depth of field",
+                "fr": "Laisse entrer plus de lumière et réduit la profondeur de champ"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Makes the image sharper everywhere",
+                "fr": "Rend l'image plus nette partout"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Slows down the shutter automatically",
+                "fr": "Ralentit automatiquement l'obturateur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Removes digital noise",
+                "fr": "Supprime le bruit numérique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "A wider aperture (smaller f-number) admits more light and produces a shallower depth of field — classic for portraits with background blur.",
+            "fr": "Une grande ouverture (petit chiffre f) laisse entrer plus de lumière et réduit la profondeur de champ — idéal pour les portraits avec flou d'arrière-plan."
+          }
+        },
+        {
+          "id": "exp-2",
+          "type": "single",
+          "text": {
+            "en": "You want to freeze a sprinter mid-stride. Which shutter speed is most suitable?",
+            "fr": "Vous voulez figer un sprinteur en plein effort. Quelle vitesse d'obturation est la plus adaptée ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "1/30 s",
+                "fr": "1/30 s"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "1/60 s",
+                "fr": "1/60 s"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "1/1000 s",
+                "fr": "1/1000 s"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "2 s",
+                "fr": "2 s"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "c"
+          ],
+          "explanation": {
+            "en": "Fast action needs a short exposure time (high shutter speed) like 1/1000 s or faster to freeze motion.",
+            "fr": "L'action rapide exige un temps d'exposition court (vitesse élevée), comme 1/1000 s ou plus, pour figer le mouvement."
+          }
+        },
+        {
+          "id": "exp-3",
+          "type": "multiple",
+          "text": {
+            "en": "Which settings are part of the classic exposure triangle?",
+            "fr": "Quels réglages font partie du triangle d'exposition classique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Aperture",
+                "fr": "Ouverture"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "White balance",
+                "fr": "Balance des blancs"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Shutter speed",
+                "fr": "Vitesse d'obturation"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "ISO",
+                "fr": "ISO"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": {
+            "en": "The exposure triangle is aperture, shutter speed and ISO. White balance controls color temperature, not exposure.",
+            "fr": "Le triangle d'exposition regroupe ouverture, vitesse et ISO. La balance des blancs gère la température de couleur, pas l'exposition."
+          }
+        },
+        {
+          "id": "exp-4",
+          "type": "single",
+          "text": {
+            "en": "Raising ISO primarily helps you…",
+            "fr": "Augmenter l'ISO permet surtout de…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Shoot in lower light (at the cost of more noise)",
+                "fr": "Photographier en basse lumière (au prix de plus de bruit)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Increase optical zoom",
+                "fr": "Augmenter le zoom optique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always get a shallower depth of field",
+                "fr": "Obtenir toujours une plus faible profondeur de champ"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Disable autofocus",
+                "fr": "Désactiver l'autofocus"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Higher ISO amplifies the sensor signal so you can expose correctly in dim light, but it usually increases noise.",
+            "fr": "Un ISO élevé amplifie le signal du capteur pour exposer correctement en faible lumière, au prix souvent d'un bruit plus visible."
+          }
+        },
+        {
+          "id": "exp-5",
+          "type": "single",
+          "text": {
+            "en": "What does “stopping down” from f/2.8 to f/5.6 mean?",
+            "fr": "Que signifie « fermer » de f/2.8 à f/5.6 ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The aperture gets smaller; about 2 stops less light",
+                "fr": "L'ouverture se réduit ; environ 2 stops de lumière en moins"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The aperture gets larger; more light",
+                "fr": "L'ouverture s'agrandit ; plus de lumière"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "ISO doubles twice",
+                "fr": "L'ISO double deux fois"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The lens zooms out",
+                "fr": "L'objectif dézoome"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Each full stop halves the light. From f/2.8 → f/4 → f/5.6 is two stops smaller (less light, more depth of field).",
+            "fr": "Chaque stop plein divise la lumière par deux. De f/2.8 → f/4 → f/5.6 : deux stops de moins de lumière, plus de profondeur de champ."
+          }
+        },
+        {
+          "id": "exp-6",
+          "type": "single",
+          "text": {
+            "en": "For a silky waterfall effect, photographers often use…",
+            "fr": "Pour un effet de cascade soyeuse, les photographes utilisent souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A long shutter speed (and often a tripod / ND filter)",
+                "fr": "Une longue exposition (et souvent un trépied / filtre ND)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The highest possible ISO only",
+                "fr": "Uniquement l'ISO le plus élevé possible"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Flash at full power",
+                "fr": "Le flash à pleine puissance"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "f/1.2 on every shot",
+                "fr": "f/1.2 sur chaque photo"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Long exposures blur moving water into a smooth “silk” look. A tripod (and ND filters in daylight) keep the rest sharp.",
+            "fr": "Les poses longues floutent l'eau en mouvement pour un rendu soyeux. Un trépied (et des filtres ND en plein jour) gardent le reste net."
+          }
+        },
+        {
+          "id": "exp-7",
+          "type": "single",
+          "text": {
+            "en": "What happens when you underexpose an image significantly?",
+            "fr": "Que se passe-t-il lorsque vous sous-exposez fortement une image ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Dark areas lose detail and may become pure black",
+                "fr": "Les zones sombres perdent du détail et peuvent devenir purement noires"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The image becomes overexposed",
+                "fr": "L'image devient sur-exposée"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Colors become more saturated",
+                "fr": "Les couleurs deviennent plus saturées"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The depth of field increases",
+                "fr": "La profondeur de champ augmente"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Underexposure means insufficient light reaches the sensor, causing shadow detail loss and potential clipping to pure black.",
+            "fr": "La sous-exposition signifie qu'il y a insuffisance de lumière sur le capteur, causant une perte de détail dans les ombres et un écrêtage potentiel sur le noir pur."
+          }
+        },
+        {
+          "id": "exp-8",
+          "type": "single",
+          "text": {
+            "en": "What is the purpose of metering modes (matrix, spot, center-weighted)?",
+            "fr": "Quel est le but des modes de mesure d'exposition (matriciel, spot, pondéré centre) ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "To determine how the camera measures light for exposure settings",
+                "fr": "Pour déterminer comment l'appareil mesure la lumière pour les paramètres d'exposition"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "To adjust the autofocus points",
+                "fr": "Pour ajuster les points de autofocus"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "To change the white balance",
+                "fr": "Pour modifier la balance des blancs"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "To select the image resolution",
+                "fr": "Pour sélectionner la résolution d'image"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Metering modes tell the camera how to evaluate light: matrix evaluates the whole frame, spot measures a tiny area, center-weighted prioritizes the center.",
+            "fr": "Les modes de mesure indiquent à l'appareil comment évaluer la lumière : matriel évalue tout le cadre, spot mesure une zone minuscule, pondéré centre privilégie le centre."
+          }
+        },
+        {
+          "id": "exp-9",
+          "type": "multiple",
+          "text": {
+            "en": "Which scenarios benefit from using manual exposure mode?",
+            "fr": "Quels scénarios bénéficient de l'utilisation du mode exposition manuelle ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Studio photography with controlled lighting",
+                "fr": "Photographie en studio avec éclairage contrôlé"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Astrophotography and long exposures",
+                "fr": "Astrophotographie et longues expositions"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "When shooting consistent sequences (e.g., panoramas)",
+                "fr": "Lors de séquences cohérentes (ex. panoramas)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only in bright sunlight",
+                "fr": "Uniquement en plein soleil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Manual mode gives full control when lighting is consistent or predictable, preventing the camera from changing settings between shots.",
+            "fr": "Le mode manuel donne un contrôle total quand l'éclairage est cohérent ou prévisible, empêchant l'appareil de changer les paramètres entre les prises."
+          }
+        },
+        {
+          "id": "exp-10",
+          "type": "single",
+          "text": {
+            "en": "What does ETTR stand for in exposure technique?",
+            "fr": "Que signifie ETTR en technique d'exposition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Expose To The Right",
+                "fr": "Exposer à Droite"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Electronic Time Transfer Rate",
+                "fr": "Taux de Transfert Électronique du Temps"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Enhanced Triple Technical Resolution",
+                "fr": "Résolution Technique Triple Améliorée"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "External Trigger Timing Reference",
+                "fr": "Référence de Timing de Déclenchement Externe"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "ETTR means exposing as brightly as possible without clipping highlights, maximizing shadow detail and reducing noise in post-processing.",
+            "fr": "ETTR signifie exposer aussi brillamment que possible sans écrêter les hautes lumières, maximisant les détails dans les ombres et réduisant le bruit en post-traitement."
+          }
+        },
+        {
+          "id": "exp-11",
+          "type": "single",
+          "text": {
+            "en": "How does a neutral density (ND) filter affect exposure?",
+            "fr": "Comment un filtre à densité neutre (ND) affecte-t-il l'exposition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It reduces all wavelengths of light equally, allowing longer exposures",
+                "fr": "Il réduit toutes les longueurs d'onde également, permettant des expositions plus longues"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It increases the aperture size",
+                "fr": "Il augmente la taille de l'ouverture"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It changes the color temperature",
+                "fr": "Il modifie la température de couleur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It boosts the ISO automatically",
+                "fr": "Il augmente l'ISO automatiquement"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "ND filters act like sunglasses for your lens, reducing light intake uniformly across the spectrum, enabling slow shutter speeds even in bright conditions.",
+            "fr": "Les filtres ND agissent comme des lunettes de soleil pour votre objectif, réduisant uniformément l'entrée de lumière, permettant des vitesses d'obturation lentes même en conditions lumineuses."
+          }
+        },
+        {
+          "id": "exp-12",
+          "type": "single",
+          "text": {
+            "en": "What is the reciprocal rule in photography?",
+            "fr": "Quelle est la règle de réciprocité en photographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Shutter speed should be at least 1/focal length to avoid camera shake",
+                "fr": "La vitesse d'obturation doit être d'au moins 1/focale pour éviter le flou de bougé"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "ISO should double when aperture opens one stop",
+                "fr": "L'ISO doit doubler quand l'ouverture ouvre d'un stop"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Aperture and shutter speed are inversely proportional",
+                "fr": "L'ouverture et la vitesse d'obturation sont inversement proportionnelles"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Sensor size determines the maximum resolution",
+                "fr": "La taille du capteur détermine la résolution maximale"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "The reciprocal rule helps prevent camera shake: use a shutter speed ≥ 1/focal length (e.g., 1/50s for a 50mm lens on full-frame).",
+            "fr": "La règle de réciprocité aide à éviter le flou de bougé : utilisez une vitesse ≥ 1/focale (ex. 1/50s pour un 50mm en plein format)."
+          }
+        },
+        {
+          "id": "exp-13",
+          "type": "multiple",
+          "text": {
+            "en": "Which factors affect the depth of field in a photograph?",
+            "fr": "Quels facteurs affectent la profondeur de champ sur une photo ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Aperture size",
+                "fr": "Taille de l'ouverture"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Distance to subject",
+                "fr": "Distance au sujet"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Focal length",
+                "fr": "Focale"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "ISO setting",
+                "fr": "Réglage ISO"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Depth of field is controlled by aperture, subject distance, and focal length. ISO affects sensitivity and noise, not depth of field.",
+            "fr": "La profondeur de champ est contrôlée par l'ouverture, la distance au sujet et la focale. L'ISO affecte la sensibilité et le bruit, pas la profondeur de champ."
+          }
+        },
+        {
+          "id": "exp-14",
+          "type": "single",
+          "text": {
+            "en": "What is 'reciprocity failure' in film photography?",
+            "fr": "Qu'est-ce que l'échec de réciprocité en photographie argentique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "When extremely long or short exposures require adjustment because film doesn't respond linearly",
+                "fr": "Quand des expositions extrêmement longues ou courtes nécessitent un ajustement car le film ne répond pas linéairement"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "When the reciprocity rule breaks down in digital cameras",
+                "fr": "Quand la règle de réciprocité ne fonctionne plus sur les appareils numériques"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "When ISO settings don't match the lighting conditions",
+                "fr": "Quand les réglages ISO ne correspondent pas aux conditions d'éclairage"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "When using multiple flashes simultaneously",
+                "fr": "Quand on utilise plusieurs flashes simultanément"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Reciprocity failure occurs with very long or very short exposures where the film's response isn't proportional to light × time, requiring exposure compensation.",
+            "fr": "L'échec de réciprocité se produit avec des expositions très longues ou très courtes où la réponse du film n'est pas proportionnelle à lumière × temps, nécessitant une compensation d'exposition."
+          }
+        },
+        {
+          "id": "exp-15",
+          "type": "single",
+          "text": {
+            "en": "What does 'highlight metering' prioritize?",
+            "fr": "Que privilégie la 'mesure d'exposition des hautes lumières' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Preserving detail in bright areas, even if shadows become darker",
+                "fr": "Préserver les détails dans les zones lumineuses, même si les ombres deviennent plus sombres"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Making the entire image evenly exposed",
+                "fr": "Exposer uniformément toute l'image"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Focusing on the darkest parts of the scene",
+                "fr": "Se concentrer sur les parties les plus sombres de la scène"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Balancing flash and ambient light equally",
+                "fr": "Équilibrer également flash et lumière ambiante"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Highlight metering protects bright areas from clipping (burning out), which is often harder to recover in post than shadow detail.",
+            "fr": "La mesure des hautes lumières protège les zones lumineuses de l'écrêtage (grillon), souvent plus difficile à récupérer en post qu'un détail dans les ombres."
+          }
+        },
+        {
+          "id": "exp-16",
+          "type": "single",
+          "text": {
+            "en": "Which exposure mode allows you to set aperture while the camera chooses shutter speed?",
+            "fr": "Quel mode d'exposition vous permet de définir l'ouverture pendant que l'appareil choisit la vitesse ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Aperture Priority (A or Av)",
+                "fr": "Priorité ouverture (A ou Av)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Shutter Priority (S or Tv)",
+                "fr": "Priorité vitesse (S ou Tv)"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Program Mode (P)",
+                "fr": "Mode Programme (P)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Full Manual (M)",
+                "fr": "Mode Manuel Complet (M)"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Aperture Priority lets you control depth of field via aperture while the camera automatically calculates the correct shutter speed.",
+            "fr": "La priorité ouverture vous permet de contrôler la profondeur de champ via l'ouverture pendant que l'appareil calcule automatiquement la bonne vitesse d'obturation."
+          }
+        },
+        {
+          "id": "exp-17",
+          "type": "multiple",
+          "text": {
+            "en": "What are the effects of increasing ISO on image quality?",
+            "fr": "Quels sont les effets de l'augmentation de l'ISO sur la qualité d'image ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Increased noise/grain",
+                "fr": "Augmentation du bruit/granulation"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Reduced dynamic range",
+                "fr": "Réduction de la plage dynamique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Potential loss of color detail",
+                "fr": "Perte potentielle de détail colorimétrique"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Improved sharpness",
+                "fr": "Amélioration de la netteté"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Higher ISO amplifies signal but also noise, reduces dynamic range, and can cause color fidelity issues. Sharpness doesn't improve.",
+            "fr": "Un ISO plus élevé amplifie le signal mais aussi le bruit, réduit la plage dynamique et peut causer des problèmes de fidélité colorimétrique. La netteté ne s'améliore pas."
+          }
+        },
+        {
+          "id": "exp-18",
+          "type": "single",
+          "text": {
+            "en": "What is 'exposure compensation' used for?",
+            "fr": "À quoi sert la 'compensation d'exposition' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "To manually override the camera's automatic exposure calculation",
+                "fr": "Pour remplacer manuellement le calcul d'exposition automatique de l'appareil"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "To change the color balance",
+                "fr": "Pour modifier l'équilibre des couleurs"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "To adjust the autofocus sensitivity",
+                "fr": "Pour ajuster la sensibilité de l'autofocus"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "To modify the aspect ratio",
+                "fr": "Pour modifier le ratio d'aspect"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Exposure compensation lets you bias the camera's metering toward brighter (+) or darker (-) exposures, useful for high-key or low-key scenes.",
+            "fr": "La compensation d'exposition vous permet d'orienter la mesure vers des expositions plus claires (+) ou plus sombres (-), utile pour les scènes haute clé ou basse clé."
+          }
+        },
+        {
+          "id": "exp-19",
+          "type": "single",
+          "text": {
+            "en": "Why might a photographer use bracketing?",
+            "fr": "Pourquoi un photographe utiliserait-il le bracketing ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "To capture multiple exposures at different levels for HDR or safety",
+                "fr": "Pour capturer plusieurs expositions à différents niveaux pour HDR ou sécurité"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "To increase the camera's frame rate",
+                "fr": "Pour augmenter la fréquence de trame de l'appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "To automatically sharpen the image",
+                "fr": "Pour自动锐化图像"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "To change the lens focal length",
+                "fr": "Pour modifier la focale de l'objectif"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Bracketing takes multiple shots at different exposures, ensuring at least one is optimal and enabling HDR blending or safety nets.",
+            "fr": "Le bracketing prend plusieurs photos à différentes expositions, garantissant qu'au moins une est optimale et permettant le fusion HDR ou des sauvegardes."
+          }
+        },
+        {
+          "id": "exp-20",
+          "type": "multiple",
+          "text": {
+            "en": "Which situations typically require overexposing slightly?",
+            "fr": "Quelles situations nécessitent typiquement une surexposition légère ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Shooting against a bright background (backlit subjects)",
+                "fr": "Photographier contre un arrière-plan lumineux (sujets en contre-jour)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Snow scenes to prevent grayish snow",
+                "fr": "Scènes enneigées pour éviter une neige grisâtre"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "White flower photography",
+                "fr": "Photographie de fleurs blanches"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Night cityscapes with many lights",
+                "fr": "Paysages urbains nocturnes avec beaucoup de lumières"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Cameras tend to underexpose bright scenes. Overexposing slightly ensures whites stay white and subjects aren't silhouetted unintentionally.",
+            "fr": "Les appareils ont tendance à sous-exposer les scènes lumineuses. Surexposer légèrement garantit que les blancs restent blancs et que les sujets ne deviennent pas des silhouettes involontaires."
+          }
+        }
+      ]
+    },
+    {
+      "id": "composition",
+      "title": {
+        "en": "Composition & Framing",
+        "fr": "Composition & cadrage"
+      },
+      "description": {
+        "en": "Rules, balance and visual storytelling — how strong images are built in the frame.",
+        "fr": "Règles, équilibre et récit visuel — comment se construit une image forte dans le cadre."
+      },
+      "questions": [
+        {
+          "id": "comp-1",
+          "type": "single",
+          "text": {
+            "en": "The “rule of thirds” suggests placing the main subject…",
+            "fr": "La « règle des tiers » suggère de placer le sujet principal…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Exactly in the center every time",
+                "fr": "Exactement au centre à chaque fois"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Along imaginary lines that divide the frame into thirds, or at their intersections",
+                "fr": "Sur des lignes imaginaires qui divisent le cadre en tiers, ou à leurs intersections"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only in the bottom-right corner",
+                "fr": "Uniquement dans le coin bas droit"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Outside the frame",
+                "fr": "Hors du cadre"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Dividing the frame into a 3×3 grid and placing key elements on lines or intersections often creates a more dynamic balance than dead-center framing.",
+            "fr": "Diviser le cadre en grille 3×3 et placer les éléments clés sur les lignes ou intersections crée souvent un équilibre plus dynamique qu'un cadrage pile au centre."
+          }
+        },
+        {
+          "id": "comp-2",
+          "type": "multiple",
+          "text": {
+            "en": "Which techniques can guide the viewer’s eye through a photo?",
+            "fr": "Quelles techniques peuvent guider le regard dans une photo ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Leading lines",
+                "fr": "Lignes directrices"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Random heavy cropping with no subject",
+                "fr": "Un recadrage aléatoire sans sujet"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Framing within a frame (doorways, arches…)",
+                "fr": "Cadre dans le cadre (portes, arches…)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Strong contrast between subject and background",
+                "fr": "Fort contraste entre sujet et arrière-plan"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "c",
+            "d"
+          ],
+          "explanation": {
+            "en": "Leading lines, natural frames and contrast all help hierarchy and eye flow. Cropping without a clear subject usually weakens the image.",
+            "fr": "Lignes directrices, cadres naturels et contraste renforcent la hiérarchie visuelle. Un recadrage sans sujet clair affaiblit en général l'image."
+          }
+        },
+        {
+          "id": "comp-3",
+          "type": "single",
+          "text": {
+            "en": "What is “negative space” in photography?",
+            "fr": "Qu'est-ce que l'« espace négatif » en photographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Empty or simple areas that give the subject room to breathe",
+                "fr": "Des zones vides ou simples qui laissent le sujet respirer"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Pixels that are always pure black",
+                "fr": "Des pixels toujours purement noirs"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The memory card free space",
+                "fr": "L'espace libre sur la carte mémoire"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A filter that inverts colors",
+                "fr": "Un filtre qui inverse les couleurs"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Negative space is the uncluttered area around the subject. Used well, it emphasizes the subject and can create calm or tension.",
+            "fr": "L'espace négatif est la zone épurée autour du sujet. Bien utilisé, il met le sujet en valeur et peut créer calme ou tension."
+          }
+        },
+        {
+          "id": "comp-4",
+          "type": "single",
+          "text": {
+            "en": "Shooting from a low angle (worm’s-eye view) often makes a subject look…",
+            "fr": "Photographier en contre-plongée (vue d'en bas) donne souvent au sujet un aspect…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "More imposing or powerful",
+                "fr": "Plus imposant ou puissant"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Smaller and weaker",
+                "fr": "Plus petit et plus faible"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Completely out of focus always",
+                "fr": "Toujours complètement flou"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Exactly the same as eye level",
+                "fr": "Exactement comme à hauteur d'œil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Low angles exaggerate height and presence. High angles (bird’s-eye) often do the opposite.",
+            "fr": "La contre-plongée exagère la hauteur et la présence. La plongée produit souvent l'effet inverse."
+          }
+        },
+        {
+          "id": "comp-5",
+          "type": "single",
+          "text": {
+            "en": "In a landscape, placing the horizon on the lower third typically emphasizes…",
+            "fr": "Dans un paysage, placer l'horizon sur le tiers inférieur met surtout en valeur…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The sky",
+                "fr": "Le ciel"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The foreground / ground only, never the sky",
+                "fr": "Uniquement le sol, jamais le ciel"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The camera’s battery life",
+                "fr": "L'autonomie de la batterie"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Nothing — horizon position does not matter",
+                "fr": "Rien — la position de l'horizon n'a aucune importance"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "A low horizon gives more of the frame to the sky (dramatic clouds, color). A high horizon favors the land or foreground.",
+            "fr": "Un horizon bas laisse plus de place au ciel (nuages, couleurs). Un horizon haut favorise le sol ou le premier plan."
+          }
+        },
+        {
+          "id": "comp-6",
+          "type": "single",
+          "text": {
+            "en": "What is the 'S-curve' in composition?",
+            "fr": "Qu'est-ce que la 'courbe en S' en composition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A compositional technique using S-shaped lines to lead the eye through the image",
+                "fr": "Une technique compositionnelle utilisant des lignes en forme de S pour guider l'œil à travers l'image"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A curve in the camera lens",
+                "fr": "Une courbe dans l'objectif de l'appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The curvature of the earth visible in wide shots",
+                "fr": "La courbure de la terre visible dans les plans larges"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A post-processing filter effect",
+                "fr": "Un effet de filtre de post-traitement"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "S-curves create a natural flow through the image, leading the viewer's eye on a journey from foreground to background.",
+            "fr": "Les courbes en S créent un flux naturel à travers l'image, guidant l'œil du spectateur du premier plan à l'arrière-plan."
+          }
+        },
+        {
+          "id": "comp-7",
+          "type": "single",
+          "text": {
+            "en": "How does symmetry in photography affect the viewer?",
+            "fr": "Comment la symétrie en photographie affecte-t-elle le spectateur ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It creates a sense of balance, formality, and harmony",
+                "fr": "Elle crée un sentiment d'équilibre, de formalisme et d'harmonie"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It always confuses the viewer",
+                "fr": "Elle confond toujours le spectateur"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It makes the image appear chaotic",
+                "fr": "Elle donne à l'image un aspect chaotique"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It has no effect on perception",
+                "fr": "Elle n'a aucun effet sur la perception"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Symmetry evokes order, stability, and beauty. It's powerful in architecture, reflections, and formal portraits.",
+            "fr": "La symétrie évoque l'ordre, la stabilité et la beauté. Elle est puissante en architecture, reflets et portraits formels."
+          }
+        },
+        {
+          "id": "comp-8",
+          "type": "multiple",
+          "text": {
+            "en": "Which elements contribute to visual weight in a composition?",
+            "fr": "Quels éléments contribuent au poids visuel dans une composition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Bright colors and high contrast areas",
+                "fr": "Couleurs vives et zones de fort contraste"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Faces and eyes",
+                "fr": "Visages et yeux"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Position in the frame (bottom/heavy looks heavier)",
+                "fr": "Position dans le cadre (bas/lourd semble plus lourd)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "ISO setting",
+                "fr": "Réglage ISO"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Visual weight is influenced by color intensity, contrast, human interest (faces), and placement. ISO is technical, not compositional.",
+            "fr": "Le poids visuel est influencé par l'intensité des couleurs, le contraste, l'intérêt humain (visages) et le placement. L'ISO est technique, pas compositionnel."
+          }
+        },
+        {
+          "id": "comp-9",
+          "type": "single",
+          "text": {
+            "en": "What is 'frame within a frame' composition?",
+            "fr": "Qu'est-ce que la composition 'cadre dans le cadre' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Using natural or architectural elements to create a border around the main subject",
+                "fr": "Utiliser des éléments naturels ou architecturaux pour créer une bordure autour du sujet principal"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Taking multiple photos and framing them physically",
+                "fr": "Prendre plusieurs photos et les encadrer physiquement"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Using a picture frame as the main subject",
+                "fr": "Utiliser un cadre photo comme sujet principal"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Editing photos with digital frames",
+                "fr": "Modifier des photos avec des cadres numériques"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "This technique adds depth, focuses attention, and can provide context. Examples: windows, doorways, tree branches.",
+            "fr": "Cette technique ajoute de la profondeur, concentre l'attention et peut fournir du contexte. Exemples : fenêtres, portes, branches d'arbres."
+          }
+        },
+        {
+          "id": "comp-10",
+          "type": "single",
+          "text": {
+            "en": "Why is the 'golden spiral' considered more dynamic than the rule of thirds?",
+            "fr": "Pourquoi la 'spiral dorée' est-elle considérée plus dynamique que la règle des tiers ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It creates a flowing, organic path that draws the eye inward naturally",
+                "fr": "Elle crée un chemin fluide et organique qui attire naturellement l'œil vers l'intérieur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It's mathematically impossible to achieve",
+                "fr": "Elle est mathématiquement impossible à atteindre"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It requires special lenses",
+                "fr": "Elle nécessite des objectifs spéciaux"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It only works with wide-angle lenses",
+                "fr": "Elle ne fonctionne qu'avec des objectifs grand-angle"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Based on the Fibonacci sequence, the golden spiral creates a more natural, flowing composition that guides the eye through multiple focal points.",
+            "fr": "Basée sur la suite de Fibonacci, la spirale dorée crée une composition plus naturelle et fluide qui guide l'œil à travers plusieurs points focaux."
+          }
+        },
+        {
+          "id": "comp-11",
+          "type": "multiple",
+          "text": {
+            "en": "What are the effects of diagonal lines in composition?",
+            "fr": "Quels sont les effets des lignes diagonales en composition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Creating a sense of movement and dynamism",
+                "fr": "Créer un sentiment de mouvement et de dynamisme"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Adding tension or unease",
+                "fr": "Ajouter de la tension ou de l'inquiétude"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Leading the eye through the frame",
+                "fr": "Guider l'œil à travers le cadre"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Making the image feel static and calm",
+                "fr": "Rendre l'image statique et calme"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Diagonals introduce energy and direction, unlike horizontal (calm) or vertical (stable) lines. They're powerful for action and drama.",
+            "fr": "Les diagonales introduisent énergie et direction, contrairement aux lignes horizontales (calme) ou verticales (stabilité). Elles sont puissantes pour l'action et le drame."
+          }
+        },
+        {
+          "id": "comp-12",
+          "type": "single",
+          "text": {
+            "en": "What is 'visual tension' in photography?",
+            "fr": "Qu'est-ce que la 'tension visuelle' en photographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The dynamic interplay between opposing elements that engages the viewer",
+                "fr": "L'interaction dynamique entre éléments opposés qui engage le spectateur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "When the camera shakes during exposure",
+                "fr": "Quand l'appareil tremble pendant l'exposition"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Using too many colors in one image",
+                "fr": "Utiliser trop de couleurs dans une image"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "When the subject looks uncomfortable",
+                "fr": "Quand le sujet a l'air mal à l'aise"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Visual tension comes from imbalance, contrast, or unexpected elements, creating intrigue and keeping viewers engaged.",
+            "fr": "La tension visuelle vient du déséquilibre, du contraste ou d'éléments inattendus, créant de l'intrigue et maintenant l'engagement des spectateurs."
+          }
+        },
+        {
+          "id": "comp-13",
+          "type": "single",
+          "text": {
+            "en": "How does cropping affect composition?",
+            "fr": "Comment le recadrage affecte-t-il la composition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It can strengthen or weaken the original composition by changing framing and emphasis",
+                "fr": "Il peut renforcer ou affaiblir la composition originale en changeant le cadrage et l'emphase"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It only reduces image quality",
+                "fr": "Il ne fait que réduire la qualité d'image"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It has no impact on the final image",
+                "fr": "Il n'a aucun impact sur l'image finale"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It only works with digital photos",
+                "fr": "Il ne fonctionne qu'avec les photos numériques"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Cropping is a powerful compositional tool that can eliminate distractions, change perspective, and redirect viewer attention.",
+            "fr": "Le recadrage est un outil compositionnel puissant qui peut éliminer les distractions, changer la perspective et rediriger l'attention du spectateur."
+          }
+        },
+        {
+          "id": "comp-14",
+          "type": "multiple",
+          "text": {
+            "en": "Which compositional techniques work well for minimalist photography?",
+            "fr": "Quelles techniques compositionnelles fonctionnent bien pour la photographie minimaliste ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Negative space",
+                "fr": "Espace négatif"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Clean lines and geometric shapes",
+                "fr": "Lignes épurées et formes géométriques"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Limited color palette",
+                "fr": "Palette de couleurs limitée"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Busy, cluttered backgrounds",
+                "fr": "Arrière-plans encombrés et chargés"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Minimalism thrives on simplicity: negative space, clean geometry, and restrained colors. Clutter contradicts the style.",
+            "fr": "Le minimalisme prospère sur la simplicité : espace négatif, géométrie épurée et couleurs restrintes. L'encombrement contredit le style."
+          }
+        },
+        {
+          "id": "comp-15",
+          "type": "single",
+          "text": {
+            "en": "What is 'leading room' or 'nose room' in composition?",
+            "fr": "Qu'est-ce que la 'place de regard' ou 'espace de nez' en composition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Space in front of a subject looking or moving in a direction",
+                "fr": "Espace devant un sujet qui regarde ou se déplace dans une direction"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Room for the camera nose",
+                "fr": "Espace pour le nez de l'appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Space behind the subject",
+                "fr": "Espace derrière le sujet"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The area around the lens mount",
+                "fr": "La zone autour du monture d'objectif"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Giving a subject space to look or move into prevents a cramped feeling and feels more natural and balanced.",
+            "fr": "Donner au sujet de l'espace pour regarder ou se déplacer évite un sentiment d'encombrement et semble plus naturel et équilibré."
+          }
+        },
+        {
+          "id": "comp-16",
+          "type": "single",
+          "text": {
+            "en": "How does color contrast affect composition?",
+            "fr": "Comment le contraste de couleur affecte-t-il la composition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It draws attention to specific areas and creates visual interest",
+                "fr": "Il attire l'attention sur des zones spécifiques et crée un intérêt visuel"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It has no effect on composition",
+                "fr": "Il n'a aucun effet sur la composition"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It only affects the exposure",
+                "fr": "Il affecte uniquement l'exposition"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It makes images look blurry",
+                "fr": "Il rend les images floues"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Complementary colors or stark contrasts create focal points and guide the viewer's eye through intentional design.",
+            "fr": "Les couleurs complémentaires ou les contrastes marqués créent des points focaux et guident l'œil du spectateur par intentionnalité."
+          }
+        },
+        {
+          "id": "comp-17",
+          "type": "multiple",
+          "text": {
+            "en": "Which aspects make a composition feel 'balanced'?",
+            "fr": "Quels aspects donnent à une composition un aspect 'équilibré' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Distribution of visual weight across the frame",
+                "fr": "Distribution du poids visuel à travers le cadre"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Symmetry or asymmetrical balance",
+                "fr": "Symétrie ou équilibre asymétrique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Equal amounts of light and dark",
+                "fr": "Quantités égales de clair et sombre"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The camera's ISO setting",
+                "fr": "Le réglage ISO de l'appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b"
+          ],
+          "explanation": {
+            "en": "Balance relates to visual weight distribution, not literal symmetry. Asymmetrical balance can feel more dynamic while still being harmonious.",
+            "fr": "L'équilibre concerne la distribution du poids visuel, pas la symétrie littérale. L'équilibre asymétrique peut sembler plus dynamique tout en restant harmonieux."
+          }
+        },
+        {
+          "id": "comp-18",
+          "type": "single",
+          "text": {
+            "en": "What is the effect of shooting from a high angle?",
+            "fr": "Quel est l'effet de photographier en plongée ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The subject appears smaller, more vulnerable, or part of a larger scene",
+                "fr": "Le sujet apparaît plus petit, plus vulnérable, ou partie d'une scène plus large"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The subject looks more powerful",
+                "fr": "Le sujet semble plus puissant"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It always creates distortion",
+                "fr": "Il crée toujours une distorsion"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It has no psychological effect",
+                "fr": "Il n'a aucun effet psychologique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "High angles (looking down) can diminish a subject's presence, show context, or create a bird's-eye perspective.",
+            "fr": "Les angles hauts (regarder vers le bas) peuvent diminuer la présence d'un sujet, montrer le contexte ou créer une perspective aérienne."
+          }
+        },
+        {
+          "id": "comp-19",
+          "type": "single",
+          "text": {
+            "en": "What is 'pattern disruption' in composition?",
+            "fr": "Qu'est-ce que la 'rupture de motif' en composition ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Breaking a repetitive pattern with a contrasting element to create focus",
+                "fr": "Rompre un motif répétitif avec un élément contrastant pour créer un focus"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Destroying patterns in post-processing",
+                "fr": "Détruire des motifs en post-traitement"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Using only random elements",
+                "fr": "Utiliser uniquement des éléments aléatoires"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Avoiding all patterns",
+                "fr": "Éviter tous les motifs"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Patterns create rhythm; disrupting one draws immediate attention and creates a compelling focal point.",
+            "fr": "Les motifs créent du rythme ; en rompre un attire immédiatement l'attention et crée un point focal convaincant."
+          }
+        },
+        {
+          "id": "comp-20",
+          "type": "multiple",
+          "text": {
+            "en": "Which compositional rules can be intentionally broken for creative effect?",
+            "fr": "Quelles règles compositionnelles peuvent être intentionnellement rompues pour un effet créatif ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Rule of thirds",
+                "fr": "Règle des tiers"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Keeping horizons level",
+                "fr": "Garder les horizons nivelés"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Balanced compositions",
+                "fr": "Compositions équilibrées"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "All of the above",
+                "fr": "Tout ce qui précède"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "d"
+          ],
+          "explanation": {
+            "en": "Rules are guidelines, not laws. Breaking them intentionally can create tension, unease, or unique artistic statements.",
+            "fr": "Les règles sont des directives, pas des lois. Les rompre intentionnellement peut créer de la tension, de l'inquiétude ou des déclarations artistiques uniques."
+          }
+        }
+      ]
+    },
+    {
+      "id": "light-color",
+      "title": {
+        "en": "Light & Color",
+        "fr": "Lumière & couleur"
+      },
+      "description": {
+        "en": "Quality of light, white balance, golden hour and the mood of your images.",
+        "fr": "Qualité de lumière, balance des blancs, golden hour et ambiance de vos images."
+      },
+      "questions": [
+        {
+          "id": "light-1",
+          "type": "single",
+          "text": {
+            "en": "What is the “golden hour”?",
+            "fr": "Qu'est-ce que la « golden hour » ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The hour right after sunrise or before sunset, with soft warm light",
+                "fr": "L'heure juste après le lever ou avant le coucher du soleil, à la lumière douce et chaude"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Midday when the sun is highest",
+                "fr": "Midi, quand le soleil est au zénith"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Any time you use a gold reflector",
+                "fr": "Dès que l'on utilise un réflecteur doré"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The first hour after buying a camera",
+                "fr": "La première heure après l'achat d'un appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Near sunrise and sunset the sun is low: light is warmer, softer and more directional — flattering for portraits and landscapes.",
+            "fr": "Près du lever et du coucher, le soleil est bas : lumière plus chaude, plus douce et directionnelle — flatteuse pour portraits et paysages."
+          }
+        },
+        {
+          "id": "light-2",
+          "type": "single",
+          "text": {
+            "en": "Hard light (e.g. midday sun, bare flash) typically creates…",
+            "fr": "Une lumière dure (ex. soleil de midi, flash nu) crée typiquement…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Sharp, well-defined shadows and high contrast",
+                "fr": "Des ombres nettes, bien dessinées, et un fort contraste"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Almost no shadows at all",
+                "fr": "Presque aucune ombre"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only pastel colors",
+                "fr": "Uniquement des couleurs pastel"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Automatic black-and-white conversion",
+                "fr": "Une conversion automatique en noir et blanc"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "A small or distant light source relative to the subject produces hard light. Soft light (overcast sky, softbox) wraps around and softens shadows.",
+            "fr": "Une source petite ou lointaine par rapport au sujet produit une lumière dure. Une lumière douce (ciel couvert, softbox) enveloppe le sujet et adoucit les ombres."
+          }
+        },
+        {
+          "id": "light-3",
+          "type": "multiple",
+          "text": {
+            "en": "Which lighting situations often call for adjusting white balance?",
+            "fr": "Quelles situations de lumière demandent souvent d'ajuster la balance des blancs ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Tungsten / warm indoor bulbs",
+                "fr": "Ampoules tungstène / intérieurs chauds"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Open shade under a blue sky",
+                "fr": "Ombre ouverte sous un ciel bleu"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Mixed light (daylight + artificial)",
+                "fr": "Lumière mixte (jour + artificielle)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only when the lens cap is on",
+                "fr": "Uniquement quand le bouchon d'objectif est en place"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Different light sources have different color temperatures. Correct white balance keeps neutrals neutral and skin tones natural.",
+            "fr": "Chaque source a sa température de couleur. Une bonne balance des blancs garde les neutres neutres et les teintes de peau naturelles."
+          }
+        },
+        {
+          "id": "light-4",
+          "type": "single",
+          "text": {
+            "en": "“Backlighting” means the main light is…",
+            "fr": "Le « contre-jour » signifie que la lumière principale est…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Behind the subject, facing the camera",
+                "fr": "Derrière le sujet, face à l'appareil"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only from below the camera",
+                "fr": "Uniquement sous l'appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Turned off completely",
+                "fr": "Totalement éteinte"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Coming from the same direction as the lens always",
+                "fr": "Toujours dans l'axe de l'objectif"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Backlight can create silhouettes, rim light (glowing edges) or dreamy haze — powerful for mood and separation from the background.",
+            "fr": "Le contre-jour peut créer des silhouettes, un rim light (liseré lumineux) ou une brume douce — très utile pour l'ambiance et détacher le sujet du fond."
+          }
+        },
+        {
+          "id": "light-5",
+          "type": "single",
+          "text": {
+            "en": "Color temperature is measured in…",
+            "fr": "La température de couleur se mesure en…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Kelvin (K)",
+                "fr": "Kelvin (K)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Megapixels (MP)",
+                "fr": "Mégapixels (MP)"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "f-stops only",
+                "fr": "Uniquement en f-stops"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Decibels (dB)",
+                "fr": "Décibels (dB)"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Color temperature uses the Kelvin scale (e.g. ~5600 K daylight, ~3200 K tungsten). Cameras and editing tools use these values for white balance.",
+            "fr": "La température de couleur utilise l'échelle Kelvin (ex. ~5600 K lumière du jour, ~3200 K tungstène). Appareils et logiciels s'en servent pour la balance des blancs."
+          }
+        },
+        {
+          "id": "light-6",
+          "type": "single",
+          "text": {
+            "en": "What is 'diffused light'?",
+            "fr": "Qu'est-ce que la 'lumière diffusée' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Light scattered in many directions, creating soft shadows",
+                "fr": "Lumière dispersée dans de nombreuses directions, créant des ombres douces"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Light that only comes from above",
+                "fr": "Lumière qui vient uniquement d'en haut"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Light that changes color constantly",
+                "fr": "Lumière qui change constamment de couleur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Light produced by LEDs only",
+                "fr": "Lumière produite uniquement par des LED"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Diffused light comes from a large source or is scattered (clouds, softboxes), minimizing harsh shadows and reducing contrast.",
+            "fr": "La lumière diffusée provient d'une grande source ou est dispersée (nuages, softboxes), minimisant les ombres dures et réduisant le contraste."
+          }
+        },
+        {
+          "id": "light-7",
+          "type": "single",
+          "text": {
+            "en": "What is 'chromatic aberration'?",
+            "fr": "Qu'est-ce que l'aberration chromatique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Color fringes around high-contrast edges due to lens limitations",
+                "fr": "Franges colorées autour des contours à fort contraste dues aux limites de l'objectif"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "When colors change over time in printing",
+                "fr": "Quand les couleurs changent avec le temps à l'impression"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A camera setting for vibrant colors",
+                "fr": "Un réglage d'appareil pour des couleurs vibrantes"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The ability to see infrared light",
+                "fr": "La capacité de voir la lumière infrarouge"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Different wavelengths focus at different points, causing purple/green fringes. Quality lenses and post-processing can reduce it.",
+            "fr": "Différentes longueurs d'onde se concentrent à des points différents, causant des franges violettes/vertes. Les objectifs de qualité et le post-traitement peuvent le réduire."
+          }
+        },
+        {
+          "id": "light-8",
+          "type": "multiple",
+          "text": {
+            "en": "Which tools help control light direction?",
+            "fr": "Quels outils aident à contrôler la direction de la lumière ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Reflectors",
+                "fr": "Réflecteurs"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Flags and barn doors",
+                "fr": "Flag et battants"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Diffusers and softboxes",
+                "fr": "Diffuseurs et softboxes"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Memory cards",
+                "fr": "Cartes mémoire"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Reflectors bounce light, flags block it, diffusers/softboxes scatter it. Memory cards store data, not control light.",
+            "fr": "Les réflecteurs renvoient la lumière, les flags la bloquent, diffuseurs/softboxes la dispersent. Les cartes mémoire stockent des données, pas contrôler la lumière."
+          }
+        },
+        {
+          "id": "light-9",
+          "type": "single",
+          "text": {
+            "en": "What is 'color grading' in post-production?",
+            "fr": "Qu'est-ce que le 'color grading' en post-production ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Adjusting colors creatively to establish mood and style",
+                "fr": "Ajuster les couleurs créativement pour établir l'ambiance et le style"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Increasing the camera's megapixel count",
+                "fr": "Augmenter le nombre de mégapixels de l'appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Changing the lens focal length",
+                "fr": "Modifier la focale de l'objectif"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Adjusting the shutter speed",
+                "fr": "Ajuster la vitesse d'obturation"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Color grading shapes the visual tone and emotion of an image or film, going beyond simple white balance correction.",
+            "fr": "Le color grading façonne le ton visuel et l'émotion d'une image ou film, allant au-delà de la simple correction de balance des blancs."
+          }
+        },
+        {
+          "id": "light-10",
+          "type": "single",
+          "text": {
+            "en": "What is 'flash freeze' in photography?",
+            "fr": "Qu'est-ce que le 'flash freeze' en photographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Using a fast flash duration to freeze motion even at slower shutter speeds",
+                "fr": "Utiliser une durée de flash rapide pour figer le mouvement même à des vitesses d'obturation plus lentes"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Freezing objects with ice",
+                "fr": "Geler des objets avec de la glace"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Taking photos in freezing temperatures",
+                "fr": "Prendre des photos par températures glaciales"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A type of slow shutter technique",
+                "fr": "Un type de technique de longue exposition"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Flash duration can be as short as 1/1000s or faster, freezing motion independently of the camera's shutter speed setting.",
+            "fr": "La durée du flash peut être aussi courte que 1/1000s ou plus, figeant le mouvement indépendamment du réglage de vitesse d'obturation de l'appareil."
+          }
+        },
+        {
+          "id": "light-11",
+          "type": "multiple",
+          "text": {
+            "en": "Which scenarios benefit from using a reflector?",
+            "fr": "Quels scénarios bénéficient de l'utilisation d'un réflecteur ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Filling shadows on a subject's face outdoors",
+                "fr": "Remplir les ombres sur le visage d'un sujet en extérieur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Adding catchlights to eyes in portraits",
+                "fr": "Ajouter des reflets aux yeux dans les portraits"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Bouncing light to create softer illumination",
+                "fr": "Rebondir la lumière pour créer un éclairage plus doux"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Increasing the camera's ISO",
+                "fr": "Augmenter l'ISO de l'appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Reflectors redirect existing light to fill shadows, add eye sparkle, or soften harsh illumination without additional equipment.",
+            "fr": "Les réflecteurs redirigent la lumière existante pour remplir les ombres, ajouter des reflets aux yeux ou adoucir l'éclairage sans équipement supplémentaire."
+          }
+        },
+        {
+          "id": "light-12",
+          "type": "single",
+          "text": {
+            "en": "What is 'magenta/green color cast' commonly associated with?",
+            "fr": "Qu'est-ce que la 'teinte magenta/verte' est communément associée à ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Fluorescent lighting incorrect white balance",
+                "fr": "Éclairage fluorescent avec balance des blancs incorrecte"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Sunlight at golden hour",
+                "fr": "Lumière du soleil à la golden hour"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Black and white film",
+                "fr": "Film noir et blanc"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Digital sensor overheating",
+                "fr": "Surchauffe du capteur numérique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Fluorescent lights often have uneven spectra causing green or magenta casts. Custom white balance or presets fix this.",
+            "fr": "Les lumières fluorescentes ont souvent des spectres inégaux causant des teintes vertes ou magenta. La balance des blancs personnalisée ou les préréglages corrigent cela."
+          }
+        },
+        {
+          "id": "light-13",
+          "type": "single",
+          "text": {
+            "en": "What is 'light painting'?",
+            "fr": "Qu'est-ce que la 'peinture lumineuse' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Creating images by moving light sources during long exposures",
+                "fr": "Créer des images en déplaçant des sources lumineuses pendant de longues expositions"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Painting walls with colored lights",
+                "fr": "Peindre des murs avec des lumières colorées"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Using paint to cover camera lenses",
+                "fr": "Utiliser de la peinture pour couvrir les objectifs"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A digital filter effect",
+                "fr": "Un effet de filtre numérique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Light painting uses long exposures in darkness to 'draw' with light sources like flashlights, LEDs, or fire.",
+            "fr": "La peinture lumineuse utilise de longues expositions dans l'obscurité pour 'dessiner' avec des sources lumineuses comme lampes torches, LED ou feu."
+          }
+        },
+        {
+          "id": "light-14",
+          "type": "multiple",
+          "text": {
+            "en": "What are the characteristics of 'blue hour' photography?",
+            "fr": "Quelles sont les caractéristiques de la photographie de 'l'heure bleue' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Deep blue tones in the sky",
+                "fr": "Tonautés bleu profond dans le ciel"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Occurs just before sunrise or after sunset",
+                "fr": "Se produit juste avant le lever ou après le coucher du soleil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Artificial lights become prominent against the blue backdrop",
+                "fr": "Les lumières artificielles deviennent proéminentes contre le fond bleu"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Requires midday sunlight",
+                "fr": "Nécessite la lumière du soleil de midi"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Blue hour offers a magical, serene quality with cool tones and the contrast between natural blue and warm artificial lights.",
+            "fr": "L'heure bleue offre une qualité magique et sereine avec des tons froids et le contraste entre le bleu naturel et les lumières artificielles chaudes."
+          }
+        },
+        {
+          "id": "light-15",
+          "type": "single",
+          "text": {
+            "en": "What is 'HDR' in photography?",
+            "fr": "Qu'est-ce que le 'HDR' en photographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "High Dynamic Range: combining multiple exposures to capture detail in shadows and highlights",
+                "fr": "Gamme Dynamique Élevée : combiner plusieurs expositions pour capturer les détails dans les ombres et les hautes lumières"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "High Definition Resolution: a camera sensor type",
+                "fr": "Résolution Haute Définition : un type de capteur d'appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Horizontal Directional Reflection: a lens property",
+                "fr": "Réflexion Directionnelle Horizontale : une propriété d'objectif"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Hybrid Digital Recording: a video format",
+                "fr": "Enregistrement Numérique Hybride : un format vidéo"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "HDR merges bracketed exposures to retain detail across extreme light ranges beyond what a single shot can capture.",
+            "fr": "Le HDR fusionne des expositions bracketées pour conserver les détails à travers des gammes de lumière extrêmes au-delà de ce qu'une seule prise peut capturer."
+          }
+        },
+        {
+          "id": "light-16",
+          "type": "single",
+          "text": {
+            "en": "What does 'color temperature' below 3200K typically produce?",
+            "fr": "Qu'est-ce qu'une 'température de couleur' inférieure à 3200K produit typiquement ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Warm, orange-red tones (like candlelight)",
+                "fr": "Tonautés chaudes, orange-rouge (comme la lumière de bougie)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Cool blue tones",
+                "fr": "Tonautés bleues froides"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Pure white light",
+                "fr": "Lumière blanche pure"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Black and white only",
+                "fr": "Uniquement noir et blanc"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Lower Kelvin values (<3200K) are warm/orange (candlelight, tungsten), while higher values (>5600K) are cool/blue (shade, overcast).",
+            "fr": "Les valeurs Kelvin basses (<3200K) sont chaudes/orange (bougie, tungstène), tandis que les valeurs élevées (>5600K) sont froides/bleues (ombre, couvert)."
+          }
+        },
+        {
+          "id": "light-17",
+          "type": "multiple",
+          "text": {
+            "en": "Which factors influence the mood created by light?",
+            "fr": "Quels facteurs influencent l'ambiance créée par la lumière ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Direction of light",
+                "fr": "Direction de la lumière"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Color temperature",
+                "fr": "Température de couleur"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Hardness or softness",
+                "fr": "Dureté ou douceur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Camera brand",
+                "fr": "Marque d'appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Light direction, temperature, and quality dramatically affect emotional impact. Camera brand has no direct effect on mood.",
+            "fr": "La direction, la température et la qualité de la lumière affectent dramatiquement l'impact émotionnel. La marque d'appareil n'a aucun effet direct sur l'ambiance."
+          }
+        },
+        {
+          "id": "light-18",
+          "type": "single",
+          "text": {
+            "en": "What is 'rembrandt lighting' in portraiture?",
+            "fr": "Qu'est-ce que l'éclairage 'Rembrandt' en portrait ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A pattern creating a small triangle of light on the shadowed cheek",
+                "fr": "Un motif créant un petit triangle de lumière sur la joue ombragée"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Even lighting from the front",
+                "fr": "Éclairage uniforme venant de face"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Light coming only from below",
+                "fr": "Lumière venant uniquement d'en bas"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "No shadows on the face",
+                "fr": "Pas d'ombres sur le visage"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Named after Rembrandt's paintings, this classic portrait lighting creates dramatic, dimensional效果 with a characteristic light triangle.",
+            "fr": "Nommé d'après les peintures de Rembrandt, cet éclairage de portrait classique crée un effet dramatique et dimensionnel avec un triangle lumineux caractéristique."
+          }
+        },
+        {
+          "id": "light-19",
+          "type": "single",
+          "text": {
+            "en": "What is 'light falloff'?",
+            "fr": "Qu'est-ce que la 'chute de lumière' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The decrease in light intensity as distance from the source increases",
+                "fr": "La diminution de l'intensité lumineuse à mesure que la distance par rapport à la source augmente"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "When light changes color over time",
+                "fr": "Quand la lumière change de couleur avec le temps"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The amount of light entering the lens",
+                "fr": "La quantité de lumière entrant dans l'objectif"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A camera feature for low light",
+                "fr": "Une fonctionnalité d'appareil pour basse lumière"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Light follows the inverse square law: doubling distance reduces intensity to 1/4. Understanding falloff is crucial for lighting design.",
+            "fr": "La lumière suit la loi du carré inverse : doubler la distance réduit l'intensité à 1/4. Comprendre la chute est crucial pour la conception d'éclairage."
+          }
+        },
+        {
+          "id": "light-20",
+          "type": "multiple",
+          "text": {
+            "en": "Which techniques help manage high-contrast scenes?",
+            "fr": "Quelles techniques aident à gérer les scènes à fort contraste ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Using fill flash or reflectors",
+                "fr": "Utiliser un flash de remplissage ou des réflecteurs"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "HDR blending",
+                "fr": "Fusion HDR"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Graduated neutral density filters",
+                "fr": "Filtres ND gradués"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Increasing ISO dramatically",
+                "fr": "Augmenter drastiquement l'ISO"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "These techniques balance extreme light differences. Increasing ISO would add noise without solving the contrast problem.",
+            "fr": "Ces techniques équilibrent les différences lumineuses extrêmes. Augmenter l'ISO ajouterait du bruit sans résoudre le problème de contraste."
+          }
+        }
+      ]
+    },
+    {
+      "id": "gear-lenses",
+      "title": {
+        "en": "Gear & Lenses",
+        "fr": "Matériel & objectifs"
+      },
+      "description": {
+        "en": "Focal lengths, sensor formats and the tools that shape your look.",
+        "fr": "Focale, formats de capteur et outils qui façonnent votre rendu."
+      },
+      "questions": [
+        {
+          "id": "gear-1",
+          "type": "single",
+          "text": {
+            "en": "On full-frame, a 50 mm lens is often called a “normal” lens because it…",
+            "fr": "En plein format, un 50 mm est souvent dit « normal » car il…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Approximates a natural field of view, close to human vision",
+                "fr": "Se rapproche d'un champ de vision naturel, proche de l'œil humain"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Always has the widest possible aperture",
+                "fr": "A toujours l'ouverture la plus grande possible"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Can only shoot in black and white",
+                "fr": "Ne peut photographier qu'en noir et blanc"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Is only for macro insects",
+                "fr": "Sert uniquement à la macro insectes"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Around 40–58 mm on full-frame is considered “normal”: neither strongly wide nor telephoto. On APS-C, a ~35 mm often plays a similar role.",
+            "fr": "Environ 40–58 mm en plein format est considéré « normal » : ni grand-angle marqué ni téléobjectif. En APS-C, un ~35 mm joue souvent ce rôle."
+          }
+        },
+        {
+          "id": "gear-2",
+          "type": "multiple",
+          "text": {
+            "en": "Which lenses are typically wide-angle on full-frame?",
+            "fr": "Quels objectifs sont typiquement grand-angle en plein format ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "24 mm",
+                "fr": "24 mm"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "16 mm",
+                "fr": "16 mm"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "200 mm",
+                "fr": "200 mm"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "35 mm",
+                "fr": "35 mm"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Wide-angle is roughly under ~35–40 mm on full-frame. 200 mm is a telephoto, compressing perspective and narrowing the field of view.",
+            "fr": "Le grand-angle se situe grosso modo sous ~35–40 mm en plein format. Un 200 mm est un téléobjectif : perspective compressée, champ plus étroit."
+          }
+        },
+        {
+          "id": "gear-3",
+          "type": "single",
+          "text": {
+            "en": "What is the main advantage of a prime lens (fixed focal length)?",
+            "fr": "Quel est le principal avantage d'une focale fixe (prime) ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Often brighter (larger max aperture), lighter and optically simpler",
+                "fr": "Souvent plus lumineuse (grande ouverture max), plus légère et optiquement plus simple"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It can zoom from 10 mm to 600 mm",
+                "fr": "Elle zoome de 10 mm à 600 mm"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It never needs focusing",
+                "fr": "Elle n'a jamais besoin de mise au point"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It only works underwater",
+                "fr": "Elle ne fonctionne que sous l'eau"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Primes trade zoom flexibility for optical quality, size/weight and wide apertures (e.g. f/1.4–f/1.8) — great for low light and subject isolation.",
+            "fr": "Les focales fixes échangent la souplesse du zoom contre qualité optique, compacité et grandes ouvertures (ex. f/1.4–f/1.8) — idéales en basse lumière et pour isoler le sujet."
+          }
+        },
+        {
+          "id": "gear-4",
+          "type": "single",
+          "text": {
+            "en": "An APS-C sensor is smaller than full-frame. This usually means…",
+            "fr": "Un capteur APS-C est plus petit que le plein format. Cela implique en général…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A crop factor (~1.5× or 1.6×): effective field of view is narrower for the same focal length",
+                "fr": "Un facteur de crop (~1,5× ou 1,6×) : champ de vision plus étroit pour la même focale"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The camera cannot use any lenses",
+                "fr": "L'appareil ne peut utiliser aucun objectif"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "ISO no longer exists",
+                "fr": "L'ISO n'existe plus"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Photos are always square",
+                "fr": "Les photos sont toujours carrées"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "A 50 mm on APS-C behaves roughly like a 75–80 mm field of view on full-frame. Depth of field and noise characteristics also differ.",
+            "fr": "Un 50 mm en APS-C donne un champ proche d'un 75–80 mm en plein format. Profondeur de champ et bruit diffèrent aussi."
+          }
+        },
+        {
+          "id": "gear-5",
+          "type": "single",
+          "text": {
+            "en": "What does a circular polarizing filter (CPL) help with?",
+            "fr": "À quoi sert un filtre polarisant circulaire (CPL) ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Reducing reflections on glass/water and deepening blue skies",
+                "fr": "Réduire les reflets sur verre/eau et intensifier les ciels bleus"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Adding artificial bokeh shapes only",
+                "fr": "Ajouter uniquement des formes de bokeh artificielles"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Replacing the need for a lens",
+                "fr": "Remplacer l'objectif"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Charging the camera battery",
+                "fr": "Charger la batterie de l'appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Polarizers cut polarized light: less glare on non-metallic surfaces, richer skies and foliage. Effect depends on angle to the sun.",
+            "fr": "Les polarisants coupent la lumière polarisée : moins d'éblouissement sur surfaces non métalliques, ciels et feuillages plus riches. L'effet dépend de l'angle avec le soleil."
+          }
+        },
+        {
+          "id": "gear-6",
+          "type": "single",
+          "text": {
+            "en": "What is 'full-frame' sensor size equivalent to?",
+            "fr": "À quoi équivaut la taille de capteur 'plein format' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "35mm film frame (36×24mm)",
+                "fr": "Cadre de film 35mm (36×24mm)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Medium format film",
+                "fr": "Film moyen format"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Instant camera film",
+                "fr": "Film d'appareil instantané"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Smartphone sensor",
+                "fr": "Capteur de smartphone"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Full-frame refers to sensors matching the 35mm film dimensions (36×24mm), the traditional standard for professional photography.",
+            "fr": "Le plein format fait référence aux capteurs correspondant aux dimensions du film 35mm (36×24mm), la norme traditionnelle pour la photographie professionnelle."
+          }
+        },
+        {
+          "id": "gear-7",
+          "type": "single",
+          "text": {
+            "en": "What does 'image stabilization' primarily help with?",
+            "fr": "À quoi aide principalement la 'stabilisation d'image' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Reducing blur from camera shake at slower shutter speeds",
+                "fr": "Réduire le flou dû au bougé de l'appareil à des vitesses d'obturation plus lentes"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Improving autofocus speed",
+                "fr": "Améliorer la vitesse de autofocus"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Increasing sensor resolution",
+                "fr": "Augmenter la résolution du capteur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Changing the focal length",
+                "fr": "Modifier la focale"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "IS/OSS/VRI compensates for small camera movements, allowing sharper images at shutter speeds 2-5 stops slower than normal.",
+            "fr": "L'IS/OSS/VRI compense les petits mouvements de l'appareil, permettant des images plus nettes à des vitesses d'obturation 2-5 stops plus lentes que la normale."
+          }
+        },
+        {
+          "id": "gear-8",
+          "type": "multiple",
+          "text": {
+            "en": "Which lens types are best suited for portraits?",
+            "fr": "Quels types d'objectifs sont les mieux adaptés aux portraits ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "85mm",
+                "fr": "85mm"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "50mm",
+                "fr": "50mm"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "135mm",
+                "fr": "135mm"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "14mm",
+                "fr": "14mm"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Short telephotos (50-135mm) compress features flattering and allow working distance. Ultra-wide (14mm) distorts faces.",
+            "fr": "Les courts téléobjectifs (50-135mm) compressent les traits de manière flatteuse et permettent une distance de travail. L'ultra-grand-angle (14mm) déforme les visages."
+          }
+        },
+        {
+          "id": "gear-9",
+          "type": "single",
+          "text": {
+            "en": "What is a 'tilt-shift' lens used for?",
+            "fr": "À quoi sert un objectif 'tilt-shift' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Correcting perspective distortion and controlling plane of focus",
+                "fr": "Corriger la distorsion de perspective et contrôler le plan de mise au point"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Taking underwater photos",
+                "fr": "Prendre des photos sous-marines"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Zooming in on distant subjects",
+                "fr": "Zoomer sur des sujets distants"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Automatically tracking moving subjects",
+                "fr": "Suivre automatiquement les sujets en mouvement"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Tilt-shift lenses allow perspective correction (architecture) and creative focus control (miniature effect) through lens movements.",
+            "fr": "Les objectifs tilt-shift permettent la correction de perspective (architecture) et le contrôle créatif de la mise au point (effet miniature) grâce aux mouvements d'objectif."
+          }
+        },
+        {
+          "id": "gear-10",
+          "type": "single",
+          "text": {
+            "en": "What is 'megapixel' a measure of?",
+            "fr": "Qu'est-ce que le 'mégapixel' mesure ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Image resolution (one million pixels)",
+                "fr": "Résolution d'image (un million de pixels)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Lens speed",
+                "fr": "Vitesse de l'objectif"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Camera weight",
+                "fr": "Poids de l'appareil"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Battery life",
+                "fr": "Autonomie de la batterie"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "One megapixel equals one million pixels. More megapixels mean higher resolution and larger prints, but not necessarily better image quality.",
+            "fr": "Un mégapixel équivaut à un million de pixels. Plus de mégapixels signifient une résolution plus élevée et des impressions plus grandes, mais pas nécessairement une meilleure qualité d'image."
+          }
+        },
+        {
+          "id": "gear-11",
+          "type": "multiple",
+          "text": {
+            "en": "What are the advantages of mirrorless cameras over DSLRs?",
+            "fr": "Quels sont les avantages des appareils sans miroir par rapport aux reflex ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Generally more compact and lighter",
+                "fr": "Généralement plus compacts et légers"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Faster autofocus with eye-tracking",
+                "fr": "Autofocus plus rapide avec suivi des yeux"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Better electronic viewfinder experience",
+                "fr": "Meilleure expérience de viseur électronique"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Always longer battery life",
+                "fr": "Toujours une autonomie de batterie plus longue"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Mirrorless cameras excel in size, AF innovation, and EVF features. DSLRs often still lead in battery longevity.",
+            "fr": "Les appareils sans miroir excellent en taille, innovation AF et fonctionnalités VE. Les reflex mènent souvent encore en longévité de batterie."
+          }
+        },
+        {
+          "id": "gear-12",
+          "type": "single",
+          "text": {
+            "en": "What is 'aperture priority' mode indicated by on most cameras?",
+            "fr": "Quel mode 'priorité ouverture' est indiqué sur la plupart des appareils ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A (Nikon, Sony) or Av (Canon)",
+                "fr": "A (Nikon, Sony) ou Av (Canon)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "M",
+                "fr": "M"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "P",
+                "fr": "P"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "S or Tv",
+                "fr": "S ou Tv"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "A/Av stands for Aperture/Avantité. M is Manual, P is Program, S/Tv is Shutter Priority.",
+            "fr": "A/Av signifie Avantité d'ouverture. M est Manuel, P est Programme, S/Tv est Priorité vitesse."
+          }
+        },
+        {
+          "id": "gear-13",
+          "type": "single",
+          "text": {
+            "en": "What does 'weather sealing' on a camera protect against?",
+            "fr": "Qu'est-ce que l' 'étanchéité climatique' sur un appareil protège contre ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Dust and moisture ingress",
+                "fr": "Intrusion de poussière et d'humidité"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Extreme heat only",
+                "fr": "Uniquement la chaleur extrême"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Camera theft",
+                "fr": "Vol d'appareil"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Digital corruption",
+                "fr": "Corruption numérique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Weather sealing uses gaskets and seals to protect against rain, dust, and splashes in challenging environments.",
+            "fr": "L'étanchéité climatique utilise des joints et des scellés pour protéger contre la pluie, la poussière et les éclaboussures dans des environnements difficiles."
+          }
+        },
+        {
+          "id": "gear-14",
+          "type": "multiple",
+          "text": {
+            "en": "Which factors determine depth of field besides aperture?",
+            "fr": "Quels facteurs déterminent la profondeur de champ outre l'ouverture ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Focal length",
+                "fr": "Focale"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Subject distance",
+                "fr": "Distance au sujet"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Sensor size",
+                "fr": "Taille du capteur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Memory card speed",
+                "fr": "Vitesse de la carte mémoire"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "DOF is controlled by aperture, focal length, subject distance, and sensor size. Card speed affects burst shooting, not optics.",
+            "fr": "La PdC est contrôlée par l'ouverture, la focale, la distance au sujet et la taille du capteur. La vitesse de carte affecte le burst, pas l'optique."
+          }
+        },
+        {
+          "id": "gear-15",
+          "type": "single",
+          "text": {
+            "en": "What is a 'prime lens'?",
+            "fr": "Qu'est-ce qu'un 'objectif fixe' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A lens with a fixed focal length that cannot zoom",
+                "fr": "Un objectif avec une focale fixe qui ne peut pas zoomer"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A lens with image stabilization",
+                "fr": "Un objectif avec stabilisation d'image"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A waterproof lens",
+                "fr": "Un objectif étanche"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A lens for underwater use",
+                "fr": "Un objectif pour usage sous-marin"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Prime lenses have one focal length (e.g., 50mm), offering better optics, wider apertures, and smaller size than zooms.",
+            "fr": "Les objectifs fixes ont une seule focale (ex. 50mm), offrant une meilleure optique, des ouvertures plus grandes et une taille réduite par rapport aux zooms."
+          }
+        },
+        {
+          "id": "gear-16",
+          "type": "single",
+          "text": {
+            "en": "What is 'lens mount'?",
+            "fr": "Qu'est-ce que le 'monture d'objectif' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The connection interface between lens and camera body",
+                "fr": "L'interface de connexion entre l'objectif et le corps de l'appareil"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The lens cleaning system",
+                "fr": "Le système de nettoyage de l'objectif"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A type of lens filter",
+                "fr": "Un type de filtre d'objectif"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The camera strap attachment",
+                "fr": "L'attache de sangle de l'appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Lens mounts (EF, F, E, L, etc.) define mechanical and electronic compatibility between lenses and camera bodies.",
+            "fr": "Les montures d'objectif (EF, F, E, L, etc.) définissent la compatibilité mécanique et électronique entre les objectifs et les corps d'appareil."
+          }
+        },
+        {
+          "id": "gear-17",
+          "type": "multiple",
+          "text": {
+            "en": "What are the benefits of using a tripod?",
+            "fr": "Quels sont les avantages d'utiliser un trépied ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Eliminating camera shake for sharp images",
+                "fr": "Éliminer le flou de bougé pour des images nettes"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Enabling long exposures",
+                "fr": "Permettre les longues expositions"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Ensuring consistent framing for panoramas",
+                "fr": "Garantir un cadrage cohérent pour les panoramas"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Increasing autofocus speed",
+                "fr": "Augmenter la vitesse de autofocus"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Tripods provide stability for sharp images, long exposures, and precise composition. They don't affect autofocus performance.",
+            "fr": "Les trépieds fournissent une stabilité pour des images nettes, de longues expositions et une composition précise. Ils n'affectent pas les performances de autofocus."
+          }
+        },
+        {
+          "id": "gear-18",
+          "type": "single",
+          "text": {
+            "en": "What is 'crop factor'?",
+            "fr": "Qu'est-ce que le 'facteur de crop' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The multiplier that converts full-frame focal length to equivalent field of view on smaller sensors",
+                "fr": "Le multiplicateur qui convertit la focale plein format en champ équivalent sur des capteurs plus petits"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The amount of image cropped in post-processing",
+                "fr": "La quantité d'image recadrée en post-traitement"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The camera's resolution reduction",
+                "fr": "La réduction de résolution de l'appareil"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A lens cleaning technique",
+                "fr": "Une technique de nettoyage d'objectif"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "APS-C sensors typically have 1.5× (Nikon/Sony) or 1.6× (Canon) crop factor, making a 50mm lens behave like 75-80mm.",
+            "fr": "Les capteurs APS-C ont typiquement un facteur de crop de 1,5× (Nikon/Sony) ou 1,6× (Canon), rendant un 50mm semblable à un 75-80mm."
+          }
+        },
+        {
+          "id": "gear-19",
+          "type": "single",
+          "text": {
+            "en": "What is a 'fast lens'?",
+            "fr": "Qu'est-ce qu'un 'objectif lumineux' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A lens with a wide maximum aperture (e.g., f/1.4, f/1.8)",
+                "fr": "Un objectif avec une ouverture maximale large (ex. f/1.4, f/1.8)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A lens that focuses quickly",
+                "fr": "Un objectif qui met au point rapidement"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A lightweight lens",
+                "fr": "Un objectif léger"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A lens with fast autofocus motor",
+                "fr": "Un objectif avec moteur autofocus rapide"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "'Fast' refers to wide apertures allowing more light, enabling faster shutter speeds and better low-light performance.",
+            "fr": "'Rapide' fait référence aux grandes ouvertures permettant plus de lumière, permettant des vitesses d'obturation plus rapides et une meilleure performance en basse lumière."
+          }
+        },
+        {
+          "id": "gear-20",
+          "type": "multiple",
+          "text": {
+            "en": "Which accessories are essential for landscape photography?",
+            "fr": "Quels accessoires sont essentiels pour la photographie de paysage ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Tripod",
+                "fr": "Trépied"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Polarizing filter",
+                "fr": "Filtre polarisant"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "ND filters",
+                "fr": "Filtres ND"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Macro lens",
+                "fr": "Objectif macro"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Tripods enable sharp long exposures, CPL enhances skies/reflections, ND allows slow shutter in daylight. Macro is for close-ups.",
+            "fr": "Les trépieds permettent de longues expositions nettes, le CPL améliore ciels/reflets, les ND permettent des poses lentes en journée. Le macro est pour les gros plans."
+          }
+        }
+      ]
+    },
+    {
+      "id": "history-icons",
+      "title": {
+        "en": "History & Iconic Photographers",
+        "fr": "Histoire & photographes iconiques"
+      },
+      "description": {
+        "en": "From the first photographs to legends who shaped how we see the world.",
+        "fr": "Des premières photographies aux légendes qui ont façonné notre regard."
+      },
+      "questions": [
+        {
+          "id": "hist-1",
+          "type": "single",
+          "text": {
+            "en": "Who is widely credited with creating the earliest surviving photograph (heliograph, 1820s)?",
+            "fr": "À qui attribue-t-on généralement la plus ancienne photographie conservée (héliographie, années 1820) ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Nicéphore Niépce",
+                "fr": "Nicéphore Niépce"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Ansel Adams",
+                "fr": "Ansel Adams"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Steve Jobs",
+                "fr": "Steve Jobs"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Henri Cartier-Bresson only",
+                "fr": "Henri Cartier-Bresson uniquement"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Nicéphore Niépce’s View from the Window at Le Gras (c. 1826–27) is the earliest known surviving photograph. Daguerre later popularized the daguerreotype.",
+            "fr": "La Vue de la fenêtre du Gras de Nicéphore Niépce (vers 1826–27) est la plus ancienne photo conservée connue. Daguerre popularisera ensuite le daguerréotype."
+          }
+        },
+        {
+          "id": "hist-2",
+          "type": "single",
+          "text": {
+            "en": "Henri Cartier-Bresson is most associated with which idea?",
+            "fr": "Henri Cartier-Bresson est surtout associé à quelle idée ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The “decisive moment” in street / reportage photography",
+                "fr": "Le « moment décisif » en photo de rue / reportage"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Inventing digital sensors",
+                "fr": "L'invention des capteurs numériques"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only studio fashion lighting",
+                "fr": "Uniquement l'éclairage mode en studio"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Underwater wildlife exclusively",
+                "fr": "Uniquement la faune sous-marine"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Cartier-Bresson coined the decisive moment: catching the peak of action and geometry in a single, perfectly timed frame.",
+            "fr": "Cartier-Bresson a formalisé le moment décisif : saisir le sommet de l'action et de la géométrie dans un seul cadre parfaitement cadencé."
+          }
+        },
+        {
+          "id": "hist-3",
+          "type": "multiple",
+          "text": {
+            "en": "Which photographers are famous for black-and-white landscape or documentary work?",
+            "fr": "Quels photographes sont célèbres pour des paysages ou documentaires en noir et blanc ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Ansel Adams",
+                "fr": "Ansel Adams"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Dorothea Lange",
+                "fr": "Dorothea Lange"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only smartphone UI designers",
+                "fr": "Uniquement des designers d'interfaces smartphone"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Sebastião Salgado",
+                "fr": "Sebastião Salgado"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Adams (Zone System landscapes), Lange (Depression-era documentary) and Salgado (epic B&W reportage) are pillars of the medium.",
+            "fr": "Adams (paysages, Zone System), Lange (documentaire de la Grande Dépression) et Salgado (reportage N&B épique) sont des piliers du médium."
+          }
+        },
+        {
+          "id": "hist-4",
+          "type": "single",
+          "text": {
+            "en": "What agency did Cartier-Bresson co-found in 1947 with other legendary photographers?",
+            "fr": "Quelle agence Cartier-Bresson a-t-il cofondée en 1947 avec d'autres photographes légendaires ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Magnum Photos",
+                "fr": "Magnum Photos"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "NASA",
+                "fr": "NASA"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Instagram",
+                "fr": "Instagram"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Leica only as a camera brand store",
+                "fr": "Uniquement une boutique Leica"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Magnum Photos (1947) was co-founded by Cartier-Bresson, Robert Capa, George Rodger and David “Chim” Seymour — a cooperative owned by photographers.",
+            "fr": "Magnum Photos (1947) a été cofondée par Cartier-Bresson, Robert Capa, George Rodger et David « Chim » Seymour — une coopérative détenue par les photographes."
+          }
+        },
+        {
+          "id": "hist-5",
+          "type": "single",
+          "text": {
+            "en": "Annie Leibovitz is best known for…",
+            "fr": "Annie Leibovitz est surtout connue pour…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Iconic celebrity and cultural portraits",
+                "fr": "Des portraits iconiques de célébrités et de figures culturelles"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Inventing the first digital camera sensor",
+                "fr": "L'invention du premier capteur d'appareil numérique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only architectural blueprints",
+                "fr": "Uniquement des plans d'architecture"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Sports photo finish timing systems",
+                "fr": "Les systèmes de photo-finish sportifs"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Leibovitz’s work for Rolling Stone, Vanity Fair and beyond defined modern celebrity portraiture with cinematic staging.",
+            "fr": "Le travail de Leibovitz pour Rolling Stone, Vanity Fair et au-delà a défini le portrait de célébrités moderne, très mis en scène."
+          }
+        },
+        {
+          "id": "hist-6",
+          "type": "single",
+          "text": {
+            "en": "The daguerreotype (popularized by Louis Daguerre) was…",
+            "fr": "Le daguerréotype (popularisé par Louis Daguerre) était…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "An early photographic process producing a unique image on a silvered plate",
+                "fr": "Un procédé photographique précoce produisant une image unique sur plaque argentée"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A type of modern zoom lens",
+                "fr": "Un type de zoom moderne"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A social network for photographers",
+                "fr": "Un réseau social pour photographes"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A RAW file format from 2010",
+                "fr": "Un format de fichier RAW de 2010"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Announced publicly in 1839, the daguerreotype created a detailed unique positive on a polished silver-coated copper plate — a milestone for popular photography.",
+            "fr": "Annoncé publiquement en 1839, le daguerréotype créait un positif unique et détaillé sur plaque de cuivre argentée — un jalon pour la photo grand public."
+          }
+        },
+        {
+          "id": "hist-7",
+          "type": "single",
+          "text": {
+            "en": "Who invented the Kodak Brownie camera?",
+            "fr": "Qui a inventé l'appareil Kodak Brownie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "George Eastman/Kodak company",
+                "fr": "George Eastman/L'entreprise Kodak"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Ansel Adams",
+                "fr": "Ansel Adams"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Louis Daguerre",
+                "fr": "Louis Daguerre"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Henri Cartier-Bresson",
+                "fr": "Henri Cartier-Bresson"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Released in 1900, the Brownie made photography accessible to children and amateurs with its $1 price tag.",
+            "fr": "Lancé en 1900, le Brownie a rendu la photographie accessible aux enfants et amateurs avec son prix de 1$."
+          }
+        },
+        {
+          "id": "hist-8",
+          "type": "single",
+          "text": {
+            "en": "What was the first digital camera invented by?",
+            "fr": "Qui a inventé le premier appareil photo numérique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Steven Sasson at Kodak in 1975",
+                "fr": "Steven Sasson chez Kodak en 1975"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Steve Jobs at Apple",
+                "fr": "Steve Jobs chez Apple"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "NASA for space photography",
+                "fr": "La NASA pour la photographie spatiale"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Canon in Japan",
+                "fr": "Canon au Japon"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Steven Sasson's Kodak prototype weighed 8 pounds, took 23 seconds to capture an image, and recorded to cassette tape.",
+            "fr": "Le prototype Kodak de Steven Sasson pesait 3,6 kg, prenait 23 secondes pour capturer une image et enregistrait sur cassette."
+          }
+        },
+        {
+          "id": "hist-9",
+          "type": "multiple",
+          "text": {
+            "en": "Which photographers documented the Great Depression?",
+            "fr": "Quels photographes ont documenté la Grande Dépression ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Dorothea Lange",
+                "fr": "Dorothea Lange"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Walker Evans",
+                "fr": "Walker Evans"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Arthur Rothstein",
+                "fr": "Arthur Rothstein"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Richard Avedon",
+                "fr": "Richard Avedon"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Lange ('Migrant Mother'), Evans, and Rothstein photographed Depression-era poverty for the Farm Security Administration.",
+            "fr": "Lange ('Mère migrante'), Evans et Rothstein ont photographié la pauvreté de l'ère Dépression pour la Farm Security Administration."
+          }
+        },
+        {
+          "id": "hist-10",
+          "type": "single",
+          "text": {
+            "en": "What is the significance of 'The Family of Man' exhibition?",
+            "fr": "Quelle est l'importance de l'exposition 'The Family of Man' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It was the most visited photographic exhibition in history",
+                "fr": "C'était l'exposition photographique la plus visitée de l'histoire"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It introduced digital photography",
+                "fr": "Elle a introduit la photographie numérique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It was the first fashion show",
+                "fr": "C'était le premier défilé de mode"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It showcased only landscape photography",
+                "fr": "Elle présentait uniquement de la photographie de paysage"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Curated by Edward Steichen in 1955, it traveled worldwide reaching 9 million visitors, celebrating universal human experiences.",
+            "fr": "Curatée par Edward Steichen en 1955, elle a voyagé dans le monde entier touchant 9 millions de visiteurs, célébrant les expériences humaines universelles."
+          }
+        },
+        {
+          "id": "hist-11",
+          "type": "single",
+          "text": {
+            "en": "Who pioneered photojournalism with the Photo-Secession group?",
+            "fr": "Qui a initié le photojournalisme avec le groupe Photo-Secession ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Alfred Stieglitz",
+                "fr": "Alfred Stieglitz"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Pablo Picasso",
+                "fr": "Pablo Picasso"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Walt Disney",
+                "fr": "Walt Disney"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Thomas Edison",
+                "fr": "Thomas Edison"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Stieglitz promoted photography as fine art through his gallery '291' and publications like Camera Work.",
+            "fr": "Stieglitz a promu la photographie comme beaux-arts à travers sa galerie '291' et des publications comme Camera Work."
+          }
+        },
+        {
+          "id": "hist-12",
+          "type": "multiple",
+          "text": {
+            "en": "Which iconic war photographs shaped public opinion?",
+            "fr": "Quelles photographies de guerre iconiques ont façonné l'opinion publique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Napalm Girl (Nick Ut, Vietnam War)",
+                "fr": "Fille au napalm (Nick Ut, Guerre du Vietnam)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Migrant Mother (Dorothea Lange)",
+                "fr": "Mère migrante (Dorothea Lange)"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Tank Man (unknown photographer, Tiananmen)",
+                "fr": "Homme au char (photographe inconnu, Tiananmen)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Earthrise (William Anders, Apollo 8)",
+                "fr": "Levée de Terre (William Anders, Apollo 8)"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "c"
+          ],
+          "explanation": {
+            "en": "Napalm Girl and Tank Man had direct impacts on war perception and policy. Migrant Mother affected Depression response, Earthrise environmental awareness.",
+            "fr": "Fille au napalm et Homme au char ont eu un impact direct sur la perception de la guerre et les politiques. Mère migrante a affecté la réponse à la Dépression, Levée de Terre la sensibilisation environnementale."
+          }
+        },
+        {
+          "id": "hist-13",
+          "type": "single",
+          "text": {
+            "en": "What is the Zone System developed by?",
+            "fr": "Quel est le Système de Zones développé par ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Ansel Adams and Fred Archer",
+                "fr": "Ansel Adams et Fred Archer"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Henry Leibovitz and Annie Adams",
+                "fr": "Henry Leibovitz et Annie Adams"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Steve Jobs and Steve Wozniak",
+                "fr": "Steve Jobs et Steve Wozniak"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Cartier-Bresson and Capa",
+                "fr": "Cartier-Bresson et Capa"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "The Zone System divides tonal values into 11 zones (0-black to X-white), giving photographers precise control over exposure and development.",
+            "fr": "Le Système de Zones divise les valeurs tonales en 11 zones (0-noir à X-blanc), donnant aux photographes un contrôle précis sur l'exposition et le développement."
+          }
+        },
+        {
+          "id": "hist-14",
+          "type": "single",
+          "text": {
+            "en": "Who is considered the father of modern photography?",
+            "fr": "Qui est considéré comme le père de la photographie moderne ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Alfred Stieglitz or Eugène Atget (debated)",
+                "fr": "Alfred Stieglitz ou Eugène Atget (débat)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Leonardo da Vinci",
+                "fr": "Léonard de Vinci"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Albert Einstein",
+                "fr": "Albert Einstein"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Thomas Edison",
+                "fr": "Thomas Edison"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Stieglitz elevated photography to art; Atget documented Paris. Both influenced modern photography's evolution significantly.",
+            "fr": "Stieglitz a élevé la photographie au rang d'art ; Atget a documenté Paris. Tous deux ont significativement influencé l'évolution de la photographie moderne."
+          }
+        },
+        {
+          "id": "hist-15",
+          "type": "multiple",
+          "text": {
+            "en": "What impact did Instagram have on photography?",
+            "fr": "Quel impact Instagram a-t-il eu sur la photographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Democratized photography and sharing",
+                "fr": "Démocratisé la photographie et le partage"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Popularized square-format images",
+                "fr": "Popularisé les images au format carré"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Made filters and aesthetics mainstream",
+                "fr": "Rendu les filtres et l'esthétique grand public"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Eliminated the need for cameras",
+                "fr": "Éliminé le besoin d'appareils photo"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Instagram transformed photography into a social, visual language. Smartphones replaced dedicated cameras for casual users.",
+            "fr": "Instagram a transformé la photographie en un langage visuel et social. Les smartphones ont remplacé les appareils dédiés pour les utilisateurs occasionnels."
+          }
+        },
+        {
+          "id": "hist-16",
+          "type": "single",
+          "text": {
+            "en": "Who captured the 'V-J Day in Times Square' kiss?",
+            "fr": "Qui a capturé le baiser du 'Jour de la Victoire sur le Japon à Times Square' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Alfred Eisenstaedt",
+                "fr": "Alfred Eisenstaedt"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Annie Leibovitz",
+                "fr": "Annie Leibovitz"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Henri Cartier-Bresson",
+                "fr": "Henri Cartier-Bresson"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Robert Capa",
+                "fr": "Robert Capa"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Published in Life magazine in 1945, this iconic image symbolized relief and joy at WWII's end, though the subjects' identities remain unknown.",
+            "fr": "Publié dans Life magazine en 1945, cette image iconique symbolise le soulagement et la joie à la fin de la Seconde Guerre mondiale, bien que les identités des sujets restent inconnues."
+          }
+        },
+        {
+          "id": "hist-17",
+          "type": "single",
+          "text": {
+            "en": "What was the first photograph of a human face?",
+            "fr": "Quelle était la première photographie d'un visage humain ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Self-portrait by Robert Cornelius (1839)",
+                "fr": "Autoportrait par Robert Cornelius (1839)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Portrait of Louis Daguerre",
+                "fr": "Portrait de Louis Daguerre"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Niépce's window view",
+                "fr": "La vue de fenêtre de Niépce"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Ansel Adams' self-portrait",
+                "fr": "L'autoportrait d'Ansel Adams"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Robert Cornelius' daguerreotype from 1839 is considered the first American self-portrait and first photograph of a person.",
+            "fr": "Le daguerréotype de Robert Cornelius de 1839 est considéré comme le premier autoportrait américain et la première photographie d'une personne."
+          }
+        },
+        {
+          "id": "hist-18",
+          "type": "multiple",
+          "text": {
+            "en": "Which photographers are associated with the Color Revival in the 1970s-80s?",
+            "fr": "Quels photographes sont associés à la Renaissance de la Couleur dans les années 1970-80 ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Saul Leiter",
+                "fr": "Saul Leiter"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "William Eggleston",
+                "fr": "William Eggleston"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Stephen Shore",
+                "fr": "Stephen Shore"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Ansel Adams",
+                "fr": "Ansel Adams"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "These artists elevated color photography from commercial to fine art. Eggleston's 1976 MoMA exhibition was pivotal.",
+            "fr": "Ces artistes ont élevé la photographie couleur du commercial aux beaux-arts. L'exposition MoMA d'Eggleston en 1976 fut pivotale."
+          }
+        },
+        {
+          "id": "hist-19",
+          "type": "single",
+          "text": {
+            "en": "What is the significance of 'Photographic History Collection' at Smithsonian?",
+            "fr": "Quelle est l'importance de la 'Collection d'Histoire Photographique' au Smithsonian ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "One of the world's largest collections preserving photographic heritage",
+                "fr": "L'une des plus grandes collections au monde préservant le patrimoine photographique"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The first digital archive",
+                "fr": "Le premier archive numérique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A collection of only portrait photos",
+                "fr": "Une collection d'uniquement des photos de portraits"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Focused on fashion photography",
+                "fr": "Axée sur la photographie de mode"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "The Smithsonian holds over 1.4 million photographs spanning the medium's entire history, from daguerreotypes to digital.",
+            "fr": "Le Smithsonian conserve plus de 1,4 million de photographies couvrant toute l'histoire du médium, des daguerréotypes au numérique."
+          }
+        },
+        {
+          "id": "hist-20",
+          "type": "multiple",
+          "text": {
+            "en": "What technological advancements drove photography's evolution?",
+            "fr": "Quelles avancées technologiques ont conduit l'évolution de la photographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Digital sensors",
+                "fr": "Capteurs numériques"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Autofocus systems",
+                "fr": "Systèmes autofocus"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Image processing software",
+                "fr": "Logiciels de traitement d'image"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Internet and social media",
+                "fr": "Internet et les réseaux sociaux"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "explanation": {
+            "en": "All these innovations transformed photography from chemical processes to digital, accessible, instantly-shareable medium.",
+            "fr": "Toutes ces innovations ont transformé la photographie de processus chimiques à un médium numérique, accessible et partageable instantanément."
+          }
+        }
+      ]
+    },
+    {
+      "id": "genres",
+      "title": {
+        "en": "Photography Genres",
+        "fr": "Genres photographiques"
+      },
+      "description": {
+        "en": "Portrait, street, landscape, macro… recognize the craft behind each style.",
+        "fr": "Portrait, street, paysage, macro… reconnaissez le savoir-faire derrière chaque style."
+      },
+      "questions": [
+        {
+          "id": "gen-1",
+          "type": "single",
+          "text": {
+            "en": "Street photography is mainly characterized by…",
+            "fr": "La photographie de rue se caractérise surtout par…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Candid scenes of public life, often unposed",
+                "fr": "Des scènes candides de la vie publique, souvent non posées"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only studio backdrops of city skylines",
+                "fr": "Uniquement des fonds studio de skyline"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Mandatory use of drones",
+                "fr": "L'usage obligatoire de drones"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Photos taken exclusively at night with flash",
+                "fr": "Des photos exclusivement de nuit au flash"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Street photography captures unscripted public moments — gesture, irony, geometry — usually with available light and discrete gear.",
+            "fr": "La photo de rue capture des moments publics non mis en scène — geste, ironie, géométrie — souvent en lumière disponible et avec un matériel discret."
+          }
+        },
+        {
+          "id": "gen-2",
+          "type": "multiple",
+          "text": {
+            "en": "Which practices are common in portrait photography?",
+            "fr": "Quelles pratiques sont courantes en photographie de portrait ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Controlling light on the face (key / fill / rim)",
+                "fr": "Contrôler la lumière sur le visage (principale / fill / rim)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Attention to expression, pose and connection with the subject",
+                "fr": "Soigner expression, pose et lien avec le sujet"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always using the smallest aperture possible with no intent",
+                "fr": "Toujours la plus petite ouverture possible sans intention"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Choosing background and depth of field to isolate the person",
+                "fr": "Choisir fond et profondeur de champ pour isoler la personne"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Good portraits balance light, expression and background separation. Aperture is a creative choice, not a fixed rule.",
+            "fr": "Un bon portrait équilibre lumière, expression et séparation du fond. L'ouverture est un choix créatif, pas une règle fixe."
+          }
+        },
+        {
+          "id": "gen-3",
+          "type": "single",
+          "text": {
+            "en": "Macro photography is primarily about…",
+            "fr": "La photographie macro porte surtout sur…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Extreme close-ups of small subjects at high magnification",
+                "fr": "Des gros plans extrêmes de petits sujets à fort grossissement"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only photographing entire cities from space",
+                "fr": "Uniquement photographier des villes entières depuis l'espace"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Video frame rates above 1000 fps",
+                "fr": "Des cadences vidéo au-dessus de 1000 i/s"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shooting only with a 600 mm lens far away",
+                "fr": "Photographier uniquement au 600 mm de loin"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "True macro often reaches ~1:1 reproduction (subject life-size on the sensor): insects, textures, details. Focus stacking is common.",
+            "fr": "La vraie macro atteint souvent ~1:1 (sujet grandeur nature sur le capteur) : insectes, textures, détails. Le focus stacking est fréquent."
+          }
+        },
+        {
+          "id": "gen-4",
+          "type": "single",
+          "text": {
+            "en": "In landscape photography, a common reason to use a tripod is…",
+            "fr": "En photo de paysage, une raison fréquente d'utiliser un trépied est…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "To keep the camera steady for long exposures or precise framing",
+                "fr": "Stabiliser l'appareil pour les poses longues ou un cadrage précis"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "To increase megapixels of the sensor",
+                "fr": "Augmenter les mégapixels du capteur"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "To change the color of the sky automatically",
+                "fr": "Changer automatiquement la couleur du ciel"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "To replace the need for a lens",
+                "fr": "Remplacer l'objectif"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Tripods enable sharp long exposures (water, low light, ND filters) and careful multi-shot techniques (brackets, panoramas).",
+            "fr": "Le trépied permet des poses longues nettes (eau, basse lumière, filtres ND) et des techniques multi-vues (brackets, panoramas)."
+          }
+        },
+        {
+          "id": "gen-5",
+          "type": "multiple",
+          "text": {
+            "en": "Which challenges are typical of wildlife photography?",
+            "fr": "Quels défis sont typiques de la photo animalière ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Long focal lengths and subject distance",
+                "fr": "Longues focales et distance au sujet"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Fast shutter speeds for animal movement",
+                "fr": "Vitesses élevées pour le mouvement des animaux"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Respecting wildlife and habitats (ethics / distance)",
+                "fr": "Respecter la faune et les habitats (éthique / distance)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Mandatory studio softboxes on every animal",
+                "fr": "Softboxes de studio obligatoires sur chaque animal"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Wildlife work mixes telephoto reach, timing, patience and ethics. Studio softboxes are not the field standard.",
+            "fr": "La photo animalière mêle portée télé, timing, patience et éthique. Les softboxes de studio ne sont pas la norme sur le terrain."
+          }
+        },
+        {
+          "id": "gen-6",
+          "type": "single",
+          "text": {
+            "en": "What defines 'fine art photography'?",
+            "fr": "Qu'est-ce qui définit la 'photographie d'art' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Photography created to express the artist's vision or concept",
+                "fr": "Photographie créée pour exprimer la vision ou le concept de l'artiste"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only black and white photos",
+                "fr": "Uniquement des photos en noir et blanc"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Photos taken with expensive equipment",
+                "fr": "Photos prises avec du matériel cher"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Commercial advertising images",
+                "fr": "Images publicitaires commerciales"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Fine art photography prioritizes creative expression over documentation, often exhibited in galleries and museums.",
+            "fr": "La photographie d'art privilégie l'expression créative sur la documentation, souvent exposée dans des galeries et musées."
+          }
+        },
+        {
+          "id": "gen-7",
+          "type": "multiple",
+          "text": {
+            "en": "What are key challenges in sports photography?",
+            "fr": "Quels sont les défis clés de la photographie sportive ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Fast shutter speeds to freeze action",
+                "fr": "Vitesses d'obturation rapides pour figer l'action"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Predicting peak moments",
+                "fr": "Prédire les moments clés"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Working with variable lighting (indoors/outdoors)",
+                "fr": "Travailler avec éclairage variable (intérieur/extérieur)"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Using only natural light",
+                "fr": "Utiliser uniquement la lumière naturelle"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Sports photography demands technical skill, anticipation, and adaptability to changing conditions.",
+            "fr": "La photographie sportive exige une compétence technique, une anticipation et une adaptabilité aux conditions changeantes."
+          }
+        },
+        {
+          "id": "gen-8",
+          "type": "single",
+          "text": {
+            "en": "What is 'food styling' in food photography?",
+            "fr": "Qu'est-ce que le 'styling alimentaire' en photographie culinaire ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Arranging and enhancing food appearance for the camera",
+                "fr": "Arranger et améliorer l'apparence de la nourriture pour la caméra"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Cooking the food before shooting",
+                "fr": "Cuisiner la nourriture avant de photographier"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Reviewing restaurants",
+                "fr": "Évaluer des restaurants"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Creating recipes",
+                "fr": "Créer des recettes"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Food stylists use techniques like glycerin for steam, toothpicks for structure, and lighting to make food look appetizing.",
+            "fr": "Les stylistes alimentaires utilisent des techniques comme le glycérin pour la vapeur, des cure-dents pour la structure et l'éclairage pour rendre la nourriture appétissante."
+          }
+        },
+        {
+          "id": "gen-9",
+          "type": "single",
+          "text": {
+            "en": "What makes 'documentary photography' different from other genres?",
+            "fr": "Qu'est-ce qui rend la 'photographie documentaire' différente des autres genres ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It aims to truthfully record events and social realities",
+                "fr": "Elle vise à enregistrer honnêtement les événements et réalités sociales"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "It always uses black and white",
+                "fr": "Elle utilise toujours le noir et blanc"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It's exclusively studio-based",
+                "fr": "Elle est exclusivement basée en studio"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It focuses only on landscapes",
+                "fr": "Elle se concentre uniquement sur les paysages"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Documentary photography serves as visual journalism, telling真实 stories with ethical responsibility to subjects.",
+            "fr": "La photographie documentaire sert de journalisme visuel, racontant des histoires vraies avec une responsabilité éthique envers les sujets."
+          }
+        },
+        {
+          "id": "gen-10",
+          "type": "multiple",
+          "text": {
+            "en": "What equipment is commonly used in astrophotography?",
+            "fr": "Quel équipement est couramment utilisé en astrophotographie ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Tripod",
+                "fr": "Trépied"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Star tracker",
+                "fr": "Trackeur d'étoiles"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Wide-angle or astro lenses",
+                "fr": "Objectifs grand-angle ou astro"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Macro lens",
+                "fr": "Objectif macro"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Astrophotography needs stability (tripod), tracking for long exposures, and fast wide lenses. Macro is for close-ups.",
+            "fr": "L'astrophotographie nécessite stabilité (trépied), suivi pour longues expositions et objectifs larges lumineux. Le macro est pour les gros plans."
+          }
+        },
+        {
+          "id": "gen-11",
+          "type": "single",
+          "text": {
+            "en": "What is 'fashion photography' primarily focused on?",
+            "fr": "Sur quoi se concentre principalement la 'photographie de mode' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Showcasing clothing, accessories, and style",
+                "fr": "Mettre en valeur vêtements, accessoires et style"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Documenting fashion history",
+                "fr": "Documenter l'histoire de la mode"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Photographing fabric textures only",
+                "fr": "Photographier uniquement les textures de tissu"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Recording runway shows",
+                "fr": "Enregistrer les défilés"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Fashion photography sells lifestyle and aspiration, combining clothing presentation with artistic vision.",
+            "fr": "La photographie de mode vend un style de vie et l'aspiration, combinant présentation de vêtements et vision artistique."
+          }
+        },
+        {
+          "id": "gen-12",
+          "type": "multiple",
+          "text": {
+            "en": "What are the characteristics of 'architectural photography'?",
+            "fr": "Quelles sont les caractéristiques de la 'photographie architecturale' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Emphasis on lines, shapes, and forms",
+                "fr": "Accent sur les lignes, formes et structures"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Often uses tilt-shift for perspective control",
+                "fr": "Utilise souvent le tilt-shift pour le contrôle de perspective"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Focuses on symmetry and geometry",
+                "fr": "Se concentre sur la symétrie et la géométrie"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Always taken at night",
+                "fr": "Toujours prise la nuit"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Architectural photography celebrates design through careful composition, perspective correction, and lighting.",
+            "fr": "La photographie architecturale célèbre le design par une composition soignée, correction de perspective et éclairage."
+          }
+        },
+        {
+          "id": "gen-13",
+          "type": "single",
+          "text": {
+            "en": "What is 'conceptual photography'?",
+            "fr": "Qu'est-ce que la 'photographie conceptuelle' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Photography that communicates an idea or message over aesthetic appeal",
+                "fr": "Photographie qui communique une idée ou un message plutôt qu'un attrait esthétique"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Photos taken with conceptual lenses",
+                "fr": "Photos prises avec des objectifs conceptuels"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Abstract camera movements",
+                "fr": "Mouvements de caméra abstraits"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Photography without a camera",
+                "fr": "Photographie sans appareil photo"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Conceptual photography prioritizes ideas, often using staged scenes, symbolism, or manipulation to convey messages.",
+            "fr": "La photographie conceptuelle privilégie les idées, utilisant souvent des scènes mises en scène, symbolisme ou manipulation pour transmettre des messages."
+          }
+        },
+        {
+          "id": "gen-14",
+          "type": "single",
+          "text": {
+            "en": "What is 'street photography' ethics debate about?",
+            "fr": "De quoi traite le débat éthique de la 'photographie de rue' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Privacy rights vs. freedom of expression in public spaces",
+                "fr": "Droits à la vie privée vs liberté d'expression dans les espaces publics"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Camera brand preferences",
+                "fr": "Préférences de marques d'appareils"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Lens selection",
+                "fr": "Sélection d'objectifs"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Photo editing techniques",
+                "fr": "Techniques de retouche photo"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Photographers balance documenting public life with respecting individuals' privacy and dignity.",
+            "fr": "Les photographes équilibrent la documentation de la vie publique avec le respect de la vie privée et dignité des individus."
+          }
+        },
+        {
+          "id": "gen-15",
+          "type": "multiple",
+          "text": {
+            "en": "What defines 'aviation photography'?",
+            "fr": "Qu'est-ce qui définit la 'photographie aéronautique' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Photographing aircraft in flight or on ground",
+                "fr": "Photographier des aéronefs en vol ou au sol"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Requires fast shutter speeds",
+                "fr": "Nécessite de rapides vitesses d'obturation"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Often needs telephoto lenses",
+                "fr": "A souvent besoin d'objectifs téléphoto"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only taken from airplanes",
+                "fr": "Uniquement prise depuis des avions"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Aviation photography captures aircraft requiring speed, reach, and often specialized locations like airfields.",
+            "fr": "La photographie aéronautique capture des aéronefs nécessitant vitesse, portée et souvent des emplacements spécialisés comme les aérodromes."
+          }
+        },
+        {
+          "id": "gen-16",
+          "type": "single",
+          "text": {
+            "en": "What is 'product photography' main goal?",
+            "fr": "Quel est l'objectif principal de la 'photographie de produit' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Showcasing products attractively for commercial purposes",
+                "fr": "Mettre en valeur des produits de manière attrayante à des fins commerciales"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Documenting manufacturing processes",
+                "fr": "Documenter les processus de fabrication"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Creating abstract art",
+                "fr": "Créer de l'art abstrait"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Photographing factory buildings",
+                "fr": "Photographier les bâtiments d'usine"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Product photography drives sales by presenting items in the best light, emphasizing features and quality.",
+            "fr": "La photographie de produit stimule les ventes en présentant les articles sous leur meilleur jour, en mettant en évidence les caractéristiques et la qualité."
+          }
+        },
+        {
+          "id": "gen-17",
+          "type": "single",
+          "text": {
+            "en": "What is 'underwater photography' unique challenge?",
+            "fr": "Quel est le défi unique de la 'photographie sous-marine' ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Water absorbs light and causes color loss at depth",
+                "fr": "L'eau absorbe la lumière et cause une perte de couleur en profondeur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Fish always swim away",
+                "fr": "Les poissons fuient toujours"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Cameras sink automatically",
+                "fr": "Les appareils coulent automatiquement"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Waterproof cases distort all images",
+                "fr": "Les étuis étanches déforment toutes les images"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Red wavelengths absorb first underwater, requiring flashes or white balance adjustments to restore natural colors.",
+            "fr": "Les longueurs d'onde rouges absorbent en premier sous l'eau, nécessitant des flashes ou ajustements de balance des blancs pour restaurer les couleurs naturelles."
+          }
+        },
+        {
+          "id": "gen-18",
+          "type": "multiple",
+          "text": {
+            "en": "What skills are important for event photography?",
+            "fr": "Quelles compétences sont importantes pour la photographie d'événements ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Anticipating key moments",
+                "fr": "Anticiper les moments clés"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Working in varied lighting conditions",
+                "fr": "Travailler dans diverses conditions d'éclairage"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Discretion and professionalism",
+                "fr": "Discrétion et professionnalisme"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only using flash",
+                "fr": "Utiliser uniquement le flash"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Event photographers must be adaptable, unobtrusive, and skilled at capturing spontaneous moments.",
+            "fr": "Les photographes d'événements doivent être adaptables, discrets et habiles à capturer des moments spontanés."
+          }
+        },
+        {
+          "id": "gen-19",
+          "type": "single",
+          "text": {
+            "en": "What is 'drone photography' revolutionizing?",
+            "fr": "Qu'est-ce que la 'photographie par drone' révolutionne ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Aerial perspectives previously requiring helicopters",
+                "fr": "Les perspectives aériennes nécessitant auparavant des hélicoptères"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Underwater photography",
+                "fr": "La photographie sous-marine"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Macro photography",
+                "fr": "La photographie macro"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Studio portraiture",
+                "fr": "Le portrait en studio"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Drones democratized aerial photography, enabling unique perspectives for real estate, landscape, and event coverage.",
+            "fr": "Les drones ont démocratisé la photographie aérienne, permettant des perspectives uniques pour l'immobilier, paysage et couverture d'événements."
+          }
+        },
+        {
+          "id": "gen-20",
+          "type": "multiple",
+          "text": {
+            "en": "What distinguishes 'night photography' from daytime work?",
+            "fr": "Qu'est-ce qui distingue la 'photographie nocturne' du travail diurne ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Requires longer exposures and tripods",
+                "fr": "Nécessite de longues expositions et trépieds"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Deals with artificial light sources",
+                "fr": "Traite les sources de lumière artificielle"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Higher ISO settings often needed",
+                "fr": "Réglages ISO plus élevés souvent nécessaires"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only works in cities",
+                "fr": "Fonctionne uniquement en ville"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Night photography demands different techniques: stability, light management, and noise control.",
+            "fr": "La photographie nocturne exige différentes techniques : stabilité, gestion de la lumière et contrôle du bruit."
+          }
+        }
+      ]
+    }
+  ]
+}
