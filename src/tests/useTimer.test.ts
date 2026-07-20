@@ -1,6 +1,6 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { useTimer } from '../hooks/useTimer';
-import { renderHook, act, flushPromises } from '@testing-library/react';
+import { renderHook, act } from '@testing-library/react';
 
 describe('useTimer', () => {
   it('starts with correct remaining time', () => {

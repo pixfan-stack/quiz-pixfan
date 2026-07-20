@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { useConfetti } from '../hooks/useConfetti';
 import { renderHook, act } from '@testing-library/react';
 

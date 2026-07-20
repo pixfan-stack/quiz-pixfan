@@ -1,16 +1,8 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { useTabTracker } from '../hooks/useTabTracker';
 import { renderHook, act } from '@testing-library/react';
 
 describe('useTabTracker', () => {
-  beforeEach(() => {
-    Object.defineProperty(document, 'hidden', {
-      value: false,
-      writable: true,
-      configurable: true,
-    });
-  });
-
   it('starts with isFocused true and 0 tab switches', () => {
     const { result } = renderHook(() => useTabTracker(true));
     expect(result.current.isFocused).toBe(true);
