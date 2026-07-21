@@ -3,7 +3,7 @@
 
 [vars]
 # Application configuration
-VITE_APP_URL = "https://quiz-pixfan.pages.dev"
+VITE_APP_URL = "https://quiz.pixfan.fr"
 VITE_ENABLE_REMOTE_SCORES = true
 
 [build]
