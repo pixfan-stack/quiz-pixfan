@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import questionsData from './data/questions.json';
 import type { Quiz, QuizzesData } from './types/quiz';
@@ -15,16 +15,9 @@ interface QuizSettings {
 }
 
 /**
- * Root application shell.
- *
- * Data flow:
- * 1. Quizzes loaded from src/data/questions.json (static JSON).
- * 2. User picks a quiz → QuizScreen runs useQuizEngine.
- * 3. Scores saved locally via utils/highscore.ts (localStorage).
- * 4. ResultScreen builds localized share URLs (utils/share.ts).
- * 5. Language via react-i18next (src/i18n.ts + public/locales/*).
- * 6. Dark mode via useDarkMode hook.
- * 7. Optional timer + anti-cheat per quiz session.
+ * Root application shell with Suspense boundary for lazy loading.
+ * The QuizScreen component is wrapped in Suspense so Vite's
+ * manualChunks can split it into a separate chunk.
  */
 export default function App() {
   const { t } = useTranslation();
@@ -95,13 +88,19 @@ export default function App() {
           />
         )}
         {view === 'quiz' && activeQuiz && (
-          <QuizScreen
-            key={activeQuiz.id}
-            quiz={activeQuiz}
-            onHome={handleHome}
-            timePerQuestion={settings.timePerQuestion}
-            antiCheat={settings.antiCheat}
-          />
+          <Suspense fallback={
+            <div className="card" style={{ textAlign: 'center', padding: '3rem' }}>
+              <p>Loading quiz...</p>
+            </div>
+          }>
+            <QuizScreen
+              key={activeQuiz.id}
+              quiz={activeQuiz}
+              onHome={handleHome}
+              timePerQuestion={settings.timePerQuestion}
+              antiCheat={settings.antiCheat}
+            />
+          </Suspense>
         )}
       </main>
     </div>

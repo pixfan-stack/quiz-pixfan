@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import i18n from './i18n';
 import './styles/global.css';
 import App from './App';
+import './utils/serviceWorker';
 
 const rootEl = document.getElementById('root');
 if (!rootEl) {

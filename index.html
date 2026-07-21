@@ -4,18 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#4f46e5" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- SEO -->
+    <title>Quiz PixFan — Photography Quizzes (FR/EN)</title>
     <meta
       name="description"
-      content="Bilingual photography quiz app (French / English) — test your photo knowledge and share your score!"
+      content="Free bilingual photography quiz app. Test your knowledge on exposure, composition, light, gear, history & genres. Track scores, compete globally."
     />
-    <title>Quiz PixFan — Photography Quizzes</title>
-    <!-- Open-source fonts (SIL OFL): Inter + Outfit -->
+    <meta name="keywords" content="photography quiz, quiz photo, exposure triangle, composition, lenses, camera tips" />
+    <meta name="author" content="PixFan" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://quiz-pixfan.pages.dev" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://quiz-pixfan.pages.dev" />
+    <meta property="og:title" content="Quiz PixFan — Photography Quizzes" />
+    <meta
+      property="og:description"
+      content="Test your photography knowledge with 120 questions across 6 categories. Bilingual FR/EN. Share your score!"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Quiz PixFan — Photography Quizzes" />
+    <meta
+      name="twitter:description"
+      content="Free bilingual photography quiz app. 120 questions, 6 categories."
+    />
+
+    <!-- PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Quiz PixFan" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Quiz PixFan",
+      "description": "Bilingual photography quiz app with 120 questions across 6 categories",
+      "url": "https://quiz-pixfan.pages.dev",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": ["en", "fr"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
