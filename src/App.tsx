@@ -1,4 +1,4 @@
-import { useMemo, useState, Suspense } from 'react';
+import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import questionsData from './data/questions.json';
 import type { Quiz, QuizzesData } from './types/quiz';
@@ -15,9 +15,7 @@ interface QuizSettings {
 }
 
 /**
- * Root application shell with Suspense boundary for lazy loading.
- * The QuizScreen component is wrapped in Suspense so Vite's
- * manualChunks can split it into a separate chunk.
+ * Root application shell.
  */
 export default function App() {
   const { t } = useTranslation();
@@ -66,6 +64,15 @@ export default function App() {
         </div>
 
         <div className="app-header__controls">
+          <a
+            href="https://pixfan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="app-header__pixfan-link"
+            title="pixfan.com"
+          >
+            <span aria-hidden="true">📷</span> pixfan.com
+          </a>
           <LanguageSwitcher />
           <button
             type="button"
@@ -88,21 +95,28 @@ export default function App() {
           />
         )}
         {view === 'quiz' && activeQuiz && (
-          <Suspense fallback={
-            <div className="card" style={{ textAlign: 'center', padding: '3rem' }}>
-              <p>Loading quiz...</p>
-            </div>
-          }>
-            <QuizScreen
-              key={activeQuiz.id}
-              quiz={activeQuiz}
-              onHome={handleHome}
-              timePerQuestion={settings.timePerQuestion}
-              antiCheat={settings.antiCheat}
-            />
-          </Suspense>
+          <QuizScreen
+            key={activeQuiz.id}
+            quiz={activeQuiz}
+            onHome={handleHome}
+            timePerQuestion={settings.timePerQuestion}
+            antiCheat={settings.antiCheat}
+          />
         )}
       </main>
+
+      <footer className="app-footer">
+        <div className="app-footer__inner">
+          <a
+            href="https://pixfan.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="app-footer__link"
+          >
+            © {new Date().getFullYear()} pixfan.com — Apprendre la photo, choisir son matériel
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

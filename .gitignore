@@ -8,3 +8,4 @@ test-results/
 *.tsbuildinfo
 .wrangler/
 playwright-report/
+.agnes/
