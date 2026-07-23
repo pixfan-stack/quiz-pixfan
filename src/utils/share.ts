@@ -12,7 +12,7 @@
 
 /** Public URL used in share links. Replace for production. */
 export const APP_SHARE_URL =
-  import.meta.env.VITE_APP_URL ?? 'https://example-quiz.app';
+  import.meta.env.VITE_APP_URL ?? 'https://quiz.pixfan.fr';
 
 export type SharePlatform = 'twitter' | 'facebook' | 'linkedin' | 'whatsapp';
 
