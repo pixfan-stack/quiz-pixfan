@@ -13,16 +13,21 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpBackend from 'i18next-http-backend';
+
+import en from '../public/locales/en/translation.json';
+import fr from '../public/locales/fr/translation.json';
 
 export const SUPPORTED_LANGUAGES = ['en', 'fr'] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
 void i18n
-  .use(HttpBackend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    resources: {
+      en: { translation: en },
+      fr: { translation: fr },
+    },
     fallbackLng: 'en',
     supportedLngs: [...SUPPORTED_LANGUAGES],
     interpolation: {
@@ -32,9 +37,6 @@ void i18n
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
-    },
-    backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
     },
   });
 
