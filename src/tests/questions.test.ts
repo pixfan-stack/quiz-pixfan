@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import questionsData from '../data/questions.json';
+import questionsData from '../../public/data/questions.json';
 
 describe('questions.json', () => {
   const data = questionsData as any;

@@ -17,7 +17,7 @@ interface QuizScreenProps {
  * Orchestrates one quiz session: questions → results.
  * Supports optional timer mode and anti-cheat.
  */
-export function QuizScreen({
+export default function QuizScreen({
   quiz,
   onHome,
   timePerQuestion = 0,

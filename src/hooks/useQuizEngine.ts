@@ -5,7 +5,6 @@ import {
   isAnswerCorrect,
 } from '../utils/scoring';
 import { saveHighScoreIfBetter } from '../utils/highscore';
-import { submitRemoteHighScore } from '../utils/highscoreApi';
 import { useTimer } from './useTimer';
 import { useTabTracker } from './useTabTracker';
 
@@ -85,7 +84,16 @@ export function useQuizEngine(
     }
   }, [tabTracker.tabSwitchCount, antiCheat]);
 
-  const questions = quiz.questions;
+  // Shuffle questions on mount for replayability
+  const questions = useMemo(() => {
+    const arr = [...quiz.questions];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.attemptId]);
   const total = questions.length;
   const currentQuestion: Question | undefined = questions[state.currentIndex];
   const isLast = state.currentIndex >= total - 1;
@@ -173,13 +181,6 @@ export function useQuizEngine(
           isNewHighScore,
           previousBest,
         };
-
-        void submitRemoteHighScore({
-          quizId: quiz.id,
-          percentage,
-          correctCount: prev.correctCount,
-          totalQuestions: total,
-        }).catch(() => {});
 
         return { ...prev, phase: 'finished', result };
       }

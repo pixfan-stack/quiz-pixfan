@@ -58,11 +58,14 @@ export function QuestionView({
   // Focus management for accessibility
   const questionRef = useRef<HTMLDivElement>(null);
   const feedbackRef = useRef<HTMLDivElement>(null);
+  const firstAnswerRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
-    if (phase === 'feedback' && feedbackRef.current) {
+    if (phase === 'answering' && firstAnswerRef.current) {
+      firstAnswerRef.current.focus();
+    } else if (phase === 'feedback' && feedbackRef.current) {
       feedbackRef.current.focus();
     }
-  }, [phase]);
+  }, [phase, question.id]);
 
   let feedbackKind: 'correct' | 'incorrect' | 'partial' | null = null;
   if (locked) {
@@ -120,7 +123,13 @@ export function QuestionView({
         </div>
       </div>
 
-      <div className="progress-track">
+      <div
+        className="progress-track"
+        role="progressbar"
+        aria-valuenow={questionNumber}
+        aria-valuemax={totalQuestions}
+        aria-label={t('quiz.progress', { current: questionNumber, total: totalQuestions })}
+      >
         <div
           className="progress-track__fill"
           style={{ width: `${progressPct}%` }}
@@ -157,6 +166,7 @@ export function QuestionView({
             return (
               <li key={answer.id}>
                 <button
+                  ref={index === 0 ? firstAnswerRef : undefined}
                   type="button"
                   className={`answer-option${stateClass}`}
                   onClick={() => onToggle(answer.id)}

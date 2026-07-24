@@ -11,7 +11,6 @@ export function LanguageSwitcher() {
 
   const setLang = (lang: SupportedLanguage) => {
     void i18n.changeLanguage(lang);
-    document.documentElement.lang = lang;
   };
 
   return (

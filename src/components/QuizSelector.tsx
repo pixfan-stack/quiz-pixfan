@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Quiz } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
@@ -36,7 +36,7 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
   const [antiCheat, setAntiCheat] = useState(false);
 
   // Load scores
-  useState(() => {
+  useEffect(() => {
     const loadScores = async () => {
       const scores = new Map<string, QuizWithScore>();
       for (const quiz of quizzes) {
@@ -47,7 +47,7 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
       setQuizScores(scores);
     };
     void loadScores();
-  });
+  }, [quizzes]);
 
   const getBestScore = (quizId: string) => {
     const qs = quizScores.get(quizId);
@@ -145,7 +145,7 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
                     <span className="quiz-card__meta-chip">
                       {t('home.questionsCount', { count: quiz.questions.length })}
                     </span>
-                    <HighScoreBadge quizId={quiz.id} showEmpty bestScore={bestScore} />
+                    <HighScoreBadge showEmpty bestScore={bestScore} />
                   </div>
                   <span className="quiz-card__cta">
                     {t('home.start')}

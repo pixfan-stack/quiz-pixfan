@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import type { HighScoreRecord } from '../types/quiz';
 
 interface HighScoreBadgeProps {
-  quizId: string;
   /** When true, show a muted "no score" label if empty. */
   showEmpty?: boolean;
   /** Pre-computed best score (local + remote). */
@@ -14,7 +13,6 @@ interface HighScoreBadgeProps {
  * Accepts an optional pre-computed best score from remote/local merge.
  */
 export function HighScoreBadge({
-  quizId: _quizId,
   showEmpty = false,
   bestScore,
 }: HighScoreBadgeProps) {

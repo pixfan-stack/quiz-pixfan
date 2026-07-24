@@ -51,6 +51,9 @@ vi.mock('../utils/highscoreApi', () => ({
   submitRemoteHighScore: () => Promise.resolve(true),
 }));
 
+// Deterministic shuffle for tests
+vi.spyOn(Math, 'random').mockReturnValue(0.5);
+
 describe('useQuizEngine', () => {
   it('starts in correct initial state', () => {
     const { result } = renderHook(() => useQuizEngine(mockQuiz));

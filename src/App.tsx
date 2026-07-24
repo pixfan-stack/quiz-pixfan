@@ -1,11 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { useTranslation } from 'react-i18next';
-import questionsData from './data/questions.json';
 import type { Quiz, QuizzesData } from './types/quiz';
 import { useDarkMode } from './hooks/useDarkMode';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { QuizSelector } from './components/QuizSelector';
-import { QuizScreen } from './components/QuizScreen';
+const QuizScreen = lazy(() => import('./components/QuizScreen'));
 
 type AppView = 'home' | 'quiz';
 
@@ -18,8 +18,9 @@ interface QuizSettings {
  * Root application shell.
  */
 export default function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [view, setView] = useState<AppView>('home');
+  const [quizzes, setQuizzes] = useState<Quiz[]>([]);
   const [activeQuiz, setActiveQuiz] = useState<Quiz | null>(null);
   const [settings, setSettings] = useState<QuizSettings>({
     timePerQuestion: 0,
@@ -27,10 +28,17 @@ export default function App() {
   });
   const { isDark, toggleDark } = useDarkMode();
 
-  const quizzes = useMemo(
-    () => (questionsData as QuizzesData).quizzes,
-    []
-  );
+  // Sync <html lang> with current language
+  useEffect(() => {
+    document.documentElement.lang = (i18n.resolvedLanguage ?? i18n.language).slice(0, 2);
+  }, [i18n.language, i18n.resolvedLanguage]);
+
+  // Load quizzes from static asset (not bundled in JS)
+  useEffect(() => {
+    fetch('/data/questions.json')
+      .then((r) => r.json())
+      .then((data) => setQuizzes((data as QuizzesData).quizzes));
+  }, []);
 
   const handleSelectQuiz = (quiz: Quiz) => {
     setActiveQuiz(quiz);
@@ -44,23 +52,18 @@ export default function App() {
 
   return (
     <div className="app">
-      <div className="app__bg" aria-hidden="true" />
-
       <header className="app-header">
         <div className="app-header__brand">
-          <div className="app-header__logo" aria-hidden="true">Q</div>
-          <div className="app-header__text">
-            <h1 className="app-header__title">
-              <button
-                type="button"
-                className="app-header__title-btn"
-                onClick={handleHome}
-              >
-                {t('app.title')}
-              </button>
-            </h1>
-            <p className="app-header__tagline">{t('app.tagline')}</p>
-          </div>
+          <button
+            type="button"
+            className="app-header__logo-container"
+            onClick={handleHome}
+            aria-label="Quiz PixFan"
+          >
+            <span className="logo-pix">Pix</span>
+            <span className="logo-fan">fan</span>
+            <span className="logo-badge">Quiz</span>
+          </button>
         </div>
 
         <div className="app-header__controls">
@@ -71,7 +74,7 @@ export default function App() {
             className="app-header__pixfan-link"
             title="pixfan.com"
           >
-            <span aria-hidden="true">📷</span> pixfan.com
+            pixfan.com
           </a>
           <LanguageSwitcher />
           <button
@@ -87,22 +90,26 @@ export default function App() {
       </header>
 
       <main className="app-main" key={view} id="main-content" tabIndex={-1}>
-        {view === 'home' && (
-          <QuizSelector
-            quizzes={quizzes}
-            onSelect={handleSelectQuiz}
-            onSettingsChange={setSettings}
-          />
-        )}
-        {view === 'quiz' && activeQuiz && (
-          <QuizScreen
-            key={activeQuiz.id}
-            quiz={activeQuiz}
-            onHome={handleHome}
-            timePerQuestion={settings.timePerQuestion}
-            antiCheat={settings.antiCheat}
-          />
-        )}
+        <ErrorBoundary>
+          {view === 'home' && (
+            <QuizSelector
+              quizzes={quizzes}
+              onSelect={handleSelectQuiz}
+              onSettingsChange={setSettings}
+            />
+          )}
+          {view === 'quiz' && activeQuiz && (
+            <Suspense>
+              <QuizScreen
+                key={activeQuiz.id}
+                quiz={activeQuiz}
+                onHome={handleHome}
+                timePerQuestion={settings.timePerQuestion}
+                antiCheat={settings.antiCheat}
+              />
+            </Suspense>
+          )}
+        </ErrorBoundary>
       </main>
 
       <footer className="app-footer">
