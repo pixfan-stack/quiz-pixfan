@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import type { Quiz } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
 import { HighScoreBadge } from './HighScoreBadge';
+import { Leaderboard } from './Leaderboard';
 import { getHighScore } from '../utils/highscore';
 import { fetchRemoteHighScore } from '../utils/highscoreApi';
 
@@ -34,6 +35,7 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
   const [showSettings, setShowSettings] = useState(false);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [antiCheat, setAntiCheat] = useState(false);
+  const [leaderboardQuizId, setLeaderboardQuizId] = useState<string | undefined>(undefined);
 
   // Load scores
   useEffect(() => {
@@ -157,6 +159,23 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
           );
         })}
       </ul>
+
+      <div className="leaderboard-section">
+        <select
+          className="setting-select"
+          value={leaderboardQuizId ?? ''}
+          onChange={(e) => setLeaderboardQuizId(e.target.value || undefined)}
+          aria-label={t('leaderboard.title')}
+        >
+          <option value="">{t('leaderboard.filterAll')}</option>
+          {quizzes.map((quiz) => (
+            <option key={quiz.id} value={quiz.id}>
+              {pickLocale(quiz.title, lang)}
+            </option>
+          ))}
+        </select>
+        <Leaderboard quizId={leaderboardQuizId} limit={20} />
+      </div>
     </section>
   );
 }

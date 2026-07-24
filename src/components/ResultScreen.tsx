@@ -15,6 +15,7 @@ import {
   downloadResultImage,
   shareResultImage,
 } from '../utils/exportResult';
+import { Leaderboard } from './Leaderboard';
 
 interface ResultScreenProps {
   quiz: Quiz;
@@ -208,6 +209,8 @@ export function ResultScreen({
               ))}
             </div>
           </div>
+
+          <Leaderboard quizId={result.quizId} limit={10} />
 
           <div className="btn-row">
             <button type="button" className="btn btn--primary" onClick={onRetry}>

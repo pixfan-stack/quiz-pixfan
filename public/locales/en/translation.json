@@ -67,6 +67,16 @@
     "label": "Best",
     "none": "No score yet"
   },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "rank": "Rank",
+    "score": "Score",
+    "answers": "Answers",
+    "date": "Date",
+    "empty": "No scores yet",
+    "filterAll": "All quizzes",
+    "yourPosition": "Your position"
+  },
   "common": {
     "loading": "Loading…",
     "error": "Something went wrong.",

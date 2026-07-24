@@ -1423,3 +1423,85 @@ a {
 .app-footer__link:hover {
   color: var(--color-primary);
 }
+
+/* ---------- Leaderboard ---------- */
+
+.leaderboard {
+  margin-top: 2rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.leaderboard__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem 1.25rem 0.75rem;
+  margin: 0;
+}
+
+.leaderboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.leaderboard__table th {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.leaderboard__table td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.leaderboard__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard__table tbody tr:hover {
+  background: var(--color-surface-alt);
+}
+
+.leaderboard__rank {
+  font-weight: 700;
+  color: var(--color-text);
+  width: 3rem;
+}
+
+.leaderboard__score {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.leaderboard__answers {
+  color: var(--color-text-muted);
+}
+
+.leaderboard__date {
+  color: var(--color-text-soft);
+  font-size: 0.8rem;
+}
+
+.leaderboard-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.leaderboard-section {
+  margin-top: 2rem;
+}
+
+.leaderboard-section .setting-select {
+  margin-bottom: 1rem;
+}

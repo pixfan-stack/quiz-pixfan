@@ -67,6 +67,16 @@
     "label": "Record",
     "none": "Aucun score"
   },
+  "leaderboard": {
+    "title": "Classement",
+    "rank": "Rang",
+    "score": "Score",
+    "answers": "Réponses",
+    "date": "Date",
+    "empty": "Aucun score pour le moment",
+    "filterAll": "Tous les quiz",
+    "yourPosition": "Votre position"
+  },
   "common": {
     "loading": "Chargement…",
     "error": "Une erreur est survenue.",
