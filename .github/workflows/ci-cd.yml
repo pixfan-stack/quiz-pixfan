@@ -136,11 +136,9 @@ jobs:
           name: dist
           path: dist
 
-      - name: Install Wrangler
-        run: npm install -g wrangler
-
       - name: Deploy to Cloudflare Pages
-        run: |
-          wrangler pages deploy dist \
-            --project-name=quiz-pixfan \
-            --branch=main
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 0e55aa3746b0e7df291117320bee35e2
+          command: pages deploy dist --project-name=quiz-pixfan --branch=main
