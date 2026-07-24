@@ -130,11 +130,14 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
       - name: Install Wrangler
         run: npm install -g wrangler
-
-      - name: Authenticate with Cloudflare
-        run: echo "$CLOUDFLARE_API_TOKEN" | wrangler login --api-token
 
       - name: Deploy to Cloudflare Pages
         run: |
