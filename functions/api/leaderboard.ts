@@ -6,6 +6,8 @@
  * Returns top scores, optionally filtered by quizId.
  */
 
+import { json } from './utils';
+
 export interface Env {
   DB: D1Database;
 }
@@ -16,18 +18,6 @@ interface LeaderboardEntry {
   correctCount: number;
   totalQuestions: number;
   updatedAt: string;
-}
-
-function json(data: unknown, status = 200): Response {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
-  });
 }
 
 export const onRequestOptions: PagesFunction = async () => {

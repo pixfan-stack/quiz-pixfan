@@ -39,6 +39,5 @@ export function useTabTracker(active: boolean) {
     isFocused,
     tabSwitchCount,
     onFocus: () => setIsFocused(true),
-    onBlur: () => setIsFocused(false),
   };
 }

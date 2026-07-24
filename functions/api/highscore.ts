@@ -5,28 +5,9 @@
  *
  * This file is fully functional with D1 when bound in wrangler.toml.
  * Falls back gracefully to localStorage-compatible stub when D1 is not available.
- *
- * ============================================================================
- * DEPLOYMENT STEPS
- * ============================================================================
- *
- * 1. Create D1 database:
- *    npx wrangler d1 create quiz-pixfan-scores
- *
- * 2. Initialize schema:
- *    npx wrangler d1 execute quiz-pixfan-scores --file=setup-schema.sql
- *
- * 3. Add to wrangler.toml:
- *    [[d1_databases]]
- *    binding = "DB"
- *    database_name = "quiz-pixfan-scores"
- *    database_id = "<DATABASE_ID_FROM_STEP_1>"
- *
- * 4. Deploy:
- *    npx wrangler pages deploy dist
- *
- * ============================================================================
  */
+
+import { json } from './utils';
 
 export interface Env {
   DB: D1Database;
@@ -45,18 +26,6 @@ interface HighScoreRecord {
   correctCount: number;
   totalQuestions: number;
   updatedAt: string;
-}
-
-function json(data: unknown, status = 200): Response {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
-  });
 }
 
 export const onRequestOptions: PagesFunction = async () => {

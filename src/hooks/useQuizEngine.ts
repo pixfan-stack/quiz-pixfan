@@ -8,9 +8,9 @@ import { saveHighScoreIfBetter } from '../utils/highscore';
 import { useTimer } from './useTimer';
 import { useTabTracker } from './useTabTracker';
 
-export type QuizPhase = 'answering' | 'feedback' | 'finished';
+type QuizPhase = 'answering' | 'feedback' | 'finished';
 
-export interface QuizEngineOptions {
+interface QuizEngineOptions {
   /** Enable timed mode (seconds per question). 0 = disabled. */
   timePerQuestion?: number;
   /** Penalize tab switches (each switch = -1 question). 0 = disabled. */
@@ -55,7 +55,7 @@ export function useQuizEngine(
 
   const timer = useTimer(
     state.phase === 'answering' && timePerQuestion > 0,
-    { duration: timePerQuestion, penalizeOnTimeout: true }
+    { duration: timePerQuestion }
   );
 
   const tabTracker = useTabTracker(state.phase !== 'finished');
@@ -208,8 +208,7 @@ export function useQuizEngine(
     timerRemaining: timer.remaining,
     timerIsCritical: timer.isCritical,
     timerEnabled: timePerQuestion > 0,
-    tabSwitches: state.tabSwitches,
     antiCheatEnabled: antiCheat,
-    isTabFocused: tabTracker.isFocused,
+    tabSwitches: tabTracker.tabSwitchCount,
   };
 }

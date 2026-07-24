@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Question } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
-import { isAnswerCorrect, isPartiallyCorrect } from '../utils/scoring';
+import { isPartiallyCorrect } from '../utils/scoring';
 
 interface QuestionViewProps {
   question: Question;
@@ -56,7 +56,6 @@ export function QuestionView({
   const progressPct = Math.round((questionNumber / totalQuestions) * 100);
 
   // Focus management for accessibility
-  const questionRef = useRef<HTMLDivElement>(null);
   const feedbackRef = useRef<HTMLDivElement>(null);
   const firstAnswerRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -143,7 +142,7 @@ export function QuestionView({
         </div>
       )}
 
-      <div className="card question-card" key={question.id} ref={questionRef}>
+      <div className="card question-card" key={question.id}>
         <p className="question-type-hint">
           {isMultiple ? t('quiz.multipleChoice') : t('quiz.singleChoice')}
         </p>
@@ -247,24 +246,3 @@ export function QuestionView({
     </section>
   );
 }
-
-/**
- * Live elapsed-seconds counter used by the quiz screen.
- */
-export function useElapsedSeconds(running: boolean, sessionKey = 0): number {
-  const [seconds, setSeconds] = useState(0);
-
-  useEffect(() => {
-    if (!running) return;
-    const started = Date.now();
-    setSeconds(0);
-    const id = window.setInterval(() => {
-      setSeconds(Math.floor((Date.now() - started) / 1000));
-    }, 250);
-    return () => window.clearInterval(id);
-  }, [running, sessionKey]);
-
-  return seconds;
-}
-
-export { isAnswerCorrect };

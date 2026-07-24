@@ -3,43 +3,7 @@
  *
  * When deployed with D1 bound, this provides cross-device high scores.
  * Falls back gracefully to localStorage when backend is unavailable.
- *
- * ============================================================================
- * USAGE
- * ============================================================================
- *
- * 1. Import in your components:
- *    import { fetchRemoteHighScore, submitRemoteHighScore } from '../utils/highscoreApi';
- *
- * 2. Fetch best score:
- *    const score = await fetchRemoteHighScore('exposure-basics');
- *
- * 3. Submit new score:
- *    await submitRemoteHighScore({
- *      quizId: 'exposure-basics',
- *      percentage: 85,
- *      correctCount: 17,
- *      totalQuestions: 20,
- *    });
- *
- * 4. Get leaderboard:
- *    const leaderboard = await fetchLeaderboard({ limit: 10, quizId: 'exposure-basics' });
- *
- * ============================================================================
- * CONFIGURATION
- * ============================================================================
- *
- * Set VITE_ENABLE_REMOTE_SCORES=true in your .env to enable remote scores.
- * When false (default), the app uses only localStorage.
  */
-
-export interface RemoteHighScore {
-  quizId: string;
-  percentage: number;
-  correctCount: number;
-  totalQuestions: number;
-  updatedAt: string;
-}
 
 export interface LeaderboardEntry {
   quizId: string;
@@ -59,26 +23,19 @@ interface FetchLeaderboardParams {
   quizId?: string;
 }
 
-/** Check if remote scores are enabled */
-const REMOTE_SCORES_ENABLED = import.meta.env.VITE_ENABLE_REMOTE_SCORES === 'true';
-
 /**
  * Fetch best score for a quiz from the serverless function.
  * Falls back to localStorage if backend is unavailable.
  */
 export async function fetchRemoteHighScore(
   quizId: string
-): Promise<RemoteHighScore | null> {
-  if (!REMOTE_SCORES_ENABLED) {
-    return null;
-  }
-
+): Promise<{ quizId: string; percentage: number; correctCount: number; totalQuestions: number; updatedAt: string } | null> {
   try {
     const res = await fetch(
       `/api/highscore?quizId=${encodeURIComponent(quizId)}`
     );
     if (!res.ok) return null;
-    const data = (await res.json()) as { score: RemoteHighScore | null };
+    const data = (await res.json()) as { score: { quizId: string; percentage: number; correctCount: number; totalQuestions: number; updatedAt: string } | null };
     return data.score;
   } catch {
     return null;
@@ -95,10 +52,6 @@ export async function submitRemoteHighScore(payload: {
   correctCount: number;
   totalQuestions: number;
 }): Promise<boolean> {
-  if (!REMOTE_SCORES_ENABLED) {
-    return false;
-  }
-
   try {
     const res = await fetch('/api/highscore', {
       method: 'POST',
@@ -118,10 +71,6 @@ export async function submitRemoteHighScore(payload: {
 export async function fetchLeaderboard(
   params: FetchLeaderboardParams = {}
 ): Promise<LeaderboardResponse> {
-  if (!REMOTE_SCORES_ENABLED) {
-    return { leaderboard: [], total: 0 };
-  }
-
   try {
     const { limit = 10, quizId } = params;
     const url = new URL('/api/leaderboard', window.location.origin);

@@ -13,13 +13,10 @@ import { useCallback, useRef, useState, useEffect } from 'react';
 export interface TimerConfig {
   /** Seconds per question (default: 30). */
   duration: number;
-  /** If true, a timeout counts as a wrong answer. */
-  penalizeOnTimeout: boolean;
 }
 
 const DEFAULT_CONFIG: TimerConfig = {
   duration: 30,
-  penalizeOnTimeout: true,
 };
 
 export function useTimer(
@@ -95,13 +92,11 @@ export function useTimer(
     return clear;
   }, [isRunning, timeUp, start, clear]);
 
-  const remainingPct = Math.round((remaining / merged.duration) * 100);
   const isCritical = remaining <= 5;
 
   return {
     remaining,
     timeUp,
-    remainingPct,
     isCritical,
     start,
     pause,

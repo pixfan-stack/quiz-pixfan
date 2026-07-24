@@ -15,8 +15,6 @@ function getSystemPreference(): boolean {
 
 function applyTheme(isDark: boolean) {
   document.documentElement.classList.toggle('dark-mode', isDark);
-  document.body.style.backgroundColor = isDark ? '#0f172a' : '';
-  document.body.style.color = isDark ? '#e2e8f0' : '';
 }
 
 export function useDarkMode() {

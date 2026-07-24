@@ -5,18 +5,17 @@ import { renderHook, act } from '@testing-library/react';
 describe('useTimer', () => {
   it('starts with correct remaining time', () => {
     const { result } = renderHook(() =>
-      useTimer(true, { duration: 30, penalizeOnTimeout: true })
+      useTimer(true, { duration: 30 })
     );
 
     expect(result.current.remaining).toBe(30);
     expect(result.current.timeUp).toBe(false);
-    expect(result.current.remainingPct).toBe(100);
     expect(result.current.isCritical).toBe(false);
   });
 
   it('decrements remaining time', async () => {
     const { result } = renderHook(() =>
-      useTimer(true, { duration: 5, penalizeOnTimeout: true })
+      useTimer(true, { duration: 5 })
     );
 
     await act(async () => {
@@ -29,7 +28,7 @@ describe('useTimer', () => {
 
   it('resets timer', () => {
     const { result } = renderHook(() =>
-      useTimer(true, { duration: 30, penalizeOnTimeout: true })
+      useTimer(true, { duration: 30 })
     );
 
     act(() => {
@@ -42,7 +41,7 @@ describe('useTimer', () => {
 
   it('stops when isRunning becomes false', () => {
     const { result } = renderHook(
-      ({ running }) => useTimer(running, { duration: 30, penalizeOnTimeout: true }),
+      ({ running }) => useTimer(running, { duration: 30 }),
       { initialProps: { running: true } }
     );
 
