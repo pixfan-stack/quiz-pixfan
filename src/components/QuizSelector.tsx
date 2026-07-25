@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import type { Quiz } from '../types/quiz';
+import type { Difficulty, Quiz } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
 import { HighScoreBadge } from './HighScoreBadge';
 import { Leaderboard } from './Leaderboard';
@@ -14,6 +14,19 @@ import {
   DAILY_QUESTION_COUNT,
   getDailyQuizId,
 } from '../utils/dailyChallenge';
+import {
+  buildDifficultyMix,
+  deriveQuizDifficulty,
+  filterQuizzesByDifficulty,
+} from '../utils/difficulty';
+import {
+  buildDuelQuiz,
+  createDuelSeed,
+  DUEL_QUESTION_COUNT,
+} from '../utils/duel';
+import { getDisplayDailyStreak } from '../utils/dailyStreak';
+import { AchievementsPanel } from './AchievementsPanel';
+import { quizShareUrl } from '../utils/share';
 
 interface QuizSelectorProps {
   quizzes: Quiz[];
@@ -31,6 +44,8 @@ const QUIZ_ICONS: Record<string, string> = {
   'history-icons': '🎞️',
   genres: '🖼️',
   smartphone: '📱',
+  'photo-rights': '⚖️',
+  retouching: '✨',
 };
 
 interface QuizWithScore {
@@ -54,6 +69,14 @@ export function QuizSelector({
   const [antiCheat, setAntiCheat] = useState(false);
   const [leaderboardQuizId, setLeaderboardQuizId] = useState<string | undefined>(undefined);
   const [playCounts, setPlayCounts] = useState<Map<string, number>>(new Map());
+  const [difficultyFilter, setDifficultyFilter] = useState<Difficulty | 'all'>('all');
+  const [duelLinkCopied, setDuelLinkCopied] = useState(false);
+  const dailyStreak = getDisplayDailyStreak();
+
+  const visibleQuizzes = useMemo(
+    () => filterQuizzesByDifficulty(quizzes, difficultyFilter),
+    [quizzes, difficultyFilter]
+  );
 
   // Load scores + popularity
   useEffect(() => {
@@ -127,6 +150,25 @@ export function QuizSelector({
     handleStartQuiz(buildDailyQuiz(quizzes));
   };
 
+  const handleStartDifficultyMix = () => {
+    if (quizzes.length === 0 || difficultyFilter === 'all') return;
+    handleStartQuiz(buildDifficultyMix(quizzes, difficultyFilter));
+  };
+
+  const handleStartDuel = async () => {
+    if (quizzes.length === 0) return;
+    const seed = createDuelSeed();
+    const duel = buildDuelQuiz(quizzes, seed);
+    try {
+      await navigator.clipboard.writeText(quizShareUrl(duel.id));
+      setDuelLinkCopied(true);
+      window.setTimeout(() => setDuelLinkCopied(false), 2500);
+    } catch {
+      // ignore — quiz still starts
+    }
+    handleStartQuiz(duel);
+  };
+
   return (
     <section className="home">
       <header className="home-hero">
@@ -189,8 +231,32 @@ export function QuizSelector({
         )}
       </div>
 
+      <div className="difficulty-filter" role="group" aria-label={t('home.difficultyFilter')}>
+        {(['all', 'easy', 'medium', 'hard'] as const).map((level) => (
+          <button
+            key={level}
+            type="button"
+            className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}`}
+            onClick={() => setDifficultyFilter(level)}
+            aria-pressed={difficultyFilter === level}
+          >
+            {t(`home.difficulty_${level}`)}
+          </button>
+        ))}
+        {difficultyFilter !== 'all' && (
+          <button
+            type="button"
+            className="btn btn--ghost btn--small"
+            onClick={handleStartDifficultyMix}
+            disabled={visibleQuizzes.length === 0}
+          >
+            {t('home.startDifficultyMix')}
+          </button>
+        )}
+      </div>
+
       <ul className="quiz-list">
-        {quizzes.length > 0 && (
+        {quizzes.length > 0 && difficultyFilter === 'all' && (
           <li>
             <button
               type="button"
@@ -212,6 +278,11 @@ export function QuizSelector({
                   <span className="quiz-card__meta-chip">
                     {t('home.questionsCount', { count: DAILY_QUESTION_COUNT })}
                   </span>
+                  {dailyStreak > 0 && (
+                    <span className="quiz-card__meta-chip quiz-card__meta-chip--streak">
+                      {t('home.dailyStreak', { count: dailyStreak })}
+                    </span>
+                  )}
                   <HighScoreBadge showEmpty bestScore={getBestScore(dailyId)} />
                 </div>
                 <span className="quiz-card__cta">
@@ -222,7 +293,40 @@ export function QuizSelector({
             </button>
           </li>
         )}
-        {quizzes.length > 0 && (
+        {quizzes.length > 0 && difficultyFilter === 'all' && (
+          <li>
+            <button
+              type="button"
+              className="quiz-card quiz-card--duel"
+              onClick={() => void handleStartDuel()}
+              onMouseEnter={onPrefetchQuiz}
+              onFocus={onPrefetchQuiz}
+              aria-label={t('home.duel')}
+            >
+              <span className="quiz-card__icon" aria-hidden="true">
+                ⚔️
+              </span>
+              <div className="quiz-card__body">
+                <h3 className="quiz-card__title">{t('home.duel')}</h3>
+                <p className="quiz-card__desc">
+                  {duelLinkCopied ? t('home.duelLinkCopied') : t('home.duelDesc')}
+                </p>
+              </div>
+              <div className="quiz-card__footer">
+                <div className="quiz-card__meta">
+                  <span className="quiz-card__meta-chip">
+                    {t('home.questionsCount', { count: DUEL_QUESTION_COUNT })}
+                  </span>
+                </div>
+                <span className="quiz-card__cta">
+                  {t('home.start')}
+                  <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
+                </span>
+              </div>
+            </button>
+          </li>
+        )}
+        {quizzes.length > 0 && difficultyFilter === 'all' && (
           <li>
             <button
               type="button"
@@ -259,9 +363,10 @@ export function QuizSelector({
             </button>
           </li>
         )}
-        {quizzes.map((quiz, index) => {
+        {visibleQuizzes.map((quiz, index) => {
           const bestScore = getBestScore(quiz.id);
           const plays = playCounts.get(quiz.id) ?? 0;
+          const difficulty = deriveQuizDifficulty(quiz);
           return (
             <li key={quiz.id}>
               <button
@@ -284,6 +389,9 @@ export function QuizSelector({
                     <span className="quiz-card__meta-chip">
                       {t('home.questionsCount', { count: quiz.questions.length })}
                     </span>
+                    <span className={`quiz-card__meta-chip quiz-card__meta-chip--difficulty is-${difficulty}`}>
+                      {t(`home.difficulty_${difficulty}`)}
+                    </span>
                     {plays > 0 && (
                       <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
                         {t('home.playsCount', { count: plays })}
@@ -301,6 +409,8 @@ export function QuizSelector({
           );
         })}
       </ul>
+
+      <AchievementsPanel />
 
       <div className="leaderboard-section">
         <select

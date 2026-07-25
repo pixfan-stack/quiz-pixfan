@@ -18,6 +18,14 @@ import {
 } from '../utils/exportResult';
 import { Leaderboard } from './Leaderboard';
 import { MistakesReview } from './MistakesReview';
+import { AchievementsPanel } from './AchievementsPanel';
+import { getAllHighScores } from '../utils/highscore';
+import { recordDailyCompletion } from '../utils/dailyStreak';
+import {
+  unlockAchievements,
+  type AchievementId,
+} from '../utils/achievements';
+import { isDuelQuizId } from '../utils/duel';
 
 interface ResultScreenProps {
   quiz: Quiz;
@@ -25,6 +33,8 @@ interface ResultScreenProps {
   onRetry: () => void;
   onHome: () => void;
   onScoreSubmitted?: () => void;
+  /** Category quiz ids for explorer / expert-trio achievements. */
+  categoryQuizIds?: string[];
 }
 
 const SHARE_PLATFORMS: {
@@ -68,6 +78,7 @@ export function ResultScreen({
   onRetry,
   onHome,
   onScoreSubmitted,
+  categoryQuizIds = [],
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
@@ -75,10 +86,13 @@ export function ResultScreen({
   const messageKey = getPerformanceMessageKey(result.percentage);
   const badgeKey = getResultBadgeKey(result.percentage);
   const shareUrl = quizShareUrl(result.quizId);
+  const isDuel = isDuelQuizId(result.quizId);
 
   const displayName = resolveDisplayNameForSubmit(lang);
   const [leaderboardRefresh, setLeaderboardRefresh] = useState(0);
   const [linkCopied, setLinkCopied] = useState(false);
+  const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
+  const [dailyStreak, setDailyStreak] = useState(0);
 
   const shareText = t('share.text', {
     score: result.correctCount,
@@ -104,6 +118,20 @@ export function ResultScreen({
       // ignore
     }
   }, [shareUrl]);
+
+  // Daily streak + achievements (local)
+  useEffect(() => {
+    const streakState = recordDailyCompletion(result.quizId);
+    setDailyStreak(streakState.currentStreak);
+    const newly = unlockAchievements({
+      quizId: result.quizId,
+      percentage: result.percentage,
+      categoryQuizIds,
+      highscores: getAllHighScores(),
+      streak: streakState,
+    });
+    setNewAchievements(newly);
+  }, [result.quizId, result.percentage, categoryQuizIds]);
 
   // Sync to Cloudflare D1 + analytics
   useEffect(() => {
@@ -237,6 +265,21 @@ export function ResultScreen({
             </div>
           )}
 
+          {dailyStreak > 0 && result.quizId.startsWith('daily-') && (
+            <p className="result-daily-streak" role="status">
+              {t('result.dailyStreak', { count: dailyStreak })}
+            </p>
+          )}
+
+          {newAchievements.length > 0 && (
+            <div className="result-achievements-unlock" role="status">
+              <p className="result-achievements-unlock__title">
+                {t('result.newAchievements')}
+              </p>
+              <AchievementsPanel highlightIds={newAchievements} compact />
+            </div>
+          )}
+
           <MistakesReview mistakes={result.mistakes ?? []} />
 
           <div className="export-section">
@@ -253,8 +296,14 @@ export function ResultScreen({
               className="btn btn--ghost btn--block"
               onClick={handleCopyLink}
             >
-              <span className="btn__icon" aria-hidden="true">🔗</span>
-              {linkCopied ? t('result.linkCopied') : t('result.copyLink')}
+              <span className="btn__icon" aria-hidden="true">
+                {isDuel ? '⚔️' : '🔗'}
+              </span>
+              {linkCopied
+                ? t('result.linkCopied')
+                : isDuel
+                  ? t('result.copyDuelLink')
+                  : t('result.copyLink')}
             </button>
           </div>
 

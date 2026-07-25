@@ -31,6 +31,11 @@ export function getHighScore(quizId: string): HighScoreRecord | null {
   return readAll()[quizId] ?? null;
 }
 
+/** All local high scores keyed by quiz id. */
+export function getAllHighScores(): Record<string, HighScoreRecord> {
+  return readAll();
+}
+
 /**
  * Save a score only if it beats the previous best (by percentage).
  * Returns whether a new high score was set, plus the previous best %.

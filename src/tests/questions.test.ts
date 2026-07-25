@@ -4,8 +4,8 @@ import questionsData from '../../public/data/questions.json';
 describe('questions.json', () => {
   const data = questionsData as any;
 
-  it('has exactly 7 quizzes', () => {
-    expect(data.quizzes.length).toBe(7);
+  it('has exactly 9 quizzes', () => {
+    expect(data.quizzes.length).toBe(9);
   });
 
   it('has exactly 20 questions per quiz', () => {
@@ -14,9 +14,18 @@ describe('questions.json', () => {
     }
   });
 
-  it('has total of 140 questions', () => {
+  it('has total of 180 questions', () => {
     const total = data.quizzes.reduce((sum: number, q: any) => sum + q.questions.length, 0);
-    expect(total).toBe(140);
+    expect(total).toBe(180);
+  });
+
+  it('every quiz and question has a difficulty', () => {
+    for (const quiz of data.quizzes) {
+      expect(quiz.difficulty).toMatch(/^(easy|medium|hard)$/);
+      for (const q of quiz.questions) {
+        expect(q.difficulty).toMatch(/^(easy|medium|hard)$/);
+      }
+    }
   });
 
   it('all questions have required fields', () => {
@@ -132,4 +141,17 @@ describe('questions.json', () => {
     expect(quiz).toBeDefined();
     expect(quiz?.questions.length).toBe(20);
   });
+
+  it('photo-rights quiz exists and has 20 questions', () => {
+    const quiz = data.quizzes.find((q: any) => q.id === 'photo-rights');
+    expect(quiz).toBeDefined();
+    expect(quiz?.questions.length).toBe(20);
+  });
+
+  it('retouching quiz exists and has 20 questions', () => {
+    const quiz = data.quizzes.find((q: any) => q.id === 'retouching');
+    expect(quiz).toBeDefined();
+    expect(quiz?.questions.length).toBe(20);
+  });
 });
+

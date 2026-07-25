@@ -5,7 +5,7 @@
  * network-first for API calls.
  */
 
-const CACHE_NAME = 'quiz-pixfan-v3';
+const CACHE_NAME = 'quiz-pixfan-v4';
 const STATIC_ASSETS = [
   '/',
   '/index.html',

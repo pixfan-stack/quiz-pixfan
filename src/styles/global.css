@@ -691,6 +691,58 @@ a {
   font-weight: 500;
 }
 
+.difficulty-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+}
+
+.difficulty-chip {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  padding: 0.3rem 0.75rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.difficulty-chip:hover {
+  border-color: var(--pixfan-pink);
+  color: var(--color-text);
+}
+
+.difficulty-chip.is-active {
+  background: var(--pixfan-pink);
+  border-color: var(--pixfan-pink);
+  color: #fff;
+}
+
+.quiz-card__meta-chip--difficulty.is-easy,
+.question-difficulty.is-easy {
+  color: #1f7a4d;
+}
+
+.quiz-card__meta-chip--difficulty.is-medium,
+.question-difficulty.is-medium {
+  color: #a15c00;
+}
+
+.quiz-card__meta-chip--difficulty.is-hard,
+.question-difficulty.is-hard {
+  color: #b42318;
+}
+
+.question-difficulty {
+  font-weight: 600;
+}
+
 .result-badge {
   display: inline-block;
   margin: 0.75rem 0 0;
@@ -1017,6 +1069,112 @@ a {
 .quiz-card--daily {
   border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
   background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+}
+
+.quiz-card--duel {
+  border-color: color-mix(in srgb, #c45c26 40%, var(--color-border));
+  background: color-mix(in srgb, #c45c26 7%, var(--color-surface));
+}
+
+.quiz-card__meta-chip--streak {
+  color: #c45c26;
+  font-weight: 700;
+}
+
+.achievements {
+  margin: 1.75rem 0 1.25rem;
+}
+
+.achievements__title {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+.achievements__subtitle {
+  margin: 0 0 0.85rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.achievements__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.achievement-card {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.achievement-card.is-locked {
+  opacity: 0.55;
+}
+
+.achievement-card.is-new {
+  border-color: color-mix(in srgb, var(--pixfan-pink) 55%, var(--color-border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--pixfan-pink) 25%, transparent);
+}
+
+.achievement-card__icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.achievement-card__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.achievement-card__desc {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+.achievement-card__new {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-full);
+  background: var(--pixfan-pink);
+  color: #fff;
+}
+
+.achievements--compact .achievements__grid {
+  grid-template-columns: 1fr;
+}
+
+.result-daily-streak {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  font-weight: 700;
+  color: #c45c26;
+}
+
+.result-achievements-unlock {
+  margin-top: 1rem;
+}
+
+.result-achievements-unlock__title {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .mistakes-review {
@@ -1505,6 +1663,33 @@ a {
 .dark-mode .quiz-card__meta-chip {
   background: var(--color-surface-alt);
   border-color: var(--color-border);
+}
+
+.dark-mode .difficulty-chip {
+  background: var(--color-surface-alt);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.dark-mode .difficulty-chip.is-active {
+  background: var(--pixfan-pink);
+  border-color: var(--pixfan-pink);
+  color: #fff;
+}
+
+.dark-mode .quiz-card__meta-chip--difficulty.is-easy,
+.dark-mode .question-difficulty.is-easy {
+  color: #6fcf97;
+}
+
+.dark-mode .quiz-card__meta-chip--difficulty.is-medium,
+.dark-mode .question-difficulty.is-medium {
+  color: #f2c94c;
+}
+
+.dark-mode .quiz-card__meta-chip--difficulty.is-hard,
+.dark-mode .question-difficulty.is-hard {
+  color: #eb5757;
 }
 
 .dark-mode .feedback__explanation {

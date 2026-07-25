@@ -166,6 +166,14 @@ export function QuestionView({
       <div className="card question-card" key={question.id}>
         <p className="question-type-hint">
           {isMultiple ? t('quiz.multipleChoice') : t('quiz.singleChoice')}
+          {question.difficulty && (
+            <>
+              {' · '}
+              <span className={`question-difficulty is-${question.difficulty}`}>
+                {t(`home.difficulty_${question.difficulty}`)}
+              </span>
+            </>
+          )}
         </p>
         <h2 className="question-text">{pickLocale(question.text, lang)}</h2>
 

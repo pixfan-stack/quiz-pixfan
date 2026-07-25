@@ -5,8 +5,20 @@ import {
   isAnswerCorrect,
 } from '../utils/scoring';
 import { saveHighScoreIfBetter } from '../utils/highscore';
+import { isDailyQuizId } from '../utils/dailyChallenge';
+import { isDuelQuizId } from '../utils/duel';
+import { isDifficultyMixId } from '../utils/difficulty';
 import { useTimer } from './useTimer';
 import { useTabTracker } from './useTabTracker';
+
+/** Challenge packs keep a shared order for every player. */
+function preservesQuestionOrder(quizId: string): boolean {
+  return (
+    isDailyQuizId(quizId) ||
+    isDuelQuizId(quizId) ||
+    isDifficultyMixId(quizId)
+  );
+}
 
 type QuizPhase = 'answering' | 'feedback' | 'finished';
 
@@ -61,16 +73,19 @@ export function useQuizEngine(
 
   const tabTracker = useTabTracker(state.phase !== 'finished');
 
-  // Shuffle questions on mount for replayability
+  // Shuffle questions on mount for replayability (except shared challenge packs)
   const questions = useMemo(() => {
     const arr = [...quiz.questions];
+    if (preservesQuestionOrder(quiz.id)) {
+      return arr;
+    }
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.attemptId]);
+  }, [state.attemptId, quiz.id]);
   const total = questions.length;
   const currentQuestion: Question | undefined = questions[state.currentIndex];
   const isLast = state.currentIndex >= total - 1;

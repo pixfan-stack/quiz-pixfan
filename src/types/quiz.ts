@@ -19,6 +19,9 @@ export interface LocalizedString {
 
 export type QuestionType = 'single' | 'multiple';
 
+/** Pedagogical difficulty for filtering and practice packs. */
+export type Difficulty = 'easy' | 'medium' | 'hard';
+
 export interface Answer {
   id: string;
   text: LocalizedString;
@@ -37,6 +40,8 @@ export interface Question {
   imageUrl?: string;
   /** Accessible description for the illustration. */
   imageAlt?: LocalizedString;
+  /** Optional per-question difficulty (defaults to quiz difficulty). */
+  difficulty?: Difficulty;
 }
 
 export interface Quiz {
@@ -44,6 +49,8 @@ export interface Quiz {
   title: LocalizedString;
   description: LocalizedString;
   questions: Question[];
+  /** Overall quiz difficulty used for filters and badges. */
+  difficulty?: Difficulty;
 }
 
 export interface QuizzesData {

@@ -10,6 +10,8 @@ interface QuizScreenProps {
   timePerQuestion?: number;
   antiCheat?: boolean;
   onScoreSubmitted?: () => void;
+  /** Category quiz ids for achievement checks. */
+  categoryQuizIds?: string[];
 }
 
 /**
@@ -22,6 +24,7 @@ export default function QuizScreen({
   timePerQuestion = 0,
   antiCheat = false,
   onScoreSubmitted,
+  categoryQuizIds = [],
 }: QuizScreenProps) {
   const { t } = useTranslation();
   const engine = useQuizEngine(quiz, { timePerQuestion, antiCheat });
@@ -34,6 +37,7 @@ export default function QuizScreen({
         onRetry={engine.reset}
         onHome={onHome}
         onScoreSubmitted={onScoreSubmitted}
+        categoryQuizIds={categoryQuizIds}
       />
     );
   }

@@ -59,7 +59,8 @@
           "imageAlt": {
             "en": "Vintage camera on a wooden table",
             "fr": "Appareil photo vintage sur une table en bois"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-2",
@@ -109,7 +110,8 @@
           "imageAlt": {
             "en": "Camera dials and settings",
             "fr": "Molettes et réglages d’appareil"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-3",
@@ -156,6 +158,12 @@
           "explanation": {
             "en": "The exposure triangle is aperture, shutter speed and ISO. White balance controls color temperature, not exposure.",
             "fr": "Le triangle d'exposition regroupe ouverture, vitesse et ISO. La balance des blancs gère la température de couleur, pas l'exposition."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Camera in hands outdoors",
+            "fr": "Appareil en main en extérieur"
           }
         },
         {
@@ -201,6 +209,12 @@
           "explanation": {
             "en": "Higher ISO amplifies the sensor signal so you can expose correctly in dim light, but it usually increases noise.",
             "fr": "Un ISO élevé amplifie le signal du capteur pour exposer correctement en faible lumière, au prix souvent d'un bruit plus visible."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Photography equipment detail",
+            "fr": "Détail de matériel photo"
           }
         },
         {
@@ -246,7 +260,8 @@
           "explanation": {
             "en": "Each full stop halves the light. From f/2.8 → f/4 → f/5.6 is two stops smaller (less light, more depth of field).",
             "fr": "Chaque stop plein divise la lumière par deux. De f/2.8 → f/4 → f/5.6 : deux stops de moins de lumière, plus de profondeur de champ."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-6",
@@ -291,7 +306,8 @@
           "explanation": {
             "en": "Long exposures blur moving water into a smooth “silk” look. A tripod (and ND filters in daylight) keep the rest sharp.",
             "fr": "Les poses longues floutent l'eau en mouvement pour un rendu soyeux. Un trépied (et des filtres ND en plein jour) gardent le reste net."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-7",
@@ -336,7 +352,8 @@
           "explanation": {
             "en": "Underexposure means insufficient light reaches the sensor, causing shadow detail loss and potential clipping to pure black.",
             "fr": "La sous-exposition signifie qu'il y a insuffisance de lumière sur le capteur, causant une perte de détail dans les ombres et un écrêtage potentiel sur le noir pur."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-8",
@@ -381,7 +398,8 @@
           "explanation": {
             "en": "Metering modes tell the camera how to evaluate light: matrix evaluates the whole frame, spot measures a tiny area, center-weighted prioritizes the center.",
             "fr": "Les modes de mesure indiquent à l'appareil comment évaluer la lumière : matriel évalue tout le cadre, spot mesure une zone minuscule, pondéré centre privilégie le centre."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-9",
@@ -428,7 +446,8 @@
           "explanation": {
             "en": "Manual mode gives full control when lighting is consistent or predictable, preventing the camera from changing settings between shots.",
             "fr": "Le mode manuel donne un contrôle total quand l'éclairage est cohérent ou prévisible, empêchant l'appareil de changer les paramètres entre les prises."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-10",
@@ -473,7 +492,8 @@
           "explanation": {
             "en": "ETTR means exposing as brightly as possible without clipping highlights, maximizing shadow detail and reducing noise in post-processing.",
             "fr": "ETTR signifie exposer aussi brillamment que possible sans écrêter les hautes lumières, maximisant les détails dans les ombres et réduisant le bruit en post-traitement."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-11",
@@ -518,7 +538,8 @@
           "explanation": {
             "en": "ND filters act like sunglasses for your lens, reducing light intake uniformly across the spectrum, enabling slow shutter speeds even in bright conditions.",
             "fr": "Les filtres ND agissent comme des lunettes de soleil pour votre objectif, réduisant uniformément l'entrée de lumière, permettant des vitesses d'obturation lentes même en conditions lumineuses."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-12",
@@ -563,7 +584,8 @@
           "explanation": {
             "en": "The reciprocal rule helps prevent camera shake: use a shutter speed ≥ 1/focal length (e.g., 1/50s for a 50mm lens on full-frame).",
             "fr": "La règle de réciprocité aide à éviter le flou de bougé : utilisez une vitesse ≥ 1/focale (ex. 1/50s pour un 50mm en plein format)."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-13",
@@ -610,7 +632,8 @@
           "explanation": {
             "en": "Depth of field is controlled by aperture, subject distance, and focal length. ISO affects sensitivity and noise, not depth of field.",
             "fr": "La profondeur de champ est contrôlée par l'ouverture, la distance au sujet et la focale. L'ISO affecte la sensibilité et le bruit, pas la profondeur de champ."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-14",
@@ -655,7 +678,8 @@
           "explanation": {
             "en": "Reciprocity failure occurs with very long or very short exposures where the film's response isn't proportional to light × time, requiring exposure compensation.",
             "fr": "L'échec de réciprocité se produit avec des expositions très longues ou très courtes où la réponse du film n'est pas proportionnelle à lumière × temps, nécessitant une compensation d'exposition."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "exp-15",
@@ -700,7 +724,8 @@
           "explanation": {
             "en": "Highlight metering protects bright areas from clipping (burning out), which is often harder to recover in post than shadow detail.",
             "fr": "La mesure des hautes lumières protège les zones lumineuses de l'écrêtage (grillon), souvent plus difficile à récupérer en post qu'un détail dans les ombres."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "exp-16",
@@ -745,7 +770,8 @@
           "explanation": {
             "en": "Aperture Priority lets you control depth of field via aperture while the camera automatically calculates the correct shutter speed.",
             "fr": "La priorité ouverture vous permet de contrôler la profondeur de champ via l'ouverture pendant que l'appareil calcule automatiquement la bonne vitesse d'obturation."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "exp-17",
@@ -792,7 +818,8 @@
           "explanation": {
             "en": "Higher ISO amplifies signal but also noise, reduces dynamic range, and can cause color fidelity issues. Sharpness doesn't improve.",
             "fr": "Un ISO plus élevé amplifie le signal mais aussi le bruit, réduit la plage dynamique et peut causer des problèmes de fidélité colorimétrique. La netteté ne s'améliore pas."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "exp-18",
@@ -837,7 +864,8 @@
           "explanation": {
             "en": "Exposure compensation lets you bias the camera's metering toward brighter (+) or darker (-) exposures, useful for high-key or low-key scenes.",
             "fr": "La compensation d'exposition vous permet d'orienter la mesure vers des expositions plus claires (+) ou plus sombres (-), utile pour les scènes haute clé ou basse clé."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "exp-19",
@@ -882,7 +910,8 @@
           "explanation": {
             "en": "Bracketing takes multiple shots at different exposures, ensuring at least one is optimal and enabling HDR blending or safety nets.",
             "fr": "Le bracketing prend plusieurs photos à différentes expositions, garantissant qu'au moins une est optimale et permettant le fusion HDR ou des sauvegardes."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "exp-20",
@@ -929,9 +958,11 @@
           "explanation": {
             "en": "Cameras tend to underexpose bright scenes. Overexposing slightly ensures whites stay white and subjects aren't silhouetted unintentionally.",
             "fr": "Les appareils ont tendance à sous-exposer les scènes lumineuses. Surexposer légèrement garantit que les blancs restent blancs et que les sujets ne deviennent pas des silhouettes involontaires."
-          }
+          },
+          "difficulty": "medium"
         }
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "id": "composition",
@@ -992,7 +1023,8 @@
           "imageAlt": {
             "en": "Landscape framed by mountain ridges",
             "fr": "Paysage cadré par des crêtes montagneuses"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-2",
@@ -1044,7 +1076,8 @@
           "imageAlt": {
             "en": "Foggy forest landscape",
             "fr": "Paysage forestier brumeux"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-3",
@@ -1089,6 +1122,12 @@
           "explanation": {
             "en": "Negative space is the uncluttered area around the subject. Used well, it emphasizes the subject and can create calm or tension.",
             "fr": "L'espace négatif est la zone épurée autour du sujet. Bien utilisé, il met le sujet en valeur et peut créer calme ou tension."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Mountain lake landscape",
+            "fr": "Lac de montagne"
           }
         },
         {
@@ -1134,6 +1173,12 @@
           "explanation": {
             "en": "Low angles exaggerate height and presence. High angles (bird’s-eye) often do the opposite.",
             "fr": "La contre-plongée exagère la hauteur et la présence. La plongée produit souvent l'effet inverse."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Green hills landscape",
+            "fr": "Collines verdoyantes"
           }
         },
         {
@@ -1179,7 +1224,8 @@
           "explanation": {
             "en": "A low horizon gives more of the frame to the sky (dramatic clouds, color). A high horizon favors the land or foreground.",
             "fr": "Un horizon bas laisse plus de place au ciel (nuages, couleurs). Un horizon haut favorise le sol ou le premier plan."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-6",
@@ -1224,7 +1270,8 @@
           "explanation": {
             "en": "S-curves create a natural flow through the image, leading the viewer's eye on a journey from foreground to background.",
             "fr": "Les courbes en S créent un flux naturel à travers l'image, guidant l'œil du spectateur du premier plan à l'arrière-plan."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-7",
@@ -1269,7 +1316,8 @@
           "explanation": {
             "en": "Symmetry evokes order, stability, and beauty. It's powerful in architecture, reflections, and formal portraits.",
             "fr": "La symétrie évoque l'ordre, la stabilité et la beauté. Elle est puissante en architecture, reflets et portraits formels."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-8",
@@ -1316,7 +1364,8 @@
           "explanation": {
             "en": "Visual weight is influenced by color intensity, contrast, human interest (faces), and placement. ISO is technical, not compositional.",
             "fr": "Le poids visuel est influencé par l'intensité des couleurs, le contraste, l'intérêt humain (visages) et le placement. L'ISO est technique, pas compositionnel."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-9",
@@ -1361,7 +1410,8 @@
           "explanation": {
             "en": "This technique adds depth, focuses attention, and can provide context. Examples: windows, doorways, tree branches.",
             "fr": "Cette technique ajoute de la profondeur, concentre l'attention et peut fournir du contexte. Exemples : fenêtres, portes, branches d'arbres."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-10",
@@ -1406,7 +1456,8 @@
           "explanation": {
             "en": "Based on the Fibonacci sequence, the golden spiral creates a more natural, flowing composition that guides the eye through multiple focal points.",
             "fr": "Basée sur la suite de Fibonacci, la spirale dorée crée une composition plus naturelle et fluide qui guide l'œil à travers plusieurs points focaux."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-11",
@@ -1453,7 +1504,8 @@
           "explanation": {
             "en": "Diagonals introduce energy and direction, unlike horizontal (calm) or vertical (stable) lines. They're powerful for action and drama.",
             "fr": "Les diagonales introduisent énergie et direction, contrairement aux lignes horizontales (calme) ou verticales (stabilité). Elles sont puissantes pour l'action et le drame."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-12",
@@ -1498,7 +1550,8 @@
           "explanation": {
             "en": "Visual tension comes from imbalance, contrast, or unexpected elements, creating intrigue and keeping viewers engaged.",
             "fr": "La tension visuelle vient du déséquilibre, du contraste ou d'éléments inattendus, créant de l'intrigue et maintenant l'engagement des spectateurs."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-13",
@@ -1543,7 +1596,8 @@
           "explanation": {
             "en": "Cropping is a powerful compositional tool that can eliminate distractions, change perspective, and redirect viewer attention.",
             "fr": "Le recadrage est un outil compositionnel puissant qui peut éliminer les distractions, changer la perspective et rediriger l'attention du spectateur."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-14",
@@ -1590,7 +1644,8 @@
           "explanation": {
             "en": "Minimalism thrives on simplicity: negative space, clean geometry, and restrained colors. Clutter contradicts the style.",
             "fr": "Le minimalisme prospère sur la simplicité : espace négatif, géométrie épurée et couleurs restrintes. L'encombrement contredit le style."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "comp-15",
@@ -1635,7 +1690,8 @@
           "explanation": {
             "en": "Giving a subject space to look or move into prevents a cramped feeling and feels more natural and balanced.",
             "fr": "Donner au sujet de l'espace pour regarder ou se déplacer évite un sentiment d'encombrement et semble plus naturel et équilibré."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "comp-16",
@@ -1680,7 +1736,8 @@
           "explanation": {
             "en": "Complementary colors or stark contrasts create focal points and guide the viewer's eye through intentional design.",
             "fr": "Les couleurs complémentaires ou les contrastes marqués créent des points focaux et guident l'œil du spectateur par intentionnalité."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "comp-17",
@@ -1726,7 +1783,8 @@
           "explanation": {
             "en": "Balance relates to visual weight distribution, not literal symmetry. Asymmetrical balance can feel more dynamic while still being harmonious.",
             "fr": "L'équilibre concerne la distribution du poids visuel, pas la symétrie littérale. L'équilibre asymétrique peut sembler plus dynamique tout en restant harmonieux."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "comp-18",
@@ -1771,7 +1829,8 @@
           "explanation": {
             "en": "High angles (looking down) can diminish a subject's presence, show context, or create a bird's-eye perspective.",
             "fr": "Les angles hauts (regarder vers le bas) peuvent diminuer la présence d'un sujet, montrer le contexte ou créer une perspective aérienne."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "comp-19",
@@ -1816,7 +1875,8 @@
           "explanation": {
             "en": "Patterns create rhythm; disrupting one draws immediate attention and creates a compelling focal point.",
             "fr": "Les motifs créent du rythme ; en rompre un attire immédiatement l'attention et crée un point focal convaincant."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "comp-20",
@@ -1861,9 +1921,11 @@
           "explanation": {
             "en": "Rules are guidelines, not laws. Breaking them intentionally can create tension, unease, or unique artistic statements.",
             "fr": "Les règles sont des directives, pas des lois. Les rompre intentionnellement peut créer de la tension, de l'inquiétude ou des déclarations artistiques uniques."
-          }
+          },
+          "difficulty": "medium"
         }
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "id": "light-color",
@@ -1920,11 +1982,12 @@
             "en": "Near sunrise and sunset the sun is low: light is warmer, softer and more directional — flattering for portraits and landscapes.",
             "fr": "Près du lever et du coucher, le soleil est bas : lumière plus chaude, plus douce et directionnelle — flatteuse pour portraits et paysages."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1495616811223-4d98c4fee50b?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=960&q=80",
           "imageAlt": {
             "en": "Golden hour light over a city skyline",
             "fr": "Lumière dorée sur une skyline urbaine"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "light-2",
@@ -1974,7 +2037,8 @@
           "imageAlt": {
             "en": "Sunlight through trees",
             "fr": "Soleil à travers les arbres"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "light-3",
@@ -2021,6 +2085,12 @@
           "explanation": {
             "en": "Different light sources have different color temperatures. Correct white balance keeps neutrals neutral and skin tones natural.",
             "fr": "Chaque source a sa température de couleur. Une bonne balance des blancs garde les neutres neutres et les teintes de peau naturelles."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Night sky with stars",
+            "fr": "Ciel étoilé"
           }
         },
         {
@@ -2066,6 +2136,12 @@
           "explanation": {
             "en": "Backlight can create silhouettes, rim light (glowing edges) or dreamy haze — powerful for mood and separation from the background.",
             "fr": "Le contre-jour peut créer des silhouettes, un rim light (liseré lumineux) ou une brume douce — très utile pour l'ambiance et détacher le sujet du fond."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Misty morning light",
+            "fr": "Lumière de matin brumeux"
           }
         },
         {
@@ -2111,7 +2187,8 @@
           "explanation": {
             "en": "Color temperature uses the Kelvin scale (e.g. ~5600 K daylight, ~3200 K tungsten). Cameras and editing tools use these values for white balance.",
             "fr": "La température de couleur utilise l'échelle Kelvin (ex. ~5600 K lumière du jour, ~3200 K tungstène). Appareils et logiciels s'en servent pour la balance des blancs."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "light-6",
@@ -2156,7 +2233,8 @@
           "explanation": {
             "en": "Diffused light comes from a large source or is scattered (clouds, softboxes), minimizing harsh shadows and reducing contrast.",
             "fr": "La lumière diffusée provient d'une grande source ou est dispersée (nuages, softboxes), minimisant les ombres dures et réduisant le contraste."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "light-7",
@@ -2201,7 +2279,8 @@
           "explanation": {
             "en": "Different wavelengths focus at different points, causing purple/green fringes. Quality lenses and post-processing can reduce it.",
             "fr": "Différentes longueurs d'onde se concentrent à des points différents, causant des franges violettes/vertes. Les objectifs de qualité et le post-traitement peuvent le réduire."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "light-8",
@@ -2248,7 +2327,8 @@
           "explanation": {
             "en": "Reflectors bounce light, flags block it, diffusers/softboxes scatter it. Memory cards store data, not control light.",
             "fr": "Les réflecteurs renvoient la lumière, les flags la bloquent, diffuseurs/softboxes la dispersent. Les cartes mémoire stockent des données, pas contrôler la lumière."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-9",
@@ -2293,7 +2373,8 @@
           "explanation": {
             "en": "Color grading shapes the visual tone and emotion of an image or film, going beyond simple white balance correction.",
             "fr": "Le color grading façonne le ton visuel et l'émotion d'une image ou film, allant au-delà de la simple correction de balance des blancs."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-10",
@@ -2338,7 +2419,8 @@
           "explanation": {
             "en": "Flash duration can be as short as 1/1000s or faster, freezing motion independently of the camera's shutter speed setting.",
             "fr": "La durée du flash peut être aussi courte que 1/1000s ou plus, figeant le mouvement indépendamment du réglage de vitesse d'obturation de l'appareil."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-11",
@@ -2385,7 +2467,8 @@
           "explanation": {
             "en": "Reflectors redirect existing light to fill shadows, add eye sparkle, or soften harsh illumination without additional equipment.",
             "fr": "Les réflecteurs redirigent la lumière existante pour remplir les ombres, ajouter des reflets aux yeux ou adoucir l'éclairage sans équipement supplémentaire."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-12",
@@ -2430,7 +2513,8 @@
           "explanation": {
             "en": "Fluorescent lights often have uneven spectra causing green or magenta casts. Custom white balance or presets fix this.",
             "fr": "Les lumières fluorescentes ont souvent des spectres inégaux causant des teintes vertes ou magenta. La balance des blancs personnalisée ou les préréglages corrigent cela."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-13",
@@ -2475,7 +2559,8 @@
           "explanation": {
             "en": "Light painting uses long exposures in darkness to 'draw' with light sources like flashlights, LEDs, or fire.",
             "fr": "La peinture lumineuse utilise de longues expositions dans l'obscurité pour 'dessiner' avec des sources lumineuses comme lampes torches, LED ou feu."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-14",
@@ -2522,7 +2607,8 @@
           "explanation": {
             "en": "Blue hour offers a magical, serene quality with cool tones and the contrast between natural blue and warm artificial lights.",
             "fr": "L'heure bleue offre une qualité magique et sereine avec des tons froids et le contraste entre le bleu naturel et les lumières artificielles chaudes."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-15",
@@ -2567,7 +2653,8 @@
           "explanation": {
             "en": "HDR merges bracketed exposures to retain detail across extreme light ranges beyond what a single shot can capture.",
             "fr": "Le HDR fusionne des expositions bracketées pour conserver les détails à travers des gammes de lumière extrêmes au-delà de ce qu'une seule prise peut capturer."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "light-16",
@@ -2612,7 +2699,8 @@
           "explanation": {
             "en": "Lower Kelvin values (<3200K) are warm/orange (candlelight, tungsten), while higher values (>5600K) are cool/blue (shade, overcast).",
             "fr": "Les valeurs Kelvin basses (<3200K) sont chaudes/orange (bougie, tungstène), tandis que les valeurs élevées (>5600K) sont froides/bleues (ombre, couvert)."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "light-17",
@@ -2659,7 +2747,8 @@
           "explanation": {
             "en": "Light direction, temperature, and quality dramatically affect emotional impact. Camera brand has no direct effect on mood.",
             "fr": "La direction, la température et la qualité de la lumière affectent dramatiquement l'impact émotionnel. La marque d'appareil n'a aucun effet direct sur l'ambiance."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "light-18",
@@ -2704,7 +2793,8 @@
           "explanation": {
             "en": "Named after Rembrandt's paintings, this classic portrait lighting creates dramatic, dimensional效果 with a characteristic light triangle.",
             "fr": "Nommé d'après les peintures de Rembrandt, cet éclairage de portrait classique crée un effet dramatique et dimensionnel avec un triangle lumineux caractéristique."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "light-19",
@@ -2749,7 +2839,8 @@
           "explanation": {
             "en": "Light follows the inverse square law: doubling distance reduces intensity to 1/4. Understanding falloff is crucial for lighting design.",
             "fr": "La lumière suit la loi du carré inverse : doubler la distance réduit l'intensité à 1/4. Comprendre la chute est crucial pour la conception d'éclairage."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "light-20",
@@ -2796,9 +2887,11 @@
           "explanation": {
             "en": "These techniques balance extreme light differences. Increasing ISO would add noise without solving the contrast problem.",
             "fr": "Ces techniques équilibrent les différences lumineuses extrêmes. Augmenter l'ISO ajouterait du bruit sans résoudre le problème de contraste."
-          }
+          },
+          "difficulty": "hard"
         }
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "id": "gear-lenses",
@@ -2859,7 +2952,8 @@
           "imageAlt": {
             "en": "Camera lenses lined up on a desk",
             "fr": "Objectifs photo alignés sur un bureau"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gear-2",
@@ -2907,11 +3001,12 @@
             "en": "Wide-angle is roughly under ~35–40 mm on full-frame. 200 mm is a telephoto, compressing perspective and narrowing the field of view.",
             "fr": "Le grand-angle se situe grosso modo sous ~35–40 mm en plein format. Un 200 mm est un téléobjectif : perspective compressée, champ plus étroit."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1495707902641-75caccea0cc9?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=960&q=80",
           "imageAlt": {
             "en": "Camera body and lens",
             "fr": "Boîtier et objectif"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gear-3",
@@ -2956,6 +3051,12 @@
           "explanation": {
             "en": "Primes trade zoom flexibility for optical quality, size/weight and wide apertures (e.g. f/1.4–f/1.8) — great for low light and subject isolation.",
             "fr": "Les focales fixes échangent la souplesse du zoom contre qualité optique, compacité et grandes ouvertures (ex. f/1.4–f/1.8) — idéales en basse lumière et pour isoler le sujet."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Classic camera close-up",
+            "fr": "Gros plan d’appareil classique"
           }
         },
         {
@@ -3001,6 +3102,12 @@
           "explanation": {
             "en": "A 50 mm on APS-C behaves roughly like a 75–80 mm field of view on full-frame. Depth of field and noise characteristics also differ.",
             "fr": "Un 50 mm en APS-C donne un champ proche d'un 75–80 mm en plein format. Profondeur de champ et bruit diffèrent aussi."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Photographer with camera",
+            "fr": "Photographe avec appareil"
           }
         },
         {
@@ -3046,7 +3153,8 @@
           "explanation": {
             "en": "Polarizers cut polarized light: less glare on non-metallic surfaces, richer skies and foliage. Effect depends on angle to the sun.",
             "fr": "Les polarisants coupent la lumière polarisée : moins d'éblouissement sur surfaces non métalliques, ciels et feuillages plus riches. L'effet dépend de l'angle avec le soleil."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gear-6",
@@ -3091,7 +3199,8 @@
           "explanation": {
             "en": "Full-frame refers to sensors matching the 35mm film dimensions (36×24mm), the traditional standard for professional photography.",
             "fr": "Le plein format fait référence aux capteurs correspondant aux dimensions du film 35mm (36×24mm), la norme traditionnelle pour la photographie professionnelle."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gear-7",
@@ -3136,7 +3245,8 @@
           "explanation": {
             "en": "IS/OSS/VRI compensates for small camera movements, allowing sharper images at shutter speeds 2-5 stops slower than normal.",
             "fr": "L'IS/OSS/VRI compense les petits mouvements de l'appareil, permettant des images plus nettes à des vitesses d'obturation 2-5 stops plus lentes que la normale."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gear-8",
@@ -3183,7 +3293,8 @@
           "explanation": {
             "en": "Short telephotos (50-135mm) compress features flattering and allow working distance. Ultra-wide (14mm) distorts faces.",
             "fr": "Les courts téléobjectifs (50-135mm) compressent les traits de manière flatteuse et permettent une distance de travail. L'ultra-grand-angle (14mm) déforme les visages."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-9",
@@ -3228,7 +3339,8 @@
           "explanation": {
             "en": "Tilt-shift lenses allow perspective correction (architecture) and creative focus control (miniature effect) through lens movements.",
             "fr": "Les objectifs tilt-shift permettent la correction de perspective (architecture) et le contrôle créatif de la mise au point (effet miniature) grâce aux mouvements d'objectif."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-10",
@@ -3273,7 +3385,8 @@
           "explanation": {
             "en": "One megapixel equals one million pixels. More megapixels mean higher resolution and larger prints, but not necessarily better image quality.",
             "fr": "Un mégapixel équivaut à un million de pixels. Plus de mégapixels signifient une résolution plus élevée et des impressions plus grandes, mais pas nécessairement une meilleure qualité d'image."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-11",
@@ -3320,7 +3433,8 @@
           "explanation": {
             "en": "Mirrorless cameras excel in size, AF innovation, and EVF features. DSLRs often still lead in battery longevity.",
             "fr": "Les appareils sans miroir excellent en taille, innovation AF et fonctionnalités VE. Les reflex mènent souvent encore en longévité de batterie."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-12",
@@ -3365,7 +3479,8 @@
           "explanation": {
             "en": "A/Av stands for Aperture/Avantité. M is Manual, P is Program, S/Tv is Shutter Priority.",
             "fr": "A/Av signifie Avantité d'ouverture. M est Manuel, P est Programme, S/Tv est Priorité vitesse."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-13",
@@ -3410,7 +3525,8 @@
           "explanation": {
             "en": "Weather sealing uses gaskets and seals to protect against rain, dust, and splashes in challenging environments.",
             "fr": "L'étanchéité climatique utilise des joints et des scellés pour protéger contre la pluie, la poussière et les éclaboussures dans des environnements difficiles."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-14",
@@ -3457,7 +3573,8 @@
           "explanation": {
             "en": "DOF is controlled by aperture, focal length, subject distance, and sensor size. Card speed affects burst shooting, not optics.",
             "fr": "La PdC est contrôlée par l'ouverture, la focale, la distance au sujet et la taille du capteur. La vitesse de carte affecte le burst, pas l'optique."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-15",
@@ -3502,7 +3619,8 @@
           "explanation": {
             "en": "Prime lenses have one focal length (e.g., 50mm), offering better optics, wider apertures, and smaller size than zooms.",
             "fr": "Les objectifs fixes ont une seule focale (ex. 50mm), offrant une meilleure optique, des ouvertures plus grandes et une taille réduite par rapport aux zooms."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gear-16",
@@ -3547,7 +3665,8 @@
           "explanation": {
             "en": "Lens mounts (EF, F, E, L, etc.) define mechanical and electronic compatibility between lenses and camera bodies.",
             "fr": "Les montures d'objectif (EF, F, E, L, etc.) définissent la compatibilité mécanique et électronique entre les objectifs et les corps d'appareil."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "gear-17",
@@ -3594,7 +3713,8 @@
           "explanation": {
             "en": "Tripods provide stability for sharp images, long exposures, and precise composition. They don't affect autofocus performance.",
             "fr": "Les trépieds fournissent une stabilité pour des images nettes, de longues expositions et une composition précise. Ils n'affectent pas les performances de autofocus."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "gear-18",
@@ -3639,7 +3759,8 @@
           "explanation": {
             "en": "APS-C sensors typically have 1.5× (Nikon/Sony) or 1.6× (Canon) crop factor, making a 50mm lens behave like 75-80mm.",
             "fr": "Les capteurs APS-C ont typiquement un facteur de crop de 1,5× (Nikon/Sony) ou 1,6× (Canon), rendant un 50mm semblable à un 75-80mm."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "gear-19",
@@ -3684,7 +3805,8 @@
           "explanation": {
             "en": "'Fast' refers to wide apertures allowing more light, enabling faster shutter speeds and better low-light performance.",
             "fr": "'Rapide' fait référence aux grandes ouvertures permettant plus de lumière, permettant des vitesses d'obturation plus rapides et une meilleure performance en basse lumière."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "gear-20",
@@ -3731,9 +3853,11 @@
           "explanation": {
             "en": "Tripods enable sharp long exposures, CPL enhances skies/reflections, ND allows slow shutter in daylight. Macro is for close-ups.",
             "fr": "Les trépieds permettent de longues expositions nettes, le CPL améliore ciels/reflets, les ND permettent des poses lentes en journée. Le macro est pour les gros plans."
-          }
+          },
+          "difficulty": "hard"
         }
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "id": "history-icons",
@@ -3794,7 +3918,8 @@
           "imageAlt": {
             "en": "Classic camera",
             "fr": "Appareil classique"
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "hist-2",
@@ -3840,11 +3965,12 @@
             "en": "Cartier-Bresson coined the decisive moment: catching the peak of action and geometry in a single, perfectly timed frame.",
             "fr": "Cartier-Bresson a formalisé le moment décisif : saisir le sommet de l'action et de la géométrie dans un seul cadre parfaitement cadencé."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1452780212940-6f5c0d14d291?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=960&q=80",
           "imageAlt": {
             "en": "Vintage photography gear",
             "fr": "Matériel photo vintage"
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "hist-3",
@@ -3891,6 +4017,12 @@
           "explanation": {
             "en": "Adams (Zone System landscapes), Lange (Depression-era documentary) and Salgado (epic B&W reportage) are pillars of the medium.",
             "fr": "Adams (paysages, Zone System), Lange (documentaire de la Grande Dépression) et Salgado (reportage N&B épique) sont des piliers du médium."
+          },
+          "difficulty": "medium",
+          "imageUrl": "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Old books and papers",
+            "fr": "Vieux livres et papiers"
           }
         },
         {
@@ -3936,6 +4068,12 @@
           "explanation": {
             "en": "Magnum Photos (1947) was co-founded by Cartier-Bresson, Robert Capa, George Rodger and David “Chim” Seymour — a cooperative owned by photographers.",
             "fr": "Magnum Photos (1947) a été cofondée par Cartier-Bresson, Robert Capa, George Rodger et David « Chim » Seymour — une coopérative détenue par les photographes."
+          },
+          "difficulty": "medium",
+          "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Vintage photo albums",
+            "fr": "Albums photo vintage"
           }
         },
         {
@@ -3981,7 +4119,8 @@
           "explanation": {
             "en": "Leibovitz’s work for Rolling Stone, Vanity Fair and beyond defined modern celebrity portraiture with cinematic staging.",
             "fr": "Le travail de Leibovitz pour Rolling Stone, Vanity Fair et au-delà a défini le portrait de célébrités moderne, très mis en scène."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "hist-6",
@@ -4026,7 +4165,8 @@
           "explanation": {
             "en": "Announced publicly in 1839, the daguerreotype created a detailed unique positive on a polished silver-coated copper plate — a milestone for popular photography.",
             "fr": "Annoncé publiquement en 1839, le daguerréotype créait un positif unique et détaillé sur plaque de cuivre argentée — un jalon pour la photo grand public."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "hist-7",
@@ -4071,7 +4211,8 @@
           "explanation": {
             "en": "Released in 1900, the Brownie made photography accessible to children and amateurs with its $1 price tag.",
             "fr": "Lancé en 1900, le Brownie a rendu la photographie accessible aux enfants et amateurs avec son prix de 1$."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "hist-8",
@@ -4116,7 +4257,8 @@
           "explanation": {
             "en": "Steven Sasson's Kodak prototype weighed 8 pounds, took 23 seconds to capture an image, and recorded to cassette tape.",
             "fr": "Le prototype Kodak de Steven Sasson pesait 3,6 kg, prenait 23 secondes pour capturer une image et enregistrait sur cassette."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-9",
@@ -4163,7 +4305,8 @@
           "explanation": {
             "en": "Lange ('Migrant Mother'), Evans, and Rothstein photographed Depression-era poverty for the Farm Security Administration.",
             "fr": "Lange ('Mère migrante'), Evans et Rothstein ont photographié la pauvreté de l'ère Dépression pour la Farm Security Administration."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-10",
@@ -4208,7 +4351,8 @@
           "explanation": {
             "en": "Curated by Edward Steichen in 1955, it traveled worldwide reaching 9 million visitors, celebrating universal human experiences.",
             "fr": "Curatée par Edward Steichen en 1955, elle a voyagé dans le monde entier touchant 9 millions de visiteurs, célébrant les expériences humaines universelles."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-11",
@@ -4253,7 +4397,8 @@
           "explanation": {
             "en": "Stieglitz promoted photography as fine art through his gallery '291' and publications like Camera Work.",
             "fr": "Stieglitz a promu la photographie comme beaux-arts à travers sa galerie '291' et des publications comme Camera Work."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-12",
@@ -4299,7 +4444,8 @@
           "explanation": {
             "en": "Napalm Girl and Tank Man had direct impacts on war perception and policy. Migrant Mother affected Depression response, Earthrise environmental awareness.",
             "fr": "Fille au napalm et Homme au char ont eu un impact direct sur la perception de la guerre et les politiques. Mère migrante a affecté la réponse à la Dépression, Levée de Terre la sensibilisation environnementale."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-13",
@@ -4344,7 +4490,8 @@
           "explanation": {
             "en": "The Zone System divides tonal values into 11 zones (0-black to X-white), giving photographers precise control over exposure and development.",
             "fr": "Le Système de Zones divise les valeurs tonales en 11 zones (0-noir à X-blanc), donnant aux photographes un contrôle précis sur l'exposition et le développement."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-14",
@@ -4389,7 +4536,8 @@
           "explanation": {
             "en": "Stieglitz elevated photography to art; Atget documented Paris. Both influenced modern photography's evolution significantly.",
             "fr": "Stieglitz a élevé la photographie au rang d'art ; Atget a documenté Paris. Tous deux ont significativement influencé l'évolution de la photographie moderne."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-15",
@@ -4436,7 +4584,8 @@
           "explanation": {
             "en": "Instagram transformed photography into a social, visual language. Smartphones replaced dedicated cameras for casual users.",
             "fr": "Instagram a transformé la photographie en un langage visuel et social. Les smartphones ont remplacé les appareils dédiés pour les utilisateurs occasionnels."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-16",
@@ -4481,7 +4630,8 @@
           "explanation": {
             "en": "Published in Life magazine in 1945, this iconic image symbolized relief and joy at WWII's end, though the subjects' identities remain unknown.",
             "fr": "Publié dans Life magazine en 1945, cette image iconique symbolise le soulagement et la joie à la fin de la Seconde Guerre mondiale, bien que les identités des sujets restent inconnues."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-17",
@@ -4526,7 +4676,8 @@
           "explanation": {
             "en": "Robert Cornelius' daguerreotype from 1839 is considered the first American self-portrait and first photograph of a person.",
             "fr": "Le daguerréotype de Robert Cornelius de 1839 est considéré comme le premier autoportrait américain et la première photographie d'une personne."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-18",
@@ -4573,7 +4724,8 @@
           "explanation": {
             "en": "These artists elevated color photography from commercial to fine art. Eggleston's 1976 MoMA exhibition was pivotal.",
             "fr": "Ces artistes ont élevé la photographie couleur du commercial aux beaux-arts. L'exposition MoMA d'Eggleston en 1976 fut pivotale."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-19",
@@ -4618,7 +4770,8 @@
           "explanation": {
             "en": "The Smithsonian holds over 1.4 million photographs spanning the medium's entire history, from daguerreotypes to digital.",
             "fr": "Le Smithsonian conserve plus de 1,4 million de photographies couvrant toute l'histoire du médium, des daguerréotypes au numérique."
-          }
+          },
+          "difficulty": "hard"
         },
         {
           "id": "hist-20",
@@ -4666,9 +4819,11 @@
           "explanation": {
             "en": "All these innovations transformed photography from chemical processes to digital, accessible, instantly-shareable medium.",
             "fr": "Toutes ces innovations ont transformé la photographie de processus chimiques à un médium numérique, accessible et partageable instantanément."
-          }
+          },
+          "difficulty": "hard"
         }
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "id": "genres",
@@ -4729,7 +4884,8 @@
           "imageAlt": {
             "en": "Portrait photography session",
             "fr": "Séance portrait"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-2",
@@ -4781,7 +4937,8 @@
           "imageAlt": {
             "en": "Street photography scene",
             "fr": "Scène de photo de rue"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-3",
@@ -4826,6 +4983,12 @@
           "explanation": {
             "en": "True macro often reaches ~1:1 reproduction (subject life-size on the sensor): insects, textures, details. Focus stacking is common.",
             "fr": "La vraie macro atteint souvent ~1:1 (sujet grandeur nature sur le capteur) : insectes, textures, détails. Le focus stacking est fréquent."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Sunlight through trees",
+            "fr": "Soleil à travers les arbres"
           }
         },
         {
@@ -4871,6 +5034,12 @@
           "explanation": {
             "en": "Tripods enable sharp long exposures (water, low light, ND filters) and careful multi-shot techniques (brackets, panoramas).",
             "fr": "Le trépied permet des poses longues nettes (eau, basse lumière, filtres ND) et des techniques multi-vues (brackets, panoramas)."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Desert landscape",
+            "fr": "Paysage désertique"
           }
         },
         {
@@ -4918,7 +5087,8 @@
           "explanation": {
             "en": "Wildlife work mixes telephoto reach, timing, patience and ethics. Studio softboxes are not the field standard.",
             "fr": "La photo animalière mêle portée télé, timing, patience et éthique. Les softboxes de studio ne sont pas la norme sur le terrain."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-6",
@@ -4963,7 +5133,8 @@
           "explanation": {
             "en": "Fine art photography prioritizes creative expression over documentation, often exhibited in galleries and museums.",
             "fr": "La photographie d'art privilégie l'expression créative sur la documentation, souvent exposée dans des galeries et musées."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-7",
@@ -5010,7 +5181,8 @@
           "explanation": {
             "en": "Sports photography demands technical skill, anticipation, and adaptability to changing conditions.",
             "fr": "La photographie sportive exige une compétence technique, une anticipation et une adaptabilité aux conditions changeantes."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-8",
@@ -5055,7 +5227,8 @@
           "explanation": {
             "en": "Food stylists use techniques like glycerin for steam, toothpicks for structure, and lighting to make food look appetizing.",
             "fr": "Les stylistes alimentaires utilisent des techniques comme le glycérin pour la vapeur, des cure-dents pour la structure et l'éclairage pour rendre la nourriture appétissante."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-9",
@@ -5100,7 +5273,8 @@
           "explanation": {
             "en": "Documentary photography serves as visual journalism, telling真实 stories with ethical responsibility to subjects.",
             "fr": "La photographie documentaire sert de journalisme visuel, racontant des histoires vraies avec une responsabilité éthique envers les sujets."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-10",
@@ -5147,7 +5321,8 @@
           "explanation": {
             "en": "Astrophotography needs stability (tripod), tracking for long exposures, and fast wide lenses. Macro is for close-ups.",
             "fr": "L'astrophotographie nécessite stabilité (trépied), suivi pour longues expositions et objectifs larges lumineux. Le macro est pour les gros plans."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-11",
@@ -5192,7 +5367,8 @@
           "explanation": {
             "en": "Fashion photography sells lifestyle and aspiration, combining clothing presentation with artistic vision.",
             "fr": "La photographie de mode vend un style de vie et l'aspiration, combinant présentation de vêtements et vision artistique."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-12",
@@ -5239,7 +5415,8 @@
           "explanation": {
             "en": "Architectural photography celebrates design through careful composition, perspective correction, and lighting.",
             "fr": "La photographie architecturale célèbre le design par une composition soignée, correction de perspective et éclairage."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-13",
@@ -5284,7 +5461,8 @@
           "explanation": {
             "en": "Conceptual photography prioritizes ideas, often using staged scenes, symbolism, or manipulation to convey messages.",
             "fr": "La photographie conceptuelle privilégie les idées, utilisant souvent des scènes mises en scène, symbolisme ou manipulation pour transmettre des messages."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-14",
@@ -5329,7 +5507,8 @@
           "explanation": {
             "en": "Photographers balance documenting public life with respecting individuals' privacy and dignity.",
             "fr": "Les photographes équilibrent la documentation de la vie publique avec le respect de la vie privée et dignité des individus."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "gen-15",
@@ -5376,7 +5555,8 @@
           "explanation": {
             "en": "Aviation photography captures aircraft requiring speed, reach, and often specialized locations like airfields.",
             "fr": "La photographie aéronautique capture des aéronefs nécessitant vitesse, portée et souvent des emplacements spécialisés comme les aérodromes."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gen-16",
@@ -5421,7 +5601,8 @@
           "explanation": {
             "en": "Product photography drives sales by presenting items in the best light, emphasizing features and quality.",
             "fr": "La photographie de produit stimule les ventes en présentant les articles sous leur meilleur jour, en mettant en évidence les caractéristiques et la qualité."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gen-17",
@@ -5466,7 +5647,8 @@
           "explanation": {
             "en": "Red wavelengths absorb first underwater, requiring flashes or white balance adjustments to restore natural colors.",
             "fr": "Les longueurs d'onde rouges absorbent en premier sous l'eau, nécessitant des flashes ou ajustements de balance des blancs pour restaurer les couleurs naturelles."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gen-18",
@@ -5513,7 +5695,8 @@
           "explanation": {
             "en": "Event photographers must be adaptable, unobtrusive, and skilled at capturing spontaneous moments.",
             "fr": "Les photographes d'événements doivent être adaptables, discrets et habiles à capturer des moments spontanés."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gen-19",
@@ -5558,7 +5741,8 @@
           "explanation": {
             "en": "Drones democratized aerial photography, enabling unique perspectives for real estate, landscape, and event coverage.",
             "fr": "Les drones ont démocratisé la photographie aérienne, permettant des perspectives uniques pour l'immobilier, paysage et couverture d'événements."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "gen-20",
@@ -5605,9 +5789,11 @@
           "explanation": {
             "en": "Night photography demands different techniques: stability, light management, and noise control.",
             "fr": "La photographie nocturne exige différentes techniques : stabilité, gestion de la lumière et contrôle du bruit."
-          }
+          },
+          "difficulty": "medium"
         }
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "id": "smartphone",
@@ -5668,7 +5854,8 @@
           "imageAlt": {
             "en": "Smartphone on a desk",
             "fr": "Smartphone sur un bureau"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-2",
@@ -5718,7 +5905,8 @@
           "imageAlt": {
             "en": "Phone camera at night",
             "fr": "Caméra de téléphone la nuit"
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-3",
@@ -5763,6 +5951,12 @@
           "explanation": {
             "en": "AE/AF lock by tap typically meters and focuses where you tap.",
             "fr": "Le AE/AF au toucher mesure et fait le point là où vous appuyez."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Person holding a smartphone",
+            "fr": "Personne tenant un smartphone"
           }
         },
         {
@@ -5810,6 +6004,12 @@
           "explanation": {
             "en": "Clean optics, stability and good light beat extreme digital zoom.",
             "fr": "Optique propre, stabilité et bonne lumière battent le zoom numérique extrême."
+          },
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Smartphone camera interface",
+            "fr": "Interface caméra de smartphone"
           }
         },
         {
@@ -5855,7 +6055,8 @@
           "explanation": {
             "en": "True optical zoom changes magnification with optics; digital zoom crops/upsamples.",
             "fr": "Le vrai zoom optique change le grossissement ; le numérique recadre/interpolate."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-6",
@@ -5900,7 +6101,8 @@
           "explanation": {
             "en": "Dual cameras / LiDAR / ML segment the subject and fake shallow DOF.",
             "fr": "Double caméra / LiDAR / ML segmentent le sujet et simulent une faible PdC."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-7",
@@ -5945,7 +6147,8 @@
           "explanation": {
             "en": "HDR merges exposures to keep highlight and shadow detail.",
             "fr": "Le HDR fusionne des expositions pour garder hautes lumières et ombres."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-8",
@@ -5990,7 +6193,8 @@
           "explanation": {
             "en": "RAW keeps more linear data before aggressive phone processing.",
             "fr": "Le RAW conserve plus de données avant le traitement agressif du téléphone."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-9",
@@ -6037,7 +6241,8 @@
           "explanation": {
             "en": "Stabilization, shorter exposures and bracing all help; walking + zoom hurts.",
             "fr": "Stabilisation, expositions courtes et appui aident ; marcher + zoom nuit."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-10",
@@ -6082,7 +6287,8 @@
           "explanation": {
             "en": "Short focal lengths exaggerate perspective; edges can look warped.",
             "fr": "Les courtes focales exagèrent la perspective ; les bords se déforment."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-11",
@@ -6127,7 +6333,8 @@
           "explanation": {
             "en": "Soft, diffused light reduces harsh shadows on faces.",
             "fr": "Une lumière douce et diffusée réduit les ombres dures sur le visage."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-12",
@@ -6172,7 +6379,8 @@
           "explanation": {
             "en": "They capture moments before/after the shutter press as motion.",
             "fr": "Elles capturent l’avant/après du déclenchement en mouvement."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-13",
@@ -6217,7 +6425,8 @@
           "explanation": {
             "en": "Overlays guide framing without changing exposure technology.",
             "fr": "Les overlays guident le cadrage sans changer la technique d’exposition."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-14",
@@ -6264,7 +6473,8 @@
           "explanation": {
             "en": "Privacy and platform-ready exports matter; RAW-only sharing is rarely required.",
             "fr": "Vie privée et exports adaptés comptent ; le partage RAW seul est rarement requis."
-          }
+          },
+          "difficulty": "easy"
         },
         {
           "id": "phone-15",
@@ -6309,7 +6519,8 @@
           "explanation": {
             "en": "Close focus means shallow depth of field; stability and light help.",
             "fr": "La mise au point proche implique une PdC faible ; stabilité et lumière aident."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "phone-16",
@@ -6354,7 +6565,8 @@
           "explanation": {
             "en": "Aggressive processing can erase texture while looking “clean” on small screens.",
             "fr": "Un traitement agressif efface la texture tout en paraissant « propre » sur petit écran."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "phone-17",
@@ -6399,7 +6611,8 @@
           "explanation": {
             "en": "Locking stops continuous metering/focus hunting during a pan.",
             "fr": "Le verrouillage évite les variations de mesure/focus pendant un travelling."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "phone-18",
@@ -6446,7 +6659,8 @@
           "explanation": {
             "en": "Subtle edits and a sane crop beat extreme filters.",
             "fr": "Des retouches sobres et un bon recadrage battent les filtres extrêmes."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "phone-19",
@@ -6491,7 +6705,8 @@
           "explanation": {
             "en": "Backlight scenes blow highlights; HDR and careful exposure help.",
             "fr": "Le contre-jour brûle les HL ; HDR et exposition soignée aident."
-          }
+          },
+          "difficulty": "medium"
         },
         {
           "id": "phone-20",
@@ -6536,6 +6751,1915 @@
           "explanation": {
             "en": "Small photosites gather less light; computational stacking compensates.",
             "fr": "De petites photosites collectent moins de lumière ; l’empilement compense."
+          },
+          "difficulty": "medium"
+        }
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "photo-rights",
+      "difficulty": "medium",
+      "title": {
+        "en": "Rights & Ethics",
+        "fr": "Droits & éthique"
+      },
+      "description": {
+        "en": "Copyright, model releases, privacy and responsible sharing.",
+        "fr": "Droit d’auteur, autorisations, vie privée et partage responsable."
+      },
+      "questions": [
+        {
+          "id": "rights-1",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "In most countries, who owns the copyright of a photo by default?",
+            "fr": "Dans la plupart des pays, qui détient par défaut le droit d’auteur d’une photo ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "The photographer who created it",
+                "fr": "Le photographe qui l’a créée"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Anyone who likes it on social media",
+                "fr": "Toute personne qui la like sur les réseaux"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The camera manufacturer",
+                "fr": "Le fabricant de l’appareil"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The subject automatically, always",
+                "fr": "Le sujet photographié, automatiquement et toujours"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Copyright usually vests in the author (the photographer), unless transferred by contract or created as work-for-hire.",
+            "fr": "Le droit d’auteur appartient en principe à l’auteur (le photographe), sauf cession ou commande/salariat selon les cas."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Contract and pen on desk",
+            "fr": "Contrat et stylo sur un bureau"
+          }
+        },
+        {
+          "id": "rights-2",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "“All rights reserved” generally means…",
+            "fr": "« Tous droits réservés » signifie en général…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Reuse requires permission unless an exception applies",
+                "fr": "La réutilisation nécessite une autorisation, sauf exception"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Anyone may sell the photo freely",
+                "fr": "Tout le monde peut vendre la photo librement"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The photo is public domain",
+                "fr": "La photo est dans le domaine public"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only print use is forbidden",
+                "fr": "Seul l’usage papier est interdit"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "It signals the author retains control; check license or ask before commercial/republishing use.",
+            "fr": "L’auteur garde le contrôle ; vérifiez la licence ou demandez avant usage commercial/republication."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Handshake over agreement",
+            "fr": "Poignée de main sur un accord"
+          }
+        },
+        {
+          "id": "rights-3",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "A Creative Commons “BY-NC” license typically allows…",
+            "fr": "Une licence Creative Commons « BY-NC » autorise typiquement…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Non-commercial reuse with credit to the author",
+                "fr": "La réutilisation non commerciale avec crédit à l’auteur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Commercial ads with no attribution",
+                "fr": "La pub commerciale sans attribution"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Claiming you took the photo",
+                "fr": "Prétendre que vous avez pris la photo"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Removing the license notice always",
+                "fr": "Retirer toujours la mention de licence"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "BY = attribution; NC = non-commercial. Always read the exact CC deed.",
+            "fr": "BY = attribution ; NC = non commercial. Lisez toujours le texte exact de la licence."
+          }
+        },
+        {
+          "id": "rights-4",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "When might you need a model release?",
+            "fr": "Quand peut-il falloir une autorisation de modèle (model release) ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Commercial advertising featuring a recognizable person",
+                "fr": "Publicité commerciale avec une personne reconnaissable"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Selling prints of a street scene with no identifiable faces",
+                "fr": "Vendre des tirages d’une rue sans visage identifiable"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Using a portrait in a brand campaign",
+                "fr": "Utiliser un portrait dans une campagne de marque"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Editorial news reporting in many jurisdictions (often different rules)",
+                "fr": "Reportage d’actualité dans beaucoup de juridictions (règles souvent différentes)"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "c"
+          ],
+          "explanation": {
+            "en": "Commercial/promotional use of likeness often needs consent; editorial use follows different rules by country.",
+            "fr": "L’usage commercial de l’image d’une personne exige souvent un consentement ; l’éditorial suit d’autres règles selon les pays."
+          }
+        },
+        {
+          "id": "rights-5",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Saving someone’s Instagram photo and reposting it as your own is…",
+            "fr": "Enregistrer la photo Instagram de quelqu’un et la republier comme la vôtre, c’est…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Usually copyright infringement / dishonest",
+                "fr": "En général une atteinte au droit d’auteur / malhonnête"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Always legal because it was online",
+                "fr": "Toujours légal car c’était en ligne"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Required for fair use everywhere",
+                "fr": "Obligatoire au titre du fair use partout"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only wrong if the photo is in color",
+                "fr": "Incorrect seulement si la photo est en couleur"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Online publication does not waive copyright. Credit alone may not be enough without permission.",
+            "fr": "Publier en ligne ne renonce pas au droit d’auteur. Un crédit seul ne suffit pas toujours sans autorisation."
+          }
+        },
+        {
+          "id": "rights-6",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Photographing a building from a public street is often allowed, but…",
+            "fr": "Photographier un bâtiment depuis la voie publique est souvent possible, mais…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Commercial use of distinctive architecture/trademarks can still be restricted",
+                "fr": "L’usage commercial d’une architecture / marque distinctive peut rester limité"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "You must always pay the architect a fee",
+                "fr": "Vous devez toujours payer des droits à l’architecte"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Photos of buildings are never copyrightable anywhere",
+                "fr": "Les photos de bâtiments ne sont jamais protégées nulle part"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only drones are legal",
+                "fr": "Seuls les drones sont légaux"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Freedom of panorama and trademark/property rules vary widely by country.",
+            "fr": "La liberté de panorama et les règles de marque/propriété varient fortement selon les pays."
+          }
+        },
+        {
+          "id": "rights-7",
+          "type": "multiple",
+          "difficulty": "easy",
+          "text": {
+            "en": "Ethical practices when photographing people include…",
+            "fr": "Des pratiques éthiques en photographiant des personnes incluent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Respecting dignity and context",
+                "fr": "Respecter la dignité et le contexte"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Asking before intrusive close-ups when possible",
+                "fr": "Demander avant des gros plans intrusifs si possible"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Publishing humiliating images for clicks",
+                "fr": "Publier des images humiliantes pour le clic"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Being careful with minors’ images",
+                "fr": "Être prudent avec l’image des mineurs"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Legality is not the only standard—respect and consent matter, especially with children.",
+            "fr": "La légalité n’est pas le seul critère — respect et consentement comptent, surtout avec les enfants."
+          }
+        },
+        {
+          "id": "rights-8",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "“Work made for hire” / employee photography typically means…",
+            "fr": "Une photo réalisée dans le cadre du travail / commande signifie souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Rights may belong to the employer/client per contract and local law",
+                "fr": "Les droits peuvent appartenir à l’employeur/client selon contrat et droit local"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The intern always keeps exclusive worldwide rights",
+                "fr": "Le stagiaire conserve toujours l’exclusivité mondiale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Copyright disappears",
+                "fr": "Le droit d’auteur disparaît"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only Creative Commons applies",
+                "fr": "Seule Creative Commons s’applique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Employment and assignment contracts often transfer economic rights—read before assuming ownership.",
+            "fr": "Contrats de travail ou de cession transfèrent souvent les droits patrimoniaux — lisez avant de présumer la propriété."
+          }
+        },
+        {
+          "id": "rights-9",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Embedding GPS location in photo metadata can…",
+            "fr": "Intégrer la localisation GPS dans les métadonnées peut…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Reveal private places (home, children’s school, etc.)",
+                "fr": "Révéler des lieux privés (domicile, école des enfants, etc.)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Increase shutter speed automatically",
+                "fr": "Augmenter automatiquement la vitesse d’obturation"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Remove copyright",
+                "fr": "Supprimer le droit d’auteur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Guarantee viral reach",
+                "fr": "Garantir une viralité"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Strip or review EXIF location before public sharing when privacy matters.",
+            "fr": "Retirez ou vérifiez la localisation EXIF avant un partage public si la vie privée compte."
+          }
+        },
+        {
+          "id": "rights-10",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Fair use / short quotation exceptions…",
+            "fr": "Le fair use / le droit de courte citation…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Are limited, context-specific, and not a free pass to take any photo",
+                "fr": "Sont limités, liés au contexte, et pas un laissez-passer pour n’importe quelle photo"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Allow unlimited commercial reuse of any image",
+                "fr": "Autorisent la réutilisation commerciale illimitée de toute image"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Exist identically in every country",
+                "fr": "Existent à l’identique dans tous les pays"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only apply to videos",
+                "fr": "Ne s’appliquent qu’aux vidéos"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Exceptions differ by jurisdiction and purpose (criticism, news, education…).",
+            "fr": "Les exceptions varient selon le pays et le but (critique, info, éducation…)."
+          }
+        },
+        {
+          "id": "rights-11",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "Before using a stock photo in a client project, check…",
+            "fr": "Avant d’utiliser une photo stock pour un client, vérifiez…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "License type (editorial vs commercial)",
+                "fr": "Le type de licence (éditorial vs commercial)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Seat/usage limits and attribution requirements",
+                "fr": "Les limites d’usage et les obligations d’attribution"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Whether model/property releases cover your use",
+                "fr": "Si les releases modèle/propriété couvrent votre usage"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "That the file is exactly 300 DPI on screen",
+                "fr": "Que le fichier fasse exactement 300 DPI à l’écran"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Stock licenses are contractual—editorial images often cannot be used in ads.",
+            "fr": "Les licences stock sont contractuelles — l’éditorial ne va souvent pas en pub."
+          }
+        },
+        {
+          "id": "rights-12",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "AI-trained models using scraped photos raise issues mainly about…",
+            "fr": "Les modèles d’IA entraînés sur des photos scrapées soulèvent surtout des questions de…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Consent, copyright, and transparency of training data",
+                "fr": "Consentement, droit d’auteur et transparence des données d’entraînement"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only battery life",
+                "fr": "Uniquement l’autonomie de batterie"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "ISO noise exclusively",
+                "fr": "Uniquement le bruit ISO"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Tripod thread size",
+                "fr": "Le diamètre de pas de vis trépied"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Legal and ethical debates continue around training data, opt-outs and likeness.",
+            "fr": "Les débats juridiques et éthiques continuent sur les données d’entraînement, opt-out et ressemblance."
+          }
+        },
+        {
+          "id": "rights-13",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Publishing a recognizable photo of a private person in an embarrassing context without consent is…",
+            "fr": "Publier la photo reconnaissable d’une personne privée dans un contexte embarrassant sans consentement est…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Often risky legally and ethically (privacy / personality rights)",
+                "fr": "Souvent risqué juridiquement et éthiquement (vie privée / droits de la personnalité)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Always fine if shot in public",
+                "fr": "Toujours OK si pris en public"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Mandatory for news",
+                "fr": "Obligatoire pour l’actualité"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only a color-profile issue",
+                "fr": "Uniquement un problème de profil colorimétrique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Public place ≠ free to harm dignity; laws on privacy and image rights vary.",
+            "fr": "Lieu public ≠ droit de nuire à la dignité ; droits à l’image/vie privée varient."
+          }
+        },
+        {
+          "id": "rights-14",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Watermarks…",
+            "fr": "Les filigranes (watermarks)…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Can deter casual theft but do not replace legal rights",
+                "fr": "Peuvent dissuader le vol occasionnel mais ne remplacent pas les droits"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Are required for copyright to exist",
+                "fr": "Sont obligatoires pour que le droit d’auteur existe"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Make RAW files smaller",
+                "fr": "Rendent les fichiers RAW plus petits"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Transfer ownership to Instagram",
+                "fr": "Transfèrent la propriété à Instagram"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Copyright exists without a watermark; watermarks are a practical deterrent.",
+            "fr": "Le droit d’auteur existe sans filigrane ; c’est surtout une protection pratique."
+          }
+        },
+        {
+          "id": "rights-15",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "Good habits before delivering photos to a client…",
+            "fr": "Bonnes habitudes avant de livrer des photos à un client…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Clarify usage rights in writing",
+                "fr": "Clarifier les droits d’usage par écrit"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Agree on exclusivity / duration / territories if needed",
+                "fr": "S’accorder sur exclusivité / durée / territoires si besoin"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Assume verbal chat equals worldwide perpetual transfer",
+                "fr": "Supposer qu’un échange oral vaut cession mondiale perpétuelle"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Keep an archive of delivered selects",
+                "fr": "Conserver une archive des sélections livrées"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Clear contracts prevent disputes; keep records of what was delivered.",
+            "fr": "Un contrat clair évite les litiges ; archivez ce qui a été livré."
+          }
+        },
+        {
+          "id": "rights-16",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "A museum forbidding flash/photos inside is primarily about…",
+            "fr": "Un musée interdisant flash/photos à l’intérieur relève surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Venue rules (contract/policy), conservation, and sometimes third-party rights",
+                "fr": "Du règlement du lieu, de la conservation, et parfois de droits de tiers"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "International ISO standards for JPEG",
+                "fr": "Des normes ISO internationales du JPEG"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Mandatory Creative Commons",
+                "fr": "De Creative Commons obligatoire"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Sensor size laws",
+                "fr": "De lois sur la taille de capteur"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Property owners can set conditions of entry; artworks may also be under copyright.",
+            "fr": "Le propriétaire peut fixer des conditions d’accès ; les œuvres peuvent aussi être protégées."
+          }
+        },
+        {
+          "id": "rights-17",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Credit lines (“Photo: Jane Doe”)…",
+            "fr": "Les crédits photo (« Photo : Jane Doe »)…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Respect moral rights / attribution but may not grant reuse rights alone",
+                "fr": "Respectent le droit moral / l’attribution mais n’accordent pas seuls un droit de réutilisation"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Automatically sell exclusive rights to the magazine",
+                "fr": "Vendent automatiquement l’exclusivité au magazine"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Delete EXIF",
+                "fr": "Suppriment l’EXIF"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Are illegal in the EU",
+                "fr": "Sont illégaux dans l’UE"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Attribution is good practice; licensing still controls reuse.",
+            "fr": "L’attribution est une bonne pratique ; la licence contrôle la réutilisation."
+          }
+        },
+        {
+          "id": "rights-18",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "If you hire a second shooter, you should…",
+            "fr": "Si vous engagez un second photographe, vous devriez…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Define in a contract who owns / can use the images",
+                "fr": "Définir par contrat qui possède / peut utiliser les images"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Never discuss rights",
+                "fr": "Ne jamais parler des droits"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Assume social media posts transfer ownership",
+                "fr": "Supposer que les posts réseaux transfèrent la propriété"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only pay in likes",
+                "fr": "Ne payer qu’en likes"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Collaborations need clear IP terms up front.",
+            "fr": "Les collabs nécessitent des termes PI clairs dès le départ."
+          }
+        },
+        {
+          "id": "rights-19",
+          "type": "multiple",
+          "difficulty": "hard",
+          "text": {
+            "en": "Risky uses of photos without clearance often include…",
+            "fr": "Des usages risqués sans autorisation incluent souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Product packaging and paid ads",
+                "fr": "Packaging produit et publicités payantes"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Implying a celebrity endorses a brand",
+                "fr": "Laisser croire qu’une célébrité cautionne une marque"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Private family album printed at home",
+                "fr": "Album de famille imprimé à la maison"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Merchandise (t-shirts, posters for sale)",
+                "fr": "Merchandising (t-shirts, posters à la vente)"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Commercial exploitation and endorsement implications need proper releases/licenses.",
+            "fr": "L’exploitation commerciale et l’apparence d’endorsement exigent releases/licences."
+          }
+        },
+        {
+          "id": "rights-20",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "The safest short advice before reusing an image found online…",
+            "fr": "Le conseil le plus sûr avant de réutiliser une image trouvée en ligne…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Assume it’s protected, check the license, or create/commission your own",
+                "fr": "Supposez qu’elle est protégée, vérifiez la licence, ou créez/commandez la vôtre"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "If Google Images shows it, it’s free",
+                "fr": "Si Google Images l’affiche, c’est gratuit"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Crop 10% to make it legal",
+                "fr": "Recadrer de 10 % la rend légale"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Convert to black and white to bypass copyright",
+                "fr": "Passer en N&B contourne le droit d’auteur"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "There is no “10% crop” myth that voids copyright. License or create.",
+            "fr": "Le mythe du « recadrage à 10 % » n’annule pas le droit d’auteur. Licence ou création."
+          }
+        }
+      ]
+    },
+    {
+      "id": "retouching",
+      "difficulty": "medium",
+      "title": {
+        "en": "Editing & Retouching",
+        "fr": "Retouche & développement"
+      },
+      "description": {
+        "en": "RAW, histograms, color, sharpening and ethical edits.",
+        "fr": "RAW, histogrammes, couleur, accentuation et retouche éthique."
+      },
+      "questions": [
+        {
+          "id": "edit-1",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "A histogram clipped on the right usually means…",
+            "fr": "Un histogramme coupé à droite signifie souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Blown / lost highlight detail",
+                "fr": "Hautes lumières brûlées / détail perdu"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Perfect midtones only",
+                "fr": "Uniquement des tons moyens parfaits"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "The lens is dirty",
+                "fr": "L’objectif est sale"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "ISO is always 100",
+                "fr": "L’ISO est toujours à 100"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Right clipping indicates pure white with little recoverable detail.",
+            "fr": "Une coupe à droite indique du blanc pur avec peu de détail récupérable."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Abstract color gradients",
+            "fr": "Dégradés de couleurs abstraits"
+          }
+        },
+        {
+          "id": "edit-2",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Editing RAW rather than JPEG mainly helps because…",
+            "fr": "Développer un RAW plutôt qu’un JPEG aide surtout parce que…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "More tonal/color data remain before heavy processing",
+                "fr": "Plus de données tonales/couleur restent avant traitement lourd"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "RAW files are always smaller",
+                "fr": "Les RAW sont toujours plus petits"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "JPEG cannot show colors",
+                "fr": "Le JPEG ne peut pas montrer de couleurs"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "RAW disables composition",
+                "fr": "Le RAW désactive la composition"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "RAW keeps linear sensor data; JPEG bakes in contrast, sharpening and compression.",
+            "fr": "Le RAW garde des données capteur ; le JPEG fige contraste, accentuation et compression."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Editing workspace with screens",
+            "fr": "Espace de retouche avec écrans"
+          }
+        },
+        {
+          "id": "edit-3",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "White balance correction primarily adjusts…",
+            "fr": "La correction de balance des blancs ajuste surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Color temperature / tint of the scene",
+                "fr": "La température de couleur / la teinte de la scène"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Focal length",
+                "fr": "La focale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Autofocus points",
+                "fr": "Les collimateurs AF"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shutter actuation count",
+                "fr": "Le compteur d’obturations"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "WB removes unwanted color casts from light sources.",
+            "fr": "La BB corrige les dominantes dues aux sources de lumière."
+          }
+        },
+        {
+          "id": "edit-4",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "Common non-destructive editing practices include…",
+            "fr": "Des pratiques de retouche non destructives incluent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Using adjustment layers / sidecars",
+                "fr": "Utiliser calques de réglage / sidecars"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Keeping the original RAW/master",
+                "fr": "Conserver le RAW/master original"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Saving over the only original with a tiny JPEG",
+                "fr": "Écraser le seul original avec un petit JPEG"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Exporting copies for web/print",
+                "fr": "Exporter des copies pour web/print"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Never destroy the master; work with reversible edits and exports.",
+            "fr": "Ne détruisez jamais le master ; travaillez avec des réglages réversibles et des exports."
+          }
+        },
+        {
+          "id": "edit-5",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Clarity / structure sliders mainly affect…",
+            "fr": "Les curseurs clarté / structure affectent surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Local midtone contrast / texture punch",
+                "fr": "Le contraste local des tons moyens / le relief des textures"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Battery charging speed",
+                "fr": "La vitesse de charge de la batterie"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Lens firmware",
+                "fr": "Le firmware de l’objectif"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "GPS altitude only",
+                "fr": "Uniquement l’altitude GPS"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "They emphasize mid-frequency contrast; overuse looks crunchy.",
+            "fr": "Ils insistent sur le contraste de moyennes fréquences ; trop en mettre donne un rendu « croustillant »."
+          }
+        },
+        {
+          "id": "edit-6",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Cropping a photo…",
+            "fr": "Recadrer une photo…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Changes framing and can improve composition",
+                "fr": "Change le cadrage et peut améliorer la composition"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Increases optical zoom retrospectively",
+                "fr": "Augmente rétrospectivement le zoom optique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always adds megapixels",
+                "fr": "Ajoute toujours des mégapixels"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Removes the need for exposure",
+                "fr": "Supprime le besoin d’exposition"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Crop is a composition tool; heavy crops reduce resolution.",
+            "fr": "Le recadrage est un outil de composition ; un fort crop réduit la résolution."
+          }
+        },
+        {
+          "id": "edit-7",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "In color grading, a common risk of extreme HSL shifts is…",
+            "fr": "En étalonnage, un risque fréquent de pousser trop les HSL est…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Unnatural skin tones and banding",
+                "fr": "Teints de peau artificiels et banding"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Larger sensors",
+                "fr": "Des capteurs plus grands"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Faster autofocus",
+                "fr": "Un AF plus rapide"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Mandatory RAW deletion",
+                "fr": "La suppression obligatoire du RAW"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Skin sits in subtle orange/yellow ranges—over-shifting looks fake.",
+            "fr": "La peau vit dans des oranges/jaunes subtils — trop décaler devient faux."
+          }
+        },
+        {
+          "id": "edit-8",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "Sharpening is best applied…",
+            "fr": "L’accentuation se gère mieux…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "With output in mind (screen vs print)",
+                "fr": "En pensant à la sortie (écran vs print)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "After major noise reduction when needed",
+                "fr": "Après une réduction de bruit majeure si besoin"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "At maximum on every layer forever",
+                "fr": "Au maximum sur chaque calque pour toujours"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Checked at 100% zoom",
+                "fr": "Vérifiée à 100 % de zoom"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Output sharpening differs by medium; inspect at 1:1 to avoid halos.",
+            "fr": "L’accentuation dépend du support ; inspectez à 1:1 pour éviter les halos."
+          }
+        },
+        {
+          "id": "edit-9",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Dodging and burning traditionally…",
+            "fr": "Le dodge & burn consiste traditionnellement à…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Locally lighten / darken areas to guide the eye",
+                "fr": "Éclaircir / assombrir localement pour guider le regard"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Change camera brands",
+                "fr": "Changer de marque d’appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Convert to TIFF automatically",
+                "fr": "Convertir automatiquement en TIFF"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Disable histograms",
+                "fr": "Désactiver les histogrammes"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Classic darkroom technique now done digitally with soft brushes/masks.",
+            "fr": "Technique de labo classique, faite aujourd’hui avec brosses/masques numériques."
+          }
+        },
+        {
+          "id": "edit-10",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Healing / content-aware remove tools are great for dust, but ethically sensitive when…",
+            "fr": "Les outils de correction/contenu sont utiles pour la poussière, mais sensibles éthiquement quand…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "They change a person’s body or a news scene’s facts",
+                "fr": "Ils modifient le corps d’une personne ou les faits d’une scène d’actualité"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "They remove a sensor spot in the sky",
+                "fr": "Ils retirent une poussière capteur dans le ciel"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "They straighten a horizon slightly",
+                "fr": "Ils redressent légèrement un horizon"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "They export sRGB",
+                "fr": "Ils exportent en sRGB"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Documentary/news ethics limit manipulative retouching of subjects and events.",
+            "fr": "L’éthique documentaire/news limite la manipulation des sujets et des faits."
+          }
+        },
+        {
+          "id": "edit-11",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "sRGB is commonly used for…",
+            "fr": "sRGB est couramment utilisé pour…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Web and general display sharing",
+                "fr": "Le web et le partage sur écrans grand public"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only cinema cameras",
+                "fr": "Uniquement les caméras de cinéma"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Measuring aperture blades",
+                "fr": "Mesurer les lamelles de diaphragme"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Naming layers",
+                "fr": "Nommer des calques"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "sRGB is the safest default for online viewing; print may use wider spaces with profiles.",
+            "fr": "sRGB est le défaut sûr pour le web ; l’impression peut utiliser des espaces plus larges avec profils."
+          }
+        },
+        {
+          "id": "edit-12",
+          "type": "multiple",
+          "difficulty": "easy",
+          "text": {
+            "en": "Useful first checks when opening a file to edit…",
+            "fr": "Vérifications utiles à l’ouverture d’un fichier à retoucher…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Exposure / histogram",
+                "fr": "Exposition / histogramme"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "White balance",
+                "fr": "Balance des blancs"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Deleting all EXIF immediately always",
+                "fr": "Toujours supprimer tout EXIF immédiatement"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Composition / crop needs",
+                "fr": "Composition / besoins de recadrage"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Start with global exposure/WB and framing before micro-retouch.",
+            "fr": "Commencez par exposition/BB et cadrage avant la micro-retouche."
+          }
+        },
+        {
+          "id": "edit-13",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Posterization / banding in skies often appears when…",
+            "fr": "La postérisation / le banding dans les ciels apparaît souvent quand…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Heavy gradients meet 8-bit exports or strong noise reduction",
+                "fr": "De forts dégradés rencontrent un export 8 bits ou une forte réduction de bruit"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "You use a tripod outdoors",
+                "fr": "Vous utilisez un trépied en extérieur"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "You shoot at f/8 on a sunny day only",
+                "fr": "Vous photographiez uniquement à f/8 par grand soleil"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "You enable grid lines",
+                "fr": "Vous activez la grille"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Smooth tones need bit depth and careful processing; add subtle grain if needed.",
+            "fr": "Les dégradés doux demandent de la profondeur de bits ; ajoutez un grain subtil si besoin."
+          }
+        },
+        {
+          "id": "edit-14",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "A vignette effect…",
+            "fr": "Un effet de vignettage…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Darkens (or lightens) edges to focus attention",
+                "fr": "Assombrit (ou éclaircit) les bords pour concentrer l’attention"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Changes autofocus motors",
+                "fr": "Change les moteurs AF"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Converts to CMYK only",
+                "fr": "Convertit uniquement en CMJN"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Removes copyright",
+                "fr": "Supprime le droit d’auteur"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Subtle vignettes guide the eye; heavy ones look dated fast.",
+            "fr": "Un vignettage subtil guide le regard ; trop fort, il vieillit vite."
+          }
+        },
+        {
+          "id": "edit-15",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "When retouching portraits ethically for general clients…",
+            "fr": "Pour une retouche portrait éthique chez un client lambda…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Clean temporary blemishes if agreed",
+                "fr": "Nettoyer des imperfections temporaires si convenu"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Keep natural skin texture",
+                "fr": "Garder la texture naturelle de peau"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Extreme body reshape without consent",
+                "fr": "Resculpter le corps à l’extrême sans consentement"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Discuss expectations before delivery",
+                "fr": "Discuter des attentes avant livraison"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Consent and naturalism beat heavy beauty filters unless requested.",
+            "fr": "Consentement et naturel battent les filtres beauté lourds, sauf demande contraire."
+          }
+        },
+        {
+          "id": "edit-16",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Exporting for Instagram usually means…",
+            "fr": "Exporter pour Instagram signifie en général…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A reasonable resolution JPEG/HEIC in sRGB",
+                "fr": "Un JPEG/HEIC en sRGB à résolution raisonnable"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A 2 GB 16-bit TIFF always",
+                "fr": "Toujours un TIFF 16 bits de 2 Go"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "DNG only",
+                "fr": "Uniquement du DNG"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "ProRes RAW",
+                "fr": "ProRes RAW"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Social platforms recompress—oversized masters waste time.",
+            "fr": "Les plateformes recompressent — les masters énormes font perdre du temps."
+          }
+        },
+        {
+          "id": "edit-17",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Frequency separation is mainly used to…",
+            "fr": "La séparation de fréquences sert surtout à…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Separate texture from color/tone for advanced skin work",
+                "fr": "Séparer texture et couleur/ton pour un travail de peau avancé"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Focus stack landscapes only",
+                "fr": "Faire uniquement du focus stacking paysage"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Charge batteries faster",
+                "fr": "Charger les batteries plus vite"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Measure hyperfocal distance",
+                "fr": "Mesurer l’hyperfocale"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Advanced technique—easy to overdo and plasticize skin.",
+            "fr": "Technique avancée — facile d’en abuser et de plastifier la peau."
+          }
+        },
+        {
+          "id": "edit-18",
+          "type": "multiple",
+          "difficulty": "easy",
+          "text": {
+            "en": "Signs of over-processing include…",
+            "fr": "Des signes de sur-traitement incluent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Halos around edges",
+                "fr": "Des halos autour des contours"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Crunchy noise / plastic skin",
+                "fr": "Bruit croustillant / peau plastique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Natural color transitions",
+                "fr": "Des transitions de couleur naturelles"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "HDR glow with gray flat midtones",
+                "fr": "Glow HDR avec tons moyens gris et plats"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "If the edit is the subject, dial it back.",
+            "fr": "Si la retouche devient le sujet, baissez d’un cran."
+          }
+        },
+        {
+          "id": "edit-19",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "A soft proof in editing software helps you…",
+            "fr": "Une épreuve écran (soft proof) aide à…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Preview how colors may look in a target print profile",
+                "fr": "Prévisualiser les couleurs dans un profil d’impression cible"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Increase megapixels",
+                "fr": "Augmenter les mégapixels"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Autofocus in darkness",
+                "fr": "Faire la mise au point dans le noir"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Remove lens caps automatically",
+                "fr": "Retirer automatiquement les bouchons d’objectif"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Soft proofing simulates print gamut/paper before wasting ink.",
+            "fr": "Le soft proof simule le gamut/papier avant de gaspiller de l’encre."
+          }
+        },
+        {
+          "id": "edit-20",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "The best finishing step before client delivery is often…",
+            "fr": "La meilleure étape finale avant livraison client est souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A fresh-eyed review on another display + consistent naming/export",
+                "fr": "Une relecture à froid sur un autre écran + nommage/export cohérents"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Deleting backups",
+                "fr": "Supprimer les sauvegardes"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Adding random watermarks on faces",
+                "fr": "Ajouter des filigranes aléatoires sur les visages"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Maxing every slider",
+                "fr": "Mettre tous les curseurs à fond"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Distance and consistency catch mistakes better than more effects.",
+            "fr": "Le recul et la cohérence attrapent plus d’erreurs que des effets supplémentaires."
           }
         }
       ]

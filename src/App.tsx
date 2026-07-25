@@ -8,6 +8,16 @@ import { QuizSelector } from './components/QuizSelector';
 import { buildRandomQuiz, RANDOM_QUIZ_ID } from './utils/randomQuiz';
 import { buildDailyQuiz, isDailyQuizId } from './utils/dailyChallenge';
 import {
+  buildDifficultyMix,
+  isDifficultyMixId,
+  parseDifficultyMixId,
+} from './utils/difficulty';
+import {
+  buildDuelQuiz,
+  isDuelQuizId,
+  parseDuelSeed,
+} from './utils/duel';
+import {
   clearQuizHash,
   parseQuizIdFromHash,
   setQuizHash,
@@ -69,6 +79,22 @@ export default function App() {
 
     if (isDailyQuizId(quizId)) {
       startQuiz(buildDailyQuiz(quizzes));
+      return;
+    }
+
+    if (isDifficultyMixId(quizId)) {
+      const difficulty = parseDifficultyMixId(quizId);
+      if (difficulty) {
+        startQuiz(buildDifficultyMix(quizzes, difficulty));
+      }
+      return;
+    }
+
+    if (isDuelQuizId(quizId)) {
+      const seed = parseDuelSeed(quizId);
+      if (seed) {
+        startQuiz(buildDuelQuiz(quizzes, seed));
+      }
       return;
     }
 
@@ -168,6 +194,7 @@ export default function App() {
                 timePerQuestion={settings.timePerQuestion}
                 antiCheat={settings.antiCheat}
                 onScoreSubmitted={handleScoreSubmitted}
+                categoryQuizIds={quizzes.map((q) => q.id)}
               />
             </Suspense>
           )}

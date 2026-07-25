@@ -9,13 +9,20 @@ test.describe('Homepage', () => {
     await expect(page).toHaveTitle(/Quiz PixFan/i);
   });
 
-  test('displays category quiz cards, daily challenge and random mix', async ({ page }) => {
+  test('displays category quiz cards, daily challenge, duel and random mix', async ({ page }) => {
     await expect(page.locator('.quiz-card--daily')).toBeVisible();
+    await expect(page.locator('.quiz-card--duel')).toBeVisible();
     await expect(page.locator('.quiz-card--random')).toBeVisible();
+    await expect(page.locator('.difficulty-filter')).toBeVisible();
+    await expect(page.locator('.achievements')).toBeVisible();
     await expect(
-      page.locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
-    ).toHaveCount(7);
+      page.locator(
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+      )
+    ).toHaveCount(9);
   });
+
+
 
   test('displays quiz titles in French by default', async ({ page }) => {
     const firstCard = page.locator('.quiz-card').first();
