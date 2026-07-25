@@ -33,6 +33,7 @@ wrangler d1 execute quiz-pixfan-scores --file=setup-schema.sql
 ```bash
 wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/002-player-leaderboard.sql
 wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/003-quiz-attempts.sql
+wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/004-period-leaderboard-reports.sql
 ```
 
 (L’option `--remote` cible la base de production ; omettez-la pour l’environnement local.)

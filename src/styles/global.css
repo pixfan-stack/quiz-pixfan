@@ -1809,11 +1809,82 @@ a {
   overflow: hidden;
 }
 
+.leaderboard__header {
+  padding: 1rem 1.25rem 0.75rem;
+}
+
 .leaderboard__title {
   font-size: 1.1rem;
   font-weight: 700;
-  padding: 1rem 1.25rem 0.75rem;
   margin: 0;
+}
+
+.leaderboard__season {
+  margin: 0.2rem 0 0.65rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.leaderboard__periods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.leaderboard__period-chip {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  padding: 0.28rem 0.7rem;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.leaderboard__period-chip:hover {
+  border-color: var(--pixfan-pink);
+  color: var(--color-text);
+}
+
+.leaderboard__period-chip.is-active {
+  background: var(--pixfan-pink);
+  border-color: var(--pixfan-pink);
+  color: #fff;
+}
+
+.leaderboard__report-col {
+  width: 1%;
+}
+
+.leaderboard__report-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.leaderboard__report-btn {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  padding: 0.15rem 0.5rem;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.leaderboard__report-btn:hover:not(:disabled) {
+  border-color: #b42318;
+  color: #b42318;
+}
+
+.leaderboard__report-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
 }
 
 .leaderboard__table {

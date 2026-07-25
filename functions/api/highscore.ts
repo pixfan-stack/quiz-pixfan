@@ -6,6 +6,7 @@
 
 import { json } from './utils';
 import { filterDisplayName } from './profanity';
+import { getMonthPeriodId, getWeekPeriodId } from './period';
 
 export interface Env {
   DB: D1Database;
@@ -158,34 +159,62 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         .bind(quizId, playerId)
         .first<HighScoreRecord>();
 
-      if (existing && existing.percentage >= percentage) {
-        return json({
-          score: existing,
-          isNewHighScore: false,
-        });
+      const isNewAllTime = !existing || percentage > existing.percentage;
+
+      if (isNewAllTime) {
+        await context.env.DB.prepare(
+          `INSERT INTO player_highscores
+             (quiz_id, player_id, display_name, percentage, correct_count, total_questions, updated_at)
+           VALUES (?, ?, ?, ?, ?, ?, ?)
+           ON CONFLICT(quiz_id, player_id) DO UPDATE SET
+             display_name = excluded.display_name,
+             percentage = excluded.percentage,
+             correct_count = excluded.correct_count,
+             total_questions = excluded.total_questions,
+             updated_at = excluded.updated_at`
+        )
+          .bind(
+            quizId,
+            playerId,
+            displayName,
+            percentage,
+            correctCount,
+            totalQuestions,
+            updatedAt
+          )
+          .run();
+      } else if (existing) {
+        // Keep all-time score, but refresh display name
+        await context.env.DB.prepare(
+          `UPDATE player_highscores SET display_name = ? WHERE quiz_id = ? AND player_id = ?`
+        )
+          .bind(displayName, quizId, playerId)
+          .run();
       }
 
-      await context.env.DB.prepare(
-        `INSERT INTO player_highscores
-           (quiz_id, player_id, display_name, percentage, correct_count, total_questions, updated_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?)
-         ON CONFLICT(quiz_id, player_id) DO UPDATE SET
-           display_name = excluded.display_name,
-           percentage = excluded.percentage,
-           correct_count = excluded.correct_count,
-           total_questions = excluded.total_questions,
-           updated_at = excluded.updated_at`
-      )
-        .bind(
-          quizId,
-          playerId,
-          displayName,
-          percentage,
-          correctCount,
-          totalQuestions,
-          updatedAt
-        )
-        .run();
+      // Best-of-period boards (weekly + monthly season) — independent of all-time
+      await upsertPeriodHighScore(context.env.DB, {
+        periodType: 'week',
+        periodId: getWeekPeriodId(),
+        quizId,
+        playerId,
+        displayName,
+        percentage,
+        correctCount,
+        totalQuestions,
+        updatedAt,
+      });
+      await upsertPeriodHighScore(context.env.DB, {
+        periodType: 'month',
+        periodId: getMonthPeriodId(),
+        quizId,
+        playerId,
+        displayName,
+        percentage,
+        correctCount,
+        totalQuestions,
+        updatedAt,
+      });
 
       const saved = await context.env.DB.prepare(
         `SELECT quiz_id as quizId, player_id as playerId, display_name as displayName,
@@ -197,8 +226,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         .bind(quizId, playerId)
         .first<HighScoreRecord>();
 
-      const isNewHighScore = !existing || (saved?.percentage ?? 0) > existing.percentage;
-
       return json({
         score: saved ?? {
           quizId,
@@ -209,7 +236,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           totalQuestions,
           updatedAt,
         },
-        isNewHighScore,
+        isNewHighScore: isNewAllTime,
       });
     }
   } catch (error) {
@@ -229,3 +256,75 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     isNewHighScore: true,
   });
 };
+
+async function upsertPeriodHighScore(
+  db: D1Database,
+  input: {
+    periodType: 'week' | 'month';
+    periodId: string;
+    quizId: string;
+    playerId: string;
+    displayName: string;
+    percentage: number;
+    correctCount: number;
+    totalQuestions: number;
+    updatedAt: string;
+  }
+): Promise<void> {
+  try {
+    const existing = await db
+      .prepare(
+        `SELECT percentage FROM period_highscores
+         WHERE period_type = ? AND period_id = ? AND quiz_id = ? AND player_id = ?`
+      )
+      .bind(input.periodType, input.periodId, input.quizId, input.playerId)
+      .first<{ percentage: number }>();
+
+    if (existing && existing.percentage >= input.percentage) {
+      // Still refresh display name if they play again
+      await db
+        .prepare(
+          `UPDATE period_highscores SET display_name = ?
+           WHERE period_type = ? AND period_id = ? AND quiz_id = ? AND player_id = ?`
+        )
+        .bind(
+          input.displayName,
+          input.periodType,
+          input.periodId,
+          input.quizId,
+          input.playerId
+        )
+        .run();
+      return;
+    }
+
+    await db
+      .prepare(
+        `INSERT INTO period_highscores
+           (period_type, period_id, quiz_id, player_id, display_name,
+            percentage, correct_count, total_questions, updated_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+         ON CONFLICT(period_type, period_id, quiz_id, player_id) DO UPDATE SET
+           display_name = excluded.display_name,
+           percentage = excluded.percentage,
+           correct_count = excluded.correct_count,
+           total_questions = excluded.total_questions,
+           updated_at = excluded.updated_at`
+      )
+      .bind(
+        input.periodType,
+        input.periodId,
+        input.quizId,
+        input.playerId,
+        input.displayName,
+        input.percentage,
+        input.correctCount,
+        input.totalQuestions,
+        input.updatedAt
+      )
+      .run();
+  } catch (error) {
+    // Table may not exist until migration 004 is applied
+    console.warn('Period highscore upsert skipped:', error);
+  }
+}

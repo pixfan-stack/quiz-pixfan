@@ -5,9 +5,16 @@ import { pickLocale } from '../utils/locale';
 import { getPlayerId } from '../utils/player';
 import {
   fetchLeaderboard,
+  reportDisplayName,
   type LeaderboardEntry,
   type LeaderboardViewer,
 } from '../utils/highscoreApi';
+import type { LeaderboardPeriod } from '../utils/leaderboardPeriod';
+import { getMonthPeriodId } from '../utils/leaderboardPeriod';
+import {
+  hasReportedPlayer,
+  markPlayerReported,
+} from '../utils/nameReports';
 
 interface LeaderboardProps {
   quizId?: string;
@@ -17,6 +24,8 @@ interface LeaderboardProps {
   refreshToken?: number;
 }
 
+const PERIODS: LeaderboardPeriod[] = ['all', 'week', 'month'];
+
 export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: LeaderboardProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
@@ -24,6 +33,10 @@ export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: L
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [viewer, setViewer] = useState<LeaderboardViewer | null>(null);
   const [loading, setLoading] = useState(true);
+  const [period, setPeriod] = useState<LeaderboardPeriod>('month');
+  const [seasonId, setSeasonId] = useState(getMonthPeriodId());
+  const [reportedIds, setReportedIds] = useState<Set<string>>(() => new Set());
+  const [reportBusyId, setReportBusyId] = useState<string | null>(null);
 
   const showQuizColumn = !quizId && quizzes && quizzes.length > 0;
 
@@ -39,24 +52,66 @@ export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: L
 
   useEffect(() => {
     setLoading(true);
-    fetchLeaderboard({ quizId, limit, playerId: currentPlayerId })
+    fetchLeaderboard({ quizId, limit, playerId: currentPlayerId, period })
       .then((res) => {
         setEntries(res.leaderboard);
         setViewer(res.viewer ?? null);
+        if (res.seasonId) setSeasonId(res.seasonId);
       })
       .catch(() => {
         setEntries([]);
         setViewer(null);
       })
       .finally(() => setLoading(false));
-  }, [quizId, limit, currentPlayerId, refreshToken]);
+  }, [quizId, limit, currentPlayerId, refreshToken, period]);
+
+  const handleReport = async (entry: LeaderboardEntry) => {
+    if (
+      entry.playerId === currentPlayerId ||
+      hasReportedPlayer(entry.playerId) ||
+      reportedIds.has(entry.playerId)
+    ) {
+      return;
+    }
+    setReportBusyId(entry.playerId);
+    const result = await reportDisplayName({
+      reportedPlayerId: entry.playerId,
+      reportedDisplayName: entry.displayName,
+      reporterPlayerId: currentPlayerId,
+    });
+    setReportBusyId(null);
+    if (!result.ok) return;
+
+    markPlayerReported(entry.playerId);
+    setReportedIds((prev) => new Set(prev).add(entry.playerId));
+
+    if (result.masked) {
+      setEntries((prev) =>
+        prev.map((e) =>
+          e.playerId === entry.playerId
+            ? { ...e, displayName: t('leaderboard.maskedName') }
+            : e
+        )
+      );
+    }
+  };
 
   if (loading) {
-    return <p className="leaderboard-empty">{t('common.loading')}</p>;
+    return (
+      <div className="leaderboard">
+        <PeriodTabs period={period} onChange={setPeriod} seasonId={seasonId} />
+        <p className="leaderboard-empty">{t('common.loading')}</p>
+      </div>
+    );
   }
 
   if (entries.length === 0 && !viewer) {
-    return <p className="leaderboard-empty">{t('leaderboard.empty')}</p>;
+    return (
+      <div className="leaderboard">
+        <PeriodTabs period={period} onChange={setPeriod} seasonId={seasonId} />
+        <p className="leaderboard-empty">{t('leaderboard.emptyPeriod')}</p>
+      </div>
+    );
   }
 
   const viewerInList = viewer
@@ -65,7 +120,7 @@ export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: L
 
   return (
     <div className="leaderboard">
-      <h3 className="leaderboard__title">{t('leaderboard.title')}</h3>
+      <PeriodTabs period={period} onChange={setPeriod} seasonId={seasonId} />
       {entries.length > 0 && (
         <table className="leaderboard__table">
           <thead>
@@ -76,11 +131,16 @@ export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: L
               <th>{t('leaderboard.score')}</th>
               <th>{t('leaderboard.answers')}</th>
               <th>{t('leaderboard.date')}</th>
+              <th className="leaderboard__report-col">
+                <span className="visually-hidden">{t('leaderboard.report')}</span>
+              </th>
             </tr>
           </thead>
           <tbody>
             {entries.map((entry, index) => {
               const isSelf = entry.playerId === currentPlayerId;
+              const alreadyReported =
+                hasReportedPlayer(entry.playerId) || reportedIds.has(entry.playerId);
               return (
                 <tr
                   key={`${entry.quizId}-${entry.playerId}`}
@@ -106,6 +166,24 @@ export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: L
                   <td className="leaderboard__date">
                     {new Date(entry.updatedAt).toLocaleDateString()}
                   </td>
+                  <td className="leaderboard__report-cell">
+                    {!isSelf && (
+                      <button
+                        type="button"
+                        className="leaderboard__report-btn"
+                        disabled={alreadyReported || reportBusyId === entry.playerId}
+                        onClick={() => void handleReport(entry)}
+                        title={t('leaderboard.reportHint')}
+                        aria-label={t('leaderboard.reportAria', {
+                          name: entry.displayName,
+                        })}
+                      >
+                        {alreadyReported
+                          ? t('leaderboard.reported')
+                          : t('leaderboard.report')}
+                      </button>
+                    )}
+                  </td>
                 </tr>
               );
             })}
@@ -121,6 +199,43 @@ export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: L
           })}
         </p>
       )}
+    </div>
+  );
+}
+
+function PeriodTabs({
+  period,
+  onChange,
+  seasonId,
+}: {
+  period: LeaderboardPeriod;
+  onChange: (p: LeaderboardPeriod) => void;
+  seasonId: string;
+}) {
+  const { t } = useTranslation();
+  return (
+    <div className="leaderboard__header">
+      <h3 className="leaderboard__title">{t('leaderboard.title')}</h3>
+      <p className="leaderboard__season">
+        {t('leaderboard.seasonLabel', { season: seasonId })}
+      </p>
+      <div
+        className="leaderboard__periods"
+        role="group"
+        aria-label={t('leaderboard.periodFilter')}
+      >
+        {PERIODS.map((p) => (
+          <button
+            key={p}
+            type="button"
+            className={`leaderboard__period-chip${period === p ? ' is-active' : ''}`}
+            aria-pressed={period === p}
+            onClick={() => onChange(p)}
+          >
+            {t(`leaderboard.period_${p}`)}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

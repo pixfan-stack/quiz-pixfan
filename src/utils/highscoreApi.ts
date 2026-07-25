@@ -4,6 +4,7 @@
 
 import { getPlayerId } from './player';
 import { isRemoteScoresEnabled } from './remoteScores';
+import type { LeaderboardPeriod } from './leaderboardPeriod';
 
 export interface LeaderboardEntry {
   quizId: string;
@@ -24,12 +25,16 @@ export interface LeaderboardResponse {
   leaderboard: LeaderboardEntry[];
   total: number;
   viewer?: LeaderboardViewer | null;
+  period?: LeaderboardPeriod;
+  periodId?: string | null;
+  seasonId?: string;
 }
 
 interface FetchLeaderboardParams {
   limit?: number;
   quizId?: string;
   playerId?: string;
+  period?: LeaderboardPeriod;
 }
 
 export async function fetchRemoteHighScore(
@@ -74,24 +79,51 @@ export async function fetchLeaderboard(
   params: FetchLeaderboardParams = {}
 ): Promise<LeaderboardResponse> {
   if (!isRemoteScoresEnabled()) {
-    return { leaderboard: [], total: 0, viewer: null };
+    return { leaderboard: [], total: 0, viewer: null, period: 'all' };
   }
   try {
-    const { limit = 10, quizId, playerId = getPlayerId() } = params;
+    const {
+      limit = 10,
+      quizId,
+      playerId = getPlayerId(),
+      period = 'all',
+    } = params;
     const url = new URL('/api/leaderboard', window.location.origin);
     url.searchParams.set('limit', String(limit));
     url.searchParams.set('playerId', playerId);
+    url.searchParams.set('period', period);
     if (quizId) {
       url.searchParams.set('quizId', quizId);
     }
 
     const res = await fetch(url.toString());
     if (!res.ok) {
-      return { leaderboard: [], total: 0, viewer: null };
+      return { leaderboard: [], total: 0, viewer: null, period };
     }
 
     return (await res.json()) as LeaderboardResponse;
   } catch {
-    return { leaderboard: [], total: 0, viewer: null };
+    return { leaderboard: [], total: 0, viewer: null, period: 'all' };
+  }
+}
+
+export async function reportDisplayName(payload: {
+  reportedPlayerId: string;
+  reportedDisplayName: string;
+  reporterPlayerId: string;
+  reason?: string;
+}): Promise<{ ok: boolean; masked?: boolean }> {
+  if (!isRemoteScoresEnabled()) return { ok: false };
+  try {
+    const res = await fetch('/api/report', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) return { ok: false };
+    const data = (await res.json()) as { ok?: boolean; masked?: boolean };
+    return { ok: Boolean(data.ok), masked: data.masked };
+  } catch {
+    return { ok: false };
   }
 }

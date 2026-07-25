@@ -133,6 +133,40 @@ CREATE INDEX IF NOT EXISTS idx_attempts_quiz_created
 CREATE INDEX IF NOT EXISTS idx_attempts_created
   ON quiz_attempts(created_at DESC);
 
+-- Week / month (season) leaderboards — independent of all-time bests
+CREATE TABLE IF NOT EXISTS period_highscores (
+  period_type TEXT NOT NULL CHECK(period_type IN ('week', 'month')),
+  period_id TEXT NOT NULL,
+  quiz_id TEXT NOT NULL,
+  player_id TEXT NOT NULL,
+  display_name TEXT NOT NULL,
+  percentage INTEGER NOT NULL CHECK(percentage >= 0 AND percentage <= 100),
+  correct_count INTEGER NOT NULL CHECK(correct_count >= 0),
+  total_questions INTEGER NOT NULL CHECK(total_questions > 0),
+  updated_at TEXT NOT NULL,
+  PRIMARY KEY (period_type, period_id, quiz_id, player_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_period_highscores_lookup
+  ON period_highscores(period_type, period_id, percentage DESC, updated_at ASC);
+
+CREATE INDEX IF NOT EXISTS idx_period_highscores_quiz
+  ON period_highscores(period_type, period_id, quiz_id, percentage DESC, updated_at ASC);
+
+-- Abusive display-name reports (auto-mask after 3 unique reporters)
+CREATE TABLE IF NOT EXISTS name_reports (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  reported_player_id TEXT NOT NULL,
+  reported_display_name TEXT NOT NULL,
+  reporter_player_id TEXT NOT NULL,
+  reason TEXT,
+  created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
+  UNIQUE(reported_player_id, reporter_player_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_name_reports_reported
+  ON name_reports(reported_player_id, created_at DESC);
+
 -- Optional: leaderboard view (top scores per quiz)
 CREATE VIEW IF NOT EXISTS leaderboard AS
 SELECT
