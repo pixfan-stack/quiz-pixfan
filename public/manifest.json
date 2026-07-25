@@ -1,22 +1,42 @@
 {
+  "id": "/",
   "name": "Quiz PixFan",
-  "short_name": "QuizPixFan",
-  "description": "Bilingual photography quiz app",
+  "short_name": "Quiz PixFan",
+  "description": "Bilingual photography quizzes — exposure, composition, gear, retouching and more.",
+  "lang": "fr",
+  "dir": "ltr",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#f4f6fb",
-  "theme_color": "#4f46e5",
-  "orientation": "portrait-primary",
+  "display_override": ["standalone", "browser"],
+  "background_color": "#fdf2f7",
+  "theme_color": "#f3538c",
+  "orientation": "any",
+  "categories": ["education", "entertainment"],
   "icons": [
     {
       "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

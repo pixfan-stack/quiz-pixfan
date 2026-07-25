@@ -1859,6 +1859,14 @@ a {
   border-top: 1px solid var(--color-border);
 }
 
+.app-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .app-footer__link {
   color: var(--color-text-muted);
   text-decoration: none;
@@ -1868,6 +1876,146 @@ a {
 }
 .app-footer__link:hover {
   color: var(--color-primary);
+}
+
+.app-footer__admin {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--color-text-soft, var(--color-text-muted));
+  font: inherit;
+  font-size: 0.72rem;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.app-footer__admin:hover {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+.install-prompt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--pixfan-pink) 35%, var(--color-border));
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--pixfan-pink) 8%, var(--color-surface));
+}
+
+.install-prompt__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.install-prompt__desc {
+  margin: 0.2rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.install-prompt__actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.admin {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.admin__hint {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.admin__pin-form,
+.admin__editor {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.admin__pin-input,
+.admin__input,
+.admin__textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.admin__textarea {
+  resize: vertical;
+}
+
+.admin__error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.85rem;
+}
+
+.admin__toolbar {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .admin__toolbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.admin__section-title {
+  margin: 0.5rem 0 0;
+  font-weight: 700;
+}
+
+.admin__answers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.admin__answer {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.admin__correct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.admin__status {
+  margin: 0;
+  font-weight: 600;
+  color: var(--pixfan-pink);
+}
+
+.admin__actions {
+  flex-wrap: wrap;
 }
 
 /* ---------- Leaderboard ---------- */

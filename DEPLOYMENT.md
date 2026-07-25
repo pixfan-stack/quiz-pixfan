@@ -56,6 +56,8 @@ Créez un fichier `.env` local :
 ```bash
 VITE_ENABLE_REMOTE_SCORES=true
 VITE_APP_URL=https://quiz-pixfan.pages.dev
+# Optional — enables the in-browser question editor at #/admin
+# VITE_ADMIN_PIN=your-secret-pin
 ```
 
 ## 🌐 Déploiement sur Cloudflare Pages
@@ -74,6 +76,7 @@ VITE_APP_URL=https://quiz-pixfan.pages.dev
 5. Ajoutez les variables d'environnement :
    - `VITE_ENABLE_REMOTE_SCORES`: `true`
    - `VITE_APP_URL`: `https://quiz-pixfan.pages.dev`
+   - `VITE_ADMIN_PIN` (optionnel) : active l’éditeur `#/admin`
 6. Liez la base de données D1 :
    - **Binding name**: `DB`
    - **Database**: `quiz-pixfan-scores`

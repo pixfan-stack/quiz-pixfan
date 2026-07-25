@@ -185,6 +185,35 @@
     "duelist": "Duelliste",
     "duelistDesc": "Terminez un duel entre amis."
   },
+  "footer": {
+    "copyright": "© {{year}} pixfan.com — Apprendre la photo, choisir son matériel",
+    "admin": "Éditer les questions"
+  },
+  "pwa": {
+    "installTitle": "Installer Quiz PixFan",
+    "installDesc": "Ajoutez l’app à l’écran d’accueil pour un accès rapide et le hors-ligne.",
+    "install": "Installer",
+    "dismiss": "Plus tard"
+  },
+  "admin": {
+    "title": "Éditeur de questions",
+    "disabled": "Admin désactivé. Définissez VITE_ADMIN_PIN pour l’activer.",
+    "pinHint": "Entrez le code admin pour modifier les questions dans le navigateur.",
+    "pin": "Code admin",
+    "pinError": "Code incorrect",
+    "unlock": "Déverrouiller",
+    "lock": "Verrouiller et quitter",
+    "intro": "Modifiez les textes ici, prévisualisez dans la session, puis exportez questions.json pour le déploiement.",
+    "quiz": "Quiz",
+    "question": "Question",
+    "answers": "Réponses",
+    "correct": "Correcte",
+    "explanation": "Explication",
+    "export": "Exporter le JSON",
+    "preview": "Prévisualiser dans l’app",
+    "exported": "questions.json téléchargé",
+    "previewApplied": "Prévisualisation appliquée pour cette session"
+  },
   "common": {
     "loading": "Chargement…",
     "error": "Une erreur est survenue.",

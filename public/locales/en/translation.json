@@ -185,6 +185,35 @@
     "duelist": "Duelist",
     "duelistDesc": "Finish a friend duel."
   },
+  "footer": {
+    "copyright": "© {{year}} pixfan.com — Learn photography, choose your gear",
+    "admin": "Edit questions"
+  },
+  "pwa": {
+    "installTitle": "Install Quiz PixFan",
+    "installDesc": "Add the app to your home screen for faster access and offline play.",
+    "install": "Install",
+    "dismiss": "Not now"
+  },
+  "admin": {
+    "title": "Question editor",
+    "disabled": "Admin is disabled. Set VITE_ADMIN_PIN to enable it.",
+    "pinHint": "Enter the admin PIN to edit questions in the browser.",
+    "pin": "Admin PIN",
+    "pinError": "Incorrect PIN",
+    "unlock": "Unlock",
+    "lock": "Lock & exit",
+    "intro": "Edit copy here, preview in this session, then export questions.json for deployment.",
+    "quiz": "Quiz",
+    "question": "Question",
+    "answers": "Answers",
+    "correct": "Correct",
+    "explanation": "Explanation",
+    "export": "Export JSON",
+    "preview": "Preview in app",
+    "exported": "questions.json downloaded",
+    "previewApplied": "Preview applied for this session"
+  },
   "common": {
     "loading": "Loading…",
     "error": "Something went wrong.",

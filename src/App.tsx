@@ -5,6 +5,7 @@ import { useDarkMode } from './hooks/useDarkMode';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { QuizSelector } from './components/QuizSelector';
+import { InstallPrompt } from './components/InstallPrompt';
 import { buildRandomQuiz, RANDOM_QUIZ_ID } from './utils/randomQuiz';
 import { buildDailyQuiz, isDailyQuizId } from './utils/dailyChallenge';
 import {
@@ -17,6 +18,7 @@ import {
   isDuelQuizId,
   parseDuelSeed,
 } from './utils/duel';
+import { isAdminEnabled, isAdminHash } from './utils/adminAuth';
 import {
   clearQuizHash,
   parseQuizIdFromHash,
@@ -24,8 +26,9 @@ import {
 } from './utils/routing';
 
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
+const AdminScreen = lazy(() => import('./components/AdminScreen'));
 
-type AppView = 'home' | 'quiz';
+type AppView = 'home' | 'quiz' | 'admin';
 
 interface QuizSettings {
   timePerQuestion: number;
@@ -41,7 +44,9 @@ function prefetchQuizScreen(): void {
  */
 export default function App() {
   const { t, i18n } = useTranslation();
-  const [view, setView] = useState<AppView>('home');
+  const [view, setView] = useState<AppView>(() =>
+    isAdminHash(window.location.hash) ? 'admin' : 'home'
+  );
   const [quizzes, setQuizzes] = useState<Quiz[]>([]);
   const [activeQuiz, setActiveQuiz] = useState<Quiz | null>(null);
   const [settings, setSettings] = useState<QuizSettings>({
@@ -67,10 +72,24 @@ export default function App() {
     setQuizHash(quiz.id);
   }, []);
 
+  const openAdmin = useCallback(() => {
+    setActiveQuiz(null);
+    setView('admin');
+    const url = new URL(window.location.href);
+    url.hash = '/admin';
+    window.history.pushState(null, '', url.pathname + url.search + url.hash);
+  }, []);
+
   useEffect(() => {
+    if (isAdminHash(window.location.hash)) {
+      setView('admin');
+      setActiveQuiz(null);
+      return;
+    }
+
     if (quizzes.length === 0) return;
     const quizId = parseQuizIdFromHash(window.location.hash);
-    if (!quizId || view === 'quiz') return;
+    if (!quizId || view === 'quiz' || view === 'admin') return;
 
     if (quizId === RANDOM_QUIZ_ID) {
       startQuiz(buildRandomQuiz(quizzes));
@@ -106,6 +125,11 @@ export default function App() {
 
   useEffect(() => {
     const onHashChange = () => {
+      if (isAdminHash(window.location.hash)) {
+        setActiveQuiz(null);
+        setView('admin');
+        return;
+      }
       if (!window.location.hash) {
         setActiveQuiz(null);
         setView('home');
@@ -153,7 +177,7 @@ export default function App() {
 
         <div className="app-header__controls">
           <a
-            href="https://pixfan.com"
+            href="https://www.pixfan.com"
             target="_blank"
             rel="noopener noreferrer"
             className="app-header__pixfan-link"
@@ -177,13 +201,16 @@ export default function App() {
       <main className="app-main" key={view} id="main-content" tabIndex={-1}>
         <ErrorBoundary>
           {view === 'home' && (
-            <QuizSelector
-              quizzes={quizzes}
-              onSelect={handleSelectQuiz}
-              onSettingsChange={setSettings}
-              onPrefetchQuiz={prefetchQuizScreen}
-              leaderboardRefreshToken={leaderboardRefreshToken}
-            />
+            <>
+              <InstallPrompt />
+              <QuizSelector
+                quizzes={quizzes}
+                onSelect={handleSelectQuiz}
+                onSettingsChange={setSettings}
+                onPrefetchQuiz={prefetchQuizScreen}
+                leaderboardRefreshToken={leaderboardRefreshToken}
+              />
+            </>
           )}
           {view === 'quiz' && activeQuiz && (
             <Suspense>
@@ -198,19 +225,37 @@ export default function App() {
               />
             </Suspense>
           )}
+          {view === 'admin' && (
+            <Suspense>
+              <AdminScreen
+                quizzes={quizzes}
+                onHome={handleHome}
+                onPreview={setQuizzes}
+              />
+            </Suspense>
+          )}
         </ErrorBoundary>
       </main>
 
       <footer className="app-footer">
         <div className="app-footer__inner">
           <a
-            href="https://pixfan.com"
+            href="https://www.pixfan.com"
             target="_blank"
             rel="noopener noreferrer"
             className="app-footer__link"
           >
-            © {new Date().getFullYear()} pixfan.com — Apprendre la photo, choisir son matériel
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </a>
+          {isAdminEnabled() && (
+            <button
+              type="button"
+              className="app-footer__admin"
+              onClick={openAdmin}
+            >
+              {t('footer.admin')}
+            </button>
+          )}
         </div>
       </footer>
     </div>
