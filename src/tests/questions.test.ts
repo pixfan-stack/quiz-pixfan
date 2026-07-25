@@ -4,8 +4,8 @@ import questionsData from '../../public/data/questions.json';
 describe('questions.json', () => {
   const data = questionsData as any;
 
-  it('has exactly 6 quizzes', () => {
-    expect(data.quizzes.length).toBe(6);
+  it('has exactly 7 quizzes', () => {
+    expect(data.quizzes.length).toBe(7);
   });
 
   it('has exactly 20 questions per quiz', () => {
@@ -14,9 +14,9 @@ describe('questions.json', () => {
     }
   });
 
-  it('has total of 120 questions', () => {
+  it('has total of 140 questions', () => {
     const total = data.quizzes.reduce((sum: number, q: any) => sum + q.questions.length, 0);
-    expect(total).toBe(120);
+    expect(total).toBe(140);
   });
 
   it('all questions have required fields', () => {
@@ -123,6 +123,12 @@ describe('questions.json', () => {
 
   it('genres quiz exists and has 20 questions', () => {
     const quiz = data.quizzes.find((q: any) => q.id === 'genres');
+    expect(quiz).toBeDefined();
+    expect(quiz?.questions.length).toBe(20);
+  });
+
+  it('smartphone quiz exists and has 20 questions', () => {
+    const quiz = data.quizzes.find((q: any) => q.id === 'smartphone');
     expect(quiz).toBeDefined();
     expect(quiz?.questions.length).toBe(20);
   });

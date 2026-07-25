@@ -17,6 +17,7 @@ import {
   shareResultImage,
 } from '../utils/exportResult';
 import { Leaderboard } from './Leaderboard';
+import { MistakesReview } from './MistakesReview';
 
 interface ResultScreenProps {
   quiz: Quiz;
@@ -235,6 +236,8 @@ export function ResultScreen({
               )}
             </div>
           )}
+
+          <MistakesReview mistakes={result.mistakes ?? []} />
 
           <div className="export-section">
             <button

@@ -6,6 +6,7 @@ import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { QuizSelector } from './components/QuizSelector';
 import { buildRandomQuiz, RANDOM_QUIZ_ID } from './utils/randomQuiz';
+import { buildDailyQuiz, isDailyQuizId } from './utils/dailyChallenge';
 import {
   clearQuizHash,
   parseQuizIdFromHash,
@@ -63,6 +64,11 @@ export default function App() {
 
     if (quizId === RANDOM_QUIZ_ID) {
       startQuiz(buildRandomQuiz(quizzes));
+      return;
+    }
+
+    if (isDailyQuizId(quizId)) {
+      startQuiz(buildDailyQuiz(quizzes));
       return;
     }
 

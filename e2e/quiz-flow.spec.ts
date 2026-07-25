@@ -4,7 +4,10 @@ test.describe('Quiz Flow', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
     // Click first category quiz (skip random mix card)
-    await page.locator('.quiz-card:not(.quiz-card--random)').first().click();
+    await page
+      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .first()
+      .click();
     // Wait for question to load
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
   });

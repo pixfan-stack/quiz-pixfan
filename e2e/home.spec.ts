@@ -9,9 +9,12 @@ test.describe('Homepage', () => {
     await expect(page).toHaveTitle(/Quiz PixFan/i);
   });
 
-  test('displays category quiz cards and random mix', async ({ page }) => {
+  test('displays category quiz cards, daily challenge and random mix', async ({ page }) => {
+    await expect(page.locator('.quiz-card--daily')).toBeVisible();
     await expect(page.locator('.quiz-card--random')).toBeVisible();
-    await expect(page.locator('.quiz-card:not(.quiz-card--random)')).toHaveCount(6);
+    await expect(
+      page.locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+    ).toHaveCount(7);
   });
 
   test('displays quiz titles in French by default', async ({ page }) => {
@@ -28,7 +31,10 @@ test.describe('Homepage', () => {
   });
 
   test('navigates to quiz when clicking a quiz card', async ({ page }) => {
-    await page.locator('.quiz-card:not(.quiz-card--random)').first().click();
+    await page
+      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .first()
+      .click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
   });
 });

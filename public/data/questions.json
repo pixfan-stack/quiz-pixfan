@@ -104,6 +104,11 @@
           "explanation": {
             "en": "Fast action needs a short exposure time (high shutter speed) like 1/1000 s or faster to freeze motion.",
             "fr": "L'action rapide exige un temps d'exposition court (vitesse élevée), comme 1/1000 s ou plus, pour figer le mouvement."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Camera dials and settings",
+            "fr": "Molettes et réglages d’appareil"
           }
         },
         {
@@ -1034,6 +1039,11 @@
           "explanation": {
             "en": "Leading lines, natural frames and contrast all help hierarchy and eye flow. Cropping without a clear subject usually weakens the image.",
             "fr": "Lignes directrices, cadres naturels et contraste renforcent la hiérarchie visuelle. Un recadrage sans sujet clair affaiblit en général l'image."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Foggy forest landscape",
+            "fr": "Paysage forestier brumeux"
           }
         },
         {
@@ -1959,6 +1969,11 @@
           "explanation": {
             "en": "A small or distant light source relative to the subject produces hard light. Soft light (overcast sky, softbox) wraps around and softens shadows.",
             "fr": "Une source petite ou lointaine par rapport au sujet produit une lumière dure. Une lumière douce (ciel couvert, softbox) enveloppe le sujet et adoucit les ombres."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Sunlight through trees",
+            "fr": "Soleil à travers les arbres"
           }
         },
         {
@@ -2891,6 +2906,11 @@
           "explanation": {
             "en": "Wide-angle is roughly under ~35–40 mm on full-frame. 200 mm is a telephoto, compressing perspective and narrowing the field of view.",
             "fr": "Le grand-angle se situe grosso modo sous ~35–40 mm en plein format. Un 200 mm est un téléobjectif : perspective compressée, champ plus étroit."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1495707902641-75caccea0cc9?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Camera body and lens",
+            "fr": "Boîtier et objectif"
           }
         },
         {
@@ -3769,6 +3789,11 @@
           "explanation": {
             "en": "Nicéphore Niépce’s View from the Window at Le Gras (c. 1826–27) is the earliest known surviving photograph. Daguerre later popularized the daguerreotype.",
             "fr": "La Vue de la fenêtre du Gras de Nicéphore Niépce (vers 1826–27) est la plus ancienne photo conservée connue. Daguerre popularisera ensuite le daguerréotype."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Classic camera",
+            "fr": "Appareil classique"
           }
         },
         {
@@ -3814,6 +3839,11 @@
           "explanation": {
             "en": "Cartier-Bresson coined the decisive moment: catching the peak of action and geometry in a single, perfectly timed frame.",
             "fr": "Cartier-Bresson a formalisé le moment décisif : saisir le sommet de l'action et de la géométrie dans un seul cadre parfaitement cadencé."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1452780212940-6f5c0d14d291?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Vintage photography gear",
+            "fr": "Matériel photo vintage"
           }
         },
         {
@@ -4694,6 +4724,11 @@
           "explanation": {
             "en": "Street photography captures unscripted public moments — gesture, irony, geometry — usually with available light and discrete gear.",
             "fr": "La photo de rue capture des moments publics non mis en scène — geste, ironie, géométrie — souvent en lumière disponible et avec un matériel discret."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Portrait photography session",
+            "fr": "Séance portrait"
           }
         },
         {
@@ -4741,6 +4776,11 @@
           "explanation": {
             "en": "Good portraits balance light, expression and background separation. Aperture is a creative choice, not a fixed rule.",
             "fr": "Un bon portrait équilibre lumière, expression et séparation du fond. L'ouverture est un choix créatif, pas une règle fixe."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Street photography scene",
+            "fr": "Scène de photo de rue"
           }
         },
         {
@@ -5565,6 +5605,937 @@
           "explanation": {
             "en": "Night photography demands different techniques: stability, light management, and noise control.",
             "fr": "La photographie nocturne exige différentes techniques : stabilité, gestion de la lumière et contrôle du bruit."
+          }
+        }
+      ]
+    },
+    {
+      "id": "smartphone",
+      "title": {
+        "en": "Smartphone Photography",
+        "fr": "Photo au smartphone"
+      },
+      "description": {
+        "en": "Night mode, computational photography, composition and editing on your phone.",
+        "fr": "Mode nuit, photo computationnelle, composition et retouche sur téléphone."
+      },
+      "questions": [
+        {
+          "id": "phone-1",
+          "type": "single",
+          "text": {
+            "en": "What does “computational photography” mainly rely on?",
+            "fr": "Sur quoi repose surtout la « photographie computationnelle » ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Software combining multiple exposures/frames",
+                "fr": "Un logiciel qui combine plusieurs expositions/images"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Larger optical zoom only",
+                "fr": "Uniquement un plus gros zoom optique"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Disabling autofocus",
+                "fr": "La désactivation de l’autofocus"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shooting exclusively in black and white",
+                "fr": "Le fait de photographier uniquement en noir et blanc"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Phones stack frames, align them and reconstruct detail/dynamic range with algorithms.",
+            "fr": "Les téléphones empilent des images, les alignent et reconstruisent détail/dynamique via des algorithmes."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Smartphone on a desk",
+            "fr": "Smartphone sur un bureau"
+          }
+        },
+        {
+          "id": "phone-2",
+          "type": "single",
+          "text": {
+            "en": "Why can night mode look blurry if you move the phone?",
+            "fr": "Pourquoi le mode nuit peut-il être flou si vous bougez le téléphone ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It uses a long multi-frame capture that needs stability",
+                "fr": "Il utilise une capture multi-images longue qui exige de la stabilité"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Night mode disables image stabilization",
+                "fr": "Le mode nuit désactive la stabilisation"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "ISO is locked to 50",
+                "fr": "L’ISO est verrouillé à 50"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The flash fires continuously",
+                "fr": "Le flash se déclenche en continu"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Night mode merges several frames over time; motion between frames softens the result.",
+            "fr": "Le mode nuit fusionne plusieurs images dans le temps ; le mouvement les adoucit."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Phone camera at night",
+            "fr": "Caméra de téléphone la nuit"
+          }
+        },
+        {
+          "id": "phone-3",
+          "type": "single",
+          "text": {
+            "en": "Tap-to-focus on most phone cameras also usually sets…",
+            "fr": "Sur la plupart des téléphones, le toucher pour faire le point règle aussi…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Exposure for that region",
+                "fr": "L’exposition pour cette zone"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "White balance to fluorescent",
+                "fr": "La balance des blancs sur fluorescent"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Optical zoom to 10×",
+                "fr": "Le zoom optique à 10×"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shutter speed to 1/8000s",
+                "fr": "La vitesse d’obturation à 1/8000 s"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "AE/AF lock by tap typically meters and focuses where you tap.",
+            "fr": "Le AE/AF au toucher mesure et fait le point là où vous appuyez."
+          }
+        },
+        {
+          "id": "phone-4",
+          "type": "multiple",
+          "text": {
+            "en": "Which habits generally improve phone photos?",
+            "fr": "Quelles habitudes améliorent généralement les photos au téléphone ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Clean the lens",
+                "fr": "Nettoyer la lentille"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Hold with both hands / brace yourself",
+                "fr": "Tenir à deux mains / se caler"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always max digital zoom",
+                "fr": "Toujours zoomer au maximum en numérique"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Prefer natural light when possible",
+                "fr": "Préférer la lumière naturelle si possible"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Clean optics, stability and good light beat extreme digital zoom.",
+            "fr": "Optique propre, stabilité et bonne lumière battent le zoom numérique extrême."
+          }
+        },
+        {
+          "id": "phone-5",
+          "type": "single",
+          "text": {
+            "en": "Digital zoom mostly…",
+            "fr": "Le zoom numérique…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Crops the image (often losing quality)",
+                "fr": "Recadre l’image (souvent au détriment de la qualité)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Moves glass elements like an SLR lens",
+                "fr": "Déplace des éléments de verre comme un objectif reflex"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Increases sensor size",
+                "fr": "Augmente la taille du capteur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Always improves sharpness",
+                "fr": "Améliore toujours la netteté"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "True optical zoom changes magnification with optics; digital zoom crops/upsamples.",
+            "fr": "Le vrai zoom optique change le grossissement ; le numérique recadre/interpolate."
+          }
+        },
+        {
+          "id": "phone-6",
+          "type": "single",
+          "text": {
+            "en": "Portrait / “bokeh” mode on phones typically creates blur by…",
+            "fr": "Le mode Portrait / « bokeh » crée surtout le flou en…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Depth estimation + software blur",
+                "fr": "Estimation de profondeur + flou logiciel"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Opening a mechanical aperture to f/1.0 always",
+                "fr": "Ouvrant toujours un diaphragme mécanique à f/1.0"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Heating the sensor",
+                "fr": "Chauffant le capteur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Forcing JPEG compression",
+                "fr": "Forçant la compression JPEG"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Dual cameras / LiDAR / ML segment the subject and fake shallow DOF.",
+            "fr": "Double caméra / LiDAR / ML segmentent le sujet et simulent une faible PdC."
+          }
+        },
+        {
+          "id": "phone-7",
+          "type": "single",
+          "text": {
+            "en": "HDR on a phone is most useful when…",
+            "fr": "Le HDR est surtout utile quand…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Scene contrast is very high (bright sky + dark ground)",
+                "fr": "Le contraste de scène est très élevé (ciel clair + sol sombre)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "You shoot a solid gray wall in shade",
+                "fr": "Vous photographiez un mur gris uni à l’ombre"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "You want more motion blur",
+                "fr": "Vous voulez plus de flou de mouvement"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "ISO must stay at 25600",
+                "fr": "L’ISO doit rester à 25600"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "HDR merges exposures to keep highlight and shadow detail.",
+            "fr": "Le HDR fusionne des expositions pour garder hautes lumières et ombres."
+          }
+        },
+        {
+          "id": "phone-8",
+          "type": "single",
+          "text": {
+            "en": "Shooting RAW/Pro on a phone mainly gives you…",
+            "fr": "Photographier en RAW/Pro sur téléphone donne surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "More flexibility in editing (exposure, WB, detail)",
+                "fr": "Plus de latitude en retouche (exposition, BB, détail)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Smaller files than HEIC/JPEG",
+                "fr": "Des fichiers plus petits que HEIC/JPEG"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Automatic Instagram filters",
+                "fr": "Des filtres Instagram automatiques"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Guaranteed sharper autofocus",
+                "fr": "Un autofocus forcément plus précis"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "RAW keeps more linear data before aggressive phone processing.",
+            "fr": "Le RAW conserve plus de données avant le traitement agressif du téléphone."
+          }
+        },
+        {
+          "id": "phone-9",
+          "type": "multiple",
+          "text": {
+            "en": "Which help reduce handshake blur on a phone?",
+            "fr": "Qu’est-ce qui aide à réduire le flou de bougé au téléphone ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Optical / electronic stabilization",
+                "fr": "Stabilisation optique / électronique"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Faster shutter (brighter light or higher ISO)",
+                "fr": "Obturation plus rapide (plus de lumière ou ISO plus élevé)"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A tiny tripod or leaning on a wall",
+                "fr": "Un mini-trépied ou s’appuyer contre un mur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Max digital zoom while walking",
+                "fr": "Zoom numérique max en marchant"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "c"
+          ],
+          "explanation": {
+            "en": "Stabilization, shorter exposures and bracing all help; walking + zoom hurts.",
+            "fr": "Stabilisation, expositions courtes et appui aident ; marcher + zoom nuit."
+          }
+        },
+        {
+          "id": "phone-10",
+          "type": "single",
+          "text": {
+            "en": "Ultra-wide phone lenses often show…",
+            "fr": "Les ultra grand-angle de téléphone montrent souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Stronger edge distortion / stretched corners",
+                "fr": "Plus de distorsion / coins étirés"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "No perspective change at all",
+                "fr": "Aucun changement de perspective"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always less noise than the main camera",
+                "fr": "Toujours moins de bruit que le module principal"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Mandatory flash use",
+                "fr": "L’obligation d’utiliser le flash"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Short focal lengths exaggerate perspective; edges can look warped.",
+            "fr": "Les courtes focales exagèrent la perspective ; les bords se déforment."
+          }
+        },
+        {
+          "id": "phone-11",
+          "type": "single",
+          "text": {
+            "en": "For flatter, more even light on a face outdoors, prefer…",
+            "fr": "Pour une lumière plus douce et uniforme sur un visage en extérieur, préférez…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Open shade or overcast sky",
+                "fr": "L’ombre légère ou un ciel couvert"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Harsh noon sun from above",
+                "fr": "Le soleil dur de midi en plongée"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Direct flash as the only light at noon",
+                "fr": "Le flash direct comme seule lumière à midi"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shooting against a bright window without exposure compensation",
+                "fr": "Contre une fenêtre claire sans compensation d’exposition"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Soft, diffused light reduces harsh shadows on faces.",
+            "fr": "Une lumière douce et diffusée réduit les ombres dures sur le visage."
+          }
+        },
+        {
+          "id": "phone-12",
+          "type": "single",
+          "text": {
+            "en": "Live Photos / motion photos are best thought of as…",
+            "fr": "Les Live Photos / photos animées sont surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A short video clip around the still frame",
+                "fr": "Un court clip vidéo autour de l’image fixe"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A higher megapixel still only",
+                "fr": "Uniquement une image fixe à plus de mégapixels"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A RAW DNG always",
+                "fr": "Toujours un RAW DNG"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A panoramic stitch",
+                "fr": "Un assemblage panoramique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "They capture moments before/after the shutter press as motion.",
+            "fr": "Elles capturent l’avant/après du déclenchement en mouvement."
+          }
+        },
+        {
+          "id": "phone-13",
+          "type": "single",
+          "text": {
+            "en": "Grid lines (rule of thirds) on the phone camera help you…",
+            "fr": "La grille (règle des tiers) aide surtout à…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Compose and keep horizons level",
+                "fr": "Composer et garder l’horizon droit"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Increase megapixels",
+                "fr": "Augmenter les mégapixels"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Disable autofocus",
+                "fr": "Désactiver l’autofocus"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Force night mode",
+                "fr": "Forcer le mode nuit"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Overlays guide framing without changing exposure technology.",
+            "fr": "Les overlays guident le cadrage sans changer la technique d’exposition."
+          }
+        },
+        {
+          "id": "phone-14",
+          "type": "multiple",
+          "text": {
+            "en": "Before sharing a phone photo widely, consider…",
+            "fr": "Avant de partager largement une photo téléphone, pensez à…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Whether location metadata should be stripped",
+                "fr": "Si les métadonnées de localisation doivent être retirées"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Whether faces/privacy need consent",
+                "fr": "Si les visages / la vie privée nécessitent un consentement"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always uploading the unedited RAW only",
+                "fr": "Toujours uploader uniquement le RAW non retouché"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Checking cropping/export size for the platform",
+                "fr": "Vérifier le recadrage / la taille d’export pour la plateforme"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Privacy and platform-ready exports matter; RAW-only sharing is rarely required.",
+            "fr": "Vie privée et exports adaptés comptent ; le partage RAW seul est rarement requis."
+          }
+        },
+        {
+          "id": "phone-15",
+          "type": "single",
+          "text": {
+            "en": "Macro mode on phones usually works best when…",
+            "fr": "Le mode macro fonctionne généralement mieux quand…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "You get close and hold steady (the DOF is tiny)",
+                "fr": "Vous vous approchez et restez stables (la PdC est minuscule)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "You stand 20 meters away",
+                "fr": "Vous êtes à 20 mètres"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "You disable all focus",
+                "fr": "Vous désactivez tout focus"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "You only shoot at night without light",
+                "fr": "Vous ne photographiez que la nuit sans lumière"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Close focus means shallow depth of field; stability and light help.",
+            "fr": "La mise au point proche implique une PdC faible ; stabilité et lumière aident."
+          }
+        },
+        {
+          "id": "phone-16",
+          "type": "single",
+          "text": {
+            "en": "A common downside of heavy in-phone sharpening/noise reduction is…",
+            "fr": "Un inconvénient fréquent d’une accentuation / réduction de bruit trop forte est…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Plastic-looking skin / smudged fine detail",
+                "fr": "Une peau « plastique » / des détails lissés"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Larger sensors",
+                "fr": "Des capteurs plus grands"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Better optical zoom",
+                "fr": "Un meilleur zoom optique"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Mandatory RAW output",
+                "fr": "Une sortie RAW obligatoire"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Aggressive processing can erase texture while looking “clean” on small screens.",
+            "fr": "Un traitement agressif efface la texture tout en paraissant « propre » sur petit écran."
+          }
+        },
+        {
+          "id": "phone-17",
+          "type": "single",
+          "text": {
+            "en": "For video on a phone, locking exposure/AF (AE/AF lock) helps when…",
+            "fr": "Pour la vidéo, verrouiller exposition/AF (AE/AF lock) aide quand…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Brightness would otherwise pump as the frame moves",
+                "fr": "La luminosité « pomperait » sinon quand le cadrage bouge"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "You want the phone to refocus every frame randomly",
+                "fr": "Vous voulez un refocus aléatoire à chaque image"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "You only shoot stills",
+                "fr": "Vous ne faites que des photos"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "You disable the microphone",
+                "fr": "Vous coupez le micro"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Locking stops continuous metering/focus hunting during a pan.",
+            "fr": "Le verrouillage évite les variations de mesure/focus pendant un travelling."
+          }
+        },
+        {
+          "id": "phone-18",
+          "type": "multiple",
+          "text": {
+            "en": "Useful phone editing steps before publishing include…",
+            "fr": "Des étapes utiles avant publication incluent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Crop / straighten",
+                "fr": "Recadrer / redresser"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Modest exposure and contrast tweaks",
+                "fr": "Ajuster modestement exposition et contraste"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Pushing saturation to the maximum always",
+                "fr": "Pousser toujours la saturation au maximum"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Checking the result on a calibrated or neutral display if possible",
+                "fr": "Vérifier le rendu sur un écran neutre si possible"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Subtle edits and a sane crop beat extreme filters.",
+            "fr": "Des retouches sobres et un bon recadrage battent les filtres extrêmes."
+          }
+        },
+        {
+          "id": "phone-19",
+          "type": "single",
+          "text": {
+            "en": "Shooting into the sun with a phone often needs…",
+            "fr": "Photographier face au soleil demande souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Exposure compensation / HDR / shielding the lens from flare",
+                "fr": "Compensation d’exposition / HDR / protéger la lentille du flare"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Turning off the camera app",
+                "fr": "Éteindre l’appli appareil photo"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Mandatory 10× digital zoom",
+                "fr": "Un zoom numérique 10× obligatoire"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Setting white balance to tungsten only",
+                "fr": "Régler la BB uniquement sur tungstène"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Backlight scenes blow highlights; HDR and careful exposure help.",
+            "fr": "Le contre-jour brûle les HL ; HDR et exposition soignée aident."
+          }
+        },
+        {
+          "id": "phone-20",
+          "type": "single",
+          "text": {
+            "en": "Compared with a large-sensor camera, phone sensors are small, so in low light they…",
+            "fr": "Face à un grand capteur, les petits capteurs de téléphone en basse lumière…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Often rely more on multi-frame stacking and higher ISO processing",
+                "fr": "S’appuient souvent plus sur l’empilement multi-images et le traitement haut ISO"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Always outperform full-frame without software",
+                "fr": "Surpassent toujours le plein format sans logiciel"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Cannot record color",
+                "fr": "Ne peuvent pas enregistrer la couleur"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Never use stabilization",
+                "fr": "N’utilisent jamais la stabilisation"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Small photosites gather less light; computational stacking compensates.",
+            "fr": "De petites photosites collectent moins de lumière ; l’empilement compense."
           }
         }
       ]

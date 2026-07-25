@@ -21,6 +21,8 @@
     "off": "Désactivé",
     "randomQuiz": "Mix aléatoire",
     "randomQuizDesc": "20 questions tirées de toutes les catégories.",
+    "dailyChallenge": "Défi du jour",
+    "dailyChallengeDesc": "10 questions communes à tous aujourd’hui.",
     "playerName": "Pseudo",
     "playerNameHint": "Il apparaîtra dans le classement après chaque partie.",
     "playerNamePlaceholder": "Ex. Marie, PhotoFan…",
@@ -77,7 +79,14 @@
     "badge_learner": "Badge Apprenti",
     "badge_rookie": "Badge Débutant",
     "copyLink": "Copier le lien du quiz",
-    "linkCopied": "Lien copié !"
+    "linkCopied": "Lien copié !",
+    "reviewTitle": "Revue des erreurs",
+    "reviewCount": "{{count}} à revoir",
+    "reviewPerfect": "Aucune erreur — bravo !",
+    "reviewYourAnswer": "Votre réponse : ",
+    "reviewCorrect": "Bonne réponse : ",
+    "reviewNoAnswer": "Aucune (temps écoulé)",
+    "reviewTimedOut": "Temps écoulé"
   },
   "share": {
     "text": "J'ai obtenu {{score}}/{{total}} ({{percent}} %) au quiz « {{quizTitle}} » ! Peux-tu battre mon score ?",

@@ -5,7 +5,10 @@ test.describe('Results Screen', () => {
     await page.goto('/');
     
     // Start first category quiz
-    await page.locator('.quiz-card:not(.quiz-card--random)').first().click();
+    await page
+      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .first()
+      .click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
     
     // Answer all 20 questions

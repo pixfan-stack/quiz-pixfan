@@ -21,6 +21,8 @@
     "off": "Off",
     "randomQuiz": "Random mix",
     "randomQuizDesc": "20 questions from every category.",
+    "dailyChallenge": "Daily challenge",
+    "dailyChallengeDesc": "10 questions shared by everyone today.",
     "playerName": "Display name",
     "playerNameHint": "It will appear on the leaderboard after each quiz.",
     "playerNamePlaceholder": "e.g. Alex, Shutterbug…",
@@ -77,7 +79,14 @@
     "badge_learner": "Learner badge",
     "badge_rookie": "Rookie badge",
     "copyLink": "Copy quiz link",
-    "linkCopied": "Link copied!"
+    "linkCopied": "Link copied!",
+    "reviewTitle": "Review mistakes",
+    "reviewCount": "{{count}} to review",
+    "reviewPerfect": "No mistakes — well done!",
+    "reviewYourAnswer": "Your answer: ",
+    "reviewCorrect": "Correct answer: ",
+    "reviewNoAnswer": "None (timed out)",
+    "reviewTimedOut": "Timed out"
   },
   "share": {
     "text": "I scored {{score}}/{{total}} ({{percent}}%) on \"{{quizTitle}}\"! Can you beat my score?",

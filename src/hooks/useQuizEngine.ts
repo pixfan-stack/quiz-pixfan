@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState, useEffect } from 'react';
-import type { Question, Quiz, QuizResult } from '../types/quiz';
+import type { AnswerReviewItem, Question, Quiz, QuizResult } from '../types/quiz';
 import {
   computePercentage,
   isAnswerCorrect,
@@ -51,6 +51,7 @@ export function useQuizEngine(
 ) {
   const [state, setState] = useState<QuizEngineState>(initialState);
   const startedAt = useRef<number>(Date.now());
+  const reviewLog = useRef<AnswerReviewItem[]>([]);
   const { timePerQuestion = 0, antiCheat = false } = options;
 
   const timer = useTimer(
@@ -59,28 +60,6 @@ export function useQuizEngine(
   );
 
   const tabTracker = useTabTracker(state.phase !== 'finished');
-
-  // Handle timer expiry
-  useEffect(() => {
-    if (timer.timeUp && state.phase === 'answering') {
-      setState((prev) => ({
-        ...prev,
-        phase: 'feedback' as const,
-        lastWasCorrect: false,
-        currentStreak: 0,
-        questionTimedOut: true,
-      }));
-    }
-  }, [timer.timeUp, state.phase]);
-
-  // Sync tab-switch count for focus mode (display + final penalty)
-  useEffect(() => {
-    if (!antiCheat) return;
-    setState((prev) => ({
-      ...prev,
-      tabSwitches: tabTracker.tabSwitchCount,
-    }));
-  }, [tabTracker.tabSwitchCount, antiCheat, tabTracker]);
 
   // Shuffle questions on mount for replayability
   const questions = useMemo(() => {
@@ -104,8 +83,42 @@ export function useQuizEngine(
     [state.currentIndex, total]
   );
 
+  // Handle timer expiry
+  useEffect(() => {
+    if (timer.timeUp && state.phase === 'answering' && currentQuestion) {
+      const alreadyLogged = reviewLog.current.some(
+        (item) => item.question.id === currentQuestion.id
+      );
+      if (!alreadyLogged) {
+        reviewLog.current.push({
+          question: currentQuestion,
+          selectedIds: state.selectedIds,
+          wasCorrect: false,
+          timedOut: true,
+        });
+      }
+      setState((prev) => ({
+        ...prev,
+        phase: 'feedback' as const,
+        lastWasCorrect: false,
+        currentStreak: 0,
+        questionTimedOut: true,
+      }));
+    }
+  }, [timer.timeUp, state.phase, state.selectedIds, currentQuestion]);
+
+  // Sync tab-switch count for focus mode (display + final penalty)
+  useEffect(() => {
+    if (!antiCheat) return;
+    setState((prev) => ({
+      ...prev,
+      tabSwitches: tabTracker.tabSwitchCount,
+    }));
+  }, [tabTracker.tabSwitchCount, antiCheat, tabTracker]);
+
   const reset = useCallback(() => {
     startedAt.current = Date.now();
+    reviewLog.current = [];
     timer.reset();
     setState((prev) => initialState(prev.attemptId + 1, prev.tabSwitches));
   }, [timer]);
@@ -140,6 +153,12 @@ export function useQuizEngine(
       const correctCount = prev.correctCount + (correct ? 1 : 0);
       const currentStreak = correct ? prev.currentStreak + 1 : 0;
       const maxStreak = Math.max(prev.maxStreak, currentStreak);
+
+      reviewLog.current.push({
+        question: currentQuestion,
+        selectedIds: prev.selectedIds,
+        wasCorrect: correct,
+      });
 
       return {
         ...prev,
@@ -181,6 +200,7 @@ export function useQuizEngine(
           isNewHighScore,
           previousBest,
           tabSwitchPenalty: tabSwitchPenalty > 0 ? tabSwitchPenalty : undefined,
+          mistakes: reviewLog.current.filter((item) => !item.wasCorrect),
         };
 
         return { ...prev, phase: 'finished', result };

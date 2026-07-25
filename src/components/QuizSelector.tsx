@@ -9,6 +9,11 @@ import { fetchRemoteHighScore } from '../utils/highscoreApi';
 import { fetchQuizStats, type QuizStats } from '../utils/analyticsApi';
 import { PlayerNamePrompt } from './PlayerNameInput';
 import { buildRandomQuiz, RANDOM_QUIZ_ID } from '../utils/randomQuiz';
+import {
+  buildDailyQuiz,
+  DAILY_QUESTION_COUNT,
+  getDailyQuizId,
+} from '../utils/dailyChallenge';
 
 interface QuizSelectorProps {
   quizzes: Quiz[];
@@ -25,6 +30,7 @@ const QUIZ_ICONS: Record<string, string> = {
   'gear-lenses': '🔭',
   'history-icons': '🎞️',
   genres: '🖼️',
+  smartphone: '📱',
 };
 
 interface QuizWithScore {
@@ -70,6 +76,19 @@ export function QuizSelector({
         localScore: randomLocal,
         remoteScore: randomRemote,
       });
+      const dailyId = getDailyQuizId();
+      const dailyLocal = getHighScore(dailyId);
+      const dailyRemote = await fetchRemoteHighScore(dailyId).catch(() => null);
+      scores.set(dailyId, {
+        quiz: {
+          id: dailyId,
+          title: { en: 'Daily challenge', fr: 'Défi du jour' },
+          description: { en: '', fr: '' },
+          questions: [],
+        },
+        localScore: dailyLocal,
+        remoteScore: dailyRemote,
+      });
       setQuizScores(scores);
 
       const stats = await fetchQuizStats().catch(() => []);
@@ -100,6 +119,12 @@ export function QuizSelector({
   const handleStartRandom = () => {
     if (quizzes.length === 0) return;
     handleStartQuiz(buildRandomQuiz(quizzes));
+  };
+
+  const dailyId = getDailyQuizId();
+  const handleStartDaily = () => {
+    if (quizzes.length === 0) return;
+    handleStartQuiz(buildDailyQuiz(quizzes));
   };
 
   return (
@@ -165,6 +190,38 @@ export function QuizSelector({
       </div>
 
       <ul className="quiz-list">
+        {quizzes.length > 0 && (
+          <li>
+            <button
+              type="button"
+              className="quiz-card quiz-card--daily"
+              onClick={handleStartDaily}
+              onMouseEnter={onPrefetchQuiz}
+              onFocus={onPrefetchQuiz}
+              aria-label={t('home.dailyChallenge')}
+            >
+              <span className="quiz-card__icon" aria-hidden="true">
+                🗓️
+              </span>
+              <div className="quiz-card__body">
+                <h3 className="quiz-card__title">{t('home.dailyChallenge')}</h3>
+                <p className="quiz-card__desc">{t('home.dailyChallengeDesc')}</p>
+              </div>
+              <div className="quiz-card__footer">
+                <div className="quiz-card__meta">
+                  <span className="quiz-card__meta-chip">
+                    {t('home.questionsCount', { count: DAILY_QUESTION_COUNT })}
+                  </span>
+                  <HighScoreBadge showEmpty bestScore={getBestScore(dailyId)} />
+                </div>
+                <span className="quiz-card__cta">
+                  {t('home.start')}
+                  <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
+                </span>
+              </div>
+            </button>
+          </li>
+        )}
         {quizzes.length > 0 && (
           <li>
             <button

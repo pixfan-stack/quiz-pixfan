@@ -1014,6 +1014,84 @@ a {
   border-style: dashed;
 }
 
+.quiz-card--daily {
+  border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
+  background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+}
+
+.mistakes-review {
+  margin: 1.25rem 0 0.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--color-surface) 92%, var(--color-bg, #fff));
+}
+
+.mistakes-review__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.mistakes-review__subtitle,
+.mistakes-review__empty {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.mistakes-review__list {
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.mistakes-review__item {
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.mistakes-review__question {
+  margin: 0 0 0.45rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.mistakes-review__timeout {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--pixfan-pink, #e11d48);
+}
+
+.mistakes-review__line {
+  margin: 0.2rem 0;
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.mistakes-review__line--correct {
+  color: #047857;
+}
+
+.mistakes-review__label {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.mistakes-review__explanation {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
 .result-leaderboard-name {
   margin: 0.65rem 0 0;
   font-size: 0.85rem;

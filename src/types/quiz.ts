@@ -50,6 +50,14 @@ export interface QuizzesData {
   quizzes: Quiz[];
 }
 
+/** One answered question for post-quiz review. */
+export interface AnswerReviewItem {
+  question: Question;
+  selectedIds: string[];
+  wasCorrect: boolean;
+  timedOut?: boolean;
+}
+
 /** Runtime result for one finished quiz attempt. */
 export interface QuizResult {
   quizId: string;
@@ -62,6 +70,8 @@ export interface QuizResult {
   previousBest: number | null;
   /** Correct answers removed due to anti-cheat tab switches. */
   tabSwitchPenalty?: number;
+  /** Incorrect (or timed-out) answers for the review panel. */
+  mistakes: AnswerReviewItem[];
 }
 
 /** Local high-score record stored in localStorage. */
