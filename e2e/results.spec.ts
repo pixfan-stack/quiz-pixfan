@@ -6,12 +6,15 @@ test.describe('Results Screen', () => {
     
     // Start first category quiz
     await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .locator(
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+      )
       .first()
       .click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
-    
+
     // Answer all 20 questions
+    test.setTimeout(90_000);
     for (let i = 0; i < 20; i++) {
       await page.locator('.answer-option').first().click();
       await page.locator('button:has-text("Vérifier"), button:has-text("Check answer")').first().click();

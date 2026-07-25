@@ -5,7 +5,9 @@ test.describe('Quiz Flow', () => {
     await page.goto('/');
     // Click first category quiz (skip random mix card)
     await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .locator(
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+      )
       .first()
       .click();
     // Wait for question to load

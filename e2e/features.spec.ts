@@ -35,7 +35,7 @@ test.describe('Language Switching', () => {
     
     // Start quiz
     await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)')
       .first()
       .click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
@@ -66,7 +66,7 @@ test.describe('Dark Mode', () => {
     
     // Start a quiz
     await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)')
       .first()
       .click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
@@ -88,7 +88,7 @@ test.describe('Timer Mode', () => {
     
     // Start quiz
     await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)')
       .first()
       .click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });

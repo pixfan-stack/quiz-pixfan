@@ -39,7 +39,9 @@ test.describe('Homepage', () => {
 
   test('navigates to quiz when clicking a quiz card', async ({ page }) => {
     await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily)')
+      .locator(
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+      )
       .first()
       .click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
