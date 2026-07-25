@@ -9,6 +9,7 @@ import {
   type SharePlatform,
 } from '../utils/share';
 import { submitRemoteHighScore } from '../utils/highscoreApi';
+import { getPlayerId, resolveDisplayNameForSubmit } from '../utils/player';
 import { useConfetti } from '../hooks/useConfetti';
 import {
   exportResultAsImage,
@@ -85,11 +86,13 @@ export function ResultScreen({
   useEffect(() => {
     void submitRemoteHighScore({
       quizId: result.quizId,
+      playerId: getPlayerId(),
+      displayName: resolveDisplayNameForSubmit(lang),
       percentage: result.percentage,
       correctCount: result.correctCount,
       totalQuestions: result.totalQuestions,
     }).catch(() => {});
-  }, [result]);
+  }, [result, lang]);
 
   // Confetti for perfect scores
   const { fire, isAnimating, canvasRef } = useConfetti();

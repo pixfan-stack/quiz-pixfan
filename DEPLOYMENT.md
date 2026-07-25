@@ -28,6 +28,14 @@ Cela va retourner un `DATABASE_ID` (ex: `abc123-def456-ghi789`).
 wrangler d1 execute quiz-pixfan-scores --file=setup-schema.sql
 ```
 
+**Déploiements D1 existants** : après la mise à jour multi-joueurs, exécutez aussi la migration :
+
+```bash
+wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/002-player-leaderboard.sql
+```
+
+(L’option `--remote` cible la base de production ; omettez-la pour l’environnement local.)
+
 ### Étape 3 : Configurer wrangler.toml
 
 Remplacez `YOUR_D1_DATABASE_ID_HERE` par l'ID obtenu à l'étape 1 :

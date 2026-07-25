@@ -1117,6 +1117,23 @@ a {
   cursor: pointer;
 }
 
+.setting-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.3rem 0.55rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.setting-input::placeholder {
+  color: var(--color-text-soft);
+  font-weight: 400;
+}
+
 .toggle-btn {
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
@@ -1469,6 +1486,40 @@ a {
 
 .leaderboard__table tbody tr:hover {
   background: var(--color-surface-alt);
+}
+
+.leaderboard__table tbody tr.leaderboard__row--self {
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface));
+}
+
+.leaderboard__table tbody tr.leaderboard__row--self:hover {
+  background: color-mix(in srgb, var(--color-primary) 18%, var(--color-surface));
+}
+
+.leaderboard__player {
+  font-weight: 600;
+}
+
+.leaderboard__you-badge {
+  margin-left: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+}
+
+.leaderboard__quiz {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.leaderboard__footer {
+  margin: 0;
+  padding: 0.85rem 1.25rem 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
 }
 
 .leaderboard__rank {

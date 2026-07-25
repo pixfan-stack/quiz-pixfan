@@ -1,10 +1,7 @@
 /**
- * Cloudflare Pages Function — high-score API with D1 support
+ * Cloudflare Pages Function — per-player high-score API with D1
  *
  * Route: /api/highscore
- *
- * This file is fully functional with D1 when bound in wrangler.toml.
- * Falls back gracefully to localStorage-compatible stub when D1 is not available.
  */
 
 import { json } from './utils';
@@ -15,6 +12,8 @@ export interface Env {
 
 interface HighScoreBody {
   quizId: string;
+  playerId: string;
+  displayName: string;
   percentage: number;
   correctCount: number;
   totalQuestions: number;
@@ -22,10 +21,28 @@ interface HighScoreBody {
 
 interface HighScoreRecord {
   quizId: string;
+  playerId: string;
+  displayName: string;
   percentage: number;
   correctCount: number;
   totalQuestions: number;
   updatedAt: string;
+}
+
+const MAX_DISPLAY_NAME = 24;
+const MAX_PLAYER_ID = 64;
+
+function sanitizeDisplayName(raw: string): string {
+  const trimmed = raw.trim().replace(/[\u0000-\u001F\u007F]/g, '');
+  const collapsed = trimmed.replace(/\s+/g, ' ');
+  return collapsed.slice(0, MAX_DISPLAY_NAME);
+}
+
+function sanitizePlayerId(raw: string): string | null {
+  const id = raw.trim();
+  if (!id || id.length > MAX_PLAYER_ID) return null;
+  if (!/^[a-zA-Z0-9-]+$/.test(id)) return null;
+  return id;
 }
 
 export const onRequestOptions: PagesFunction = async () => {
@@ -33,27 +50,33 @@ export const onRequestOptions: PagesFunction = async () => {
 };
 
 /**
- * GET /api/highscore?quizId=exposure-basics
- * Returns { score: HighScoreRecord | null }
+ * GET /api/highscore?quizId=...&playerId=...
+ * Returns { score: HighScoreRecord | null } for this player on this quiz.
  */
 export const onRequestGet: PagesFunction<Env> = async (context) => {
   const url = new URL(context.request.url);
   const quizId = url.searchParams.get('quizId');
+  const playerId = url.searchParams.get('playerId');
 
-  if (!quizId) {
-    return json({ error: 'Missing quizId query parameter' }, 400);
+  if (!quizId || !playerId) {
+    return json({ error: 'Missing quizId or playerId query parameter' }, 400);
+  }
+
+  const safePlayerId = sanitizePlayerId(playerId);
+  if (!safePlayerId) {
+    return json({ error: 'Invalid playerId' }, 400);
   }
 
   try {
-    // Try D1 first
     if (context.env.DB) {
       const row = await context.env.DB.prepare(
-        `SELECT quiz_id as quizId, percentage, correct_count as correctCount,
+        `SELECT quiz_id as quizId, player_id as playerId, display_name as displayName,
+                percentage, correct_count as correctCount,
                 total_questions as totalQuestions, updated_at as updatedAt
-         FROM highscores
-         WHERE quiz_id = ?`
+         FROM player_highscores
+         WHERE quiz_id = ? AND player_id = ?`
       )
-        .bind(quizId)
+        .bind(quizId, safePlayerId)
         .first<HighScoreRecord>();
 
       return json({ score: row ?? null });
@@ -62,15 +85,12 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     console.warn('D1 query failed, returning null:', error);
   }
 
-  // Fallback: return null (app will use localStorage)
   return json({ score: null });
 };
 
 /**
  * POST /api/highscore
- * Body: { quizId, percentage, correctCount, totalQuestions }
- * Stores the score only if it beats the existing best.
- * Returns { score: HighScoreRecord, isNewHighScore: boolean }
+ * Body: { quizId, playerId, displayName, percentage, correctCount, totalQuestions }
  */
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   let body: HighScoreBody;
@@ -80,10 +100,22 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     return json({ error: 'Invalid JSON body' }, 400);
   }
 
-  const { quizId, percentage, correctCount, totalQuestions } = body;
+  const {
+    quizId,
+    playerId: rawPlayerId,
+    displayName: rawDisplayName,
+    percentage,
+    correctCount,
+    totalQuestions,
+  } = body;
+
+  const playerId = sanitizePlayerId(rawPlayerId ?? '');
+  const displayName = sanitizeDisplayName(rawDisplayName ?? '');
 
   if (
     !quizId ||
+    !playerId ||
+    !displayName ||
     typeof percentage !== 'number' ||
     typeof correctCount !== 'number' ||
     typeof totalQuestions !== 'number'
@@ -95,63 +127,88 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     return json({ error: 'percentage must be 0–100' }, 400);
   }
 
-  const record: HighScoreRecord = {
-    quizId,
-    percentage,
-    correctCount,
-    totalQuestions,
-    updatedAt: new Date().toISOString(),
-  };
+  const updatedAt = new Date().toISOString();
 
   try {
-    // Try D1 first
     if (context.env.DB) {
-      // Check existing score
       const existing = await context.env.DB.prepare(
-        'SELECT percentage FROM highscores WHERE quiz_id = ?'
+        `SELECT quiz_id as quizId, player_id as playerId, display_name as displayName,
+                percentage, correct_count as correctCount,
+                total_questions as totalQuestions, updated_at as updatedAt
+         FROM player_highscores
+         WHERE quiz_id = ? AND player_id = ?`
       )
-        .bind(quizId)
-        .first<{ percentage: number }>();
+        .bind(quizId, playerId)
+        .first<HighScoreRecord>();
 
       if (existing && existing.percentage >= percentage) {
         return json({
-          score: {
-            quizId: existing.quizId || quizId,
-            percentage: existing.percentage,
-            correctCount: correctCount,
-            totalQuestions: totalQuestions,
-            updatedAt: new Date().toISOString(),
-          },
+          score: existing,
           isNewHighScore: false,
         });
       }
 
-      // Upsert the new score
       await context.env.DB.prepare(
-        `INSERT INTO highscores (quiz_id, percentage, correct_count, total_questions, updated_at)
-         VALUES (?, ?, ?, ?, ?)
-         ON CONFLICT(quiz_id) DO UPDATE SET
+        `INSERT INTO player_highscores
+           (quiz_id, player_id, display_name, percentage, correct_count, total_questions, updated_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?)
+         ON CONFLICT(quiz_id, player_id) DO UPDATE SET
+           display_name = excluded.display_name,
            percentage = excluded.percentage,
            correct_count = excluded.correct_count,
            total_questions = excluded.total_questions,
            updated_at = excluded.updated_at`
       )
-        .bind(quizId, percentage, correctCount, totalQuestions, record.updatedAt)
+        .bind(
+          quizId,
+          playerId,
+          displayName,
+          percentage,
+          correctCount,
+          totalQuestions,
+          updatedAt
+        )
         .run();
 
+      const saved = await context.env.DB.prepare(
+        `SELECT quiz_id as quizId, player_id as playerId, display_name as displayName,
+                percentage, correct_count as correctCount,
+                total_questions as totalQuestions, updated_at as updatedAt
+         FROM player_highscores
+         WHERE quiz_id = ? AND player_id = ?`
+      )
+        .bind(quizId, playerId)
+        .first<HighScoreRecord>();
+
+      const isNewHighScore = !existing || (saved?.percentage ?? 0) > existing.percentage;
+
       return json({
-        score: record,
-        isNewHighScore: true,
+        score: saved ?? {
+          quizId,
+          playerId,
+          displayName,
+          percentage,
+          correctCount,
+          totalQuestions,
+          updatedAt,
+        },
+        isNewHighScore,
       });
     }
   } catch (error) {
     console.warn('D1 operation failed:', error);
-    // Fall through to return success anyway (app uses localStorage)
   }
 
-  // Return success anyway — app works with localStorage as fallback
   return json({
-    score: record,
+    score: {
+      quizId,
+      playerId,
+      displayName,
+      percentage,
+      correctCount,
+      totalQuestions,
+      updatedAt,
+    },
     isNewHighScore: true,
   });
 };

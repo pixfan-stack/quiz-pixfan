@@ -16,7 +16,9 @@
     "settings": "Paramètres",
     "timerMode": "Mode chronométré",
     "antiCheat": "Anti-triche",
-    "off": "Désactivé"
+    "off": "Désactivé",
+    "playerName": "Nom affiché",
+    "playerNameHint": "Visible dans le classement (optionnel)"
   },
   "quiz": {
     "progress": "Question {{current}} / {{total}}",
@@ -75,7 +77,11 @@
     "date": "Date",
     "empty": "Aucun score pour le moment",
     "filterAll": "Tous les quiz",
-    "yourPosition": "Votre position"
+    "yourPosition": "Votre position",
+    "player": "Joueur",
+    "quiz": "Quiz",
+    "yourRow": "Vous",
+    "yourPositionDetail": "Votre rang : n°{{rank}} — {{displayName}} — {{score}} %"
   },
   "common": {
     "loading": "Chargement…",

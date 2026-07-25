@@ -16,7 +16,9 @@
     "settings": "Settings",
     "timerMode": "Timer mode",
     "antiCheat": "Anti-cheat",
-    "off": "Off"
+    "off": "Off",
+    "playerName": "Display name",
+    "playerNameHint": "Shown on the leaderboard (optional)"
   },
   "quiz": {
     "progress": "Question {{current}} / {{total}}",
@@ -75,7 +77,11 @@
     "date": "Date",
     "empty": "No scores yet",
     "filterAll": "All quizzes",
-    "yourPosition": "Your position"
+    "yourPosition": "Your position",
+    "player": "Player",
+    "quiz": "Quiz",
+    "yourRow": "You",
+    "yourPositionDetail": "Your rank: #{{rank}} — {{displayName}} — {{score}}%"
   },
   "common": {
     "loading": "Loading…",

@@ -6,6 +6,10 @@ import { HighScoreBadge } from './HighScoreBadge';
 import { Leaderboard } from './Leaderboard';
 import { getHighScore } from '../utils/highscore';
 import { fetchRemoteHighScore } from '../utils/highscoreApi';
+import {
+  getPlayerDisplayName,
+  setPlayerDisplayName,
+} from '../utils/player';
 
 interface QuizSelectorProps {
   quizzes: Quiz[];
@@ -36,6 +40,7 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [antiCheat, setAntiCheat] = useState(false);
   const [leaderboardQuizId, setLeaderboardQuizId] = useState<string | undefined>(undefined);
+  const [playerName, setPlayerName] = useState(() => getPlayerDisplayName());
 
   // Load scores
   useEffect(() => {
@@ -106,6 +111,25 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
               </select>
             </div>
             <div className="setting-row">
+              <label htmlFor="player-name" className="setting-label">
+                {t('home.playerName')}
+              </label>
+              <input
+                id="player-name"
+                type="text"
+                className="setting-input"
+                value={playerName}
+                maxLength={24}
+                placeholder={t('home.playerNameHint')}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setPlayerName(value);
+                  setPlayerDisplayName(value);
+                }}
+                autoComplete="nickname"
+              />
+            </div>
+            <div className="setting-row">
               <label htmlFor="anticheat-toggle" className="setting-label">
                 {t('home.antiCheat')}
               </label>
@@ -174,7 +198,7 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
             </option>
           ))}
         </select>
-        <Leaderboard quizId={leaderboardQuizId} limit={20} />
+        <Leaderboard quizId={leaderboardQuizId} limit={20} quizzes={quizzes} />
       </div>
     </section>
   );
