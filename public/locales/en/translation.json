@@ -12,13 +12,22 @@
     "selectQuiz": "Select a quiz",
     "start": "Start quiz",
     "questionsCount": "{{count}} questions",
+    "playsCount": "{{count}} plays",
     "bestScore": "Best score: {{score}}%",
     "settings": "Settings",
     "timerMode": "Timer mode",
-    "antiCheat": "Anti-cheat",
+    "antiCheat": "Focus mode",
+    "antiCheatHint": "Each tab switch removes 1 correct answer from your final score.",
     "off": "Off",
+    "randomQuiz": "Random mix",
+    "randomQuizDesc": "20 questions from every category.",
     "playerName": "Display name",
-    "playerNameHint": "Shown on the leaderboard (optional)"
+    "playerNameHint": "It will appear on the leaderboard after each quiz.",
+    "playerNamePlaceholder": "e.g. Alex, Shutterbug…",
+    "playerNameUnset": "Not set",
+    "playerModalTitle": "Choose a display name",
+    "playerModalSave": "Continue",
+    "playerModalSkip": "Later"
   },
   "quiz": {
     "progress": "Question {{current}} / {{total}}",
@@ -59,7 +68,16 @@
     "share_facebook": "Share on Facebook",
     "share_linkedin": "Share on LinkedIn",
     "share_whatsapp": "Share on WhatsApp",
-    "statsLabel": "Quiz statistics"
+    "statsLabel": "Quiz statistics",
+    "leaderboardAs": "Leaderboard as {{name}}",
+    "antiCheatPenalty": "Focus mode: −{{count}} correct answer(s) deducted (tab switches).",
+    "badge_master": "Master badge",
+    "badge_expert": "Expert badge",
+    "badge_skilled": "Skilled badge",
+    "badge_learner": "Learner badge",
+    "badge_rookie": "Rookie badge",
+    "copyLink": "Copy quiz link",
+    "linkCopied": "Link copied!"
   },
   "share": {
     "text": "I scored {{score}}/{{total}} ({{percent}}%) on \"{{quizTitle}}\"! Can you beat my score?",

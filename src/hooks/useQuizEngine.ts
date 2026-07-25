@@ -73,16 +73,14 @@ export function useQuizEngine(
     }
   }, [timer.timeUp, state.phase]);
 
-  // Handle anti-cheat
+  // Sync tab-switch count for focus mode (display + final penalty)
   useEffect(() => {
-    if (antiCheat && tabTracker.tabSwitchCount > 0) {
-      setState((prev) => ({
-        ...prev,
-        tabSwitches: prev.tabSwitches + tabTracker.tabSwitchCount,
-      }));
-      tabTracker.onFocus();
-    }
-  }, [tabTracker.tabSwitchCount, antiCheat]);
+    if (!antiCheat) return;
+    setState((prev) => ({
+      ...prev,
+      tabSwitches: tabTracker.tabSwitchCount,
+    }));
+  }, [tabTracker.tabSwitchCount, antiCheat, tabTracker]);
 
   // Shuffle questions on mount for replayability
   const questions = useMemo(() => {
@@ -163,23 +161,26 @@ export function useQuizEngine(
         const timeTakenSeconds = Math.round(
           (Date.now() - startedAt.current) / 1000
         );
-        const percentage = computePercentage(prev.correctCount, total);
+        const tabSwitchPenalty = antiCheat ? tabTracker.tabSwitchCount : 0;
+        const adjustedCorrect = Math.max(0, prev.correctCount - tabSwitchPenalty);
+        const percentage = computePercentage(adjustedCorrect, total);
         const { isNewHighScore, previousBest } = saveHighScoreIfBetter({
           quizId: quiz.id,
           percentage,
-          correctCount: prev.correctCount,
+          correctCount: adjustedCorrect,
           totalQuestions: total,
         });
 
         const result: QuizResult = {
           quizId: quiz.id,
-          correctCount: prev.correctCount,
+          correctCount: adjustedCorrect,
           totalQuestions: total,
           percentage,
           timeTakenSeconds,
           maxStreak: prev.maxStreak,
           isNewHighScore,
           previousBest,
+          tabSwitchPenalty: tabSwitchPenalty > 0 ? tabSwitchPenalty : undefined,
         };
 
         return { ...prev, phase: 'finished', result };
@@ -194,7 +195,7 @@ export function useQuizEngine(
         questionTimedOut: false,
       };
     });
-  }, [quiz.id, total]);
+  }, [quiz.id, total, antiCheat, tabTracker.tabSwitchCount]);
 
   return {
     ...state,

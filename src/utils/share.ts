@@ -14,6 +14,12 @@
 export const APP_SHARE_URL =
   import.meta.env.VITE_APP_URL ?? 'https://quiz.pixfan.fr';
 
+/** Deep-link URL for a specific quiz (hash routing). */
+export function quizShareUrl(quizId: string): string {
+  const base = APP_SHARE_URL.replace(/\/$/, '');
+  return `${base}/#/quiz/${encodeURIComponent(quizId)}`;
+}
+
 export type SharePlatform = 'twitter' | 'facebook' | 'linkedin' | 'whatsapp';
 
 export interface SharePayload {

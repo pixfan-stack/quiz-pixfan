@@ -2,13 +2,13 @@ import { useCallback, useEffect, type CSSProperties, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Quiz, QuizResult } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
-import { getPerformanceMessageKey } from '../utils/scoring';
 import {
-  APP_SHARE_URL,
-  openShare,
-  type SharePlatform,
-} from '../utils/share';
+  getPerformanceMessageKey,
+  getResultBadgeKey,
+} from '../utils/scoring';
+import { openShare, quizShareUrl, type SharePlatform } from '../utils/share';
 import { submitRemoteHighScore } from '../utils/highscoreApi';
+import { trackQuizAttempt } from '../utils/analyticsApi';
 import { getPlayerId, resolveDisplayNameForSubmit } from '../utils/player';
 import { useConfetti } from '../hooks/useConfetti';
 import {
@@ -23,6 +23,7 @@ interface ResultScreenProps {
   result: QuizResult;
   onRetry: () => void;
   onHome: () => void;
+  onScoreSubmitted?: () => void;
 }
 
 const SHARE_PLATFORMS: {
@@ -65,11 +66,18 @@ export function ResultScreen({
   result,
   onRetry,
   onHome,
+  onScoreSubmitted,
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
   const quizTitle = pickLocale(quiz.title, lang);
   const messageKey = getPerformanceMessageKey(result.percentage);
+  const badgeKey = getResultBadgeKey(result.percentage);
+  const shareUrl = quizShareUrl(result.quizId);
+
+  const displayName = resolveDisplayNameForSubmit(lang);
+  const [leaderboardRefresh, setLeaderboardRefresh] = useState(0);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   const shareText = t('share.text', {
     score: result.correctCount,
@@ -79,20 +87,49 @@ export function ResultScreen({
   });
 
   const handleShare = (platform: SharePlatform) => {
-    openShare(platform, { text: shareText, url: APP_SHARE_URL, hashtags: t('share.hashtags') });
+    openShare(platform, {
+      text: shareText,
+      url: shareUrl,
+      hashtags: t('share.hashtags'),
+    });
   };
 
-  // Sync to Cloudflare D1
+  const handleCopyLink = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setLinkCopied(true);
+      window.setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      // ignore
+    }
+  }, [shareUrl]);
+
+  // Sync to Cloudflare D1 + analytics
   useEffect(() => {
     void submitRemoteHighScore({
       quizId: result.quizId,
       playerId: getPlayerId(),
-      displayName: resolveDisplayNameForSubmit(lang),
+      displayName,
       percentage: result.percentage,
       correctCount: result.correctCount,
       totalQuestions: result.totalQuestions,
-    }).catch(() => {});
-  }, [result, lang]);
+    })
+      .then((ok) => {
+        if (ok) {
+          setLeaderboardRefresh((n) => n + 1);
+          onScoreSubmitted?.();
+        }
+      })
+      .catch(() => {});
+
+    void trackQuizAttempt({
+      quizId: result.quizId,
+      percentage: result.percentage,
+      correctCount: result.correctCount,
+      totalQuestions: result.totalQuestions,
+      timeTakenSeconds: result.timeTakenSeconds,
+    });
+  }, [result, displayName, onScoreSubmitted]);
 
   // Confetti for perfect scores
   const { fire, isAnimating, canvasRef } = useConfetti();
@@ -158,7 +195,22 @@ export function ResultScreen({
             <p className="result-hero__message">
               {t(`result.message_${messageKey}`)}
             </p>
+            <p
+              className={`result-badge result-badge--${badgeKey}`}
+              role="status"
+            >
+              {t(`result.badge_${badgeKey}`)}
+            </p>
+            <p className="result-leaderboard-name">
+              {t('result.leaderboardAs', { name: displayName })}
+            </p>
           </div>
+
+          {result.tabSwitchPenalty != null && result.tabSwitchPenalty > 0 && (
+            <p className="result-anticheat-notice" role="status">
+              {t('result.antiCheatPenalty', { count: result.tabSwitchPenalty })}
+            </p>
+          )}
 
           <div className="result-stats" role="group" aria-label={t('result.statsLabel')}>
             <div className="result-stat">
@@ -184,7 +236,6 @@ export function ResultScreen({
             </div>
           )}
 
-          {/* Export button */}
           <div className="export-section">
             <button
               type="button"
@@ -193,6 +244,14 @@ export function ResultScreen({
             >
               <span className="btn__icon" aria-hidden="true">📸</span>
               {t('result.exportImage')}
+            </button>
+            <button
+              type="button"
+              className="btn btn--ghost btn--block"
+              onClick={handleCopyLink}
+            >
+              <span className="btn__icon" aria-hidden="true">🔗</span>
+              {linkCopied ? t('result.linkCopied') : t('result.copyLink')}
             </button>
           </div>
 
@@ -213,7 +272,12 @@ export function ResultScreen({
             </div>
           </div>
 
-          <Leaderboard quizId={result.quizId} limit={10} />
+          <Leaderboard
+            quizId={result.quizId}
+            limit={10}
+            quizzes={[quiz]}
+            refreshToken={leaderboardRefresh}
+          />
 
           <div className="btn-row">
             <button type="button" className="btn btn--primary" onClick={onRetry}>

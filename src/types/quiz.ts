@@ -2,7 +2,7 @@
  * Quiz domain types.
  *
  * HOW TO ADD A NEW QUIZ / QUESTIONS:
- * 1. Open src/data/questions.json
+ * 1. Open public/data/questions.json
  * 2. Add a new object to the top-level "quizzes" array (or append questions
  *    to an existing quiz).
  * 3. Every user-facing string must have both "fr" and "en" fields.
@@ -33,6 +33,10 @@ export interface Question {
   correctAnswers: string[];
   /** Optional explanation shown after the user submits. */
   explanation?: LocalizedString;
+  /** Optional illustration (absolute or site-relative URL). */
+  imageUrl?: string;
+  /** Accessible description for the illustration. */
+  imageAlt?: LocalizedString;
 }
 
 export interface Quiz {
@@ -56,6 +60,8 @@ export interface QuizResult {
   maxStreak: number;
   isNewHighScore: boolean;
   previousBest: number | null;
+  /** Correct answers removed due to anti-cheat tab switches. */
+  tabSwitchPenalty?: number;
 }
 
 /** Local high-score record stored in localStorage. */

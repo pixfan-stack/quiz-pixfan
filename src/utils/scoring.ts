@@ -52,3 +52,14 @@ export function getPerformanceMessageKey(
   if (percentage >= 40) return 'ok';
   return 'low';
 }
+
+/** Badge tier for result screen (maps to result.badge_* i18n keys). */
+export function getResultBadgeKey(
+  percentage: number
+): 'master' | 'expert' | 'skilled' | 'learner' | 'rookie' {
+  if (percentage === 100) return 'master';
+  if (percentage >= 80) return 'expert';
+  if (percentage >= 60) return 'skilled';
+  if (percentage >= 40) return 'learner';
+  return 'rookie';
+}

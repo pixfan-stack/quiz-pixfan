@@ -5,6 +5,7 @@
  */
 
 import { json } from './utils';
+import { filterDisplayName } from './profanity';
 
 export interface Env {
   DB: D1Database;
@@ -110,7 +111,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   } = body;
 
   const playerId = sanitizePlayerId(rawPlayerId ?? '');
-  const displayName = sanitizeDisplayName(rawDisplayName ?? '');
+  const displayName = filterDisplayName(sanitizeDisplayName(rawDisplayName ?? ''));
 
   if (
     !quizId ||
@@ -131,6 +132,22 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   try {
     if (context.env.DB) {
+      const rateRow = await context.env.DB.prepare(
+        `SELECT updated_at as updatedAt FROM player_highscores
+         WHERE player_id = ?
+         ORDER BY updated_at DESC
+         LIMIT 1`
+      )
+        .bind(playerId)
+        .first<{ updatedAt: string }>();
+
+      if (rateRow?.updatedAt) {
+        const lastMs = Date.parse(rateRow.updatedAt);
+        if (!Number.isNaN(lastMs) && Date.now() - lastMs < 3000) {
+          return json({ error: 'Rate limit: wait before submitting again' }, 429);
+        }
+      }
+
       const existing = await context.env.DB.prepare(
         `SELECT quiz_id as quizId, player_id as playerId, display_name as displayName,
                 percentage, correct_count as correctCount,

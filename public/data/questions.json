@@ -54,6 +54,11 @@
           "explanation": {
             "en": "A wider aperture (smaller f-number) admits more light and produces a shallower depth of field — classic for portraits with background blur.",
             "fr": "Une grande ouverture (petit chiffre f) laisse entrer plus de lumière et réduit la profondeur de champ — idéal pour les portraits avec flou d'arrière-plan."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Vintage camera on a wooden table",
+            "fr": "Appareil photo vintage sur une table en bois"
           }
         },
         {
@@ -977,6 +982,11 @@
           "explanation": {
             "en": "Dividing the frame into a 3×3 grid and placing key elements on lines or intersections often creates a more dynamic balance than dead-center framing.",
             "fr": "Diviser le cadre en grille 3×3 et placer les éléments clés sur les lignes ou intersections crée souvent un équilibre plus dynamique qu'un cadrage pile au centre."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Landscape framed by mountain ridges",
+            "fr": "Paysage cadré par des crêtes montagneuses"
           }
         },
         {
@@ -1899,6 +1909,11 @@
           "explanation": {
             "en": "Near sunrise and sunset the sun is low: light is warmer, softer and more directional — flattering for portraits and landscapes.",
             "fr": "Près du lever et du coucher, le soleil est bas : lumière plus chaude, plus douce et directionnelle — flatteuse pour portraits et paysages."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1495616811223-4d98c4fee50b?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Golden hour light over a city skyline",
+            "fr": "Lumière dorée sur une skyline urbaine"
           }
         },
         {
@@ -2824,6 +2839,11 @@
           "explanation": {
             "en": "Around 40–58 mm on full-frame is considered “normal”: neither strongly wide nor telephoto. On APS-C, a ~35 mm often plays a similar role.",
             "fr": "Environ 40–58 mm en plein format est considéré « normal » : ni grand-angle marqué ni téléobjectif. En APS-C, un ~35 mm joue souvent ce rôle."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Camera lenses lined up on a desk",
+            "fr": "Objectifs photo alignés sur un bureau"
           }
         },
         {

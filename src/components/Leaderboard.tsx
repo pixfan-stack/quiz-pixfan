@@ -13,9 +13,11 @@ interface LeaderboardProps {
   quizId?: string;
   limit?: number;
   quizzes?: Quiz[];
+  /** Bump to refetch after a new score is submitted. */
+  refreshToken?: number;
 }
 
-export function Leaderboard({ quizId, limit = 20, quizzes }: LeaderboardProps) {
+export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: LeaderboardProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
   const currentPlayerId = useMemo(() => getPlayerId(), []);
@@ -47,7 +49,7 @@ export function Leaderboard({ quizId, limit = 20, quizzes }: LeaderboardProps) {
         setViewer(null);
       })
       .finally(() => setLoading(false));
-  }, [quizId, limit, currentPlayerId]);
+  }, [quizId, limit, currentPlayerId, refreshToken]);
 
   if (loading) {
     return <p className="leaderboard-empty">{t('common.loading')}</p>;

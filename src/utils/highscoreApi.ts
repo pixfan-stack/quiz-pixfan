@@ -3,6 +3,7 @@
  */
 
 import { getPlayerId } from './player';
+import { isRemoteScoresEnabled } from './remoteScores';
 
 export interface LeaderboardEntry {
   quizId: string;
@@ -34,6 +35,7 @@ interface FetchLeaderboardParams {
 export async function fetchRemoteHighScore(
   quizId: string
 ): Promise<LeaderboardEntry | null> {
+  if (!isRemoteScoresEnabled()) return null;
   try {
     const playerId = getPlayerId();
     const res = await fetch(
@@ -55,6 +57,7 @@ export async function submitRemoteHighScore(payload: {
   correctCount: number;
   totalQuestions: number;
 }): Promise<boolean> {
+  if (!isRemoteScoresEnabled()) return false;
   try {
     const res = await fetch('/api/highscore', {
       method: 'POST',
@@ -70,6 +73,9 @@ export async function submitRemoteHighScore(payload: {
 export async function fetchLeaderboard(
   params: FetchLeaderboardParams = {}
 ): Promise<LeaderboardResponse> {
+  if (!isRemoteScoresEnabled()) {
+    return { leaderboard: [], total: 0, viewer: null };
+  }
   try {
     const { limit = 10, quizId, playerId = getPlayerId() } = params;
     const url = new URL('/api/leaderboard', window.location.origin);

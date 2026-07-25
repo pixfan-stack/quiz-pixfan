@@ -1,10 +1,17 @@
-import { useState, useEffect, Suspense, lazy } from 'react';
+import { useState, useEffect, Suspense, lazy, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Quiz, QuizzesData } from './types/quiz';
 import { useDarkMode } from './hooks/useDarkMode';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { QuizSelector } from './components/QuizSelector';
+import { buildRandomQuiz, RANDOM_QUIZ_ID } from './utils/randomQuiz';
+import {
+  clearQuizHash,
+  parseQuizIdFromHash,
+  setQuizHash,
+} from './utils/routing';
+
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
 
 type AppView = 'home' | 'quiz';
@@ -12,6 +19,10 @@ type AppView = 'home' | 'quiz';
 interface QuizSettings {
   timePerQuestion: number;
   antiCheat: boolean;
+}
+
+function prefetchQuizScreen(): void {
+  void import('./components/QuizScreen');
 }
 
 /**
@@ -26,32 +37,74 @@ export default function App() {
     timePerQuestion: 0,
     antiCheat: false,
   });
+  const [leaderboardRefreshToken, setLeaderboardRefreshToken] = useState(0);
   const { isDark, toggleDark } = useDarkMode();
 
-  // Sync <html lang> with current language
   useEffect(() => {
     document.documentElement.lang = (i18n.resolvedLanguage ?? i18n.language).slice(0, 2);
   }, [i18n.language, i18n.resolvedLanguage]);
 
-  // Load quizzes from static asset (not bundled in JS)
   useEffect(() => {
     fetch('/data/questions.json')
       .then((r) => r.json())
       .then((data) => setQuizzes((data as QuizzesData).quizzes));
   }, []);
 
-  const handleSelectQuiz = (quiz: Quiz) => {
+  const startQuiz = useCallback((quiz: Quiz) => {
     setActiveQuiz(quiz);
     setView('quiz');
+    setQuizHash(quiz.id);
+  }, []);
+
+  useEffect(() => {
+    if (quizzes.length === 0) return;
+    const quizId = parseQuizIdFromHash(window.location.hash);
+    if (!quizId || view === 'quiz') return;
+
+    if (quizId === RANDOM_QUIZ_ID) {
+      startQuiz(buildRandomQuiz(quizzes));
+      return;
+    }
+
+    const found = quizzes.find((q) => q.id === quizId);
+    if (found) {
+      startQuiz(found);
+    }
+  }, [quizzes, startQuiz, view]);
+
+  useEffect(() => {
+    const onHashChange = () => {
+      if (!window.location.hash) {
+        setActiveQuiz(null);
+        setView('home');
+      }
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  const handleSelectQuiz = (quiz: Quiz) => {
+    prefetchQuizScreen();
+    startQuiz(quiz);
   };
 
   const handleHome = () => {
     setActiveQuiz(null);
     setView('home');
+    clearQuizHash();
+    setLeaderboardRefreshToken((n) => n + 1);
+  };
+
+  const handleScoreSubmitted = () => {
+    setLeaderboardRefreshToken((n) => n + 1);
   };
 
   return (
     <div className="app">
+      <a href="#main-content" className="skip-link">
+        {t('common.accessibilitySkipToContent')}
+      </a>
+
       <header className="app-header">
         <div className="app-header__brand">
           <button
@@ -96,6 +149,8 @@ export default function App() {
               quizzes={quizzes}
               onSelect={handleSelectQuiz}
               onSettingsChange={setSettings}
+              onPrefetchQuiz={prefetchQuizScreen}
+              leaderboardRefreshToken={leaderboardRefreshToken}
             />
           )}
           {view === 'quiz' && activeQuiz && (
@@ -106,6 +161,7 @@ export default function App() {
                 onHome={handleHome}
                 timePerQuestion={settings.timePerQuestion}
                 antiCheat={settings.antiCheat}
+                onScoreSubmitted={handleScoreSubmitted}
               />
             </Suspense>
           )}

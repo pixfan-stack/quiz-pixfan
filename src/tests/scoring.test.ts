@@ -4,6 +4,7 @@ import {
   isAnswerCorrect,
   isPartiallyCorrect,
   getPerformanceMessageKey,
+  getResultBadgeKey,
 } from '../utils/scoring';
 import type { Question } from '../types/quiz';
 
@@ -136,5 +137,15 @@ describe('getPerformanceMessageKey', () => {
   it('returns low for below 40%', () => {
     expect(getPerformanceMessageKey(30)).toBe('low');
     expect(getPerformanceMessageKey(0)).toBe('low');
+  });
+});
+
+describe('getResultBadgeKey', () => {
+  it('maps percentages to badge tiers', () => {
+    expect(getResultBadgeKey(100)).toBe('master');
+    expect(getResultBadgeKey(85)).toBe('expert');
+    expect(getResultBadgeKey(65)).toBe('skilled');
+    expect(getResultBadgeKey(45)).toBe('learner');
+    expect(getResultBadgeKey(10)).toBe('rookie');
   });
 });

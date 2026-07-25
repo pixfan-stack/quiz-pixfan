@@ -12,13 +12,22 @@
     "selectQuiz": "Sélectionner un quiz",
     "start": "Lancer le quiz",
     "questionsCount": "{{count}} questions",
+    "playsCount": "{{count}} parties",
     "bestScore": "Meilleur score : {{score}} %",
     "settings": "Paramètres",
     "timerMode": "Mode chronométré",
-    "antiCheat": "Anti-triche",
+    "antiCheat": "Mode focus",
+    "antiCheatHint": "Chaque changement d’onglet retire 1 bonne réponse au score final.",
     "off": "Désactivé",
-    "playerName": "Nom affiché",
-    "playerNameHint": "Visible dans le classement (optionnel)"
+    "randomQuiz": "Mix aléatoire",
+    "randomQuizDesc": "20 questions tirées de toutes les catégories.",
+    "playerName": "Pseudo",
+    "playerNameHint": "Il apparaîtra dans le classement après chaque partie.",
+    "playerNamePlaceholder": "Ex. Marie, PhotoFan…",
+    "playerNameUnset": "Non défini",
+    "playerModalTitle": "Choisissez un pseudo",
+    "playerModalSave": "Continuer",
+    "playerModalSkip": "Plus tard"
   },
   "quiz": {
     "progress": "Question {{current}} / {{total}}",
@@ -59,7 +68,16 @@
     "share_facebook": "Partager sur Facebook",
     "share_linkedin": "Partager sur LinkedIn",
     "share_whatsapp": "Partager sur WhatsApp",
-    "statsLabel": "Statistiques du quiz"
+    "statsLabel": "Statistiques du quiz",
+    "leaderboardAs": "Classement en tant que {{name}}",
+    "antiCheatPenalty": "Mode focus : −{{count}} bonne(s) réponse(s) (changement d’onglet).",
+    "badge_master": "Badge Maître",
+    "badge_expert": "Badge Expert",
+    "badge_skilled": "Badge Confirmé",
+    "badge_learner": "Badge Apprenti",
+    "badge_rookie": "Badge Débutant",
+    "copyLink": "Copier le lien du quiz",
+    "linkCopied": "Lien copié !"
   },
   "share": {
     "text": "J'ai obtenu {{score}}/{{total}} ({{percent}} %) au quiz « {{quizTitle}} » ! Peux-tu battre mon score ?",

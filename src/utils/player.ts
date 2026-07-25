@@ -14,7 +14,14 @@ export function getPlayerId(): string {
 
 /** Trim, strip control chars, collapse whitespace, cap length. */
 export function sanitizeDisplayName(raw: string): string {
-  const trimmed = raw.trim().replace(/[\u0000-\u001F\u007F]/g, '');
+  const trimmed = raw
+    .trim()
+    .split('')
+    .filter((char) => {
+      const code = char.charCodeAt(0);
+      return code > 31 && code !== 127;
+    })
+    .join('');
   const collapsed = trimmed.replace(/\s+/g, ' ');
   return collapsed.slice(0, MAX_DISPLAY_NAME_LENGTH);
 }

@@ -5,11 +5,12 @@
  * network-first for API calls.
  */
 
-const CACHE_NAME = 'quiz-pixfan-v2';
+const CACHE_NAME = 'quiz-pixfan-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/manifest.json',
+  '/data/questions.json',
 ];
 
 // Install: cache static assets

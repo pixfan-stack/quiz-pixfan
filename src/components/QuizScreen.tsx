@@ -7,10 +7,9 @@ import { ResultScreen } from './ResultScreen';
 interface QuizScreenProps {
   quiz: Quiz;
   onHome: () => void;
-  /** Enable timed mode (seconds per question). 0 = disabled. */
   timePerQuestion?: number;
-  /** Enable anti-cheat (tab switch detection). */
   antiCheat?: boolean;
+  onScoreSubmitted?: () => void;
 }
 
 /**
@@ -22,6 +21,7 @@ export default function QuizScreen({
   onHome,
   timePerQuestion = 0,
   antiCheat = false,
+  onScoreSubmitted,
 }: QuizScreenProps) {
   const { t } = useTranslation();
   const engine = useQuizEngine(quiz, { timePerQuestion, antiCheat });
@@ -33,6 +33,7 @@ export default function QuizScreen({
         result={engine.result}
         onRetry={engine.reset}
         onHome={onHome}
+        onScoreSubmitted={onScoreSubmitted}
       />
     );
   }
@@ -55,6 +56,7 @@ export default function QuizScreen({
       onSubmit={engine.submitAnswer}
       onNext={engine.goNext}
       timerRemaining={engine.timerRemaining}
+      timerDuration={timePerQuestion}
       timerIsCritical={engine.timerIsCritical}
       timerEnabled={engine.timerEnabled}
       tabSwitches={engine.tabSwitches}

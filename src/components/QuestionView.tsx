@@ -18,6 +18,7 @@ interface QuestionViewProps {
   onNext: () => void;
   /** Timer config. */
   timerRemaining?: number;
+  timerDuration?: number;
   timerIsCritical?: boolean;
   timerEnabled?: boolean;
   /** Anti-cheat. */
@@ -43,6 +44,7 @@ export function QuestionView({
   onSubmit,
   onNext,
   timerRemaining,
+  timerDuration = 30,
   timerIsCritical = false,
   timerEnabled = false,
   tabSwitches = 0,
@@ -65,6 +67,18 @@ export function QuestionView({
       feedbackRef.current.focus();
     }
   }, [phase, question.id]);
+
+  useEffect(() => {
+    if (phase !== 'answering') return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' && selectedIds.length > 0) {
+        e.preventDefault();
+        onSubmit();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [phase, selectedIds.length, onSubmit]);
 
   let feedbackKind: 'correct' | 'incorrect' | 'partial' | null = null;
   if (locked) {
@@ -136,8 +150,15 @@ export function QuestionView({
       </div>
 
       {/* Timer bar (visual countdown) */}
-      {timerEnabled && timerRemaining !== undefined && (
-        <div className="timer-bar" style={{ '--pct': (timerRemaining / 30) * 100 } as React.CSSProperties}>
+      {timerEnabled && timerRemaining !== undefined && timerDuration > 0 && (
+        <div
+          className="timer-bar"
+          style={
+            {
+              '--pct': (timerRemaining / timerDuration) * 100,
+            } as React.CSSProperties
+          }
+        >
           <div className="timer-bar__fill" />
         </div>
       )}
@@ -147,6 +168,22 @@ export function QuestionView({
           {isMultiple ? t('quiz.multipleChoice') : t('quiz.singleChoice')}
         </p>
         <h2 className="question-text">{pickLocale(question.text, lang)}</h2>
+
+        {question.imageUrl && (
+          <figure className="question-figure">
+            <img
+              className="question-figure__img"
+              src={question.imageUrl}
+              alt={
+                question.imageAlt
+                  ? pickLocale(question.imageAlt, lang)
+                  : ''
+              }
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        )}
 
         <ul className="answer-list" role={isMultiple ? 'group' : 'radiogroup'}>
           {question.answers.map((answer, index) => {

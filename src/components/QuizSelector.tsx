@@ -6,15 +6,16 @@ import { HighScoreBadge } from './HighScoreBadge';
 import { Leaderboard } from './Leaderboard';
 import { getHighScore } from '../utils/highscore';
 import { fetchRemoteHighScore } from '../utils/highscoreApi';
-import {
-  getPlayerDisplayName,
-  setPlayerDisplayName,
-} from '../utils/player';
+import { fetchQuizStats, type QuizStats } from '../utils/analyticsApi';
+import { PlayerNamePrompt } from './PlayerNameInput';
+import { buildRandomQuiz, RANDOM_QUIZ_ID } from '../utils/randomQuiz';
 
 interface QuizSelectorProps {
   quizzes: Quiz[];
   onSelect: (quiz: Quiz) => void;
   onSettingsChange: (settings: { timePerQuestion: number; antiCheat: boolean }) => void;
+  onPrefetchQuiz?: () => void;
+  leaderboardRefreshToken?: number;
 }
 
 const QUIZ_ICONS: Record<string, string> = {
@@ -32,7 +33,13 @@ interface QuizWithScore {
   remoteScore: Awaited<ReturnType<typeof fetchRemoteHighScore>>;
 }
 
-export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelectorProps) {
+export function QuizSelector({
+  quizzes,
+  onSelect,
+  onSettingsChange,
+  onPrefetchQuiz,
+  leaderboardRefreshToken = 0,
+}: QuizSelectorProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
   const [quizScores, setQuizScores] = useState<Map<string, QuizWithScore>>(new Map());
@@ -40,9 +47,9 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [antiCheat, setAntiCheat] = useState(false);
   const [leaderboardQuizId, setLeaderboardQuizId] = useState<string | undefined>(undefined);
-  const [playerName, setPlayerName] = useState(() => getPlayerDisplayName());
+  const [playCounts, setPlayCounts] = useState<Map<string, number>>(new Map());
 
-  // Load scores
+  // Load scores + popularity
   useEffect(() => {
     const loadScores = async () => {
       const scores = new Map<string, QuizWithScore>();
@@ -51,10 +58,31 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
         const remoteScore = await fetchRemoteHighScore(quiz.id).catch(() => null);
         scores.set(quiz.id, { quiz, localScore, remoteScore });
       }
+      const randomLocal = getHighScore(RANDOM_QUIZ_ID);
+      const randomRemote = await fetchRemoteHighScore(RANDOM_QUIZ_ID).catch(() => null);
+      scores.set(RANDOM_QUIZ_ID, {
+        quiz: {
+          id: RANDOM_QUIZ_ID,
+          title: { en: 'Random mix', fr: 'Mix aléatoire' },
+          description: { en: '', fr: '' },
+          questions: [],
+        },
+        localScore: randomLocal,
+        remoteScore: randomRemote,
+      });
       setQuizScores(scores);
+
+      const stats = await fetchQuizStats().catch(() => []);
+      if (Array.isArray(stats)) {
+        const map = new Map<string, number>();
+        for (const row of stats as QuizStats[]) {
+          map.set(row.quizId, Number(row.attempts) || 0);
+        }
+        setPlayCounts(map);
+      }
     };
     void loadScores();
-  }, [quizzes]);
+  }, [quizzes, leaderboardRefreshToken]);
 
   const getBestScore = (quizId: string) => {
     const qs = quizScores.get(quizId);
@@ -67,6 +95,11 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
   const handleStartQuiz = (quiz: Quiz) => {
     onSettingsChange({ timePerQuestion, antiCheat });
     onSelect(quiz);
+  };
+
+  const handleStartRandom = () => {
+    if (quizzes.length === 0) return;
+    handleStartQuiz(buildRandomQuiz(quizzes));
   };
 
   return (
@@ -82,6 +115,7 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
 
       {/* Settings toggle */}
       <div className="quiz-settings-bar">
+        <PlayerNamePrompt />
         <button
           type="button"
           className="btn btn--ghost btn--small"
@@ -110,29 +144,11 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
                 <option value={60}>60s</option>
               </select>
             </div>
-            <div className="setting-row">
-              <label htmlFor="player-name" className="setting-label">
-                {t('home.playerName')}
-              </label>
-              <input
-                id="player-name"
-                type="text"
-                className="setting-input"
-                value={playerName}
-                maxLength={24}
-                placeholder={t('home.playerNameHint')}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setPlayerName(value);
-                  setPlayerDisplayName(value);
-                }}
-                autoComplete="nickname"
-              />
-            </div>
-            <div className="setting-row">
+            <div className="setting-row setting-row--stack">
               <label htmlFor="anticheat-toggle" className="setting-label">
                 {t('home.antiCheat')}
               </label>
+              <p className="setting-hint">{t('home.antiCheatHint')}</p>
               <button
                 id="anticheat-toggle"
                 type="button"
@@ -149,14 +165,54 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
       </div>
 
       <ul className="quiz-list">
+        {quizzes.length > 0 && (
+          <li>
+            <button
+              type="button"
+              className="quiz-card quiz-card--random"
+              onClick={handleStartRandom}
+              onMouseEnter={onPrefetchQuiz}
+              onFocus={onPrefetchQuiz}
+              aria-label={t('home.randomQuiz')}
+            >
+              <span className="quiz-card__icon" aria-hidden="true">
+                🎲
+              </span>
+              <div className="quiz-card__body">
+                <h3 className="quiz-card__title">{t('home.randomQuiz')}</h3>
+                <p className="quiz-card__desc">{t('home.randomQuizDesc')}</p>
+              </div>
+              <div className="quiz-card__footer">
+                <div className="quiz-card__meta">
+                  <span className="quiz-card__meta-chip">
+                    {t('home.questionsCount', { count: 20 })}
+                  </span>
+                  {(playCounts.get(RANDOM_QUIZ_ID) ?? 0) > 0 && (
+                    <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
+                      {t('home.playsCount', { count: playCounts.get(RANDOM_QUIZ_ID) })}
+                    </span>
+                  )}
+                  <HighScoreBadge showEmpty bestScore={getBestScore(RANDOM_QUIZ_ID)} />
+                </div>
+                <span className="quiz-card__cta">
+                  {t('home.start')}
+                  <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
+                </span>
+              </div>
+            </button>
+          </li>
+        )}
         {quizzes.map((quiz, index) => {
           const bestScore = getBestScore(quiz.id);
+          const plays = playCounts.get(quiz.id) ?? 0;
           return (
             <li key={quiz.id}>
               <button
                 type="button"
                 className={`quiz-card${index % 2 === 1 ? ' quiz-card--alt' : ''}`}
                 onClick={() => handleStartQuiz(quiz)}
+                onMouseEnter={onPrefetchQuiz}
+                onFocus={onPrefetchQuiz}
                 aria-label={`${t('home.start')}: ${pickLocale(quiz.title, lang)} (${t('home.questionsCount', { count: quiz.questions.length })})`}
               >
                 <span className="quiz-card__icon" aria-hidden="true">
@@ -171,6 +227,11 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
                     <span className="quiz-card__meta-chip">
                       {t('home.questionsCount', { count: quiz.questions.length })}
                     </span>
+                    {plays > 0 && (
+                      <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
+                        {t('home.playsCount', { count: plays })}
+                      </span>
+                    )}
                     <HighScoreBadge showEmpty bestScore={bestScore} />
                   </div>
                   <span className="quiz-card__cta">
@@ -197,8 +258,14 @@ export function QuizSelector({ quizzes, onSelect, onSettingsChange }: QuizSelect
               {pickLocale(quiz.title, lang)}
             </option>
           ))}
+          <option value={RANDOM_QUIZ_ID}>{t('home.randomQuiz')}</option>
         </select>
-        <Leaderboard quizId={leaderboardQuizId} limit={20} quizzes={quizzes} />
+        <Leaderboard
+          quizId={leaderboardQuizId}
+          limit={20}
+          quizzes={quizzes}
+          refreshToken={leaderboardRefreshToken}
+        />
       </div>
     </section>
   );
