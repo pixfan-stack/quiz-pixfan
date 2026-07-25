@@ -1,11 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 test.describe('Results Screen', () => {
   test('shows results after completing quiz', async ({ page }) => {
     await page.goto('/');
     
-    // Start first quiz
-    await page.locator('.quiz-card').first().click();
+    // Start first category quiz
+    await page.locator('.quiz-card:not(.quiz-card--random)').first().click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
     
     // Answer all 20 questions

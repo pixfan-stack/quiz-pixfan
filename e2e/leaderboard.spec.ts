@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 test.describe('Leaderboard profile', () => {
   test('shows name modal for first-time visitors', async ({ page }) => {
@@ -28,10 +28,6 @@ test.describe('Leaderboard profile', () => {
   });
 
   test('random mix card is visible when quizzes load', async ({ page }) => {
-    await page.addInitScript(() => {
-      localStorage.setItem('quiz-pixfan-name-prompt-seen', '1');
-    });
-
     await page.goto('/');
 
     await expect(page.locator('.quiz-card--random')).toBeVisible({ timeout: 8000 });

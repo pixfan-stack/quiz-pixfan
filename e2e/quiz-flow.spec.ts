@@ -1,10 +1,10 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 test.describe('Quiz Flow', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    // Click first quiz card to start a quiz
-    await page.locator('.quiz-card').first().click();
+    // Click first category quiz (skip random mix card)
+    await page.locator('.quiz-card:not(.quiz-card--random)').first().click();
     // Wait for question to load
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
   });
@@ -78,13 +78,25 @@ test.describe('Quiz Flow', () => {
   });
 
   test('shows streak counter when answering correctly', async ({ page }) => {
-    // Select and submit correct answer (we don't know which is correct, but streak shows)
-    await page.locator('.answer-option').first().click();
-    await page.locator('button[type="button"]:has-text("Vérifier"), button[type="button"]:has-text("Check answer")').click();
-    await expect(page.locator('.feedback')).toBeVisible({ timeout: 3000 });
-    
-    // Streak should be visible
-    const streakPill = page.locator('.stat-pill--streak');
-    await expect(streakPill).toBeVisible();
+    // Try answers until one is correct (questions are shuffled)
+    const options = page.locator('.answer-option');
+    const count = await options.count();
+    for (let i = 0; i < count; i++) {
+      await options.nth(i).click();
+      await page
+        .locator('button[type="button"]:has-text("Vérifier"), button[type="button"]:has-text("Check answer")')
+        .click();
+      await expect(page.locator('.feedback')).toBeVisible({ timeout: 3000 });
+      if (await page.locator('.feedback--correct').isVisible()) {
+        await expect(page.locator('.stat-pill--streak')).toBeVisible();
+        return;
+      }
+      await page
+        .locator('button[type="button"]:has-text("Question suivante"), button[type="button"]:has-text("Next question")')
+        .click();
+      await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
+    }
+    throw new Error('No correct answer found to assert streak');
   });
 });
+

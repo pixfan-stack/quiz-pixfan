@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 test.describe('Homepage', () => {
   test.beforeEach(async ({ page }) => {
@@ -9,9 +9,9 @@ test.describe('Homepage', () => {
     await expect(page).toHaveTitle(/Quiz PixFan/i);
   });
 
-  test('displays all 6 quiz cards', async ({ page }) => {
-    const quizCards = page.locator('.quiz-card');
-    await expect(quizCards).toHaveCount(6);
+  test('displays category quiz cards and random mix', async ({ page }) => {
+    await expect(page.locator('.quiz-card--random')).toBeVisible();
+    await expect(page.locator('.quiz-card:not(.quiz-card--random)')).toHaveCount(6);
   });
 
   test('displays quiz titles in French by default', async ({ page }) => {
@@ -22,16 +22,14 @@ test.describe('Homepage', () => {
   test('shows question count on each quiz card', async ({ page }) => {
     const quizCards = page.locator('.quiz-card');
     for (let i = 0; i < await quizCards.count(); i++) {
-      const chip = quizCards.nth(i).locator('.quiz-card__meta-chip');
+      const chip = quizCards.nth(i).locator('.quiz-card__meta-chip').first();
       await expect(chip).toBeVisible();
     }
   });
 
   test('navigates to quiz when clicking a quiz card', async ({ page }) => {
-    const firstCard = page.locator('.quiz-card').first();
-    await firstCard.click();
-    
-    // Should see question view
+    await page.locator('.quiz-card:not(.quiz-card--random)').first().click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
   });
 });
+
