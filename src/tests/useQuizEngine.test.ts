@@ -150,4 +150,40 @@ describe('useQuizEngine', () => {
 
     expect(result.current.selectedIds).toEqual(['a2']);
   });
+
+  it('shuffles answer display order while keeping answer ids', () => {
+    const singleQuestionQuiz: Quiz = {
+      id: 'shuffle-answers',
+      title: { en: 'Shuffle', fr: 'Mélange' },
+      description: { en: 'd', fr: 'd' },
+      questions: [
+        {
+          id: 'q',
+          type: 'single',
+          text: { en: 'Q?', fr: 'Q ?' },
+          answers: [
+            { id: 'a1', text: { en: '1', fr: '1' } },
+            { id: 'a2', text: { en: '2', fr: '2' } },
+            { id: 'a3', text: { en: '3', fr: '3' } },
+            { id: 'a4', text: { en: '4', fr: '4' } },
+          ],
+          correctAnswers: ['a1'],
+          explanation: { en: 'e', fr: 'e' },
+        },
+      ],
+    };
+
+    // Fisher-Yates with r=0 moves the first answer off the top.
+    vi.spyOn(Math, 'random')
+      .mockReturnValueOnce(0)
+      .mockReturnValueOnce(0)
+      .mockReturnValueOnce(0)
+      .mockReturnValue(0.5);
+
+    const { result } = renderHook(() => useQuizEngine(singleQuestionQuiz));
+    const ids = result.current.currentQuestion!.answers.map((a) => a.id);
+
+    expect(ids).not.toEqual(['a1', 'a2', 'a3', 'a4']);
+    expect(ids.sort()).toEqual(['a1', 'a2', 'a3', 'a4']);
+  });
 });
