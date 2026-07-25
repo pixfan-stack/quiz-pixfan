@@ -1,5 +1,8 @@
 /// <reference types="vite/client" />
 
+/** Injected from package.json `version` via vite/vitest `define`. */
+declare const __APP_VERSION__: string;
+
 interface ImportMetaEnv {
   /** Public site URL used in social share links (optional). */
   readonly VITE_APP_URL?: string;

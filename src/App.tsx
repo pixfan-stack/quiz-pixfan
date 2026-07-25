@@ -24,6 +24,7 @@ import {
   parseQuizIdFromHash,
   setQuizHash,
 } from './utils/routing';
+import { APP_VERSION } from './version';
 
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
 const AdminScreen = lazy(() => import('./components/AdminScreen'));
@@ -247,6 +248,9 @@ export default function App() {
           >
             {t('footer.copyright', { year: new Date().getFullYear() })}
           </a>
+          <span className="app-footer__version">
+            {t('footer.version', { version: APP_VERSION })}
+          </span>
           {isAdminEnabled() && (
             <button
               type="button"

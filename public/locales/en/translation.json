@@ -187,6 +187,7 @@
   },
   "footer": {
     "copyright": "© {{year}} pixfan.com — Learn photography, choose your gear",
+    "version": "v{{version}}",
     "admin": "Edit questions"
   },
   "pwa": {

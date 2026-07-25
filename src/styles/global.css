@@ -1878,6 +1878,13 @@ a {
   color: var(--color-primary);
 }
 
+.app-footer__version {
+  color: var(--color-text-soft, var(--color-text-muted));
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+}
+
 .app-footer__admin {
   appearance: none;
   border: none;

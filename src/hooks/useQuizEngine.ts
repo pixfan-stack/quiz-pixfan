@@ -8,6 +8,7 @@ import { saveHighScoreIfBetter } from '../utils/highscore';
 import { isDailyQuizId } from '../utils/dailyChallenge';
 import { isDuelQuizId } from '../utils/duel';
 import { isDifficultyMixId } from '../utils/difficulty';
+import { seededShuffle } from '../utils/seededRandom';
 import { useTimer } from './useTimer';
 import { useTabTracker } from './useTabTracker';
 
@@ -18,6 +19,14 @@ function preservesQuestionOrder(quizId: string): boolean {
     isDuelQuizId(quizId) ||
     isDifficultyMixId(quizId)
   );
+}
+
+/** Randomize answer display order; scoring still uses answer IDs. */
+function withShuffledAnswers(question: Question): Question {
+  return {
+    ...question,
+    answers: seededShuffle(question.answers, Math.random),
+  };
 }
 
 type QuizPhase = 'answering' | 'feedback' | 'finished';
@@ -73,17 +82,13 @@ export function useQuizEngine(
 
   const tabTracker = useTabTracker(state.phase !== 'finished');
 
-  // Shuffle questions on mount for replayability (except shared challenge packs)
+  // Shuffle answer order always; shuffle question order except shared challenge packs
   const questions = useMemo(() => {
-    const arr = [...quiz.questions];
+    const withAnswers = quiz.questions.map(withShuffledAnswers);
     if (preservesQuestionOrder(quiz.id)) {
-      return arr;
+      return withAnswers;
     }
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
+    return seededShuffle(withAnswers, Math.random);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.attemptId, quiz.id]);
   const total = questions.length;
