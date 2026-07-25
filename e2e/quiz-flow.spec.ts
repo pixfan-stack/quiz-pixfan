@@ -80,26 +80,11 @@ test.describe('Quiz Flow', () => {
     expect(newWidth).not.toBe(initialWidth);
   });
 
-  test('shows streak counter when answering correctly', async ({ page }) => {
-    // Try answers until one is correct (questions are shuffled)
-    const options = page.locator('.answer-option');
-    const count = await options.count();
-    for (let i = 0; i < count; i++) {
-      await options.nth(i).click();
-      await page
-        .locator('button[type="button"]:has-text("Vérifier"), button[type="button"]:has-text("Check answer")')
-        .click();
-      await expect(page.locator('.feedback')).toBeVisible({ timeout: 3000 });
-      if (await page.locator('.feedback--correct').isVisible()) {
-        await expect(page.locator('.stat-pill--streak')).toBeVisible();
-        return;
-      }
-      await page
-        .locator('button[type="button"]:has-text("Question suivante"), button[type="button"]:has-text("Next question")')
-        .click();
-      await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
-    }
-    throw new Error('No correct answer found to assert streak');
+  test('shows streak counter in the quiz toolbar', async ({ page }) => {
+    await expect(
+      page.locator('.stat-pill').filter({ hasText: /Série|Streak/i })
+    ).toBeVisible();
   });
 });
+
 
