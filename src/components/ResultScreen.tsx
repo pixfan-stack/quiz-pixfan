@@ -19,6 +19,7 @@ import {
 import { Leaderboard } from './Leaderboard';
 import { MistakesReview } from './MistakesReview';
 import { AchievementsPanel } from './AchievementsPanel';
+import { PixfanCta } from './PixfanCta';
 import { getAllHighScores } from '../utils/highscore';
 import { recordDailyCompletion } from '../utils/dailyStreak';
 import {
@@ -281,6 +282,8 @@ export function ResultScreen({
           )}
 
           <MistakesReview mistakes={result.mistakes ?? []} />
+
+          <PixfanCta quizId={result.quizId} percentage={result.percentage} />
 
           <div className="export-section">
             <button

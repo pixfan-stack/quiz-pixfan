@@ -1177,6 +1177,77 @@ a {
   text-align: center;
 }
 
+.pixfan-cta {
+  margin: 1.35rem 0 0.5rem;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--pixfan-pink) 35%, var(--color-border));
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--pixfan-pink) 7%, var(--color-surface));
+}
+
+.pixfan-cta__eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pixfan-pink);
+}
+
+.pixfan-cta__title {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.pixfan-cta__lead {
+  margin: 0 0 0.9rem;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.pixfan-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.pixfan-cta__primary {
+  text-decoration: none;
+}
+
+.pixfan-cta__actions .btn--ghost {
+  text-decoration: none;
+}
+
+.pixfan-cta__newsletter {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.pixfan-cta__newsletter-title {
+  margin: 0 0 0.2rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.pixfan-cta__newsletter-desc {
+  margin: 0 0 0.45rem;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.pixfan-cta__newsletter-link {
+  font-weight: 700;
+  color: var(--pixfan-pink);
+  text-decoration: none;
+}
+
+.pixfan-cta__newsletter-link:hover {
+  text-decoration: underline;
+}
+
 .mistakes-review {
   margin: 1.25rem 0 0.5rem;
   padding: 1rem 1.1rem;
