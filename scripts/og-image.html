@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;800&display=swap");
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        width: 1200px;
+        height: 630px;
+        font-family: "DM Sans", system-ui, sans-serif;
+        color: #fff;
+        background:
+          radial-gradient(ellipse 80% 70% at 15% 20%, rgba(255, 255, 255, 0.18), transparent 55%),
+          radial-gradient(ellipse 70% 60% at 90% 85%, rgba(120, 20, 60, 0.45), transparent 50%),
+          linear-gradient(135deg, #f3538c 0%, #e03d75 45%, #b91c5c 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 48px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        margin-bottom: 28px;
+      }
+      h1 {
+        font-size: 96px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        text-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+      }
+      h1 span { opacity: 0.92; font-weight: 700; }
+      .sub {
+        margin-top: 22px;
+        font-size: 34px;
+        font-weight: 500;
+        opacity: 0.95;
+      }
+      .chips {
+        display: flex;
+        gap: 14px;
+        margin-top: 40px;
+      }
+      .chip {
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: rgba(20, 10, 20, 0.28);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .url {
+        position: absolute;
+        bottom: 36px;
+        font-size: 24px;
+        font-weight: 600;
+        opacity: 0.88;
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="badge">Quiz photo · FR / EN</div>
+    <h1>Quiz <span>Pix</span>Fan</h1>
+    <p class="sub">Apprendre la photo, un quiz à la fois</p>
+    <div class="chips">
+      <div class="chip">📷 180 questions</div>
+      <div class="chip">🏆 9 catégories</div>
+      <div class="chip">⚔️ Duels & défis</div>
+    </div>
+    <p class="url">quiz.pixfan.fr</p>
+  </body>
+</html>
