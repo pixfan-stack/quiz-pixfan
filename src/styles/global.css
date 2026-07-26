@@ -1076,6 +1076,151 @@ a {
   background: color-mix(in srgb, #c45c26 7%, var(--color-surface));
 }
 
+.quiz-card-with-copy {
+  position: relative;
+}
+
+.quiz-card-copy-btn {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.quiz-card-copy-btn:hover {
+  border-color: var(--pixfan-pink);
+  color: var(--pixfan-pink);
+}
+
+.quiz-card-copy-btn:focus-visible {
+  outline: 2px solid var(--pixfan-pink);
+  outline-offset: 2px;
+}
+
+.weekly-leaders {
+  margin: 0 0 1.15rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.weekly-leaders__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.weekly-leaders__title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.weekly-leaders__empty {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.weekly-leaders__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.weekly-leaders__row {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1.2fr) minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.weekly-leaders__rank {
+  font-weight: 800;
+  color: var(--pixfan-pink);
+}
+
+.weekly-leaders__name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weekly-leaders__quiz {
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.78rem;
+}
+
+.weekly-leaders__score {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 520px) {
+  .weekly-leaders__row {
+    grid-template-columns: 1.25rem minmax(0, 1fr) auto;
+  }
+
+  .weekly-leaders__quiz {
+    display: none;
+  }
+}
+
+.reengage-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--pixfan-pink) 35%, var(--color-border));
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--pixfan-pink) 8%, var(--color-surface));
+}
+
+.reengage-banner__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.reengage-banner__desc {
+  margin: 0.2rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.reengage-banner__actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
 .quiz-card__meta-chip--streak {
   color: #c45c26;
   font-weight: 700;

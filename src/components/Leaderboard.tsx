@@ -22,18 +22,26 @@ interface LeaderboardProps {
   quizzes?: Quiz[];
   /** Bump to refetch after a new score is submitted. */
   refreshToken?: number;
+  /** Initial period tab (home defaults to week for social proof). */
+  defaultPeriod?: LeaderboardPeriod;
 }
 
 const PERIODS: LeaderboardPeriod[] = ['all', 'week', 'month'];
 
-export function Leaderboard({ quizId, limit = 20, quizzes, refreshToken = 0 }: LeaderboardProps) {
+export function Leaderboard({
+  quizId,
+  limit = 20,
+  quizzes,
+  refreshToken = 0,
+  defaultPeriod = 'month',
+}: LeaderboardProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
   const currentPlayerId = useMemo(() => getPlayerId(), []);
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [viewer, setViewer] = useState<LeaderboardViewer | null>(null);
   const [loading, setLoading] = useState(true);
-  const [period, setPeriod] = useState<LeaderboardPeriod>('month');
+  const [period, setPeriod] = useState<LeaderboardPeriod>(defaultPeriod);
   const [seasonId, setSeasonId] = useState(getMonthPeriodId());
   const [reportedIds, setReportedIds] = useState<Set<string>>(() => new Set());
   const [reportBusyId, setReportBusyId] = useState<string | null>(null);

@@ -20,6 +20,50 @@ export function quizShareUrl(quizId: string): string {
   return `${base}/#/quiz/${encodeURIComponent(quizId)}`;
 }
 
+export interface SocialShareOptions {
+  /** Percent score 0–100 for OG preview. */
+  score?: number;
+  lang?: 'en' | 'fr';
+}
+
+/**
+ * Crawlable share URL (`/s/:id`) with dynamic Open Graph tags.
+ * Prefer this for social platforms; use `quizShareUrl` for in-app deep links.
+ */
+export function socialShareUrl(
+  quizId: string,
+  opts: SocialShareOptions = {}
+): string {
+  const base = APP_SHARE_URL.replace(/\/$/, '');
+  const u = new URL(`${base}/s/${encodeURIComponent(quizId)}`);
+  if (opts.score != null && Number.isFinite(opts.score)) {
+    u.searchParams.set(
+      'score',
+      String(Math.round(Math.min(100, Math.max(0, opts.score))))
+    );
+  }
+  if (opts.lang) u.searchParams.set('lang', opts.lang);
+  return u.toString();
+}
+
+/** Absolute OG image URL for a quiz/score. */
+export function ogImageUrl(
+  quizId: string,
+  opts: SocialShareOptions = {}
+): string {
+  const base = APP_SHARE_URL.replace(/\/$/, '');
+  const u = new URL(`${base}/api/og`);
+  u.searchParams.set('quiz', quizId);
+  if (opts.score != null && Number.isFinite(opts.score)) {
+    u.searchParams.set(
+      'score',
+      String(Math.round(Math.min(100, Math.max(0, opts.score))))
+    );
+  }
+  if (opts.lang) u.searchParams.set('lang', opts.lang);
+  return u.toString();
+}
+
 export type SharePlatform = 'twitter' | 'facebook' | 'linkedin' | 'whatsapp';
 
 export type ShareKind = 'default' | 'duel' | 'daily' | 'challenge';

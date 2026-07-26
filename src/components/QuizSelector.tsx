@@ -1,9 +1,18 @@
-import { useState, useEffect, useMemo } from 'react';
+import {
+  useState,
+  useEffect,
+  useMemo,
+  useRef,
+  useCallback,
+  type MouseEvent,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Difficulty, Quiz } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
 import { HighScoreBadge } from './HighScoreBadge';
 import { Leaderboard } from './Leaderboard';
+import { WeeklyLeaders } from './WeeklyLeaders';
+import { DailyNudge } from './DailyNudge';
 import { getHighScore } from '../utils/highscore';
 import { fetchRemoteHighScore } from '../utils/highscoreApi';
 import { fetchQuizStats, type QuizStats } from '../utils/analyticsApi';
@@ -22,11 +31,12 @@ import {
 import {
   buildDuelQuiz,
   createDuelSeed,
+  duelQuizId,
   DUEL_QUESTION_COUNT,
 } from '../utils/duel';
 import { getDisplayDailyStreak } from '../utils/dailyStreak';
 import { AchievementsPanel } from './AchievementsPanel';
-import { quizShareUrl } from '../utils/share';
+import { socialShareUrl } from '../utils/share';
 
 interface QuizSelectorProps {
   quizzes: Quiz[];
@@ -70,8 +80,46 @@ export function QuizSelector({
   const [leaderboardQuizId, setLeaderboardQuizId] = useState<string | undefined>(undefined);
   const [playCounts, setPlayCounts] = useState<Map<string, number>>(new Map());
   const [difficultyFilter, setDifficultyFilter] = useState<Difficulty | 'all'>('all');
+  const [dailyLinkCopied, setDailyLinkCopied] = useState(false);
   const [duelLinkCopied, setDuelLinkCopied] = useState(false);
   const dailyStreak = getDisplayDailyStreak();
+  const leaderboardSectionRef = useRef<HTMLDivElement>(null);
+  const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
+
+  const flashCopied = useCallback(
+    (setter: (v: boolean) => void) => {
+      setter(true);
+      window.setTimeout(() => setter(false), 2500);
+    },
+    []
+  );
+
+  const handleCopyDailyLink = async (event: MouseEvent) => {
+    event.stopPropagation();
+    event.preventDefault();
+    try {
+      await navigator.clipboard.writeText(
+        socialShareUrl(getDailyQuizId(), { lang: langCode })
+      );
+      flashCopied(setDailyLinkCopied);
+    } catch {
+      // ignore
+    }
+  };
+
+  const handleCopyDuelLink = async (event: MouseEvent) => {
+    event.stopPropagation();
+    event.preventDefault();
+    const id = duelQuizId(createDuelSeed());
+    try {
+      await navigator.clipboard.writeText(
+        socialShareUrl(id, { lang: langCode })
+      );
+      flashCopied(setDuelLinkCopied);
+    } catch {
+      // ignore
+    }
+  };
 
   const visibleQuizzes = useMemo(
     () => filterQuizzesByDifficulty(quizzes, difficultyFilter),
@@ -155,18 +203,17 @@ export function QuizSelector({
     handleStartQuiz(buildDifficultyMix(quizzes, difficultyFilter));
   };
 
-  const handleStartDuel = async () => {
+  const handleStartDuel = () => {
     if (quizzes.length === 0) return;
     const seed = createDuelSeed();
-    const duel = buildDuelQuiz(quizzes, seed);
-    try {
-      await navigator.clipboard.writeText(quizShareUrl(duel.id));
-      setDuelLinkCopied(true);
-      window.setTimeout(() => setDuelLinkCopied(false), 2500);
-    } catch {
-      // ignore — quiz still starts
-    }
-    handleStartQuiz(duel);
+    handleStartQuiz(buildDuelQuiz(quizzes, seed));
+  };
+
+  const scrollToLeaderboard = () => {
+    leaderboardSectionRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   };
 
   return (
@@ -231,6 +278,16 @@ export function QuizSelector({
         )}
       </div>
 
+      <DailyNudge onPlayDaily={handleStartDaily} />
+
+      {difficultyFilter === 'all' && (
+        <WeeklyLeaders
+          quizzes={quizzes}
+          refreshToken={leaderboardRefreshToken}
+          onSeeAll={scrollToLeaderboard}
+        />
+      )}
+
       <div className="difficulty-filter" role="group" aria-label={t('home.difficultyFilter')}>
         {(['all', 'easy', 'medium', 'hard'] as const).map((level) => (
           <button
@@ -257,7 +314,7 @@ export function QuizSelector({
 
       <ul className="quiz-list">
         {quizzes.length > 0 && difficultyFilter === 'all' && (
-          <li>
+          <li className="quiz-card-with-copy">
             <button
               type="button"
               className="quiz-card quiz-card--daily"
@@ -271,7 +328,11 @@ export function QuizSelector({
               </span>
               <div className="quiz-card__body">
                 <h3 className="quiz-card__title">{t('home.dailyChallenge')}</h3>
-                <p className="quiz-card__desc">{t('home.dailyChallengeDesc')}</p>
+                <p className="quiz-card__desc">
+                  {dailyLinkCopied
+                    ? t('home.linkCopied')
+                    : t('home.dailyChallengeDesc')}
+                </p>
               </div>
               <div className="quiz-card__footer">
                 <div className="quiz-card__meta">
@@ -291,14 +352,23 @@ export function QuizSelector({
                 </span>
               </div>
             </button>
+            <button
+              type="button"
+              className="quiz-card-copy-btn"
+              onClick={(e) => void handleCopyDailyLink(e)}
+              aria-label={t('home.copyDailyLink')}
+              title={t('home.copyDailyLink')}
+            >
+              {dailyLinkCopied ? '✓' : '🔗'}
+            </button>
           </li>
         )}
         {quizzes.length > 0 && difficultyFilter === 'all' && (
-          <li>
+          <li className="quiz-card-with-copy">
             <button
               type="button"
               className="quiz-card quiz-card--duel"
-              onClick={() => void handleStartDuel()}
+              onClick={handleStartDuel}
               onMouseEnter={onPrefetchQuiz}
               onFocus={onPrefetchQuiz}
               aria-label={t('home.duel')}
@@ -309,7 +379,7 @@ export function QuizSelector({
               <div className="quiz-card__body">
                 <h3 className="quiz-card__title">{t('home.duel')}</h3>
                 <p className="quiz-card__desc">
-                  {duelLinkCopied ? t('home.duelLinkCopied') : t('home.duelDesc')}
+                  {duelLinkCopied ? t('home.linkCopied') : t('home.duelDesc')}
                 </p>
               </div>
               <div className="quiz-card__footer">
@@ -323,6 +393,15 @@ export function QuizSelector({
                   <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
                 </span>
               </div>
+            </button>
+            <button
+              type="button"
+              className="quiz-card-copy-btn"
+              onClick={(e) => void handleCopyDuelLink(e)}
+              aria-label={t('home.copyDuelLink')}
+              title={t('home.copyDuelLink')}
+            >
+              {duelLinkCopied ? '✓' : '🔗'}
             </button>
           </li>
         )}
@@ -412,7 +491,7 @@ export function QuizSelector({
 
       <AchievementsPanel />
 
-      <div className="leaderboard-section">
+      <div className="leaderboard-section" ref={leaderboardSectionRef} id="leaderboard">
         <select
           className="setting-select"
           value={leaderboardQuizId ?? ''}
@@ -432,6 +511,7 @@ export function QuizSelector({
           limit={20}
           quizzes={quizzes}
           refreshToken={leaderboardRefreshToken}
+          defaultPeriod="week"
         />
       </div>
     </section>
