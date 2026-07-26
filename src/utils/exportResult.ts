@@ -154,16 +154,14 @@ export async function exportResultAsImage(
     statsY
   );
 
-  let nextY = statsY + 48;
   if (result.isNewHighScore) {
     ctx.font = '700 24px system-ui, -apple-system, sans-serif';
     ctx.fillStyle = COLORS.pink;
     ctx.fillText(
       isFr ? '★ Nouveau record !' : '★ New high score!',
       cx,
-      nextY
+      statsY + 48
     );
-    nextY += 48;
   }
 
   // Challenge hook
