@@ -44,6 +44,7 @@ if (typeof globalThis.localStorage === 'undefined' || !globalThis.localStorage) 
 Object.defineProperty(navigator, 'share', {
   value: () => Promise.resolve(),
   writable: true,
+  configurable: true,
 });
 
 // Mock matchMedia

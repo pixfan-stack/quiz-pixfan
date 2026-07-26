@@ -73,7 +73,13 @@
     "message_ok": "Pas mal — réessayez pour faire mieux !",
     "message_low": "Continuez d'apprendre — vous ferez mieux la prochaine fois !",
     "shareTitle": "Partager mon score",
+    "sharePrimary": "Partager mon score",
+    "shareAlso": "Ou partager sur…",
+    "challengeFriend": "Défier un ami",
+    "challengeLinkCopied": "Lien du duel copié — à envoyer !",
+    "sendDuelLink": "Envoyer le lien du duel",
     "exportImage": "Exporter en image",
+    "exportStory": "Image Stories (9:16)",
     "retry": "Réessayer",
     "backHome": "Retour aux quiz",
     "share_twitter": "Partager sur X",
@@ -102,8 +108,11 @@
     "reviewTimedOut": "Temps écoulé"
   },
   "share": {
-    "text": "J'ai obtenu {{score}}/{{total}} ({{percent}} %) au quiz « {{quizTitle}} » ! Peux-tu battre mon score ?",
-    "hashtags": "quiz,defi"
+    "text": "J'ai fait {{percent}} % ({{score}}/{{total}}) sur « {{quizTitle}} » — Quiz PixFan. Tu peux faire mieux ?",
+    "textDuel": "Duel PixFan : {{percent}} % ({{score}}/{{total}}). Mêmes 10 questions — à toi de jouer !",
+    "textDaily": "Défi du jour PixFan : {{percent}} % ! Tu releves le défi ?",
+    "textChallenge": "Défie-moi sur Quiz PixFan — mêmes 10 questions. J'ai fait {{percent}} % !",
+    "hashtags": "quiz,photo,defi"
   },
   "highscore": {
     "label": "Record",
