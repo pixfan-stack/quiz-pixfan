@@ -73,7 +73,13 @@
     "message_ok": "Not bad — try again to improve!",
     "message_low": "Keep learning — you'll do better next time!",
     "shareTitle": "Share your score",
+    "sharePrimary": "Share my score",
+    "shareAlso": "Or share on…",
+    "challengeFriend": "Challenge a friend",
+    "challengeLinkCopied": "Duel link copied — send it!",
+    "sendDuelLink": "Send duel link",
     "exportImage": "Export as image",
+    "exportStory": "Stories image (9:16)",
     "retry": "Try again",
     "backHome": "Back to quizzes",
     "share_twitter": "Share on X",
@@ -102,8 +108,11 @@
     "reviewTimedOut": "Timed out"
   },
   "share": {
-    "text": "I scored {{score}}/{{total}} ({{percent}}%) on \"{{quizTitle}}\"! Can you beat my score?",
-    "hashtags": "quiz,challenge"
+    "text": "I scored {{percent}}% ({{score}}/{{total}}) on \"{{quizTitle}}\" — Quiz PixFan. Can you beat me?",
+    "textDuel": "PixFan duel: {{percent}}% ({{score}}/{{total}}). Same 10 questions — your turn!",
+    "textDaily": "PixFan daily challenge: {{percent}}%! Think you can top that?",
+    "textChallenge": "Challenge me on Quiz PixFan — same 10 questions. I scored {{percent}}%!",
+    "hashtags": "quiz,photography,challenge"
   },
   "highscore": {
     "label": "Best",

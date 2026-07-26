@@ -12,6 +12,8 @@ interface QuizScreenProps {
   onScoreSubmitted?: () => void;
   /** Category quiz ids for achievement checks. */
   categoryQuizIds?: string[];
+  /** Full catalog for “challenge a friend” duels from results. */
+  quizzes?: Quiz[];
 }
 
 /**
@@ -25,6 +27,7 @@ export default function QuizScreen({
   antiCheat = false,
   onScoreSubmitted,
   categoryQuizIds = [],
+  quizzes = [],
 }: QuizScreenProps) {
   const { t } = useTranslation();
   const engine = useQuizEngine(quiz, { timePerQuestion, antiCheat });
@@ -38,6 +41,7 @@ export default function QuizScreen({
         onHome={onHome}
         onScoreSubmitted={onScoreSubmitted}
         categoryQuizIds={categoryQuizIds}
+        quizzes={quizzes}
       />
     );
   }

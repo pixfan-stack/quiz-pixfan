@@ -223,6 +223,7 @@ export default function App() {
                 antiCheat={settings.antiCheat}
                 onScoreSubmitted={handleScoreSubmitted}
                 categoryQuizIds={quizzes.map((q) => q.id)}
+                quizzes={quizzes}
               />
             </Suspense>
           )}

@@ -6,7 +6,16 @@ import {
   getPerformanceMessageKey,
   getResultBadgeKey,
 } from '../utils/scoring';
-import { openShare, quizShareUrl, type SharePlatform } from '../utils/share';
+import {
+  canNativeShare,
+  copySharePayload,
+  nativeShareScore,
+  openShare,
+  quizShareUrl,
+  resolveShareKind,
+  shareTextKey,
+  type SharePlatform,
+} from '../utils/share';
 import { submitRemoteHighScore } from '../utils/highscoreApi';
 import { trackQuizAttempt } from '../utils/analyticsApi';
 import { getPlayerId, resolveDisplayNameForSubmit } from '../utils/player';
@@ -15,6 +24,7 @@ import {
   exportResultAsImage,
   downloadResultImage,
   shareResultImage,
+  type ExportImageFormat,
 } from '../utils/exportResult';
 import { Leaderboard } from './Leaderboard';
 import { MistakesReview } from './MistakesReview';
@@ -26,7 +36,11 @@ import {
   unlockAchievements,
   type AchievementId,
 } from '../utils/achievements';
-import { isDuelQuizId } from '../utils/duel';
+import {
+  buildDuelQuiz,
+  createDuelSeed,
+  isDuelQuizId,
+} from '../utils/duel';
 
 interface ResultScreenProps {
   quiz: Quiz;
@@ -36,6 +50,8 @@ interface ResultScreenProps {
   onScoreSubmitted?: () => void;
   /** Category quiz ids for explorer / expert-trio achievements. */
   categoryQuizIds?: string[];
+  /** Full quiz catalog — needed to create a friend duel from results. */
+  quizzes?: Quiz[];
 }
 
 const SHARE_PLATFORMS: {
@@ -80,37 +96,59 @@ export function ResultScreen({
   onHome,
   onScoreSubmitted,
   categoryQuizIds = [],
+  quizzes = [],
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
+  const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
   const quizTitle = pickLocale(quiz.title, lang);
   const messageKey = getPerformanceMessageKey(result.percentage);
   const badgeKey = getResultBadgeKey(result.percentage);
   const shareUrl = quizShareUrl(result.quizId);
   const isDuel = isDuelQuizId(result.quizId);
+  const shareKind = resolveShareKind(result.quizId);
 
   const displayName = resolveDisplayNameForSubmit(lang);
   const [leaderboardRefresh, setLeaderboardRefresh] = useState(0);
   const [linkCopied, setLinkCopied] = useState(false);
+  const [challengeCopied, setChallengeCopied] = useState(false);
+  const [shareFallbackCopied, setShareFallbackCopied] = useState(false);
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [dailyStreak, setDailyStreak] = useState(0);
 
-  const shareText = t('share.text', {
+  const shareText = t(shareTextKey(shareKind), {
     score: result.correctCount,
     total: result.totalQuestions,
     percent: result.percentage,
     quizTitle,
   });
+  const shareHashtags = t('share.hashtags');
 
-  const handleShare = (platform: SharePlatform) => {
-    openShare(platform, {
+  const buildScorePayload = useCallback(
+    () => ({
       text: shareText,
       url: shareUrl,
-      hashtags: t('share.hashtags'),
-    });
+      hashtags: shareHashtags,
+    }),
+    [shareText, shareUrl, shareHashtags]
+  );
+
+  const handleShare = (platform: SharePlatform) => {
+    openShare(platform, buildScorePayload());
   };
 
-  const handleCopyLink = useCallback(async () => {
+  const handleNativeShare = useCallback(async () => {
+    const payload = buildScorePayload();
+    const outcome = await nativeShareScore(payload, t('app.title'));
+    if (outcome === 'shared' || outcome === 'aborted') return;
+    const ok = await copySharePayload(payload);
+    if (ok) {
+      setShareFallbackCopied(true);
+      window.setTimeout(() => setShareFallbackCopied(false), 2000);
+    }
+  }, [buildScorePayload, t]);
+
+  const handleCopyDuelLink = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(shareUrl);
       setLinkCopied(true);
@@ -118,7 +156,63 @@ export function ResultScreen({
     } catch {
       // ignore
     }
-  }, [shareUrl]);
+    // Prefer native share of the duel challenge
+    if (canNativeShare()) {
+      await nativeShareScore(
+        {
+          text: t(shareTextKey('duel'), {
+            score: result.correctCount,
+            total: result.totalQuestions,
+            percent: result.percentage,
+            quizTitle,
+          }),
+          url: shareUrl,
+        },
+        t('app.title')
+      );
+    }
+  }, [
+    shareUrl,
+    t,
+    result.correctCount,
+    result.totalQuestions,
+    result.percentage,
+    quizTitle,
+  ]);
+
+  const handleChallengeFriend = useCallback(async () => {
+    if (quizzes.length === 0) return;
+    const seed = createDuelSeed();
+    const duel = buildDuelQuiz(quizzes, seed);
+    const url = quizShareUrl(duel.id);
+    const text = t(shareTextKey('challenge'), {
+      score: result.correctCount,
+      total: result.totalQuestions,
+      percent: result.percentage,
+      quizTitle,
+    });
+    const payload = { text, url, hashtags: t('share.hashtags') };
+
+    try {
+      await navigator.clipboard.writeText(url);
+      setChallengeCopied(true);
+      window.setTimeout(() => setChallengeCopied(false), 2500);
+    } catch {
+      // ignore
+    }
+
+    const outcome = await nativeShareScore(payload, t('app.title'));
+    if (outcome === 'unavailable') {
+      openShare('whatsapp', payload);
+    }
+  }, [
+    quizzes,
+    t,
+    result.correctCount,
+    result.totalQuestions,
+    result.percentage,
+    quizTitle,
+  ]);
 
   // Daily streak + achievements (local)
   useEffect(() => {
@@ -172,30 +266,40 @@ export function ResultScreen({
     }
   }, [result.percentage, hasFired, fire]);
 
-  // Export result as image
-  const handleExportImage = useCallback(async () => {
-    try {
-      const blob = await exportResultAsImage(result, quiz, lang as 'en' | 'fr');
-      // Try native share first
-      const shared = await shareResultImage(blob, quizTitle, lang as 'en' | 'fr');
-      if (!shared) {
-        // Fallback to download
-        downloadResultImage(blob, quiz.id);
+  const handleExportImage = useCallback(
+    async (format: ExportImageFormat) => {
+      try {
+        const blob = await exportResultAsImage(result, quiz, langCode, format);
+        const payload = buildScorePayload();
+        const shared = await shareResultImage(blob, {
+          title: t('app.title'),
+          text: payload.text,
+          url: payload.url,
+          fileName: `quiz-pixfan-${format}.png`,
+        });
+        if (!shared) {
+          downloadResultImage(blob, quiz.id, format);
+        }
+      } catch {
+        // Silently fail — not critical
       }
-    } catch {
-      // Silently fail — not critical
-    }
-  }, [result, quiz, lang, quizTitle]);
+    },
+    [result, quiz, langCode, t, buildScorePayload]
+  );
 
   return (
     <>
-      {/* Confetti canvas overlay */}
       {isAnimating && (
         <canvas
           ref={canvasRef}
           className="confetti-canvas"
           aria-hidden="true"
-          style={{ position: 'fixed', inset: 0, zIndex: 9999, pointerEvents: 'none' }}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            pointerEvents: 'none',
+          }}
         />
       )}
 
@@ -208,7 +312,9 @@ export function ResultScreen({
               className="result-ring"
               style={{ '--p': result.percentage } as CSSProperties}
               role="img"
-              aria-label={t('result.percentage', { percent: result.percentage })}
+              aria-label={t('result.percentage', {
+                percent: result.percentage,
+              })}
             >
               <div className="result-ring__value">
                 {result.percentage}
@@ -238,19 +344,35 @@ export function ResultScreen({
 
           {result.tabSwitchPenalty != null && result.tabSwitchPenalty > 0 && (
             <p className="result-anticheat-notice" role="status">
-              {t('result.antiCheatPenalty', { count: result.tabSwitchPenalty })}
+              {t('result.antiCheatPenalty', {
+                count: result.tabSwitchPenalty,
+              })}
             </p>
           )}
 
-          <div className="result-stats" role="group" aria-label={t('result.statsLabel')}>
+          <div
+            className="result-stats"
+            role="group"
+            aria-label={t('result.statsLabel')}
+          >
             <div className="result-stat">
-              <span className="result-stat__icon" aria-hidden="true">⏱</span>
-              <span className="result-stat__label">{t('result.timeLabel')}</span>
-              <span className="result-stat__value">{result.timeTakenSeconds}s</span>
+              <span className="result-stat__icon" aria-hidden="true">
+                ⏱
+              </span>
+              <span className="result-stat__label">
+                {t('result.timeLabel')}
+              </span>
+              <span className="result-stat__value">
+                {result.timeTakenSeconds}s
+              </span>
             </div>
             <div className="result-stat">
-              <span className="result-stat__icon" aria-hidden="true">🔥</span>
-              <span className="result-stat__label">{t('result.streakLabel')}</span>
+              <span className="result-stat__icon" aria-hidden="true">
+                🔥
+              </span>
+              <span className="result-stat__label">
+                {t('result.streakLabel')}
+              </span>
               <span className="result-stat__value">{result.maxStreak}</span>
             </div>
           </div>
@@ -283,35 +405,95 @@ export function ResultScreen({
 
           <MistakesReview mistakes={result.mistakes ?? []} />
 
-          <PixfanCta quizId={result.quizId} percentage={result.percentage} />
-
-          <div className="export-section">
-            <button
-              type="button"
-              className="btn btn--ghost btn--block"
-              onClick={handleExportImage}
-            >
-              <span className="btn__icon" aria-hidden="true">📸</span>
-              {t('result.exportImage')}
-            </button>
-            <button
-              type="button"
-              className="btn btn--ghost btn--block"
-              onClick={handleCopyLink}
-            >
-              <span className="btn__icon" aria-hidden="true">
-                {isDuel ? '⚔️' : '🔗'}
-              </span>
-              {linkCopied
-                ? t('result.linkCopied')
-                : isDuel
-                  ? t('result.copyDuelLink')
-                  : t('result.copyLink')}
-            </button>
-          </div>
-
           <div className="share-section">
             <h3 className="share-section__title">{t('result.shareTitle')}</h3>
+
+            <div className="share-primary">
+              {isDuel ? (
+                <>
+                  <button
+                    type="button"
+                    className="btn btn--primary btn--block"
+                    onClick={() => void handleCopyDuelLink()}
+                  >
+                    <span className="btn__icon" aria-hidden="true">
+                      ⚔️
+                    </span>
+                    {linkCopied
+                      ? t('result.linkCopied')
+                      : t('result.sendDuelLink')}
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn--secondary btn--block"
+                    onClick={() => void handleNativeShare()}
+                  >
+                    <span className="btn__icon" aria-hidden="true">
+                      ↗
+                    </span>
+                    {shareFallbackCopied
+                      ? t('result.linkCopied')
+                      : t('result.sharePrimary')}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    type="button"
+                    className="btn btn--primary btn--block"
+                    onClick={() => void handleNativeShare()}
+                  >
+                    <span className="btn__icon" aria-hidden="true">
+                      ↗
+                    </span>
+                    {shareFallbackCopied
+                      ? t('result.linkCopied')
+                      : t('result.sharePrimary')}
+                  </button>
+                  {quizzes.length > 0 && (
+                    <button
+                      type="button"
+                      className="btn btn--secondary btn--block"
+                      onClick={() => void handleChallengeFriend()}
+                    >
+                      <span className="btn__icon" aria-hidden="true">
+                        ⚔️
+                      </span>
+                      {challengeCopied
+                        ? t('result.challengeLinkCopied')
+                        : t('result.challengeFriend')}
+                    </button>
+                  )}
+                </>
+              )}
+            </div>
+
+            <div className="export-section">
+              <button
+                type="button"
+                className="btn btn--ghost btn--block"
+                onClick={() => void handleExportImage('square')}
+              >
+                <span className="btn__icon" aria-hidden="true">
+                  📸
+                </span>
+                {t('result.exportImage')}
+              </button>
+              <button
+                type="button"
+                className="btn btn--ghost btn--block"
+                onClick={() => void handleExportImage('story')}
+              >
+                <span className="btn__icon" aria-hidden="true">
+                  ▢
+                </span>
+                {t('result.exportStory')}
+              </button>
+            </div>
+
+            <p className="share-section__platforms-label">
+              {t('result.shareAlso')}
+            </p>
             <div className="share-grid">
               {SHARE_PLATFORMS.map((p) => (
                 <button
@@ -320,12 +502,16 @@ export function ResultScreen({
                   className={`btn share-btn ${p.className}`}
                   onClick={() => handleShare(p.id)}
                 >
-                  <span className="btn__icon" aria-hidden="true">{p.icon}</span>
+                  <span className="btn__icon" aria-hidden="true">
+                    {p.icon}
+                  </span>
                   {t(p.labelKey)}
                 </button>
               ))}
             </div>
           </div>
+
+          <PixfanCta quizId={result.quizId} percentage={result.percentage} />
 
           <Leaderboard
             quizId={result.quizId}
@@ -338,7 +524,11 @@ export function ResultScreen({
             <button type="button" className="btn btn--primary" onClick={onRetry}>
               {t('result.retry')}
             </button>
-            <button type="button" className="btn btn--secondary" onClick={onHome}>
+            <button
+              type="button"
+              className="btn btn--secondary"
+              onClick={onHome}
+            >
               {t('result.backHome')}
             </button>
           </div>
