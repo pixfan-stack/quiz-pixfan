@@ -14,12 +14,31 @@ test.describe('Homepage', () => {
     await expect(page.locator('.quiz-card--duel')).toBeVisible();
     await expect(page.locator('.quiz-card--random')).toBeVisible();
     await expect(page.locator('.difficulty-filter')).toBeVisible();
+    await expect(page.locator('.weekly-leaders')).toBeVisible();
     await expect(page.locator('.achievements')).toBeVisible();
     await expect(
       page.locator(
         '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
       )
     ).toHaveCount(9);
+  });
+
+  test('copies daily and duel links without starting a quiz', async ({
+    page,
+    context,
+  }) => {
+    await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+    await page.locator('.quiz-card-with-copy .quiz-card-copy-btn').first().click();
+    await expect(page.locator('.quiz-card--daily .quiz-card__desc')).toContainText(
+      /copié|copied/i
+    );
+    await expect(page.locator('.question-text')).toHaveCount(0);
+
+    await page.locator('.quiz-card-with-copy .quiz-card-copy-btn').nth(1).click();
+    await expect(page.locator('.quiz-card--duel .quiz-card__desc')).toContainText(
+      /copié|copied/i
+    );
+    await expect(page.locator('.question-text')).toHaveCount(0);
   });
 
 

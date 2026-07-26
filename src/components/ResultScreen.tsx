@@ -11,11 +11,17 @@ import {
   copySharePayload,
   nativeShareScore,
   openShare,
-  quizShareUrl,
+  socialShareUrl,
   resolveShareKind,
   shareTextKey,
   type SharePlatform,
 } from '../utils/share';
+import {
+  dismissResultReengage,
+  markQuizPlayed,
+  shouldShowResultReengage,
+} from '../utils/reengage';
+import { getDailyQuizId } from '../utils/dailyChallenge';
 import { submitRemoteHighScore } from '../utils/highscoreApi';
 import { trackQuizAttempt } from '../utils/analyticsApi';
 import { getPlayerId, resolveDisplayNameForSubmit } from '../utils/player';
@@ -104,9 +110,12 @@ export function ResultScreen({
   const quizTitle = pickLocale(quiz.title, lang);
   const messageKey = getPerformanceMessageKey(result.percentage);
   const badgeKey = getResultBadgeKey(result.percentage);
-  const shareUrl = quizShareUrl(result.quizId);
   const isDuel = isDuelQuizId(result.quizId);
   const shareKind = resolveShareKind(result.quizId);
+  const shareUrl = socialShareUrl(result.quizId, {
+    score: result.percentage,
+    lang: langCode,
+  });
 
   const displayName = resolveDisplayNameForSubmit(lang);
   const [leaderboardRefresh, setLeaderboardRefresh] = useState(0);
@@ -115,6 +124,9 @@ export function ResultScreen({
   const [shareFallbackCopied, setShareFallbackCopied] = useState(false);
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [dailyStreak, setDailyStreak] = useState(0);
+  const [showReengage, setShowReengage] = useState(() =>
+    shouldShowResultReengage(result.quizId)
+  );
 
   const shareText = t(shareTextKey(shareKind), {
     score: result.correctCount,
@@ -184,7 +196,10 @@ export function ResultScreen({
     if (quizzes.length === 0) return;
     const seed = createDuelSeed();
     const duel = buildDuelQuiz(quizzes, seed);
-    const url = quizShareUrl(duel.id);
+    const url = socialShareUrl(duel.id, {
+      score: result.percentage,
+      lang: langCode,
+    });
     const text = t(shareTextKey('challenge'), {
       score: result.correctCount,
       total: result.totalQuestions,
@@ -212,10 +227,12 @@ export function ResultScreen({
     result.totalQuestions,
     result.percentage,
     quizTitle,
+    langCode,
   ]);
 
   // Daily streak + achievements (local)
   useEffect(() => {
+    markQuizPlayed();
     const streakState = recordDailyCompletion(result.quizId);
     setDailyStreak(streakState.currentStreak);
     const newly = unlockAchievements({
@@ -400,6 +417,47 @@ export function ResultScreen({
                 {t('result.newAchievements')}
               </p>
               <AchievementsPanel highlightIds={newAchievements} compact />
+            </div>
+          )}
+
+          {showReengage && (
+            <div className="reengage-banner" role="status">
+              <div className="reengage-banner__body">
+                <p className="reengage-banner__title">
+                  {t('result.reengageTitle')}
+                </p>
+                <p className="reengage-banner__desc">
+                  {t('result.reengageDesc')}
+                </p>
+              </div>
+              <div className="reengage-banner__actions">
+                <button
+                  type="button"
+                  className="btn btn--primary btn--small"
+                  onClick={() => {
+                    dismissResultReengage();
+                    setShowReengage(false);
+                    void navigator.clipboard
+                      .writeText(
+                        socialShareUrl(getDailyQuizId(), { lang: langCode })
+                      )
+                      .catch(() => {});
+                    onHome();
+                  }}
+                >
+                  {t('result.reengageCta')}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn--ghost btn--small"
+                  onClick={() => {
+                    dismissResultReengage();
+                    setShowReengage(false);
+                  }}
+                >
+                  {t('result.reengageDismiss')}
+                </button>
+              </div>
             </div>
           )}
 

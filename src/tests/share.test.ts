@@ -4,9 +4,11 @@ import {
   canNativeShare,
   copySharePayload,
   nativeShareScore,
+  ogImageUrl,
   quizShareUrl,
   resolveShareKind,
   shareTextKey,
+  socialShareUrl,
 } from '../utils/share';
 
 describe('share', () => {
@@ -17,6 +19,17 @@ describe('share', () => {
   it('builds quiz deep links', () => {
     expect(quizShareUrl('composition')).toContain('#/quiz/composition');
     expect(quizShareUrl('duel-abcd2345')).toContain('duel-abcd2345');
+  });
+
+  it('builds crawlable social share and OG URLs', () => {
+    const share = socialShareUrl('composition', { score: 80, lang: 'fr' });
+    expect(share).toContain('/s/composition');
+    expect(share).toContain('score=80');
+    expect(share).toContain('lang=fr');
+    const og = ogImageUrl('duel-abcd2345', { score: 55, lang: 'en' });
+    expect(og).toContain('/api/og');
+    expect(og).toContain('quiz=duel-abcd2345');
+    expect(og).toContain('score=55');
   });
 
   it('resolves share kind from quiz id', () => {
