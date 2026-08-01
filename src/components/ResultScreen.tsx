@@ -53,6 +53,10 @@ import {
   msUntilNextDaily,
 } from '../utils/dailyChallenge';
 import { recordMistakes } from '../utils/mistakeVault';
+import {
+  buildDailyResultShareBlock,
+  formatResultShareGrid,
+} from '../utils/resultShareGrid';
 
 interface ResultScreenProps {
   quiz: Quiz;
@@ -148,7 +152,9 @@ export function ResultScreen({
   const [showReengage, setShowReengage] = useState(() =>
     shouldShowResultReengage(result.quizId)
   );
+  const [gridCopied, setGridCopied] = useState(false);
 
+  const shareGrid = formatResultShareGrid(result.answerMarks ?? []);
   const shareText = t(shareTextKey(shareKind), {
     score: result.correctCount,
     total: result.totalQuestions,
@@ -159,12 +165,36 @@ export function ResultScreen({
 
   const buildScorePayload = useCallback(
     () => ({
-      text: shareText,
+      text: shareGrid ? `${shareText}\n${shareGrid}` : shareText,
       url: shareUrl,
       hashtags: shareHashtags,
     }),
-    [shareText, shareUrl, shareHashtags]
+    [shareText, shareUrl, shareHashtags, shareGrid]
   );
+
+  const handleCopyDailyGrid = useCallback(async () => {
+    const dateLabel = result.quizId.replace(/^daily-/, '');
+    const block = buildDailyResultShareBlock({
+      dateLabel,
+      percent: result.percentage,
+      marks: result.answerMarks ?? [],
+      url: shareUrl,
+      lang: langCode,
+    });
+    try {
+      await navigator.clipboard.writeText(block);
+      setGridCopied(true);
+      window.setTimeout(() => setGridCopied(false), 2000);
+    } catch {
+      // ignore
+    }
+  }, [
+    langCode,
+    result.answerMarks,
+    result.percentage,
+    result.quizId,
+    shareUrl,
+  ]);
 
   const handleShare = (platform: SharePlatform) => {
     openShare(platform, buildScorePayload());
@@ -463,12 +493,28 @@ export function ResultScreen({
                   {t('result.dailyStreak', { count: dailyStreak })}
                 </p>
               )}
+              {shareGrid && (
+                <pre className="daily-ceremony__grid" aria-label={t('result.dailyGridLabel')}>
+                  {shareGrid}
+                </pre>
+              )}
               <p className="daily-ceremony__countdown">
                 {t('result.dailyCountdown', { time: dailyCountdown })}
               </p>
               <p className="daily-ceremony__hint">
                 {t('result.comeBackTomorrow')}
               </p>
+              {(result.answerMarks?.length ?? 0) > 0 && (
+                <button
+                  type="button"
+                  className="btn btn--secondary btn--small"
+                  onClick={() => void handleCopyDailyGrid()}
+                >
+                  {gridCopied
+                    ? t('result.dailyGridCopied')
+                    : t('result.copyDailyGrid')}
+                </button>
+              )}
             </div>
           )}
 

@@ -79,6 +79,8 @@ export interface QuizResult {
   tabSwitchPenalty?: number;
   /** Incorrect (or timed-out) answers for the review panel. */
   mistakes: AnswerReviewItem[];
+  /** Per-question correctness in play order (for share grids). */
+  answerMarks?: boolean[];
 }
 
 /** Local high-score record stored in localStorage. */

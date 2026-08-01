@@ -12,13 +12,14 @@ test.describe('Homepage', () => {
   test('displays category quiz cards, daily challenge, duel and random mix', async ({ page }) => {
     await expect(page.locator('.quiz-card--daily')).toBeVisible();
     await expect(page.locator('.quiz-card--duel')).toBeVisible();
+    await expect(page.locator('.quiz-card--photo')).toBeVisible();
     await expect(page.locator('.quiz-card--random')).toBeVisible();
     await expect(page.locator('.difficulty-filter')).toBeVisible();
     await expect(page.locator('.weekly-leaders')).toBeVisible();
     await expect(page.locator('.achievements')).toBeVisible();
     await expect(
       page.locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak)'
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
       )
     ).toHaveCount(9);
   });
@@ -59,7 +60,7 @@ test.describe('Homepage', () => {
   test('navigates to quiz when clicking a quiz card', async ({ page }) => {
     await page
       .locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak)'
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
       )
       .first()
       .click();
