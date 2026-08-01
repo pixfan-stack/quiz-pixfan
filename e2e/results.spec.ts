@@ -4,10 +4,10 @@ test.describe('Results Screen', () => {
   test('shows results after completing quiz', async ({ page }) => {
     await page.goto('/');
     
-    // Start first category quiz
+    // Start first category quiz (skip special packs)
     await page
       .locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
       )
       .first()
       .click();

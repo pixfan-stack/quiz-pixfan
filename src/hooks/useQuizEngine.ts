@@ -221,6 +221,7 @@ export function useQuizEngine(
           previousBest,
           tabSwitchPenalty: tabSwitchPenalty > 0 ? tabSwitchPenalty : undefined,
           mistakes: reviewLog.current.filter((item) => !item.wasCorrect),
+          answerMarks: reviewLog.current.map((item) => item.wasCorrect),
         };
 
         return { ...prev, phase: 'finished', result };

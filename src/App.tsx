@@ -29,6 +29,10 @@ import {
   buildWeakSpotsQuiz,
   isWeakSpotsQuizId,
 } from './utils/mistakeVault';
+import {
+  buildPhotoReadingQuiz,
+  isPhotoReadingQuizId,
+} from './utils/photoReading';
 import { APP_VERSION } from './version';
 
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
@@ -111,6 +115,12 @@ export default function App() {
 
     if (isWeakSpotsQuizId(quizId)) {
       const pack = buildWeakSpotsQuiz(quizzes);
+      if (pack) startQuiz(pack);
+      return;
+    }
+
+    if (isPhotoReadingQuizId(quizId)) {
+      const pack = buildPhotoReadingQuiz(quizzes);
       if (pack) startQuiz(pack);
       return;
     }

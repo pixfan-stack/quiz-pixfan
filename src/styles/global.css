@@ -1099,6 +1099,44 @@ a {
   background: color-mix(in srgb, #0d9488 7%, var(--color-surface));
 }
 
+.quiz-card--photo {
+  border-color: color-mix(in srgb, #2563eb 40%, var(--color-border));
+  background: color-mix(in srgb, #2563eb 7%, var(--color-surface));
+}
+
+.quiz-card__meta-chip--mastery.is-bronze {
+  color: #9a6234;
+  font-weight: 700;
+}
+
+.quiz-card__meta-chip--mastery.is-silver {
+  color: #5c6b7a;
+  font-weight: 700;
+}
+
+.quiz-card__meta-chip--mastery.is-gold {
+  color: #a67c00;
+  font-weight: 700;
+}
+
+.quiz-card__meta-chip--mastery.is-master {
+  color: var(--pixfan-pink);
+  font-weight: 700;
+}
+
+.daily-ceremony__grid {
+  margin: 0.65rem 0 0.35rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--color-surface-alt) 80%, transparent);
+  border: 1px solid var(--color-border);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  text-align: center;
+  white-space: pre;
+}
+
 .quiz-card--played {
   opacity: 0.96;
 }

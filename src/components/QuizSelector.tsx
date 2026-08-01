@@ -51,6 +51,13 @@ import {
   DUEL_QUESTION_COUNT,
 } from '../utils/duel';
 import { getDisplayDailyStreak } from '../utils/dailyStreak';
+import {
+  buildPhotoReadingQuiz,
+  getPhotoReadingTeaser,
+  PHOTO_READING_COUNT,
+  PHOTO_READING_ID,
+} from '../utils/photoReading';
+import { masteryLabelKey, masteryTierFromPercent } from '../utils/mastery';
 import { AchievementsPanel } from './AchievementsPanel';
 import { socialShareUrl } from '../utils/share';
 
@@ -110,6 +117,11 @@ export function QuizSelector({
     () => (quizzes.length > 0 ? getDailyPhotoTeaser(quizzes) : null),
     [quizzes]
   );
+  const photoTeaser = useMemo(
+    () => (quizzes.length > 0 ? getPhotoReadingTeaser(quizzes) : null),
+    [quizzes]
+  );
+  const photoPackAvailable = Boolean(photoTeaser);
   const leaderboardSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -247,6 +259,12 @@ export function QuizSelector({
   const handleStartDaily = () => {
     if (quizzes.length === 0) return;
     handleStartQuiz(buildDailyQuiz(quizzes));
+  };
+
+  const handleStartPhotoReading = () => {
+    if (quizzes.length === 0) return;
+    const pack = buildPhotoReadingQuiz(quizzes);
+    if (pack) handleStartQuiz(pack);
   };
 
   const handleStartDifficultyMix = () => {
@@ -544,6 +562,55 @@ export function QuizSelector({
             </button>
           </li>
         )}
+        {quizzes.length > 0 && difficultyFilter === 'all' && photoPackAvailable && (
+          <li>
+            <button
+              type="button"
+              className="quiz-card quiz-card--photo"
+              onClick={handleStartPhotoReading}
+              onMouseEnter={onPrefetchQuiz}
+              onFocus={onPrefetchQuiz}
+              aria-label={t('home.photoReading')}
+            >
+              {photoTeaser?.imageUrl ? (
+                <span className="quiz-card__teaser" aria-hidden="true">
+                  <img
+                    src={photoTeaser.imageUrl}
+                    alt=""
+                    className="quiz-card__teaser-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+              ) : (
+                <span className="quiz-card__icon" aria-hidden="true">
+                  🖼️
+                </span>
+              )}
+              <div className="quiz-card__body">
+                <h3 className="quiz-card__title">{t('home.photoReading')}</h3>
+                <p className="quiz-card__desc">{t('home.photoReadingDesc')}</p>
+              </div>
+              <div className="quiz-card__footer">
+                <div className="quiz-card__meta">
+                  <span className="quiz-card__meta-chip">
+                    {t('home.questionsCount', { count: PHOTO_READING_COUNT })}
+                  </span>
+                  <HighScoreBadge
+                    showEmpty
+                    bestScore={getBestScore(PHOTO_READING_ID)}
+                  />
+                </div>
+                <span className="quiz-card__cta">
+                  {t('home.start')}
+                  <span className="quiz-card__cta-arrow" aria-hidden="true">
+                    →
+                  </span>
+                </span>
+              </div>
+            </button>
+          </li>
+        )}
         {quizzes.length > 0 && difficultyFilter === 'all' && (
           <li>
             <button
@@ -585,6 +652,8 @@ export function QuizSelector({
           const bestScore = getBestScore(quiz.id);
           const plays = playCounts.get(quiz.id) ?? 0;
           const difficulty = deriveQuizDifficulty(quiz);
+          const mastery = masteryTierFromPercent(bestScore?.percentage);
+          const masteryKey = masteryLabelKey(mastery);
           return (
             <li key={quiz.id}>
               <button
@@ -610,6 +679,13 @@ export function QuizSelector({
                     <span className={`quiz-card__meta-chip quiz-card__meta-chip--difficulty is-${difficulty}`}>
                       {t(`home.difficulty_${difficulty}`)}
                     </span>
+                    {masteryKey && (
+                      <span
+                        className={`quiz-card__meta-chip quiz-card__meta-chip--mastery is-${mastery}`}
+                      >
+                        {t(masteryKey)}
+                      </span>
+                    )}
                     {plays > 0 && (
                       <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
                         {t('home.playsCount', { count: plays })}
