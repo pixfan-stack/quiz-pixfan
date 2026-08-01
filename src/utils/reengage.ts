@@ -27,7 +27,8 @@ export function markQuizPlayed(now = new Date()): void {
   }
 }
 
-function hasPlayedDailyToday(): boolean {
+/** True if today's daily challenge was already completed in this browser. */
+export function hasPlayedDailyToday(): boolean {
   const dailyId = getDailyQuizId();
   if (getHighScore(dailyId)) return true;
   const streak = getDailyStreak();

@@ -2,8 +2,10 @@ import { describe, it, expect } from 'vitest';
 import {
   buildDailyQuiz,
   DAILY_QUESTION_COUNT,
+  formatDailyCountdown,
   getDailyQuizId,
   isDailyQuizId,
+  msUntilNextDaily,
 } from '../utils/dailyChallenge';
 import type { Quiz } from '../types/quiz';
 
@@ -55,5 +57,13 @@ describe('dailyChallenge', () => {
     const a = buildDailyQuiz(miniQuizzes, new Date('2026-07-25T12:00:00Z'));
     const b = buildDailyQuiz(miniQuizzes, new Date('2026-07-26T12:00:00Z'));
     expect(a.id).not.toBe(b.id);
+  });
+
+  it('counts down to next UTC day', () => {
+    const now = new Date('2026-07-25T22:30:00Z');
+    const ms = msUntilNextDaily(now);
+    expect(ms).toBe(90 * 60 * 1000);
+    expect(formatDailyCountdown(ms, 'en')).toMatch(/1h/);
+    expect(formatDailyCountdown(ms, 'fr')).toMatch(/1 h/);
   });
 });

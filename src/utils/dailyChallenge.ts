@@ -15,6 +15,34 @@ export function isDailyQuizId(quizId: string): boolean {
   return /^daily-\d{4}-\d{2}-\d{2}$/.test(quizId);
 }
 
+/** Milliseconds until the next UTC midnight (next daily pack). */
+export function msUntilNextDaily(now = new Date()): number {
+  const next = Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate() + 1,
+    0,
+    0,
+    0,
+    0
+  );
+  return Math.max(0, next - now.getTime());
+}
+
+/** Compact countdown like `5h 12m` / `12m 05s`. */
+export function formatDailyCountdown(ms: number, lang: 'en' | 'fr' = 'en'): string {
+  const totalSec = Math.floor(ms / 1000);
+  const h = Math.floor(totalSec / 3600);
+  const m = Math.floor((totalSec % 3600) / 60);
+  const s = totalSec % 60;
+  if (h > 0) {
+    return lang === 'fr' ? `${h} h ${m} min` : `${h}h ${m}m`;
+  }
+  return lang === 'fr'
+    ? `${m} min ${String(s).padStart(2, '0')} s`
+    : `${m}m ${String(s).padStart(2, '0')}s`;
+}
+
 /** Same 10 questions for every player on a given UTC day. */
 export function buildDailyQuiz(quizzes: Quiz[], date = new Date()): Quiz {
   const quizId = getDailyQuizId(date);

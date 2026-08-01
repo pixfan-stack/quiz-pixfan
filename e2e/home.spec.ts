@@ -18,7 +18,7 @@ test.describe('Homepage', () => {
     await expect(page.locator('.achievements')).toBeVisible();
     await expect(
       page.locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak)'
       )
     ).toHaveCount(9);
   });
@@ -59,7 +59,7 @@ test.describe('Homepage', () => {
   test('navigates to quiz when clicking a quiz card', async ({ page }) => {
     await page
       .locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak)'
       )
       .first()
       .click();

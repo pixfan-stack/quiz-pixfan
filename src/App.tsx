@@ -22,8 +22,13 @@ import { isAdminEnabled, isAdminHash } from './utils/adminAuth';
 import {
   clearQuizHash,
   parseQuizIdFromHash,
+  parseScoreFromLocation,
   setQuizHash,
 } from './utils/routing';
+import {
+  buildWeakSpotsQuiz,
+  isWeakSpotsQuizId,
+} from './utils/mistakeVault';
 import { APP_VERSION } from './version';
 
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
@@ -55,6 +60,7 @@ export default function App() {
     antiCheat: false,
   });
   const [leaderboardRefreshToken, setLeaderboardRefreshToken] = useState(0);
+  const [targetScore, setTargetScore] = useState<number | null>(null);
   const { isDark, toggleDark } = useDarkMode();
 
   useEffect(() => {
@@ -67,11 +73,16 @@ export default function App() {
       .then((data) => setQuizzes((data as QuizzesData).quizzes));
   }, []);
 
-  const startQuiz = useCallback((quiz: Quiz) => {
-    setActiveQuiz(quiz);
-    setView('quiz');
-    setQuizHash(quiz.id);
-  }, []);
+  const startQuiz = useCallback(
+    (quiz: Quiz, opts?: { targetScore?: number | null }) => {
+      const score = opts?.targetScore ?? null;
+      setActiveQuiz(quiz);
+      setTargetScore(score);
+      setView('quiz');
+      setQuizHash(quiz.id, score != null ? { score } : undefined);
+    },
+    []
+  );
 
   const openAdmin = useCallback(() => {
     setActiveQuiz(null);
@@ -91,9 +102,16 @@ export default function App() {
     if (quizzes.length === 0) return;
     const quizId = parseQuizIdFromHash(window.location.hash);
     if (!quizId || view === 'quiz' || view === 'admin') return;
+    const scoreFromLink = parseScoreFromLocation();
 
     if (quizId === RANDOM_QUIZ_ID) {
       startQuiz(buildRandomQuiz(quizzes));
+      return;
+    }
+
+    if (isWeakSpotsQuizId(quizId)) {
+      const pack = buildWeakSpotsQuiz(quizzes);
+      if (pack) startQuiz(pack);
       return;
     }
 
@@ -113,14 +131,16 @@ export default function App() {
     if (isDuelQuizId(quizId)) {
       const seed = parseDuelSeed(quizId);
       if (seed) {
-        startQuiz(buildDuelQuiz(quizzes, seed));
+        startQuiz(buildDuelQuiz(quizzes, seed), {
+          targetScore: scoreFromLink,
+        });
       }
       return;
     }
 
     const found = quizzes.find((q) => q.id === quizId);
     if (found) {
-      startQuiz(found);
+      startQuiz(found, { targetScore: scoreFromLink });
     }
   }, [quizzes, startQuiz, view]);
 
@@ -147,6 +167,7 @@ export default function App() {
 
   const handleHome = () => {
     setActiveQuiz(null);
+    setTargetScore(null);
     setView('home');
     clearQuizHash();
     setLeaderboardRefreshToken((n) => n + 1);
@@ -224,6 +245,7 @@ export default function App() {
                 onScoreSubmitted={handleScoreSubmitted}
                 categoryQuizIds={quizzes.map((q) => q.id)}
                 quizzes={quizzes}
+                targetScore={targetScore}
               />
             </Suspense>
           )}

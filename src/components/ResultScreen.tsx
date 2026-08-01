@@ -47,6 +47,13 @@ import {
   createDuelSeed,
   isDuelQuizId,
 } from '../utils/duel';
+import { compareDuelScores } from '../utils/duelOutcome';
+import {
+  formatDailyCountdown,
+  isDailyQuizId,
+  msUntilNextDaily,
+} from '../utils/dailyChallenge';
+import { recordMistakes } from '../utils/mistakeVault';
 
 interface ResultScreenProps {
   quiz: Quiz;
@@ -58,6 +65,8 @@ interface ResultScreenProps {
   categoryQuizIds?: string[];
   /** Full quiz catalog — needed to create a friend duel from results. */
   quizzes?: Quiz[];
+  /** Challenger score to beat (shared duel). */
+  targetScore?: number | null;
 }
 
 const SHARE_PLATFORMS: {
@@ -103,6 +112,7 @@ export function ResultScreen({
   onScoreSubmitted,
   categoryQuizIds = [],
   quizzes = [],
+  targetScore = null,
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
@@ -111,6 +121,11 @@ export function ResultScreen({
   const messageKey = getPerformanceMessageKey(result.percentage);
   const badgeKey = getResultBadgeKey(result.percentage);
   const isDuel = isDuelQuizId(result.quizId);
+  const isDaily = isDailyQuizId(result.quizId);
+  const duelOutcome =
+    targetScore != null
+      ? compareDuelScores(result.percentage, targetScore)
+      : null;
   const shareKind = resolveShareKind(result.quizId);
   const shareUrl = socialShareUrl(result.quizId, {
     score: result.percentage,
@@ -124,6 +139,10 @@ export function ResultScreen({
   const [shareFallbackCopied, setShareFallbackCopied] = useState(false);
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [dailyStreak, setDailyStreak] = useState(0);
+  const [vaultSaved, setVaultSaved] = useState(0);
+  const [dailyCountdown, setDailyCountdown] = useState(() =>
+    formatDailyCountdown(msUntilNextDaily(), langCode)
+  );
   const [showReengage, setShowReengage] = useState(() =>
     shouldShowResultReengage(result.quizId)
   );
@@ -230,7 +249,7 @@ export function ResultScreen({
     langCode,
   ]);
 
-  // Daily streak + achievements (local)
+  // Daily streak + achievements + mistake vault (local)
   useEffect(() => {
     markQuizPlayed();
     const streakState = recordDailyCompletion(result.quizId);
@@ -243,7 +262,17 @@ export function ResultScreen({
       streak: streakState,
     });
     setNewAchievements(newly);
-  }, [result.quizId, result.percentage, categoryQuizIds]);
+    setVaultSaved(recordMistakes(result.mistakes ?? []));
+  }, [result.quizId, result.percentage, result.mistakes, categoryQuizIds]);
+
+  useEffect(() => {
+    if (!isDaily) return;
+    const tick = () =>
+      setDailyCountdown(formatDailyCountdown(msUntilNextDaily(), langCode));
+    tick();
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, [isDaily, langCode]);
 
   // Sync to Cloudflare D1 + analytics
   useEffect(() => {
@@ -405,9 +434,45 @@ export function ResultScreen({
             </div>
           )}
 
-          {dailyStreak > 0 && result.quizId.startsWith('daily-') && (
-            <p className="result-daily-streak" role="status">
-              {t('result.dailyStreak', { count: dailyStreak })}
+          {duelOutcome && targetScore != null && (
+            <div
+              className={`duel-outcome duel-outcome--${duelOutcome}`}
+              role="status"
+            >
+              <p className="duel-outcome__title">
+                {t(`result.duel_${duelOutcome}`)}
+              </p>
+              <p className="duel-outcome__detail">
+                {t('result.duelTarget', {
+                  yours: result.percentage,
+                  theirs: targetScore,
+                })}
+              </p>
+            </div>
+          )}
+
+          {isDaily && (
+            <div className="daily-ceremony" role="status">
+              <p className="daily-ceremony__title">
+                {t('result.dailyCeremonyTitle')}
+              </p>
+              {dailyStreak > 0 && (
+                <p className="result-daily-streak">
+                  {t('result.dailyStreak', { count: dailyStreak })}
+                </p>
+              )}
+              <p className="daily-ceremony__countdown">
+                {t('result.dailyCountdown', { time: dailyCountdown })}
+              </p>
+              <p className="daily-ceremony__hint">
+                {t('result.comeBackTomorrow')}
+              </p>
+            </div>
+          )}
+
+          {vaultSaved > 0 && (
+            <p className="result-vault-saved" role="status">
+              {t('result.vaultSaved', { count: vaultSaved })}
             </p>
           )}
 
@@ -580,7 +645,9 @@ export function ResultScreen({
 
           <div className="btn-row">
             <button type="button" className="btn btn--primary" onClick={onRetry}>
-              {t('result.retry')}
+              {isDuel || targetScore != null
+                ? t('result.rematch')
+                : t('result.retry')}
             </button>
             <button
               type="button"

@@ -51,7 +51,7 @@ describe('sharePreview', () => {
       appOrigin: 'https://quiz.pixfan.fr',
     });
     expect(html).toContain('og:image');
-    expect(html).toContain('/#/quiz/composition');
+    expect(html).toContain('/#/quiz/composition?score=80');
     expect(html).toContain('80 %');
   });
 });

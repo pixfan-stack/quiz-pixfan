@@ -1076,6 +1076,101 @@ a {
   background: color-mix(in srgb, #c45c26 7%, var(--color-surface));
 }
 
+.quiz-card--weak {
+  border-color: color-mix(in srgb, #0d9488 40%, var(--color-border));
+  background: color-mix(in srgb, #0d9488 7%, var(--color-surface));
+}
+
+.quiz-card--played {
+  opacity: 0.96;
+}
+
+.quiz-card__meta-chip--done {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.duel-target-banner {
+  max-width: var(--max-width);
+  margin: 0 auto 0.75rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, #c45c26 40%, var(--color-border));
+  background: color-mix(in srgb, #c45c26 10%, var(--color-surface));
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.duel-outcome {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.duel-outcome--win {
+  border-color: color-mix(in srgb, var(--color-success) 45%, var(--color-border));
+  background: var(--color-success-soft);
+}
+
+.duel-outcome--lose {
+  border-color: color-mix(in srgb, var(--color-danger) 35%, var(--color-border));
+  background: var(--color-danger-soft);
+}
+
+.duel-outcome--tie {
+  border-color: color-mix(in srgb, var(--pixfan-pink) 35%, var(--color-border));
+  background: color-mix(in srgb, var(--pixfan-pink) 8%, var(--color-surface));
+}
+
+.duel-outcome__title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.duel-outcome__detail {
+  margin: 0.25rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.daily-ceremony {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--pixfan-pink) 35%, var(--color-border));
+  background: color-mix(in srgb, var(--pixfan-pink) 8%, var(--color-surface));
+  text-align: center;
+}
+
+.daily-ceremony__title {
+  margin: 0;
+  font-weight: 800;
+}
+
+.daily-ceremony__countdown {
+  margin: 0.35rem 0 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.daily-ceremony__hint {
+  margin: 0.25rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.result-vault-saved {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0d9488;
+}
+
 .quiz-card-with-copy {
   position: relative;
 }
