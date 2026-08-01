@@ -2,21 +2,48 @@ import { describe, it, expect } from 'vitest';
 import questionsData from '../../public/data/questions.json';
 
 describe('questions.json', () => {
-  const data = questionsData as any;
+  const data = questionsData as {
+    quizzes: Array<{
+      id: string;
+      difficulty?: string;
+      title: { en: string; fr: string };
+      description: { en: string; fr: string };
+      questions: Array<{
+        id: string;
+        type: string;
+        difficulty?: string;
+        text: { en: string; fr: string };
+        answers: Array<{ id: string; text: { en: string; fr: string } }>;
+        correctAnswers: string[];
+      }>;
+    }>;
+  };
 
-  it('has exactly 9 quizzes', () => {
+  const EXPECTED_QUIZ_IDS = [
+    'exposure-basics',
+    'composition',
+    'light-color',
+    'gear-lenses',
+    'history-icons',
+    'genres',
+    'smartphone',
+    'photo-rights',
+    'retouching',
+  ] as const;
+
+  it('has exactly 9 category quizzes', () => {
     expect(data.quizzes.length).toBe(9);
   });
 
-  it('has exactly 20 questions per quiz', () => {
+  it('keeps at least 20 questions per quiz', () => {
     for (const quiz of data.quizzes) {
-      expect(quiz.questions.length).toBe(20);
+      expect(quiz.questions.length).toBeGreaterThanOrEqual(20);
     }
   });
 
-  it('has total of 180 questions', () => {
-    const total = data.quizzes.reduce((sum: number, q: any) => sum + q.questions.length, 0);
-    expect(total).toBe(180);
+  it('has at least 180 questions overall', () => {
+    const total = data.quizzes.reduce((sum, q) => sum + q.questions.length, 0);
+    expect(total).toBeGreaterThanOrEqual(180);
   });
 
   it('every quiz and question has a difficulty', () => {
@@ -57,7 +84,7 @@ describe('questions.json', () => {
   it('correct answers reference valid answer ids', () => {
     for (const quiz of data.quizzes) {
       for (const q of quiz.questions) {
-        const answerIds = q.answers.map((a: any) => a.id);
+        const answerIds = q.answers.map((a) => a.id);
         for (const ca of q.correctAnswers) {
           expect(answerIds).toContain(ca);
         }
@@ -66,9 +93,15 @@ describe('questions.json', () => {
   });
 
   it('quiz IDs are unique', () => {
-    const ids = data.quizzes.map((q: any) => q.id);
-    const unique = new Set(ids);
-    expect(unique.size).toBe(ids.length);
+    const ids = data.quizzes.map((q) => q.id);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it('question IDs are unique within each quiz', () => {
+    for (const quiz of data.quizzes) {
+      const ids = quiz.questions.map((q) => q.id);
+      expect(new Set(ids).size).toBe(ids.length);
+    }
   });
 
   it('all quizzes have localized title and description', () => {
@@ -100,58 +133,9 @@ describe('questions.json', () => {
     }
   });
 
-  it('exposure-basics quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'exposure-basics');
+  it.each(EXPECTED_QUIZ_IDS)('%s quiz exists with ≥20 questions', (id) => {
+    const quiz = data.quizzes.find((q) => q.id === id);
     expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('composition quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'composition');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('light-color quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'light-color');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('gear-lenses quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'gear-lenses');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('history-icons quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'history-icons');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('genres quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'genres');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('smartphone quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'smartphone');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('photo-rights quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'photo-rights');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
-  });
-
-  it('retouching quiz exists and has 20 questions', () => {
-    const quiz = data.quizzes.find((q: any) => q.id === 'retouching');
-    expect(quiz).toBeDefined();
-    expect(quiz?.questions.length).toBe(20);
+    expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
   });
 });
-
