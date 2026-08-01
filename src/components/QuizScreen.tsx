@@ -7,6 +7,8 @@ import { ResultScreen } from './ResultScreen';
 interface QuizScreenProps {
   quiz: Quiz;
   onHome: () => void;
+  /** Jump straight into today’s daily challenge (re-engage CTA). */
+  onPlayDaily?: () => void;
   timePerQuestion?: number;
   antiCheat?: boolean;
   onScoreSubmitted?: () => void;
@@ -25,6 +27,7 @@ interface QuizScreenProps {
 export default function QuizScreen({
   quiz,
   onHome,
+  onPlayDaily,
   timePerQuestion = 0,
   antiCheat = false,
   onScoreSubmitted,
@@ -42,6 +45,7 @@ export default function QuizScreen({
         result={engine.result}
         onRetry={engine.reset}
         onHome={onHome}
+        onPlayDaily={onPlayDaily}
         onScoreSubmitted={onScoreSubmitted}
         categoryQuizIds={categoryQuizIds}
         quizzes={quizzes}

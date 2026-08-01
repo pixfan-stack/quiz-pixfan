@@ -1,13 +1,17 @@
 import { describe, it, expect } from 'vitest';
 import {
   buildDailyQuiz,
+  DAILY_IMAGE_TARGET,
   DAILY_QUESTION_COUNT,
   formatDailyCountdown,
+  getDailyPhotoTeaser,
   getDailyQuizId,
   isDailyQuizId,
   msUntilNextDaily,
+  pickDailyQuestions,
 } from '../utils/dailyChallenge';
-import type { Quiz } from '../types/quiz';
+import type { Question, Quiz } from '../types/quiz';
+import { seededRandom } from '../utils/seededRandom';
 
 const miniQuizzes: Quiz[] = [
   {
@@ -20,6 +24,7 @@ const miniQuizzes: Quiz[] = [
       text: { en: `Q${i}`, fr: `Q${i}` },
       answers: [{ id: 'x', text: { en: 'X', fr: 'X' } }],
       correctAnswers: ['x'],
+      ...(i < 5 ? { imageUrl: `/img/a${i}.jpg` } : {}),
     })),
   },
   {
@@ -65,5 +70,37 @@ describe('dailyChallenge', () => {
     expect(ms).toBe(90 * 60 * 1000);
     expect(formatDailyCountdown(ms, 'en')).toMatch(/1h/);
     expect(formatDailyCountdown(ms, 'fr')).toMatch(/1 h/);
+  });
+
+  it('prefers illustrated questions up to the image target', () => {
+    const pool: Question[] = [
+      ...Array.from({ length: 6 }, (_, i) => ({
+        id: `img${i}`,
+        type: 'single' as const,
+        text: { en: `I${i}`, fr: `I${i}` },
+        answers: [{ id: 'x', text: { en: 'X', fr: 'X' } }],
+        correctAnswers: ['x'],
+        imageUrl: `/i${i}.jpg`,
+      })),
+      ...Array.from({ length: 10 }, (_, i) => ({
+        id: `txt${i}`,
+        type: 'single' as const,
+        text: { en: `T${i}`, fr: `T${i}` },
+        answers: [{ id: 'x', text: { en: 'X', fr: 'X' } }],
+        correctAnswers: ['x'],
+      })),
+    ];
+    const picked = pickDailyQuestions(pool, seededRandom(42));
+    const withImage = picked.filter((q) => q.imageUrl);
+    expect(withImage).toHaveLength(DAILY_IMAGE_TARGET);
+    expect(picked).toHaveLength(DAILY_QUESTION_COUNT);
+  });
+
+  it('exposes a photo teaser from the daily pack', () => {
+    const teaser = getDailyPhotoTeaser(
+      miniQuizzes,
+      new Date('2026-07-25T12:00:00Z')
+    );
+    expect(teaser?.imageUrl).toBeTruthy();
   });
 });

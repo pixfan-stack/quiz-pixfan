@@ -41,6 +41,7 @@ export function hasPlayedDailyToday(): boolean {
  */
 export function shouldShowResultReengage(quizId: string): boolean {
   if (quizId.startsWith('daily-')) return false;
+  if (hasPlayedDailyToday()) return false;
   try {
     if (localStorage.getItem(RESULT_NUDGE_KEY) === utcDayKey()) return false;
   } catch {

@@ -2,6 +2,8 @@ import type { Question, Quiz } from '../types/quiz';
 import { hashSeed, seededRandom, seededShuffle } from './seededRandom';
 
 export const DAILY_QUESTION_COUNT = 10;
+/** Prefer this many illustrated questions in the daily pack when available. */
+export const DAILY_IMAGE_TARGET = 4;
 
 /** UTC calendar day id, e.g. daily-2026-07-25 */
 export function getDailyQuizId(date = new Date()): string {
@@ -43,12 +45,8 @@ export function formatDailyCountdown(ms: number, lang: 'en' | 'fr' = 'en'): stri
     : `${m}m ${String(s).padStart(2, '0')}s`;
 }
 
-/** Same 10 questions for every player on a given UTC day. */
-export function buildDailyQuiz(quizzes: Quiz[], date = new Date()): Quiz {
-  const quizId = getDailyQuizId(date);
-  const rand = seededRandom(hashSeed(quizId));
+function flattenPool(quizzes: Quiz[]): Question[] {
   const pool: Question[] = [];
-
   for (const quiz of quizzes) {
     for (const q of quiz.questions) {
       pool.push({
@@ -57,11 +55,58 @@ export function buildDailyQuiz(quizzes: Quiz[], date = new Date()): Quiz {
       });
     }
   }
+  return pool;
+}
 
-  const picked = seededShuffle(pool, rand).slice(
-    0,
-    Math.min(DAILY_QUESTION_COUNT, pool.length)
+/**
+ * Deterministic pick: fill with illustrated questions first (seeded),
+ * then complete with the rest of the pool.
+ */
+export function pickDailyQuestions(
+  pool: Question[],
+  rand: () => number,
+  count = DAILY_QUESTION_COUNT,
+  imageTarget = DAILY_IMAGE_TARGET
+): Question[] {
+  const withImage = seededShuffle(
+    pool.filter((q) => Boolean(q.imageUrl)),
+    rand
   );
+  const withoutImage = seededShuffle(
+    pool.filter((q) => !q.imageUrl),
+    rand
+  );
+
+  const imageTake = Math.min(imageTarget, withImage.length, count);
+  const picked = withImage.slice(0, imageTake);
+  const pickedIds = new Set(picked.map((q) => q.id));
+
+  // Prefer non-illustrated fillers so the pack stays near `imageTarget` photos.
+  for (const q of [...withoutImage, ...withImage.slice(imageTake)]) {
+    if (picked.length >= count) break;
+    if (pickedIds.has(q.id)) continue;
+    picked.push(q);
+    pickedIds.add(q.id);
+  }
+
+  return seededShuffle(picked, rand);
+}
+
+/** First illustrated question in today's pack — for home teaser. */
+export function getDailyPhotoTeaser(
+  quizzes: Quiz[],
+  date = new Date()
+): Question | null {
+  const daily = buildDailyQuiz(quizzes, date);
+  return daily.questions.find((q) => Boolean(q.imageUrl)) ?? null;
+}
+
+/** Same 10 questions for every player on a given UTC day (image-biased). */
+export function buildDailyQuiz(quizzes: Quiz[], date = new Date()): Quiz {
+  const quizId = getDailyQuizId(date);
+  const rand = seededRandom(hashSeed(quizId));
+  const pool = flattenPool(quizzes);
+  const picked = pickDailyQuestions(pool, rand);
 
   return {
     id: quizId,
@@ -70,8 +115,8 @@ export function buildDailyQuiz(quizzes: Quiz[], date = new Date()): Quiz {
       fr: 'Défi du jour',
     },
     description: {
-      en: '10 questions shared by everyone today. Beat today’s pack!',
-      fr: '10 questions communes à tous aujourd’hui. Battez le pack du jour !',
+      en: '10 questions shared by everyone today — with real photos to read.',
+      fr: '10 questions communes à tous aujourd’hui — avec de vraies photos à lire.',
     },
     questions: picked,
   };

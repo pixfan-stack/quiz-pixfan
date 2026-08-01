@@ -15,10 +15,28 @@ describe('reengage', () => {
     localStorage.clear();
   });
 
-  it('shows result reengage for non-daily quizzes', () => {
+  it('shows result reengage for non-daily quizzes when daily not played', () => {
     expect(shouldShowResultReengage('composition')).toBe(true);
     expect(shouldShowResultReengage('daily-2026-07-26')).toBe(false);
   });
+
+  it('hides result reengage once today’s daily is done', () => {
+    const dailyId = getDailyQuizId();
+    localStorage.setItem(
+      'quiz-pixfan-highscores',
+      JSON.stringify({
+        [dailyId]: {
+          quizId: dailyId,
+          percentage: 80,
+          correctCount: 8,
+          totalQuestions: 10,
+        },
+      })
+    );
+    expect(hasPlayedDailyToday()).toBe(true);
+    expect(shouldShowResultReengage('composition')).toBe(false);
+  });
+
 
   it('hides result reengage after dismiss for the day', () => {
     dismissResultReengage();

@@ -21,7 +21,6 @@ import {
   markQuizPlayed,
   shouldShowResultReengage,
 } from '../utils/reengage';
-import { getDailyQuizId } from '../utils/dailyChallenge';
 import { submitRemoteHighScore } from '../utils/highscoreApi';
 import { trackQuizAttempt } from '../utils/analyticsApi';
 import { getPlayerId, resolveDisplayNameForSubmit } from '../utils/player';
@@ -60,6 +59,8 @@ interface ResultScreenProps {
   result: QuizResult;
   onRetry: () => void;
   onHome: () => void;
+  /** Start today’s daily challenge (re-engage CTA). */
+  onPlayDaily?: () => void;
   onScoreSubmitted?: () => void;
   /** Category quiz ids for explorer / expert-trio achievements. */
   categoryQuizIds?: string[];
@@ -109,6 +110,7 @@ export function ResultScreen({
   result,
   onRetry,
   onHome,
+  onPlayDaily,
   onScoreSubmitted,
   categoryQuizIds = [],
   quizzes = [],
@@ -502,12 +504,8 @@ export function ResultScreen({
                   onClick={() => {
                     dismissResultReengage();
                     setShowReengage(false);
-                    void navigator.clipboard
-                      .writeText(
-                        socialShareUrl(getDailyQuizId(), { lang: langCode })
-                      )
-                      .catch(() => {});
-                    onHome();
+                    if (onPlayDaily) onPlayDaily();
+                    else onHome();
                   }}
                 >
                   {t('result.reengageCta')}

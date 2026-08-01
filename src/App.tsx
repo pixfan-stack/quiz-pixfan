@@ -165,6 +165,12 @@ export default function App() {
     startQuiz(quiz);
   };
 
+  const handlePlayDaily = useCallback(() => {
+    if (quizzes.length === 0) return;
+    prefetchQuizScreen();
+    startQuiz(buildDailyQuiz(quizzes));
+  }, [quizzes, startQuiz]);
+
   const handleHome = () => {
     setActiveQuiz(null);
     setTargetScore(null);
@@ -240,6 +246,7 @@ export default function App() {
                 key={activeQuiz.id}
                 quiz={activeQuiz}
                 onHome={handleHome}
+                onPlayDaily={handlePlayDaily}
                 timePerQuestion={settings.timePerQuestion}
                 antiCheat={settings.antiCheat}
                 onScoreSubmitted={handleScoreSubmitted}
