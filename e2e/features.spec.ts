@@ -106,10 +106,10 @@ test.describe('Anti-Cheat Mode', () => {
     // Open settings
     await page.locator('button:has-text("⚙️ Paramètres"), button:has-text("⚙️ Settings")').click();
     
-    // Toggle anti-cheat
-    await page.locator('.toggle-btn').click();
-    
+    // Toggle anti-cheat (settings may also expose the daily-reminder switch)
+    await page.locator('#anticheat-toggle').click();
+
     // Check toggle is on
-    await expect(page.locator('.toggle-btn--on')).toBeVisible();
+    await expect(page.locator('#anticheat-toggle.toggle-btn--on')).toBeVisible();
   });
 });
