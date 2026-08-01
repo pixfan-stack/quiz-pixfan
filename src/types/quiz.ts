@@ -40,6 +40,8 @@ export interface Question {
   imageUrl?: string;
   /** Accessible description for the illustration. */
   imageAlt?: LocalizedString;
+  /** Optional attribution line shown under the image (e.g. public-domain credit). */
+  imageCredit?: LocalizedString;
   /** Optional per-question difficulty (defaults to quiz difficulty). */
   difficulty?: Difficulty;
 }

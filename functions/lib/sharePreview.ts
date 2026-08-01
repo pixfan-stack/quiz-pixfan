@@ -9,6 +9,10 @@ const LABELS: Record<string, { en: string; fr: string }> = {
   'light-color': { en: 'Light & color', fr: 'Lumière & couleur' },
   'gear-lenses': { en: 'Gear & lenses', fr: 'Matériel & objectifs' },
   'history-icons': { en: 'History & icons', fr: 'Histoire & icônes' },
+  'public-domain': {
+    en: 'Public domain gallery',
+    fr: 'Galerie domaine public',
+  },
   genres: { en: 'Photo genres', fr: 'Genres photo' },
   smartphone: { en: 'Smartphone', fr: 'Smartphone' },
   'photo-rights': { en: 'Photo rights', fr: 'Droits photo' },

@@ -43,7 +43,7 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
   if (quizId === 'composition') return 'composition';
   if (quizId === 'light-color') return 'light';
   if (quizId === 'gear-lenses') return 'gear';
-  if (quizId === 'history-icons') return 'history';
+  if (quizId === 'history-icons' || quizId === 'public-domain') return 'history';
   if (quizId === 'genres') return 'genres';
   if (quizId === 'smartphone') return 'smartphone';
   if (quizId === 'photo-rights') return 'rights';

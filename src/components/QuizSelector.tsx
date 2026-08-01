@@ -75,6 +75,7 @@ const QUIZ_ICONS: Record<string, string> = {
   'light-color': '🌅',
   'gear-lenses': '🔭',
   'history-icons': '🎞️',
+  'public-domain': '🏛️',
   genres: '🖼️',
   smartphone: '📱',
   'photo-rights': '⚖️',
