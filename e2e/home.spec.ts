@@ -21,7 +21,7 @@ test.describe('Homepage', () => {
       page.locator(
         '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
       )
-    ).toHaveCount(9);
+    ).toHaveCount(10);
   });
 
   test('copies daily and duel links without starting a quiz', async ({

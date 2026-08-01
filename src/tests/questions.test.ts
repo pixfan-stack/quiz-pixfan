@@ -15,6 +15,8 @@ describe('questions.json', () => {
         text: { en: string; fr: string };
         answers: Array<{ id: string; text: { en: string; fr: string } }>;
         correctAnswers: string[];
+        imageUrl?: string;
+        imageCredit?: { en: string; fr: string };
       }>;
     }>;
   };
@@ -25,19 +27,21 @@ describe('questions.json', () => {
     'light-color',
     'gear-lenses',
     'history-icons',
+    'public-domain',
     'genres',
     'smartphone',
     'photo-rights',
     'retouching',
   ] as const;
 
-  it('has exactly 9 category quizzes', () => {
-    expect(data.quizzes.length).toBe(9);
+  it('has exactly 10 category quizzes', () => {
+    expect(data.quizzes.length).toBe(10);
   });
 
-  it('keeps at least 20 questions per quiz', () => {
+  it('keeps a solid question count per quiz', () => {
     for (const quiz of data.quizzes) {
-      expect(quiz.questions.length).toBeGreaterThanOrEqual(20);
+      const min = quiz.id === 'public-domain' ? 12 : 20;
+      expect(quiz.questions.length).toBeGreaterThanOrEqual(min);
     }
   });
 
@@ -133,9 +137,20 @@ describe('questions.json', () => {
     }
   });
 
-  it.each(EXPECTED_QUIZ_IDS)('%s quiz exists with ≥20 questions', (id) => {
+  it.each(EXPECTED_QUIZ_IDS)('%s quiz exists with enough questions', (id) => {
     const quiz = data.quizzes.find((q) => q.id === id);
     expect(quiz).toBeDefined();
-    expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
+    const min = id === 'public-domain' ? 12 : 20;
+    expect(quiz!.questions.length).toBeGreaterThanOrEqual(min);
+  });
+
+  it('public-domain quiz uses local images with credits', () => {
+    const quiz = data.quizzes.find((q) => q.id === 'public-domain');
+    expect(quiz).toBeDefined();
+    for (const q of quiz!.questions) {
+      expect(q.imageUrl).toMatch(/^\/images\/public-domain\//);
+      expect(q.imageCredit?.en).toBeTruthy();
+      expect(q.imageCredit?.fr).toBeTruthy();
+    }
   });
 });

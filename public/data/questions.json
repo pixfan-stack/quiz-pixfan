@@ -5550,6 +5550,845 @@
       "difficulty": "hard"
     },
     {
+      "id": "public-domain",
+      "title": {
+        "en": "Public domain gallery",
+        "fr": "Galerie domaine public"
+      },
+      "description": {
+        "en": "Read historic photographs that are free to reuse — pioneers, documentary icons, and FSA classics.",
+        "fr": "Lisez des photographies historiques libres de droits — pionniers, icônes documentaires et classiques de la FSA."
+      },
+      "difficulty": "medium",
+      "questions": [
+        {
+          "id": "pd-01",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "This is often called the oldest surviving photograph. Who made it?",
+            "fr": "On la présente souvent comme la plus ancienne photo conservée. Qui l’a réalisée ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Louis Daguerre",
+                "fr": "Louis Daguerre"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nicéphore Niépce",
+                "fr": "Nicéphore Niépce"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "William Henry Fox Talbot",
+                "fr": "William Henry Fox Talbot"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Eugène Atget",
+                "fr": "Eugène Atget"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Niépce’s View from the Window at Le Gras (c. 1826–27) is the oldest known surviving photograph.",
+            "fr": "Le Point de vue du Gras de Niépce (vers 1826–27) est la plus ancienne photographie conservée connue."
+          },
+          "imageUrl": "/images/public-domain/niepce-le-gras.jpg",
+          "imageAlt": {
+            "en": "Grainy rooftop view from a window, very early photograph",
+            "fr": "Vue granuleuse de toits depuis une fenêtre, photo très ancienne"
+          },
+          "imageCredit": {
+            "en": "Nicéphore Niépce — public domain (Wikimedia Commons)",
+            "fr": "Nicéphore Niépce — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-02",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Daguerre’s Boulevard du Temple looks almost empty. Why do we still see a shoe-shine figure?",
+            "fr": "Le Boulevard du Temple de Daguerre paraît presque vide. Pourquoi voit-on encore un cireur ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "People were erased in the darkroom",
+                "fr": "Les passants ont été gommés au tirage"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The long exposure blurred moving crowds; only someone standing still registered",
+                "fr": "La pose longue a flouté la foule en mouvement ; seul quelqu’un d’immobile s’est inscrit"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Paris was closed that day for a royal parade",
+                "fr": "Paris était fermé pour un défilé royal"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Daguerre used flash to freeze everyone else",
+                "fr": "Daguerre a utilisé un flash pour figer les autres"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Early daguerreotypes needed minutes of light. Moving people vanished; a still customer remained.",
+            "fr": "Les premiers daguerréotypes demandaient plusieurs minutes. Les passants en mouvement disparaissaient ; un client immobile restait."
+          },
+          "imageUrl": "/images/public-domain/daguerre-boulevard.jpg",
+          "imageAlt": {
+            "en": "Paris boulevard with a tiny figure getting shoes shined",
+            "fr": "Boulevard parisien avec une petite silhouette chez le cireur"
+          },
+          "imageCredit": {
+            "en": "Louis Daguerre — public domain (Wikimedia Commons)",
+            "fr": "Louis Daguerre — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-03",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Muybridge’s horse sequence famously settled which question?",
+            "fr": "La séquence du cheval de Muybridge a tranché quelle question célèbre ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Whether horses dream in color",
+                "fr": "Si les chevaux rêvent en couleurs"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Whether all four hooves leave the ground at a gallop",
+                "fr": "Si les quatre sabots quittent le sol au galop"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Whether horses prefer left turns",
+                "fr": "Si les chevaux préfèrent tourner à gauche"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Whether film is faster than digital",
+                "fr": "Si l’argentique est plus rapide que le numérique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "The Horse in Motion proved that a galloping horse is fully airborne for a moment.",
+            "fr": "The Horse in Motion a prouvé qu’un cheval au galop est un instant entièrement en l’air."
+          },
+          "imageUrl": "/images/public-domain/muybridge-horse.jpg",
+          "imageAlt": {
+            "en": "Sequence of a horse and rider galloping",
+            "fr": "Séquence d’un cheval et son cavalier au galop"
+          },
+          "imageCredit": {
+            "en": "Eadweard Muybridge — public domain (Wikimedia Commons)",
+            "fr": "Eadweard Muybridge — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-04",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "What research tradition does Marey’s walking figure belong to?",
+            "fr": "À quelle tradition de recherche rattacher la figure marchante de Marey ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Fashion editorial posing",
+                "fr": "La pose de mode éditoriale"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Chronophotography — studying motion through timed exposures",
+                "fr": "La chronophotographie — étudier le mouvement par poses cadencées"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Cubist collage",
+                "fr": "Le collage cubiste"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Infrared surveillance",
+                "fr": "La surveillance infrarouge"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Marey’s chronophotography dissected movement for science — a cousin of cinema.",
+            "fr": "La chronophotographie de Marey découpe le mouvement pour la science — cousine du cinéma."
+          },
+          "imageUrl": "/images/public-domain/marey-motion.jpg",
+          "imageAlt": {
+            "en": "Multiple overlapping exposures of a man walking",
+            "fr": "Multiples poses superposées d’un homme qui marche"
+          },
+          "imageCredit": {
+            "en": "Étienne-Jules Marey — public domain (Wikimedia Commons)",
+            "fr": "Étienne-Jules Marey — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-05",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Le Gray’s seascape looks impossibly detailed in both sky and water. A likely technique?",
+            "fr": "La marine de Le Gray paraît trop détaillée à la fois dans le ciel et l’eau. Technique probable ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Smartphone HDR from 1857",
+                "fr": "HDR smartphone dès 1857"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Combining negatives (or carefully timed exposures) for sky and sea",
+                "fr": "Combiner des négatifs (ou des poses adaptées) pour ciel et mer"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Painting clouds directly on the print only",
+                "fr": "Peindre les nuages uniquement sur le tirage"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shooting underwater with a glass box",
+                "fr": "Shooter sous l’eau dans une boîte de verre"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Le Gray was famous for matching a dramatic sky to a properly exposed sea — early compositing craft.",
+            "fr": "Le Gray était célèbre pour marier un ciel dramatique à une mer bien exposée — un assemblage précoce."
+          },
+          "imageUrl": "/images/public-domain/le-gray-sea.jpg",
+          "imageAlt": {
+            "en": "Dramatic wave and cloudy sky seascape",
+            "fr": "Marine avec vague dramatique et ciel nuageux"
+          },
+          "imageCredit": {
+            "en": "Gustave Le Gray — public domain (Wikimedia Commons)",
+            "fr": "Gustave Le Gray — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-06",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "This studio portrait of Baudelaire is by which pioneering French photographer?",
+            "fr": "Ce portrait studio de Baudelaire est de quel photographe français pionnier ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Henri Cartier-Bresson",
+                "fr": "Henri Cartier-Bresson"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Nadar",
+                "fr": "Nadar"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Robert Doisneau",
+                "fr": "Robert Doisneau"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Brassaï",
+                "fr": "Brassaï"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Nadar photographed the literary and artistic elite of 19th-century Paris.",
+            "fr": "Nadar a photographié l’élite littéraire et artistique du Paris du XIXe siècle."
+          },
+          "imageUrl": "/images/public-domain/nadar-portrait.jpg",
+          "imageAlt": {
+            "en": "Portrait of Charles Baudelaire",
+            "fr": "Portrait de Charles Baudelaire"
+          },
+          "imageCredit": {
+            "en": "Nadar — public domain (Wikimedia Commons)",
+            "fr": "Nadar — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-07",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Cameron’s soft, atmospheric portraits are closest to which aesthetic?",
+            "fr": "Les portraits doux et atmosphériques de Cameron se rapprochent de quelle esthétique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Hard news flash photography",
+                "fr": "La photo de presse au flash dur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Pictorialism — photography aspiring to painterly feeling",
+                "fr": "Le pictorialisme — la photo qui vise l’émotion picturale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Satellite mapping",
+                "fr": "La cartographie satellite"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Product packshot lighting",
+                "fr": "L’éclairage packshot produit"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Julia Margaret Cameron embraced soft focus and allegory — a bridge to pictorialism.",
+            "fr": "Julia Margaret Cameron assume le flou et l’allégorie — un pont vers le pictorialisme."
+          },
+          "imageUrl": "/images/public-domain/cameron-portrait.jpg",
+          "imageAlt": {
+            "en": "Soft-focus portrait by Julia Margaret Cameron",
+            "fr": "Portrait en flou doux par Julia Margaret Cameron"
+          },
+          "imageCredit": {
+            "en": "Julia Margaret Cameron — public domain (Wikimedia Commons)",
+            "fr": "Julia Margaret Cameron — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-08",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Atget’s shopfronts and streets mainly document what?",
+            "fr": "Les vitrines et rues d’Atget documentent surtout quoi ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Hollywood movie sets",
+                "fr": "Des décors de cinéma hollywoodiens"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A vanishing everyday Paris",
+                "fr": "Un Paris du quotidien en train de disparaître"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Royal coronations only",
+                "fr": "Uniquement des couronnements royaux"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Abstract color fields",
+                "fr": "Des champs de couleur abstraits"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Atget catalogued old Paris — trades, façades, empty streets — before modernization erased them.",
+            "fr": "Atget a inventorié le vieux Paris — métiers, façades, rues vides — avant que la modernisation ne l’efface."
+          },
+          "imageUrl": "/images/public-domain/atget-paris.jpg",
+          "imageAlt": {
+            "en": "Paris shop windows on Avenue des Gobelins by Atget",
+            "fr": "Vitrines parisiennes avenue des Gobelins par Atget"
+          },
+          "imageCredit": {
+            "en": "Eugène Atget — public domain (Wikimedia Commons)",
+            "fr": "Eugène Atget — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-09",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "In Stieglitz’s The Steerage, what should you notice first as a reader of the frame?",
+            "fr": "Dans The Steerage de Stieglitz, que lire d’abord dans le cadre ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Only the brand of the ship funnel",
+                "fr": "Uniquement la marque de la cheminée"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Strong geometry separating decks / social spaces",
+                "fr": "Une géométrie forte qui sépare ponts / espaces sociaux"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A neon logo in the corner",
+                "fr": "Un logo néon dans le coin"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Autofocus hunting squares",
+                "fr": "Les carrés d’autofocus"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "The photograph’s power is structural: diagonals, gangways, and class divided by the ship’s architecture.",
+            "fr": "La force de l’image est structurelle : diagonales, passerelles, et classes séparées par l’architecture du navire."
+          },
+          "imageUrl": "/images/public-domain/stieglitz-steerage.jpg",
+          "imageAlt": {
+            "en": "Passengers on the lower and upper decks of a ship",
+            "fr": "Passagers sur les ponts inférieur et supérieur d’un navire"
+          },
+          "imageCredit": {
+            "en": "Alfred Stieglitz — public domain (Wikimedia Commons)",
+            "fr": "Alfred Stieglitz — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-10",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Lewis Hine photographed child mill workers mainly to…",
+            "fr": "Lewis Hine photographiait surtout les enfants des usines pour…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Sell fashion lookbooks",
+                "fr": "Vendre des lookbooks de mode"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Document abuse and push social reform",
+                "fr": "Documenter les abus et pousser des réformes sociales"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Train AI models",
+                "fr": "Entraîner des modèles d’IA"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Promote longer factory shifts",
+                "fr": "Promouvoir des journées d’usine plus longues"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Hine’s National Child Labor Committee work helped change public opinion and law.",
+            "fr": "Le travail de Hine pour le National Child Labor Committee a aidé à faire bouger l’opinion et la loi."
+          },
+          "imageUrl": "/images/public-domain/hine-spinner.jpg",
+          "imageAlt": {
+            "en": "Young child laborer standing by mill machinery",
+            "fr": "Jeune enfant ouvrier près de machines d’usine"
+          },
+          "imageCredit": {
+            "en": "Lewis Hine — public domain (Wikimedia Commons)",
+            "fr": "Lewis Hine — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-11",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Lange’s Migrant Mother (1936) was made for which U.S. program?",
+            "fr": "Migrant Mother de Lange (1936) a été réalisée dans le cadre de quel programme américain ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "NASA Apollo publicity",
+                "fr": "La communication NASA Apollo"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Farm Security Administration (FSA) documentation",
+                "fr": "La documentation de la Farm Security Administration (FSA)"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A private perfume campaign",
+                "fr": "Une campagne de parfum privée"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Magnum Photos founding charter",
+                "fr": "La charte fondatrice de Magnum Photos"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "FSA photographs are U.S. federal works — a cornerstone public-domain documentary corpus.",
+            "fr": "Les photos FSA sont des œuvres fédérales US — un corpus documentaire domaine public fondamental."
+          },
+          "imageUrl": "/images/public-domain/lange-migrant-mother.jpg",
+          "imageAlt": {
+            "en": "Destitute mother with children during the Great Depression",
+            "fr": "Mère démunie avec ses enfants pendant la Grande Dépression"
+          },
+          "imageCredit": {
+            "en": "Dorothea Lange / FSA — U.S. public domain (Wikimedia Commons)",
+            "fr": "Dorothea Lange / FSA — domaine public US (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-12",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Walker Evans’s frontal sharecropper portraits (like Allie Mae Burroughs) emphasize…",
+            "fr": "Les portraits frontaux de métayers de Walker Evans (comme Allie Mae Burroughs) insistent sur…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Glamour softboxes and wind machines",
+                "fr": "Softbox glamour et machines à vent"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Direct, sober confrontation — dignity without sentimental posing",
+                "fr": "Une confrontation directe et sobre — dignité sans pose sentimentale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Heavy Instagram skin smoothing",
+                "fr": "Un lissage de peau type Instagram"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Fish-eye humor",
+                "fr": "L’humour fisheye"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Evans’s FSA/RA portraits feel almost typological: clear light, level gaze, minimal drama.",
+            "fr": "Les portraits FSA/RA d’Evans sont presque typologiques : lumière claire, regard à hauteur, drame minimal."
+          },
+          "imageUrl": "/images/public-domain/evans-allie-mae.jpg",
+          "imageAlt": {
+            "en": "Close frontal portrait of Allie Mae Burroughs",
+            "fr": "Portrait frontal serré d’Allie Mae Burroughs"
+          },
+          "imageCredit": {
+            "en": "Walker Evans / FSA — U.S. public domain (Wikimedia Commons)",
+            "fr": "Walker Evans / FSA — domaine public US (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-13",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "This Dust Bowl scene mainly communicates…",
+            "fr": "Cette scène du Dust Bowl communique surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A beach vacation postcard",
+                "fr": "Une carte postale de vacances à la plage"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Environmental and social crisis through weather and bodies in space",
+                "fr": "Une crise environnementale et sociale via le temps et les corps dans l’espace"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A sports victory parade",
+                "fr": "Un défilé de victoire sportive"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A studio still-life of fruit",
+                "fr": "Une nature morte de fruits en studio"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "FSA photographers turned dust, wind, and displacement into readable public evidence.",
+            "fr": "Les photographes FSA ont transformé poussière, vent et exode en preuves lisibles pour le public."
+          },
+          "imageUrl": "/images/public-domain/dust-bowl-1936.jpg",
+          "imageAlt": {
+            "en": "Figures walking through a severe dust storm",
+            "fr": "Silhouettes marchant dans une tempête de poussière"
+          },
+          "imageCredit": {
+            "en": "U.S. government / Dust Bowl documentation — public domain (Wikimedia Commons)",
+            "fr": "Gouvernement US / documentation Dust Bowl — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-14",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Gordon Parks’s American Gothic (1942) quotes Grant Wood’s painting. What is the critical twist?",
+            "fr": "American Gothic de Gordon Parks (1942) cite le tableau de Grant Wood. Quelle est la torsion critique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "It advertises farm equipment",
+                "fr": "Cela publicise du matériel agricole"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A Black cleaning woman with mop and broom stands in for the iconic farmer couple — race and labor in the capital",
+                "fr": "Une femme de ménage noire avec serpillière et balai remplace le couple de fermiers — race et travail dans la capitale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It is a selfie on the Eiffel Tower",
+                "fr": "C’est un selfie sur la tour Eiffel"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It removes all tools from the frame",
+                "fr": "Cela retire tous les outils du cadre"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Parks’s FSA/OWI image retools an American icon to confront segregation and service labor in Washington, D.C.",
+            "fr": "L’image FSA/OWI de Parks recycle une icône américaine pour confronter ségrégation et travail de service à Washington."
+          },
+          "imageUrl": "/images/public-domain/parks-american-gothic.jpg",
+          "imageAlt": {
+            "en": "Woman with mop and broom before an American flag",
+            "fr": "Femme avec serpillière et balai devant un drapeau américain"
+          },
+          "imageCredit": {
+            "en": "Gordon Parks / FSA-OWI — U.S. public domain (Wikimedia Commons)",
+            "fr": "Gordon Parks / FSA-OWI — domaine public US (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-15",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Prokudin-Gorsky’s color portraits (like the Emir of Bukhara) were made how?",
+            "fr": "Les portraits couleur de Prokudin-Gorsky (comme l’émir de Boukhara) étaient faits comment ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "With a modern CMOS phone sensor",
+                "fr": "Avec un capteur CMOS de téléphone moderne"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Three black-and-white exposures through color filters, later combined",
+                "fr": "Trois poses noir et blanc à travers des filtres couleur, recombinées ensuite"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "By hand-painting every print only",
+                "fr": "En peignant à la main chaque tirage uniquement"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "With Kodachrome mass-produced in 1911 shops",
+                "fr": "Avec du Kodachrome en vente libre dès 1911"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "His three-color separation process yields startling early color of the Russian Empire — now widely public domain via LoC scans.",
+            "fr": "Son procédé trichrome donne des couleurs précoces saisissantes de l’Empire russe — largement en domaine public via les scans LoC."
+          },
+          "imageUrl": "/images/public-domain/prokudin-color.jpg",
+          "imageAlt": {
+            "en": "Color portrait of the Emir of Bukhara in ornate robes",
+            "fr": "Portrait en couleurs de l’émir de Boukhara en costume orné"
+          },
+          "imageCredit": {
+            "en": "Sergey Prokudin-Gorsky — public domain (Library of Congress / Wikimedia Commons)",
+            "fr": "Sergueï Prokoudine-Gorski — domaine public (Library of Congress / Wikimedia Commons)"
+          }
+        }
+      ]
+    },
+    {
       "id": "genres",
       "title": {
         "en": "Photography Genres",

@@ -686,6 +686,21 @@ a {
   object-fit: cover;
 }
 
+.question-figure--credited .question-figure__img {
+  max-height: min(52vh, 360px);
+  object-fit: contain;
+  background: color-mix(in srgb, var(--color-surface-alt) 70%, transparent);
+}
+
+.question-figure__credit {
+  margin: 0;
+  padding: 0.45rem 0.65rem 0.55rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
 .quiz-card__meta-chip--soft {
   opacity: 0.85;
   font-weight: 500;

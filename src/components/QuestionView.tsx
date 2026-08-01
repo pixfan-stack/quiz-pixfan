@@ -178,7 +178,11 @@ export function QuestionView({
         <h2 className="question-text">{pickLocale(question.text, lang)}</h2>
 
         {question.imageUrl && (
-          <figure className="question-figure">
+          <figure
+            className={`question-figure${
+              question.imageCredit ? ' question-figure--credited' : ''
+            }`}
+          >
             <img
               className="question-figure__img"
               src={question.imageUrl}
@@ -190,6 +194,11 @@ export function QuestionView({
               loading="lazy"
               decoding="async"
             />
+            {question.imageCredit && (
+              <figcaption className="question-figure__credit">
+                {pickLocale(question.imageCredit, lang)}
+              </figcaption>
+            )}
           </figure>
         )}
 
