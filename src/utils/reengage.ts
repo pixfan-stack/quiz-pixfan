@@ -27,7 +27,8 @@ export function markQuizPlayed(now = new Date()): void {
   }
 }
 
-function hasPlayedDailyToday(): boolean {
+/** True if today's daily challenge was already completed in this browser. */
+export function hasPlayedDailyToday(): boolean {
   const dailyId = getDailyQuizId();
   if (getHighScore(dailyId)) return true;
   const streak = getDailyStreak();
@@ -40,6 +41,7 @@ function hasPlayedDailyToday(): boolean {
  */
 export function shouldShowResultReengage(quizId: string): boolean {
   if (quizId.startsWith('daily-')) return false;
+  if (hasPlayedDailyToday()) return false;
   try {
     if (localStorage.getItem(RESULT_NUDGE_KEY) === utcDayKey()) return false;
   } catch {

@@ -1,7 +1,7 @@
 /** Shared helpers for crawlable share pages + OG images. */
 
 export const QUIZ_ID_RE =
-  /^(?:[a-z0-9][a-z0-9-]{0,62}|daily-\d{4}-\d{2}-\d{2}|duel-[a-z0-9]{6,16}|random|mix-(?:easy|medium|hard))$/;
+  /^(?:[a-z0-9][a-z0-9-]{0,62}|daily-\d{4}-\d{2}-\d{2}|duel-[a-z0-9]{6,16}|random(?:-mix)?|weak-spots|mix-(?:easy|medium|hard))$/;
 
 const LABELS: Record<string, { en: string; fr: string }> = {
   'exposure-basics': { en: 'Exposure basics', fr: 'Bases de l’exposition' },
@@ -14,6 +14,8 @@ const LABELS: Record<string, { en: string; fr: string }> = {
   'photo-rights': { en: 'Photo rights', fr: 'Droits photo' },
   retouching: { en: 'Retouching', fr: 'Retouche' },
   random: { en: 'Random mix', fr: 'Mix aléatoire' },
+  'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
+  'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },
   'mix-easy': { en: 'Easy mix', fr: 'Mix facile' },
   'mix-medium': { en: 'Medium mix', fr: 'Mix intermédiaire' },
   'mix-hard': { en: 'Hard mix', fr: 'Mix difficile' },
@@ -131,7 +133,9 @@ export function buildShareHtml(opts: {
         ? `Rejoins le quiz « ${label} » sur Quiz PixFan.`
         : `Join the “${label}” quiz on Quiz PixFan.`;
 
-  const deepLink = `${opts.appOrigin}/#/quiz/${encodeURIComponent(opts.quizId)}`;
+  const scoreQuery =
+    opts.score != null ? `?score=${encodeURIComponent(String(opts.score))}` : '';
+  const deepLink = `${opts.appOrigin}/#/quiz/${encodeURIComponent(opts.quizId)}${scoreQuery}`;
   const safeTitle = escapeXml(title);
   const safeDesc = escapeXml(description);
 

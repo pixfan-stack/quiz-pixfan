@@ -21,8 +21,24 @@ import { buildRandomQuiz, RANDOM_QUIZ_ID } from '../utils/randomQuiz';
 import {
   buildDailyQuiz,
   DAILY_QUESTION_COUNT,
+  formatDailyCountdown,
+  getDailyPhotoTeaser,
   getDailyQuizId,
+  msUntilNextDaily,
 } from '../utils/dailyChallenge';
+import {
+  isDailyReminderEnabled,
+  maybeNotifyDailyReminder,
+  notificationsSupported,
+  requestDailyReminderPermission,
+  setDailyReminderEnabled,
+} from '../utils/dailyReminder';
+import { hasPlayedDailyToday } from '../utils/reengage';
+import {
+  buildWeakSpotsQuiz,
+  getMistakeVaultCount,
+  WEAK_SPOTS_QUESTION_COUNT,
+} from '../utils/mistakeVault';
 import {
   buildDifficultyMix,
   deriveQuizDifficulty,
@@ -82,9 +98,44 @@ export function QuizSelector({
   const [difficultyFilter, setDifficultyFilter] = useState<Difficulty | 'all'>('all');
   const [dailyLinkCopied, setDailyLinkCopied] = useState(false);
   const [duelLinkCopied, setDuelLinkCopied] = useState(false);
+  const [reminderOn, setReminderOn] = useState(() => isDailyReminderEnabled());
   const dailyStreak = getDisplayDailyStreak();
-  const leaderboardSectionRef = useRef<HTMLDivElement>(null);
+  const dailyPlayed = hasPlayedDailyToday();
+  const vaultCount = getMistakeVaultCount();
   const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
+  const [dailyCountdown, setDailyCountdown] = useState(() =>
+    formatDailyCountdown(msUntilNextDaily(), langCode)
+  );
+  const dailyTeaser = useMemo(
+    () => (quizzes.length > 0 ? getDailyPhotoTeaser(quizzes) : null),
+    [quizzes]
+  );
+  const leaderboardSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const tick = () =>
+      setDailyCountdown(formatDailyCountdown(msUntilNextDaily(), langCode));
+    tick();
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, [langCode, leaderboardRefreshToken]);
+
+  useEffect(() => {
+    const dailyQuizId = getDailyQuizId();
+    const ping = () => {
+      void maybeNotifyDailyReminder({
+        title: t('home.dailyReminderNotifyTitle'),
+        body: t('home.dailyReminderNotifyBody'),
+        dailyQuizId,
+      });
+    };
+    ping();
+    const onVis = () => {
+      if (document.visibilityState === 'hidden') ping();
+    };
+    document.addEventListener('visibilitychange', onVis);
+    return () => document.removeEventListener('visibilitychange', onVis);
+  }, [t, leaderboardRefreshToken]);
 
   const flashCopied = useCallback(
     (setter: (v: boolean) => void) => {
@@ -209,6 +260,12 @@ export function QuizSelector({
     handleStartQuiz(buildDuelQuiz(quizzes, seed));
   };
 
+  const handleStartWeakSpots = () => {
+    const pack = buildWeakSpotsQuiz(quizzes);
+    if (!pack) return;
+    handleStartQuiz(pack);
+  };
+
   const scrollToLeaderboard = () => {
     leaderboardSectionRef.current?.scrollIntoView({
       behavior: 'smooth',
@@ -274,6 +331,34 @@ export function QuizSelector({
                 {antiCheat ? 'ON' : 'OFF'}
               </button>
             </div>
+            {notificationsSupported() && (
+              <div className="setting-row setting-row--stack">
+                <label htmlFor="daily-reminder-toggle" className="setting-label">
+                  {t('home.dailyReminder')}
+                </label>
+                <p className="setting-hint">{t('home.dailyReminderHint')}</p>
+                <button
+                  id="daily-reminder-toggle"
+                  type="button"
+                  className={`toggle-btn${reminderOn ? ' toggle-btn--on' : ''}`}
+                  onClick={() => {
+                    void (async () => {
+                      if (reminderOn) {
+                        setDailyReminderEnabled(false);
+                        setReminderOn(false);
+                        return;
+                      }
+                      const ok = await requestDailyReminderPermission();
+                      setReminderOn(ok);
+                    })();
+                  }}
+                  role="switch"
+                  aria-checked={reminderOn}
+                >
+                  {reminderOn ? 'ON' : 'OFF'}
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -317,21 +402,35 @@ export function QuizSelector({
           <li className="quiz-card-with-copy">
             <button
               type="button"
-              className="quiz-card quiz-card--daily"
+              className={`quiz-card quiz-card--daily${dailyPlayed ? ' quiz-card--played' : ''}`}
               onClick={handleStartDaily}
               onMouseEnter={onPrefetchQuiz}
               onFocus={onPrefetchQuiz}
               aria-label={t('home.dailyChallenge')}
             >
-              <span className="quiz-card__icon" aria-hidden="true">
-                🗓️
-              </span>
+              {dailyTeaser?.imageUrl ? (
+                <span className="quiz-card__teaser" aria-hidden="true">
+                  <img
+                    src={dailyTeaser.imageUrl}
+                    alt=""
+                    className="quiz-card__teaser-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+              ) : (
+                <span className="quiz-card__icon" aria-hidden="true">
+                  🗓️
+                </span>
+              )}
               <div className="quiz-card__body">
                 <h3 className="quiz-card__title">{t('home.dailyChallenge')}</h3>
                 <p className="quiz-card__desc">
                   {dailyLinkCopied
                     ? t('home.linkCopied')
-                    : t('home.dailyChallengeDesc')}
+                    : dailyPlayed
+                      ? t('home.dailyPlayedDesc', { time: dailyCountdown })
+                      : t('home.dailyChallengeDesc')}
                 </p>
               </div>
               <div className="quiz-card__footer">
@@ -344,10 +443,15 @@ export function QuizSelector({
                       {t('home.dailyStreak', { count: dailyStreak })}
                     </span>
                   )}
+                  {dailyPlayed && (
+                    <span className="quiz-card__meta-chip quiz-card__meta-chip--done">
+                      {t('home.dailyPlayed')}
+                    </span>
+                  )}
                   <HighScoreBadge showEmpty bestScore={getBestScore(dailyId)} />
                 </div>
                 <span className="quiz-card__cta">
-                  {t('home.start')}
+                  {dailyPlayed ? t('home.dailyReplay') : t('home.start')}
                   <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
                 </span>
               </div>
@@ -402,6 +506,41 @@ export function QuizSelector({
               title={t('home.copyDuelLink')}
             >
               {duelLinkCopied ? '✓' : '🔗'}
+            </button>
+          </li>
+        )}
+        {quizzes.length > 0 && difficultyFilter === 'all' && vaultCount > 0 && (
+          <li>
+            <button
+              type="button"
+              className="quiz-card quiz-card--weak"
+              onClick={handleStartWeakSpots}
+              onMouseEnter={onPrefetchQuiz}
+              onFocus={onPrefetchQuiz}
+              aria-label={t('home.weakSpots')}
+            >
+              <span className="quiz-card__icon" aria-hidden="true">
+                🎯
+              </span>
+              <div className="quiz-card__body">
+                <h3 className="quiz-card__title">{t('home.weakSpots')}</h3>
+                <p className="quiz-card__desc">{t('home.weakSpotsDesc')}</p>
+              </div>
+              <div className="quiz-card__footer">
+                <div className="quiz-card__meta">
+                  <span className="quiz-card__meta-chip">
+                    {t('home.weakSpotsCount', {
+                      count: Math.min(vaultCount, WEAK_SPOTS_QUESTION_COUNT),
+                    })}
+                  </span>
+                </div>
+                <span className="quiz-card__cta">
+                  {t('home.start')}
+                  <span className="quiz-card__cta-arrow" aria-hidden="true">
+                    →
+                  </span>
+                </span>
+              </div>
             </button>
           </li>
         )}

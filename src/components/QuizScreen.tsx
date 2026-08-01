@@ -7,6 +7,8 @@ import { ResultScreen } from './ResultScreen';
 interface QuizScreenProps {
   quiz: Quiz;
   onHome: () => void;
+  /** Jump straight into today’s daily challenge (re-engage CTA). */
+  onPlayDaily?: () => void;
   timePerQuestion?: number;
   antiCheat?: boolean;
   onScoreSubmitted?: () => void;
@@ -14,6 +16,8 @@ interface QuizScreenProps {
   categoryQuizIds?: string[];
   /** Full catalog for “challenge a friend” duels from results. */
   quizzes?: Quiz[];
+  /** Challenger score to beat (from shared duel / score link). */
+  targetScore?: number | null;
 }
 
 /**
@@ -23,11 +27,13 @@ interface QuizScreenProps {
 export default function QuizScreen({
   quiz,
   onHome,
+  onPlayDaily,
   timePerQuestion = 0,
   antiCheat = false,
   onScoreSubmitted,
   categoryQuizIds = [],
   quizzes = [],
+  targetScore = null,
 }: QuizScreenProps) {
   const { t } = useTranslation();
   const engine = useQuizEngine(quiz, { timePerQuestion, antiCheat });
@@ -39,9 +45,11 @@ export default function QuizScreen({
         result={engine.result}
         onRetry={engine.reset}
         onHome={onHome}
+        onPlayDaily={onPlayDaily}
         onScoreSubmitted={onScoreSubmitted}
         categoryQuizIds={categoryQuizIds}
         quizzes={quizzes}
+        targetScore={targetScore}
       />
     );
   }
@@ -51,24 +59,31 @@ export default function QuizScreen({
   }
 
   return (
-    <QuestionView
-      question={engine.currentQuestion}
-      questionNumber={engine.progress.current}
-      totalQuestions={engine.progress.total}
-      selectedIds={engine.selectedIds}
-      phase={engine.phase === 'feedback' ? 'feedback' : 'answering'}
-      lastWasCorrect={engine.lastWasCorrect}
-      currentStreak={engine.currentStreak}
-      isLast={engine.isLast}
-      onToggle={engine.toggleAnswer}
-      onSubmit={engine.submitAnswer}
-      onNext={engine.goNext}
-      timerRemaining={engine.timerRemaining}
-      timerDuration={timePerQuestion}
-      timerIsCritical={engine.timerIsCritical}
-      timerEnabled={engine.timerEnabled}
-      tabSwitches={engine.tabSwitches}
-      antiCheatEnabled={engine.antiCheatEnabled}
-    />
+    <>
+      {targetScore != null && (
+        <p className="duel-target-banner" role="status">
+          {t('quiz.beatTarget', { percent: targetScore })}
+        </p>
+      )}
+      <QuestionView
+        question={engine.currentQuestion}
+        questionNumber={engine.progress.current}
+        totalQuestions={engine.progress.total}
+        selectedIds={engine.selectedIds}
+        phase={engine.phase === 'feedback' ? 'feedback' : 'answering'}
+        lastWasCorrect={engine.lastWasCorrect}
+        currentStreak={engine.currentStreak}
+        isLast={engine.isLast}
+        onToggle={engine.toggleAnswer}
+        onSubmit={engine.submitAnswer}
+        onNext={engine.goNext}
+        timerRemaining={engine.timerRemaining}
+        timerDuration={timePerQuestion}
+        timerIsCritical={engine.timerIsCritical}
+        timerEnabled={engine.timerEnabled}
+        tabSwitches={engine.tabSwitches}
+        antiCheatEnabled={engine.antiCheatEnabled}
+      />
+    </>
   );
 }

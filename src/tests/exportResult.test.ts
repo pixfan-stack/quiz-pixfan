@@ -67,4 +67,18 @@ describe('exportResult', () => {
     const blob = await exportResultAsImage(result, quiz, 'fr', 'story');
     expect(blob).toBeInstanceOf(Blob);
   });
+
+  it('exports a daily-challenge result image', async () => {
+    const dailyResult: QuizResult = {
+      ...result,
+      quizId: 'daily-2026-07-25',
+    };
+    const dailyQuiz: Quiz = {
+      ...quiz,
+      id: 'daily-2026-07-25',
+      title: { en: 'Daily challenge', fr: 'Défi du jour' },
+    };
+    const blob = await exportResultAsImage(dailyResult, dailyQuiz, 'en', 'square');
+    expect(blob).toBeInstanceOf(Blob);
+  });
 });

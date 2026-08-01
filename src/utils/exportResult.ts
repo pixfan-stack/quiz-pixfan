@@ -4,6 +4,7 @@
  */
 
 import type { Quiz, QuizResult } from '../types/quiz';
+import { isDailyQuizId } from './dailyChallenge';
 import { APP_SHARE_URL } from './share';
 
 export type ExportImageFormat = 'square' | 'story';
@@ -56,6 +57,7 @@ export async function exportResultAsImage(
   const ctx = canvas.getContext('2d')!;
   const isFr = lang === 'fr';
   const isStory = format === 'story';
+  const isDaily = isDailyQuizId(result.quizId);
 
   // Background
   const grad = ctx.createLinearGradient(0, 0, width * 0.2, height);
@@ -88,15 +90,25 @@ export async function exportResultAsImage(
   ctx.fillStyle = COLORS.text;
   ctx.font = '600 42px system-ui, -apple-system, sans-serif';
   ctx.fillText(
-    isFr ? 'Mes résultats' : 'My results',
+    isDaily
+      ? isFr
+        ? 'Défi du jour'
+        : 'Daily challenge'
+      : isFr
+        ? 'Mes résultats'
+        : 'My results',
     width / 2,
     isStory ? 230 : 160
   );
 
-  // Quiz title
+  // Quiz title / date line
   ctx.font = '500 28px system-ui, -apple-system, sans-serif';
   ctx.fillStyle = COLORS.textMuted;
-  const quizTitle = isFr ? quiz.title.fr : quiz.title.en;
+  const quizTitle = isDaily
+    ? result.quizId.replace('daily-', '')
+    : isFr
+      ? quiz.title.fr
+      : quiz.title.en;
   ctx.fillText(
     truncate(ctx, quizTitle, width - 120),
     width / 2,
@@ -168,7 +180,13 @@ export async function exportResultAsImage(
   ctx.font = '700 30px system-ui, -apple-system, sans-serif';
   ctx.fillStyle = COLORS.text;
   ctx.fillText(
-    isFr ? 'Bats mon score →' : 'Beat my score →',
+    isDaily
+      ? isFr
+        ? 'Tu fais combien aujourd’hui ?'
+        : 'What’s your score today?'
+      : isFr
+        ? 'Bats mon score →'
+        : 'Beat my score →',
     cx,
     isStory ? height - 280 : height - 160
   );
