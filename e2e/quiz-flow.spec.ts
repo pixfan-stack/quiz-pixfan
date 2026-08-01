@@ -6,7 +6,7 @@ test.describe('Quiz Flow', () => {
     // Click first category quiz (skip random mix card)
     await page
       .locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel)'
+        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
       )
       .first()
       .click();
