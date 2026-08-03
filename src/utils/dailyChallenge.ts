@@ -115,8 +115,8 @@ export function buildDailyQuiz(quizzes: Quiz[], date = new Date()): Quiz {
       fr: 'Défi du jour',
     },
     description: {
-      en: '10 questions shared by everyone today — with real photos to read.',
-      fr: '10 questions communes à tous aujourd’hui — avec de vraies photos à lire.',
+      en: '10 shared questions today, often with a photo to analyze.',
+      fr: '10 questions partagées aujourd’hui, souvent avec une photo à analyser.',
     },
     questions: picked,
   };
