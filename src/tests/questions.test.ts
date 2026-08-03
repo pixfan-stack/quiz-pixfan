@@ -40,7 +40,7 @@ describe('questions.json', () => {
 
   it('keeps a solid question count per quiz', () => {
     for (const quiz of data.quizzes) {
-      const min = quiz.id === 'public-domain' ? 12 : 20;
+      const min = quiz.id === 'public-domain' ? 18 : 20;
       expect(quiz.questions.length).toBeGreaterThanOrEqual(min);
     }
   });
@@ -140,7 +140,7 @@ describe('questions.json', () => {
   it.each(EXPECTED_QUIZ_IDS)('%s quiz exists with enough questions', (id) => {
     const quiz = data.quizzes.find((q) => q.id === id);
     expect(quiz).toBeDefined();
-    const min = id === 'public-domain' ? 12 : 20;
+    const min = id === 'public-domain' ? 18 : 20;
     expect(quiz!.questions.length).toBeGreaterThanOrEqual(min);
   });
 
@@ -148,7 +148,7 @@ describe('questions.json', () => {
     const quiz = data.quizzes.find((q) => q.id === 'public-domain');
     expect(quiz).toBeDefined();
     for (const q of quiz!.questions) {
-      expect(q.imageUrl).toMatch(/^\/images\/public-domain\//);
+      expect(q.imageUrl).toMatch(/^\/images\/public-domain\/.+\.avif$/);
       expect(q.imageCredit?.en).toBeTruthy();
       expect(q.imageCredit?.fr).toBeTruthy();
     }

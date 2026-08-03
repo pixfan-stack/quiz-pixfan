@@ -22,7 +22,7 @@
     "randomQuiz": "Mix aléatoire",
     "randomQuizDesc": "20 questions tirées de toutes les catégories.",
     "dailyChallenge": "Défi du jour",
-    "dailyChallengeDesc": "10 questions communes aujourd’hui — avec de vraies photos à lire.",
+    "dailyChallengeDesc": "10 questions partagées aujourd’hui, souvent avec une photo à analyser.",
     "dailyPlayed": "Fait aujourd’hui",
     "dailyPlayedDesc": "Revenez dans {{time}} pour le prochain défi.",
     "dailyReplay": "Rejouer",

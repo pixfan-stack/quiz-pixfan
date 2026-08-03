@@ -5,20 +5,26 @@ All selected files are marked public domain on Commons (author life+70 and/or U.
 
 | File | Author / corpus | Commons search hint |
 |---|---|---|
-| `niepce-le-gras.jpg` | Nicéphore Niépce | View from the Window at Le Gras |
-| `daguerre-boulevard.jpg` | Louis Daguerre | Boulevard du Temple by Daguerre |
-| `muybridge-horse.jpg` | Eadweard Muybridge | The Horse in Motion |
-| `marey-motion.jpg` | Étienne-Jules Marey | Marey Man walking |
-| `le-gray-sea.jpg` | Gustave Le Gray | The Great Wave |
-| `nadar-portrait.jpg` | Nadar | Baudelaire Nadar portrait |
-| `cameron-portrait.jpg` | Julia Margaret Cameron | Cameron Herschel / MET DP114480 |
-| `atget-paris.jpg` | Eugène Atget | Avenue des Gobelins |
-| `stieglitz-steerage.jpg` | Alfred Stieglitz | The Steerage |
-| `hine-spinner.jpg` | Lewis Hine | Child laborer / spinner |
-| `lange-migrant-mother.jpg` | Dorothea Lange / FSA | Lange-MigrantMother02 |
-| `evans-allie-mae.jpg` | Walker Evans / FSA | Allie Mae Burroughs |
-| `dust-bowl-1936.jpg` | U.S. Dust Bowl documentation | Dust Bowl Dallas South Dakota 1936 |
-| `parks-american-gothic.jpg` | Gordon Parks / FSA-OWI | Gordon Parks American Gothic |
-| `prokudin-color.jpg` | Sergey Prokudin-Gorsky | Emir of Bukhara 1911 |
+| `niepce-le-gras.avif` | Nicéphore Niépce | View from the Window at Le Gras |
+| `daguerre-boulevard.avif` | Louis Daguerre | Boulevard du Temple by Daguerre |
+| `talbot-open-door.avif` | William Henry Fox Talbot | The Open Door MET DP148629 |
+| `muybridge-horse.avif` | Eadweard Muybridge | The Horse in Motion |
+| `marey-motion.avif` | Étienne-Jules Marey | Marey Man walking |
+| `le-gray-sea.avif` | Gustave Le Gray | The Great Wave |
+| `nadar-portrait.avif` | Nadar | Baudelaire Nadar portrait |
+| `cameron-portrait.avif` | Julia Margaret Cameron | Cameron Herschel / MET DP114480 |
+| `brady-lincoln.avif` | Mathew Brady studio | Lincoln O-17 CDV by Brady, 1860 |
+| `atget-paris.avif` | Eugène Atget | Avenue des Gobelins |
+| `riis-bandits-roost.avif` | Jacob Riis | Bandits Roost Mulberry Street |
+| `stieglitz-steerage.avif` | Alfred Stieglitz | The Steerage |
+| `kasebier-blessed.avif` | Gertrude Käsebier | Blessed Art Thou Among Women |
+| `blossfeldt-plant.avif` | Karl Blossfeldt | Equisetum hyemale |
+| `hine-spinner.avif` | Lewis Hine | Child laborer / spinner |
+| `johnston-new-woman.avif` | Frances Benjamin Johnston | Self-Portrait as New Woman 1896 |
+| `lange-migrant-mother.avif` | Dorothea Lange / FSA | Lange-MigrantMother02 |
+| `evans-allie-mae.avif` | Walker Evans / FSA | Allie Mae Burroughs |
+| `dust-bowl-1936.avif` | U.S. Dust Bowl documentation | Dust Bowl Dallas South Dakota 1936 |
+| `parks-american-gothic.avif` | Gordon Parks / FSA-OWI | Gordon Parks American Gothic |
+| `prokudin-color.avif` | Sergey Prokudin-Gorsky | Emir of Bukhara 1911 |
 
 Refresh script: `scripts/add-public-domain-quiz.py` (JSON only). Re-fetch images with a Commons API client + User-Agent if replacing files.
