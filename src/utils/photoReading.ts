@@ -47,12 +47,12 @@ export function buildPhotoReadingQuiz(
   return {
     id: PHOTO_READING_ID,
     title: {
-      en: 'Read the photo',
-      fr: 'Lis cette photo',
+      en: 'Photos to analyze',
+      fr: 'Photos à analyser',
     },
     description: {
-      en: '10 questions where the picture does the teaching.',
-      fr: '10 questions où c’est la photo qui enseigne.',
+      en: '10 illustrated questions — learn by looking.',
+      fr: '10 questions illustrées — apprendre en regardant.',
     },
     questions: picked,
   };
