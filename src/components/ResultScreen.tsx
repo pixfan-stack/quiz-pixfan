@@ -213,30 +213,27 @@ export function ResultScreen({
   }, [buildScorePayload, t]);
 
   const handleCopyDuelLink = useCallback(async () => {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
+    const payload = {
+      text: t(shareTextKey('duel'), {
+        score: result.correctCount,
+        total: result.totalQuestions,
+        percent: result.percentage,
+        quizTitle,
+      }),
+      url: shareUrl,
+      hashtags: shareHashtags,
+    };
+    const ok = await copySharePayload(payload);
+    if (ok) {
       setLinkCopied(true);
       window.setTimeout(() => setLinkCopied(false), 2000);
-    } catch {
-      // ignore
     }
-    // Prefer native share of the duel challenge
     if (canNativeShare()) {
-      await nativeShareScore(
-        {
-          text: t(shareTextKey('duel'), {
-            score: result.correctCount,
-            total: result.totalQuestions,
-            percent: result.percentage,
-            quizTitle,
-          }),
-          url: shareUrl,
-        },
-        t('app.title')
-      );
+      await nativeShareScore(payload, t('app.title'));
     }
   }, [
     shareUrl,
+    shareHashtags,
     t,
     result.correctCount,
     result.totalQuestions,
@@ -260,12 +257,10 @@ export function ResultScreen({
     });
     const payload = { text, url, hashtags: t('share.hashtags') };
 
-    try {
-      await navigator.clipboard.writeText(url);
+    const ok = await copySharePayload(payload);
+    if (ok) {
       setChallengeCopied(true);
       window.setTimeout(() => setChallengeCopied(false), 2500);
-    } catch {
-      // ignore
     }
 
     const outcome = await nativeShareScore(payload, t('app.title'));
@@ -506,17 +501,6 @@ export function ResultScreen({
               <p className="daily-ceremony__hint">
                 {t('result.comeBackTomorrow')}
               </p>
-              {(result.answerMarks?.length ?? 0) > 0 && (
-                <button
-                  type="button"
-                  className="btn btn--secondary btn--small"
-                  onClick={() => void handleCopyDailyGrid()}
-                >
-                  {gridCopied
-                    ? t('result.dailyGridCopied')
-                    : t('result.copyDailyGrid')}
-                </button>
-              )}
             </div>
           )}
 
@@ -553,7 +537,7 @@ export function ResultScreen({
               <div className="reengage-banner__actions">
                 <button
                   type="button"
-                  className="btn btn--primary btn--small"
+                  className="btn btn--secondary btn--small"
                   onClick={() => {
                     dismissResultReengage();
                     setShowReengage(false);
@@ -583,7 +567,36 @@ export function ResultScreen({
             <h3 className="share-section__title">{t('result.shareTitle')}</h3>
 
             <div className="share-primary">
-              {isDuel ? (
+              {isDaily ? (
+                <>
+                  <button
+                    type="button"
+                    className="btn btn--primary btn--block"
+                    onClick={() => void handleCopyDailyGrid()}
+                  >
+                    <span className="btn__icon" aria-hidden="true">
+                      ▦
+                    </span>
+                    {gridCopied
+                      ? t('result.copyDailyPrimaryDone')
+                      : t('result.copyDailyPrimary')}
+                  </button>
+                  {quizzes.length > 0 && (
+                    <button
+                      type="button"
+                      className="btn btn--secondary btn--block"
+                      onClick={() => void handleChallengeFriend()}
+                    >
+                      <span className="btn__icon" aria-hidden="true">
+                        ⚔️
+                      </span>
+                      {challengeCopied
+                        ? t('result.challengeLinkCopied')
+                        : t('result.challengeFriend')}
+                    </button>
+                  )}
+                </>
+              ) : isDuel ? (
                 <>
                   <button
                     type="button"
@@ -642,47 +655,51 @@ export function ResultScreen({
               )}
             </div>
 
-            <div className="export-section">
-              <button
-                type="button"
-                className="btn btn--ghost btn--block"
-                onClick={() => void handleExportImage('square')}
-              >
-                <span className="btn__icon" aria-hidden="true">
-                  📸
-                </span>
-                {t('result.exportImage')}
-              </button>
-              <button
-                type="button"
-                className="btn btn--ghost btn--block"
-                onClick={() => void handleExportImage('story')}
-              >
-                <span className="btn__icon" aria-hidden="true">
-                  ▢
-                </span>
-                {t('result.exportStory')}
-              </button>
-            </div>
-
-            <p className="share-section__platforms-label">
-              {t('result.shareAlso')}
-            </p>
-            <div className="share-grid">
-              {SHARE_PLATFORMS.map((p) => (
+            <details className="share-more">
+              <summary className="share-more__summary">
+                {t('result.shareMore')}
+              </summary>
+              <div className="export-section">
                 <button
-                  key={p.id}
                   type="button"
-                  className={`btn share-btn ${p.className}`}
-                  onClick={() => handleShare(p.id)}
+                  className="btn btn--ghost btn--block"
+                  onClick={() => void handleExportImage('square')}
                 >
                   <span className="btn__icon" aria-hidden="true">
-                    {p.icon}
+                    📸
                   </span>
-                  {t(p.labelKey)}
+                  {t('result.exportImage')}
                 </button>
-              ))}
-            </div>
+                <button
+                  type="button"
+                  className="btn btn--ghost btn--block"
+                  onClick={() => void handleExportImage('story')}
+                >
+                  <span className="btn__icon" aria-hidden="true">
+                    ▢
+                  </span>
+                  {t('result.exportStory')}
+                </button>
+              </div>
+              <p className="share-section__platforms-label">
+                {t('result.shareAlso')}
+              </p>
+              <div className="share-grid">
+                {SHARE_PLATFORMS.map((p) => (
+                  <button
+                    key={p.id}
+                    type="button"
+                    className={`btn share-btn ${p.className}`}
+                    onClick={() => handleShare(p.id)}
+                  >
+                    <span className="btn__icon" aria-hidden="true">
+                      {p.icon}
+                    </span>
+                    {t(p.labelKey)}
+                  </button>
+                ))}
+              </div>
+            </details>
           </div>
 
           <PixfanCta quizId={result.quizId} percentage={result.percentage} />

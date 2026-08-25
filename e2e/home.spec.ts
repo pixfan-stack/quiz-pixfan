@@ -24,7 +24,7 @@ test.describe('Homepage', () => {
     ).toHaveCount(10);
   });
 
-  test('copies daily and duel links without starting a quiz', async ({
+  test('copies daily link without starting a quiz; duel has no scoreless invite', async ({
     page,
     context,
   }) => {
@@ -35,11 +35,11 @@ test.describe('Homepage', () => {
     );
     await expect(page.locator('.question-text')).toHaveCount(0);
 
-    await page.locator('.quiz-card-with-copy .quiz-card-copy-btn').nth(1).click();
-    await expect(page.locator('.quiz-card--duel .quiz-card__desc')).toContainText(
-      /copié|copied/i
-    );
-    await expect(page.locator('.question-text')).toHaveCount(0);
+    // Wave 2: duel invites carry a score from results only — no home copy button.
+    await expect(page.locator('.quiz-card--duel')).toBeVisible();
+    await expect(
+      page.locator('.quiz-card--duel').locator('xpath=..').locator('.quiz-card-copy-btn')
+    ).toHaveCount(0);
   });
 
 

@@ -47,7 +47,6 @@ import {
 import {
   buildDuelQuiz,
   createDuelSeed,
-  duelQuizId,
   DUEL_QUESTION_COUNT,
 } from '../utils/duel';
 import { getDisplayDailyStreak } from '../utils/dailyStreak';
@@ -105,7 +104,6 @@ export function QuizSelector({
   const [playCounts, setPlayCounts] = useState<Map<string, number>>(new Map());
   const [difficultyFilter, setDifficultyFilter] = useState<Difficulty | 'all'>('all');
   const [dailyLinkCopied, setDailyLinkCopied] = useState(false);
-  const [duelLinkCopied, setDuelLinkCopied] = useState(false);
   const [reminderOn, setReminderOn] = useState(() => isDailyReminderEnabled());
   const dailyStreak = getDisplayDailyStreak();
   const dailyPlayed = hasPlayedDailyToday();
@@ -166,20 +164,6 @@ export function QuizSelector({
         socialShareUrl(getDailyQuizId(), { lang: langCode })
       );
       flashCopied(setDailyLinkCopied);
-    } catch {
-      // ignore
-    }
-  };
-
-  const handleCopyDuelLink = async (event: MouseEvent) => {
-    event.stopPropagation();
-    event.preventDefault();
-    const id = duelQuizId(createDuelSeed());
-    try {
-      await navigator.clipboard.writeText(
-        socialShareUrl(id, { lang: langCode })
-      );
-      flashCopied(setDuelLinkCopied);
     } catch {
       // ignore
     }
@@ -487,7 +471,7 @@ export function QuizSelector({
           </li>
         )}
         {quizzes.length > 0 && difficultyFilter === 'all' && (
-          <li className="quiz-card-with-copy">
+          <li>
             <button
               type="button"
               className="quiz-card quiz-card--duel"
@@ -501,9 +485,7 @@ export function QuizSelector({
               </span>
               <div className="quiz-card__body">
                 <h3 className="quiz-card__title">{t('home.duel')}</h3>
-                <p className="quiz-card__desc">
-                  {duelLinkCopied ? t('home.linkCopied') : t('home.duelDesc')}
-                </p>
+                <p className="quiz-card__desc">{t('home.duelDesc')}</p>
               </div>
               <div className="quiz-card__footer">
                 <div className="quiz-card__meta">
@@ -516,15 +498,6 @@ export function QuizSelector({
                   <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
                 </span>
               </div>
-            </button>
-            <button
-              type="button"
-              className="quiz-card-copy-btn"
-              onClick={(e) => void handleCopyDuelLink(e)}
-              aria-label={t('home.copyDuelLink')}
-              title={t('home.copyDuelLink')}
-            >
-              {duelLinkCopied ? '✓' : '🔗'}
             </button>
           </li>
         )}
