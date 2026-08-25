@@ -20,7 +20,7 @@ const LABELS: Record<string, { en: string; fr: string }> = {
   random: { en: 'Random mix', fr: 'Mix aléatoire' },
   'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
   'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },
-  'photo-reading': { en: 'Read the photo', fr: 'Lis cette photo' },
+  'photo-reading': { en: 'Photos to analyze', fr: 'Photos à analyser' },
   'mix-easy': { en: 'Easy mix', fr: 'Mix facile' },
   'mix-medium': { en: 'Medium mix', fr: 'Mix intermédiaire' },
   'mix-hard': { en: 'Hard mix', fr: 'Mix difficile' },
