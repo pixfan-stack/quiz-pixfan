@@ -1242,6 +1242,14 @@ a {
   color: #0d9488;
 }
 
+.result-vault-cleared {
+  margin: 0.35rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #059669;
+}
+
 .quiz-card-with-copy {
   position: relative;
 }

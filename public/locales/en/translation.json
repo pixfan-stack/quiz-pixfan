@@ -121,6 +121,7 @@
     "copyDailyGrid": "Copy results",
     "dailyGridCopied": "Copied!",
     "vaultSaved": "{{count}} miss(es) saved to your weak spots",
+    "vaultCleared": "{{count}} weak spot(s) cleared from your list",
     "exportImage": "Export as image",
     "exportStory": "Stories image (9:16)",
     "retry": "Try again",

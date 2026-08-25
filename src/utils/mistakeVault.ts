@@ -90,6 +90,55 @@ export function clearMistakeVault(): void {
   }
 }
 
+/** Normalize ids so category (`q1`) and weak-spots (`cat__q1`) match. */
+function idVariants(questionId: string): string[] {
+  const ids = new Set<string>([questionId]);
+  const idx = questionId.indexOf('__');
+  if (idx > 0) {
+    ids.add(questionId.slice(idx + 2));
+  }
+  return [...ids];
+}
+
+function entryMatches(entryId: string, resolvedIds: Set<string>): boolean {
+  const entryVariants = idVariants(entryId);
+  for (const variant of entryVariants) {
+    if (resolvedIds.has(variant)) return true;
+  }
+  for (const resolved of resolvedIds) {
+    if (entryVariants.includes(resolved)) return true;
+    // compound vault id vs raw resolved, or vice versa
+    for (const rv of idVariants(resolved)) {
+      if (entryVariants.includes(rv)) return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Remove vault entries the player just answered correctly.
+ * Returns how many entries were cleared.
+ */
+export function resolveCorrectAnswers(items: AnswerReviewItem[]): number {
+  const correct = items.filter((m) => m.wasCorrect);
+  if (correct.length === 0) return 0;
+
+  const vault = readVault();
+  if (vault.length === 0) return 0;
+
+  const resolvedIds = new Set<string>();
+  for (const item of correct) {
+    for (const variant of idVariants(item.question.id)) {
+      resolvedIds.add(variant);
+    }
+  }
+
+  const next = vault.filter((e) => !entryMatches(e.questionId, resolvedIds));
+  const cleared = vault.length - next.length;
+  if (cleared > 0) writeVault(next);
+  return cleared;
+}
+
 export function isWeakSpotsQuizId(quizId: string): boolean {
   return quizId === WEAK_SPOTS_QUIZ_ID;
 }
