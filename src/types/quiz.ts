@@ -81,6 +81,8 @@ export interface QuizResult {
   tabSwitchPenalty?: number;
   /** Incorrect (or timed-out) answers for the review panel. */
   mistakes: AnswerReviewItem[];
+  /** Full answer log (correct + incorrect) for vault resolution / analytics. */
+  reviews?: AnswerReviewItem[];
   /** Per-question correctness in play order (for share grids). */
   answerMarks?: boolean[];
 }

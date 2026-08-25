@@ -52,7 +52,7 @@ import {
   isDailyQuizId,
   msUntilNextDaily,
 } from '../utils/dailyChallenge';
-import { recordMistakes } from '../utils/mistakeVault';
+import { recordMistakes, resolveCorrectAnswers } from '../utils/mistakeVault';
 import {
   buildDailyResultShareBlock,
   formatResultShareGrid,
@@ -146,6 +146,7 @@ export function ResultScreen({
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [dailyStreak, setDailyStreak] = useState(0);
   const [vaultSaved, setVaultSaved] = useState(0);
+  const [vaultCleared, setVaultCleared] = useState(0);
   const [dailyCountdown, setDailyCountdown] = useState(() =>
     formatDailyCountdown(msUntilNextDaily(), langCode)
   );
@@ -295,7 +296,8 @@ export function ResultScreen({
     });
     setNewAchievements(newly);
     setVaultSaved(recordMistakes(result.mistakes ?? []));
-  }, [result.quizId, result.percentage, result.mistakes, categoryQuizIds]);
+    setVaultCleared(resolveCorrectAnswers(result.reviews ?? []));
+  }, [result.quizId, result.percentage, result.mistakes, result.reviews, categoryQuizIds]);
 
   useEffect(() => {
     if (!isDaily) return;
@@ -521,6 +523,11 @@ export function ResultScreen({
           {vaultSaved > 0 && (
             <p className="result-vault-saved" role="status">
               {t('result.vaultSaved', { count: vaultSaved })}
+            </p>
+          )}
+          {vaultCleared > 0 && (
+            <p className="result-vault-cleared" role="status">
+              {t('result.vaultCleared', { count: vaultCleared })}
             </p>
           )}
 

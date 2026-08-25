@@ -5,6 +5,7 @@ import {
   clearMistakeVault,
   getMistakeVaultCount,
   recordMistakes,
+  resolveCorrectAnswers,
   WEAK_SPOTS_QUIZ_ID,
 } from '../utils/mistakeVault';
 
@@ -57,5 +58,48 @@ describe('mistakeVault', () => {
 
   it('returns null when vault is empty', () => {
     expect(buildWeakSpotsQuiz(sample)).toBeNull();
+  });
+
+  it('clears vault entries when answered correctly (raw and compound ids)', () => {
+    const q1 = sample[0]!.questions[0]!;
+    const q2 = sample[0]!.questions[1]!;
+    recordMistakes([
+      {
+        question: { ...q1, id: 'cat-a__q1' },
+        selectedIds: [],
+        wasCorrect: false,
+      },
+      {
+        question: q2,
+        selectedIds: [],
+        wasCorrect: false,
+      },
+    ]);
+    expect(getMistakeVaultCount()).toBe(2);
+
+    const cleared = resolveCorrectAnswers([
+      {
+        question: q1, // raw id should match compound vault entry
+        selectedIds: ['a'],
+        wasCorrect: true,
+      },
+      {
+        question: { ...q2, id: 'cat-a__q2' },
+        selectedIds: [],
+        wasCorrect: false,
+      },
+    ]);
+    expect(cleared).toBe(1);
+    expect(getMistakeVaultCount()).toBe(1);
+
+    const cleared2 = resolveCorrectAnswers([
+      {
+        question: { ...q2, id: 'cat-a__q2' },
+        selectedIds: ['a'],
+        wasCorrect: true,
+      },
+    ]);
+    expect(cleared2).toBe(1);
+    expect(getMistakeVaultCount()).toBe(0);
   });
 });

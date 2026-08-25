@@ -121,6 +121,7 @@
     "copyDailyGrid": "Copier les résultats",
     "dailyGridCopied": "Copié !",
     "vaultSaved": "{{count}} erreur(s) ajoutée(s) à vos points faibles",
+    "vaultCleared": "{{count}} point(s) faible(s) maîtrisé(s) — retiré(s) de la liste",
     "exportImage": "Exporter en image",
     "exportStory": "Image Stories (9:16)",
     "retry": "Réessayer",

@@ -132,9 +132,37 @@ describe('questions.json', () => {
       for (const q of quiz.questions) {
         if (q.type === 'multiple') {
           expect(q.correctAnswers.length).toBeGreaterThanOrEqual(1);
+          expect(q.correctAnswers.length).toBeLessThan(q.answers.length);
         }
       }
     }
+  });
+
+  it('comp-20 is single with all-of-the-above; hist-20 is not all-correct', () => {
+    const composition = data.quizzes.find((q) => q.id === 'composition');
+    const history = data.quizzes.find((q) => q.id === 'history-icons');
+    const comp20 = composition?.questions.find((q) => q.id === 'comp-20');
+    const hist20 = history?.questions.find((q) => q.id === 'hist-20');
+    expect(comp20?.type).toBe('single');
+    expect(comp20?.correctAnswers).toEqual(['d']);
+    expect(hist20?.type).toBe('multiple');
+    expect(hist20?.correctAnswers.sort()).toEqual(['a', 'b', 'c']);
+    expect(hist20?.correctAnswers.length).toBeLessThan(hist20!.answers.length);
+  });
+
+  it('single-choice correct answers are not stuck in first display slot', () => {
+    let first = 0;
+    let total = 0;
+    for (const quiz of data.quizzes) {
+      for (const q of quiz.questions) {
+        if (q.type !== 'single' || q.correctAnswers.length !== 1) continue;
+        total += 1;
+        if (q.answers[0]?.id === q.correctAnswers[0]) first += 1;
+      }
+    }
+    expect(total).toBeGreaterThan(100);
+    // Authoring bias was ~77% on first slot; after shuffle expect < 40%.
+    expect(first / total).toBeLessThan(0.4);
   });
 
   it.each(EXPECTED_QUIZ_IDS)('%s quiz exists with enough questions', (id) => {
