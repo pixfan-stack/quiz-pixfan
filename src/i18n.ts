@@ -28,14 +28,16 @@ void i18n
       en: { translation: en },
       fr: { translation: fr },
     },
-    fallbackLng: 'en',
+    fallbackLng: 'fr',
     supportedLngs: [...SUPPORTED_LANGUAGES],
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'navigator'],
+      // `?lang=fr|en` supports hreflang / share links before localStorage.
+      order: ['querystring', 'localStorage', 'navigator'],
       caches: ['localStorage'],
+      lookupQuerystring: 'lang',
       lookupLocalStorage: 'i18nextLng',
     },
   });

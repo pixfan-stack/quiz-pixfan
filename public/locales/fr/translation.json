@@ -249,7 +249,11 @@
   "footer": {
     "copyright": "© {{year}} pixfan.com — Apprendre la photo, choisir son matériel",
     "version": "v{{version}}",
-    "admin": "Éditer les questions"
+    "admin": "Éditer les questions",
+    "guides": "Guides photo",
+    "guideExposure": "Triangle d’exposition",
+    "guideComposition": "Composition",
+    "guideSmartphone": "Photo smartphone"
   },
   "pwa": {
     "installTitle": "Installer Quiz PixFan",

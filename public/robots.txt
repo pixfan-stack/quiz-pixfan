@@ -1,0 +1,12 @@
+# Quiz PixFan — https://quiz.pixfan.fr
+User-agent: *
+Allow: /
+
+# Share previews (crawlable OG pages)
+Allow: /s/
+Allow: /api/og
+
+# SEO guides (static HTML)
+Allow: /guides/
+
+Sitemap: https://quiz.pixfan.fr/sitemap.xml
