@@ -49,7 +49,11 @@ import {
   createDuelSeed,
   DUEL_QUESTION_COUNT,
 } from '../utils/duel';
-import { getDisplayDailyStreak } from '../utils/dailyStreak';
+import {
+  getDisplayDailyStreak,
+  getStreakFreezesAvailable,
+} from '../utils/dailyStreak';
+import { downloadDailyChallengeIcs } from '../utils/dailyChallengeCalendar';
 import {
   buildPhotoReadingQuiz,
   getPhotoReadingTeaser,
@@ -106,6 +110,7 @@ export function QuizSelector({
   const [dailyLinkCopied, setDailyLinkCopied] = useState(false);
   const [reminderOn, setReminderOn] = useState(() => isDailyReminderEnabled());
   const dailyStreak = getDisplayDailyStreak();
+  const streakFreezes = getStreakFreezesAvailable();
   const dailyPlayed = hasPlayedDailyToday();
   const vaultCount = getMistakeVaultCount();
   const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
@@ -362,6 +367,23 @@ export function QuizSelector({
                 </button>
               </div>
             )}
+            <div className="setting-row setting-row--stack">
+              <p className="setting-label">{t('home.addToCalendar')}</p>
+              <p className="setting-hint">{t('home.addToCalendarHint')}</p>
+              <button
+                type="button"
+                className="btn btn--secondary btn--small"
+                onClick={() =>
+                  downloadDailyChallengeIcs({
+                    title: t('home.dailyChallenge'),
+                    description: t('home.dailyChallengeDesc'),
+                    lang: langCode,
+                  })
+                }
+              >
+                {t('home.addToCalendar')}
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -444,6 +466,11 @@ export function QuizSelector({
                   {dailyStreak > 0 && (
                     <span className="quiz-card__meta-chip quiz-card__meta-chip--streak">
                       {t('home.dailyStreak', { count: dailyStreak })}
+                    </span>
+                  )}
+                  {streakFreezes > 0 && (
+                    <span className="quiz-card__meta-chip quiz-card__meta-chip--freeze">
+                      {t('home.streakFreezeAvailable')}
                     </span>
                   )}
                   {dailyPlayed && (

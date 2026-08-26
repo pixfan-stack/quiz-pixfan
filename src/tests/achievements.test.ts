@@ -16,7 +16,13 @@ describe('achievements', () => {
       percentage: 70,
       categoryQuizIds: ['a', 'b'],
       highscores: {},
-      streak: { lastDailyId: null, currentStreak: 0, bestStreak: 0 },
+      streak: {
+        lastDailyId: null,
+        currentStreak: 0,
+        bestStreak: 0,
+        freezesAvailable: 1,
+        freezeWeekKey: null,
+      },
     });
     expect(newly).toContain('first-finish');
     expect(newly).toContain('duelist');
@@ -29,7 +35,13 @@ describe('achievements', () => {
       percentage: 100,
       categoryQuizIds: [],
       highscores: {},
-      streak: { lastDailyId: null, currentStreak: 0, bestStreak: 0 },
+      streak: {
+        lastDailyId: null,
+        currentStreak: 0,
+        bestStreak: 0,
+        freezesAvailable: 1,
+        freezeWeekKey: null,
+      },
     });
     expect(newly).toEqual(
       expect.arrayContaining(['first-finish', 'perfect', 'random-perfect'])
@@ -64,7 +76,13 @@ describe('achievements', () => {
           updatedAt: 'x',
         },
       },
-      streak: { lastDailyId: null, currentStreak: 0, bestStreak: 0 },
+      streak: {
+        lastDailyId: null,
+        currentStreak: 0,
+        bestStreak: 0,
+        freezesAvailable: 1,
+        freezeWeekKey: null,
+      },
     });
     expect(getUnlockedAchievements().has('expert-trio')).toBe(true);
   });
@@ -75,14 +93,26 @@ describe('achievements', () => {
       percentage: 50,
       categoryQuizIds: [],
       highscores: {},
-      streak: { lastDailyId: null, currentStreak: 0, bestStreak: 0 },
+      streak: {
+        lastDailyId: null,
+        currentStreak: 0,
+        bestStreak: 0,
+        freezesAvailable: 1,
+        freezeWeekKey: null,
+      },
     });
     const second = unlockAchievements({
       quizId: 'y',
       percentage: 50,
       categoryQuizIds: [],
       highscores: {},
-      streak: { lastDailyId: null, currentStreak: 0, bestStreak: 0 },
+      streak: {
+        lastDailyId: null,
+        currentStreak: 0,
+        bestStreak: 0,
+        freezesAvailable: 1,
+        freezeWeekKey: null,
+      },
     });
     expect(second).toEqual([]);
   });

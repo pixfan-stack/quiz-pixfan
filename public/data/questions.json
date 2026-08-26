@@ -1108,6 +1108,251 @@
             "en": "Use the lowest ISO that still lets you freeze motion and expose correctly. Blur is worse than mild noise.",
             "fr": "Prends l’ISO le plus bas qui te laisse encore figer et exposer correctement. Le flou est pire qu’un peu de bruit."
           }
+        },
+        {
+          "id": "exp-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Window portrait: bright outdoors, dark room. How do you keep both readable?",
+            "fr": "Portrait à la fenêtre : extérieur très clair, pièce sombre. Comment garder les deux lisibles ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Expose for the room only and blow the window",
+                "fr": "Exposer pour la pièce et cramer la fenêtre"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Expose for the outdoor view and silhouette the subject",
+                "fr": "Exposer pour le dehors et silhouetter le sujet"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Expose for the subject’s face, then lift shadows / use fill if needed",
+                "fr": "Exposer pour le visage, puis remonter les ombres / fill si besoin"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Always shoot at f/22 and ISO 50",
+                "fr": "Toujours shooter à f/22 et ISO 50"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "c"
+          ],
+          "explanation": {
+            "en": "Protect the face first. Recover room shadows later; a blown window is often acceptable.",
+            "fr": "Protège d’abord le visage. Remonte les ombres ensuite ; une fenêtre cramée est souvent acceptable."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Portrait near a bright window",
+            "fr": "Portrait près d’une fenêtre lumineuse"
+          }
+        },
+        {
+          "id": "exp-25",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Myth: “Higher ISO always means a worse photo.” What’s the nuance?",
+            "fr": "Mythe : « Plus d’ISO = forcément une moins bonne photo. » Quelle nuance ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "True — never go above ISO 400",
+                "fr": "Vrai — ne jamais dépasser ISO 400"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Noise is often better than blur or underexposure; modern sensors handle high ISO well",
+                "fr": "Le bruit vaut mieux que le flou ou la sous-exposition ; les capteurs modernes gèrent bien les hauts ISO"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "ISO only affects white balance",
+                "fr": "L’ISO ne change que la balance des blancs"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "ISO is only for film cameras",
+                "fr": "L’ISO n’existe que pour l’argentique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "A sharp, well-exposed high-ISO frame beats a clean but blurry one.",
+            "fr": "Un cliché net et bien exposé à haut ISO bat un fichier « propre » mais flou."
+          }
+        },
+        {
+          "id": "exp-26",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "You’re at EV 0 on a reflective beach. Skin looks dark. Smartest next step?",
+            "fr": "Tu es à EV 0 sur une plage réfléchissante. Les peaux paraissent sombres. Meilleur réflexe ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Dial +1 to +2 exposure compensation",
+                "fr": "Passer à +1 / +2 IL de compensation"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Close the aperture two stops",
+                "fr": "Fermer le diaphragme de deux stops"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Switch to tungsten white balance",
+                "fr": "Passer en balance tungstène"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Enable the self-timer only",
+                "fr": "Activer seulement le retardateur"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Matrix metering underexposes bright scenes. Positive compensation restores midtones.",
+            "fr": "La mesure matricielle sous-expose les scènes claires. Une compensation positive restaure les tons moyens."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Bright outdoor landscape",
+            "fr": "Paysage extérieur lumineux"
+          }
+        },
+        {
+          "id": "exp-27",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Flash + ambient: how do you keep the background from going black?",
+            "fr": "Flash + ambiance : comment éviter un fond noir ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Only raise flash power; ignore shutter",
+                "fr": "Monter seulement la puissance flash ; ignorer l’obturateur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Slow the shutter (within sync) to gather ambient, set flash for the subject",
+                "fr": "Ralentir l’obturateur (dans la synchro) pour l’ambiance, régler le flash pour le sujet"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always use 1/8000 s with flash",
+                "fr": "Toujours shooter à 1/8000 s au flash"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Disable all ambient light meters",
+                "fr": "Désactiver tous les posemètres ambiants"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Shutter mainly gates ambient; flash (and aperture/ISO) lights the subject.",
+            "fr": "L’obturateur gère surtout l’ambiance ; le flash (avec ouverture/ISO) éclaire le sujet."
+          }
+        },
+        {
+          "id": "exp-28",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Sports hallway: subject runs toward you. Best autofocus / shutter combo?",
+            "fr": "Couloir de sport : le sujet court vers toi. Meilleure combo AF / obturateur ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Single AF + 1/60 s",
+                "fr": "AF simple + 1/60 s"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Continuous AF + fast shutter (e.g. 1/500 s+)",
+                "fr": "AF continu + obturateur rapide (ex. 1/500 s+)"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Manual focus at infinity + bulb",
+                "fr": "Mise au point manuelle à l’infini + pose B"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Face detect only at 2 s exposure",
+                "fr": "Détection de visage seule en pose 2 s"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Tracking AF plus a shutter fast enough to freeze motion.",
+            "fr": "Un AF qui suit, plus un temps assez court pour figer."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Runner in motion",
+            "fr": "Coureur en mouvement"
+          }
         }
       ],
       "difficulty": "easy"
@@ -2220,6 +2465,251 @@
           "explanation": {
             "en": "Intention = choices. Closer, cleaner, level, and timed beats “spray and pray”.",
             "fr": "L’intention, ce sont des choix. Plus près, plus propre, droit et bien cadencé battent le mode rafale aveugle."
+          }
+        },
+        {
+          "id": "comp-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Crowded street: how do you isolate one subject without moving closer?",
+            "fr": "Rue bondée : comment isoler un sujet sans te rapprocher ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Widen to 16 mm and include everyone",
+                "fr": "Passer à 16 mm et tout inclure"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Use a longer focal length and a shallow depth of field",
+                "fr": "Utiliser une focale plus longue et une faible profondeur de champ"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always center the subject with flash",
+                "fr": "Toujours centrer le sujet au flash"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shoot only vertical panoramas",
+                "fr": "Ne shooter que des panoramas verticaux"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Compression + blur separates the subject from clutter.",
+            "fr": "La compression et le flou séparent le sujet du fouillis."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Busy city street",
+            "fr": "Rue de ville animée"
+          }
+        },
+        {
+          "id": "comp-25",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Myth: “Never put the subject in the center.” When is centering fine?",
+            "fr": "Mythe : « Ne jamais centrer le sujet. » Quand le centrage est-il pertinent ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Never — always use thirds",
+                "fr": "Jamais — toujours les tiers"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Symmetry, portraits with direct gaze, or strong graphic balance",
+                "fr": "Symétrie, portrait au regard frontal, ou équilibre graphique fort"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only for screenshots of spreadsheets",
+                "fr": "Uniquement pour des captures de tableurs"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only when shooting in RAW",
+                "fr": "Uniquement en RAW"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Rules are tools. Centered frames can feel intentional and powerful.",
+            "fr": "Les règles sont des outils. Un cadrage centré peut être volontaire et fort."
+          }
+        },
+        {
+          "id": "comp-26",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "You want leading lines into a tiny figure. Which framing mistake kills it?",
+            "fr": "Tu veux des lignes directrices vers une petite silhouette. Quelle erreur casse l’effet ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Leaving breathing room at the vanishing point",
+                "fr": "Laisser de l’air au point de fuite"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Cropping so lines exit the frame before reaching the subject",
+                "fr": "Rogner pour que les lignes sortent du cadre avant d’atteindre le sujet"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Using a slightly lower camera angle",
+                "fr": "Utiliser un angle un peu plus bas"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Waiting for softer light",
+                "fr": "Attendre une lumière plus douce"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Leading lines must still point at the subject inside the frame.",
+            "fr": "Les lignes doivent encore pointer vers le sujet dans le cadre."
+          }
+        },
+        {
+          "id": "comp-27",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Wedding toast: many faces. How do you keep hierarchy clear?",
+            "fr": "Toast de mariage : beaucoup de visages. Comment garder une hiérarchie claire ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Focus on the speakers / couple and let others fall softer",
+                "fr": "Net sur les intervenants / le couple, les autres plus doux"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Focus on the farthest chandelier",
+                "fr": "Net sur le chandelier le plus loin"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always use the widest aperture on the cake",
+                "fr": "Toujours la plus grande ouverture sur le gâteau"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Pan-blur every guest equally",
+                "fr": "Flouter tous les invités pareil au filé"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Direct attention with focus and placement — not equal sharpness everywhere.",
+            "fr": "Dirige l’attention par la mise au point et le placement — pas une netteté égale partout."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Wedding celebration moment",
+            "fr": "Moment de célébration de mariage"
+          }
+        },
+        {
+          "id": "comp-28",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Café table: cluttered foreground. Cleanest fix before shooting?",
+            "fr": "Table de café : premier plan encombré. Correction la plus propre avant de shooter ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Raise ISO to 25600",
+                "fr": "Monter l’ISO à 25600"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Clear or rearrange objects, or change angle to simplify",
+                "fr": "Ranger / déplacer, ou changer d’angle pour simplifier"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Add more napkins for texture",
+                "fr": "Ajouter des serviettes pour la texture"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Shoot through a dirty glass for mood only",
+                "fr": "Shooter à travers un verre sale pour l’ambiance seule"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Composition starts before the shutter — edit the scene.",
+            "fr": "La composition commence avant le déclenchement — édite la scène."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Cafe table scene",
+            "fr": "Scène de table de café"
           }
         }
       ],
@@ -7833,6 +8323,246 @@
             "en": "Real moments beat directed grinning marathons — light and background do half the work.",
             "fr": "Les vrais moments battent le marathon de sourires forcés — lumière et fond font la moitié du travail."
           }
+        },
+        {
+          "id": "gen-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Client wants “documentary wedding” coverage. What does that imply?",
+            "fr": "Le client veut une couverture mariage « documentaire ». Qu’est-ce que ça implique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Only posed studio lighting all day",
+                "fr": "Uniquement de la lumière studio posée toute la journée"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Observe and anticipate moments with minimal staging",
+                "fr": "Observer et anticiper les moments avec peu de mise en scène"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only drone overheads of the venue",
+                "fr": "Uniquement des vues drone du lieu"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only black-and-white film forever",
+                "fr": "Uniquement du film N&B pour toujours"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Documentary prioritizes real moments over heavy direction.",
+            "fr": "Le documentaire privilégie les vrais moments plutôt que la direction lourde."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Candid wedding moment",
+            "fr": "Moment de mariage spontané"
+          }
+        },
+        {
+          "id": "gen-25",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Myth: “Street photography must be confrontational.” Better framing?",
+            "fr": "Mythe : « La street doit être conflictuelle. » Meilleure façon de voir ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "True — always stop strangers aggressively",
+                "fr": "Vrai — toujours intercepter les inconnus agressivement"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Street can be quiet observation of public life, with ethics and local law in mind",
+                "fr": "La street peut être une observation discrète de la vie publique, dans le respect de l’éthique et du droit local"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Street only exists with fisheye lenses",
+                "fr": "La street n’existe qu’au fisheye"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Street means only photographing signs",
+                "fr": "La street = photographier uniquement des panneaux"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Approaches vary; respect and legality matter more than aggression.",
+            "fr": "Les approches varient ; le respect et la légalité comptent plus que l’agressivité."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Urban street scene",
+            "fr": "Scène de rue urbaine"
+          }
+        },
+        {
+          "id": "gen-26",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Wildlife: animal half-hidden in brush. Priority for a usable frame?",
+            "fr": "Animal à moitié caché dans les broussailles. Priorité pour une image utilisable ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Blow highlights on the sky behind",
+                "fr": "Cramer les hautes lumières du ciel derrière"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Clear eye contact / catchlight and enough shutter to freeze micro-motion",
+                "fr": "Un regard / catchlight net et un obturateur assez rapide pour figer les micro-mouvements"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always crop out the habitat",
+                "fr": "Toujours rogner l’habitat"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Use flash on nestlings at night without care",
+                "fr": "Flasher les oisillons la nuit sans précaution"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Readable eyes and sharp moments beat a busy but soft frame.",
+            "fr": "Des yeux lisibles et un instant net battent un cadre chargé mais flou."
+          }
+        },
+        {
+          "id": "gen-27",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Product shot on white: edges look gray. Likely cause?",
+            "fr": "Packshot sur fond blanc : les bords paraissent gris. Cause probable ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Too much separation light on the background",
+                "fr": "Trop de lumière de séparation sur le fond"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Background underexposed relative to the product — raise background lights",
+                "fr": "Fond sous-exposé par rapport au produit — remonter les lumières de fond"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Using RAW instead of JPEG",
+                "fr": "Utiliser le RAW au lieu du JPEG"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Lens too sharp",
+                "fr": "Objectif trop piqué"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "True seamless white needs the backdrop brighter than the subject edges.",
+            "fr": "Un vrai blanc seamless demande un fond plus clair que les bords du sujet."
+          }
+        },
+        {
+          "id": "gen-28",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Architecture interior: verticals lean. Fastest in-camera fix?",
+            "fr": "Intérieur d’architecture : les verticales penchent. Correction la plus rapide à la prise ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Tilt the camera more aggressively",
+                "fr": "Pencher encore plus l’appareil"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Keep the sensor parallel to walls / use a shift lens or level carefully",
+                "fr": "Garder le capteur parallèle aux murs / shift ou niveau soigneux"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always shoot from the floor looking up",
+                "fr": "Toujours shooter du sol en contre-plongée"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Use the smallest JPEG setting",
+                "fr": "Utiliser le plus petit JPEG"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Parallel planes prevent keystoning; shift lenses help when you can’t back up.",
+            "fr": "Des plans parallèles évitent le keystone ; le shift aide quand on ne peut pas reculer."
+          }
         }
       ],
       "difficulty": "easy"
@@ -8937,6 +9667,246 @@
           "explanation": {
             "en": "Night mode is multi-frame computational photography. Hold still (or brace) while it works.",
             "fr": "Le mode Nuit est de la photo computationnelle multi-vues. Reste stable le temps du calcul."
+          }
+        },
+        {
+          "id": "phone-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Night city: phone insists on ultra-wide. Why switch to 1×?",
+            "fr": "Ville de nuit : le téléphone insiste sur l’ultra grand-angle. Pourquoi passer en 1× ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Ultra-wide always has the best sensor",
+                "fr": "L’ultra grand-angle a toujours le meilleur capteur"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The main camera usually gathers more light and cleaner detail",
+                "fr": "Le module principal recueille en général plus de lumière et plus de détail propre"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "1× disables Night mode forever",
+                "fr": "Le 1× désactive le mode Nuit pour toujours"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Ultra-wide cannot focus outdoors",
+                "fr": "L’ultra grand-angle ne fait pas le point dehors"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Primary sensors are often larger — better for low light than tiny ultra-wide chips.",
+            "fr": "Le capteur principal est souvent plus grand — meilleur en basse lumière que le mini ultra grand-angle."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Smartphone photography at night",
+            "fr": "Photo smartphone de nuit"
+          }
+        },
+        {
+          "id": "phone-25",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Myth: “Portrait mode blur is the same as a fast lens.” Nuance?",
+            "fr": "Mythe : « Le flou Portrait mode = une optique lumineuse. » Nuance ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Identical optically in every case",
+                "fr": "Identique optiquement dans tous les cas"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Computational blur can look similar but may smear hair, glasses, or edges",
+                "fr": "Le flou calculé peut se ressembler mais peut bavurer cheveux, lunettes ou contours"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Portrait mode only works underwater",
+                "fr": "Le mode Portrait ne marche que sous l’eau"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Fast lenses cannot blur backgrounds",
+                "fr": "Les optiques lumineuses ne floutent pas les fonds"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Simulation is useful — check edges before you trust it.",
+            "fr": "La simulation est utile — vérifie les contours avant de faire confiance."
+          }
+        },
+        {
+          "id": "phone-26",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "You need printable detail of a distant sign. Best phone strategy?",
+            "fr": "Tu as besoin de détail imprimable d’un panneau distant. Meilleure stratégie téléphone ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Digital zoom to 20× then crop again",
+                "fr": "Zoom numérique ×20 puis recadrer encore"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Use the optical / high-quality tele module if available, brace, and shoot a burst",
+                "fr": "Utiliser le télé optique / haute qualité s’il existe, se stabiliser, et shooter en rafale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only use the selfie camera",
+                "fr": "Utiliser uniquement la caméra selfie"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Turn off all stabilization and walk while shooting",
+                "fr": "Couper toute stabilisation et marcher en shootant"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Optical reach + stability beats heavy digital zoom mush.",
+            "fr": "La portée optique + la stabilité battent un zoom numérique poussé."
+          }
+        },
+        {
+          "id": "phone-27",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Pro/RAW mode: highlights clip while the preview looked fine. Why?",
+            "fr": "Mode Pro/RAW : les hautes lumières crament alors que l’aperçu semblait bon. Pourquoi ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "RAW cannot record highlights ever",
+                "fr": "Le RAW ne peut jamais enregistrer les hautes lumières"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The screen often shows a processed preview; expose using the histogram / highlight warnings",
+                "fr": "L’écran montre souvent un aperçu traité ; expose avec l’histogramme / alertes hautes lumières"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Phones ignore ISO in Pro mode",
+                "fr": "Les téléphones ignorent l’ISO en mode Pro"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only HEIC causes clipping",
+                "fr": "Seul le HEIC provoque l’écrêtage"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Trust meters and histograms more than a brightened display preview.",
+            "fr": "Fais plus confiance aux mesures et à l’histogramme qu’à un aperçu éclairci."
+          }
+        },
+        {
+          "id": "phone-28",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "You’re filming a quick reel while walking. Stabilization tip?",
+            "fr": "Tu filmes un reel en marchant. Astuce de stabilisation ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Hold the phone at arm’s length fully extended",
+                "fr": "Tenir le téléphone bras tendu au maximum"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Tuck elbows in, walk heel-to-toe, and enable video stabilization / a mild crop mode",
+                "fr": "Coudes rentrés, marche talon-orteil, et activer la stab vidéo / un léger recadrage"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Disable all crop and run",
+                "fr": "Désactiver tout recadrage et courir"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only shoot upside down",
+                "fr": "Shooter uniquement à l’envers"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "b"
+          ],
+          "explanation": {
+            "en": "Body mechanics + digital stab beat a shaky outstretched arm.",
+            "fr": "La mécanique du corps + la stab numérique battent un bras tendu tremblant."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Person filming with a phone",
+            "fr": "Personne filmant avec un téléphone"
           }
         }
       ],
