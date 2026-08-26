@@ -2182,11 +2182,17 @@ a {
   }
 
   .quiz-card {
-    grid-template-columns: auto 1fr auto;
+    /* Keep a real min for the text column so long daily countdown
+       copy cannot be crushed to a one-character strip by chip-heavy footers. */
+    grid-template-columns: auto minmax(12rem, 1fr) auto;
     align-items: center;
   }
 
   .quiz-card__icon {
+    grid-row: span 1;
+  }
+
+  .quiz-card__teaser {
     grid-row: span 1;
   }
 
@@ -2198,6 +2204,16 @@ a {
     margin-top: 0;
     padding-top: 0;
     gap: 0.5rem;
+    min-width: 0;
+    max-width: 15.5rem;
+  }
+
+  .quiz-card__meta {
+    justify-content: flex-end;
+  }
+
+  .quiz-card__desc {
+    overflow-wrap: break-word;
   }
 
   .result-ring {
