@@ -1400,6 +1400,11 @@ a {
   font-weight: 700;
 }
 
+.quiz-card__meta-chip--freeze {
+  color: #0f766e;
+  font-weight: 600;
+}
+
 .achievements {
   margin: 1.75rem 0 1.25rem;
 }
@@ -1484,6 +1489,14 @@ a {
   text-align: center;
   font-weight: 700;
   color: #c45c26;
+}
+
+.result-daily-freeze {
+  margin: 0.35rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f766e;
 }
 
 .result-achievements-unlock {

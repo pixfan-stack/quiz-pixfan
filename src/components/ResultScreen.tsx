@@ -145,6 +145,7 @@ export function ResultScreen({
   const [shareFallbackCopied, setShareFallbackCopied] = useState(false);
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
   const [dailyStreak, setDailyStreak] = useState(0);
+  const [freezeConsumed, setFreezeConsumed] = useState(false);
   const [vaultSaved, setVaultSaved] = useState(0);
   const [vaultCleared, setVaultCleared] = useState(0);
   const [dailyCountdown, setDailyCountdown] = useState(() =>
@@ -282,6 +283,7 @@ export function ResultScreen({
     markQuizPlayed();
     const streakState = recordDailyCompletion(result.quizId);
     setDailyStreak(streakState.currentStreak);
+    setFreezeConsumed(streakState.freezeConsumed);
     const newly = unlockAchievements({
       quizId: result.quizId,
       percentage: result.percentage,
@@ -488,6 +490,11 @@ export function ResultScreen({
               {dailyStreak > 0 && (
                 <p className="result-daily-streak">
                   {t('result.dailyStreak', { count: dailyStreak })}
+                </p>
+              )}
+              {freezeConsumed && (
+                <p className="result-daily-freeze" role="status">
+                  {t('result.streakFreezeConsumed')}
                 </p>
               )}
               {shareGrid && (
