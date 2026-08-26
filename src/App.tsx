@@ -284,19 +284,19 @@ export default function App() {
             {t('footer.guides')}
           </a>
           <a
-            href="/guides/triangle-exposition.html"
+            href="/guides/triangle-exposition"
             className="app-footer__link"
           >
             {t('footer.guideExposure')}
           </a>
           <a
-            href="/guides/composition-photo.html"
+            href="/guides/composition-photo"
             className="app-footer__link"
           >
             {t('footer.guideComposition')}
           </a>
           <a
-            href="/guides/photo-smartphone.html"
+            href="/guides/photo-smartphone"
             className="app-footer__link"
           >
             {t('footer.guideSmartphone')}
