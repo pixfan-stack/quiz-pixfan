@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,43 +9,45 @@
     <meta name="color-scheme" content="light dark" />
 
     <!-- SEO -->
-    <title>Quiz PixFan — Photography Quizzes (FR/EN)</title>
+    <title>Quiz photo gratuit — 248 questions FR/EN | Quiz PixFan</title>
     <meta
       name="description"
-      content="Free bilingual photography quiz app. 180 questions across 9 categories: exposure, composition, light, gear, history, genres, smartphone, rights and retouching."
+      content="Testez vos connaissances photo gratuitement : 248 questions, 10 catégories (exposition, composition, lumière, matériel, histoire, smartphone…). Défi du jour, bilangue FR/EN."
     />
-    <meta name="keywords" content="photography quiz, quiz photo, exposure triangle, composition, lenses, camera tips" />
     <meta name="author" content="PixFan" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://quiz.pixfan.fr" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://quiz.pixfan.fr/" />
+    <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/?lang=fr" />
+    <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://quiz.pixfan.fr" />
-    <meta property="og:title" content="Quiz PixFan — Photography Quizzes" />
+    <meta property="og:url" content="https://quiz.pixfan.fr/" />
+    <meta property="og:title" content="Quiz photo gratuit — 248 questions | Quiz PixFan" />
     <meta
       property="og:description"
-      content="Test your photography knowledge with 180 questions across 9 categories. Bilingual FR/EN. Share your score!"
+      content="248 questions photo, 10 catégories, défi du jour. Gratuit, FR/EN. Partagez votre score !"
     />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="fr_FR" />
-    <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=2" />
-    <meta property="og:image:secure_url" content="https://quiz.pixfan.fr/og-image.png?v=2" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=3" />
+    <meta property="og:image:secure_url" content="https://quiz.pixfan.fr/og-image.png?v=3" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Quiz PixFan — 180 questions photo, 9 catégories, FR/EN" />
+    <meta property="og:image:alt" content="Quiz PixFan — 248 questions photo, 10 catégories, FR/EN" />
     <meta property="og:site_name" content="Quiz PixFan" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Quiz PixFan — Photography Quizzes" />
+    <meta name="twitter:title" content="Quiz photo gratuit — 248 questions | Quiz PixFan" />
     <meta
       name="twitter:description"
-      content="Free bilingual photography quiz app. 180 questions, 9 categories."
+      content="248 questions photo, 10 catégories. Gratuit, bilangue FR/EN."
     />
-    <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=2" />
-    <meta name="twitter:image:alt" content="Quiz PixFan — 180 photography questions, 9 categories, FR/EN" />
+    <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=3" />
+    <meta name="twitter:image:alt" content="Quiz PixFan — 248 photography questions, 10 categories, FR/EN" />
 
     <!-- PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,19 +61,81 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Quiz PixFan",
-      "description": "Bilingual photography quiz app with 180 questions across 9 categories",
-      "url": "https://quiz.pixfan.fr",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Web",
-      "browserRequirements": "Requires JavaScript",
-      "inLanguage": ["en", "fr"],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://quiz.pixfan.fr/#app",
+          "name": "Quiz PixFan",
+          "alternateName": ["Quiz photo PixFan", "Photography Quiz PixFan"],
+          "description": "Quiz photo gratuit bilangue FR/EN : 248 questions, 10 catégories, défi du jour et partage de score.",
+          "url": "https://quiz.pixfan.fr/",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Web",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": ["fr", "en"],
+          "isAccessibleForFree": true,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "publisher": { "@id": "https://www.pixfan.com/#organization" },
+          "image": "https://quiz.pixfan.fr/og-image.png?v=3"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.pixfan.com/#organization",
+          "name": "PixFan",
+          "url": "https://www.pixfan.com",
+          "sameAs": ["https://quiz.pixfan.fr"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://quiz.pixfan.fr/#website",
+          "url": "https://quiz.pixfan.fr/",
+          "name": "Quiz PixFan",
+          "inLanguage": ["fr", "en"],
+          "publisher": { "@id": "https://www.pixfan.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://quiz.pixfan.fr/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Le quiz photo PixFan est-il gratuit ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Quiz PixFan est entièrement gratuit : 248 questions, 10 catégories, défi du jour et mode aléatoire, sans inscription obligatoire."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de questions y a-t-il ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le catalogue compte 248 questions réparties en 10 catégories : exposition, composition, lumière et couleur, matériel, histoire, domaine public, genres, smartphone, droits photo et retouche."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le quiz est-il disponible en français et en anglais ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. L’interface et les questions sont bilingues FR/EN. Vous pouvez changer de langue à tout moment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qu’est-ce que le défi photo du jour ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Chaque jour, Quiz PixFan propose 10 questions partagées (souvent avec une photo à analyser). Vous pouvez suivre une série, utiliser un gel de série hebdomadaire et partager votre grille de score."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
   </head>

@@ -249,7 +249,11 @@
   "footer": {
     "copyright": "© {{year}} pixfan.com — Learn photography, choose your gear",
     "version": "v{{version}}",
-    "admin": "Edit questions"
+    "admin": "Edit questions",
+    "guides": "Photo guides",
+    "guideExposure": "Exposure triangle",
+    "guideComposition": "Composition",
+    "guideSmartphone": "Smartphone photo"
   },
   "pwa": {
     "installTitle": "Install Quiz PixFan",

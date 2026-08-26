@@ -279,6 +279,29 @@ export default function App() {
       </main>
 
       <footer className="app-footer">
+        <nav className="app-footer__guides" aria-label={t('footer.guides')}>
+          <a href="/guides/" className="app-footer__link">
+            {t('footer.guides')}
+          </a>
+          <a
+            href="/guides/triangle-exposition.html"
+            className="app-footer__link"
+          >
+            {t('footer.guideExposure')}
+          </a>
+          <a
+            href="/guides/composition-photo.html"
+            className="app-footer__link"
+          >
+            {t('footer.guideComposition')}
+          </a>
+          <a
+            href="/guides/photo-smartphone.html"
+            className="app-footer__link"
+          >
+            {t('footer.guideSmartphone')}
+          </a>
+        </nav>
         <div className="app-footer__inner">
           <a
             href="https://www.pixfan.com"
