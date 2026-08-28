@@ -62,6 +62,16 @@ export function escapeXml(value: string): string {
     .replace(/'/g, '&apos;');
 }
 
+/**
+ * Absolute PNG URL for Open Graph / Twitter cards.
+ * Major social crawlers reject SVG (`/api/og`) as og:image.
+ */
+export const OG_IMAGE_PATH = '/og-image.png?v=4';
+
+export function staticOgImageUrl(origin: string): string {
+  return `${origin.replace(/\/$/, '')}${OG_IMAGE_PATH}`;
+}
+
 /** 1200×630 SVG Open Graph card. */
 export function buildOgSvg(opts: {
   quizId: string;
@@ -157,6 +167,7 @@ export function buildShareHtml(opts: {
   <meta property="og:description" content="${safeDesc}" />
   <meta property="og:url" content="${escapeXml(opts.pageUrl)}" />
   <meta property="og:image" content="${escapeXml(opts.ogImageUrl)}" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
