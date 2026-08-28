@@ -163,6 +163,7 @@ export function buildShareHtml(opts: {
   <meta name="description" content="${safeDesc}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Quiz PixFan" />
+  <meta property="fb:app_id" content="1845182679783128" />
   <meta property="og:title" content="${safeTitle}" />
   <meta property="og:description" content="${safeDesc}" />
   <meta property="og:url" content="${escapeXml(opts.pageUrl)}" />
