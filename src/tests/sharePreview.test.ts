@@ -52,6 +52,8 @@ describe('sharePreview', () => {
     });
     expect(html).toContain('og:image');
     expect(html).toContain('/og-image.png');
+    expect(html).toContain('fb:app_id');
+    expect(html).toContain('1845182679783128');
     expect(html).toContain('/#/quiz/composition?score=80');
     expect(html).toContain('80 %');
   });
