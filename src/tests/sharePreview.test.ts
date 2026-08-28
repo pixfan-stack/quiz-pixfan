@@ -47,10 +47,11 @@ describe('sharePreview', () => {
       score: 80,
       lang: 'fr',
       pageUrl: 'https://quiz.pixfan.fr/s/composition?score=80',
-      ogImageUrl: 'https://quiz.pixfan.fr/api/og?quiz=composition&score=80',
+      ogImageUrl: 'https://quiz.pixfan.fr/og-image.png?v=4',
       appOrigin: 'https://quiz.pixfan.fr',
     });
     expect(html).toContain('og:image');
+    expect(html).toContain('/og-image.png');
     expect(html).toContain('/#/quiz/composition?score=80');
     expect(html).toContain('80 %');
   });

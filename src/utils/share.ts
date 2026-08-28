@@ -46,22 +46,13 @@ export function socialShareUrl(
   return u.toString();
 }
 
-/** Absolute OG image URL for a quiz/score. */
+/** Absolute OG image URL (static PNG — social crawlers reject SVG). */
 export function ogImageUrl(
-  quizId: string,
-  opts: SocialShareOptions = {}
+  _quizId: string,
+  _opts: SocialShareOptions = {}
 ): string {
   const base = APP_SHARE_URL.replace(/\/$/, '');
-  const u = new URL(`${base}/api/og`);
-  u.searchParams.set('quiz', quizId);
-  if (opts.score != null && Number.isFinite(opts.score)) {
-    u.searchParams.set(
-      'score',
-      String(Math.round(Math.min(100, Math.max(0, opts.score))))
-    );
-  }
-  if (opts.lang) u.searchParams.set('lang', opts.lang);
-  return u.toString();
+  return `${base}/og-image.png?v=4`;
 }
 
 export type SharePlatform = 'twitter' | 'facebook' | 'linkedin' | 'whatsapp';

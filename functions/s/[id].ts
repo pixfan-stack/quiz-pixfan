@@ -3,6 +3,7 @@ import {
   normalizeQuizId,
   parseLang,
   parseScore,
+  staticOgImageUrl,
 } from '../lib/sharePreview';
 
 /**
@@ -22,11 +23,8 @@ export const onRequestGet: PagesFunction<{ id: string }> = async (context) => {
   const score = parseScore(url.searchParams.get('score'));
   const lang = parseLang(url.searchParams.get('lang'));
   const origin = url.origin;
-
-  const og = new URL('/api/og', origin);
-  og.searchParams.set('quiz', quizId);
-  if (score != null) og.searchParams.set('score', String(score));
-  og.searchParams.set('lang', lang);
+  // PNG only — Facebook / LinkedIn / X / Slack reject SVG og:image.
+  const ogImageUrl = staticOgImageUrl(origin);
 
   const pageUrl = url.toString();
   const html = buildShareHtml({
@@ -34,7 +32,7 @@ export const onRequestGet: PagesFunction<{ id: string }> = async (context) => {
     score,
     lang,
     pageUrl,
-    ogImageUrl: og.toString(),
+    ogImageUrl,
     appOrigin: origin,
   });
 

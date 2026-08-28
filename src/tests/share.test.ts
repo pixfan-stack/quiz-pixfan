@@ -27,9 +27,8 @@ describe('share', () => {
     expect(share).toContain('score=80');
     expect(share).toContain('lang=fr');
     const og = ogImageUrl('duel-abcd2345', { score: 55, lang: 'en' });
-    expect(og).toContain('/api/og');
-    expect(og).toContain('quiz=duel-abcd2345');
-    expect(og).toContain('score=55');
+    expect(og).toContain('/og-image.png');
+    expect(og).not.toContain('/api/og');
   });
 
   it('resolves share kind from quiz id', () => {
