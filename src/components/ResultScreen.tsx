@@ -57,6 +57,11 @@ import {
   buildDailyResultShareBlock,
   formatResultShareGrid,
 } from '../utils/resultShareGrid';
+import {
+  masteryLabelKey,
+  masteryTierFromPercent,
+  nextMasteryTarget,
+} from '../utils/mastery';
 
 interface ResultScreenProps {
   quiz: Quiz;
@@ -164,6 +169,19 @@ export function ResultScreen({
     quizTitle,
   });
   const shareHashtags = t('share.hashtags');
+
+  const isCategoryQuiz = categoryQuizIds.includes(result.quizId);
+  const effectiveBest = Math.max(
+    result.percentage,
+    result.previousBest ?? 0
+  );
+  const masteryNext = isCategoryQuiz
+    ? nextMasteryTarget(effectiveBest)
+    : null;
+  const masteryTier = isCategoryQuiz
+    ? masteryTierFromPercent(effectiveBest)
+    : 'none';
+  const masteryKey = masteryLabelKey(masteryTier);
 
   const buildScorePayload = useCallback(
     () => ({
@@ -414,6 +432,19 @@ export function ResultScreen({
             >
               {t(`result.badge_${badgeKey}`)}
             </p>
+            {masteryKey && (
+              <p className="result-mastery-tier" role="status">
+                {t(masteryKey)}
+              </p>
+            )}
+            {masteryNext && (
+              <p className="result-mastery-next" role="status">
+                {t('result.masteryNext', {
+                  need: masteryNext.need,
+                  tier: t(`home.mastery_${masteryNext.nextTier}`),
+                })}
+              </p>
+            )}
             <p className="result-leaderboard-name">
               {t('result.leaderboardAs', { name: displayName })}
             </p>

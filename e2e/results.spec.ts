@@ -1,16 +1,11 @@
-import { test, expect } from './fixtures';
+import { test, expect, openMorePacks, CATEGORY_CARD } from './fixtures';
 
 test.describe('Results Screen', () => {
   test('shows results after completing quiz', async ({ page }) => {
     await page.goto('/');
 
-    // Start first category quiz (skip special packs)
-    await page
-      .locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
-      )
-      .first()
-      .click();
+    await openMorePacks(page);
+    await page.locator(CATEGORY_CARD).first().click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
 
     // Answer every question until results (category packs can grow beyond 20)

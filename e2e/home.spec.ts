@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures';
+import { test, expect, openMorePacks, CATEGORY_CARD } from './fixtures';
 
 test.describe('Homepage', () => {
   test.beforeEach(async ({ page }) => {
@@ -13,15 +13,15 @@ test.describe('Homepage', () => {
     await expect(page.locator('.quiz-card--daily')).toBeVisible();
     await expect(page.locator('.quiz-card--duel')).toBeVisible();
     await expect(page.locator('.quiz-card--photo')).toBeVisible();
+    await expect(page.locator('.home-more-packs')).toBeVisible();
+
+    await openMorePacks(page);
+
     await expect(page.locator('.quiz-card--random')).toBeVisible();
     await expect(page.locator('.difficulty-filter')).toBeVisible();
     await expect(page.locator('.weekly-leaders')).toBeVisible();
     await expect(page.locator('.achievements')).toBeVisible();
-    await expect(
-      page.locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
-      )
-    ).toHaveCount(10);
+    await expect(page.locator(CATEGORY_CARD)).toHaveCount(10);
   });
 
   test('copies daily link without starting a quiz; duel has no scoreless invite', async ({
@@ -50,6 +50,7 @@ test.describe('Homepage', () => {
   });
 
   test('shows question count on each quiz card', async ({ page }) => {
+    await openMorePacks(page);
     const quizCards = page.locator('.quiz-card');
     for (let i = 0; i < await quizCards.count(); i++) {
       const chip = quizCards.nth(i).locator('.quiz-card__meta-chip').first();
@@ -58,13 +59,8 @@ test.describe('Homepage', () => {
   });
 
   test('navigates to quiz when clicking a quiz card', async ({ page }) => {
-    await page
-      .locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
-      )
-      .first()
-      .click();
+    await openMorePacks(page);
+    await page.locator(CATEGORY_CARD).first().click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
   });
 });
-
