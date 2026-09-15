@@ -60,7 +60,7 @@ import {
   PHOTO_READING_COUNT,
   PHOTO_READING_ID,
 } from '../utils/photoReading';
-import { masteryLabelKey, masteryTierFromPercent } from '../utils/mastery';
+import { masteryLabelKey, masteryTierFromPercent, nextMasteryTarget } from '../utils/mastery';
 import { AchievementsPanel } from './AchievementsPanel';
 import { socialShareUrl } from '../utils/share';
 
@@ -106,6 +106,7 @@ export function QuizSelector({
   const [antiCheat, setAntiCheat] = useState(false);
   const [leaderboardQuizId, setLeaderboardQuizId] = useState<string | undefined>(undefined);
   const [playCounts, setPlayCounts] = useState<Map<string, number>>(new Map());
+  const [morePacksOpen, setMorePacksOpen] = useState(false);
   const [difficultyFilter, setDifficultyFilter] = useState<Difficulty | 'all'>('all');
   const [dailyLinkCopied, setDailyLinkCopied] = useState(false);
   const [reminderOn, setReminderOn] = useState(() => isDailyReminderEnabled());
@@ -398,32 +399,8 @@ export function QuizSelector({
         />
       )}
 
-      <div className="difficulty-filter" role="group" aria-label={t('home.difficultyFilter')}>
-        {(['all', 'easy', 'medium', 'hard'] as const).map((level) => (
-          <button
-            key={level}
-            type="button"
-            className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}`}
-            onClick={() => setDifficultyFilter(level)}
-            aria-pressed={difficultyFilter === level}
-          >
-            {t(`home.difficulty_${level}`)}
-          </button>
-        ))}
-        {difficultyFilter !== 'all' && (
-          <button
-            type="button"
-            className="btn btn--ghost btn--small"
-            onClick={handleStartDifficultyMix}
-            disabled={visibleQuizzes.length === 0}
-          >
-            {t('home.startDifficultyMix')}
-          </button>
-        )}
-      </div>
-
-      <ul className="quiz-list">
-        {quizzes.length > 0 && difficultyFilter === 'all' && (
+      {quizzes.length > 0 && (
+        <ul className="quiz-list quiz-list--featured" aria-label={t('home.featuredSection')}>
           <li className="quiz-card-with-copy">
             <button
               type="button"
@@ -482,7 +459,9 @@ export function QuizSelector({
                 </div>
                 <span className="quiz-card__cta">
                   {dailyPlayed ? t('home.dailyReplay') : t('home.start')}
-                  <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
+                  <span className="quiz-card__cta-arrow" aria-hidden="true">
+                    →
+                  </span>
                 </span>
               </div>
             </button>
@@ -496,8 +475,60 @@ export function QuizSelector({
               {dailyLinkCopied ? '✓' : '🔗'}
             </button>
           </li>
-        )}
-        {quizzes.length > 0 && difficultyFilter === 'all' && (
+
+          {photoPackAvailable && (
+            <li>
+              <button
+                type="button"
+                className="quiz-card quiz-card--photo quiz-card--featured-photo"
+                onClick={handleStartPhotoReading}
+                onMouseEnter={onPrefetchQuiz}
+                onFocus={onPrefetchQuiz}
+                aria-label={t('home.photoReading')}
+              >
+                {photoTeaser?.imageUrl ? (
+                  <span className="quiz-card__teaser" aria-hidden="true">
+                    <img
+                      src={photoTeaser.imageUrl}
+                      alt=""
+                      className="quiz-card__teaser-img"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                ) : (
+                  <span className="quiz-card__icon" aria-hidden="true">
+                    🖼️
+                  </span>
+                )}
+                <div className="quiz-card__body">
+                  <h3 className="quiz-card__title">{t('home.photoReading')}</h3>
+                  <p className="quiz-card__desc">{t('home.photoReadingDesc')}</p>
+                </div>
+                <div className="quiz-card__footer">
+                  <div className="quiz-card__meta">
+                    <span className="quiz-card__meta-chip quiz-card__meta-chip--learn">
+                      {t('home.photoReadingBadge')}
+                    </span>
+                    <span className="quiz-card__meta-chip">
+                      {t('home.questionsCount', { count: PHOTO_READING_COUNT })}
+                    </span>
+                    <HighScoreBadge
+                      showEmpty
+                      bestScore={getBestScore(PHOTO_READING_ID)}
+                    />
+                  </div>
+                  <span className="quiz-card__cta">
+                    {t('home.start')}
+                    <span className="quiz-card__cta-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  </span>
+                </div>
+              </button>
+            </li>
+          )}
+
           <li>
             <button
               type="button"
@@ -522,39 +553,6 @@ export function QuizSelector({
                 </div>
                 <span className="quiz-card__cta">
                   {t('home.start')}
-                  <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
-                </span>
-              </div>
-            </button>
-          </li>
-        )}
-        {quizzes.length > 0 && difficultyFilter === 'all' && vaultCount > 0 && (
-          <li>
-            <button
-              type="button"
-              className="quiz-card quiz-card--weak"
-              onClick={handleStartWeakSpots}
-              onMouseEnter={onPrefetchQuiz}
-              onFocus={onPrefetchQuiz}
-              aria-label={t('home.weakSpots')}
-            >
-              <span className="quiz-card__icon" aria-hidden="true">
-                🎯
-              </span>
-              <div className="quiz-card__body">
-                <h3 className="quiz-card__title">{t('home.weakSpots')}</h3>
-                <p className="quiz-card__desc">{t('home.weakSpotsDesc')}</p>
-              </div>
-              <div className="quiz-card__footer">
-                <div className="quiz-card__meta">
-                  <span className="quiz-card__meta-chip">
-                    {t('home.weakSpotsCount', {
-                      count: Math.min(vaultCount, WEAK_SPOTS_QUESTION_COUNT),
-                    })}
-                  </span>
-                </div>
-                <span className="quiz-card__cta">
-                  {t('home.start')}
                   <span className="quiz-card__cta-arrow" aria-hidden="true">
                     →
                   </span>
@@ -562,148 +560,211 @@ export function QuizSelector({
               </div>
             </button>
           </li>
-        )}
-        {quizzes.length > 0 && difficultyFilter === 'all' && photoPackAvailable && (
-          <li>
-            <button
-              type="button"
-              className="quiz-card quiz-card--photo"
-              onClick={handleStartPhotoReading}
-              onMouseEnter={onPrefetchQuiz}
-              onFocus={onPrefetchQuiz}
-              aria-label={t('home.photoReading')}
-            >
-              {photoTeaser?.imageUrl ? (
-                <span className="quiz-card__teaser" aria-hidden="true">
-                  <img
-                    src={photoTeaser.imageUrl}
-                    alt=""
-                    className="quiz-card__teaser-img"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </span>
-              ) : (
-                <span className="quiz-card__icon" aria-hidden="true">
-                  🖼️
-                </span>
-              )}
-              <div className="quiz-card__body">
-                <h3 className="quiz-card__title">{t('home.photoReading')}</h3>
-                <p className="quiz-card__desc">{t('home.photoReadingDesc')}</p>
-              </div>
-              <div className="quiz-card__footer">
-                <div className="quiz-card__meta">
-                  <span className="quiz-card__meta-chip">
-                    {t('home.questionsCount', { count: PHOTO_READING_COUNT })}
-                  </span>
-                  <HighScoreBadge
-                    showEmpty
-                    bestScore={getBestScore(PHOTO_READING_ID)}
-                  />
-                </div>
-                <span className="quiz-card__cta">
-                  {t('home.start')}
-                  <span className="quiz-card__cta-arrow" aria-hidden="true">
-                    →
-                  </span>
-                </span>
-              </div>
-            </button>
-          </li>
-        )}
-        {quizzes.length > 0 && difficultyFilter === 'all' && (
-          <li>
-            <button
-              type="button"
-              className="quiz-card quiz-card--random"
-              onClick={handleStartRandom}
-              onMouseEnter={onPrefetchQuiz}
-              onFocus={onPrefetchQuiz}
-              aria-label={t('home.randomQuiz')}
-            >
-              <span className="quiz-card__icon" aria-hidden="true">
-                🎲
-              </span>
-              <div className="quiz-card__body">
-                <h3 className="quiz-card__title">{t('home.randomQuiz')}</h3>
-                <p className="quiz-card__desc">{t('home.randomQuizDesc')}</p>
-              </div>
-              <div className="quiz-card__footer">
-                <div className="quiz-card__meta">
-                  <span className="quiz-card__meta-chip">
-                    {t('home.questionsCount', { count: 20 })}
-                  </span>
-                  {(playCounts.get(RANDOM_QUIZ_ID) ?? 0) > 0 && (
-                    <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
-                      {t('home.playsCount', { count: playCounts.get(RANDOM_QUIZ_ID) })}
-                    </span>
-                  )}
-                  <HighScoreBadge showEmpty bestScore={getBestScore(RANDOM_QUIZ_ID)} />
-                </div>
-                <span className="quiz-card__cta">
-                  {t('home.start')}
-                  <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
-                </span>
-              </div>
-            </button>
-          </li>
-        )}
-        {visibleQuizzes.map((quiz, index) => {
-          const bestScore = getBestScore(quiz.id);
-          const plays = playCounts.get(quiz.id) ?? 0;
-          const difficulty = deriveQuizDifficulty(quiz);
-          const mastery = masteryTierFromPercent(bestScore?.percentage);
-          const masteryKey = masteryLabelKey(mastery);
-          return (
-            <li key={quiz.id}>
+        </ul>
+      )}
+
+      <details
+        className="home-more-packs"
+        open={morePacksOpen}
+        onToggle={(e) => {
+          setMorePacksOpen((e.target as HTMLDetailsElement).open);
+        }}
+      >
+        <summary className="home-more-packs__summary">
+          <span className="home-more-packs__title">{t('home.morePacks')}</span>
+          <span className="home-more-packs__hint">{t('home.morePacksHint')}</span>
+        </summary>
+
+        <div className="home-more-packs__body">
+          <div
+            className="difficulty-filter"
+            role="group"
+            aria-label={t('home.difficultyFilter')}
+          >
+            {(['all', 'easy', 'medium', 'hard'] as const).map((level) => (
+              <button
+                key={level}
+                type="button"
+                className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}`}
+                onClick={() => {
+                  setDifficultyFilter(level);
+                  if (level !== 'all') setMorePacksOpen(true);
+                }}
+                aria-pressed={difficultyFilter === level}
+              >
+                {t(`home.difficulty_${level}`)}
+              </button>
+            ))}
+            {difficultyFilter !== 'all' && (
               <button
                 type="button"
-                className={`quiz-card${index % 2 === 1 ? ' quiz-card--alt' : ''}`}
-                onClick={() => handleStartQuiz(quiz)}
-                onMouseEnter={onPrefetchQuiz}
-                onFocus={onPrefetchQuiz}
-                aria-label={`${t('home.start')}: ${pickLocale(quiz.title, lang)} (${t('home.questionsCount', { count: quiz.questions.length })})`}
+                className="btn btn--ghost btn--small"
+                onClick={handleStartDifficultyMix}
+                disabled={visibleQuizzes.length === 0}
               >
-                <span className="quiz-card__icon" aria-hidden="true">
-                  {QUIZ_ICONS[quiz.id] ?? '✦'}
-                </span>
-                <div className="quiz-card__body">
-                  <h3 className="quiz-card__title">{pickLocale(quiz.title, lang)}</h3>
-                  <p className="quiz-card__desc">{pickLocale(quiz.description, lang)}</p>
-                </div>
-                <div className="quiz-card__footer">
-                  <div className="quiz-card__meta">
-                    <span className="quiz-card__meta-chip">
-                      {t('home.questionsCount', { count: quiz.questions.length })}
-                    </span>
-                    <span className={`quiz-card__meta-chip quiz-card__meta-chip--difficulty is-${difficulty}`}>
-                      {t(`home.difficulty_${difficulty}`)}
-                    </span>
-                    {masteryKey && (
-                      <span
-                        className={`quiz-card__meta-chip quiz-card__meta-chip--mastery is-${mastery}`}
-                      >
-                        {t(masteryKey)}
-                      </span>
-                    )}
-                    {plays > 0 && (
-                      <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
-                        {t('home.playsCount', { count: plays })}
-                      </span>
-                    )}
-                    <HighScoreBadge showEmpty bestScore={bestScore} />
-                  </div>
-                  <span className="quiz-card__cta">
-                    {t('home.start')}
-                    <span className="quiz-card__cta-arrow" aria-hidden="true">→</span>
-                  </span>
-                </div>
+                {t('home.startDifficultyMix')}
               </button>
-            </li>
-          );
-        })}
-      </ul>
+            )}
+          </div>
+
+          <ul className="quiz-list">
+            {quizzes.length > 0 &&
+              difficultyFilter === 'all' &&
+              vaultCount > 0 && (
+                <li>
+                  <button
+                    type="button"
+                    className="quiz-card quiz-card--weak"
+                    onClick={handleStartWeakSpots}
+                    onMouseEnter={onPrefetchQuiz}
+                    onFocus={onPrefetchQuiz}
+                    aria-label={t('home.weakSpots')}
+                  >
+                    <span className="quiz-card__icon" aria-hidden="true">
+                      🎯
+                    </span>
+                    <div className="quiz-card__body">
+                      <h3 className="quiz-card__title">{t('home.weakSpots')}</h3>
+                      <p className="quiz-card__desc">{t('home.weakSpotsDesc')}</p>
+                    </div>
+                    <div className="quiz-card__footer">
+                      <div className="quiz-card__meta">
+                        <span className="quiz-card__meta-chip">
+                          {t('home.weakSpotsCount', {
+                            count: Math.min(vaultCount, WEAK_SPOTS_QUESTION_COUNT),
+                          })}
+                        </span>
+                      </div>
+                      <span className="quiz-card__cta">
+                        {t('home.start')}
+                        <span className="quiz-card__cta-arrow" aria-hidden="true">
+                          →
+                        </span>
+                      </span>
+                    </div>
+                  </button>
+                </li>
+              )}
+            {quizzes.length > 0 && difficultyFilter === 'all' && (
+              <li>
+                <button
+                  type="button"
+                  className="quiz-card quiz-card--random"
+                  onClick={handleStartRandom}
+                  onMouseEnter={onPrefetchQuiz}
+                  onFocus={onPrefetchQuiz}
+                  aria-label={t('home.randomQuiz')}
+                >
+                  <span className="quiz-card__icon" aria-hidden="true">
+                    🎲
+                  </span>
+                  <div className="quiz-card__body">
+                    <h3 className="quiz-card__title">{t('home.randomQuiz')}</h3>
+                    <p className="quiz-card__desc">{t('home.randomQuizDesc')}</p>
+                  </div>
+                  <div className="quiz-card__footer">
+                    <div className="quiz-card__meta">
+                      <span className="quiz-card__meta-chip">
+                        {t('home.questionsCount', { count: 20 })}
+                      </span>
+                      {(playCounts.get(RANDOM_QUIZ_ID) ?? 0) > 0 && (
+                        <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
+                          {t('home.playsCount', {
+                            count: playCounts.get(RANDOM_QUIZ_ID),
+                          })}
+                        </span>
+                      )}
+                      <HighScoreBadge
+                        showEmpty
+                        bestScore={getBestScore(RANDOM_QUIZ_ID)}
+                      />
+                    </div>
+                    <span className="quiz-card__cta">
+                      {t('home.start')}
+                      <span className="quiz-card__cta-arrow" aria-hidden="true">
+                        →
+                      </span>
+                    </span>
+                  </div>
+                </button>
+              </li>
+            )}
+            {visibleQuizzes.map((quiz, index) => {
+              const bestScore = getBestScore(quiz.id);
+              const plays = playCounts.get(quiz.id) ?? 0;
+              const difficulty = deriveQuizDifficulty(quiz);
+              const mastery = masteryTierFromPercent(bestScore?.percentage);
+              const masteryKey = masteryLabelKey(mastery);
+              const masteryNext = nextMasteryTarget(bestScore?.percentage);
+              return (
+                <li key={quiz.id}>
+                  <button
+                    type="button"
+                    className={`quiz-card${index % 2 === 1 ? ' quiz-card--alt' : ''}`}
+                    onClick={() => handleStartQuiz(quiz)}
+                    onMouseEnter={onPrefetchQuiz}
+                    onFocus={onPrefetchQuiz}
+                    aria-label={`${t('home.start')}: ${pickLocale(quiz.title, lang)} (${t('home.questionsCount', { count: quiz.questions.length })})`}
+                  >
+                    <span className="quiz-card__icon" aria-hidden="true">
+                      {QUIZ_ICONS[quiz.id] ?? '✦'}
+                    </span>
+                    <div className="quiz-card__body">
+                      <h3 className="quiz-card__title">
+                        {pickLocale(quiz.title, lang)}
+                      </h3>
+                      <p className="quiz-card__desc">
+                        {pickLocale(quiz.description, lang)}
+                      </p>
+                    </div>
+                    <div className="quiz-card__footer">
+                      <div className="quiz-card__meta">
+                        <span className="quiz-card__meta-chip">
+                          {t('home.questionsCount', {
+                            count: quiz.questions.length,
+                          })}
+                        </span>
+                        <span
+                          className={`quiz-card__meta-chip quiz-card__meta-chip--difficulty is-${difficulty}`}
+                        >
+                          {t(`home.difficulty_${difficulty}`)}
+                        </span>
+                        {masteryKey && (
+                          <span
+                            className={`quiz-card__meta-chip quiz-card__meta-chip--mastery is-${mastery}`}
+                          >
+                            {t(masteryKey)}
+                          </span>
+                        )}
+                        {masteryNext && (
+                          <span className="quiz-card__meta-chip quiz-card__meta-chip--mastery-next">
+                            {t('home.masteryNext', {
+                              need: masteryNext.need,
+                              tier: t(`home.mastery_${masteryNext.nextTier}`),
+                            })}
+                          </span>
+                        )}
+                        {plays > 0 && (
+                          <span className="quiz-card__meta-chip quiz-card__meta-chip--soft">
+                            {t('home.playsCount', { count: plays })}
+                          </span>
+                        )}
+                        <HighScoreBadge showEmpty bestScore={bestScore} />
+                      </div>
+                      <span className="quiz-card__cta">
+                        {t('home.start')}
+                        <span className="quiz-card__cta-arrow" aria-hidden="true">
+                          →
+                        </span>
+                      </span>
+                    </div>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </details>
 
       <AchievementsPanel />
 

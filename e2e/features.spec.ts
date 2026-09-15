@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures';
+import { test, expect, openMorePacks, CATEGORY_CARD } from './fixtures';
 
 test.describe('Language Switching', () => {
   test('switches to English', async ({ page }) => {
@@ -34,10 +34,8 @@ test.describe('Language Switching', () => {
     await page.locator('.lang-switcher__btn').first().click();
     
     // Start quiz
-    await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)')
-      .first()
-      .click();
+    await openMorePacks(page);
+    await page.locator(CATEGORY_CARD).first().click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
     
     // Should see English text in question
@@ -65,10 +63,8 @@ test.describe('Dark Mode', () => {
     await page.locator('.dark-mode-toggle').click();
     
     // Start a quiz
-    await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)')
-      .first()
-      .click();
+    await openMorePacks(page);
+    await page.locator(CATEGORY_CARD).first().click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
     
     // Check dark mode is still active
@@ -87,10 +83,8 @@ test.describe('Timer Mode', () => {
     await page.locator('#timer-select').selectOption('30');
     
     // Start quiz
-    await page
-      .locator('.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)')
-      .first()
-      .click();
+    await openMorePacks(page);
+    await page.locator(CATEGORY_CARD).first().click();
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
     
     // Timer should be visible (check for stat-pill containing "s")

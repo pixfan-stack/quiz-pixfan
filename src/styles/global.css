@@ -423,6 +423,60 @@ a {
   padding: 0;
 }
 
+.quiz-list--featured {
+  margin-bottom: 1.1rem;
+}
+
+.home-more-packs {
+  margin: 0 0 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--color-surface-alt) 55%, var(--color-surface));
+  overflow: hidden;
+}
+
+.home-more-packs__summary {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.home-more-packs__summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-more-packs__summary::after {
+  content: '▾';
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  transition: transform 0.15s var(--ease-out);
+}
+
+.home-more-packs[open] > .home-more-packs__summary::after {
+  transform: rotate(180deg);
+}
+
+.home-more-packs__title {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.home-more-packs__hint {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
+.home-more-packs__body {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
 .quiz-card {
   position: relative;
   display: grid;
@@ -1117,6 +1171,37 @@ a {
 .quiz-card--photo {
   border-color: color-mix(in srgb, #2563eb 40%, var(--color-border));
   background: color-mix(in srgb, #2563eb 7%, var(--color-surface));
+}
+
+.quiz-card--featured-photo {
+  border-color: color-mix(in srgb, #2563eb 55%, var(--color-border));
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-card__meta-chip--learn {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.quiz-card__meta-chip--mastery-next {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.result-mastery-next {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.result-mastery-tier {
+  margin: 0.45rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--pixfan-pink);
 }
 
 .quiz-card__meta-chip--mastery.is-bronze {

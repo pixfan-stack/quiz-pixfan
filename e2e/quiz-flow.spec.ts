@@ -1,15 +1,10 @@
-import { test, expect } from './fixtures';
+import { test, expect, openMorePacks, CATEGORY_CARD } from './fixtures';
 
 test.describe('Quiz Flow', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    // Click first category quiz (skip random mix card)
-    await page
-      .locator(
-        '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)'
-      )
-      .first()
-      .click();
+    await openMorePacks(page);
+    await page.locator(CATEGORY_CARD).first().click();
     // Wait for question to load
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
   });
@@ -88,5 +83,3 @@ test.describe('Quiz Flow', () => {
     ).toBeVisible();
   });
 });
-
-

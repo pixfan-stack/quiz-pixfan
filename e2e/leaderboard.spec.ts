@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures';
+import { test, expect, openMorePacks } from './fixtures';
 
 test.describe('Leaderboard profile', () => {
   test('shows name modal for first-time visitors', async ({ page }) => {
@@ -29,7 +29,7 @@ test.describe('Leaderboard profile', () => {
 
   test('random mix card is visible when quizzes load', async ({ page }) => {
     await page.goto('/');
-
+    await openMorePacks(page);
     await expect(page.locator('.quiz-card--random')).toBeVisible({ timeout: 8000 });
   });
 });
