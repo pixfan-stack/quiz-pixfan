@@ -58,9 +58,18 @@ test.describe('Homepage', () => {
     }
   });
 
-  test('navigates to quiz when clicking a quiz card', async ({ page }) => {
-    await openMorePacks(page);
-    await page.locator(CATEGORY_CARD).first().click();
-    await expect(page.locator('.question-text')).toBeVisible({ timeout: 5000 });
+  test('opens a shared duel deep link with score challenge', async ({ page }) => {
+    await page.goto('/#/quiz/duel-abcd2345?score=70');
+    await expect(page.locator('.question-text')).toBeVisible({ timeout: 8000 });
+    await expect(page.locator('.page-title, .quiz-header, h1, h2').first()).toBeVisible();
+  });
+
+  test('shows season start banner on first visit of a season', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.removeItem('quiz-pixfan-last-season-seen');
+      localStorage.removeItem('quiz-pixfan-season-ending-dismissed');
+    });
+    await page.goto('/');
+    await expect(page.getByTestId('season-banner')).toBeVisible({ timeout: 8000 });
   });
 });

@@ -7,6 +7,7 @@ import {
   ogImageUrl,
   quizShareUrl,
   resolveShareKind,
+  shareOrCopy,
   shareTextKey,
   socialShareUrl,
 } from '../utils/share';
@@ -105,5 +106,47 @@ describe('share', () => {
     });
     expect(ok).toBe(true);
     expect(writeText).toHaveBeenCalledWith('Hello https://example.com');
+  });
+
+  it('shareOrCopy prefers native share and skips clipboard when shared', async () => {
+    const share = vi.fn().mockResolvedValue(undefined);
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, 'share', {
+      value: share,
+      configurable: true,
+      writable: true,
+    });
+    Object.defineProperty(navigator, 'clipboard', {
+      value: { writeText },
+      configurable: true,
+    });
+
+    const result = await shareOrCopy({
+      text: 'Duel',
+      url: 'https://quiz.pixfan.fr/s/duel-abcd2345',
+    });
+    expect(result).toBe('shared');
+    expect(share).toHaveBeenCalled();
+    expect(writeText).not.toHaveBeenCalled();
+  });
+
+  it('shareOrCopy falls back to clipboard when native share is unavailable', async () => {
+    Object.defineProperty(navigator, 'share', {
+      value: undefined,
+      configurable: true,
+      writable: true,
+    });
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, 'clipboard', {
+      value: { writeText },
+      configurable: true,
+    });
+
+    const result = await shareOrCopy({
+      text: 'Duel',
+      url: 'https://quiz.pixfan.fr/s/duel-abcd2345',
+    });
+    expect(result).toBe('copied');
+    expect(writeText).toHaveBeenCalled();
   });
 });

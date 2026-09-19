@@ -10,11 +10,12 @@ import {
   type LeaderboardViewer,
 } from '../utils/highscoreApi';
 import type { LeaderboardPeriod } from '../utils/leaderboardPeriod';
-import { getMonthPeriodId } from '../utils/leaderboardPeriod';
+import { getMonthPeriodId, getSeasonDaysRemaining } from '../utils/leaderboardPeriod';
 import {
   hasReportedPlayer,
   markPlayerReported,
 } from '../utils/nameReports';
+import { getSeasonBadge } from '../utils/seasonEngagement';
 
 interface LeaderboardProps {
   quizId?: string;
@@ -221,12 +222,28 @@ function PeriodTabs({
   seasonId: string;
 }) {
   const { t } = useTranslation();
+  const daysLeft = getSeasonDaysRemaining();
+  const hasBadge = getSeasonBadge(seasonId) === 'participant';
   return (
     <div className="leaderboard__header">
       <h3 className="leaderboard__title">{t('leaderboard.title')}</h3>
       <p className="leaderboard__season">
         {t('leaderboard.seasonLabel', { season: seasonId })}
+        {hasBadge && (
+          <span className="leaderboard__season-badge" title={t('season.participantBadge', { season: seasonId })}>
+            {' '}
+            🏅
+          </span>
+        )}
       </p>
+      {daysLeft <= 3 && (
+        <p className="leaderboard__season-hint">
+          {t('season.endingHint', {
+            days: daysLeft,
+            count: daysLeft <= 0 ? 1 : daysLeft,
+          })}
+        </p>
+      )}
       <div
         className="leaderboard__periods"
         role="group"

@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
+  getAdminSessionPin,
   isAdminHash,
   isAdminUnlocked,
   lockAdmin,
@@ -21,9 +22,12 @@ describe('adminAuth', () => {
   it('unlocks with the correct PIN for the session', () => {
     expect(unlockAdmin('wrong')).toBe(false);
     expect(isAdminUnlocked()).toBe(false);
+    expect(getAdminSessionPin()).toBe('');
     expect(unlockAdmin('secret')).toBe(true);
     expect(isAdminUnlocked()).toBe(true);
+    expect(getAdminSessionPin()).toBe('secret');
     lockAdmin();
     expect(isAdminUnlocked()).toBe(false);
+    expect(getAdminSessionPin()).toBe('');
   });
 });

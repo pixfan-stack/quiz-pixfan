@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   getMonthPeriodId,
+  getSeasonDaysRemaining,
   getWeekPeriodId,
   parseLeaderboardPeriod,
 } from '../utils/leaderboardPeriod';
@@ -22,5 +23,11 @@ describe('leaderboardPeriod', () => {
     expect(parseLeaderboardPeriod('all')).toBe('all');
     expect(parseLeaderboardPeriod('nope')).toBe('all');
     expect(parseLeaderboardPeriod(null)).toBe('all');
+  });
+
+  it('reports days remaining in the UTC month season', () => {
+    expect(
+      getSeasonDaysRemaining(new Date(Date.UTC(2026, 6, 25)))
+    ).toBe(6);
   });
 });

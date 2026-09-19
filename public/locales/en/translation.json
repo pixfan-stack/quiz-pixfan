@@ -229,6 +229,20 @@
     "reportAria": "Report {{name}}",
     "maskedName": "Player"
   },
+  "season": {
+    "startedTitle": "New season {{season}}",
+    "startedDesc": "The monthly leaderboard resets — earn the participant badge by playing.",
+    "endingTitle": "Season {{season}} ending",
+    "endingDesc_one": "Last day to climb the season leaderboard.",
+    "endingDesc_other": "{{days}} days left before the season ends.",
+    "endingHint_one": "Last day of the season",
+    "endingHint_other": "Season ends in {{days}} days",
+    "seeLeaderboard": "See leaderboard",
+    "dismiss": "Not now",
+    "badgesTitle": "Season badges",
+    "badgesEmpty": "Finish a quiz to earn this season’s participant badge.",
+    "participantBadge": "Participant · {{season}}"
+  },
   "pixfan": {
     "eyebrow": "Pixfan next step",
     "improveTitle": "A guide to level up",
@@ -311,14 +325,17 @@
     "dismiss": "Not now"
   },
   "admin": {
-    "title": "Question editor",
+    "title": "Quiz PixFan admin",
     "disabled": "Admin is disabled. Set VITE_ADMIN_PIN to enable it.",
-    "pinHint": "Enter the admin PIN to edit questions in the browser.",
+    "pinHint": "Enter the admin PIN to edit questions and moderate name reports.",
     "pin": "Admin PIN",
     "pinError": "Incorrect PIN",
     "unlock": "Unlock",
     "lock": "Lock & exit",
-    "intro": "Edit copy here, preview in this session, then export questions.json for deployment.",
+    "intro": "Edit copy here, preview in this session, export questions.json, or moderate reported names.",
+    "tabsLabel": "Admin sections",
+    "tabQuestions": "Questions",
+    "tabReports": "Reports",
     "quiz": "Quiz",
     "question": "Question",
     "answers": "Answers",
@@ -327,7 +344,17 @@
     "export": "Export JSON",
     "preview": "Preview in app",
     "exported": "questions.json downloaded",
-    "previewApplied": "Preview applied for this session"
+    "previewApplied": "Preview applied for this session",
+    "reportsIntro": "Names reported by players. Mask replaces the name with “Player” and clears reports.",
+    "reportsRefresh": "Refresh",
+    "reportsEmpty": "No open reports.",
+    "reportsCount": "{{count}} report(s)",
+    "reportsMask": "Mask name",
+    "reportsDismiss": "Dismiss",
+    "reportsMasked": "Name masked",
+    "reportsDismissed": "Reports dismissed",
+    "reportsUnauthorized": "Admin session invalid — unlock again.",
+    "reportsUnavailable": "Reports unavailable (API or migration)."
   },
   "common": {
     "loading": "Loading…",

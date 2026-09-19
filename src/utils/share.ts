@@ -156,6 +156,28 @@ export async function nativeShareScore(
   }
 }
 
+/** Fallback when Clipboard API is blocked (insecure context / some in-app browsers). */
+function copyViaTextarea(line: string): boolean {
+  if (typeof document === 'undefined') return false;
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = line;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '0';
+    ta.style.left = '0';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    const ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    return ok;
+  } catch {
+    return false;
+  }
+}
+
 /** Copy "text + url" for paste into any messenger. */
 export async function copySharePayload(payload: SharePayload): Promise<boolean> {
   const line = `${payload.text} ${payload.url}`.trim();
@@ -163,6 +185,23 @@ export async function copySharePayload(payload: SharePayload): Promise<boolean> 
     await navigator.clipboard.writeText(line);
     return true;
   } catch {
-    return false;
+    return copyViaTextarea(line);
   }
+}
+
+export type ShareOrCopyResult = 'shared' | 'copied' | 'aborted' | 'failed';
+
+/**
+ * Prefer Web Share (mobile-friendly), then clipboard.
+ * Avoids copy-then-share double UX on duel invite buttons.
+ */
+export async function shareOrCopy(
+  payload: SharePayload,
+  title = 'Quiz PixFan'
+): Promise<ShareOrCopyResult> {
+  const outcome = await nativeShareScore(payload, title);
+  if (outcome === 'shared') return 'shared';
+  if (outcome === 'aborted') return 'aborted';
+  const ok = await copySharePayload(payload);
+  return ok ? 'copied' : 'failed';
 }

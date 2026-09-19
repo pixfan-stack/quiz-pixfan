@@ -1,4 +1,5 @@
 const SESSION_KEY = 'quiz-pixfan-admin-ok';
+const PIN_SESSION_KEY = 'quiz-pixfan-admin-pin';
 
 /** Admin PIN from env; empty disables admin in production builds. */
 export function getAdminPin(): string {
@@ -19,11 +20,21 @@ export function isAdminUnlocked(): boolean {
   }
 }
 
+/** PIN kept in session after unlock — used for admin API headers. */
+export function getAdminSessionPin(): string {
+  try {
+    return sessionStorage.getItem(PIN_SESSION_KEY) ?? '';
+  } catch {
+    return '';
+  }
+}
+
 export function unlockAdmin(pin: string): boolean {
   if (!isAdminEnabled()) return false;
   if (pin !== getAdminPin()) return false;
   try {
     sessionStorage.setItem(SESSION_KEY, '1');
+    sessionStorage.setItem(PIN_SESSION_KEY, pin);
   } catch {
     // ignore
   }
@@ -33,6 +44,7 @@ export function unlockAdmin(pin: string): boolean {
 export function lockAdmin(): void {
   try {
     sessionStorage.removeItem(SESSION_KEY);
+    sessionStorage.removeItem(PIN_SESSION_KEY);
   } catch {
     // ignore
   }

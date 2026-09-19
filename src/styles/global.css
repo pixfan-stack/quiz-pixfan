@@ -2545,6 +2545,112 @@ a {
   flex-wrap: wrap;
 }
 
+.admin__tabs {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0.75rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.admin__tab {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin__tab.is-active {
+  border-color: var(--pixfan-pink);
+  color: var(--pixfan-pink);
+}
+
+.admin__reports {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.admin__report-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.admin__report-row {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.admin__report-meta {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.admin__report-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  word-break: break-all;
+}
+
+.season-banner {
+  margin-bottom: 1rem;
+}
+
+.season-badges {
+  margin-top: 1.25rem;
+}
+
+.season-badges__title {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.season-badges__empty {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.season-badges__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.season-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  background: var(--color-surface);
+}
+
+.season-badge.is-current {
+  border-color: var(--pixfan-pink);
+}
+
+.season-badge__icon {
+  font-size: 1rem;
+}
+
 /* ---------- Leaderboard ---------- */
 
 .leaderboard {
@@ -2569,6 +2675,17 @@ a {
   margin: 0.2rem 0 0.65rem;
   font-size: 0.82rem;
   color: var(--color-text-muted);
+}
+
+.leaderboard__season-hint {
+  margin: -0.35rem 0 0.65rem;
+  font-size: 0.78rem;
+  color: var(--pixfan-pink);
+  font-weight: 600;
+}
+
+.leaderboard__season-badge {
+  margin-left: 0.15rem;
 }
 
 .leaderboard__periods {

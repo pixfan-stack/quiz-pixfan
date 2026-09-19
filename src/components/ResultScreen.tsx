@@ -7,15 +7,16 @@ import {
   getResultBadgeKey,
 } from '../utils/scoring';
 import {
-  canNativeShare,
   copySharePayload,
   nativeShareScore,
   openShare,
   socialShareUrl,
   resolveShareKind,
+  shareOrCopy,
   shareTextKey,
   type SharePlatform,
 } from '../utils/share';
+import { unlockSeasonParticipant } from '../utils/seasonEngagement';
 import {
   dismissResultReengage,
   markQuizPlayed,
@@ -243,13 +244,10 @@ export function ResultScreen({
       url: shareUrl,
       hashtags: shareHashtags,
     };
-    const ok = await copySharePayload(payload);
-    if (ok) {
+    const outcome = await shareOrCopy(payload, t('app.title'));
+    if (outcome === 'shared' || outcome === 'copied') {
       setLinkCopied(true);
       window.setTimeout(() => setLinkCopied(false), 2000);
-    }
-    if (canNativeShare()) {
-      await nativeShareScore(payload, t('app.title'));
     }
   }, [
     shareUrl,
@@ -277,14 +275,11 @@ export function ResultScreen({
     });
     const payload = { text, url, hashtags: t('share.hashtags') };
 
-    const ok = await copySharePayload(payload);
-    if (ok) {
+    const outcome = await shareOrCopy(payload, t('app.title'));
+    if (outcome === 'shared' || outcome === 'copied') {
       setChallengeCopied(true);
       window.setTimeout(() => setChallengeCopied(false), 2500);
-    }
-
-    const outcome = await nativeShareScore(payload, t('app.title'));
-    if (outcome === 'unavailable') {
+    } else if (outcome === 'failed') {
       openShare('whatsapp', payload);
     }
   }, [
@@ -326,6 +321,7 @@ export function ResultScreen({
 
   // Sync to Cloudflare D1 + analytics
   useEffect(() => {
+    unlockSeasonParticipant();
     void submitRemoteHighScore({
       quizId: result.quizId,
       playerId: getPlayerId(),
