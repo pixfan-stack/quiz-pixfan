@@ -1,50 +1,67 @@
 import { useTranslation } from 'react-i18next';
-import { getPixfanCta } from '../utils/pixfanCta';
+import { getPixfanCta, type PixfanCtaTarget } from '../utils/pixfanCta';
+import { trackCtaClick } from '../utils/analyticsApi';
 
 interface PixfanCtaProps {
   quizId: string;
   /** Score % — softens copy for low scores. */
   percentage: number;
+  /** Question ids answered incorrectly (failed-theme targeting). */
+  mistakeQuestionIds?: string[];
 }
 
 /**
- * Contextual pixfan.com next-step after a quiz (guides + newsletter).
+ * One clear post-score path: guide on the failed theme → newsletter.
  */
-export function PixfanCta({ quizId, percentage }: PixfanCtaProps) {
+export function PixfanCta({
+  quizId,
+  percentage,
+  mistakeQuestionIds = [],
+}: PixfanCtaProps) {
   const { t } = useTranslation();
-  const cta = getPixfanCta(quizId);
+  const cta = getPixfanCta(quizId, { mistakeQuestionIds });
   const tone = percentage < 60 ? 'improve' : 'goFurther';
+  const titleKey = cta.fromMistakes
+    ? `pixfan.${tone}FailedTitle`
+    : `pixfan.${tone}Title`;
+  const primaryCtaKey =
+    cta.primaryTarget === 'guide'
+      ? `pixfan.topic_${cta.topic}_guideCta`
+      : `pixfan.topic_${cta.topic}_cta`;
+
+  const onCtaClick = (target: PixfanCtaTarget) => {
+    void trackCtaClick({
+      sourceQuizId: quizId,
+      target,
+      topic: cta.topic,
+    });
+  };
 
   return (
     <aside className="pixfan-cta" aria-labelledby="pixfan-cta-title">
-      <p className="pixfan-cta__eyebrow">pixfan.com</p>
+      <p className="pixfan-cta__eyebrow">{t('pixfan.eyebrow')}</p>
       <h3 id="pixfan-cta-title" className="pixfan-cta__title">
-        {t(`pixfan.${tone}Title`)}
+        {t(titleKey)}
       </h3>
       <p className="pixfan-cta__lead">
-        {t(`pixfan.topic_${cta.topic}_desc`)}
+        {cta.fromMistakes
+          ? t(`pixfan.topic_${cta.topic}_failedDesc`)
+          : t(`pixfan.topic_${cta.topic}_desc`)}
       </p>
 
       <div className="pixfan-cta__actions">
         <a
           className="btn btn--primary pixfan-cta__primary"
           href={cta.primaryUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={cta.primaryTarget === 'guide' ? undefined : '_blank'}
+          rel={
+            cta.primaryTarget === 'guide' ? undefined : 'noopener noreferrer'
+          }
+          onClick={() => onCtaClick(cta.primaryTarget)}
         >
-          {t(`pixfan.topic_${cta.topic}_cta`)}
+          {t(primaryCtaKey)}
           <span aria-hidden="true"> →</span>
         </a>
-        {cta.secondaryUrl && (
-          <a
-            className="btn btn--ghost"
-            href={cta.secondaryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t('pixfan.exploreMore')}
-          </a>
-        )}
       </div>
 
       <div className="pixfan-cta__newsletter">
@@ -59,6 +76,7 @@ export function PixfanCta({ quizId, percentage }: PixfanCtaProps) {
           href={cta.newsletterUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => onCtaClick('newsletter')}
         >
           {t('pixfan.newsletterCta')}
           <span aria-hidden="true"> →</span>

@@ -1,6 +1,6 @@
 /**
- * Contextual pixfan.com CTAs shown after a quiz.
- * URLs validated against live category/search pages.
+ * Contextual Pixfan CTAs shown after a quiz.
+ * Prefers a local guide for the failed theme, then newsletter.
  */
 
 export type PixfanTopic =
@@ -15,24 +15,52 @@ export type PixfanTopic =
   | 'retouching'
   | 'default';
 
+export type PixfanCtaTarget = 'guide' | 'newsletter' | 'pixfan';
+
 export interface PixfanCta {
   topic: PixfanTopic;
-  /** Main deep link into pixfan.com content. */
+  /** Primary deep link: local guide when available, else pixfan.com. */
   primaryUrl: string;
-  /** Optional second link (guides hub / related). */
-  secondaryUrl?: string;
+  /** What the primary button opens (for analytics + copy). */
+  primaryTarget: PixfanCtaTarget;
   newsletterUrl: string;
+  /** True when topic came from incorrect answers (failed theme). */
+  fromMistakes: boolean;
 }
 
 const PIXFAN = 'https://www.pixfan.com';
 const NEWSLETTER = `${PIXFAN}/newsletter/`;
 
-function withUtm(url: string, quizId: string): string {
-  const u = new URL(url);
+/** Local HTML guides (P2-C cross-links) for themes we cover on-site. */
+const LOCAL_GUIDES: Partial<Record<PixfanTopic, string>> = {
+  exposure: '/guides/triangle-exposition',
+  composition: '/guides/composition-photo',
+  smartphone: '/guides/photo-smartphone',
+};
+
+const TOPIC_URLS: Record<PixfanTopic, string> = {
+  exposure: `${PIXFAN}/apprendre-la-photo/bases-et-reglages/`,
+  composition: `${PIXFAN}/apprendre-la-photo/`,
+  light: `${PIXFAN}/apprendre-la-photo/`,
+  gear: `${PIXFAN}/materiel-photo/`,
+  history: `${PIXFAN}/inspiration-culture/`,
+  genres: `${PIXFAN}/apprendre-la-photo/genres-photo/`,
+  smartphone: `${PIXFAN}/apprendre-la-photo/`,
+  rights: `${PIXFAN}/?s=droit+auteur`,
+  retouching: `${PIXFAN}/logiciels-retouche/`,
+  default: `${PIXFAN}/apprendre-la-photo-guide-complet-debutants-quiz/`,
+};
+
+function withUtm(url: string, quizId: string, content: PixfanCtaTarget): string {
+  const u = url.startsWith('http')
+    ? new URL(url)
+    : new URL(url, 'https://quiz.pixfan.fr');
   u.searchParams.set('utm_source', 'quiz');
   u.searchParams.set('utm_medium', 'result_cta');
   u.searchParams.set('utm_campaign', quizId.slice(0, 64));
-  return u.toString();
+  u.searchParams.set('utm_content', content);
+  if (url.startsWith('http')) return u.toString();
+  return `${u.pathname}${u.search}`;
 }
 
 /** Map quiz / pack ids to a content topic. */
@@ -50,66 +78,80 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
   if (quizId === 'retouching') return 'retouching';
   if (quizId.startsWith('mix-hard')) return 'history';
   if (quizId.startsWith('mix-medium')) return 'gear';
-  // daily / random / duel → beginner hub
+  // daily / random / duel → beginner hub unless mistakes override
   return 'default';
 }
 
-const TOPIC_URLS: Record<
-  PixfanTopic,
-  { primary: string; secondary?: string }
-> = {
-  exposure: {
-    primary: `${PIXFAN}/apprendre-la-photo/bases-et-reglages/`,
-    secondary: `${PIXFAN}/?s=exposition`,
-  },
-  composition: {
-    primary: `${PIXFAN}/apprendre-la-photo/`,
-    secondary: `${PIXFAN}/?s=composition`,
-  },
-  light: {
-    primary: `${PIXFAN}/apprendre-la-photo/`,
-    secondary: `${PIXFAN}/?s=lumi%C3%A8re`,
-  },
-  gear: {
-    primary: `${PIXFAN}/materiel-photo/`,
-    secondary: `${PIXFAN}/?s=objectif`,
-  },
-  history: {
-    primary: `${PIXFAN}/inspiration-culture/`,
-    secondary: `${PIXFAN}/actualite-photo/`,
-  },
-  genres: {
-    primary: `${PIXFAN}/apprendre-la-photo/genres-photo/`,
-    secondary: `${PIXFAN}/inspiration-culture/`,
-  },
-  smartphone: {
-    primary: `${PIXFAN}/apprendre-la-photo/`,
-    secondary: `${PIXFAN}/?s=smartphone`,
-  },
-  rights: {
-    primary: `${PIXFAN}/?s=droit+auteur`,
-    secondary: `${PIXFAN}/actualite-photo/`,
-  },
-  retouching: {
-    primary: `${PIXFAN}/logiciels-retouche/`,
-    secondary: `${PIXFAN}/?s=lightroom`,
-  },
-  default: {
-    primary: `${PIXFAN}/apprendre-la-photo-guide-complet-debutants-quiz/`,
-    secondary: `${PIXFAN}/apprendre-la-photo/`,
-  },
-};
+function sourceQuizIdFromQuestionId(questionId: string): string | null {
+  const idx = questionId.indexOf('__');
+  return idx > 0 ? questionId.slice(0, idx) : null;
+}
+
+/**
+ * Pick the dominant failed theme from incorrect answers
+ * (daily / mix / duel use `category__question` ids).
+ */
+export function resolveTopicFromMistakes(
+  mistakeQuestionIds: string[]
+): PixfanTopic | null {
+  if (mistakeQuestionIds.length === 0) return null;
+
+  const counts = new Map<PixfanTopic, number>();
+  for (const qid of mistakeQuestionIds) {
+    const source = sourceQuizIdFromQuestionId(qid) ?? qid;
+    const topic = resolvePixfanTopic(source);
+    if (topic === 'default') continue;
+    counts.set(topic, (counts.get(topic) ?? 0) + 1);
+  }
+
+  let best: PixfanTopic | null = null;
+  let bestCount = 0;
+  for (const [topic, count] of counts) {
+    if (count > bestCount) {
+      best = topic;
+      bestCount = count;
+    }
+  }
+  return best;
+}
+
+export interface GetPixfanCtaOptions {
+  /** Question ids the player got wrong (for failed-theme targeting). */
+  mistakeQuestionIds?: string[];
+}
 
 /** Build UTM-tagged CTA links for a finished quiz. */
-export function getPixfanCta(quizId: string): PixfanCta {
-  const topic = resolvePixfanTopic(quizId);
-  const urls = TOPIC_URLS[topic];
+export function getPixfanCta(
+  quizId: string,
+  options: GetPixfanCtaOptions = {}
+): PixfanCta {
+  const fromMistakesTopic = resolveTopicFromMistakes(
+    options.mistakeQuestionIds ?? []
+  );
+  const topic = fromMistakesTopic ?? resolvePixfanTopic(quizId);
+  const localGuide = LOCAL_GUIDES[topic];
+  const primaryTarget: PixfanCtaTarget = localGuide ? 'guide' : 'pixfan';
+  const primaryRaw = localGuide ?? TOPIC_URLS[topic];
+
   return {
     topic,
-    primaryUrl: withUtm(urls.primary, quizId),
-    secondaryUrl: urls.secondary
-      ? withUtm(urls.secondary, quizId)
-      : undefined,
-    newsletterUrl: withUtm(NEWSLETTER, quizId),
+    primaryUrl: withUtm(primaryRaw, quizId, primaryTarget),
+    primaryTarget,
+    newsletterUrl: withUtm(NEWSLETTER, quizId, 'newsletter'),
+    fromMistakes: fromMistakesTopic != null,
   };
+}
+
+/** Analytics quiz_id marker stored in `quiz_attempts` for CTA clicks. */
+export function ctaAnalyticsQuizId(
+  target: PixfanCtaTarget,
+  topic: PixfanTopic,
+  sourceQuizId: string
+): string {
+  const src = sourceQuizId.slice(0, 48).replace(/[^a-zA-Z0-9._-]/g, '_');
+  return `cta:${target}:${topic}:${src}`;
+}
+
+export function isCtaAnalyticsQuizId(quizId: string): boolean {
+  return quizId.startsWith('cta:');
 }

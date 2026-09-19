@@ -748,7 +748,13 @@ export function ResultScreen({
             </details>
           </div>
 
-          <PixfanCta quizId={result.quizId} percentage={result.percentage} />
+          <PixfanCta
+            quizId={result.quizId}
+            percentage={result.percentage}
+            mistakeQuestionIds={(result.mistakes ?? [])
+              .filter((m) => !m.wasCorrect)
+              .map((m) => m.question.id)}
+          />
 
           <Leaderboard
             quizId={result.quizId}

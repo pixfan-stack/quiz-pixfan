@@ -3,6 +3,10 @@
  *
  * POST /api/analytics  — record a completed attempt
  * GET  /api/analytics?quizId=...  — aggregated stats
+ *
+ * CTA clicks reuse the same table with quiz_id markers:
+ *   cta:{guide|newsletter|pixfan}:{topic}:{sourceQuizId}
+ *   percentage=0, correct_count=0, total_questions=1, time_taken_seconds=0
  */
 
 import { json } from './utils';
@@ -114,6 +118,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
                 ROUND(AVG(percentage), 1) as avgPercentage,
                 ROUND(AVG(time_taken_seconds), 0) as avgTimeSeconds
          FROM quiz_attempts
+         WHERE quiz_id NOT LIKE 'cta:%'
          GROUP BY quiz_id
          ORDER BY attempts DESC`
       ).all<QuizStats>();

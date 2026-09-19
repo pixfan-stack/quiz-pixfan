@@ -1,4 +1,9 @@
 import { isRemoteScoresEnabled } from './remoteScores';
+import {
+  ctaAnalyticsQuizId,
+  type PixfanCtaTarget,
+  type PixfanTopic,
+} from './pixfanCta';
 
 export interface QuizStats {
   quizId: string;
@@ -25,6 +30,28 @@ export async function trackQuizAttempt(payload: {
   } catch {
     // best-effort
   }
+}
+
+/**
+ * Record a result-screen CTA click in `quiz_attempts` via the same endpoint.
+ * Encoded as quiz_id `cta:{target}:{topic}:{sourceQuizId}` with zeroed metrics.
+ */
+export async function trackCtaClick(payload: {
+  sourceQuizId: string;
+  target: PixfanCtaTarget;
+  topic: PixfanTopic;
+}): Promise<void> {
+  await trackQuizAttempt({
+    quizId: ctaAnalyticsQuizId(
+      payload.target,
+      payload.topic,
+      payload.sourceQuizId
+    ),
+    percentage: 0,
+    correctCount: 0,
+    totalQuestions: 1,
+    timeTakenSeconds: 0,
+  });
 }
 
 export async function fetchQuizStats(
