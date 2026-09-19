@@ -80,7 +80,7 @@ export function getSeasonBannerKind(
   try {
     lastSeen = localStorage.getItem(LAST_SEEN_KEY);
   } catch {
-    lastSeen = null;
+    // Keep the default null value when localStorage is unavailable.
   }
 
   if (lastSeen !== seasonId) {
@@ -94,7 +94,7 @@ export function getSeasonBannerKind(
   try {
     endingDismissed = localStorage.getItem(ENDING_DISMISS_KEY);
   } catch {
-    endingDismissed = null;
+    // Keep the default null value when localStorage is unavailable.
   }
   if (endingDismissed === seasonId) return null;
   return 'ending';
