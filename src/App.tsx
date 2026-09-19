@@ -26,6 +26,10 @@ import {
   setQuizHash,
 } from './utils/routing';
 import {
+  isRecoverHash,
+  parseRecoveryCodeFromHash,
+} from './utils/recoveryCode';
+import {
   buildWeakSpotsQuiz,
   isWeakSpotsQuizId,
 } from './utils/mistakeVault';
@@ -34,6 +38,7 @@ import {
   isPhotoReadingQuizId,
 } from './utils/photoReading';
 import { APP_VERSION } from './version';
+import { pullAndMergeAccountProgress } from './utils/accountSync';
 
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
 const AdminScreen = lazy(() => import('./components/AdminScreen'));
@@ -65,17 +70,40 @@ export default function App() {
   });
   const [leaderboardRefreshToken, setLeaderboardRefreshToken] = useState(0);
   const [targetScore, setTargetScore] = useState<number | null>(null);
+  const [recoveryCode, setRecoveryCode] = useState<string | null>(() =>
+    parseRecoveryCodeFromHash(window.location.hash)
+  );
   const { isDark, toggleDark } = useDarkMode();
 
   useEffect(() => {
     document.documentElement.lang = (i18n.resolvedLanguage ?? i18n.language).slice(0, 2);
   }, [i18n.language, i18n.resolvedLanguage]);
 
+  // Soft pull of remote streak/achievements once per session (merge-safe)
+  useEffect(() => {
+    void pullAndMergeAccountProgress().then((ok) => {
+      if (ok) setLeaderboardRefreshToken((n) => n + 1);
+    });
+  }, []);
+
   useEffect(() => {
     fetch('/data/questions.json')
       .then((r) => r.json())
       .then((data) => setQuizzes((data as QuizzesData).quizzes));
   }, []);
+
+  const clearRecoverHash = useCallback(() => {
+    if (!isRecoverHash(window.location.hash)) return;
+    const url = new URL(window.location.href);
+    url.hash = '';
+    window.history.replaceState(null, '', url.pathname + url.search);
+    setRecoveryCode(null);
+  }, []);
+
+  const handleRecovered = useCallback(() => {
+    clearRecoverHash();
+    setLeaderboardRefreshToken((n) => n + 1);
+  }, [clearRecoverHash]);
 
   const startQuiz = useCallback(
     (quiz: Quiz, opts?: { targetScore?: number | null }) => {
@@ -99,6 +127,13 @@ export default function App() {
   useEffect(() => {
     if (isAdminHash(window.location.hash)) {
       setView('admin');
+      setActiveQuiz(null);
+      return;
+    }
+
+    if (isRecoverHash(window.location.hash)) {
+      setRecoveryCode(parseRecoveryCodeFromHash(window.location.hash));
+      setView('home');
       setActiveQuiz(null);
       return;
     }
@@ -161,7 +196,14 @@ export default function App() {
         setView('admin');
         return;
       }
+      if (isRecoverHash(window.location.hash)) {
+        setRecoveryCode(parseRecoveryCodeFromHash(window.location.hash));
+        setActiveQuiz(null);
+        setView('home');
+        return;
+      }
       if (!window.location.hash) {
+        setRecoveryCode(null);
         setActiveQuiz(null);
         setView('home');
       }
@@ -247,6 +289,8 @@ export default function App() {
                 onSettingsChange={setSettings}
                 onPrefetchQuiz={prefetchQuizScreen}
                 leaderboardRefreshToken={leaderboardRefreshToken}
+                recoveryCode={recoveryCode}
+                onRecovered={handleRecovered}
               />
             </>
           )}

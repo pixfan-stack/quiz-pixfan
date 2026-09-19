@@ -108,6 +108,20 @@ function writeUnlocked(ids: Set<AchievementId>): void {
   }
 }
 
+/** Union remote achievement ids into local unlocks. */
+export function mergeUnlockedAchievements(ids: AchievementId[]): void {
+  if (!ids.length) return;
+  const unlocked = getUnlockedAchievements();
+  let changed = false;
+  for (const id of ids) {
+    if (!(ACHIEVEMENT_IDS as readonly string[]).includes(id)) continue;
+    if (unlocked.has(id)) continue;
+    unlocked.add(id);
+    changed = true;
+  }
+  if (changed) writeUnlocked(unlocked);
+}
+
 export interface AchievementEvalInput {
   quizId: string;
   percentage: number;

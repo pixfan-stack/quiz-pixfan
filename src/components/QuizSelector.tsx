@@ -70,6 +70,8 @@ interface QuizSelectorProps {
   onSettingsChange: (settings: { timePerQuestion: number; antiCheat: boolean }) => void;
   onPrefetchQuiz?: () => void;
   leaderboardRefreshToken?: number;
+  recoveryCode?: string | null;
+  onRecovered?: () => void;
 }
 
 const QUIZ_ICONS: Record<string, string> = {
@@ -97,6 +99,8 @@ export function QuizSelector({
   onSettingsChange,
   onPrefetchQuiz,
   leaderboardRefreshToken = 0,
+  recoveryCode = null,
+  onRecovered,
 }: QuizSelectorProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
@@ -295,7 +299,10 @@ export function QuizSelector({
 
       {/* Settings toggle */}
       <div className="quiz-settings-bar">
-        <PlayerNamePrompt />
+        <PlayerNamePrompt
+          recoveryCode={recoveryCode}
+          onRecovered={onRecovered}
+        />
         <button
           type="button"
           className="btn btn--ghost btn--small"

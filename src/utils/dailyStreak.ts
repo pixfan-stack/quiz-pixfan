@@ -91,6 +91,50 @@ function writeStreak(state: DailyStreakState): void {
 }
 
 /**
+ * Merge a remote streak into localStorage.
+ * Prefers the more recent `lastDailyId`; keeps the max `bestStreak`.
+ */
+export function mergeDailyStreak(
+  remote: Partial<DailyStreakState>,
+  now = new Date()
+): DailyStreakState {
+  const local = getDailyStreak(now);
+  const remoteState: DailyStreakState = {
+    lastDailyId: remote.lastDailyId ?? null,
+    currentStreak: Number(remote.currentStreak) || 0,
+    bestStreak: Number(remote.bestStreak) || 0,
+    freezesAvailable:
+      remote.freezesAvailable == null
+        ? 1
+        : Math.max(0, Math.min(1, Number(remote.freezesAvailable) || 0)),
+    freezeWeekKey: remote.freezeWeekKey ?? null,
+  };
+
+  const localLast = local.lastDailyId ?? '';
+  const remoteLast = remoteState.lastDailyId ?? '';
+  const preferRemote = remoteLast > localLast;
+  const base = preferRemote ? remoteState : local;
+  const other = preferRemote ? local : remoteState;
+
+  const currentStreak =
+    localLast && localLast === remoteLast
+      ? Math.max(local.currentStreak, remoteState.currentStreak)
+      : base.currentStreak;
+
+  const merged: DailyStreakState = {
+    lastDailyId: base.lastDailyId ?? other.lastDailyId,
+    currentStreak,
+    bestStreak: Math.max(local.bestStreak, remoteState.bestStreak),
+    freezesAvailable: base.freezesAvailable,
+    freezeWeekKey: base.freezeWeekKey,
+  };
+
+  const next = withWeeklyFreeze(merged, now);
+  writeStreak(next);
+  return next;
+}
+
+/**
  * Record a daily-challenge completion. Idempotent for the same day.
  * A single freeze can bridge exactly one missed UTC day per week.
  */

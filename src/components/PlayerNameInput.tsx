@@ -4,6 +4,7 @@ import {
   getPlayerDisplayName,
   setPlayerDisplayName,
 } from '../utils/player';
+import { AccountSyncPanel } from './AccountSyncPanel';
 
 const PROMPT_SEEN_KEY = 'quiz-pixfan-name-prompt-seen';
 
@@ -23,16 +24,38 @@ function markPromptSeen(): void {
   }
 }
 
+interface PlayerNamePromptProps {
+  /** Prefill recovery from magic link. */
+  recoveryCode?: string | null;
+  onRecovered?: () => void;
+}
+
 /**
  * Startup modal for the leaderboard display name + compact chip to edit later.
+ * Also hosts light multi-device sync (recovery code).
  */
-export function PlayerNamePrompt() {
+export function PlayerNamePrompt({
+  recoveryCode = null,
+  onRecovered,
+}: PlayerNamePromptProps = {}) {
   const { t } = useTranslation();
   const inputId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
   const [displayName, setDisplayName] = useState(() => getPlayerDisplayName());
   const [draft, setDraft] = useState(() => getPlayerDisplayName());
-  const [open, setOpen] = useState(() => !getPlayerDisplayName() && !hasSeenPrompt());
+  const [open, setOpen] = useState(
+    () =>
+      Boolean(recoveryCode) ||
+      (!getPlayerDisplayName() && !hasSeenPrompt())
+  );
+  const [showSync, setShowSync] = useState(() => Boolean(recoveryCode));
+
+  useEffect(() => {
+    if (recoveryCode) {
+      setOpen(true);
+      setShowSync(true);
+    }
+  }, [recoveryCode]);
 
   const close = useCallback(() => {
     markPromptSeen();
@@ -69,6 +92,11 @@ export function PlayerNamePrompt() {
     setOpen(true);
   };
 
+  const handleRecovered = () => {
+    setDisplayName(getPlayerDisplayName());
+    onRecovered?.();
+  };
+
   return (
     <>
       <div className="player-chip-bar">
@@ -97,7 +125,7 @@ export function PlayerNamePrompt() {
           }}
         >
           <div
-            className="player-modal__dialog"
+            className="player-modal__dialog player-modal__dialog--wide"
             role="dialog"
             aria-modal="true"
             aria-labelledby="player-modal-title"
@@ -145,6 +173,23 @@ export function PlayerNamePrompt() {
                 {t('home.playerModalSave')}
               </button>
             </div>
+
+            <button
+              type="button"
+              className="account-sync-toggle"
+              aria-expanded={showSync}
+              onClick={() => setShowSync((v) => !v)}
+            >
+              {showSync ? t('account.hideSync') : t('account.showSync')}
+            </button>
+
+            {showSync && (
+              <AccountSyncPanel
+                initialCode={recoveryCode}
+                autoFocusRedeem={Boolean(recoveryCode)}
+                onRecovered={handleRecovered}
+              />
+            )}
           </div>
         </div>
       )}

@@ -22,6 +22,7 @@ import {
   shouldShowResultReengage,
 } from '../utils/reengage';
 import { submitRemoteHighScore } from '../utils/highscoreApi';
+import { pushAccountProgress } from '../utils/accountSync';
 import { trackQuizAttempt } from '../utils/analyticsApi';
 import { getPlayerId, resolveDisplayNameForSubmit } from '../utils/player';
 import { useConfetti } from '../hooks/useConfetti';
@@ -341,6 +342,11 @@ export function ResultScreen({
       })
       .catch(() => {});
 
+    // Streak + achievements (after local unlock effect has run)
+    const syncTimer = window.setTimeout(() => {
+      void pushAccountProgress();
+    }, 0);
+
     void trackQuizAttempt({
       quizId: result.quizId,
       percentage: result.percentage,
@@ -348,6 +354,8 @@ export function ResultScreen({
       totalQuestions: result.totalQuestions,
       timeTakenSeconds: result.timeTakenSeconds,
     });
+
+    return () => window.clearTimeout(syncTimer);
   }, [result, displayName, onScoreSubmitted]);
 
   // Confetti for perfect scores

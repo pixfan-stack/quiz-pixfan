@@ -9,6 +9,7 @@ Sur une base **déjà en prod**, appliquer les fichiers manquants dans l’ordre
 | `002-player-leaderboard.sql` | `player_highscores` |
 | `003-quiz-attempts.sql` | `quiz_attempts` |
 | `004-period-leaderboard-reports.sql` | `period_highscores` + `name_reports` |
+| `005-account-sync.sql` | `player_progress` + `player_recovery_codes` |
 
 ## Appliquer la 004 (prod)
 
@@ -35,6 +36,15 @@ npm run db:verify:004
 Attendu : deux lignes `name_reports` et `period_highscores`.
 
 Si les tables manquent, les classements semaine/mois et le signalement de pseudo restent en échec côté API (logs `migration 004?`).
+
+## Appliquer la 005 (compte léger / sync)
+
+```bash
+npm run db:migrate:005
+npm run db:verify:005
+```
+
+Attendu : `player_progress` et `player_recovery_codes`. Sans elles, la génération / récupération de code échoue côté `/api/account`.
 
 ## Dashboard Cloudflare
 

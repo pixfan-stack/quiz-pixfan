@@ -12,6 +12,23 @@ export function getPlayerId(): string {
   return id;
 }
 
+/**
+ * Replace the local player id (e.g. after redeeming a recovery code).
+ * Returns false if the id is invalid.
+ */
+export function setPlayerId(raw: string): boolean {
+  const id = raw.trim();
+  if (!id || id.length > 64 || !/^[a-zA-Z0-9-]+$/.test(id)) {
+    return false;
+  }
+  try {
+    localStorage.setItem(PLAYER_ID_KEY, id);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /** Trim, strip control chars, collapse whitespace, cap length. */
 export function sanitizeDisplayName(raw: string): string {
   const trimmed = raw
