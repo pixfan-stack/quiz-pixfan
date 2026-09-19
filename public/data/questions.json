@@ -1417,7 +1417,11 @@
             "en": "Landscape framed by mountain ridges",
             "fr": "Paysage cadré par des crêtes montagneuses"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-2",
@@ -1470,7 +1474,11 @@
             "en": "Foggy forest landscape",
             "fr": "Paysage forestier brumeux"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-3",
@@ -1521,6 +1529,10 @@
           "imageAlt": {
             "en": "Mountain lake landscape",
             "fr": "Lac de montagne"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1572,6 +1584,10 @@
           "imageAlt": {
             "en": "Green hills landscape",
             "fr": "Collines verdoyantes"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1618,7 +1634,16 @@
             "en": "A low horizon gives more of the frame to the sky (dramatic clouds, color). A high horizon favors the land or foreground.",
             "fr": "Un horizon bas laisse plus de place au ciel (nuages, couleurs). Un horizon haut favorise le sol ou le premier plan."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Mountain range with a clear horizon line",
+            "fr": "Chaîne de montagnes avec une ligne d’horizon nette"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-6",
@@ -1664,7 +1689,16 @@
             "en": "S-curves create a natural flow through the image, leading the viewer's eye on a journey from foreground to background.",
             "fr": "Les courbes en S créent un flux naturel à travers l'image, guidant l'œil du spectateur du premier plan à l'arrière-plan."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Forest path curving through trees",
+            "fr": "Sentier forestier en courbe entre les arbres"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-7",
@@ -1804,7 +1838,16 @@
             "en": "This technique adds depth, focuses attention, and can provide context. Examples: windows, doorways, tree branches.",
             "fr": "Cette technique ajoute de la profondeur, concentre l'attention et peut fournir du contexte. Exemples : fenêtres, portes, branches d'arbres."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Subject framed by a doorway arch",
+            "fr": "Sujet cadré par l’arche d’une porte"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-10",
@@ -2366,6 +2409,10 @@
           "imageAlt": {
             "en": "Runner in motion",
             "fr": "Coureur en mouvement"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -2417,6 +2464,10 @@
           "imageAlt": {
             "en": "Busy city street",
             "fr": "Rue de ville animée"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -2516,6 +2567,10 @@
           "imageAlt": {
             "en": "Busy city street",
             "fr": "Rue de ville animée"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -2659,6 +2714,10 @@
           "imageAlt": {
             "en": "Wedding celebration moment",
             "fr": "Moment de célébration de mariage"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -2710,6 +2769,10 @@
           "imageAlt": {
             "en": "Cafe table scene",
             "fr": "Scène de table de café"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         }
       ],
@@ -2775,7 +2838,11 @@
             "en": "Golden hour light over a city skyline",
             "fr": "Lumière dorée sur une skyline urbaine"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-2",
@@ -2826,7 +2893,11 @@
             "en": "Sunlight through trees",
             "fr": "Soleil à travers les arbres"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-3",
@@ -2879,6 +2950,10 @@
           "imageAlt": {
             "en": "Night sky with stars",
             "fr": "Ciel étoilé"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -2930,6 +3005,10 @@
           "imageAlt": {
             "en": "Misty morning light",
             "fr": "Lumière de matin brumeux"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -2976,7 +3055,16 @@
             "en": "Color temperature uses the Kelvin scale (e.g. ~5600 K daylight, ~3200 K tungsten). Cameras and editing tools use these values for white balance.",
             "fr": "La température de couleur utilise l'échelle Kelvin (ex. ~5600 K lumière du jour, ~3200 K tungstène). Appareils et logiciels s'en servent pour la balance des blancs."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Warm sunset light over water",
+            "fr": "Lumière chaude de coucher de soleil sur l’eau"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-6",
@@ -3022,7 +3110,16 @@
             "en": "Diffused light comes from a large source or is scattered (clouds, softboxes), minimizing harsh shadows and reducing contrast.",
             "fr": "La lumière diffusée provient d'une grande source ou est dispersée (nuages, softboxes), minimisant les ombres dures et réduisant le contraste."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Soft overcast light on a misty landscape",
+            "fr": "Lumière douce de ciel couvert sur un paysage brumeux"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-7",
@@ -3116,7 +3213,16 @@
             "en": "Reflectors bounce light, flags block it, diffusers/softboxes scatter it. Memory cards store data, not control light.",
             "fr": "Les réflecteurs renvoient la lumière, les flags la bloquent, diffuseurs/softboxes la dispersent. Les cartes mémoire stockent des données, pas contrôler la lumière."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Studio lighting gear and camera",
+            "fr": "Matériel d’éclairage studio et appareil photo"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-9",
@@ -3256,7 +3362,16 @@
             "en": "Reflectors redirect existing light to fill shadows, add eye sparkle, or soften harsh illumination without additional equipment.",
             "fr": "Les réflecteurs redirigent la lumière existante pour remplir les ombres, ajouter des reflets aux yeux ou adoucir l'éclairage sans équipement supplémentaire."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Outdoor portrait in directional daylight",
+            "fr": "Portrait en extérieur sous lumière directionnelle"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-12",
@@ -3396,7 +3511,16 @@
             "en": "Blue hour offers a magical, serene quality with cool tones and the contrast between natural blue and warm artificial lights.",
             "fr": "L'heure bleue offre une qualité magique et sereine avec des tons froids et le contraste entre le bleu naturel et les lumières artificielles chaudes."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Twilight blue sky over mountains",
+            "fr": "Ciel bleu d’heure bleue au-dessus des montagnes"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-15",
@@ -3582,7 +3706,16 @@
             "en": "Named after Rembrandt's paintings, this classic portrait lighting creates dramatic, dimensional效果 with a characteristic light triangle.",
             "fr": "Nommé d'après les peintures de Rembrandt, cet éclairage de portrait classique crée un effet dramatique et dimensionnel avec un triangle lumineux caractéristique."
           },
-          "difficulty": "hard"
+          "difficulty": "hard",
+          "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Dramatic side-lit portrait silhouette",
+            "fr": "Portrait en silhouette à éclairage latéral dramatique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-19",
@@ -3676,7 +3809,16 @@
             "en": "These techniques balance extreme light differences. Increasing ISO would add noise without solving the contrast problem.",
             "fr": "Ces techniques équilibrent les différences lumineuses extrêmes. Augmenter l'ISO ajouterait du bruit sans résoudre le problème de contraste."
           },
-          "difficulty": "hard"
+          "difficulty": "hard",
+          "imageUrl": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "High-contrast sunrise through trees",
+            "fr": "Lever de soleil à fort contraste à travers les arbres"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-21",
@@ -3727,6 +3869,10 @@
           "imageAlt": {
             "en": "Portrait in daylight",
             "fr": "Portrait en lumière du jour"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -8627,7 +8773,11 @@
             "en": "Smartphone on a desk",
             "fr": "Smartphone sur un bureau"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-2",
@@ -8678,7 +8828,11 @@
             "en": "Phone camera at night",
             "fr": "Caméra de téléphone la nuit"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-3",
@@ -8729,6 +8883,10 @@
           "imageAlt": {
             "en": "Person holding a smartphone",
             "fr": "Personne tenant un smartphone"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -8782,6 +8940,10 @@
           "imageAlt": {
             "en": "Smartphone camera interface",
             "fr": "Interface caméra de smartphone"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -8828,7 +8990,16 @@
             "en": "True optical zoom changes magnification with optics; digital zoom crops/upsamples.",
             "fr": "Le vrai zoom optique change le grossissement ; le numérique recadre/interpolate."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Smartphone camera close-up",
+            "fr": "Gros plan sur l’appareil photo d’un smartphone"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-6",
@@ -8874,7 +9045,16 @@
             "en": "Dual cameras / LiDAR / ML segment the subject and fake shallow DOF.",
             "fr": "Double caméra / LiDAR / ML segmentent le sujet et simulent une faible PdC."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Camera lens with shallow depth of field",
+            "fr": "Objectif photo avec faible profondeur de champ"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-7",
@@ -8920,7 +9100,16 @@
             "en": "HDR merges exposures to keep highlight and shadow detail.",
             "fr": "Le HDR fusionne des expositions pour garder hautes lumières et ombres."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Bright sky and dark foreground landscape",
+            "fr": "Paysage avec ciel lumineux et premier plan sombre"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-8",
@@ -9014,7 +9203,16 @@
             "en": "Stabilization, shorter exposures and bracing all help; walking + zoom hurts.",
             "fr": "Stabilisation, expositions courtes et appui aident ; marcher + zoom nuit."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Hands holding a smartphone steady",
+            "fr": "Mains tenant un smartphone bien stable"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-10",
@@ -9106,7 +9304,16 @@
             "en": "Soft, diffused light reduces harsh shadows on faces.",
             "fr": "Une lumière douce et diffusée réduit les ombres dures sur le visage."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=960&q=80",
+          "imageAlt": {
+            "en": "Person photographing outdoors with a phone",
+            "fr": "Personne photographiant en extérieur avec un téléphone"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-12",
@@ -9575,6 +9782,10 @@
           "imageAlt": {
             "en": "Smartphone photography",
             "fr": "Photo au smartphone"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -9718,6 +9929,10 @@
           "imageAlt": {
             "en": "Smartphone photography at night",
             "fr": "Photo smartphone de nuit"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -9907,6 +10122,10 @@
           "imageAlt": {
             "en": "Person filming with a phone",
             "fr": "Personne filmant avec un téléphone"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         }
       ],

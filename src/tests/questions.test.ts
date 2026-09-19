@@ -181,4 +181,19 @@ describe('questions.json', () => {
       expect(q.imageCredit?.fr).toBeTruthy();
     }
   });
+
+  it.each(['composition', 'light-color', 'smartphone'] as const)(
+    '%s has 8–12 illustrated questions with credits',
+    (id) => {
+      const quiz = data.quizzes.find((q) => q.id === id);
+      expect(quiz).toBeDefined();
+      const illustrated = quiz!.questions.filter((q) => q.imageUrl);
+      expect(illustrated.length).toBeGreaterThanOrEqual(8);
+      expect(illustrated.length).toBeLessThanOrEqual(12);
+      for (const q of illustrated) {
+        expect(q.imageCredit?.en).toBeTruthy();
+        expect(q.imageCredit?.fr).toBeTruthy();
+      }
+    }
+  );
 });

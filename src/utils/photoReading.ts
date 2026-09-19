@@ -51,8 +51,8 @@ export function buildPhotoReadingQuiz(
       fr: 'Photos à analyser',
     },
     description: {
-      en: '10 illustrated questions — learn by looking.',
-      fr: '10 questions illustrées — apprendre en regardant.',
+      en: '10 real photos to read — composition, light, smartphone and more.',
+      fr: '10 vraies photos à lire — composition, lumière, smartphone et plus.',
     },
     questions: picked,
   };
