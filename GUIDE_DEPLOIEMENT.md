@@ -57,14 +57,20 @@ database_id = "VOTRE_ID_ICI"
 
 ### Étape 4 : Initialiser le schéma de la base de données
 
+**Install neuve :**
+
 ```bash
-wrangler d1 execute quiz-pixfan-scores --file=setup-schema.sql
+npx wrangler d1 execute quiz-pixfan-scores --remote --file=setup-schema.sql
 ```
 
-Cela va créer :
-- Table `highscores` avec contraintes
-- Index pour les performances
-- Vues pour le leaderboard et les analytics
+**Base déjà en prod** (migrations incrémentales) — voir `migrations/README.md` :
+
+```bash
+npm run db:migrate:004
+npm run db:verify:004
+```
+
+`setup-schema.sql` crée notamment : `highscores`, `player_highscores`, `quiz_attempts`, `period_highscores`, `name_reports`, index et vues analytics.
 
 ### Étape 5 : Construire l'application
 
@@ -125,7 +131,8 @@ curl -X POST "https://your-site.pages.dev/api/highscore" \
 
 3. **Configurer les variables d'environnement** :
    - `VITE_ENABLE_REMOTE_SCORES`: `true`
-   - `VITE_APP_URL`: `https://quiz-pixfan.pages.dev`
+   - `VITE_APP_URL`: `https://quiz.pixfan.fr` (ou votre domaine)
+   - `VITE_ADMIN_PIN`: PIN pour activer `#/admin` (variable de **build** ; rebuilder après ajout)
 
 4. **Lier la base de données D1** :
    - **Binding name**: `DB`
@@ -151,6 +158,7 @@ Créez un fichier `.env.production` :
 ```bash
 VITE_APP_URL=https://your-custom-domain.com
 VITE_ENABLE_REMOTE_SCORES=true
+# VITE_ADMIN_PIN=your-secret-pin   # Pages build env + redeploy
 ```
 
 ### Monitoring

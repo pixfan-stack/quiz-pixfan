@@ -1,194 +1,81 @@
 # Quiz PixFan
 
-Bilingual (French / English) quiz web app built with **React + TypeScript + Vite**, ready for **Cloudflare Pages** (static frontend + optional Pages Functions).
+Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-## 📊 Current Content
+**Version courante : v1.12.0**
 
-- **6 quiz categories** with **120 questions total** (20 per category)
-- **Exposure Triangle**: Aperture, shutter speed, ISO fundamentals
-- **Composition & Framing**: Rule of thirds, leading lines, negative space
-- **Light & Color**: Golden hour, white balance, color temperature
-- **Gear & Lenses**: Focal lengths, sensor formats, filters
-- **History & Iconic Photographers**: From Niépce to modern legends
-- **Photography Genres**: Portrait, street, landscape, macro, and more
+## Contenu actuel
 
-## 🚀 Features
+- **10 quiz** · **248 questions** · **~74 illustrées**
+- Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes
+- Galerie domaine public, genres, smartphone, droits & éthique, retouche
+- Modes générés : défi du jour, photo-reading, duel, mix difficulté, points faibles, aléatoire
 
-- ✅ **Fully bilingual** (FR/EN) with automatic language detection
-- ✅ **Single & multiple choice** questions with explanations
-- ✅ **Real-time scoring** with streaks and timing
-- ✅ **Cross-device high scores** via Cloudflare D1 backend
-- ✅ **Local high scores** via localStorage (offline support)
-- ✅ **Social sharing** (Twitter/X, Facebook, LinkedIn, WhatsApp)
-- ✅ **Responsive design** with glassmorphism UI
-- ✅ **Accessible** with ARIA labels, keyboard navigation, and skip links
-- ✅ **Cloudflare Pages ready** with D1 database integration
+Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/`).
 
-## 📈 Recent Updates
+## Fonctionnalités
 
-### v1.2.0 - Cloudflare Backend Integration
-- Added Cloudflare D1 database for cross-device high scores
-- Implemented remote score synchronization
-- Added leaderboard API endpoint
-- Created comprehensive deployment guide
+- Bilingue FR/EN (détection auto + switcher)
+- Scores locaux (localStorage) + scores distants / classements via D1
+- Classements période (semaine / mois) + signalement de pseudo
+- Streak, freezes, succès, maîtrise (vague v1.12)
+- Revue d’erreurs / weak spots, CTA Pixfan / newsletter
+- PWA (manifest, service worker, install prompt)
+- Admin minimal `#/admin` (édition session + export JSON) si `VITE_ADMIN_PIN` est défini au **build**
+- Partage social (OG / deep links duel)
 
-### v1.1.0 - Accessibility & Content Expansion
-- Added 108 new questions (total: 120 questions, 20 per category)
-- Improved accessibility with skip links and ARIA labels
-- Enhanced keyboard navigation and screen reader support
-- Added comprehensive NEXT_STEPS.md for future development
+## Architecture (résumé)
 
-## Architecture summary
-
-| Layer | Role |
+| Couche | Rôle |
 | --- | --- |
-| **Components** | `LanguageSwitcher`, `QuizSelector`, `QuestionView`, `ResultScreen`, `HighScoreBadge`, `QuizScreen` |
-| **Data flow** | `questions.json` → user selects quiz → `useQuizEngine` scores answers → `ResultScreen` |
-| **i18n** | `react-i18next` + JSON files in `public/locales/{en,fr}/translation.json`; quiz content has inline `fr`/`en` fields |
-| **High scores** | `src/utils/highscore.ts` (localStorage). Optional API client: `highscoreApi.ts` + `functions/api/highscore.ts` |
-| **Sharing** | `src/utils/share.ts` builds Twitter/X, Facebook, LinkedIn, WhatsApp URLs with localized text |
+| UI | `QuizSelector`, `QuizScreen`, `ResultScreen`, `AdminScreen`, … |
+| Données | `public/data/questions.json` → `useQuizEngine` → résultats / scores |
+| i18n | `react-i18next` + `public/locales/{fr,en}/translation.json` |
+| Backend | `functions/api/*` + D1 (`wrangler.toml`) |
+| Migrations | `migrations/` (+ `setup-schema.sql` pour install neuve) |
 
-```
-User → LanguageSwitcher (persists i18nextLng)
-     → QuizSelector (reads questions.json + local high scores)
-     → QuestionView / useQuizEngine (single & multiple choice, streaks, timer)
-     → ResultScreen (score message + social share buttons)
-```
-
-## Project structure
-
-```
-quizz-pixfan/
-├── functions/
-│   └── api/
-│       └── highscore.ts          # Example Pages Function (KV/D1 ready)
-├── public/
-│   ├── _redirects                # SPA fallback for Cloudflare Pages
-│   └── locales/
-│       ├── en/
-│       │   └── translation.json  # English UI strings
-│       └── fr/
-│           └── translation.json  # French UI strings
-├── src/
-│   ├── components/
-│   │   ├── HighScoreBadge.tsx
-│   │   ├── LanguageSwitcher.tsx
-│   │   ├── QuestionView.tsx
-│   │   ├── QuizScreen.tsx
-│   │   ├── QuizSelector.tsx
-│   │   └── ResultScreen.tsx
-│   ├── data/
-│   │   └── questions.json        # Quizzes + localized questions
-│   ├── hooks/
-│   │   └── useQuizEngine.ts      # Scoring, streaks, navigation
-│   ├── styles/
-│   │   └── global.css
-│   ├── types/
-│   │   └── quiz.ts
-│   ├── utils/
-│   │   ├── highscore.ts          # localStorage high scores
-│   │   ├── highscoreApi.ts       # Optional fetch to /api/highscore
-│   │   ├── locale.ts
-│   │   ├── scoring.ts
-│   │   └── share.ts              # Social share URL builders
-│   ├── App.tsx
-│   ├── i18n.ts
-│   ├── main.tsx
-│   └── vite-env.d.ts
-├── index.html
-├── package.json
-├── tsconfig.json
-├── tsconfig.node.json
-├── vite.config.ts
-└── README.md
-```
-
-## How to add content
-
-### New questions / quizzes
-
-Edit `src/data/questions.json`. Every user-facing string needs both `fr` and `en`:
-
-```json
-{
-  "id": "my-quiz",
-  "title": { "en": "My Quiz", "fr": "Mon quiz" },
-  "description": { "en": "…", "fr": "…" },
-  "questions": [
-    {
-      "id": "q1",
-      "type": "single",
-      "text": { "en": "…", "fr": "…" },
-      "answers": [
-        { "id": "a", "text": { "en": "…", "fr": "…" } }
-      ],
-      "correctAnswers": ["a"],
-      "explanation": { "en": "…", "fr": "…" }
-    }
-  ]
-}
-```
-
-- `"type": "single"` → one correct answer id  
-- `"type": "multiple"` → one or more correct answer ids  
-
-### New UI strings
-
-1. Add the same key path in:
-   - `public/locales/en/translation.json`
-   - `public/locales/fr/translation.json`
-2. Use `t('section.key')` or `t('section.key', { name: value })` in components.
-
-### Share messages & URL
-
-- Text: `share.text` in both locale files (`{{score}}`, `{{total}}`, `{{percent}}`, `{{quizTitle}}`)
-- Hashtags: `share.hashtags`
-- App URL: set `VITE_APP_URL` (see `.env.example`) or edit `APP_SHARE_URL` in `src/utils/share.ts`
-
-## How to run and deploy
-
-### Local development
+## Développement local
 
 ```bash
 npm install
+cp .env.example .env   # ajuster VITE_* si besoin
 npm run dev
 ```
 
-Open the URL printed by Vite (usually `http://localhost:5173`).
-
-### Production build
-
 ```bash
 npm run build
-```
-
-Output directory: **`dist/`**
-
-Preview locally:
-
-```bash
 npm run preview
+npm test
+npm run test:e2e
 ```
 
-### Deploy to Cloudflare Pages
+### Variables d’environnement (Vite)
 
-1. Push the repo to GitHub/GitLab, or use direct upload.
-2. In Cloudflare Pages, create a project and set:
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-   - **Root directory:** `/` (or your monorepo path)
-3. (Optional) Framework preset: *None* or *Vite*.
-4. (Optional) Environment variable: `VITE_APP_URL=https://your-domain.pages.dev`
-5. Deploy. Pages Functions under `functions/` are picked up automatically when present.
+Voir `.env.example` :
 
-### Optional remote high scores
+| Variable | Rôle |
+| --- | --- |
+| `VITE_APP_URL` | URL publique (partage / OG) |
+| `VITE_ENABLE_REMOTE_SCORES` | Active les appels `/api/*` scores |
+| `VITE_ADMIN_PIN` | Active `#/admin` en build prod (sinon désactivé hors DEV) |
 
-1. Deploy with the `functions/api/highscore.ts` file.
-2. Bind KV or D1 (see comments in that file).
-3. Uncomment the `submitRemoteHighScore` / `fetchRemoteHighScore` call sites in `ResultScreen` / `useQuizEngine`.
+`VITE_*` sont injectées **au build**. Sur Cloudflare Pages, les définir dans **Settings → Environment variables** (Production), puis **rebuilder**.
 
-The app remains fully usable **without** any backend — high scores stay in the browser.
+## Contenu : ajouter des questions
 
-## License
+Éditer `public/data/questions.json`. Chaque chaîne utilisateur doit avoir `fr` et `en`. Voir aussi `#/admin` (export JSON) une fois le PIN configuré.
 
-Demo project — no proprietary assets. System fonts only.
+## Déploiement Cloudflare
+
+Guides détaillés : [`DEPLOYMENT.md`](./DEPLOYMENT.md), [`GUIDE_DEPLOIEMENT.md`](./GUIDE_DEPLOIEMENT.md).
+
+Points ops fréquents (P0) :
+
+1. **Migration D1 004** (classements période + reports) — voir [`migrations/README.md`](./migrations/README.md)  
+   `npm run db:migrate:004` puis `npm run db:verify:004`
+2. **`VITE_ADMIN_PIN`** en variable de build Pages Production, puis redéploiement
+3. Binding D1 `DB` → `quiz-pixfan-scores` sur le projet Pages
+
+## Licence
+
+Projet démo / Pixfan — polices système ; crédits images dans le JSON quand présents.

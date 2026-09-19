@@ -75,5 +75,7 @@ wrangler pages deploy dist --project-name=quiz-pixfan
 - [ ] TypeScript compiles without errors (`npm run typecheck`)
 - [ ] Build succeeds (`npm run build`)
 - [ ] Changelog updated
-- [ ] README.md updated if needed
+- [ ] README.md / NEXT_STEPS.md updated if content or features changed
 - [ ] Version bumped in package.json
+- [ ] If schema changed: apply D1 migrations on prod (`migrations/README.md`) and `npm run db:verify:004` when relevant
+- [ ] If admin needed: `VITE_ADMIN_PIN` set on Pages Production **build** env, then redeploy

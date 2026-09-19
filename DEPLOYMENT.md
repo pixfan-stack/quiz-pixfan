@@ -28,12 +28,18 @@ Cela va retourner un `DATABASE_ID` (ex: `abc123-def456-ghi789`).
 wrangler d1 execute quiz-pixfan-scores --file=setup-schema.sql
 ```
 
-**Déploiements D1 existants** : appliquez les migrations manquantes :
+**Déploiements D1 existants** : appliquez les migrations manquantes (détail : [`migrations/README.md`](./migrations/README.md)) :
 
 ```bash
-wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/002-player-leaderboard.sql
-wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/003-quiz-attempts.sql
-wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/004-period-leaderboard-reports.sql
+npx wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/002-player-leaderboard.sql
+npx wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/003-quiz-attempts.sql
+npm run db:migrate:004
+```
+
+Vérifier la 004 (attendu : `name_reports` + `period_highscores`) :
+
+```bash
+npm run db:verify:004
 ```
 
 (L’option `--remote` cible la base de production ; omettez-la pour l’environnement local.)
@@ -56,9 +62,11 @@ Créez un fichier `.env` local :
 ```bash
 VITE_ENABLE_REMOTE_SCORES=true
 VITE_APP_URL=https://quiz-pixfan.pages.dev
-# Optional — enables the in-browser question editor at #/admin
+# Required in prod builds to enable #/admin (Vite embeds at build time)
 # VITE_ADMIN_PIN=your-secret-pin
 ```
+
+Sur **Cloudflare Pages** : Settings → Environment variables → Production → ajouter `VITE_ADMIN_PIN`, puis **Retry deployment** / nouveau déploiement (sinon le build prod garde l’admin désactivé).
 
 ## 🌐 Déploiement sur Cloudflare Pages
 
@@ -73,10 +81,10 @@ VITE_APP_URL=https://quiz-pixfan.pages.dev
    - **Build command**: `npm run build`
    - **Build output directory**: `dist`
    - **Root directory**: `/`
-5. Ajoutez les variables d'environnement :
+5. Ajoutez les variables d'environnement (**build**) :
    - `VITE_ENABLE_REMOTE_SCORES`: `true`
-   - `VITE_APP_URL`: `https://quiz-pixfan.pages.dev`
-   - `VITE_ADMIN_PIN` (optionnel) : active l’éditeur `#/admin`
+   - `VITE_APP_URL`: `https://quiz.pixfan.fr` (ou votre domaine)
+   - `VITE_ADMIN_PIN` : PIN secret pour `#/admin` (sans cette variable, l’admin est désactivé en prod)
 6. Liez la base de données D1 :
    - **Binding name**: `DB`
    - **Database**: `quiz-pixfan-scores`
