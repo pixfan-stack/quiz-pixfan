@@ -167,6 +167,26 @@ CREATE TABLE IF NOT EXISTS name_reports (
 CREATE INDEX IF NOT EXISTS idx_name_reports_reported
   ON name_reports(reported_player_id, created_at DESC);
 
+-- Light account sync: streak + achievements blob keyed by player_id
+CREATE TABLE IF NOT EXISTS player_progress (
+  player_id TEXT PRIMARY KEY,
+  display_name TEXT,
+  streak_json TEXT NOT NULL DEFAULT '{}',
+  achievements_json TEXT NOT NULL DEFAULT '[]',
+  updated_at TEXT NOT NULL
+);
+
+-- Hashed recovery codes (plaintext shown once to the player)
+CREATE TABLE IF NOT EXISTS player_recovery_codes (
+  code_hash TEXT PRIMARY KEY,
+  player_id TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  expires_at TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_recovery_codes_player
+  ON player_recovery_codes(player_id);
+
 -- Optional: leaderboard view (top scores per quiz)
 CREATE VIEW IF NOT EXISTS leaderboard AS
 SELECT

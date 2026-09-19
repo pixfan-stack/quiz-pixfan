@@ -19,7 +19,7 @@ Document à jour avec l’état réel du dépôt (**v1.12.0**).
 
 ## 🔜 Suite produit possible
 
-- [ ] Compte léger / sync multi-appareil (progrès encore 100 % localStorage)
+- [x] Compte léger / sync multi-appareil (code de récupération + sync streak/succès/high scores)
 - [ ] Enrichir images sur quiz techniques + CTA post-score mesurés
 - [ ] Rééquilibrer difficultés (peu de « hard ») / +1 quiz thématique Pixfan
 - [ ] UI admin des `name_reports` ; découpage gros composants
