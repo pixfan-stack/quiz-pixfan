@@ -5,7 +5,9 @@ name = "quiz-pixfan"
 pages_build_output_dir = "dist"
 
 [vars]
-# Application configuration
+# Application configuration (Pages Functions / wrangler).
+# VITE_* used by the SPA must also be set in Cloudflare Pages → Settings →
+# Environment variables for the *build*, then redeploy. Do not commit VITE_ADMIN_PIN.
 VITE_APP_URL = "https://quiz.pixfan.fr"
 VITE_ENABLE_REMOTE_SCORES = true
 

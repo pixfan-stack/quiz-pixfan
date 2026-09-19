@@ -1,5 +1,7 @@
 -- Period leaderboards (week / month) + abusive display-name reports
--- npx wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/004-period-leaderboard-reports.sql
+-- Apply (prod):  npm run db:migrate:004
+-- Verify (prod): npm run db:verify:004
+-- See migrations/README.md
 
 CREATE TABLE IF NOT EXISTS period_highscores (
   period_type TEXT NOT NULL CHECK(period_type IN ('week', 'month')),

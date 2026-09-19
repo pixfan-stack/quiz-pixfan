@@ -1,0 +1,41 @@
+# Migrations D1 — Quiz PixFan
+
+Schéma complet (install neuve) : `../setup-schema.sql` (inclut déjà les tables de la migration 004).
+
+Sur une base **déjà en prod**, appliquer les fichiers manquants dans l’ordre :
+
+| Fichier | Contenu |
+|---------|---------|
+| `002-player-leaderboard.sql` | `player_highscores` |
+| `003-quiz-attempts.sql` | `quiz_attempts` |
+| `004-period-leaderboard-reports.sql` | `period_highscores` + `name_reports` |
+
+## Appliquer la 004 (prod)
+
+```bash
+# depuis la racine du dépôt, après `npx wrangler login`
+npm run db:migrate:004
+```
+
+Équivalent :
+
+```bash
+npx wrangler d1 execute quiz-pixfan-scores --remote \
+  --file=migrations/004-period-leaderboard-reports.sql
+```
+
+Sans `--remote`, la commande cible l’environnement local Wrangler.
+
+## Vérifier que la 004 est bien en place
+
+```bash
+npm run db:verify:004
+```
+
+Attendu : deux lignes `name_reports` et `period_highscores`.
+
+Si les tables manquent, les classements semaine/mois et le signalement de pseudo restent en échec côté API (logs `migration 004?`).
+
+## Dashboard Cloudflare
+
+Alternative : Cloudflare Dashboard → **D1** → `quiz-pixfan-scores` → **Console** → coller le SQL de `004-period-leaderboard-reports.sql` (sans les commentaires `-- npx …`).
