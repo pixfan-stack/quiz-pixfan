@@ -56,6 +56,7 @@ import {
 import { downloadDailyChallengeIcs } from '../utils/dailyChallengeCalendar';
 import {
   buildPhotoReadingQuiz,
+  collectIllustratedQuestions,
   getPhotoReadingTeaser,
   PHOTO_READING_COUNT,
   PHOTO_READING_ID,
@@ -128,6 +129,10 @@ export function QuizSelector({
   );
   const photoTeaser = useMemo(
     () => (quizzes.length > 0 ? getPhotoReadingTeaser(quizzes) : null),
+    [quizzes]
+  );
+  const photoPoolCount = useMemo(
+    () => (quizzes.length > 0 ? collectIllustratedQuestions(quizzes).length : 0),
     [quizzes]
   );
   const photoPackAvailable = Boolean(photoTeaser);
@@ -408,6 +413,64 @@ export function QuizSelector({
 
       {quizzes.length > 0 && (
         <ul className="quiz-list quiz-list--featured" aria-label={t('home.featuredSection')}>
+          {photoPackAvailable && (
+            <li>
+              <button
+                type="button"
+                className="quiz-card quiz-card--photo quiz-card--featured-photo"
+                onClick={handleStartPhotoReading}
+                onMouseEnter={onPrefetchQuiz}
+                onFocus={onPrefetchQuiz}
+                aria-label={t('home.photoReading')}
+              >
+                {photoTeaser?.imageUrl ? (
+                  <span className="quiz-card__teaser quiz-card__teaser--hero" aria-hidden="true">
+                    <img
+                      src={photoTeaser.imageUrl}
+                      alt=""
+                      className="quiz-card__teaser-img"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                ) : (
+                  <span className="quiz-card__icon" aria-hidden="true">
+                    🖼️
+                  </span>
+                )}
+                <div className="quiz-card__body">
+                  <h3 className="quiz-card__title">{t('home.photoReading')}</h3>
+                  <p className="quiz-card__desc">{t('home.photoReadingDesc')}</p>
+                </div>
+                <div className="quiz-card__footer">
+                  <div className="quiz-card__meta">
+                    <span className="quiz-card__meta-chip quiz-card__meta-chip--learn">
+                      {t('home.photoReadingBadge')}
+                    </span>
+                    <span className="quiz-card__meta-chip">
+                      {t('home.questionsCount', { count: PHOTO_READING_COUNT })}
+                    </span>
+                    {photoPoolCount > 0 && (
+                      <span className="quiz-card__meta-chip quiz-card__meta-chip--pool">
+                        {t('home.photoPoolCount', { count: photoPoolCount })}
+                      </span>
+                    )}
+                    <HighScoreBadge
+                      showEmpty
+                      bestScore={getBestScore(PHOTO_READING_ID)}
+                    />
+                  </div>
+                  <span className="quiz-card__cta">
+                    {t('home.start')}
+                    <span className="quiz-card__cta-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  </span>
+                </div>
+              </button>
+            </li>
+          )}
+
           <li className="quiz-card-with-copy">
             <button
               type="button"
@@ -482,59 +545,6 @@ export function QuizSelector({
               {dailyLinkCopied ? '✓' : '🔗'}
             </button>
           </li>
-
-          {photoPackAvailable && (
-            <li>
-              <button
-                type="button"
-                className="quiz-card quiz-card--photo quiz-card--featured-photo"
-                onClick={handleStartPhotoReading}
-                onMouseEnter={onPrefetchQuiz}
-                onFocus={onPrefetchQuiz}
-                aria-label={t('home.photoReading')}
-              >
-                {photoTeaser?.imageUrl ? (
-                  <span className="quiz-card__teaser" aria-hidden="true">
-                    <img
-                      src={photoTeaser.imageUrl}
-                      alt=""
-                      className="quiz-card__teaser-img"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </span>
-                ) : (
-                  <span className="quiz-card__icon" aria-hidden="true">
-                    🖼️
-                  </span>
-                )}
-                <div className="quiz-card__body">
-                  <h3 className="quiz-card__title">{t('home.photoReading')}</h3>
-                  <p className="quiz-card__desc">{t('home.photoReadingDesc')}</p>
-                </div>
-                <div className="quiz-card__footer">
-                  <div className="quiz-card__meta">
-                    <span className="quiz-card__meta-chip quiz-card__meta-chip--learn">
-                      {t('home.photoReadingBadge')}
-                    </span>
-                    <span className="quiz-card__meta-chip">
-                      {t('home.questionsCount', { count: PHOTO_READING_COUNT })}
-                    </span>
-                    <HighScoreBadge
-                      showEmpty
-                      bestScore={getBestScore(PHOTO_READING_ID)}
-                    />
-                  </div>
-                  <span className="quiz-card__cta">
-                    {t('home.start')}
-                    <span className="quiz-card__cta-arrow" aria-hidden="true">
-                      →
-                    </span>
-                  </span>
-                </div>
-              </button>
-            </li>
-          )}
 
           <li>
             <button

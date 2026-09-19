@@ -1176,11 +1176,37 @@ a {
 .quiz-card--featured-photo {
   border-color: color-mix(in srgb, #2563eb 55%, var(--color-border));
   box-shadow: var(--shadow-sm);
+  grid-template-columns: 1fr;
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, #2563eb 12%, var(--color-surface)) 0%,
+    var(--color-surface) 55%
+  );
+}
+
+.quiz-card--featured-photo .quiz-card__teaser--hero {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  max-height: 9.5rem;
+  border-radius: 14px;
+  grid-row: auto;
+  grid-column: 1 / -1;
+}
+
+.quiz-card--featured-photo .quiz-card__body,
+.quiz-card--featured-photo .quiz-card__footer {
+  grid-column: 1 / -1;
 }
 
 .quiz-card__meta-chip--learn {
   color: #2563eb;
   font-weight: 700;
+}
+
+.quiz-card__meta-chip--pool {
+  color: color-mix(in srgb, #2563eb 70%, var(--color-text-muted));
+  font-weight: 600;
 }
 
 .quiz-card__meta-chip--mastery-next {
