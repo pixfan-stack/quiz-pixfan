@@ -229,6 +229,20 @@
     "reportAria": "Signaler {{name}}",
     "maskedName": "Joueur"
   },
+  "season": {
+    "startedTitle": "Nouvelle saison {{season}}",
+    "startedDesc": "Le classement mensuel repart à zéro — gagnez le badge participant en jouant.",
+    "endingTitle": "Fin de saison {{season}}",
+    "endingDesc_one": "Dernier jour pour grimper au classement de la saison.",
+    "endingDesc_other": "Plus que {{days}} jours avant la fin de la saison.",
+    "endingHint_one": "Dernier jour de la saison",
+    "endingHint_other": "Fin de saison dans {{days}} jours",
+    "seeLeaderboard": "Voir le classement",
+    "dismiss": "Plus tard",
+    "badgesTitle": "Badges de saison",
+    "badgesEmpty": "Terminez un quiz pour gagner le badge de la saison en cours.",
+    "participantBadge": "Participant · {{season}}"
+  },
   "pixfan": {
     "eyebrow": "Suite Pixfan",
     "improveTitle": "Un guide pour progresser",
@@ -311,14 +325,17 @@
     "dismiss": "Plus tard"
   },
   "admin": {
-    "title": "Éditeur de questions",
+    "title": "Admin Quiz PixFan",
     "disabled": "Admin désactivé. Définissez VITE_ADMIN_PIN pour l’activer.",
-    "pinHint": "Entrez le code admin pour modifier les questions dans le navigateur.",
+    "pinHint": "Entrez le code admin pour modifier les questions et modérer les signalements.",
     "pin": "Code admin",
     "pinError": "Code incorrect",
     "unlock": "Déverrouiller",
     "lock": "Verrouiller et quitter",
-    "intro": "Modifiez les textes ici, prévisualisez dans la session, puis exportez questions.json pour le déploiement.",
+    "intro": "Modifiez les textes ici, prévisualisez dans la session, exportez questions.json, ou modérez les pseudos signalés.",
+    "tabsLabel": "Sections admin",
+    "tabQuestions": "Questions",
+    "tabReports": "Signalements",
     "quiz": "Quiz",
     "question": "Question",
     "answers": "Réponses",
@@ -327,7 +344,17 @@
     "export": "Exporter le JSON",
     "preview": "Prévisualiser dans l’app",
     "exported": "questions.json téléchargé",
-    "previewApplied": "Prévisualisation appliquée pour cette session"
+    "previewApplied": "Prévisualisation appliquée pour cette session",
+    "reportsIntro": "Pseudos signalés par les joueurs. Masquer remplace le nom par « Joueur » et nettoie les signalements.",
+    "reportsRefresh": "Actualiser",
+    "reportsEmpty": "Aucun signalement ouvert.",
+    "reportsCount": "{{count}} signalement(s)",
+    "reportsMask": "Masquer le pseudo",
+    "reportsDismiss": "Ignorer",
+    "reportsMasked": "Pseudo masqué",
+    "reportsDismissed": "Signalements ignorés",
+    "reportsUnauthorized": "Session admin invalide — reconnectez-vous.",
+    "reportsUnavailable": "Signalements indisponibles (API ou migration)."
   },
   "common": {
     "loading": "Chargement…",

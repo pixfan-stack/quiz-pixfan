@@ -153,12 +153,25 @@ export function buildShareHtml(opts: {
   const deepLink = `${opts.appOrigin}/#/quiz/${encodeURIComponent(opts.quizId)}${scoreQuery}`;
   const safeTitle = escapeXml(title);
   const safeDesc = escapeXml(description);
+  const isDuel = opts.quizId.startsWith('duel-');
+  const cta =
+    opts.lang === 'fr'
+      ? isDuel
+        ? 'Relever le duel'
+        : 'Ouvrir le quiz'
+      : isDuel
+        ? 'Accept the duel'
+        : 'Open the quiz';
+  const mobileHint =
+    opts.lang === 'fr'
+      ? 'Si le quiz ne s’ouvre pas, touchez le bouton ci-dessous.'
+      : 'If the quiz does not open, tap the button below.';
 
   return `<!doctype html>
 <html lang="${opts.lang}">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>${safeTitle}</title>
   <meta name="description" content="${safeDesc}" />
   <meta property="og:type" content="website" />
@@ -175,19 +188,23 @@ export function buildShareHtml(opts: {
   <meta name="twitter:title" content="${safeTitle}" />
   <meta name="twitter:description" content="${safeDesc}" />
   <meta name="twitter:image" content="${escapeXml(opts.ogImageUrl)}" />
-  <meta http-equiv="refresh" content="0;url=${escapeXml(deepLink)}" />
+  <meta http-equiv="refresh" content="1;url=${escapeXml(deepLink)}" />
   <link rel="canonical" href="${escapeXml(opts.pageUrl)}" />
   <style>
     body{font-family:system-ui,-apple-system,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center;background:#1a1a2e;color:#fff;text-align:center;padding:2rem}
-    a{color:#f3538c;font-weight:700}
-    p{opacity:.85}
+    main{max-width:28rem}
+    h1{font-size:1.35rem;line-height:1.3;margin:0 0 0.75rem}
+    p{opacity:.85;margin:0.5rem 0}
+    .cta{display:inline-block;margin-top:1.25rem;padding:0.9rem 1.4rem;border-radius:999px;background:#f3538c;color:#fff;font-weight:700;text-decoration:none;font-size:1.05rem;min-width:12rem}
+    .hint{font-size:0.85rem;opacity:.7;margin-top:1rem}
   </style>
 </head>
 <body>
   <main>
     <h1>${safeTitle}</h1>
     <p>${safeDesc}</p>
-    <p><a href="${escapeXml(deepLink)}">${opts.lang === 'fr' ? 'Ouvrir le quiz' : 'Open the quiz'}</a></p>
+    <p><a class="cta" href="${escapeXml(deepLink)}">${escapeXml(cta)}</a></p>
+    <p class="hint">${escapeXml(mobileHint)}</p>
   </main>
   <script>location.replace(${JSON.stringify(deepLink)});</script>
 </body>

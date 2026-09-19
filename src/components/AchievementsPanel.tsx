@@ -4,6 +4,11 @@ import {
   getUnlockedAchievements,
   type AchievementId,
 } from '../utils/achievements';
+import { getMonthPeriodId } from '../utils/leaderboardPeriod';
+import {
+  getSeasonBadge,
+  listSeasonBadges,
+} from '../utils/seasonEngagement';
 
 interface AchievementsPanelProps {
   /** Highlight these ids (e.g. just unlocked). */
@@ -13,7 +18,7 @@ interface AchievementsPanelProps {
 }
 
 /**
- * Local achievements grid — unlocked vs locked.
+ * Local achievements grid — unlocked vs locked — plus season cosmetics.
  */
 export function AchievementsPanel({
   highlightIds = [],
@@ -26,6 +31,9 @@ export function AchievementsPanel({
     compact && highlightIds.length > 0
       ? ACHIEVEMENTS.filter((a) => highlight.has(a.id))
       : ACHIEVEMENTS;
+  const currentSeasonId = getMonthPeriodId();
+  const seasonBadges = compact ? [] : listSeasonBadges();
+  const currentSeasonBadge = getSeasonBadge(currentSeasonId);
 
   return (
     <section
@@ -74,6 +82,34 @@ export function AchievementsPanel({
           );
         })}
       </ul>
+      {!compact && (
+        <div className="season-badges" data-testid="season-badges">
+          <h4 className="season-badges__title">{t('season.badgesTitle')}</h4>
+          {seasonBadges.length === 0 ? (
+            <p className="season-badges__empty">{t('season.badgesEmpty')}</p>
+          ) : (
+            <ul className="season-badges__list">
+              {seasonBadges.map(({ seasonId }) => (
+                <li
+                  key={seasonId}
+                  className={`season-badge${
+                    seasonId === currentSeasonId && currentSeasonBadge
+                      ? ' is-current'
+                      : ''
+                  }`}
+                >
+                  <span className="season-badge__icon" aria-hidden="true">
+                    🏅
+                  </span>
+                  <span className="season-badge__label">
+                    {t('season.participantBadge', { season: seasonId })}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </section>
   );
 }

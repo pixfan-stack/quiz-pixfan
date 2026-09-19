@@ -37,3 +37,24 @@ export function getPeriodIds(date = new Date()): {
     month: getMonthPeriodId(date),
   };
 }
+
+/** First UTC instant of a season (`YYYY-MM`). */
+export function getSeasonStart(seasonId = getMonthPeriodId()): Date {
+  const [y, m] = seasonId.split('-').map(Number);
+  return new Date(Date.UTC(y!, (m ?? 1) - 1, 1));
+}
+
+/** Last UTC day of a season (`YYYY-MM`), at 00:00. */
+export function getSeasonEndDay(seasonId = getMonthPeriodId()): Date {
+  const [y, m] = seasonId.split('-').map(Number);
+  return new Date(Date.UTC(y!, m ?? 1, 0));
+}
+
+/** Whole UTC days remaining in the current season (0 on the last day). */
+export function getSeasonDaysRemaining(date = new Date()): number {
+  const end = getSeasonEndDay(getMonthPeriodId(date));
+  const today = new Date(
+    Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
+  );
+  return Math.max(0, Math.round((end.getTime() - today.getTime()) / 86400000));
+}

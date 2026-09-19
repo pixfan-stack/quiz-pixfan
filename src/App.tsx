@@ -70,6 +70,8 @@ export default function App() {
   });
   const [leaderboardRefreshToken, setLeaderboardRefreshToken] = useState(0);
   const [targetScore, setTargetScore] = useState<number | null>(null);
+  /** Bumped on hash deep-links so duel/share routes open even if already on home. */
+  const [routeEpoch, setRouteEpoch] = useState(0);
   const [recoveryCode, setRecoveryCode] = useState<string | null>(() =>
     parseRecoveryCodeFromHash(window.location.hash)
   );
@@ -187,7 +189,7 @@ export default function App() {
     if (found) {
       startQuiz(found, { targetScore: scoreFromLink });
     }
-  }, [quizzes, startQuiz, view]);
+  }, [quizzes, startQuiz, view, routeEpoch]);
 
   useEffect(() => {
     const onHashChange = () => {
@@ -206,6 +208,13 @@ export default function App() {
         setRecoveryCode(null);
         setActiveQuiz(null);
         setView('home');
+        return;
+      }
+      // Deep link while the SPA is already open (share landings, in-app browsers).
+      if (parseQuizIdFromHash(window.location.hash)) {
+        setActiveQuiz(null);
+        setView('home');
+        setRouteEpoch((n) => n + 1);
       }
     };
     window.addEventListener('hashchange', onHashChange);

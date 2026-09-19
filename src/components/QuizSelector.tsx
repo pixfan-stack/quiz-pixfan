@@ -13,6 +13,7 @@ import { HighScoreBadge } from './HighScoreBadge';
 import { Leaderboard } from './Leaderboard';
 import { WeeklyLeaders } from './WeeklyLeaders';
 import { DailyNudge } from './DailyNudge';
+import { SeasonBanner } from './SeasonBanner';
 import { getHighScore } from '../utils/highscore';
 import { fetchRemoteHighScore } from '../utils/highscoreApi';
 import { fetchQuizStats, type QuizStats } from '../utils/analyticsApi';
@@ -403,6 +404,7 @@ export function QuizSelector({
       </div>
 
       <DailyNudge onPlayDaily={handleStartDaily} />
+      <SeasonBanner />
 
       {difficultyFilter === 'all' && (
         <WeeklyLeaders

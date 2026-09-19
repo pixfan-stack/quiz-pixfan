@@ -57,4 +57,19 @@ describe('sharePreview', () => {
     expect(html).toContain('/#/quiz/composition?score=80');
     expect(html).toContain('80 %');
   });
+
+  it('builds a mobile-friendly duel landing with large CTA', () => {
+    const html = buildShareHtml({
+      quizId: 'duel-abcd2345',
+      score: 70,
+      lang: 'fr',
+      pageUrl: 'https://quiz.pixfan.fr/s/duel-abcd2345?score=70&lang=fr',
+      ogImageUrl: 'https://quiz.pixfan.fr/og-image.png?v=4',
+      appOrigin: 'https://quiz.pixfan.fr',
+    });
+    expect(html).toContain('Relever le duel');
+    expect(html).toContain('class="cta"');
+    expect(html).toContain('/#/quiz/duel-abcd2345?score=70');
+    expect(html).toContain('viewport-fit=cover');
+  });
 });
