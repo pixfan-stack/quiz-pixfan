@@ -4,7 +4,7 @@ Document à jour avec l’état réel du dépôt (**v1.12.0**).
 
 ## ✅ Livré
 
-- Contenu : **10 quiz · 248 questions · ~74 illustrées** (`public/data/questions.json`)
+- Contenu : **11 quiz · 285 questions · ~97 illustrées** (`public/data/questions.json`)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots
 - Engagement : défi du jour, duel, succès, streak + freezes, **maîtrise** + home featured (v1.12)
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
@@ -21,7 +21,7 @@ Document à jour avec l’état réel du dépôt (**v1.12.0**).
 
 - [x] Compte léger / sync multi-appareil (code de récupération + sync streak/succès/high scores)
 - [ ] Enrichir images sur quiz techniques + CTA post-score mesurés
-- [ ] Rééquilibrer difficultés (peu de « hard ») / +1 quiz thématique Pixfan
+- [x] Rééquilibrer difficultés (peu de « hard ») / +1 quiz thématique Pixfan (P2)
 - [ ] UI admin des `name_reports` ; découpage gros composants
 
 Contenu : `public/data/questions.json`. Priorisation détaillée hors dépôt si besoin.

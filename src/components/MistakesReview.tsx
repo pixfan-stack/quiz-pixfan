@@ -1,15 +1,19 @@
 import { useTranslation } from 'react-i18next';
 import type { AnswerReviewItem } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
+import { localGuideForMistake } from '../utils/pixfanCta';
 
 interface MistakesReviewProps {
   mistakes: AnswerReviewItem[];
+  /** Finished quiz id — used when mistake ids are not compound. */
+  quizId?: string;
 }
 
 /**
  * Post-quiz review of incorrect answers with correct options + explanations.
+ * Links to a matching local guide when the failed theme has one (P2-C).
  */
-export function MistakesReview({ mistakes }: MistakesReviewProps) {
+export function MistakesReview({ mistakes, quizId }: MistakesReviewProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
 
@@ -36,6 +40,7 @@ export function MistakesReview({ mistakes }: MistakesReviewProps) {
           const selectedAnswers = item.question.answers.filter((a) =>
             item.selectedIds.includes(a.id)
           );
+          const guide = localGuideForMistake(item.question.id, quizId);
 
           return (
             <li key={item.question.id} className="mistakes-review__item">
@@ -58,6 +63,17 @@ export function MistakesReview({ mistakes }: MistakesReviewProps) {
               {item.question.explanation && (
                 <p className="mistakes-review__explanation">
                   {pickLocale(item.question.explanation, lang)}
+                </p>
+              )}
+              {guide && (
+                <p className="mistakes-review__guide">
+                  <a
+                    className="mistakes-review__guide-link"
+                    href={`${guide.path}${lang.startsWith('en') ? '?lang=en' : ''}`}
+                  >
+                    {t(`result.reviewGuide_${guide.topic}`)}
+                    <span aria-hidden="true"> →</span>
+                  </a>
                 </p>
               )}
             </li>

@@ -188,7 +188,10 @@
     "reviewYourAnswer": "Your answer: ",
     "reviewCorrect": "Correct answer: ",
     "reviewNoAnswer": "None (timed out)",
-    "reviewTimedOut": "Timed out"
+    "reviewTimedOut": "Timed out",
+    "reviewGuide_exposure": "Read the exposure triangle guide",
+    "reviewGuide_composition": "Read the composition guide",
+    "reviewGuide_smartphone": "Read the smartphone photography guide"
   },
   "share": {
     "text": "I scored {{percent}}% ({{score}}/{{total}}) on \"{{quizTitle}}\" — Quiz PixFan. Can you beat me?",

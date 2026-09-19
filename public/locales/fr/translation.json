@@ -188,7 +188,10 @@
     "reviewYourAnswer": "Votre réponse : ",
     "reviewCorrect": "Bonne réponse : ",
     "reviewNoAnswer": "Aucune (temps écoulé)",
-    "reviewTimedOut": "Temps écoulé"
+    "reviewTimedOut": "Temps écoulé",
+    "reviewGuide_exposure": "Relire le guide triangle d’exposition",
+    "reviewGuide_composition": "Relire le guide composition",
+    "reviewGuide_smartphone": "Relire le guide photo smartphone"
   },
   "share": {
     "text": "J'ai fait {{percent}} % ({{score}}/{{total}}) sur « {{quizTitle}} » — Quiz PixFan. Tu peux faire mieux ?",

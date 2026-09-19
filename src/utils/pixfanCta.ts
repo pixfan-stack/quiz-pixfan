@@ -75,7 +75,9 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
   if (quizId === 'genres') return 'genres';
   if (quizId === 'smartphone') return 'smartphone';
   if (quizId === 'photo-rights') return 'rights';
-  if (quizId === 'retouching') return 'retouching';
+  if (quizId === 'retouching' || quizId === 'lightroom-workflow') {
+    return 'retouching';
+  }
   if (quizId.startsWith('mix-hard')) return 'history';
   if (quizId.startsWith('mix-medium')) return 'gear';
   // daily / random / duel → beginner hub unless mistakes override
@@ -85,6 +87,28 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
 function sourceQuizIdFromQuestionId(questionId: string): string | null {
   const idx = questionId.indexOf('__');
   return idx > 0 ? questionId.slice(0, idx) : null;
+}
+
+/** Local guide path for a topic, when one exists on-site. */
+export function localGuidePathForTopic(topic: PixfanTopic): string | null {
+  return LOCAL_GUIDES[topic] ?? null;
+}
+
+/**
+ * Resolve a local guide for a mistake question (compound id or category quiz).
+ * Used by results / error review cross-links (P2-C).
+ */
+export function localGuideForMistake(
+  questionId: string,
+  fallbackQuizId?: string
+): { topic: PixfanTopic; path: string } | null {
+  const source =
+    sourceQuizIdFromQuestionId(questionId) ?? fallbackQuizId ?? null;
+  if (!source) return null;
+  const topic = resolvePixfanTopic(source);
+  const path = LOCAL_GUIDES[topic];
+  if (!path) return null;
+  return { topic, path };
 }
 
 /**

@@ -86,6 +86,7 @@ const QUIZ_ICONS: Record<string, string> = {
   smartphone: '📱',
   'photo-rights': '⚖️',
   retouching: '✨',
+  'lightroom-workflow': '🖥️',
 };
 
 interface QuizWithScore {
