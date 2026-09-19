@@ -86,6 +86,7 @@ const QUIZ_ICONS: Record<string, string> = {
   smartphone: '📱',
   'photo-rights': '⚖️',
   retouching: '✨',
+  'lightroom-workflow': '🖥️',
 };
 
 interface QuizWithScore {
@@ -717,6 +718,7 @@ export function QuizSelector({
                 <li key={quiz.id}>
                   <button
                     type="button"
+                    data-testid="category-quiz-card"
                     className={`quiz-card${index % 2 === 1 ? ' quiz-card--alt' : ''}`}
                     onClick={() => handleStartQuiz(quiz)}
                     onMouseEnter={onPrefetchQuiz}

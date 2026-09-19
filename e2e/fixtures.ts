@@ -26,7 +26,6 @@ export async function openMorePacks(page: Page): Promise<void> {
   await expect(page.locator('.home-more-packs__body')).toBeVisible();
 }
 
-export const CATEGORY_CARD =
-  '.quiz-card:not(.quiz-card--random):not(.quiz-card--daily):not(.quiz-card--duel):not(.quiz-card--weak):not(.quiz-card--photo)';
+export const CATEGORY_CARD = '[data-testid="category-quiz-card"]';
 
 export { expect };

@@ -32,10 +32,11 @@ describe('questions.json', () => {
     'smartphone',
     'photo-rights',
     'retouching',
+    'lightroom-workflow',
   ] as const;
 
-  it('has exactly 10 category quizzes', () => {
-    expect(data.quizzes.length).toBe(10);
+  it('has exactly 11 category quizzes', () => {
+    expect(data.quizzes.length).toBe(11);
   });
 
   it('keeps a solid question count per quiz', () => {
@@ -45,9 +46,22 @@ describe('questions.json', () => {
     }
   });
 
-  it('has at least 180 questions overall', () => {
+  it('has at least 220 questions overall', () => {
     const total = data.quizzes.reduce((sum, q) => sum + q.questions.length, 0);
-    expect(total).toBeGreaterThanOrEqual(180);
+    expect(total).toBeGreaterThanOrEqual(220);
+  });
+
+  it('keeps a healthier hard share for regulars (P2-A)', () => {
+    let hard = 0;
+    let total = 0;
+    for (const quiz of data.quizzes) {
+      for (const q of quiz.questions) {
+        total += 1;
+        if (q.difficulty === 'hard') hard += 1;
+      }
+    }
+    expect(hard).toBeGreaterThanOrEqual(55);
+    expect(hard / total).toBeGreaterThan(0.18);
   });
 
   it('every quiz and question has a difficulty', () => {
@@ -183,17 +197,25 @@ describe('questions.json', () => {
   });
 
   it.each(['composition', 'light-color', 'smartphone'] as const)(
-    '%s has 8–12 illustrated questions with credits',
+    '%s has 8–14 illustrated questions with credits',
     (id) => {
       const quiz = data.quizzes.find((q) => q.id === id);
       expect(quiz).toBeDefined();
       const illustrated = quiz!.questions.filter((q) => q.imageUrl);
       expect(illustrated.length).toBeGreaterThanOrEqual(8);
-      expect(illustrated.length).toBeLessThanOrEqual(12);
+      expect(illustrated.length).toBeLessThanOrEqual(14);
       for (const q of illustrated) {
         expect(q.imageCredit?.en).toBeTruthy();
         expect(q.imageCredit?.fr).toBeTruthy();
       }
     }
   );
+
+  it('lightroom-workflow quiz is a solid Pixfan thematic pack', () => {
+    const quiz = data.quizzes.find((q) => q.id === 'lightroom-workflow');
+    expect(quiz).toBeDefined();
+    expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
+    const hard = quiz!.questions.filter((q) => q.difficulty === 'hard');
+    expect(hard.length).toBeGreaterThanOrEqual(5);
+  });
 });

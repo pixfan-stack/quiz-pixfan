@@ -6,9 +6,9 @@ Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur *
 
 ## Contenu actuel
 
-- **10 quiz** · **248 questions** · **~74 illustrées**
+- **11 quiz** · **285 questions** · **~97 illustrées**
 - Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes
-- Galerie domaine public, genres, smartphone, droits & éthique, retouche
+- Galerie domaine public, genres, smartphone, droits & éthique, retouche, workflow Lightroom
 - Modes générés : défi du jour, photo-reading, duel, mix difficulté, points faibles, aléatoire
 
 Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/`).

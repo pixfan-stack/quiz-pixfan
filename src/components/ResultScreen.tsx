@@ -607,7 +607,10 @@ export function ResultScreen({
             </div>
           )}
 
-          <MistakesReview mistakes={result.mistakes ?? []} />
+          <MistakesReview
+            mistakes={result.mistakes ?? []}
+            quizId={result.quizId}
+          />
 
           <div className="share-section">
             <h3 className="share-section__title">{t('result.shareTitle')}</h3>

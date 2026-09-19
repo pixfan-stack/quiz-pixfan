@@ -3,6 +3,7 @@ import {
   ctaAnalyticsQuizId,
   getPixfanCta,
   isCtaAnalyticsQuizId,
+  localGuideForMistake,
   resolvePixfanTopic,
   resolveTopicFromMistakes,
 } from '../utils/pixfanCta';
@@ -12,6 +13,7 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('exposure-basics')).toBe('exposure');
     expect(resolvePixfanTopic('gear-lenses')).toBe('gear');
     expect(resolvePixfanTopic('retouching')).toBe('retouching');
+    expect(resolvePixfanTopic('lightroom-workflow')).toBe('retouching');
     expect(resolvePixfanTopic('photo-rights')).toBe('rights');
   });
 
@@ -62,6 +64,16 @@ describe('pixfanCta', () => {
     expect(daily.fromMistakes).toBe(true);
     expect(daily.primaryTarget).toBe('guide');
     expect(daily.primaryUrl).toContain('/guides/photo-smartphone');
+  });
+
+  it('resolves local guides for mistake themes', () => {
+    expect(localGuideForMistake('exp-1', 'exposure-basics')?.path).toContain(
+      '/guides/triangle-exposition'
+    );
+    expect(localGuideForMistake('composition__comp-1')?.path).toContain(
+      '/guides/composition-photo'
+    );
+    expect(localGuideForMistake('gear-1', 'gear-lenses')).toBeNull();
   });
 
   it('encodes CTA clicks for quiz_attempts analytics', () => {
