@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://quiz.pixfan.fr/guides/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://quiz.pixfan.fr/guides/triangle-exposition</loc>
@@ -18,7 +18,15 @@
   </url>
   <url>
     <loc>https://quiz.pixfan.fr/guides/photo-smartphone</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz.pixfan.fr/guides/lumiere-photo</loc>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz.pixfan.fr/guides/retouche-lightroom</loc>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://quiz.pixfan.fr/s/exposure-basics</loc>
@@ -59,5 +67,9 @@
   <url>
     <loc>https://quiz.pixfan.fr/s/retouching</loc>
     <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://quiz.pixfan.fr/s/lightroom-workflow</loc>
+    <lastmod>2026-09-20</lastmod>
   </url>
 </urlset>

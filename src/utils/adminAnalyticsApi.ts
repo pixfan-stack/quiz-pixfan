@@ -3,6 +3,7 @@
  */
 
 import { getAdminSessionPin } from './adminAuth';
+import type { CtaAnalyticsBreakdown } from './pixfanCta';
 
 export interface AdminQuizAttemptStats {
   quizId: string;
@@ -19,8 +20,14 @@ export interface AdminAnalyticsDashboard {
     uniqueQuizzes: number;
     ctaClicks: number;
   };
+  /** Ventilation CTA : guide / newsletter / pixfan × topic. */
+  cta: CtaAnalyticsBreakdown;
   quizzes: AdminQuizAttemptStats[];
   recentDays: Array<{ day: string; attempts: number }>;
+}
+
+function emptyCta(): CtaAnalyticsBreakdown {
+  return { byTarget: [], byTopic: [], rows: [] };
 }
 
 function adminHeaders(): HeadersInit {
@@ -54,6 +61,10 @@ export async function fetchAdminAnalytics(): Promise<{
       return { ok: false, data: null, error: 'unavailable' };
     }
     const data = (await res.json()) as AdminAnalyticsDashboard;
+    // Older deployments may omit `cta` — keep UI resilient.
+    if (!data.cta) {
+      data.cta = emptyCta();
+    }
     return { ok: true, data };
   } catch {
     return { ok: false, data: null, error: 'unavailable' };

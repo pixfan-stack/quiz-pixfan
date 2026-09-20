@@ -31,11 +31,13 @@ export interface PixfanCta {
 const PIXFAN = 'https://www.pixfan.com';
 const NEWSLETTER = `${PIXFAN}/newsletter/`;
 
-/** Local HTML guides (P2-C cross-links) for themes we cover on-site. */
+/** Local HTML guides (P2-C / P3 cross-links) for themes we cover on-site. */
 const LOCAL_GUIDES: Partial<Record<PixfanTopic, string>> = {
   exposure: '/guides/triangle-exposition',
   composition: '/guides/composition-photo',
   smartphone: '/guides/photo-smartphone',
+  light: '/guides/lumiere-photo',
+  retouching: '/guides/retouche-lightroom',
 };
 
 const TOPIC_URLS: Record<PixfanTopic, string> = {
@@ -178,4 +180,77 @@ export function ctaAnalyticsQuizId(
 
 export function isCtaAnalyticsQuizId(quizId: string): boolean {
   return quizId.startsWith('cta:');
+}
+
+export interface ParsedCtaAnalyticsId {
+  target: PixfanCtaTarget;
+  topic: string;
+  sourceQuizId: string;
+}
+
+const CTA_TARGETS = new Set<PixfanCtaTarget>(['guide', 'newsletter', 'pixfan']);
+
+/**
+ * Parse `cta:{target}:{topic}:{sourceQuizId}` for admin breakdowns.
+ * Returns null when the id is not a CTA marker or is malformed.
+ */
+export function parseCtaAnalyticsQuizId(
+  quizId: string
+): ParsedCtaAnalyticsId | null {
+  if (!quizId.startsWith('cta:')) return null;
+  const parts = quizId.split(':');
+  if (parts.length < 4) return null;
+  const target = parts[1] as PixfanCtaTarget;
+  const topic = parts[2];
+  const sourceQuizId = parts.slice(3).join(':');
+  if (!CTA_TARGETS.has(target) || !topic || !sourceQuizId) return null;
+  return { target, topic, sourceQuizId };
+}
+
+export interface CtaClickRow {
+  target: PixfanCtaTarget;
+  topic: string;
+  sourceQuizId: string;
+  clicks: number;
+}
+
+export interface CtaAnalyticsBreakdown {
+  byTarget: Array<{ target: PixfanCtaTarget; clicks: number }>;
+  byTopic: Array<{ topic: string; clicks: number }>;
+  rows: CtaClickRow[];
+}
+
+/** Aggregate raw `cta:…` quiz_id counts into target × topic breakdowns. */
+export function buildCtaAnalyticsBreakdown(
+  rawRows: Array<{ quizId: string; clicks: number }>
+): CtaAnalyticsBreakdown {
+  const byTargetMap = new Map<PixfanCtaTarget, number>();
+  const byTopicMap = new Map<string, number>();
+  const rows: CtaClickRow[] = [];
+
+  for (const raw of rawRows) {
+    const clicks = Number(raw.clicks) || 0;
+    if (clicks <= 0) continue;
+    const parsed = parseCtaAnalyticsQuizId(raw.quizId);
+    if (!parsed) continue;
+    rows.push({ ...parsed, clicks });
+    byTargetMap.set(
+      parsed.target,
+      (byTargetMap.get(parsed.target) ?? 0) + clicks
+    );
+    byTopicMap.set(parsed.topic, (byTopicMap.get(parsed.topic) ?? 0) + clicks);
+  }
+
+  rows.sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
+
+  const targetOrder: PixfanCtaTarget[] = ['guide', 'newsletter', 'pixfan'];
+  const byTarget = targetOrder
+    .filter((t) => (byTargetMap.get(t) ?? 0) > 0)
+    .map((target) => ({ target, clicks: byTargetMap.get(target) ?? 0 }));
+
+  const byTopic = [...byTopicMap.entries()]
+    .map(([topic, clicks]) => ({ topic, clicks }))
+    .sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
+
+  return { byTarget, byTopic, rows };
 }

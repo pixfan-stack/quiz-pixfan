@@ -354,6 +354,12 @@ export default function App() {
           >
             {t('footer.guideSmartphone')}
           </a>
+          <a href="/guides/lumiere-photo" className="app-footer__link">
+            {t('footer.guideLight')}
+          </a>
+          <a href="/guides/retouche-lightroom" className="app-footer__link">
+            {t('footer.guideRetouching')}
+          </a>
         </nav>
         <div className="app-footer__inner">
           <a

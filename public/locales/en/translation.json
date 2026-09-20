@@ -192,7 +192,9 @@
     "reviewTimedOut": "Timed out",
     "reviewGuide_exposure": "Read the exposure triangle guide",
     "reviewGuide_composition": "Read the composition guide",
-    "reviewGuide_smartphone": "Read the smartphone photography guide"
+    "reviewGuide_smartphone": "Read the smartphone photography guide",
+    "reviewGuide_light": "Read the light guide",
+    "reviewGuide_retouching": "Read the retouching / Lightroom guide"
   },
   "share": {
     "text": "I scored {{percent}}% ({{score}}/{{total}}) on \"{{quizTitle}}\" — Quiz PixFan. Can you beat me?",
@@ -263,8 +265,9 @@
     "topic_composition_cta": "Explore composition guides",
     "topic_composition_guideCta": "Read the composition guide",
     "topic_light_desc": "Understand natural light, color temperature and atmosphere.",
-    "topic_light_failedDesc": "Light tripped you up — keep going with Pixfan guides.",
+    "topic_light_failedDesc": "Light tripped you up — a short guide to read it better.",
     "topic_light_cta": "Read light & color guides",
+    "topic_light_guideCta": "Read the light guide",
     "topic_gear_desc": "Compare cameras and lenses before your next purchase.",
     "topic_gear_failedDesc": "Gear questions stalled you — compare bodies and lenses on Pixfan.",
     "topic_gear_cta": "Browse gear tests",
@@ -282,8 +285,9 @@
     "topic_rights_failedDesc": "Rights & ethics to clarify — Pixfan articles help.",
     "topic_rights_cta": "Read rights & ethics",
     "topic_retouching_desc": "Improve your edits with Lightroom, Photoshop and free tools.",
-    "topic_retouching_failedDesc": "Retouching slowed you down — Lightroom & co. guides on Pixfan.",
+    "topic_retouching_failedDesc": "Retouching slowed you down — a Lightroom guide to structure your flow.",
     "topic_retouching_cta": "Open retouching guides",
+    "topic_retouching_guideCta": "Read the retouching / Lightroom guide",
     "topic_default_desc": "Continue with the full beginner guide, then the newsletter.",
     "topic_default_cta": "Open the beginner guide"
   },
@@ -317,7 +321,9 @@
     "guides": "Photo guides",
     "guideExposure": "Exposure triangle",
     "guideComposition": "Composition",
-    "guideSmartphone": "Smartphone photo"
+    "guideSmartphone": "Smartphone photo",
+    "guideLight": "Light",
+    "guideRetouching": "Retouching / Lightroom"
   },
   "pwa": {
     "installTitle": "Install Quiz PixFan",
@@ -371,6 +377,15 @@
     "analyticsAvgScore": "Avg score",
     "analyticsQuizzes": "Quizzes",
     "analyticsCta": "CTA clicks",
+    "analyticsCtaBreakdown": "CTA funnel (breakdown)",
+    "analyticsCtaHint": "Events use quiz_id = cta:{target}:{topic}:{sourceQuiz}. Local guide, newsletter, or pixfan.com.",
+    "analyticsCtaTarget_guide": "Local guide",
+    "analyticsCtaTarget_newsletter": "Newsletter",
+    "analyticsCtaTarget_pixfan": "pixfan.com",
+    "analyticsColCtaTarget": "Target",
+    "analyticsColCtaTopic": "Topic",
+    "analyticsColCtaSource": "Source quiz",
+    "analyticsColClicks": "Clicks",
     "analyticsColQuiz": "Quiz",
     "analyticsColAttempts": "Attempts",
     "analyticsColAvg": "Avg %",

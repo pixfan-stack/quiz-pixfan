@@ -192,7 +192,9 @@
     "reviewTimedOut": "Temps écoulé",
     "reviewGuide_exposure": "Relire le guide triangle d’exposition",
     "reviewGuide_composition": "Relire le guide composition",
-    "reviewGuide_smartphone": "Relire le guide photo smartphone"
+    "reviewGuide_smartphone": "Relire le guide photo smartphone",
+    "reviewGuide_light": "Relire le guide lumière",
+    "reviewGuide_retouching": "Relire le guide retouche / Lightroom"
   },
   "share": {
     "text": "J'ai fait {{percent}} % ({{score}}/{{total}}) sur « {{quizTitle}} » — Quiz PixFan. Tu peux faire mieux ?",
@@ -263,8 +265,9 @@
     "topic_composition_cta": "Explorer la composition",
     "topic_composition_guideCta": "Lire le guide composition",
     "topic_light_desc": "Comprenez la lumière naturelle, la température et l’ambiance.",
-    "topic_light_failedDesc": "La lumière vous a posé problème — poursuivez avec les guides Pixfan.",
+    "topic_light_failedDesc": "La lumière vous a posé problème — un guide court pour la lire mieux.",
     "topic_light_cta": "Lire les guides lumière",
+    "topic_light_guideCta": "Lire le guide lumière",
     "topic_gear_desc": "Comparez boîtiers et objectifs avant d’acheter.",
     "topic_gear_failedDesc": "Le matériel vous a ralenti — comparez boîtiers et objectifs sur Pixfan.",
     "topic_gear_cta": "Voir les tests matériel",
@@ -282,8 +285,9 @@
     "topic_rights_failedDesc": "Droits & éthique à clarifier — les articles Pixfan vous aident.",
     "topic_rights_cta": "Lire droits & éthique",
     "topic_retouching_desc": "Progressez en retouche avec Lightroom, Photoshop et outils gratuits.",
-    "topic_retouching_failedDesc": "La retouche vous a freiné — guides Lightroom & co. sur Pixfan.",
+    "topic_retouching_failedDesc": "La retouche vous a freiné — un guide Lightroom pour structurer votre flux.",
     "topic_retouching_cta": "Voir les guides retouche",
+    "topic_retouching_guideCta": "Lire le guide retouche / Lightroom",
     "topic_default_desc": "Poursuivez avec le guide complet pour débutants, puis la newsletter.",
     "topic_default_cta": "Ouvrir le guide débutant"
   },
@@ -317,7 +321,9 @@
     "guides": "Guides photo",
     "guideExposure": "Triangle d’exposition",
     "guideComposition": "Composition",
-    "guideSmartphone": "Photo smartphone"
+    "guideSmartphone": "Photo smartphone",
+    "guideLight": "Lumière",
+    "guideRetouching": "Retouche / Lightroom"
   },
   "pwa": {
     "installTitle": "Installer Quiz PixFan",
@@ -371,6 +377,15 @@
     "analyticsAvgScore": "Score moyen",
     "analyticsQuizzes": "Quiz",
     "analyticsCta": "Clics CTA",
+    "analyticsCtaBreakdown": "Entonnoir CTA (ventilé)",
+    "analyticsCtaHint": "Événements quiz_id = cta:{cible}:{thème}:{quiz source}. Guide local, newsletter, ou pixfan.com.",
+    "analyticsCtaTarget_guide": "Guide local",
+    "analyticsCtaTarget_newsletter": "Newsletter",
+    "analyticsCtaTarget_pixfan": "pixfan.com",
+    "analyticsColCtaTarget": "Cible",
+    "analyticsColCtaTopic": "Thème",
+    "analyticsColCtaSource": "Quiz source",
+    "analyticsColClicks": "Clics",
     "analyticsColQuiz": "Quiz",
     "analyticsColAttempts": "Tentatives",
     "analyticsColAvg": "% moyen",
