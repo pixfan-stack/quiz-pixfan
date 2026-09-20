@@ -3,15 +3,14 @@
  *
  * GET /api/admin/analytics — aggregated attempt stats (PIN-gated)
  *
- * Auth: header X-Admin-Pin must match ADMIN_PIN or VITE_ADMIN_PIN.
+ * Auth: header X-Admin-Pin must match runtime ADMIN_PIN (preferred) or VITE_ADMIN_PIN.
  */
 
 import { json } from '../utils';
+import { authorizeAdmin, type AdminPinEnv } from './auth';
 
-export interface Env {
+export interface Env extends AdminPinEnv {
   DB: D1Database;
-  ADMIN_PIN?: string;
-  VITE_ADMIN_PIN?: string;
 }
 
 export interface QuizAttemptStats {
@@ -33,24 +32,14 @@ export interface AnalyticsDashboard {
   recentDays: Array<{ day: string; attempts: number }>;
 }
 
-function expectedAdminPin(env: Env): string {
-  return (env.ADMIN_PIN ?? env.VITE_ADMIN_PIN ?? '').trim();
-}
-
-function isAuthorized(request: Request, env: Env): boolean {
-  const expected = expectedAdminPin(env);
-  if (!expected) return false;
-  const provided = request.headers.get('X-Admin-Pin')?.trim() ?? '';
-  return provided.length > 0 && provided === expected;
-}
-
 export const onRequestOptions: PagesFunction = async () => {
   return json(null, 204);
 };
 
 export const onRequestGet: PagesFunction<Env> = async (context) => {
-  if (!isAuthorized(context.request, context.env)) {
-    return json({ error: 'Unauthorized' }, 401);
+  const auth = authorizeAdmin(context.request, context.env);
+  if (!auth.ok) {
+    return json({ error: auth.error }, auth.status);
   }
 
   const empty: AnalyticsDashboard = {

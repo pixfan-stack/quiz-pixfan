@@ -32,6 +32,13 @@ export async function fetchAdminReports(): Promise<{
     if (res.status === 401) {
       return { ok: false, reports: [], error: 'unauthorized' };
     }
+    if (res.status === 503) {
+      const body = (await res.json().catch(() => null)) as { error?: string } | null;
+      if (body?.error?.includes('not configured')) {
+        return { ok: false, reports: [], error: 'pin_unconfigured' };
+      }
+      return { ok: false, reports: [], error: 'unavailable' };
+    }
     if (!res.ok) {
       return { ok: false, reports: [], error: 'unavailable' };
     }
@@ -53,6 +60,13 @@ export async function moderateAdminReport(
       body: JSON.stringify({ action, playerId }),
     });
     if (res.status === 401) return { ok: false, error: 'unauthorized' };
+    if (res.status === 503) {
+      const body = (await res.json().catch(() => null)) as { error?: string } | null;
+      if (body?.error?.includes('not configured')) {
+        return { ok: false, error: 'pin_unconfigured' };
+      }
+      return { ok: false, error: 'unavailable' };
+    }
     if (!res.ok) return { ok: false, error: 'unavailable' };
     return { ok: true };
   } catch {

@@ -97,6 +97,7 @@
     "errInvalid": "Code invalide. Vérifiez le format XXXX-XXXX-XXXX.",
     "errUnknown": "Code inconnu. Vérifiez qu’il a bien été généré sur l’autre appareil.",
     "errExpired": "Ce code a expiré. Générez-en un nouveau.",
+    "errRateLimited": "Trop de tentatives. Attendez quelques secondes et réessayez.",
     "errRemote": "La sync serveur est désactivée sur cet environnement.",
     "errNetwork": "Réseau indisponible. Réessayez plus tard.",
     "errGeneric": "Impossible de synchroniser pour le moment."
@@ -360,6 +361,7 @@
     "reportsDismissed": "Signalements ignorés",
     "reportsUnauthorized": "Session admin invalide — reconnectez-vous.",
     "reportsUnavailable": "Signalements indisponibles (API ou migration).",
+    "pinUnconfigured": "PIN admin Functions non configuré (ADMIN_PIN runtime Pages). Voir DEPLOYMENT.md.",
     "analyticsIntro": "Tentatives anonymes depuis D1 quiz_attempts. Un fort taux de scores bas (< 50 %) signale un quiz à retravailler.",
     "analyticsRefresh": "Actualiser",
     "analyticsEmpty": "Aucune tentative enregistrée pour l’instant.",

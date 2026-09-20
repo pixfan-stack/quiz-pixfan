@@ -68,6 +68,49 @@ VITE_APP_URL=https://quiz-pixfan.pages.dev
 
 Sur **Cloudflare Pages** : Settings → Environment variables → Production → ajouter `VITE_ADMIN_PIN`, puis **Retry deployment** / nouveau déploiement (sinon le build prod garde l’admin désactivé).
 
+### Admin PIN runtime (Pages Functions)
+
+Le PIN SPA (`VITE_ADMIN_PIN` au **build**) ne suffit pas pour `/api/admin/reports` et `/api/admin/analytics`. Les Functions lisent l’env **runtime** du projet Pages :
+
+| Variable | Rôle |
+| --- | --- |
+| `ADMIN_PIN` | **Préférée** — secret runtime Functions uniquement |
+| `VITE_ADMIN_PIN` | Aussi acceptée au runtime si déjà définie sur le projet |
+
+Sans aucune des deux au runtime, les endpoints admin répondent **503** avec  
+`Admin PIN not configured on Pages Functions…` (vs **401** si le PIN est configuré mais incorrect).
+
+**Étapes Dashboard (Antony)** :
+
+1. Cloudflare → Workers & Pages → `quiz-pixfan` → Settings → Environment variables
+2. Production : ajouter `ADMIN_PIN` (Encrypt / secret) avec **la même valeur** que le `VITE_ADMIN_PIN` déjà utilisé en build / GitHub Actions — ne pas inventer un nouveau PIN
+3. Si `VITE_ADMIN_PIN` n’est pas encore sur le projet Pages (seulement dans GitHub Secrets), l’ajouter aussi pour le runtime, **ou** se contenter de `ADMIN_PIN`
+4. Redéployer (nouveau push `main` / Retry deployment) pour que les Functions voient la binding
+5. Smoke :
+   ```bash
+   # Sans header → 503 si PIN runtime absent, 401 s’il est présent
+   curl -sS -o /tmp/admin.json -w "%{http_code}" \
+     "https://quiz.pixfan.fr/api/admin/analytics"
+   cat /tmp/admin.json
+
+   # Avec le bon PIN → 200 + JSON
+   curl -sS -H "X-Admin-Pin: <PIN>" \
+     "https://quiz.pixfan.fr/api/admin/analytics" | head
+   ```
+6. UI : unlock `#/admin` → onglets Signalements / Analytics chargent des données
+
+**Wrangler / API** (si déjà `wrangler login`) — ne pas coller le PIN dans le chat ; réutiliser la valeur déjà connue en local / Pages :
+
+```bash
+# Lister (noms seulement) les vars Production du projet
+npx wrangler pages secret list --project-name=quiz-pixfan
+# ou Dashboard. Pour poser ADMIN_PIN :
+npx wrangler pages secret put ADMIN_PIN --project-name=quiz-pixfan
+# (prompt interactif → coller la même valeur que VITE_ADMIN_PIN build)
+```
+
+Note CI : les déploiements passent par GitHub Actions (`wrangler pages deploy`). Les secrets Actions alimentent le **build** Vite ; les secrets **Pages project** alimentent les **Functions** au runtime. Les deux couches sont nécessaires.
+
 ## 🌐 Déploiement sur Cloudflare Pages
 
 ### Option A : Déploiement via Git (recommandé)
@@ -81,10 +124,11 @@ Sur **Cloudflare Pages** : Settings → Environment variables → Production →
    - **Build command**: `npm run build`
    - **Build output directory**: `dist`
    - **Root directory**: `/`
-5. Ajoutez les variables d'environnement (**build**) :
+5. Ajoutez les variables d'environnement (**build** + **runtime Functions**) :
    - `VITE_ENABLE_REMOTE_SCORES`: `true`
    - `VITE_APP_URL`: `https://quiz.pixfan.fr` (ou votre domaine)
-   - `VITE_ADMIN_PIN` : PIN secret pour `#/admin` (sans cette variable, l’admin est désactivé en prod)
+   - `VITE_ADMIN_PIN` : PIN secret pour `#/admin` (build) — sans cette variable, l’admin SPA est désactivé en prod
+   - `ADMIN_PIN` : **même valeur**, variable runtime pour `/api/admin/*` (voir § Admin PIN runtime ci-dessus)
 6. Liez la base de données D1 :
    - **Binding name**: `DB`
    - **Database**: `quiz-pixfan-scores`

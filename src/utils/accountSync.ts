@@ -108,6 +108,7 @@ export async function createRecoveryCode(): Promise<{
       error?: string;
     };
     if (!res.ok || !data.code) {
+      if (res.status === 429) return { ok: false, error: 'rate_limited' };
       return { ok: false, error: data.error ?? 'create_failed' };
     }
     return { ok: true, code: data.code, expiresAt: data.expiresAt };
@@ -156,6 +157,7 @@ export async function redeemRecoveryCode(rawCode: string): Promise<{
       error?: string;
     };
     if (!res.ok || !data.progress?.playerId) {
+      if (res.status === 429) return { ok: false, error: 'rate_limited' };
       if (res.status === 404) return { ok: false, error: 'unknown_code' };
       if (res.status === 410) return { ok: false, error: 'expired_code' };
       return { ok: false, error: data.error ?? 'redeem_failed' };

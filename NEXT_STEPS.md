@@ -1,27 +1,29 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.12.0**).
+Document à jour avec l’état réel du dépôt (**v1.13.0**).
 
 ## ✅ Livré
 
 - Contenu : **11 quiz · 285 questions · ~97 illustrées** (`public/data/questions.json`)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots
-- Engagement : défi du jour, duel, succès, streak + freezes, **maîtrise** + home featured (v1.12)
+- Engagement : défi du jour, duel, succès, streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
-- Produit : CTA pixfan.com + newsletter, modes photo-reading / mix / aléatoire
-- Technique : **PWA** (manifest, SW, install prompt), footer i18n, **admin** `#/admin` (export JSON)
+- Compte léger : code de récupération + sync streak / succès / high scores (migration `005`)
+- Produit : CTA pixfan.com + newsletter, modes photo-reading / mix / aléatoire, guides ↔ quiz
+- Technique : **PWA** (manifest, SW, install prompt), footer i18n, **admin** `#/admin` (export JSON, signalements, analytics)
 
-## 🔜 Ops prod (P0 — à faire hors repo)
+## 🔜 Ops prod (P0 — reste live)
 
-- [ ] Appliquer / vérifier la migration D1 `004-period-leaderboard-reports.sql` en prod  
-      → `npm run db:migrate:004` puis `npm run db:verify:004` (détail : `migrations/README.md`)
-- [ ] Définir `VITE_ADMIN_PIN` dans Cloudflare Pages (build Production) et **rebuilder** pour activer `#/admin`
+- [x] Migration D1 `004` (période + reports) — appliquée en prod
+- [x] `VITE_ADMIN_PIN` en **build** Pages / CI (SPA `#/admin`)
+- [x] **`ADMIN_PIN` (+ `VITE_ADMIN_PIN`) runtime Pages Functions** — vérifié live 2026-09-20 (`/api/admin/analytics` + `/reports` → 200). Docs : `DEPLOYMENT.md` § Admin PIN runtime ; code distingue 503 (absent) vs 401 (mauvais PIN) après merge.
+- [x] Rate-limit `create_code` / `redeem` sur `/api/account` (repo)
 
 ## 🔜 Suite produit possible
 
-- [x] Compte léger / sync multi-appareil (code de récupération + sync streak/succès/high scores)
-- [ ] Enrichir images sur quiz techniques + CTA post-score mesurés
-- [x] Rééquilibrer difficultés (peu de « hard ») / +1 quiz thématique Pixfan (P2)
-- [ ] UI admin des `name_reports` ; découpage gros composants
+- [ ] Sync du vault d’erreurs (multi-appareil)
+- [ ] Enrichir images sur quiz techniques + miroir Unsplash offline
+- [ ] Dashboard CTA ventilé + guides locaux manquants
+- [ ] Découpage `AdminScreen` / polish SEO (sitemap lightroom)
 
 Contenu : `public/data/questions.json`. Priorisation détaillée hors dépôt si besoin.
