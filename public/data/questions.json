@@ -55,12 +55,16 @@
             "en": "A wider aperture (smaller f-number) admits more light and produces a shallower depth of field — classic for portraits with background blur.",
             "fr": "Une grande ouverture (petit chiffre f) laisse entrer plus de lumière et réduit la profondeur de champ — idéal pour les portraits avec flou d'arrière-plan."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Vintage camera on a wooden table",
             "fr": "Appareil photo vintage sur une table en bois"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-2",
@@ -106,12 +110,16 @@
             "en": "Fast action needs a short exposure time (high shutter speed) like 1/1000 s or faster to freeze motion.",
             "fr": "L'action rapide exige un temps d'exposition court (vitesse élevée), comme 1/1000 s ou plus, pour figer le mouvement."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
           "imageAlt": {
             "en": "Camera dials and settings",
             "fr": "Molettes et réglages d’appareil"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-3",
@@ -160,10 +168,14 @@
             "fr": "Le triangle d'exposition regroupe ouverture, vitesse et ISO. La balance des blancs gère la température de couleur, pas l'exposition."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
           "imageAlt": {
             "en": "Camera in hands outdoors",
             "fr": "Appareil en main en extérieur"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -211,10 +223,14 @@
             "fr": "Un ISO élevé amplifie le signal du capteur pour exposer correctement en faible lumière, au prix souvent d'un bruit plus visible."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
           "imageAlt": {
             "en": "Photography equipment detail",
             "fr": "Détail de matériel photo"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1006,10 +1022,14 @@
             "en": "You need light AND frozen motion. Open up, then lift ISO — don’t start by dragging shutter on dancers.",
             "fr": "Il faut de la lumière ET figer le mouvement. Ouvre d’abord, puis monte l’ISO — ne commence pas par ralentir l’obturateur."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1519501025264-65ba15a82390.avif",
           "imageAlt": {
             "en": "City lights at night",
             "fr": "Lumières de ville la nuit"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1057,10 +1077,14 @@
             "en": "Motion blur needs time. Slow the shutter; control exposure with ISO, aperture, or an ND filter.",
             "fr": "Le flou de mouvement demande du temps. Ralentis l’obturateur ; gère l’expo avec ISO, diaphragme ou ND."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1432405972618-c60b0225d3f8?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1518182170546-07661fd94144.avif",
           "imageAlt": {
             "en": "Waterfall in a forest",
             "fr": "Cascade dans une forêt"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1154,10 +1178,14 @@
             "en": "Protect the face first. Recover room shadows later; a blown window is often acceptable.",
             "fr": "Protège d’abord le visage. Remonte les ombres ensuite ; une fenêtre cramée est souvent acceptable."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait near a bright window",
             "fr": "Portrait près d’une fenêtre lumineuse"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1251,10 +1279,14 @@
             "en": "Matrix metering underexposes bright scenes. Positive compensation restores midtones.",
             "fr": "La mesure matricielle sous-expose les scènes claires. Une compensation positive restaure les tons moyens."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Bright outdoor landscape",
             "fr": "Paysage extérieur lumineux"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1348,10 +1380,14 @@
             "en": "Tracking AF plus a shutter fast enough to freeze motion.",
             "fr": "Un AF qui suit, plus un temps assez court pour figer."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1552674605-db6ffd4facb5.avif",
           "imageAlt": {
             "en": "Runner in motion",
             "fr": "Coureur en mouvement"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -1399,7 +1435,7 @@
             "en": "Freeze first (shutter), gather light (aperture), then ISO. Protecting blacks comes from exposure discipline, not underexposing blindly.",
             "fr": "On fige d’abord (vitesse), on collecte la lumière (ouverture), puis l’ISO. Les noirs se protègent par une expo maîtrisée, pas une sous-expo aveugle."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
           "imageAlt": {
             "en": "City lights at night suggesting low-light performance",
             "fr": "Lumières de ville la nuit évoquant la photo en basse lumière"
@@ -1561,7 +1597,7 @@
             "en": "Dividing the frame into a 3×3 grid and placing key elements on lines or intersections often creates a more dynamic balance than dead-center framing.",
             "fr": "Diviser le cadre en grille 3×3 et placer les éléments clés sur les lignes ou intersections crée souvent un équilibre plus dynamique qu'un cadrage pile au centre."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
           "imageAlt": {
             "en": "Landscape framed by mountain ridges",
             "fr": "Paysage cadré par des crêtes montagneuses"
@@ -1618,7 +1654,7 @@
             "en": "Leading lines, natural frames and contrast all help hierarchy and eye flow. Cropping without a clear subject usually weakens the image.",
             "fr": "Lignes directrices, cadres naturels et contraste renforcent la hiérarchie visuelle. Un recadrage sans sujet clair affaiblit en général l'image."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1470071459604-3b5ec3a7fe05.avif",
           "imageAlt": {
             "en": "Foggy forest landscape",
             "fr": "Paysage forestier brumeux"
@@ -1674,7 +1710,7 @@
             "fr": "L'espace négatif est la zone épurée autour du sujet. Bien utilisé, il met le sujet en valeur et peut créer calme ou tension."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Mountain lake landscape",
             "fr": "Lac de montagne"
@@ -1729,7 +1765,7 @@
             "fr": "La contre-plongée exagère la hauteur et la présence. La plongée produit souvent l'effet inverse."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1472214103451-9374bd1c798e.avif",
           "imageAlt": {
             "en": "Green hills landscape",
             "fr": "Collines verdoyantes"
@@ -1784,7 +1820,7 @@
             "fr": "Un horizon bas laisse plus de place au ciel (nuages, couleurs). Un horizon haut favorise le sol ou le premier plan."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
           "imageAlt": {
             "en": "Mountain range with a clear horizon line",
             "fr": "Chaîne de montagnes avec une ligne d’horizon nette"
@@ -1839,7 +1875,7 @@
             "fr": "Les courbes en S créent un flux naturel à travers l'image, guidant l'œil du spectateur du premier plan à l'arrière-plan."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1441974231531-c6227db76b6e.avif",
           "imageAlt": {
             "en": "Forest path curving through trees",
             "fr": "Sentier forestier en courbe entre les arbres"
@@ -1988,7 +2024,7 @@
             "fr": "Cette technique ajoute de la profondeur, concentre l'attention et peut fournir du contexte. Exemples : fenêtres, portes, branches d'arbres."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1493863641943-9b68992a8d07.avif",
           "imageAlt": {
             "en": "Subject framed by a doorway arch",
             "fr": "Sujet cadré par l’arche d’une porte"
@@ -2554,7 +2590,7 @@
             "en": "Active space (lead room) lets the subject “move into” the frame and feels less cramped.",
             "fr": "L’espace actif (lead room) laisse le sujet « avancer » dans le cadre et évite l’effet étouffé."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1552674605-db6ffd4facb5.avif",
           "imageAlt": {
             "en": "Runner in motion",
             "fr": "Coureur en mouvement"
@@ -2609,7 +2645,7 @@
             "en": "Heroes need separation: brighter light, sharper focus, complementary color, or a natural frame.",
             "fr": "Un héros a besoin de séparation : lumière, netteté, couleur complémentaire ou cadre naturel."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Busy city street",
             "fr": "Rue de ville animée"
@@ -2712,7 +2748,7 @@
             "en": "Compression + blur separates the subject from clutter.",
             "fr": "La compression et le flou séparent le sujet du fouillis."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Busy city street",
             "fr": "Rue de ville animée"
@@ -2859,7 +2895,7 @@
             "en": "Direct attention with focus and placement — not equal sharpness everywhere.",
             "fr": "Dirige l’attention par la mise au point et le placement — pas une netteté égale partout."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
           "imageAlt": {
             "en": "Wedding celebration moment",
             "fr": "Moment de célébration de mariage"
@@ -2914,7 +2950,7 @@
             "en": "Composition starts before the shutter — edit the scene.",
             "fr": "La composition commence avant le déclenchement — édite la scène."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1554118811-1e0d58224f24.avif",
           "imageAlt": {
             "en": "Cafe table scene",
             "fr": "Scène de table de café"
@@ -2969,7 +3005,7 @@
             "en": "Leading lines are tools: aim them. Small lateral/height moves often beat zooming in place.",
             "fr": "Les lignes directrices sont des outils : oriente-les. Un petit déplacement bat souvent le zoom sur place."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Urban street with strong perspective lines",
             "fr": "Rue urbaine avec de fortes lignes de perspective"
@@ -3131,7 +3167,7 @@
             "en": "Near sunrise and sunset the sun is low: light is warmer, softer and more directional — flattering for portraits and landscapes.",
             "fr": "Près du lever et du coucher, le soleil est bas : lumière plus chaude, plus douce et directionnelle — flatteuse pour portraits et paysages."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
           "imageAlt": {
             "en": "Golden hour light over a city skyline",
             "fr": "Lumière dorée sur une skyline urbaine"
@@ -3186,7 +3222,7 @@
             "en": "A small or distant light source relative to the subject produces hard light. Soft light (overcast sky, softbox) wraps around and softens shadows.",
             "fr": "Une source petite ou lointaine par rapport au sujet produit une lumière dure. Une lumière douce (ciel couvert, softbox) enveloppe le sujet et adoucit les ombres."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
           "imageAlt": {
             "en": "Sunlight through trees",
             "fr": "Soleil à travers les arbres"
@@ -3244,7 +3280,7 @@
             "fr": "Chaque source a sa température de couleur. Une bonne balance des blancs garde les neutres neutres et les teintes de peau naturelles."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
           "imageAlt": {
             "en": "Night sky with stars",
             "fr": "Ciel étoilé"
@@ -3299,7 +3335,7 @@
             "fr": "Le contre-jour peut créer des silhouettes, un rim light (liseré lumineux) ou une brume douce — très utile pour l'ambiance et détacher le sujet du fond."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1493246507139-91e8fad9978e.avif",
           "imageAlt": {
             "en": "Misty morning light",
             "fr": "Lumière de matin brumeux"
@@ -3354,7 +3390,7 @@
             "fr": "La température de couleur utilise l'échelle Kelvin (ex. ~5600 K lumière du jour, ~3200 K tungstène). Appareils et logiciels s'en servent pour la balance des blancs."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1495616811223-4d98c6e9c869.avif",
           "imageAlt": {
             "en": "Warm sunset light over water",
             "fr": "Lumière chaude de coucher de soleil sur l’eau"
@@ -3409,7 +3445,7 @@
             "fr": "La lumière diffusée provient d'une grande source ou est dispersée (nuages, softboxes), minimisant les ombres dures et réduisant le contraste."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1418065460487-3e41a6c84dc5.avif",
           "imageAlt": {
             "en": "Soft overcast light on a misty landscape",
             "fr": "Lumière douce de ciel couvert sur un paysage brumeux"
@@ -3512,7 +3548,7 @@
             "fr": "Les réflecteurs renvoient la lumière, les flags la bloquent, diffuseurs/softboxes la dispersent. Les cartes mémoire stockent des données, pas contrôler la lumière."
           },
           "difficulty": "medium",
-          "imageUrl": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
           "imageAlt": {
             "en": "Studio lighting gear and camera",
             "fr": "Matériel d’éclairage studio et appareil photo"
@@ -3661,7 +3697,7 @@
             "fr": "Les réflecteurs redirigent la lumière existante pour remplir les ombres, ajouter des reflets aux yeux ou adoucir l'éclairage sans équipement supplémentaire."
           },
           "difficulty": "medium",
-          "imageUrl": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
           "imageAlt": {
             "en": "Outdoor portrait in directional daylight",
             "fr": "Portrait en extérieur sous lumière directionnelle"
@@ -3810,7 +3846,7 @@
             "fr": "L'heure bleue offre une qualité magique et sereine avec des tons froids et le contraste entre le bleu naturel et les lumières artificielles chaudes."
           },
           "difficulty": "medium",
-          "imageUrl": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1501594907352-04cda38ebc29.avif",
           "imageAlt": {
             "en": "Twilight blue sky over mountains",
             "fr": "Ciel bleu d’heure bleue au-dessus des montagnes"
@@ -4005,7 +4041,7 @@
             "fr": "Nommé d'après les peintures de Rembrandt, cet éclairage de portrait classique crée un effet dramatique et dimensionnel avec un triangle lumineux caractéristique."
           },
           "difficulty": "hard",
-          "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1502082553048-f009c37129b9.avif",
           "imageAlt": {
             "en": "Dramatic side-lit portrait silhouette",
             "fr": "Portrait en silhouette à éclairage latéral dramatique"
@@ -4108,7 +4144,7 @@
             "fr": "Ces techniques équilibrent les différences lumineuses extrêmes. Augmenter l'ISO ajouterait du bruit sans résoudre le problème de contraste."
           },
           "difficulty": "hard",
-          "imageUrl": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1470252649378-9c29740c9fa8.avif",
           "imageAlt": {
             "en": "High-contrast sunrise through trees",
             "fr": "Lever de soleil à fort contraste à travers les arbres"
@@ -4163,7 +4199,7 @@
             "en": "Open shade or fill light softens raccoon eyes. Fighting hard sun with ISO alone won’t fix contrast.",
             "fr": "Ombre ouverte ou lumière d’appoint adoucit les ombres dures. Monter l’ISO ne règle pas le contraste."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait in daylight",
             "fr": "Portrait en lumière du jour"
@@ -4310,7 +4346,7 @@
             "en": "Decide what must hold detail. Faces usually win; glow can be a rim, not the meter target.",
             "fr": "Décide ce qui doit garder du détail. Les visages gagnent souvent ; le glow peut être un contour, pas la cible de mesure."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1441974231531-c6227db76b6e.avif",
           "imageAlt": {
             "en": "Sunlight filtering through forest canopy",
             "fr": "Soleil filtrant à travers la canopée"
@@ -4426,12 +4462,16 @@
             "en": "Around 40–58 mm on full-frame is considered “normal”: neither strongly wide nor telephoto. On APS-C, a ~35 mm often plays a similar role.",
             "fr": "Environ 40–58 mm en plein format est considéré « normal » : ni grand-angle marqué ni téléobjectif. En APS-C, un ~35 mm joue souvent ce rôle."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1606983340126-99ab4feaa64a.avif",
           "imageAlt": {
             "en": "Camera lenses lined up on a desk",
             "fr": "Objectifs photo alignés sur un bureau"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-2",
@@ -4479,12 +4519,16 @@
             "en": "Wide-angle is roughly under ~35–40 mm on full-frame. 200 mm is a telephoto, compressing perspective and narrowing the field of view.",
             "fr": "Le grand-angle se situe grosso modo sous ~35–40 mm en plein format. Un 200 mm est un téléobjectif : perspective compressée, champ plus étroit."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1502920917128-1aa500764cbd.avif",
           "imageAlt": {
             "en": "Camera body and lens",
             "fr": "Boîtier et objectif"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-3",
@@ -4531,10 +4575,14 @@
             "fr": "Les focales fixes échangent la souplesse du zoom contre qualité optique, compacité et grandes ouvertures (ex. f/1.4–f/1.8) — idéales en basse lumière et pour isoler le sujet."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera close-up",
             "fr": "Gros plan d’appareil classique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -4582,10 +4630,14 @@
             "fr": "Un 50 mm en APS-C donne un champ proche d'un 75–80 mm en plein format. Profondeur de champ et bruit diffèrent aussi."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1502920917128-1aa500764cbd.avif",
           "imageAlt": {
             "en": "Photographer with camera",
             "fr": "Photographe avec appareil"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -5473,10 +5525,14 @@
             "en": "Stability, cleanliness, and one filter beat a suitcase of “maybe someday” gadgets.",
             "fr": "Stabilité, propreté et un filtre battent une valise de gadgets « un jour peut-être »."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Mountain landscape",
             "fr": "Paysage de montagne"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         }
       ],
@@ -5537,12 +5593,16 @@
             "en": "Nicéphore Niépce’s View from the Window at Le Gras (c. 1826–27) is the earliest known surviving photograph. Daguerre later popularized the daguerreotype.",
             "fr": "La Vue de la fenêtre du Gras de Nicéphore Niépce (vers 1826–27) est la plus ancienne photo conservée connue. Daguerre popularisera ensuite le daguerréotype."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera",
             "fr": "Appareil classique"
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-2",
@@ -5588,12 +5648,16 @@
             "en": "Cartier-Bresson coined the decisive moment: catching the peak of action and geometry in a single, perfectly timed frame.",
             "fr": "Cartier-Bresson a formalisé le moment décisif : saisir le sommet de l'action et de la géométrie dans un seul cadre parfaitement cadencé."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage photography gear",
             "fr": "Matériel photo vintage"
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-3",
@@ -5642,10 +5706,14 @@
             "fr": "Adams (paysages, Zone System), Lange (documentaire de la Grande Dépression) et Salgado (reportage N&B épique) sont des piliers du médium."
           },
           "difficulty": "medium",
-          "imageUrl": "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1452421822248-d4c2b47f0c81.avif",
           "imageAlt": {
             "en": "Old books and papers",
             "fr": "Vieux livres et papiers"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -5693,10 +5761,14 @@
             "fr": "Magnum Photos (1947) a été cofondée par Cartier-Bresson, Robert Capa, George Rodger et David « Chim » Seymour — une coopérative détenue par les photographes."
           },
           "difficulty": "medium",
-          "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1470071459604-3b5ec3a7fe05.avif",
           "imageAlt": {
             "en": "Vintage photo albums",
             "fr": "Albums photo vintage"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -7809,12 +7881,16 @@
             "en": "Street photography captures unscripted public moments — gesture, irony, geometry — usually with available light and discrete gear.",
             "fr": "La photo de rue capture des moments publics non mis en scène — geste, ironie, géométrie — souvent en lumière disponible et avec un matériel discret."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
           "imageAlt": {
             "en": "Portrait photography session",
             "fr": "Séance portrait"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-2",
@@ -7862,12 +7938,16 @@
             "en": "Good portraits balance light, expression and background separation. Aperture is a creative choice, not a fixed rule.",
             "fr": "Un bon portrait équilibre lumière, expression et séparation du fond. L'ouverture est un choix créatif, pas une règle fixe."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1486312338219-ce68d2c6f44d.avif",
           "imageAlt": {
             "en": "Street photography scene",
             "fr": "Scène de photo de rue"
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-3",
@@ -7914,10 +7994,14 @@
             "fr": "La vraie macro atteint souvent ~1:1 (sujet grandeur nature sur le capteur) : insectes, textures, détails. Le focus stacking est fréquent."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
           "imageAlt": {
             "en": "Sunlight through trees",
             "fr": "Soleil à travers les arbres"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -7965,10 +8049,14 @@
             "fr": "Le trépied permet des poses longues nettes (eau, basse lumière, filtres ND) et des techniques multi-vues (brackets, panoramas)."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Desert landscape",
             "fr": "Paysage désertique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -8766,10 +8854,14 @@
             "en": "Street thrives on timing and public life — not on a full studio crew.",
             "fr": "La rue vit du timing et de la vie publique — pas d’une équipe studio complète."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Urban street scene",
             "fr": "Scène de rue urbaine"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -8817,10 +8909,14 @@
             "en": "No tripod means you buy shutter speed with ISO and aperture — and pay in noise or DOF.",
             "fr": "Sans trépied, tu achètes de la vitesse avec ISO et ouverture — et tu paies en bruit ou PDC."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1519501025264-65ba15a82390.avif",
           "imageAlt": {
             "en": "Night city skyline",
             "fr": "Skyline de ville la nuit"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -8916,10 +9012,14 @@
             "en": "Documentary prioritizes real moments over heavy direction.",
             "fr": "Le documentaire privilégie les vrais moments plutôt que la direction lourde."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
           "imageAlt": {
             "en": "Candid wedding moment",
             "fr": "Moment de mariage spontané"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -8967,10 +9067,14 @@
             "en": "Approaches vary; respect and legality matter more than aggression.",
             "fr": "Les approches varient ; le respect et la légalité comptent plus que l’agressivité."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Urban street scene",
             "fr": "Scène de rue urbaine"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -9156,7 +9260,7 @@
             "en": "Street craft is anticipation and presence; ethics is dignity and context — especially when publishing.",
             "fr": "Le craft street = anticipation et présence ; l’éthique = dignité et contexte — surtout à la publication."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Busy urban street scene for candid photography",
             "fr": "Scène de rue animée pour la photo candide"
@@ -9211,7 +9315,7 @@
             "en": "Portrait genre prioritizes flattering face light. Soften or fill noon sun; don’t just suffer it.",
             "fr": "Le genre portrait priorise une lumière flatteuse sur le visage. Adoucis ou fill le midi ; ne le subis pas."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Soft natural-light portrait",
             "fr": "Portrait en lumière naturelle douce"
@@ -9327,7 +9431,7 @@
             "en": "Phones stack frames, align them and reconstruct detail/dynamic range with algorithms.",
             "fr": "Les téléphones empilent des images, les alignent et reconstruisent détail/dynamique via des algorithmes."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1511707171634-5f897ff02aa9.avif",
           "imageAlt": {
             "en": "Smartphone on a desk",
             "fr": "Smartphone sur un bureau"
@@ -9382,7 +9486,7 @@
             "en": "Night mode merges several frames over time; motion between frames softens the result.",
             "fr": "Le mode nuit fusionne plusieurs images dans le temps ; le mouvement les adoucit."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Phone camera at night",
             "fr": "Caméra de téléphone la nuit"
@@ -9438,7 +9542,7 @@
             "fr": "Le AE/AF au toucher mesure et fait le point là où vous appuyez."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
           "imageAlt": {
             "en": "Person holding a smartphone",
             "fr": "Personne tenant un smartphone"
@@ -9495,7 +9599,7 @@
             "fr": "Optique propre, stabilité et bonne lumière battent le zoom numérique extrême."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1512499617640-c74ae3a79d37.avif",
           "imageAlt": {
             "en": "Smartphone camera interface",
             "fr": "Interface caméra de smartphone"
@@ -9550,7 +9654,7 @@
             "fr": "Le vrai zoom optique change le grossissement ; le numérique recadre/interpolate."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1598327105666-5b89351aff97.avif",
           "imageAlt": {
             "en": "Smartphone camera close-up",
             "fr": "Gros plan sur l’appareil photo d’un smartphone"
@@ -9605,7 +9709,7 @@
             "fr": "Double caméra / LiDAR / ML segmentent le sujet et simulent une faible PdC."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1526170375885-4d8ecf77b99f.avif",
           "imageAlt": {
             "en": "Camera lens with shallow depth of field",
             "fr": "Objectif photo avec faible profondeur de champ"
@@ -9660,7 +9764,7 @@
             "fr": "Le HDR fusionne des expositions pour garder hautes lumières et ombres."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Bright sky and dark foreground landscape",
             "fr": "Paysage avec ciel lumineux et premier plan sombre"
@@ -9763,7 +9867,7 @@
             "fr": "Stabilisation, expositions courtes et appui aident ; marcher + zoom nuit."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1580910051074-3eb694886505.avif",
           "imageAlt": {
             "en": "Hands holding a smartphone steady",
             "fr": "Mains tenant un smartphone bien stable"
@@ -9864,7 +9968,7 @@
             "fr": "Une lumière douce et diffusée réduit les ombres dures sur le visage."
           },
           "difficulty": "easy",
-          "imageUrl": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1611162616305-c69b3fa7fbe0.avif",
           "imageAlt": {
             "en": "Person photographing outdoors with a phone",
             "fr": "Personne photographiant en extérieur avec un téléphone"
@@ -10337,7 +10441,7 @@
             "en": "Computational bokeh is a guess. Overlapping edges confuse the depth mask — step aside or move the subject.",
             "fr": "Le bokeh computationnel est une estimation. Les contours qui se chevauchent trompent le masque — décale-toi ou déplace le sujet."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Smartphone photography",
             "fr": "Photo au smartphone"
@@ -10484,7 +10588,7 @@
             "en": "Primary sensors are often larger — better for low light than tiny ultra-wide chips.",
             "fr": "Le capteur principal est souvent plus grand — meilleur en basse lumière que le mini ultra grand-angle."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Smartphone photography at night",
             "fr": "Photo smartphone de nuit"
@@ -10677,7 +10781,7 @@
             "en": "Body mechanics + digital stab beat a shaky outstretched arm.",
             "fr": "La mécanique du corps + la stab numérique battent un bras tendu tremblant."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Person filming with a phone",
             "fr": "Personne filmant avec un téléphone"
@@ -10732,7 +10836,7 @@
             "en": "Multi-frame night modes hate motion. Stillness or a faster single exposure beats ghosting.",
             "fr": "Les modes nuit multi-vues détestent le mouvement. L’immobilité ou une expo plus courte bat les fantômes."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Smartphone held ready to shoot",
             "fr": "Smartphone prêt à photographier"
@@ -10896,10 +11000,14 @@
             "en": "Copyright usually vests in the author (the photographer), unless transferred by contract or created as work-for-hire.",
             "fr": "Le droit d’auteur appartient en principe à l’auteur (le photographe), sauf cession ou commande/salariat selon les cas."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1450101499163-c8848c66ca85.avif",
           "imageAlt": {
             "en": "Contract and pen on desk",
             "fr": "Contrat et stylo sur un bureau"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -10947,10 +11055,14 @@
             "en": "It signals the author retains control; check license or ask before commercial/republishing use.",
             "fr": "L’auteur garde le contrôle ; vérifiez la licence ou demandez avant usage commercial/republication."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
           "imageAlt": {
             "en": "Handshake over agreement",
             "fr": "Poignée de main sur un accord"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11835,10 +11947,14 @@
             "en": "Editorial vs commercial and likeness rights vary — when money is involved, get permission or anonymize.",
             "fr": "Éditorial vs commercial et droit à l’image varient — dès qu’il y a de l’argent, autorise ou anonymise."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1554118811-1e0d58224f24.avif",
           "imageAlt": {
             "en": "Café terrace",
             "fr": "Terrasse de café"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12038,10 +12154,14 @@
             "en": "Right clipping indicates pure white with little recoverable detail.",
             "fr": "Une coupe à droite indique du blanc pur avec peu de détail récupérable."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1618005182384-a83a8bd57fbe.avif",
           "imageAlt": {
             "en": "Abstract color gradients",
             "fr": "Dégradés de couleurs abstraits"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12089,10 +12209,14 @@
             "en": "RAW keeps linear sensor data; JPEG bakes in contrast, sharpening and compression.",
             "fr": "Le RAW garde des données capteur ; le JPEG fige contraste, accentuation et compression."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1550745165-9bc0b252726f.avif",
           "imageAlt": {
             "en": "Editing workspace with screens",
             "fr": "Espace de retouche avec écrans"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13024,10 +13148,14 @@
             "en": "Over-smoothing kills pores and texture. Pull back until skin still looks like skin.",
             "fr": "Le sur-lissage tue les pores et la texture. Recule jusqu’à ce que la peau reste de la peau."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait close-up",
             "fr": "Portrait en gros plan"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13597,7 +13725,7 @@
             "en": "Global sets the base; masks refine the story without wrecking the rest.",
             "fr": "Le global pose la base ; les masques raffinent l’histoire sans casser le reste."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1498050108023-c5249f4df085.avif",
           "imageAlt": {
             "en": "Laptop on a desk suggesting a digital editing workflow",
             "fr": "Laptop sur un bureau évoquant un flux de retouche numérique"
@@ -14114,7 +14242,7 @@
             "en": "One master, multiple purposeful exports — don’t print from a crushed web JPEG.",
             "fr": "Un master, plusieurs exports ciblés — n’imprime pas depuis un JPEG web écrasé."
           },
-          "imageUrl": "https://images.unsplash.com/photo-1432405972618-c60b0225d3f8?auto=format&fit=crop&w=960&q=80",
+          "imageUrl": "/images/packs/photo-1518182170546-07661fd94144.avif",
           "imageAlt": {
             "en": "Long-exposure waterfall suggesting careful processing of highlights and motion",
             "fr": "Cascade en pose longue suggérant un traitement soigné des hautes lumières"
