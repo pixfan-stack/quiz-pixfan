@@ -1,8 +1,24 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Quiz } from '../types/quiz';
 import { useQuizEngine } from '../hooks/useQuizEngine';
 import { QuestionView } from './QuestionView';
 import { ResultScreen } from './ResultScreen';
+
+const IMAGE_PRELOAD_COUNT = 5;
+
+/** Warm the browser cache for the first few question images after start. */
+function preloadQuizImages(quiz: Quiz, count = IMAGE_PRELOAD_COUNT): void {
+  const urls = quiz.questions
+    .map((q) => q.imageUrl)
+    .filter((url): url is string => Boolean(url))
+    .slice(0, count);
+  for (const url of urls) {
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = url;
+  }
+}
 
 interface QuizScreenProps {
   quiz: Quiz;
@@ -37,6 +53,10 @@ export default function QuizScreen({
 }: QuizScreenProps) {
   const { t } = useTranslation();
   const engine = useQuizEngine(quiz, { timePerQuestion, antiCheat });
+
+  useEffect(() => {
+    preloadQuizImages(quiz);
+  }, [quiz]);
 
   if (engine.phase === 'finished' && engine.result) {
     return (

@@ -40,6 +40,7 @@ export function SeasonBanner() {
       className="install-prompt season-banner"
       role="region"
       aria-label={title}
+      aria-live="polite"
       data-testid="season-banner"
       data-kind={kind}
     >

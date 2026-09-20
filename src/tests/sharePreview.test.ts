@@ -28,6 +28,9 @@ describe('sharePreview', () => {
 
   it('labels known quizzes', () => {
     expect(quizLabel('composition', 'fr')).toContain('Composition');
+    expect(quizLabel('lightroom-workflow', 'fr')).toBe('Workflow Lightroom');
+    expect(quizLabel('lightroom-workflow', 'en')).toBe('Lightroom workflow');
+    expect(normalizeQuizId('lightroom-workflow')).toBe('lightroom-workflow');
     expect(quizLabel('daily-2026-07-26', 'fr')).toBe('Défi du jour');
     expect(quizLabel('duel-abcd2345', 'en')).toBe('Friend duel');
   });

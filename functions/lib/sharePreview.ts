@@ -17,6 +17,10 @@ const LABELS: Record<string, { en: string; fr: string }> = {
   smartphone: { en: 'Smartphone', fr: 'Smartphone' },
   'photo-rights': { en: 'Photo rights', fr: 'Droits photo' },
   retouching: { en: 'Retouching', fr: 'Retouche' },
+  'lightroom-workflow': {
+    en: 'Lightroom workflow',
+    fr: 'Workflow Lightroom',
+  },
   random: { en: 'Random mix', fr: 'Mix aléatoire' },
   'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
   'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },
