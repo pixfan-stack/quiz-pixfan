@@ -133,6 +133,7 @@ curl -X POST "https://your-site.pages.dev/api/highscore" \
    - `VITE_ENABLE_REMOTE_SCORES`: `true`
    - `VITE_APP_URL`: `https://quiz.pixfan.fr` (ou votre domaine)
    - `VITE_ADMIN_PIN`: PIN pour activer `#/admin` (variable de **build** ; rebuilder après ajout)
+   - `ADMIN_PIN`: **même valeur**, variable **runtime** Pages Functions pour `/api/admin/reports` et `/api/admin/analytics` (sinon 503 « Admin PIN not configured »)
 
 4. **Lier la base de données D1** :
    - **Binding name**: `DB`
@@ -158,7 +159,8 @@ Créez un fichier `.env.production` :
 ```bash
 VITE_APP_URL=https://your-custom-domain.com
 VITE_ENABLE_REMOTE_SCORES=true
-# VITE_ADMIN_PIN=your-secret-pin   # Pages build env + redeploy
+# VITE_ADMIN_PIN=your-secret-pin   # build (SPA)
+# ADMIN_PIN=your-secret-pin        # runtime Functions (même valeur)
 ```
 
 ### Monitoring

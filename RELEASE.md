@@ -78,4 +78,4 @@ wrangler pages deploy dist --project-name=quiz-pixfan
 - [ ] README.md / NEXT_STEPS.md updated if content or features changed
 - [ ] Version bumped in package.json
 - [ ] If schema changed: apply D1 migrations on prod (`migrations/README.md`) and `npm run db:verify:004` when relevant
-- [ ] If admin needed: `VITE_ADMIN_PIN` set on Pages Production **build** env, then redeploy
+- [ ] If admin needed: `VITE_ADMIN_PIN` on Pages/CI **build** env + `ADMIN_PIN` (or `VITE_ADMIN_PIN`) on Pages **runtime** for `/api/admin/*`, then redeploy

@@ -67,6 +67,8 @@ export function AccountSyncPanel({
           return t('account.errUnknown');
         case 'expired_code':
           return t('account.errExpired');
+        case 'rate_limited':
+          return t('account.errRateLimited');
         case 'remote_disabled':
           return t('account.errRemote');
         case 'network':

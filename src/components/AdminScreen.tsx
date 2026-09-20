@@ -86,7 +86,9 @@ export default function AdminScreen({
       setReportsError(
         result.error === 'unauthorized'
           ? t('admin.reportsUnauthorized')
-          : t('admin.reportsUnavailable')
+          : result.error === 'pin_unconfigured'
+            ? t('admin.pinUnconfigured')
+            : t('admin.reportsUnavailable')
       );
       return;
     }
@@ -107,7 +109,9 @@ export default function AdminScreen({
       setAnalyticsError(
         result.error === 'unauthorized'
           ? t('admin.analyticsUnauthorized')
-          : t('admin.analyticsUnavailable')
+          : result.error === 'pin_unconfigured'
+            ? t('admin.pinUnconfigured')
+            : t('admin.analyticsUnavailable')
       );
       return;
     }
@@ -306,7 +310,9 @@ export default function AdminScreen({
       setReportsError(
         result.error === 'unauthorized'
           ? t('admin.reportsUnauthorized')
-          : t('admin.reportsUnavailable')
+          : result.error === 'pin_unconfigured'
+            ? t('admin.pinUnconfigured')
+            : t('admin.reportsUnavailable')
       );
       return;
     }

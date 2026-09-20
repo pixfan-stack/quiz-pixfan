@@ -19,6 +19,10 @@ const MAX_PLAYER_ID = 64;
 const MAX_DISPLAY_NAME = 24;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const CODE_TTL_DAYS = 365;
+/** Mirror report.ts (10 s) — one create_code burst per player. */
+const CREATE_CODE_COOLDOWN_MS = 10_000;
+/** Mirror highscore.ts-ish spacing — slow redeem brute-force per client IP. */
+const REDEEM_COOLDOWN_MS = 3_000;
 
 interface StreakPayload {
   lastDailyId: string | null;
@@ -71,6 +75,71 @@ function generateRecoveryCode(): string {
     compact += CODE_ALPHABET[bytes[i]! % CODE_ALPHABET.length]!;
   }
   return formatRecoveryCode(compact);
+}
+
+function clientIp(request: Request): string {
+  return (
+    request.headers.get('CF-Connecting-IP')?.trim() ||
+    request.headers.get('X-Forwarded-For')?.split(',')[0]?.trim() ||
+    'unknown'
+  );
+}
+
+/**
+ * Cache-API cooldown keyed by action + IP (no schema change).
+ * Fails open if cache is unavailable (e.g. some local runtimes).
+ */
+async function isIpRateLimited(
+  request: Request,
+  action: string,
+  cooldownMs: number
+): Promise<boolean> {
+  const ip = clientIp(request);
+  const cacheKey = new Request(
+    `https://rate-limit.quiz-pixfan.internal/account/${action}/${encodeURIComponent(ip)}`
+  );
+  try {
+    const cache = caches.default;
+    const hit = await cache.match(cacheKey);
+    if (hit) {
+      const last = Number(await hit.text());
+      if (!Number.isNaN(last) && Date.now() - last < cooldownMs) {
+        return true;
+      }
+    }
+    await cache.put(
+      cacheKey,
+      new Response(String(Date.now()), {
+        headers: {
+          'Cache-Control': `max-age=${Math.ceil(cooldownMs / 1000) + 1}`,
+        },
+      })
+    );
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+async function isCreateCodeRateLimited(
+  db: D1Database,
+  playerId: string
+): Promise<boolean> {
+  const recent = await db
+    .prepare(
+      `SELECT created_at as createdAt FROM player_recovery_codes
+       WHERE player_id = ?
+       ORDER BY created_at DESC
+       LIMIT 1`
+    )
+    .bind(playerId)
+    .first<{ createdAt: string }>();
+
+  if (!recent?.createdAt) return false;
+  const lastMs = Date.parse(recent.createdAt);
+  return (
+    !Number.isNaN(lastMs) && Date.now() - lastMs < CREATE_CODE_COOLDOWN_MS
+  );
 }
 
 async function hashRecoveryCode(normalized: string): Promise<string> {
@@ -247,7 +316,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       return await handleCreateCode(context.env.DB, body);
     }
     if (action === 'redeem') {
-      return await handleRedeem(context.env.DB, body);
+      return await handleRedeem(context.env.DB, body, context.request);
     }
     return json({ error: 'Unknown action' }, 400);
   } catch (error) {
@@ -341,6 +410,10 @@ async function handleCreateCode(
     return json({ error: 'Invalid playerId' }, 400);
   }
 
+  if (await isCreateCodeRateLimited(db, playerId)) {
+    return json({ error: 'Rate limit: wait before creating another code' }, 429);
+  }
+
   // Ensure progress row exists so redeem always has a target
   const now = new Date();
   const updatedAt = now.toISOString();
@@ -389,8 +462,13 @@ async function handleCreateCode(
 
 async function handleRedeem(
   db: D1Database,
-  body: Record<string, unknown>
+  body: Record<string, unknown>,
+  request: Request
 ): Promise<Response> {
+  if (await isIpRateLimited(request, 'redeem', REDEEM_COOLDOWN_MS)) {
+    return json({ error: 'Rate limit: wait before redeeming again' }, 429);
+  }
+
   const normalized = normalizeRecoveryCode(String(body.code ?? ''));
   if (!normalized) {
     return json({ error: 'Invalid recovery code' }, 400);

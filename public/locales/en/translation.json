@@ -97,6 +97,7 @@
     "errInvalid": "Invalid code. Check the XXXX-XXXX-XXXX format.",
     "errUnknown": "Unknown code. Make sure it was generated on the other device.",
     "errExpired": "This code has expired. Generate a new one.",
+    "errRateLimited": "Too many attempts. Wait a few seconds and try again.",
     "errRemote": "Server sync is disabled in this environment.",
     "errNetwork": "Network unavailable. Try again later.",
     "errGeneric": "Could not sync right now."
@@ -360,6 +361,7 @@
     "reportsDismissed": "Reports dismissed",
     "reportsUnauthorized": "Admin session invalid — unlock again.",
     "reportsUnavailable": "Reports unavailable (API or migration).",
+    "pinUnconfigured": "Admin Functions PIN not configured (Pages runtime ADMIN_PIN). See DEPLOYMENT.md.",
     "analyticsIntro": "Anonymous attempts from D1 quiz_attempts. High low-score rate (under 50%) flags quizzes that may need content work.",
     "analyticsRefresh": "Refresh",
     "analyticsEmpty": "No attempts recorded yet.",

@@ -43,6 +43,13 @@ export async function fetchAdminAnalytics(): Promise<{
     if (res.status === 401) {
       return { ok: false, data: null, error: 'unauthorized' };
     }
+    if (res.status === 503) {
+      const body = (await res.json().catch(() => null)) as { error?: string } | null;
+      if (body?.error?.includes('not configured')) {
+        return { ok: false, data: null, error: 'pin_unconfigured' };
+      }
+      return { ok: false, data: null, error: 'unavailable' };
+    }
     if (!res.ok) {
       return { ok: false, data: null, error: 'unavailable' };
     }

@@ -6,8 +6,11 @@ pages_build_output_dir = "dist"
 
 [vars]
 # Application configuration (Pages Functions / wrangler).
-# VITE_* used by the SPA must also be set in Cloudflare Pages → Settings →
-# Environment variables for the *build*, then redeploy. Do not commit VITE_ADMIN_PIN.
+# Do NOT put ADMIN_PIN / VITE_ADMIN_PIN here (secrets).
+# - SPA: set VITE_ADMIN_PIN as a *build* secret (CI / Pages build env), redeploy.
+# - Functions (/api/admin/*): set runtime ADMIN_PIN (preferred) or VITE_ADMIN_PIN
+#   on the Pages project (Dashboard → Settings → Environment variables).
+#   Code accepts either via authorizeAdmin() in functions/api/admin/auth.ts.
 VITE_APP_URL = "https://quiz.pixfan.fr"
 VITE_ENABLE_REMOTE_SCORES = true
 

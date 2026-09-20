@@ -2,7 +2,7 @@
 
 Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-**Version courante : v1.12.0**
+**Version courante : v1.13.0**
 
 ## Contenu actuel
 
@@ -18,10 +18,11 @@ Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/
 - Bilingue FR/EN (détection auto + switcher)
 - Scores locaux (localStorage) + scores distants / classements via D1
 - Classements période (semaine / mois) + signalement de pseudo
-- Streak, freezes, succès, maîtrise (vague v1.12)
+- Compte léger (code de récupération + sync streak / succès / high scores)
+- Streak, freezes, succès, maîtrise, saisons
 - Revue d’erreurs / weak spots, CTA Pixfan / newsletter
 - PWA (manifest, service worker, install prompt)
-- Admin minimal `#/admin` (édition session + export JSON) si `VITE_ADMIN_PIN` est défini au **build**
+- Admin minimal `#/admin` (édition session, signalements, analytics, export JSON) si `VITE_ADMIN_PIN` est défini au **build** ; APIs admin nécessitent aussi `ADMIN_PIN` / `VITE_ADMIN_PIN` **runtime**
 - Partage social (OG / deep links duel)
 
 ## Architecture (résumé)
@@ -58,8 +59,9 @@ Voir `.env.example` :
 | `VITE_APP_URL` | URL publique (partage / OG) |
 | `VITE_ENABLE_REMOTE_SCORES` | Active les appels `/api/*` scores |
 | `VITE_ADMIN_PIN` | Active `#/admin` en build prod (sinon désactivé hors DEV) |
+| `ADMIN_PIN` | Secret **runtime** Pages Functions pour `/api/admin/*` (préféré ; sinon `VITE_ADMIN_PIN` runtime) |
 
-`VITE_*` sont injectées **au build**. Sur Cloudflare Pages, les définir dans **Settings → Environment variables** (Production), puis **rebuilder**.
+`VITE_*` SPA sont injectées **au build**. Sur Cloudflare Pages, les définir dans **Settings → Environment variables** (Production). Les Functions lisent l’env **runtime** du projet (`ADMIN_PIN` ou `VITE_ADMIN_PIN`) — voir [`DEPLOYMENT.md`](./DEPLOYMENT.md) § Admin PIN runtime.
 
 ## Contenu : ajouter des questions
 
@@ -69,11 +71,10 @@ Voir `.env.example` :
 
 Guides détaillés : [`DEPLOYMENT.md`](./DEPLOYMENT.md), [`GUIDE_DEPLOIEMENT.md`](./GUIDE_DEPLOIEMENT.md).
 
-Points ops fréquents (P0) :
+Points ops fréquents :
 
-1. **Migration D1 004** (classements période + reports) — voir [`migrations/README.md`](./migrations/README.md)  
-   `npm run db:migrate:004` puis `npm run db:verify:004`
-2. **`VITE_ADMIN_PIN`** en variable de build Pages Production, puis redéploiement
+1. Migrations D1 `004` / `005` — voir [`migrations/README.md`](./migrations/README.md)
+2. **`VITE_ADMIN_PIN`** en build (CI / Pages) + **`ADMIN_PIN`** runtime Functions (même valeur)
 3. Binding D1 `DB` → `quiz-pixfan-scores` sur le projet Pages
 
 ## Licence
