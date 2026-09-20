@@ -42,6 +42,20 @@ Vérifier la 004 (attendu : `name_reports` + `period_highscores`) :
 npm run db:verify:004
 ```
 
+Compte léger / sync (si pas encore fait) :
+
+```bash
+npm run db:migrate:005
+npm run db:verify:005
+```
+
+Vault d’erreurs + badges saison dans le sync :
+
+```bash
+npm run db:migrate:006
+npm run db:verify:006
+```
+
 (L’option `--remote` cible la base de production ; omettez-la pour l’environnement local.)
 
 ### Étape 3 : Configurer wrangler.toml

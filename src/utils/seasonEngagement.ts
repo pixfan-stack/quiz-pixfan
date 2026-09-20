@@ -36,15 +36,43 @@ function writeJson(key: string, value: unknown): void {
   }
 }
 
-export function getSeasonBadges(): SeasonBadgeMap {
-  const raw = readJson<Record<string, unknown>>(BADGES_KEY, {});
+/** Sanitize an unknown season-badges payload (API / storage). */
+export function parseSeasonBadges(raw: unknown): SeasonBadgeMap {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
   const out: SeasonBadgeMap = {};
-  for (const [id, value] of Object.entries(raw)) {
+  for (const [id, value] of Object.entries(raw as Record<string, unknown>)) {
     if (value === 'participant' && /^\d{4}-\d{2}$/.test(id)) {
       out[id] = 'participant';
     }
   }
-  return out;
+  // Cap map size to avoid unbounded growth across years
+  const ids = Object.keys(out).sort().reverse().slice(0, 36);
+  const capped: SeasonBadgeMap = {};
+  for (const id of ids) {
+    capped[id] = out[id]!;
+  }
+  return capped;
+}
+
+/** Union two badge maps (participant wins). */
+export function mergeSeasonBadgeMaps(
+  a: SeasonBadgeMap,
+  b: SeasonBadgeMap
+): SeasonBadgeMap {
+  return parseSeasonBadges({ ...a, ...b });
+}
+
+export function getSeasonBadges(): SeasonBadgeMap {
+  return parseSeasonBadges(readJson<Record<string, unknown>>(BADGES_KEY, {}));
+}
+
+/** Merge remote season badges into localStorage (union). */
+export function mergeRemoteSeasonBadges(
+  remote: SeasonBadgeMap | unknown
+): SeasonBadgeMap {
+  const merged = mergeSeasonBadgeMaps(getSeasonBadges(), parseSeasonBadges(remote));
+  writeJson(BADGES_KEY, merged);
+  return merged;
 }
 
 export function getSeasonBadge(seasonId = getMonthPeriodId()): SeasonCosmetic | null {

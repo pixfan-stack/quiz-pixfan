@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS player_progress (
   display_name TEXT,
   streak_json TEXT NOT NULL DEFAULT '{}',
   achievements_json TEXT NOT NULL DEFAULT '[]',
+  -- vault_json / season_badges_json added in 006 (ALTER on existing DBs)
   updated_at TEXT NOT NULL
 );
 

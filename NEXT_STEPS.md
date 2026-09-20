@@ -8,7 +8,7 @@ Document à jour avec l’état réel du dépôt (**v1.13.0**).
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots
 - Engagement : défi du jour, duel, succès, streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
-- Compte léger : code de récupération + sync streak / succès / high scores (migration `005`)
+- Compte léger : code de récupération + sync streak / succès / high scores / **vault** / badges saison (migrations `005` + `006`)
 - Produit : CTA pixfan.com + newsletter, modes photo-reading / mix / aléatoire, guides ↔ quiz
 - Technique : **PWA** (manifest, SW, install prompt), footer i18n, **admin** `#/admin` (export JSON, signalements, analytics)
 
@@ -21,7 +21,7 @@ Document à jour avec l’état réel du dépôt (**v1.13.0**).
 
 ## 🔜 Suite produit possible
 
-- [ ] Sync du vault d’erreurs (multi-appareil)
+- [ ] Appliquer migration D1 `006` en prod (vault + badges saison) après merge P1
 - [ ] Enrichir images sur quiz techniques + miroir Unsplash offline
 - [ ] Dashboard CTA ventilé + guides locaux manquants
 - [ ] Découpage `AdminScreen` / polish SEO (sitemap lightroom)
