@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import {
+  buildCtaAnalyticsBreakdown,
   ctaAnalyticsQuizId,
   getPixfanCta,
   isCtaAnalyticsQuizId,
   localGuideForMistake,
+  parseCtaAnalyticsQuizId,
   resolvePixfanTopic,
   resolveTopicFromMistakes,
 } from '../utils/pixfanCta';
@@ -15,6 +17,7 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('retouching')).toBe('retouching');
     expect(resolvePixfanTopic('lightroom-workflow')).toBe('retouching');
     expect(resolvePixfanTopic('photo-rights')).toBe('rights');
+    expect(resolvePixfanTopic('light-color')).toBe('light');
   });
 
   it('falls back for challenge packs', () => {
@@ -34,6 +37,21 @@ describe('pixfanCta', () => {
     expect(cta.newsletterUrl).toContain('/newsletter/');
     expect(cta.newsletterUrl).toContain('utm_content=newsletter');
     expect(cta.fromMistakes).toBe(false);
+  });
+
+  it('targets local guides for light and retouching', () => {
+    const light = getPixfanCta('light-color');
+    expect(light.primaryTarget).toBe('guide');
+    expect(light.primaryUrl).toContain('/guides/lumiere-photo');
+
+    const retouch = getPixfanCta('retouching');
+    expect(retouch.primaryTarget).toBe('guide');
+    expect(retouch.primaryUrl).toContain('/guides/retouche-lightroom');
+
+    const lr = getPixfanCta('lightroom-workflow');
+    expect(lr.topic).toBe('retouching');
+    expect(lr.primaryTarget).toBe('guide');
+    expect(lr.primaryUrl).toContain('/guides/retouche-lightroom');
   });
 
   it('uses pixfan.com when no local guide exists', () => {
@@ -73,13 +91,50 @@ describe('pixfanCta', () => {
     expect(localGuideForMistake('composition__comp-1')?.path).toContain(
       '/guides/composition-photo'
     );
+    expect(localGuideForMistake('light-1', 'light-color')?.path).toContain(
+      '/guides/lumiere-photo'
+    );
+    expect(localGuideForMistake('retouching__r-1')?.path).toContain(
+      '/guides/retouche-lightroom'
+    );
     expect(localGuideForMistake('gear-1', 'gear-lenses')).toBeNull();
   });
 
-  it('encodes CTA clicks for quiz_attempts analytics', () => {
+  it('encodes and parses CTA clicks for quiz_attempts analytics', () => {
     const id = ctaAnalyticsQuizId('guide', 'exposure', 'daily-2026-09-19');
     expect(id).toBe('cta:guide:exposure:daily-2026-09-19');
     expect(isCtaAnalyticsQuizId(id)).toBe(true);
     expect(isCtaAnalyticsQuizId('daily-2026-09-19')).toBe(false);
+    expect(parseCtaAnalyticsQuizId(id)).toEqual({
+      target: 'guide',
+      topic: 'exposure',
+      sourceQuizId: 'daily-2026-09-19',
+    });
+    expect(parseCtaAnalyticsQuizId('cta:bad')).toBeNull();
+  });
+
+  it('aggregates CTA rows by target and topic', () => {
+    const breakdown = buildCtaAnalyticsBreakdown([
+      { quizId: 'cta:guide:light:light-color', clicks: 5 },
+      { quizId: 'cta:newsletter:light:light-color', clicks: 2 },
+      { quizId: 'cta:guide:retouching:retouching', clicks: 3 },
+      { quizId: 'cta:pixfan:gear:gear-lenses', clicks: 4 },
+      { quizId: 'cta:broken', clicks: 9 },
+    ]);
+    expect(breakdown.byTarget).toEqual([
+      { target: 'guide', clicks: 8 },
+      { target: 'newsletter', clicks: 2 },
+      { target: 'pixfan', clicks: 4 },
+    ]);
+    expect(breakdown.byTopic).toEqual([
+      { topic: 'light', clicks: 7 },
+      { topic: 'gear', clicks: 4 },
+      { topic: 'retouching', clicks: 3 },
+    ]);
+    expect(breakdown.rows[0]).toMatchObject({
+      target: 'guide',
+      topic: 'light',
+      clicks: 5,
+    });
   });
 });

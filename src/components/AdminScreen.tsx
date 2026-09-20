@@ -607,6 +607,100 @@ export default function AdminScreen({
                 </div>
               </div>
 
+              {(analytics.cta.byTarget.length > 0 ||
+                analytics.cta.byTopic.length > 0) && (
+                <div
+                  className="admin__analytics-cta"
+                  data-testid="admin-analytics-cta"
+                >
+                  <p className="admin__section-title">
+                    {t('admin.analyticsCtaBreakdown')}
+                  </p>
+                  <p className="admin__hint">{t('admin.analyticsCtaHint')}</p>
+                  <div className="admin__analytics-cta-grids">
+                    {analytics.cta.byTarget.length > 0 && (
+                      <div className="admin__analytics-table-wrap">
+                        <table className="admin__analytics-table">
+                          <thead>
+                            <tr>
+                              <th>{t('admin.analyticsColCtaTarget')}</th>
+                              <th>{t('admin.analyticsColClicks')}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {analytics.cta.byTarget.map((row) => (
+                              <tr key={row.target}>
+                                <td>
+                                  <strong>
+                                    {t(`admin.analyticsCtaTarget_${row.target}`)}
+                                  </strong>
+                                  <div className="admin__report-id">
+                                    {row.target}
+                                  </div>
+                                </td>
+                                <td>{row.clicks}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                    {analytics.cta.byTopic.length > 0 && (
+                      <div className="admin__analytics-table-wrap">
+                        <table className="admin__analytics-table">
+                          <thead>
+                            <tr>
+                              <th>{t('admin.analyticsColCtaTopic')}</th>
+                              <th>{t('admin.analyticsColClicks')}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {analytics.cta.byTopic.map((row) => (
+                              <tr key={row.topic}>
+                                <td>
+                                  <strong>{row.topic}</strong>
+                                </td>
+                                <td>{row.clicks}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                  {analytics.cta.rows.length > 0 && (
+                    <div className="admin__analytics-table-wrap">
+                      <table className="admin__analytics-table">
+                        <thead>
+                          <tr>
+                            <th>{t('admin.analyticsColCtaTarget')}</th>
+                            <th>{t('admin.analyticsColCtaTopic')}</th>
+                            <th>{t('admin.analyticsColCtaSource')}</th>
+                            <th>{t('admin.analyticsColClicks')}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {analytics.cta.rows.map((row) => (
+                            <tr
+                              key={`${row.target}:${row.topic}:${row.sourceQuizId}`}
+                            >
+                              <td>{row.target}</td>
+                              <td>{row.topic}</td>
+                              <td>
+                                <span className="admin__report-id">
+                                  {row.sourceQuizId}
+                                </span>
+                              </td>
+                              <td>{row.clicks}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {analytics.quizzes.length === 0 ? (
                 <p className="admin__hint">{t('admin.analyticsEmpty')}</p>
               ) : (

@@ -4,6 +4,9 @@
  * GET /api/admin/analytics — aggregated attempt stats (PIN-gated)
  *
  * Auth: header X-Admin-Pin must match runtime ADMIN_PIN (preferred) or VITE_ADMIN_PIN.
+ *
+ * CTA clicks are stored as quiz_id `cta:{target}:{topic}:{sourceQuizId}`
+ * and returned as a target × topic breakdown (P3 funnel).
  */
 
 import { json } from '../utils';
@@ -21,6 +24,21 @@ export interface QuizAttemptStats {
   lowScoreRate: number;
 }
 
+type CtaTarget = 'guide' | 'newsletter' | 'pixfan';
+
+export interface CtaClickRow {
+  target: CtaTarget;
+  topic: string;
+  sourceQuizId: string;
+  clicks: number;
+}
+
+export interface CtaAnalyticsBreakdown {
+  byTarget: Array<{ target: CtaTarget; clicks: number }>;
+  byTopic: Array<{ topic: string; clicks: number }>;
+  rows: CtaClickRow[];
+}
+
 export interface AnalyticsDashboard {
   summary: {
     totalAttempts: number;
@@ -28,8 +46,63 @@ export interface AnalyticsDashboard {
     uniqueQuizzes: number;
     ctaClicks: number;
   };
+  /** Ventilation CTA : guide / newsletter / pixfan × topic. */
+  cta: CtaAnalyticsBreakdown;
   quizzes: QuizAttemptStats[];
   recentDays: Array<{ day: string; attempts: number }>;
+}
+
+const CTA_TARGETS = new Set<CtaTarget>(['guide', 'newsletter', 'pixfan']);
+
+function parseCtaQuizId(
+  quizId: string
+): { target: CtaTarget; topic: string; sourceQuizId: string } | null {
+  if (!quizId.startsWith('cta:')) return null;
+  const parts = quizId.split(':');
+  if (parts.length < 4) return null;
+  const target = parts[1] as CtaTarget;
+  const topic = parts[2];
+  const sourceQuizId = parts.slice(3).join(':');
+  if (!CTA_TARGETS.has(target) || !topic || !sourceQuizId) return null;
+  return { target, topic, sourceQuizId };
+}
+
+function emptyCta(): CtaAnalyticsBreakdown {
+  return { byTarget: [], byTopic: [], rows: [] };
+}
+
+function buildCtaBreakdown(
+  rawRows: Array<{ quizId: string; clicks: number }>
+): CtaAnalyticsBreakdown {
+  const byTargetMap = new Map<CtaTarget, number>();
+  const byTopicMap = new Map<string, number>();
+  const rows: CtaClickRow[] = [];
+
+  for (const raw of rawRows) {
+    const clicks = Number(raw.clicks) || 0;
+    if (clicks <= 0) continue;
+    const parsed = parseCtaQuizId(raw.quizId);
+    if (!parsed) continue;
+    rows.push({ ...parsed, clicks });
+    byTargetMap.set(
+      parsed.target,
+      (byTargetMap.get(parsed.target) ?? 0) + clicks
+    );
+    byTopicMap.set(parsed.topic, (byTopicMap.get(parsed.topic) ?? 0) + clicks);
+  }
+
+  rows.sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
+
+  const targetOrder: CtaTarget[] = ['guide', 'newsletter', 'pixfan'];
+  const byTarget = targetOrder
+    .filter((t) => (byTargetMap.get(t) ?? 0) > 0)
+    .map((target) => ({ target, clicks: byTargetMap.get(target) ?? 0 }));
+
+  const byTopic = [...byTopicMap.entries()]
+    .map(([topic, clicks]) => ({ topic, clicks }))
+    .sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
+
+  return { byTarget, byTopic, rows };
 }
 
 export const onRequestOptions: PagesFunction = async () => {
@@ -49,6 +122,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       uniqueQuizzes: 0,
       ctaClicks: 0,
     },
+    cta: emptyCta(),
     quizzes: [],
     recentDays: [],
   };
@@ -83,6 +157,17 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       )
       .first<{ ctaClicks: number }>();
 
+    const ctaGroupRows = await db
+      .prepare(
+        `SELECT quiz_id as quizId, COUNT(*) as clicks
+         FROM quiz_attempts
+         WHERE quiz_id LIKE 'cta:%'
+         GROUP BY quiz_id
+         ORDER BY clicks DESC
+         LIMIT 200`
+      )
+      .all<{ quizId: string; clicks: number }>();
+
     const quizRows = await db
       .prepare(
         `SELECT quiz_id as quizId,
@@ -114,6 +199,13 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       )
       .all<{ day: string; attempts: number }>();
 
+    const cta = buildCtaBreakdown(
+      (ctaGroupRows.results ?? []).map((row) => ({
+        quizId: row.quizId,
+        clicks: Number(row.clicks) || 0,
+      }))
+    );
+
     const dashboard: AnalyticsDashboard = {
       summary: {
         totalAttempts: Number(summaryRow?.totalAttempts) || 0,
@@ -121,6 +213,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
         uniqueQuizzes: Number(summaryRow?.uniqueQuizzes) || 0,
         ctaClicks: Number(ctaRow?.ctaClicks) || 0,
       },
+      cta,
       quizzes: (quizRows.results ?? []).map((row) => ({
         quizId: row.quizId,
         attempts: Number(row.attempts) || 0,
