@@ -132,6 +132,14 @@ export default function AdminScreen({
   );
   const question: Question | undefined = activeQuiz?.questions[questionIndex];
 
+  const quizTitleById = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const q of draft) {
+      map.set(q.id, pickLocale(q.title, lang));
+    }
+    return map;
+  }, [draft, lang]);
+
   if (!isAdminEnabled()) {
     return (
       <section className="admin">
@@ -308,14 +316,6 @@ export default function AdminScreen({
     window.setTimeout(() => setSavedMsg(''), 2500);
     setReports((prev) => prev.filter((r) => r.playerId !== playerId));
   };
-
-  const quizTitleById = useMemo(() => {
-    const map = new Map<string, string>();
-    for (const q of draft) {
-      map.set(q.id, pickLocale(q.title, lang));
-    }
-    return map;
-  }, [draft, lang]);
 
   return (
     <section className="admin" data-testid="admin-unlocked">

@@ -293,7 +293,7 @@ export function validateQuizzesData(raw: unknown): QuizzesValidationResult {
     return { ok: false, issues };
   }
 
-  return { ok: true, data: raw as QuizzesData };
+  return { ok: true, data: raw as unknown as QuizzesData };
 }
 
 /** Parse a JSON string and validate as QuizzesData. */
