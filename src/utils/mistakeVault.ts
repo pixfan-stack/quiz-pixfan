@@ -48,6 +48,99 @@ export function getMistakeVaultCount(): number {
   return readVault().length;
 }
 
+function normalizeVaultEntry(raw: unknown): MistakeVaultEntry | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const e = raw as Partial<MistakeVaultEntry>;
+  if (typeof e.questionId !== 'string' || !e.questionId || e.questionId.length > 128) {
+    return null;
+  }
+  const missCount = Math.max(1, Math.min(10000, Number(e.missCount) || 1));
+  const lastMissedAt =
+    typeof e.lastMissedAt === 'string' && !Number.isNaN(Date.parse(e.lastMissedAt))
+      ? e.lastMissedAt
+      : new Date(0).toISOString();
+  const sourceQuizId =
+    typeof e.sourceQuizId === 'string' && e.sourceQuizId.length > 0
+      ? e.sourceQuizId.slice(0, 64)
+      : sourceQuizIdFromQuestionId(e.questionId);
+  return {
+    questionId: e.questionId,
+    sourceQuizId,
+    missCount,
+    lastMissedAt,
+  };
+}
+
+/** Sanitize an unknown vault payload (API / storage). */
+export function parseMistakeVault(raw: unknown): MistakeVaultEntry[] {
+  if (!Array.isArray(raw)) return [];
+  const byId = new Map<string, MistakeVaultEntry>();
+  for (const item of raw) {
+    const entry = normalizeVaultEntry(item);
+    if (!entry) continue;
+    const existing = byId.get(entry.questionId);
+    if (!existing) {
+      byId.set(entry.questionId, entry);
+      continue;
+    }
+    byId.set(entry.questionId, mergeVaultEntryPair(existing, entry));
+  }
+  return sortVaultEntries([...byId.values()]).slice(0, MAX_ENTRIES);
+}
+
+function mergeVaultEntryPair(
+  a: MistakeVaultEntry,
+  b: MistakeVaultEntry
+): MistakeVaultEntry {
+  const aLast = Date.parse(a.lastMissedAt) || 0;
+  const bLast = Date.parse(b.lastMissedAt) || 0;
+  return {
+    questionId: a.questionId,
+    sourceQuizId: a.sourceQuizId ?? b.sourceQuizId,
+    missCount: Math.max(a.missCount, b.missCount),
+    lastMissedAt: bLast >= aLast ? b.lastMissedAt : a.lastMissedAt,
+  };
+}
+
+function sortVaultEntries(entries: MistakeVaultEntry[]): MistakeVaultEntry[] {
+  return [...entries].sort(
+    (a, b) =>
+      b.missCount - a.missCount ||
+      Date.parse(b.lastMissedAt) - Date.parse(a.lastMissedAt)
+  );
+}
+
+/**
+ * Union two vaults by questionId (max missCount / newer lastMissedAt), capped.
+ * Used for multi-device account sync.
+ */
+export function mergeMistakeVaultEntries(
+  a: MistakeVaultEntry[],
+  b: MistakeVaultEntry[]
+): MistakeVaultEntry[] {
+  const byId = new Map<string, MistakeVaultEntry>();
+  for (const entry of [...a, ...b]) {
+    const normalized = normalizeVaultEntry(entry);
+    if (!normalized) continue;
+    const existing = byId.get(normalized.questionId);
+    byId.set(
+      normalized.questionId,
+      existing ? mergeVaultEntryPair(existing, normalized) : normalized
+    );
+  }
+  return sortVaultEntries([...byId.values()]).slice(0, MAX_ENTRIES);
+}
+
+/** Merge remote vault into localStorage (union). Returns merged list. */
+export function mergeRemoteMistakeVault(
+  remote: MistakeVaultEntry[] | unknown
+): MistakeVaultEntry[] {
+  const remoteEntries = parseMistakeVault(remote);
+  const merged = mergeMistakeVaultEntries(readVault(), remoteEntries);
+  writeVault(merged);
+  return merged;
+}
+
 /** Merge incorrect answers into the local vault. Returns how many were recorded. */
 export function recordMistakes(mistakes: AnswerReviewItem[]): number {
   const wrong = mistakes.filter((m) => !m.wasCorrect);

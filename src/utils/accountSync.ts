@@ -1,5 +1,5 @@
 /**
- * Light account sync client — recovery code + progress (streak / achievements).
+ * Light account sync client — recovery code + progress (streak / achievements / vault / season badges).
  * High scores live in D1 `player_highscores`; this pulls/merges them on redeem.
  */
 
@@ -20,6 +20,11 @@ import {
   type LocalHighScoreInput,
 } from './highscore';
 import {
+  getMistakeVault,
+  mergeRemoteMistakeVault,
+  type MistakeVaultEntry,
+} from './mistakeVault';
+import {
   getPlayerDisplayName,
   getPlayerId,
   setPlayerDisplayName,
@@ -27,6 +32,10 @@ import {
 } from './player';
 import { isRemoteScoresEnabled } from './remoteScores';
 import { normalizeRecoveryCode } from './recoveryCode';
+import {
+  getSeasonBadges,
+  mergeRemoteSeasonBadges,
+} from './seasonEngagement';
 
 export interface SyncedStreak {
   lastDailyId: string | null;
@@ -41,6 +50,8 @@ export interface AccountProgress {
   displayName: string | null;
   streak: SyncedStreak;
   achievements: string[];
+  vault?: MistakeVaultEntry[];
+  seasonBadges?: Record<string, 'participant'>;
   highscores: LocalHighScoreInput[];
   updatedAt?: string | null;
 }
@@ -55,7 +66,18 @@ function toSyncedStreak(state: DailyStreakState): SyncedStreak {
   };
 }
 
-/** Push local streak + achievements to D1 (merge-safe on server). */
+function localSyncPayload() {
+  return {
+    playerId: getPlayerId(),
+    displayName: getPlayerDisplayName() || null,
+    streak: toSyncedStreak(getDailyStreak()),
+    achievements: [...getUnlockedAchievements()],
+    vault: getMistakeVault(),
+    seasonBadges: getSeasonBadges(),
+  };
+}
+
+/** Push local streak + achievements + vault + season badges to D1 (merge-safe on server). */
 export async function pushAccountProgress(): Promise<boolean> {
   if (!isRemoteScoresEnabled()) return false;
   try {
@@ -64,10 +86,7 @@ export async function pushAccountProgress(): Promise<boolean> {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         action: 'sync',
-        playerId: getPlayerId(),
-        displayName: getPlayerDisplayName() || null,
-        streak: toSyncedStreak(getDailyStreak()),
-        achievements: [...getUnlockedAchievements()],
+        ...localSyncPayload(),
       }),
     });
     return res.ok;
@@ -95,10 +114,7 @@ export async function createRecoveryCode(): Promise<{
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         action: 'create_code',
-        playerId: getPlayerId(),
-        displayName: getPlayerDisplayName() || null,
-        streak: toSyncedStreak(getDailyStreak()),
-        achievements: [...getUnlockedAchievements()],
+        ...localSyncPayload(),
       }),
     });
     const data = (await res.json()) as {
@@ -129,6 +145,8 @@ function applyProgressLocally(progress: AccountProgress): void {
   mergeUnlockedAchievements(achievementIds);
   mergeDailyStreak(progress.streak);
   mergeRemoteHighScores(progress.highscores ?? []);
+  mergeRemoteMistakeVault(progress.vault ?? []);
+  mergeRemoteSeasonBadges(progress.seasonBadges ?? {});
 }
 
 /** Redeem a recovery code / magic-link token and merge progress into this browser. */
@@ -214,6 +232,8 @@ export async function pullAndMergeAccountProgress(): Promise<boolean> {
     mergeUnlockedAchievements(achievementIds);
     mergeDailyStreak(data.progress.streak);
     mergeRemoteHighScores(data.progress.highscores ?? []);
+    mergeRemoteMistakeVault(data.progress.vault ?? []);
+    mergeRemoteSeasonBadges(data.progress.seasonBadges ?? {});
     if (data.progress.displayName && !getPlayerDisplayName()) {
       setPlayerDisplayName(data.progress.displayName);
     }

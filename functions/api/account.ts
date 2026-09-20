@@ -4,9 +4,9 @@
  * Route: /api/account
  *
  * GET  ?playerId=…           → progress + high scores for that player
- * POST { action: 'sync', … } → upsert streak + achievements
+ * POST { action: 'sync', … } → upsert streak + achievements + vault + season badges
  * POST { action: 'create_code', playerId } → one plaintext recovery code
- * POST { action: 'redeem', code } → playerId + progress + high scores
+ * POST { action: 'redeem', code } → playerId + progress + high scores (one-shot)
  */
 
 import { json } from './utils';
@@ -21,8 +21,12 @@ const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const CODE_TTL_DAYS = 365;
 /** Mirror report.ts (10 s) — one create_code burst per player. */
 const CREATE_CODE_COOLDOWN_MS = 10_000;
+/** Hard ceiling: at most one new recovery code per player per hour. */
+const CREATE_CODE_HOURLY_MS = 60 * 60 * 1000;
 /** Mirror highscore.ts-ish spacing — slow redeem brute-force per client IP. */
 const REDEEM_COOLDOWN_MS = 3_000;
+const MAX_VAULT_ENTRIES = 80;
+const MAX_SEASON_BADGES = 36;
 
 interface StreakPayload {
   lastDailyId: string | null;
@@ -31,6 +35,15 @@ interface StreakPayload {
   freezesAvailable: number;
   freezeWeekKey: string | null;
 }
+
+interface VaultEntry {
+  questionId: string;
+  sourceQuizId: string | null;
+  missCount: number;
+  lastMissedAt: string;
+}
+
+type SeasonBadgeMap = Record<string, 'participant'>;
 
 interface HighScoreRow {
   quizId: string;
@@ -121,10 +134,10 @@ async function isIpRateLimited(
   }
 }
 
-async function isCreateCodeRateLimited(
+async function lastCreateCodeAt(
   db: D1Database,
   playerId: string
-): Promise<boolean> {
+): Promise<number | null> {
   const recent = await db
     .prepare(
       `SELECT created_at as createdAt FROM player_recovery_codes
@@ -135,11 +148,19 @@ async function isCreateCodeRateLimited(
     .bind(playerId)
     .first<{ createdAt: string }>();
 
-  if (!recent?.createdAt) return false;
+  if (!recent?.createdAt) return null;
   const lastMs = Date.parse(recent.createdAt);
-  return (
-    !Number.isNaN(lastMs) && Date.now() - lastMs < CREATE_CODE_COOLDOWN_MS
-  );
+  return Number.isNaN(lastMs) ? null : lastMs;
+}
+
+async function isCreateCodeRateLimited(
+  db: D1Database,
+  playerId: string
+): Promise<boolean> {
+  const lastMs = await lastCreateCodeAt(db, playerId);
+  if (lastMs == null) return false;
+  const age = Date.now() - lastMs;
+  return age < CREATE_CODE_COOLDOWN_MS || age < CREATE_CODE_HOURLY_MS;
 }
 
 async function hashRecoveryCode(normalized: string): Promise<string> {
@@ -182,6 +203,104 @@ function parseAchievements(raw: unknown): string[] {
   ].slice(0, 64);
 }
 
+function sourceQuizIdFromQuestionId(questionId: string): string | null {
+  const idx = questionId.indexOf('__');
+  return idx > 0 ? questionId.slice(0, idx).slice(0, 64) : null;
+}
+
+function normalizeVaultEntry(raw: unknown): VaultEntry | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const e = raw as Partial<VaultEntry>;
+  if (
+    typeof e.questionId !== 'string' ||
+    !e.questionId ||
+    e.questionId.length > 128
+  ) {
+    return null;
+  }
+  const missCount = Math.max(1, Math.min(10000, Number(e.missCount) || 1));
+  const lastMissedAt =
+    typeof e.lastMissedAt === 'string' && !Number.isNaN(Date.parse(e.lastMissedAt))
+      ? e.lastMissedAt
+      : new Date(0).toISOString();
+  const sourceQuizId =
+    typeof e.sourceQuizId === 'string' && e.sourceQuizId.length > 0
+      ? e.sourceQuizId.slice(0, 64)
+      : sourceQuizIdFromQuestionId(e.questionId);
+  return {
+    questionId: e.questionId,
+    sourceQuizId,
+    missCount,
+    lastMissedAt,
+  };
+}
+
+function parseVault(raw: unknown): VaultEntry[] {
+  if (!Array.isArray(raw)) return [];
+  const byId = new Map<string, VaultEntry>();
+  for (const item of raw) {
+    const entry = normalizeVaultEntry(item);
+    if (!entry) continue;
+    const existing = byId.get(entry.questionId);
+    byId.set(
+      entry.questionId,
+      existing ? mergeVaultEntryPair(existing, entry) : entry
+    );
+  }
+  return sortVaultEntries([...byId.values()]).slice(0, MAX_VAULT_ENTRIES);
+}
+
+function mergeVaultEntryPair(a: VaultEntry, b: VaultEntry): VaultEntry {
+  const aLast = Date.parse(a.lastMissedAt) || 0;
+  const bLast = Date.parse(b.lastMissedAt) || 0;
+  return {
+    questionId: a.questionId,
+    sourceQuizId: a.sourceQuizId ?? b.sourceQuizId,
+    missCount: Math.max(a.missCount, b.missCount),
+    lastMissedAt: bLast >= aLast ? b.lastMissedAt : a.lastMissedAt,
+  };
+}
+
+function sortVaultEntries(entries: VaultEntry[]): VaultEntry[] {
+  return [...entries].sort(
+    (a, b) =>
+      b.missCount - a.missCount ||
+      Date.parse(b.lastMissedAt) - Date.parse(a.lastMissedAt)
+  );
+}
+
+function mergeVault(a: VaultEntry[], b: VaultEntry[]): VaultEntry[] {
+  const byId = new Map<string, VaultEntry>();
+  for (const entry of [...a, ...b]) {
+    const existing = byId.get(entry.questionId);
+    byId.set(
+      entry.questionId,
+      existing ? mergeVaultEntryPair(existing, entry) : entry
+    );
+  }
+  return sortVaultEntries([...byId.values()]).slice(0, MAX_VAULT_ENTRIES);
+}
+
+function parseSeasonBadges(raw: unknown): SeasonBadgeMap {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
+  const out: SeasonBadgeMap = {};
+  for (const [id, value] of Object.entries(raw as Record<string, unknown>)) {
+    if (value === 'participant' && /^\d{4}-\d{2}$/.test(id)) {
+      out[id] = 'participant';
+    }
+  }
+  const ids = Object.keys(out).sort().reverse().slice(0, MAX_SEASON_BADGES);
+  const capped: SeasonBadgeMap = {};
+  for (const id of ids) {
+    capped[id] = 'participant';
+  }
+  return capped;
+}
+
+function mergeSeasonBadges(a: SeasonBadgeMap, b: SeasonBadgeMap): SeasonBadgeMap {
+  return parseSeasonBadges({ ...a, ...b });
+}
+
 async function loadHighScores(
   db: D1Database,
   playerId: string
@@ -210,6 +329,8 @@ async function loadProgress(
   displayName: string | null;
   streak: StreakPayload;
   achievements: string[];
+  vault: VaultEntry[];
+  seasonBadges: SeasonBadgeMap;
   highscores: HighScoreRow[];
   updatedAt: string | null;
 }> {
@@ -217,6 +338,7 @@ async function loadProgress(
     .prepare(
       `SELECT player_id as playerId, display_name as displayName,
               streak_json as streakJson, achievements_json as achievementsJson,
+              vault_json as vaultJson, season_badges_json as seasonBadgesJson,
               updated_at as updatedAt
        FROM player_progress
        WHERE player_id = ?`
@@ -227,6 +349,8 @@ async function loadProgress(
       displayName: string | null;
       streakJson: string;
       achievementsJson: string;
+      vaultJson: string | null;
+      seasonBadgesJson: string | null;
       updatedAt: string;
     }>();
 
@@ -238,6 +362,8 @@ async function loadProgress(
     freezeWeekKey: null,
   };
   let achievements: string[] = [];
+  let vault: VaultEntry[] = [];
+  let seasonBadges: SeasonBadgeMap = {};
   let displayName: string | null = null;
   let updatedAt: string | null = null;
 
@@ -254,6 +380,16 @@ async function loadProgress(
     } catch {
       // keep defaults
     }
+    try {
+      vault = parseVault(JSON.parse(row.vaultJson || '[]'));
+    } catch {
+      // keep defaults
+    }
+    try {
+      seasonBadges = parseSeasonBadges(JSON.parse(row.seasonBadgesJson || '{}'));
+    } catch {
+      // keep defaults
+    }
   }
 
   const highscores = await loadHighScores(db, playerId);
@@ -267,6 +403,8 @@ async function loadProgress(
     displayName,
     streak,
     achievements,
+    vault,
+    seasonBadges,
     highscores,
     updatedAt,
   };
@@ -336,6 +474,8 @@ async function handleSync(
 
   const streak = parseStreak(body.streak);
   const achievements = parseAchievements(body.achievements);
+  const vault = parseVault(body.vault);
+  const seasonBadges = parseSeasonBadges(body.seasonBadges);
   const displayName = sanitizeDisplayName(body.displayName);
   const updatedAt = new Date().toISOString();
 
@@ -345,17 +485,25 @@ async function handleSync(
   const mergedAchievements = [
     ...new Set([...existing.achievements, ...achievements]),
   ].slice(0, 64);
+  const mergedVault = mergeVault(existing.vault, vault);
+  const mergedSeasonBadges = mergeSeasonBadges(
+    existing.seasonBadges,
+    seasonBadges
+  );
   const mergedName = displayName ?? existing.displayName;
 
   await db
     .prepare(
       `INSERT INTO player_progress
-         (player_id, display_name, streak_json, achievements_json, updated_at)
-       VALUES (?, ?, ?, ?, ?)
+         (player_id, display_name, streak_json, achievements_json,
+          vault_json, season_badges_json, updated_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)
        ON CONFLICT(player_id) DO UPDATE SET
          display_name = excluded.display_name,
          streak_json = excluded.streak_json,
          achievements_json = excluded.achievements_json,
+         vault_json = excluded.vault_json,
+         season_badges_json = excluded.season_badges_json,
          updated_at = excluded.updated_at`
     )
     .bind(
@@ -363,6 +511,8 @@ async function handleSync(
       mergedName,
       JSON.stringify(mergedStreak),
       JSON.stringify(mergedAchievements),
+      JSON.stringify(mergedVault),
+      JSON.stringify(mergedSeasonBadges),
       updatedAt
     )
     .run();
@@ -374,6 +524,8 @@ async function handleSync(
       displayName: mergedName,
       streak: mergedStreak,
       achievements: mergedAchievements,
+      vault: mergedVault,
+      seasonBadges: mergedSeasonBadges,
       updatedAt,
     },
   });
@@ -411,7 +563,10 @@ async function handleCreateCode(
   }
 
   if (await isCreateCodeRateLimited(db, playerId)) {
-    return json({ error: 'Rate limit: wait before creating another code' }, 429);
+    return json(
+      { error: 'Rate limit: wait before creating another code' },
+      429
+    );
   }
 
   // Ensure progress row exists so redeem always has a target
@@ -420,15 +575,21 @@ async function handleCreateCode(
   await db
     .prepare(
       `INSERT INTO player_progress
-         (player_id, display_name, streak_json, achievements_json, updated_at)
-       VALUES (?, NULL, '{}', '[]', ?)
+         (player_id, display_name, streak_json, achievements_json,
+          vault_json, season_badges_json, updated_at)
+       VALUES (?, NULL, '{}', '[]', '[]', '{}', ?)
        ON CONFLICT(player_id) DO NOTHING`
     )
     .bind(playerId, updatedAt)
     .run();
 
   // Optional: sync payload if provided with create
-  if (body.streak != null || body.achievements != null) {
+  if (
+    body.streak != null ||
+    body.achievements != null ||
+    body.vault != null ||
+    body.seasonBadges != null
+  ) {
     await handleSync(db, body);
   }
 
@@ -496,5 +657,12 @@ async function handleRedeem(
   }
 
   const progress = await loadProgress(db, row.playerId);
+
+  // One-shot: invalidate after successful redeem so the code cannot be reused
+  await db
+    .prepare(`DELETE FROM player_recovery_codes WHERE code_hash = ?`)
+    .bind(codeHash)
+    .run();
+
   return json({ ok: true, progress });
 }

@@ -10,6 +10,7 @@ Sur une base **déjà en prod**, appliquer les fichiers manquants dans l’ordre
 | `003-quiz-attempts.sql` | `quiz_attempts` |
 | `004-period-leaderboard-reports.sql` | `period_highscores` + `name_reports` |
 | `005-account-sync.sql` | `player_progress` + `player_recovery_codes` |
+| `006-vault-season-sync.sql` | `player_progress.vault_json` + `season_badges_json` |
 
 ## Appliquer la 004 (prod)
 
@@ -45,6 +46,15 @@ npm run db:verify:005
 ```
 
 Attendu : `player_progress` et `player_recovery_codes`. Sans elles, la génération / récupération de code échoue côté `/api/account`.
+
+## Appliquer la 006 (vault + badges saison)
+
+```bash
+npm run db:migrate:006
+npm run db:verify:006
+```
+
+Attendu : deux colonnes `season_badges_json` et `vault_json` sur `player_progress`. Sans elles, le sync multi-appareil ignore le vault d’erreurs et les badges saison (streak / succès continuent de marcher).
 
 ## Dashboard Cloudflare
 

@@ -12,6 +12,18 @@ import {
 } from '../utils/achievements';
 import { mergeDailyStreak, getDailyStreak } from '../utils/dailyStreak';
 import { setPlayerId, getPlayerId } from '../utils/player';
+import {
+  clearMistakeVault,
+  getMistakeVaultCount,
+  mergeRemoteMistakeVault,
+  recordMistakes,
+} from '../utils/mistakeVault';
+import {
+  getSeasonBadges,
+  mergeRemoteSeasonBadges,
+  unlockSeasonParticipant,
+} from '../utils/seasonEngagement';
+import type { Question } from '../types/quiz';
 
 describe('normalizeRecoveryCode', () => {
   it('accepts dashed uppercase codes', () => {
@@ -117,5 +129,33 @@ describe('progress merge helpers', () => {
     expect(setPlayerId('not valid!')).toBe(false);
     expect(setPlayerId('abc-123')).toBe(true);
     expect(getPlayerId()).toBe('abc-123');
+  });
+
+  it('merges vault and season badges like redeem apply', () => {
+    clearMistakeVault();
+    const q: Question = {
+      id: 'q1',
+      type: 'single',
+      text: { en: 'Q', fr: 'Q' },
+      answers: [{ id: 'a', text: { en: 'A', fr: 'A' } }],
+      correctAnswers: ['a'],
+    };
+    recordMistakes([
+      { question: { ...q, id: 'cat__q1' }, selectedIds: [], wasCorrect: false },
+    ]);
+    mergeRemoteMistakeVault([
+      {
+        questionId: 'cat__q2',
+        sourceQuizId: 'cat',
+        missCount: 2,
+        lastMissedAt: '2026-04-01T00:00:00.000Z',
+      },
+    ]);
+    expect(getMistakeVaultCount()).toBe(2);
+
+    unlockSeasonParticipant('2026-07');
+    mergeRemoteSeasonBadges({ '2026-09': 'participant' });
+    expect(getSeasonBadges()['2026-07']).toBe('participant');
+    expect(getSeasonBadges()['2026-09']).toBe('participant');
   });
 });

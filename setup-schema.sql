@@ -167,12 +167,14 @@ CREATE TABLE IF NOT EXISTS name_reports (
 CREATE INDEX IF NOT EXISTS idx_name_reports_reported
   ON name_reports(reported_player_id, created_at DESC);
 
--- Light account sync: streak + achievements blob keyed by player_id
+-- Light account sync: streak + achievements + vault + season badges keyed by player_id
 CREATE TABLE IF NOT EXISTS player_progress (
   player_id TEXT PRIMARY KEY,
   display_name TEXT,
   streak_json TEXT NOT NULL DEFAULT '{}',
   achievements_json TEXT NOT NULL DEFAULT '[]',
+  vault_json TEXT NOT NULL DEFAULT '[]',
+  season_badges_json TEXT NOT NULL DEFAULT '{}',
   updated_at TEXT NOT NULL
 );
 

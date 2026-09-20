@@ -7,8 +7,10 @@ import {
 import {
   dismissSeasonBanner,
   getSeasonBadge,
+  getSeasonBadges,
   getSeasonBannerKind,
   listSeasonBadges,
+  mergeRemoteSeasonBadges,
   SEASON_ENDING_SOON_DAYS,
   unlockSeasonParticipant,
 } from '../utils/seasonEngagement';
@@ -61,5 +63,14 @@ describe('seasonEngagement', () => {
     expect(listSeasonBadges()).toEqual([
       { seasonId: '2026-09', cosmetic: 'participant' },
     ]);
+  });
+
+  it('mergeRemoteSeasonBadges unions maps', () => {
+    unlockSeasonParticipant('2026-08');
+    mergeRemoteSeasonBadges({ '2026-09': 'participant' });
+    expect(getSeasonBadges()).toEqual({
+      '2026-08': 'participant',
+      '2026-09': 'participant',
+    });
   });
 });

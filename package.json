@@ -17,7 +17,9 @@
     "db:migrate:004": "npx wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/004-period-leaderboard-reports.sql",
     "db:verify:004": "npx wrangler d1 execute quiz-pixfan-scores --remote --command=\"SELECT name FROM sqlite_master WHERE type='table' AND name IN ('period_highscores','name_reports') ORDER BY name;\"",
     "db:migrate:005": "npx wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/005-account-sync.sql",
-    "db:verify:005": "npx wrangler d1 execute quiz-pixfan-scores --remote --command=\"SELECT name FROM sqlite_master WHERE type='table' AND name IN ('player_progress','player_recovery_codes') ORDER BY name;\""
+    "db:verify:005": "npx wrangler d1 execute quiz-pixfan-scores --remote --command=\"SELECT name FROM sqlite_master WHERE type='table' AND name IN ('player_progress','player_recovery_codes') ORDER BY name;\"",
+    "db:migrate:006": "npx wrangler d1 execute quiz-pixfan-scores --remote --file=migrations/006-vault-season-sync.sql",
+    "db:verify:006": "npx wrangler d1 execute quiz-pixfan-scores --remote --command=\"SELECT name FROM pragma_table_info('player_progress') WHERE name IN ('vault_json','season_badges_json') ORDER BY name;\""
   },
   "dependencies": {
     "i18next": "^24.2.2",

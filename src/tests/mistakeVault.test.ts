@@ -3,7 +3,10 @@ import type { Quiz } from '../types/quiz';
 import {
   buildWeakSpotsQuiz,
   clearMistakeVault,
+  getMistakeVault,
   getMistakeVaultCount,
+  mergeMistakeVaultEntries,
+  mergeRemoteMistakeVault,
   recordMistakes,
   resolveCorrectAnswers,
   WEAK_SPOTS_QUIZ_ID,
@@ -101,5 +104,59 @@ describe('mistakeVault', () => {
     ]);
     expect(cleared2).toBe(1);
     expect(getMistakeVaultCount()).toBe(0);
+  });
+
+  it('merges vaults by questionId with max missCount / newer lastMissedAt', () => {
+    const merged = mergeMistakeVaultEntries(
+      [
+        {
+          questionId: 'cat-a__q1',
+          sourceQuizId: 'cat-a',
+          missCount: 2,
+          lastMissedAt: '2026-01-01T00:00:00.000Z',
+        },
+      ],
+      [
+        {
+          questionId: 'cat-a__q1',
+          sourceQuizId: 'cat-a',
+          missCount: 5,
+          lastMissedAt: '2026-02-01T00:00:00.000Z',
+        },
+        {
+          questionId: 'cat-a__q2',
+          sourceQuizId: 'cat-a',
+          missCount: 1,
+          lastMissedAt: '2026-02-01T00:00:00.000Z',
+        },
+      ]
+    );
+    expect(merged).toHaveLength(2);
+    expect(merged[0]?.questionId).toBe('cat-a__q1');
+    expect(merged[0]?.missCount).toBe(5);
+    expect(merged[0]?.lastMissedAt).toBe('2026-02-01T00:00:00.000Z');
+    expect(merged[1]?.questionId).toBe('cat-a__q2');
+  });
+
+  it('mergeRemoteMistakeVault unions into localStorage', () => {
+    recordMistakes([
+      {
+        question: { ...sample[0]!.questions[0]!, id: 'cat-a__q1' },
+        selectedIds: [],
+        wasCorrect: false,
+      },
+    ]);
+    mergeRemoteMistakeVault([
+      {
+        questionId: 'cat-a__q2',
+        sourceQuizId: 'cat-a',
+        missCount: 3,
+        lastMissedAt: '2026-03-01T00:00:00.000Z',
+      },
+    ]);
+    expect(getMistakeVaultCount()).toBe(2);
+    expect(getMistakeVault().some((e) => e.questionId === 'cat-a__q2')).toBe(
+      true
+    );
   });
 });
