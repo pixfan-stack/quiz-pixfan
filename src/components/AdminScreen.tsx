@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Question, Quiz, QuizzesData } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
@@ -14,6 +14,11 @@ import {
   moderateAdminReport,
   type AdminReportRow,
 } from '../utils/adminReportsApi';
+import {
+  fetchAdminAnalytics,
+  type AdminAnalyticsDashboard,
+} from '../utils/adminAnalyticsApi';
+import { parseAndValidateQuizzesJson } from '../utils/quizzesSchema';
 
 interface AdminScreenProps {
   quizzes: Quiz[];
@@ -22,10 +27,10 @@ interface AdminScreenProps {
   onPreview: (quizzes: Quiz[]) => void;
 }
 
-type AdminTab = 'questions' | 'reports';
+type AdminTab = 'questions' | 'reports' | 'analytics';
 
 /**
- * Admin: question editor + name-report moderation (PIN-gated).
+ * Admin: question editor + name-report moderation + analytics (PIN-gated).
  */
 export default function AdminScreen({
   quizzes,
@@ -45,11 +50,19 @@ export default function AdminScreen({
   const [quizId, setQuizId] = useState(quizzes[0]?.id ?? '');
   const [questionIndex, setQuestionIndex] = useState(0);
   const [savedMsg, setSavedMsg] = useState('');
+  const [importError, setImportError] = useState('');
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [reports, setReports] = useState<AdminReportRow[]>([]);
   const [reportsLoading, setReportsLoading] = useState(false);
   const [reportsError, setReportsError] = useState('');
   const [reportBusyId, setReportBusyId] = useState<string | null>(null);
+
+  const [analytics, setAnalytics] = useState<AdminAnalyticsDashboard | null>(
+    null
+  );
+  const [analyticsLoading, setAnalyticsLoading] = useState(false);
+  const [analyticsError, setAnalyticsError] = useState('');
 
   useEffect(() => {
     setDraft(cloneQuizzes(quizzes));
@@ -80,17 +93,52 @@ export default function AdminScreen({
     setReports(result.reports);
   }, [t]);
 
+  const loadAnalytics = useCallback(async () => {
+    if (!getAdminSessionPin()) {
+      setAnalyticsError(t('admin.analyticsUnauthorized'));
+      return;
+    }
+    setAnalyticsLoading(true);
+    setAnalyticsError('');
+    const result = await fetchAdminAnalytics();
+    setAnalyticsLoading(false);
+    if (!result.ok || !result.data) {
+      setAnalytics(null);
+      setAnalyticsError(
+        result.error === 'unauthorized'
+          ? t('admin.analyticsUnauthorized')
+          : t('admin.analyticsUnavailable')
+      );
+      return;
+    }
+    setAnalytics(result.data);
+  }, [t]);
+
   useEffect(() => {
     if (unlocked && tab === 'reports') {
       void loadReports();
     }
   }, [unlocked, tab, loadReports]);
 
+  useEffect(() => {
+    if (unlocked && tab === 'analytics') {
+      void loadAnalytics();
+    }
+  }, [unlocked, tab, loadAnalytics]);
+
   const activeQuiz = useMemo(
     () => draft.find((q) => q.id === quizId) ?? draft[0],
     [draft, quizId]
   );
   const question: Question | undefined = activeQuiz?.questions[questionIndex];
+
+  const quizTitleById = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const q of draft) {
+      map.set(q.id, pickLocale(q.title, lang));
+    }
+    return map;
+  }, [draft, lang]);
 
   if (!isAdminEnabled()) {
     return (
@@ -131,10 +179,19 @@ export default function AdminScreen({
             value={pin}
             onChange={(e) => setPin(e.target.value)}
             autoComplete="current-password"
+            data-testid="admin-pin-input"
           />
-          {error && <p className="admin__error">{error}</p>}
+          {error && (
+            <p className="admin__error" data-testid="admin-pin-error">
+              {error}
+            </p>
+          )}
           <div className="btn-row">
-            <button type="submit" className="btn btn--primary">
+            <button
+              type="submit"
+              className="btn btn--primary"
+              data-testid="admin-unlock"
+            >
               {t('admin.unlock')}
             </button>
             <button type="button" className="btn btn--secondary" onClick={onHome}>
@@ -197,6 +254,41 @@ export default function AdminScreen({
     window.setTimeout(() => setSavedMsg(''), 2500);
   };
 
+  const importJsonFile = async (file: File) => {
+    setImportError('');
+    let text: string;
+    try {
+      text = await file.text();
+    } catch {
+      setImportError(t('admin.importReadError'));
+      return;
+    }
+    const result = parseAndValidateQuizzesJson(text);
+    if (!result.ok) {
+      const preview = result.issues
+        .slice(0, 5)
+        .map((issue) =>
+          issue.path ? `${issue.path}: ${issue.message}` : issue.message
+        )
+        .join(' · ');
+      setImportError(
+        t('admin.importInvalid', {
+          count: result.issues.length,
+          detail: preview,
+        })
+      );
+      return;
+    }
+    const next = cloneQuizzes(result.data.quizzes);
+    setDraft(next);
+    setQuizId(next[0]?.id ?? '');
+    setQuestionIndex(0);
+    setSavedMsg(
+      t('admin.imported', { count: next.length })
+    );
+    window.setTimeout(() => setSavedMsg(''), 2500);
+  };
+
   const applyPreview = () => {
     onPreview(cloneQuizzes(draft));
     setSavedMsg(t('admin.previewApplied'));
@@ -226,7 +318,7 @@ export default function AdminScreen({
   };
 
   return (
-    <section className="admin">
+    <section className="admin" data-testid="admin-unlocked">
       <header className="admin__header">
         <h2>{t('admin.title')}</h2>
         <p className="admin__hint">{t('admin.intro')}</p>
@@ -255,6 +347,16 @@ export default function AdminScreen({
           data-testid="admin-tab-reports"
         >
           {t('admin.tabReports')}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={tab === 'analytics'}
+          className={`admin__tab${tab === 'analytics' ? ' is-active' : ''}`}
+          onClick={() => setTab('analytics')}
+          data-testid="admin-tab-analytics"
+        >
+          {t('admin.tabAnalytics')}
         </button>
       </div>
 
@@ -445,18 +547,164 @@ export default function AdminScreen({
         </div>
       )}
 
+      {tab === 'analytics' && (
+        <div className="admin__analytics" data-testid="admin-analytics">
+          <p className="admin__hint">{t('admin.analyticsIntro')}</p>
+          <div className="btn-row">
+            <button
+              type="button"
+              className="btn btn--ghost btn--small"
+              onClick={() => void loadAnalytics()}
+              disabled={analyticsLoading}
+            >
+              {t('admin.analyticsRefresh')}
+            </button>
+          </div>
+          {analyticsLoading && (
+            <p className="admin__hint">{t('common.loading')}</p>
+          )}
+          {analyticsError && <p className="admin__error">{analyticsError}</p>}
+          {analytics && !analyticsLoading && (
+            <>
+              <div className="admin__analytics-summary">
+                <div className="admin__analytics-stat">
+                  <span className="admin__analytics-stat__value">
+                    {analytics.summary.totalAttempts}
+                  </span>
+                  <span className="admin__analytics-stat__label">
+                    {t('admin.analyticsAttempts')}
+                  </span>
+                </div>
+                <div className="admin__analytics-stat">
+                  <span className="admin__analytics-stat__value">
+                    {analytics.summary.avgPercentage}%
+                  </span>
+                  <span className="admin__analytics-stat__label">
+                    {t('admin.analyticsAvgScore')}
+                  </span>
+                </div>
+                <div className="admin__analytics-stat">
+                  <span className="admin__analytics-stat__value">
+                    {analytics.summary.uniqueQuizzes}
+                  </span>
+                  <span className="admin__analytics-stat__label">
+                    {t('admin.analyticsQuizzes')}
+                  </span>
+                </div>
+                <div className="admin__analytics-stat">
+                  <span className="admin__analytics-stat__value">
+                    {analytics.summary.ctaClicks}
+                  </span>
+                  <span className="admin__analytics-stat__label">
+                    {t('admin.analyticsCta')}
+                  </span>
+                </div>
+              </div>
+
+              {analytics.quizzes.length === 0 ? (
+                <p className="admin__hint">{t('admin.analyticsEmpty')}</p>
+              ) : (
+                <div className="admin__analytics-table-wrap">
+                  <table className="admin__analytics-table">
+                    <thead>
+                      <tr>
+                        <th>{t('admin.analyticsColQuiz')}</th>
+                        <th>{t('admin.analyticsColAttempts')}</th>
+                        <th>{t('admin.analyticsColAvg')}</th>
+                        <th>{t('admin.analyticsColTime')}</th>
+                        <th>{t('admin.analyticsColLow')}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {analytics.quizzes.map((row) => (
+                        <tr key={row.quizId}>
+                          <td>
+                            <strong>
+                              {quizTitleById.get(row.quizId) ?? row.quizId}
+                            </strong>
+                            <div className="admin__report-id">{row.quizId}</div>
+                          </td>
+                          <td>{row.attempts}</td>
+                          <td>{row.avgPercentage}%</td>
+                          <td>{row.avgTimeSeconds}s</td>
+                          <td
+                            className={
+                              row.lowScoreRate >= 40
+                                ? 'admin__analytics-low'
+                                : undefined
+                            }
+                          >
+                            {row.lowScoreRate}%
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {analytics.recentDays.length > 0 && (
+                <div className="admin__analytics-days">
+                  <p className="admin__section-title">
+                    {t('admin.analyticsRecent')}
+                  </p>
+                  <ul className="admin__analytics-day-list">
+                    {analytics.recentDays.map((day) => (
+                      <li key={day.day}>
+                        <span>{day.day}</span>
+                        <strong>{day.attempts}</strong>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      )}
+
       {savedMsg && (
         <p className="admin__status" role="status">
           {savedMsg}
+        </p>
+      )}
+      {importError && (
+        <p className="admin__error" role="alert" data-testid="admin-import-error">
+          {importError}
         </p>
       )}
 
       <div className="btn-row admin__actions">
         {tab === 'questions' && (
           <>
-            <button type="button" className="btn btn--primary" onClick={exportJson}>
+            <button
+              type="button"
+              className="btn btn--primary"
+              onClick={exportJson}
+              data-testid="admin-export"
+            >
               {t('admin.export')}
             </button>
+            <button
+              type="button"
+              className="btn btn--ghost"
+              onClick={() => fileInputRef.current?.click()}
+              data-testid="admin-import"
+            >
+              {t('admin.import')}
+            </button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="application/json,.json"
+              className="visually-hidden"
+              data-testid="admin-import-input"
+              onChange={(e) => {
+                const file = e.target.files?.[0];
+                e.target.value = '';
+                if (file) void importJsonFile(file);
+              }}
+            />
             <button type="button" className="btn btn--ghost" onClick={applyPreview}>
               {t('admin.preview')}
             </button>
