@@ -127,6 +127,7 @@ export function QuestionView({
           {/* Streak */}
           <span
             className={`stat-pill${currentStreak > 0 ? ' stat-pill--streak' : ''}`}
+            aria-live="polite"
           >
             <span className="stat-pill__icon" aria-hidden="true">
               🔥
@@ -191,7 +192,8 @@ export function QuestionView({
                   ? pickLocale(question.imageAlt, lang)
                   : ''
               }
-              loading="lazy"
+              loading={questionNumber === 1 ? 'eager' : 'lazy'}
+              fetchPriority={questionNumber === 1 ? 'high' : 'auto'}
               decoding="async"
             />
             {question.imageCredit && (

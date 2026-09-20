@@ -41,6 +41,7 @@ export function PlayerNamePrompt({
   const { t } = useTranslation();
   const inputId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const [displayName, setDisplayName] = useState(() => getPlayerDisplayName());
   const [draft, setDraft] = useState(() => getPlayerDisplayName());
   const [open, setOpen] = useState(
@@ -80,12 +81,37 @@ export function PlayerNamePrompt({
 
   useEffect(() => {
     if (!open) return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const focusables = () =>
+      Array.from(
+        dialog.querySelectorAll<HTMLElement>(
+          'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((el) => el.offsetParent !== null || el === document.activeElement);
+
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') handleSkip();
+      if (e.key === 'Escape') {
+        handleSkip();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const items = focusables();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [open, handleSkip]);
+  }, [open, handleSkip, showSync]);
 
   const openEditor = () => {
     setDraft(getPlayerDisplayName());
@@ -125,6 +151,7 @@ export function PlayerNamePrompt({
           }}
         >
           <div
+            ref={dialogRef}
             className="player-modal__dialog player-modal__dialog--wide"
             role="dialog"
             aria-modal="true"
