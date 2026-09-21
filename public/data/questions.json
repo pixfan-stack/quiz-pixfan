@@ -4684,7 +4684,16 @@
             "en": "Polarizers cut polarized light: less glare on non-metallic surfaces, richer skies and foliage. Effect depends on angle to the sun.",
             "fr": "Les polarisants coupent la lumière polarisée : moins d'éblouissement sur surfaces non métalliques, ciels et feuillages plus riches. L'effet dépend de l'angle avec le soleil."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
+          "imageAlt": {
+            "en": "Camera with filter thread — circular polarizer territory",
+            "fr": "Appareil avec pas de filtre — terrain du polarisant circulaire"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-6",
@@ -4824,7 +4833,16 @@
             "en": "Short telephotos (50-135mm) compress features flattering and allow working distance. Ultra-wide (14mm) distorts faces.",
             "fr": "Les courts téléobjectifs (50-135mm) compressent les traits de manière flatteuse et permettent une distance de travail. L'ultra-grand-angle (14mm) déforme les visages."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
+          "imageAlt": {
+            "en": "Portrait subject — short-tele portrait lens territory",
+            "fr": "Sujet en portrait — courtes focales portrait"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-9",
@@ -4916,7 +4934,16 @@
             "en": "One megapixel equals one million pixels. More megapixels mean higher resolution and larger prints, but not necessarily better image quality.",
             "fr": "Un mégapixel équivaut à un million de pixels. Plus de mégapixels signifient une résolution plus élevée et des impressions plus grandes, mais pas nécessairement une meilleure qualité d'image."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
+          "imageAlt": {
+            "en": "Camera body detail hinting at megapixels",
+            "fr": "Détail de boîtier évoquant les mégapixels"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-11",
@@ -5150,7 +5177,16 @@
             "en": "Prime lenses have one focal length (e.g., 50mm), offering better optics, wider apertures, and smaller size than zooms.",
             "fr": "Les objectifs fixes ont une seule focale (ex. 50mm), offrant une meilleure optique, des ouvertures plus grandes et une taille réduite par rapport aux zooms."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1526170375885-4d8ecf77b99f.avif",
+          "imageAlt": {
+            "en": "Prime lens with shallow depth of field",
+            "fr": "Objectif fixe avec faible profondeur de champ"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-16",
@@ -5244,7 +5280,16 @@
             "en": "Tripods provide stability for sharp images, long exposures, and precise composition. They don't affect autofocus performance.",
             "fr": "Les trépieds fournissent une stabilité pour des images nettes, de longues expositions et une composition précise. Ils n'affectent pas les performances de autofocus."
           },
-          "difficulty": "hard"
+          "difficulty": "hard",
+          "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
+          "imageAlt": {
+            "en": "Mountain vista — tripod-friendly landscape scene",
+            "fr": "Vue de montagne — scène paysage idéale au trépied"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-18",
@@ -5336,7 +5381,16 @@
             "en": "'Fast' refers to wide apertures allowing more light, enabling faster shutter speeds and better low-light performance.",
             "fr": "'Rapide' fait référence aux grandes ouvertures permettant plus de lumière, permettant des vitesses d'obturation plus rapides et une meilleure performance en basse lumière."
           },
-          "difficulty": "hard"
+          "difficulty": "hard",
+          "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
+          "imageAlt": {
+            "en": "Classic camera — fast lens / low-light shooting",
+            "fr": "Appareil classique — optique lumineuse / basse lumière"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-20",
@@ -5430,6 +5484,15 @@
           "explanation": {
             "en": "Mild tele compression + wider aperture separates the subject without cartoon faces.",
             "fr": "Une légère compression télé + grande ouverture détache le sujet sans déformer le visage."
+          },
+          "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
+          "imageAlt": {
+            "en": "Studio lights and camera — flattering portrait setup",
+            "fr": "Éclairages studio et appareil — setup portrait flatteur"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -5815,7 +5878,16 @@
             "en": "Leibovitz’s work for Rolling Stone, Vanity Fair and beyond defined modern celebrity portraiture with cinematic staging.",
             "fr": "Le travail de Leibovitz pour Rolling Stone, Vanity Fair et au-delà a défini le portrait de célébrités moderne, très mis en scène."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
+          "imageAlt": {
+            "en": "Vintage camera — icons of photographic history",
+            "fr": "Appareil vintage — icônes de l’histoire photo"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-6",
@@ -6280,7 +6352,16 @@
             "en": "Instagram transformed photography into a social, visual language. Smartphones replaced dedicated cameras for casual users.",
             "fr": "Instagram a transformé la photographie en un langage visuel et social. Les smartphones ont remplacé les appareils dédiés pour les utilisateurs occasionnels."
           },
-          "difficulty": "hard"
+          "difficulty": "hard",
+          "imageUrl": "/images/packs/photo-1611162616305-c69b3fa7fbe0.avif",
+          "imageAlt": {
+            "en": "Social media icon — Instagram’s impact on photography",
+            "fr": "Icône de réseau social — impact d’Instagram sur la photo"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-16",
@@ -6560,6 +6641,15 @@
           "explanation": {
             "en": "Cartier-Bresson’s phrase is about timing and seeing — not spray-and-pray.",
             "fr": "La formule de Cartier-Bresson parle de timing et de regard — pas de rafale aveugle."
+          },
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
+          "imageAlt": {
+            "en": "Street scene — decisive-moment street photography",
+            "fr": "Scène de rue — photo street du moment décisif"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -6652,6 +6742,15 @@
           "explanation": {
             "en": "Adams = patient landscape seeing + obsessive control of tones from capture to print.",
             "fr": "Adams = regard paysage patient + contrôle obsessionnel des tons, de la prise de vue au tirage."
+          },
+          "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
+          "imageAlt": {
+            "en": "Dramatic landscape — Adams-style tonal drama",
+            "fr": "Paysage dramatique — contraste tonal façon Adams"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         }
       ],
@@ -11156,6 +11255,15 @@
           "explanation": {
             "en": "Commercial/promotional use of likeness often needs consent; editorial use follows different rules by country.",
             "fr": "L’usage commercial de l’image d’une personne exige souvent un consentement ; l’éditorial suit d’autres règles selon les pays."
+          },
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
+          "imageAlt": {
+            "en": "Recognizable face — model-release territory",
+            "fr": "Visage reconnaissable — terrain du model release"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11202,6 +11310,15 @@
           "explanation": {
             "en": "Online publication does not waive copyright. Credit alone may not be enough without permission.",
             "fr": "Publier en ligne ne renonce pas au droit d’auteur. Un crédit seul ne suffit pas toujours sans autorisation."
+          },
+          "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
+          "imageAlt": {
+            "en": "Phone screen — don’t steal Instagram photos",
+            "fr": "Écran de téléphone — ne volez pas les photos Instagram"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11482,6 +11599,15 @@
           "explanation": {
             "en": "Stock licenses are contractual—editorial images often cannot be used in ads.",
             "fr": "Les licences stock sont contractuelles — l’éditorial ne va souvent pas en pub."
+          },
+          "imageUrl": "/images/packs/photo-1450101499163-c8848c66ca85.avif",
+          "imageAlt": {
+            "en": "Contract papers — check stock licenses before client work",
+            "fr": "Documents contractuels — vérifier les licences stock"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11620,6 +11746,15 @@
           "explanation": {
             "en": "Copyright exists without a watermark; watermarks are a practical deterrent.",
             "fr": "Le droit d’auteur existe sans filigrane ; c’est surtout une protection pratique."
+          },
+          "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
+          "imageAlt": {
+            "en": "Handshake — credit lines and professional agreements",
+            "fr": "Poignée de main — crédits et accords professionnels"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11760,6 +11895,15 @@
           "explanation": {
             "en": "Attribution is good practice; licensing still controls reuse.",
             "fr": "L’attribution est une bonne pratique ; la licence contrôle la réutilisation."
+          },
+          "imageUrl": "/images/packs/photo-1454165804606-c3d57bc86b40.avif",
+          "imageAlt": {
+            "en": "Documents on a desk — credit lines and usage notes",
+            "fr": "Documents sur un bureau — crédits et mentions d’usage"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12263,6 +12407,15 @@
           "explanation": {
             "en": "WB removes unwanted color casts from light sources.",
             "fr": "La BB corrige les dominantes dues aux sources de lumière."
+          },
+          "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
+          "imageAlt": {
+            "en": "Camera body — white balance starts at capture",
+            "fr": "Boîtier photo — la balance des blancs commence à la prise de vue"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12311,6 +12464,15 @@
           "explanation": {
             "en": "Never destroy the master; work with reversible edits and exports.",
             "fr": "Ne détruisez jamais le master ; travaillez avec des réglages réversibles et des exports."
+          },
+          "imageUrl": "/images/packs/photo-1515378791036-0648a3ef77b2.avif",
+          "imageAlt": {
+            "en": "Typing on a laptop — non-destructive editing habits",
+            "fr": "Frappe sur un portable — habitudes de retouche non destructive"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12403,6 +12565,15 @@
           "explanation": {
             "en": "Crop is a composition tool; heavy crops reduce resolution.",
             "fr": "Le recadrage est un outil de composition ; un fort crop réduit la résolution."
+          },
+          "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
+          "imageAlt": {
+            "en": "Landscape scene ready for a thoughtful crop",
+            "fr": "Paysage prêt pour un recadrage réfléchi"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12497,6 +12668,15 @@
           "explanation": {
             "en": "Output sharpening differs by medium; inspect at 1:1 to avoid halos.",
             "fr": "L’accentuation dépend du support ; inspectez à 1:1 pour éviter les halos."
+          },
+          "imageUrl": "/images/packs/photo-1472214103451-9374bd1c798e.avif",
+          "imageAlt": {
+            "en": "Detailed landscape texture for output sharpening",
+            "fr": "Texture de paysage détaillée pour la netteté de sortie"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12543,6 +12723,15 @@
           "explanation": {
             "en": "Classic darkroom technique now done digitally with soft brushes/masks.",
             "fr": "Technique de labo classique, faite aujourd’hui avec brosses/masques numériques."
+          },
+          "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
+          "imageAlt": {
+            "en": "Mountain light and shadow — dodge and burn metaphor",
+            "fr": "Lumière et ombre en montagne — métaphore dodge & burn"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12635,6 +12824,15 @@
           "explanation": {
             "en": "sRGB is the safest default for online viewing; print may use wider spaces with profiles.",
             "fr": "sRGB est le défaut sûr pour le web ; l’impression peut utiliser des espaces plus larges avec profils."
+          },
+          "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
+          "imageAlt": {
+            "en": "Smartphone screen — sRGB delivery for the web",
+            "fr": "Écran de smartphone — livraison sRGB pour le web"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12823,6 +13021,15 @@
           "explanation": {
             "en": "Consent and naturalism beat heavy beauty filters unless requested.",
             "fr": "Consentement et naturel battent les filtres beauté lourds, sauf demande contraire."
+          },
+          "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
+          "imageAlt": {
+            "en": "Outdoor portrait for ethical skin retouch judgment",
+            "fr": "Portrait en extérieur pour juger une retouche peau éthique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12869,6 +13076,15 @@
           "explanation": {
             "en": "Social platforms recompress—oversized masters waste time.",
             "fr": "Les plateformes recompressent — les masters énormes font perdre du temps."
+          },
+          "imageUrl": "/images/packs/photo-1611162616305-c69b3fa7fbe0.avif",
+          "imageAlt": {
+            "en": "Social app icon — export sizing for Instagram",
+            "fr": "Icône d’app sociale — export pour Instagram"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12963,6 +13179,15 @@
           "explanation": {
             "en": "If the edit is the subject, dial it back.",
             "fr": "Si la retouche devient le sujet, baissez d’un cran."
+          },
+          "imageUrl": "/images/packs/photo-1561070791-2526d30994b5.avif",
+          "imageAlt": {
+            "en": "Bold graphic design — signs of over-processing",
+            "fr": "Design graphique saturé — signes de sur-traitement"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13303,12 +13528,12 @@
     {
       "id": "lightroom-workflow",
       "title": {
-        "en": "Lightroom workflow",
-        "fr": "Workflow Lightroom"
+        "en": "Lightroom workflow (Pixfan path)",
+        "fr": "Workflow Lightroom (parcours Pixfan)"
       },
       "description": {
-        "en": "Catalogs, Develop, masks, and clean exports — the Pixfan editing path.",
-        "fr": "Catalogues, Développement, masques et exports propres — le parcours retouche Pixfan."
+        "en": "Catalog, Develop, masks, and clean exports — the editing path Pixfan teaches for Lightroom Classic.",
+        "fr": "Catalogue, Développement, masques et exports propres — le parcours retouche que Pixfan enseigne pour Lightroom Classic."
       },
       "difficulty": "medium",
       "questions": [
@@ -13317,8 +13542,8 @@
           "type": "single",
           "difficulty": "easy",
           "text": {
-            "en": "In Lightroom Classic, photos are best managed primarily through…",
-            "fr": "Dans Lightroom Classic, les photos se gèrent surtout via…"
+            "en": "In Lightroom Classic (Pixfan’s main teaching path), photos are best managed primarily through…",
+            "fr": "Dans Lightroom Classic (parcours principal enseigné par Pixfan), les photos se gèrent surtout via…"
           },
           "answers": [
             {
@@ -13354,8 +13579,17 @@
             "a"
           ],
           "explanation": {
-            "en": "Classic is catalog-centric: the database tracks edits while files stay where you store them.",
-            "fr": "Classic est centré catalogue : la base suit les retouches pendant que les fichiers restent où tu les ranges."
+            "en": "Classic is catalog-centric: the database tracks edits while files stay where you store them. That catalog discipline is the backbone of a clean Pixfan-style workflow.",
+            "fr": "Classic est centré catalogue : la base suit les retouches pendant que les fichiers restent où tu les ranges. Cette discipline de catalogue est le socle d’un flux façon Pixfan."
+          },
+          "imageUrl": "/images/packs/photo-1517694712202-14dd9538aa97.avif",
+          "imageAlt": {
+            "en": "Laptop open on a desk for a catalog / Develop session",
+            "fr": "Ordinateur portable ouvert — session catalogue / Développement"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13400,8 +13634,17 @@
             "b"
           ],
           "explanation": {
-            "en": "Lightroom keeps a recipe. Export (or external edit) materializes pixels.",
-            "fr": "Lightroom garde une recette. L’export (ou l’édition externe) matérialise les pixels."
+            "en": "Lightroom keeps a recipe, not a flattened file. Export (or an external edit) is when pixels are baked — keep masters non-destructive as long as you can.",
+            "fr": "Lightroom garde une recette, pas un fichier aplati. L’export (ou l’édition externe) matérialise les pixels — garde les masters non destructifs aussi longtemps que possible."
+          },
+          "imageUrl": "/images/packs/photo-1555949963-aa79dcee981c.avif",
+          "imageAlt": {
+            "en": "Colorful UI panels suggesting non-destructive edit recipes",
+            "fr": "Panneaux UI colorés évoquant des recettes non destructives"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13409,8 +13652,8 @@
           "type": "single",
           "difficulty": "easy",
           "text": {
-            "en": "A sensible first Develop check after import is often…",
-            "fr": "Un premier réflexe Développement après import est souvent…"
+            "en": "A sensible first Develop check after import (Pixfan habit) is often…",
+            "fr": "Un premier réflexe Développement après import (habitude Pixfan) est souvent…"
           },
           "answers": [
             {
@@ -13446,8 +13689,17 @@
             "c"
           ],
           "explanation": {
-            "en": "See the data, neutralize cast, set the global exposure story — then local work.",
-            "fr": "Voir les données, neutraliser la dominante, poser l’expo globale — puis le local."
+            "en": "See the data, neutralize cast, set the global exposure story — then local work. Jumping straight to heavy local masks usually wastes time.",
+            "fr": "Voir les données, neutraliser la dominante, poser l’expo globale — puis le local. Enchaîner tout de suite sur des masques lourds fait souvent perdre du temps."
+          },
+          "imageUrl": "/images/packs/photo-1460925895917-afdab827c52f.avif",
+          "imageAlt": {
+            "en": "Laptop dashboard — first Develop checks after import",
+            "fr": "Tableau de bord — premiers contrôles Développement après import"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13540,6 +13792,15 @@
           "explanation": {
             "en": "Folders = disk location. Collections = editorial grouping.",
             "fr": "Dossiers = emplacement disque. Collections = regroupement éditorial."
+          },
+          "imageUrl": "/images/packs/photo-1454165804606-c3d57bc86b40.avif",
+          "imageAlt": {
+            "en": "Notebook and documents — collections vs disk folders",
+            "fr": "Carnet et documents — collections vs dossiers sur le disque"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13584,8 +13845,8 @@
             "a"
           ],
           "explanation": {
-            "en": "Output sharpening matches the medium. Don’t reuse print settings blindly for Instagram.",
-            "fr": "La netteté de sortie suit le support. N’applique pas des réglages print à Instagram sans réfléchir."
+            "en": "Output sharpening matches the medium. Don’t reuse print settings blindly for Instagram or a client web gallery.",
+            "fr": "La netteté de sortie suit le support. N’applique pas des réglages impression à Instagram ou une galerie web client sans réfléchir."
           }
         },
         {
@@ -13632,6 +13893,15 @@
           "explanation": {
             "en": "Start with a sensible profile, then dial with presets/sliders — don’t stack conflicting looks blindly.",
             "fr": "Pars d’un profil sensé, puis ajuste avec préréglages/curseurs — n’empile pas des looks contradictoires."
+          },
+          "imageUrl": "/images/packs/photo-1558655146-d09347e92766.avif",
+          "imageAlt": {
+            "en": "Design tools and swatches — profiles vs presets",
+            "fr": "Outils de design et nuanciers — profils vs préréglages"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13678,6 +13948,15 @@
           "explanation": {
             "en": "Batch the shared look; don’t blindly sync highly local fixes.",
             "fr": "Batch le look commun ; ne synchronise pas à l’aveugle les corrections très locales."
+          },
+          "imageUrl": "/images/packs/photo-1498050108023-c5249f4df085.avif",
+          "imageAlt": {
+            "en": "Laptop on a desk — syncing a shared Develop look",
+            "fr": "Portable sur un bureau — synchroniser un look Développement"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13722,8 +14001,8 @@
             "a"
           ],
           "explanation": {
-            "en": "Global sets the base; masks refine the story without wrecking the rest.",
-            "fr": "Le global pose la base ; les masques raffinent l’histoire sans casser le reste."
+            "en": "Global sets the base; masks refine the story without wrecking the rest — the usual Pixfan order: global → local.",
+            "fr": "Le global pose la base ; les masques raffinent l’histoire sans casser le reste — l’ordre Pixfan habituel : global → local."
           },
           "imageUrl": "/images/packs/photo-1498050108023-c5249f4df085.avif",
           "imageAlt": {
@@ -13832,8 +14111,8 @@
           "type": "single",
           "difficulty": "medium",
           "text": {
-            "en": "Before client delivery from Lightroom, a smart last pass includes…",
-            "fr": "Avant livraison client depuis Lightroom, une dernière passe maligne inclut…"
+            "en": "Before client delivery from Lightroom, a smart Pixfan-style last pass includes…",
+            "fr": "Avant livraison client depuis Lightroom, une dernière passe façon Pixfan inclut…"
           },
           "answers": [
             {
@@ -13869,8 +14148,17 @@
             "a"
           ],
           "explanation": {
-            "en": "Delivery is craft + professionalism: technical QA and the right output recipe.",
-            "fr": "La livraison = craft + pro : QA technique et la bonne recette de sortie."
+            "en": "Delivery is craft + professionalism: technical QA (spots, crops, WB) and the right output recipe for the brief.",
+            "fr": "La livraison = craft + pro : QA technique (poussières, cadrages, WB) et la bonne recette de sortie pour le brief."
+          },
+          "imageUrl": "/images/packs/photo-1555949963-ff9fe0c870eb.avif",
+          "imageAlt": {
+            "en": "Ordered workspace — client delivery QA checklist vibe",
+            "fr": "Espace de travail ordonné — QA avant livraison client"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14009,6 +14297,15 @@
           "explanation": {
             "en": "Sharpening noise makes grit. Stabilize the file, then sharpen for the medium.",
             "fr": "Aiguiser du bruit = du grain agressif. Stabilise le fichier, puis netteté selon le support."
+          },
+          "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
+          "imageAlt": {
+            "en": "Night sky with stars — denoise before sharpening",
+            "fr": "Ciel nocturne étoilé — débruitage avant netteté"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14055,6 +14352,15 @@
           "explanation": {
             "en": "HSL targets specific hues; Grading paints atmosphere across tonal regions.",
             "fr": "HSL cible des teintes ; le Grading peint une atmosphère par zones tonales."
+          },
+          "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
+          "imageAlt": {
+            "en": "Moody colored landscape — Color Grading atmosphere",
+            "fr": "Paysage aux couleurs d’ambiance — Color Grading"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14149,6 +14455,15 @@
           "explanation": {
             "en": "Catalog + masters both need backups. Move files through Lightroom; maintain the database.",
             "fr": "Catalogue + masters doivent être sauvegardés. Déplace via Lightroom ; entretiens la base."
+          },
+          "imageUrl": "/images/packs/photo-1486312338219-ce68d2c6f44d.avif",
+          "imageAlt": {
+            "en": "Hands on a laptop — healthy long-term catalog habits",
+            "fr": "Mains sur un portable — bonnes habitudes de catalogue"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14239,8 +14554,8 @@
             "a"
           ],
           "explanation": {
-            "en": "One master, multiple purposeful exports — don’t print from a crushed web JPEG.",
-            "fr": "Un master, plusieurs exports ciblés — n’imprime pas depuis un JPEG web écrasé."
+            "en": "One Develop master, multiple purposeful exports — never print from a crushed web JPEG. That “one master → many outputs” habit is core Pixfan advice.",
+            "fr": "Un master Développement, plusieurs exports ciblés — n’imprime jamais depuis un JPEG web écrasé. Cet habit « un master → plusieurs sorties » est au cœur des conseils Pixfan."
           },
           "imageUrl": "/images/packs/photo-1518182170546-07661fd94144.avif",
           "imageAlt": {

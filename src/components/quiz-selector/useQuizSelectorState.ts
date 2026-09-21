@@ -17,8 +17,10 @@ import {
   formatDailyCountdown,
   getDailyPhotoTeaser,
   getDailyQuizId,
+  getDailyTheme,
   msUntilNextDaily,
 } from '../../utils/dailyChallenge';
+import { pickLocale } from '../../utils/locale';
 import {
   isDailyReminderEnabled,
   maybeNotifyDailyReminder,
@@ -91,6 +93,14 @@ export function useQuizSelectorState({
     () => (quizzes.length > 0 ? getDailyPhotoTeaser(quizzes) : null),
     [quizzes]
   );
+  const dailyThemeChip = useMemo(() => {
+    const theme = getDailyTheme();
+    return pickLocale(theme.chip, langCode);
+  }, [langCode]);
+  const dailyThemeDesc = useMemo(() => {
+    const theme = getDailyTheme();
+    return pickLocale(theme.description, langCode);
+  }, [langCode]);
   const photoTeaser = useMemo(
     () => (quizzes.length > 0 ? getPhotoReadingTeaser(quizzes) : null),
     [quizzes]
@@ -297,6 +307,8 @@ export function useQuizSelectorState({
     vaultCount,
     dailyCountdown,
     dailyTeaser,
+    dailyThemeChip,
+    dailyThemeDesc,
     photoTeaser,
     photoPoolCount,
     photoPackAvailable,

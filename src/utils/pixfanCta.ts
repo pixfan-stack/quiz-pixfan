@@ -23,6 +23,12 @@ export interface PixfanCta {
   primaryUrl: string;
   /** What the primary button opens (for analytics + copy). */
   primaryTarget: PixfanCtaTarget;
+  /**
+   * Optional secondary deep link (e.g. pixfan.com retouch hub when primary
+   * is already the local Lightroom guide).
+   */
+  secondaryUrl?: string;
+  secondaryTarget?: PixfanCtaTarget;
   newsletterUrl: string;
   /** True when topic came from incorrect answers (failed theme). */
   fromMistakes: boolean;
@@ -49,7 +55,8 @@ const TOPIC_URLS: Record<PixfanTopic, string> = {
   genres: `${PIXFAN}/apprendre-la-photo/genres-photo/`,
   smartphone: `${PIXFAN}/apprendre-la-photo/`,
   rights: `${PIXFAN}/?s=droit+auteur`,
-  retouching: `${PIXFAN}/logiciels-retouche/`,
+  /** Live category hub (bare `/logiciels-retouche/` 404s → home). */
+  retouching: `${PIXFAN}/category/logiciels-retouche/`,
   default: `${PIXFAN}/apprendre-la-photo-guide-complet-debutants-quiz/`,
 };
 
@@ -159,13 +166,22 @@ export function getPixfanCta(
   const primaryTarget: PixfanCtaTarget = localGuide ? 'guide' : 'pixfan';
   const primaryRaw = localGuide ?? TOPIC_URLS[topic];
 
-  return {
+  const cta: PixfanCta = {
     topic,
     primaryUrl: withUtm(primaryRaw, quizId, primaryTarget),
     primaryTarget,
     newsletterUrl: withUtm(NEWSLETTER, quizId, 'newsletter'),
     fromMistakes: fromMistakesTopic != null,
   };
+
+  // P3.3 / P5: when primary is the local retouch guide, still offer the
+  // pixfan.com retouch hub as a measured secondary click.
+  if (topic === 'retouching' && primaryTarget === 'guide') {
+    cta.secondaryTarget = 'pixfan';
+    cta.secondaryUrl = withUtm(TOPIC_URLS.retouching, quizId, 'pixfan');
+  }
+
+  return cta;
 }
 
 /** Analytics quiz_id marker stored in `quiz_attempts` for CTA clicks. */

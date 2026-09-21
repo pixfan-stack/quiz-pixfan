@@ -25,6 +25,10 @@ interface FeaturedQuizCardsProps {
   photoTeaser: Teaser | null;
   photoPoolCount: number;
   dailyTeaser: Teaser | null;
+  /** Editorial week chip, e.g. "Lightroom week". */
+  dailyThemeChip: string;
+  /** Themed daily description for the home card. */
+  dailyThemeDesc: string;
   dailyPlayed: boolean;
   dailyLinkCopied: boolean;
   dailyCountdown: string;
@@ -44,6 +48,8 @@ export function FeaturedQuizCards({
   photoTeaser,
   photoPoolCount,
   dailyTeaser,
+  dailyThemeChip,
+  dailyThemeDesc,
   dailyPlayed,
   dailyLinkCopied,
   dailyCountdown,
@@ -150,11 +156,14 @@ export function FeaturedQuizCards({
                 ? t('home.linkCopied')
                 : dailyPlayed
                   ? t('home.dailyPlayedDesc', { time: dailyCountdown })
-                  : t('home.dailyChallengeDesc')}
+                  : dailyThemeDesc}
             </p>
           </div>
           <div className="quiz-card__footer">
             <div className="quiz-card__meta">
+              <span className="quiz-card__meta-chip quiz-card__meta-chip--theme">
+                {dailyThemeChip}
+              </span>
               <span className="quiz-card__meta-chip">
                 {t('home.questionsCount', { count: DAILY_QUESTION_COUNT })}
               </span>

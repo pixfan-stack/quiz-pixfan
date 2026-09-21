@@ -3,9 +3,12 @@ import {
   buildDailyQuiz,
   DAILY_IMAGE_TARGET,
   DAILY_QUESTION_COUNT,
+  DAILY_THEME_ROTATION,
   formatDailyCountdown,
   getDailyPhotoTeaser,
   getDailyQuizId,
+  getDailyTheme,
+  getUtcIsoWeek,
   isDailyQuizId,
   msUntilNextDaily,
   pickDailyQuestions,
@@ -37,6 +40,31 @@ const miniQuizzes: Quiz[] = [
       text: { en: `B${i}`, fr: `B${i}` },
       answers: [{ id: 'y', text: { en: 'Y', fr: 'Y' } }],
       correctAnswers: ['y'],
+    })),
+  },
+  {
+    id: 'lightroom-workflow',
+    title: { en: 'LR', fr: 'LR' },
+    description: { en: '', fr: '' },
+    questions: Array.from({ length: 12 }, (_, i) => ({
+      id: `lr${i}`,
+      type: 'single' as const,
+      text: { en: `L${i}`, fr: `L${i}` },
+      answers: [{ id: 'z', text: { en: 'Z', fr: 'Z' } }],
+      correctAnswers: ['z'],
+      ...(i < 6 ? { imageUrl: `/img/lr${i}.jpg` } : {}),
+    })),
+  },
+  {
+    id: 'retouching',
+    title: { en: 'R', fr: 'R' },
+    description: { en: '', fr: '' },
+    questions: Array.from({ length: 8 }, (_, i) => ({
+      id: `r${i}`,
+      type: 'single' as const,
+      text: { en: `R${i}`, fr: `R${i}` },
+      answers: [{ id: 'z', text: { en: 'Z', fr: 'Z' } }],
+      correctAnswers: ['z'],
     })),
   },
 ];
@@ -102,5 +130,36 @@ describe('dailyChallenge', () => {
       new Date('2026-07-25T12:00:00Z')
     );
     expect(teaser?.imageUrl).toBeTruthy();
+  });
+
+  it('rotates editorial themes by ISO week', () => {
+    expect(DAILY_THEME_ROTATION.length).toBeGreaterThanOrEqual(4);
+    const week = getUtcIsoWeek(new Date('2026-09-21T12:00:00Z'));
+    expect(week).toBeGreaterThanOrEqual(1);
+    const theme = getDailyTheme(new Date('2026-09-21T12:00:00Z'));
+    const expected =
+      DAILY_THEME_ROTATION[(week - 1) % DAILY_THEME_ROTATION.length]!;
+    expect(theme.id).toBe(expected.id);
+    expect(theme.chip.en).toBeTruthy();
+    expect(theme.chip.fr).toBeTruthy();
+  });
+
+  it('biases daily picks toward the week theme packs', () => {
+    // Find a UTC day whose ISO week maps to lightroom theme.
+    let date = new Date('2026-01-05T12:00:00Z');
+    for (let i = 0; i < 60; i++) {
+      if (getDailyTheme(date).id === 'lightroom') break;
+      date = new Date(date.getTime() + 7 * 86400000);
+    }
+    expect(getDailyTheme(date).id).toBe('lightroom');
+
+    const daily = buildDailyQuiz(miniQuizzes, date);
+    expect(daily.title.en).toMatch(/Lightroom/i);
+    const fromTheme = daily.questions.filter(
+      (q) =>
+        q.id.startsWith('lightroom-workflow__') ||
+        q.id.startsWith('retouching__')
+    );
+    expect(fromTheme.length).toBeGreaterThanOrEqual(6);
   });
 });

@@ -1204,6 +1204,11 @@ a {
   font-weight: 700;
 }
 
+.quiz-card__meta-chip--theme {
+  color: #0f766e;
+  font-weight: 700;
+}
+
 .quiz-card__meta-chip--pool {
   color: color-mix(in srgb, #2563eb 70%, var(--color-text-muted));
   font-weight: 600;

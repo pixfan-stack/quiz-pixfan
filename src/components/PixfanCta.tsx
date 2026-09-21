@@ -62,6 +62,18 @@ export function PixfanCta({
           {t(primaryCtaKey)}
           <span aria-hidden="true"> →</span>
         </a>
+        {cta.secondaryUrl && cta.secondaryTarget ? (
+          <a
+            className="btn btn--ghost"
+            href={cta.secondaryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => onCtaClick(cta.secondaryTarget!)}
+          >
+            {t(`pixfan.topic_${cta.topic}_secondaryCta`)}
+            <span aria-hidden="true"> →</span>
+          </a>
+        ) : null}
       </div>
 
       <div className="pixfan-cta__newsletter">

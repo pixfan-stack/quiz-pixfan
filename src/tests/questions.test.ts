@@ -196,20 +196,25 @@ describe('questions.json', () => {
     }
   });
 
-  it.each(['composition', 'light-color', 'smartphone'] as const)(
-    '%s has 8–14 illustrated questions with credits',
-    (id) => {
-      const quiz = data.quizzes.find((q) => q.id === id);
-      expect(quiz).toBeDefined();
-      const illustrated = quiz!.questions.filter((q) => q.imageUrl);
-      expect(illustrated.length).toBeGreaterThanOrEqual(8);
-      expect(illustrated.length).toBeLessThanOrEqual(14);
-      for (const q of illustrated) {
-        expect(q.imageCredit?.en).toBeTruthy();
-        expect(q.imageCredit?.fr).toBeTruthy();
-      }
+  it.each([
+    'composition',
+    'light-color',
+    'smartphone',
+    'retouching',
+    'lightroom-workflow',
+    'gear-lenses',
+  ] as const)('%s has 8–14 illustrated questions with credits', (id) => {
+    const quiz = data.quizzes.find((q) => q.id === id);
+    expect(quiz).toBeDefined();
+    const illustrated = quiz!.questions.filter((q) => q.imageUrl);
+    expect(illustrated.length).toBeGreaterThanOrEqual(8);
+    expect(illustrated.length).toBeLessThanOrEqual(14);
+    for (const q of illustrated) {
+      expect(q.imageCredit?.en).toBeTruthy();
+      expect(q.imageCredit?.fr).toBeTruthy();
+      expect(q.imageUrl).toMatch(/^\/images\//);
     }
-  );
+  });
 
   it('lightroom-workflow quiz is a solid Pixfan thematic pack', () => {
     const quiz = data.quizzes.find((q) => q.id === 'lightroom-workflow');
@@ -217,5 +222,8 @@ describe('questions.json', () => {
     expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
     const hard = quiz!.questions.filter((q) => q.difficulty === 'hard');
     expect(hard.length).toBeGreaterThanOrEqual(5);
+    expect(quiz!.title.fr).toMatch(/Lightroom/i);
+    expect(quiz!.description.en.toLowerCase()).toContain('pixfan');
+    expect(quiz!.description.fr.toLowerCase()).toContain('pixfan');
   });
 });
