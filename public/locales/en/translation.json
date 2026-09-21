@@ -284,10 +284,11 @@
     "topic_rights_desc": "Stay sharp on image rights, ethics and usage.",
     "topic_rights_failedDesc": "Rights & ethics to clarify — Pixfan articles help.",
     "topic_rights_cta": "Read rights & ethics",
-    "topic_retouching_desc": "Improve your edits with Lightroom, Photoshop and free tools.",
-    "topic_retouching_failedDesc": "Retouching slowed you down — a Lightroom guide to structure your flow.",
+    "topic_retouching_desc": "Improve your edits with Lightroom Classic — catalog, Develop, masks, clean exports.",
+    "topic_retouching_failedDesc": "Retouching slowed you down — a Lightroom guide to structure your Pixfan-style flow.",
     "topic_retouching_cta": "Open retouching guides",
     "topic_retouching_guideCta": "Read the retouching / Lightroom guide",
+    "topic_retouching_secondaryCta": "Pixfan retouching offer",
     "topic_default_desc": "Continue with the full beginner guide, then the newsletter.",
     "topic_default_cta": "Open the beginner guide"
   },

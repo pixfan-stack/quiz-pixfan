@@ -43,15 +43,22 @@ describe('pixfanCta', () => {
     const light = getPixfanCta('light-color');
     expect(light.primaryTarget).toBe('guide');
     expect(light.primaryUrl).toContain('/guides/lumiere-photo');
+    expect(light.secondaryUrl).toBeUndefined();
 
     const retouch = getPixfanCta('retouching');
     expect(retouch.primaryTarget).toBe('guide');
     expect(retouch.primaryUrl).toContain('/guides/retouche-lightroom');
+    expect(retouch.secondaryTarget).toBe('pixfan');
+    expect(retouch.secondaryUrl).toContain(
+      'https://www.pixfan.com/category/logiciels-retouche/'
+    );
+    expect(retouch.secondaryUrl).toContain('utm_content=pixfan');
 
     const lr = getPixfanCta('lightroom-workflow');
     expect(lr.topic).toBe('retouching');
     expect(lr.primaryTarget).toBe('guide');
     expect(lr.primaryUrl).toContain('/guides/retouche-lightroom');
+    expect(lr.secondaryUrl).toContain('category/logiciels-retouche');
   });
 
   it('uses pixfan.com when no local guide exists', () => {
