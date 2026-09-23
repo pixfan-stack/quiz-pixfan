@@ -78,6 +78,7 @@ export function QuizSelector({
           dailyTeaser={state.dailyTeaser}
           dailyThemeChip={state.dailyThemeChip}
           dailyThemeDesc={state.dailyThemeDesc}
+          dailyGuideUrl={state.dailyGuideUrl}
           dailyPlayed={state.dailyPlayed}
           dailyLinkCopied={state.dailyLinkCopied}
           dailyCountdown={state.dailyCountdown}

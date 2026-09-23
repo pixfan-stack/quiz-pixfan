@@ -55,10 +55,20 @@ export function ResultShareSection({
                 ? t('result.copyDailyPrimaryDone')
                 : t('result.copyDailyPrimary')}
             </button>
+            <button
+              type="button"
+              className="btn btn--secondary btn--block"
+              onClick={() => void onExportImage('square')}
+            >
+              <span className="btn__icon" aria-hidden="true">
+                ⬜
+              </span>
+              {t('result.exportImage')}
+            </button>
             {quizzesLength > 0 && (
               <button
                 type="button"
-                className="btn btn--secondary btn--block"
+                className="btn btn--ghost btn--block"
                 onClick={() => void onChallengeFriend()}
               >
                 <span className="btn__icon" aria-hidden="true">
@@ -96,6 +106,16 @@ export function ResultShareSection({
                 ? t('result.linkCopied')
                 : t('result.sharePrimary')}
             </button>
+            <button
+              type="button"
+              className="btn btn--ghost btn--block"
+              onClick={() => void onExportImage('square')}
+            >
+              <span className="btn__icon" aria-hidden="true">
+                ⬜
+              </span>
+              {t('result.exportImage')}
+            </button>
           </>
         ) : (
           <>
@@ -111,10 +131,20 @@ export function ResultShareSection({
                 ? t('result.linkCopied')
                 : t('result.sharePrimary')}
             </button>
+            <button
+              type="button"
+              className="btn btn--secondary btn--block"
+              onClick={() => void onExportImage('square')}
+            >
+              <span className="btn__icon" aria-hidden="true">
+                ⬜
+              </span>
+              {t('result.exportImage')}
+            </button>
             {quizzesLength > 0 && (
               <button
                 type="button"
-                className="btn btn--secondary btn--block"
+                className="btn btn--ghost btn--block"
                 onClick={() => void onChallengeFriend()}
               >
                 <span className="btn__icon" aria-hidden="true">
@@ -134,16 +164,7 @@ export function ResultShareSection({
           {t('result.shareMore')}
         </summary>
         <div className="export-section">
-          <button
-            type="button"
-            className="btn btn--ghost btn--block"
-            onClick={() => void onExportImage('square')}
-          >
-            <span className="btn__icon" aria-hidden="true">
-              📸
-            </span>
-            {t('result.exportImage')}
-          </button>
+          <p className="export-section__hint">{t('result.exportSquareHint')}</p>
           <button
             type="button"
             className="btn btn--ghost btn--block"

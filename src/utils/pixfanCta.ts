@@ -105,6 +105,48 @@ export function localGuidePathForTopic(topic: PixfanTopic): string | null {
 }
 
 /**
+ * Map editorial daily-week theme ids → Pixfan topic with a local guide.
+ * Themes without a guide (gear / rights / history / mixed) return null.
+ */
+const DAILY_THEME_TO_TOPIC: Partial<
+  Record<
+    | 'lightroom'
+    | 'smartphone'
+    | 'light'
+    | 'composition'
+    | 'gear'
+    | 'genres'
+    | 'rights'
+    | 'history'
+    | 'mixed',
+    PixfanTopic
+  >
+> = {
+  lightroom: 'retouching',
+  smartphone: 'smartphone',
+  light: 'light',
+  composition: 'composition',
+  genres: 'genres',
+};
+
+/** Local guide URL for the current editorial week, with daily_theme UTM. */
+export function localGuideUrlForDailyTheme(
+  themeId: string,
+  quizId = 'daily'
+): string | null {
+  const topic = DAILY_THEME_TO_TOPIC[themeId as keyof typeof DAILY_THEME_TO_TOPIC];
+  if (!topic) return null;
+  const path = LOCAL_GUIDES[topic];
+  if (!path) return null;
+  const u = new URL(path, 'https://quiz.pixfan.fr');
+  u.searchParams.set('utm_source', 'quiz');
+  u.searchParams.set('utm_medium', 'daily_card');
+  u.searchParams.set('utm_campaign', quizId.slice(0, 64));
+  u.searchParams.set('utm_content', 'daily_theme');
+  return `${u.pathname}${u.search}`;
+}
+
+/**
  * Resolve a local guide for a mistake question (compound id or category quiz).
  * Used by results / error review cross-links (P2-C).
  */
@@ -167,19 +209,33 @@ export function getPixfanCta(
   const primaryTarget: PixfanCtaTarget = localGuide ? 'guide' : 'pixfan';
   const primaryRaw = localGuide ?? TOPIC_URLS[topic];
 
+  const newsletterUrl = withUtm(NEWSLETTER, quizId, 'newsletter');
   const cta: PixfanCta = {
     topic,
     primaryUrl: withUtm(primaryRaw, quizId, primaryTarget),
     primaryTarget,
-    newsletterUrl: withUtm(NEWSLETTER, quizId, 'newsletter'),
+    newsletterUrl,
     fromMistakes: fromMistakesTopic != null,
   };
 
-  // P3.3 / P5: when primary is the local retouch guide, still offer the
-  // pixfan.com retouch hub as a measured secondary click.
-  if (topic === 'retouching' && primaryTarget === 'guide') {
+  // When primary is a local guide, offer the matching Pixfan hub as secondary
+  // (retouching + genres — topics with both a guide and a strong hub).
+  if (
+    primaryTarget === 'guide' &&
+    (topic === 'retouching' || topic === 'genres')
+  ) {
     cta.secondaryTarget = 'pixfan';
-    cta.secondaryUrl = withUtm(TOPIC_URLS.retouching, quizId, 'pixfan');
+    cta.secondaryUrl = withUtm(TOPIC_URLS[topic], quizId, 'pixfan');
+  }
+
+  // Orphan topics (no local guide): primary = Pixfan hub, secondary = newsletter
+  // so we don't leave the funnel with only a beginner default path.
+  if (
+    primaryTarget === 'pixfan' &&
+    (topic === 'gear' || topic === 'history' || topic === 'rights')
+  ) {
+    cta.secondaryTarget = 'newsletter';
+    cta.secondaryUrl = newsletterUrl;
   }
 
   return cta;

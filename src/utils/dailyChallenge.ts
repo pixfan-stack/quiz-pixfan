@@ -163,6 +163,17 @@ export function isDailyQuizId(quizId: string): boolean {
   return /^daily-\d{4}-\d{2}-\d{2}$/.test(quizId);
 }
 
+/** Parse `daily-YYYY-MM-DD` → UTC Date, or null. */
+export function parseDailyQuizDate(quizId: string): Date | null {
+  const m = /^daily-(\d{4})-(\d{2})-(\d{2})$/.exec(quizId);
+  if (!m) return null;
+  const y = Number(m[1]);
+  const mo = Number(m[2]);
+  const d = Number(m[3]);
+  if (!y || mo < 1 || mo > 12 || d < 1 || d > 31) return null;
+  return new Date(Date.UTC(y, mo - 1, d));
+}
+
 /** ISO week number (UTC), 1–53. */
 export function getUtcIsoWeek(date = new Date()): number {
   const d = new Date(

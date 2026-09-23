@@ -5,6 +5,7 @@ import {
   getPixfanCta,
   isCtaAnalyticsQuizId,
   localGuideForMistake,
+  localGuideUrlForDailyTheme,
   parseCtaAnalyticsQuizId,
   resolvePixfanTopic,
   resolveTopicFromMistakes,
@@ -66,6 +67,11 @@ describe('pixfanCta', () => {
     expect(genres.primaryTarget).toBe('guide');
     expect(genres.primaryUrl).toContain('/guides/genres-photo');
     expect(genres.primaryUrl).toContain('utm_content=guide');
+    expect(genres.secondaryTarget).toBe('pixfan');
+    expect(genres.secondaryUrl).toContain(
+      'https://www.pixfan.com/apprendre-la-photo/genres-photo/'
+    );
+    expect(genres.secondaryUrl).toContain('utm_content=pixfan');
 
     const portrait = getPixfanCta('portrait-light');
     expect(portrait.topic).toBe('light');
@@ -73,12 +79,44 @@ describe('pixfanCta', () => {
     expect(portrait.primaryUrl).toContain('/guides/lumiere-photo');
   });
 
-  it('uses pixfan.com when no local guide exists', () => {
-    const cta = getPixfanCta('gear-lenses');
-    expect(cta.topic).toBe('gear');
-    expect(cta.primaryTarget).toBe('pixfan');
-    expect(cta.primaryUrl).toContain('https://www.pixfan.com/materiel-photo/');
-    expect(cta.primaryUrl).toContain('utm_content=pixfan');
+  it('uses pixfan hub + newsletter secondary for orphan topics', () => {
+    const gear = getPixfanCta('gear-lenses');
+    expect(gear.topic).toBe('gear');
+    expect(gear.primaryTarget).toBe('pixfan');
+    expect(gear.primaryUrl).toContain('https://www.pixfan.com/materiel-photo/');
+    expect(gear.primaryUrl).toContain('utm_content=pixfan');
+    expect(gear.secondaryTarget).toBe('newsletter');
+    expect(gear.secondaryUrl).toContain('/newsletter/');
+    expect(gear.secondaryUrl).toContain('utm_content=newsletter');
+
+    const history = getPixfanCta('history-icons');
+    expect(history.primaryTarget).toBe('pixfan');
+    expect(history.secondaryTarget).toBe('newsletter');
+    expect(history.secondaryUrl).toContain('/newsletter/');
+
+    const rights = getPixfanCta('photo-rights');
+    expect(rights.primaryTarget).toBe('pixfan');
+    expect(rights.secondaryTarget).toBe('newsletter');
+    expect(rights.secondaryUrl).toContain('/newsletter/');
+  });
+
+  it('resolves daily-theme local guide URLs with UTM', () => {
+    const lr = localGuideUrlForDailyTheme('lightroom', 'daily-2026-09-21');
+    expect(lr).toContain('/guides/retouche-lightroom');
+    expect(lr).toContain('utm_content=daily_theme');
+    expect(lr).toContain('utm_medium=daily_card');
+    expect(lr).toContain('utm_campaign=daily-2026-09-21');
+
+    expect(localGuideUrlForDailyTheme('composition')).toContain(
+      '/guides/composition-photo'
+    );
+    expect(localGuideUrlForDailyTheme('genres')).toContain(
+      '/guides/genres-photo'
+    );
+    expect(localGuideUrlForDailyTheme('gear')).toBeNull();
+    expect(localGuideUrlForDailyTheme('rights')).toBeNull();
+    expect(localGuideUrlForDailyTheme('history')).toBeNull();
+    expect(localGuideUrlForDailyTheme('mixed')).toBeNull();
   });
 
   it('resolves failed theme from daily-style mistake ids', () => {

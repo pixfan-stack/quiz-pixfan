@@ -48,6 +48,7 @@ import {
   getPhotoReadingTeaser,
 } from '../../utils/photoReading';
 import { socialShareUrl } from '../../utils/share';
+import { localGuideUrlForDailyTheme } from '../../utils/pixfanCta';
 import type { DifficultyFilter, QuizSelectorProps, QuizWithScore } from './types';
 
 type UseQuizSelectorStateArgs = Pick<
@@ -103,6 +104,10 @@ export function useQuizSelectorState({
     const theme = getDailyTheme();
     return pickLocale(theme.description, langCode);
   }, [langCode]);
+  const dailyGuideUrl = useMemo(() => {
+    const theme = getDailyTheme();
+    return localGuideUrlForDailyTheme(theme.id, getDailyQuizId());
+  }, []);
   const photoTeaser = useMemo(
     () => (quizzes.length > 0 ? getPhotoReadingTeaser(quizzes) : null),
     [quizzes]
@@ -312,6 +317,7 @@ export function useQuizSelectorState({
     dailyTeaser,
     dailyThemeChip,
     dailyThemeDesc,
+    dailyGuideUrl,
     photoTeaser,
     photoPoolCount,
     photoPackAvailable,

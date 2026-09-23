@@ -4,7 +4,7 @@
  */
 
 import type { Quiz, QuizResult } from '../types/quiz';
-import { isDailyQuizId } from './dailyChallenge';
+import { getDailyTheme, isDailyQuizId, parseDailyQuizDate } from './dailyChallenge';
 import { APP_SHARE_URL } from './share';
 
 export type ExportImageFormat = 'square' | 'story';
@@ -101,14 +101,19 @@ export async function exportResultAsImage(
     isStory ? 230 : 160
   );
 
-  // Quiz title / date line
+  // Quiz title / date line (daily → editorial week chip)
   ctx.font = '500 28px system-ui, -apple-system, sans-serif';
   ctx.fillStyle = COLORS.textMuted;
-  const quizTitle = isDaily
-    ? result.quizId.replace('daily-', '')
-    : isFr
-      ? quiz.title.fr
-      : quiz.title.en;
+  let quizTitle: string;
+  if (isDaily) {
+    const dailyDate = parseDailyQuizDate(result.quizId);
+    const theme = getDailyTheme(dailyDate ?? new Date());
+    const chip = isFr ? theme.chip.fr : theme.chip.en;
+    const dateLabel = result.quizId.replace('daily-', '');
+    quizTitle = `${chip} · ${dateLabel}`;
+  } else {
+    quizTitle = isFr ? quiz.title.fr : quiz.title.en;
+  }
   ctx.fillText(
     truncate(ctx, quizTitle, width - 120),
     width / 2,
