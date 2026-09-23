@@ -2,14 +2,15 @@
 
 Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-**Version courante : v1.13.0**
+**Version courante : v1.15.0**
 
 ## Contenu actuel
 
-- **11 quiz** · **285 questions** · **~97 illustrées**
+- **11 quiz** · **285 questions** · **132 illustrées**
 - Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes
 - Galerie domaine public, genres, smartphone, droits & éthique, retouche, workflow Lightroom
 - Modes générés : défi du jour, photo-reading, duel, mix difficulté, points faibles, aléatoire
+- Guides locaux : exposition, composition, lumière, retouche, smartphone, **genres**
 
 Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/`).
 
@@ -18,7 +19,7 @@ Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/
 - Bilingue FR/EN (détection auto + switcher)
 - Scores locaux (localStorage) + scores distants / classements via D1
 - Classements période (semaine / mois) + signalement de pseudo
-- Compte léger (code de récupération + sync streak / succès / high scores)
+- Compte léger (code de récupération + sync streak / succès / high scores / vault / saisons)
 - Streak, freezes, succès, maîtrise, saisons
 - Revue d’erreurs / weak spots, CTA Pixfan / newsletter
 - PWA (manifest, service worker, install prompt)
@@ -73,7 +74,7 @@ Guides détaillés : [`DEPLOYMENT.md`](./DEPLOYMENT.md), [`GUIDE_DEPLOIEMENT.md`
 
 Points ops fréquents :
 
-1. Migrations D1 `004` / `005` — voir [`migrations/README.md`](./migrations/README.md)
+1. Migrations D1 `004` / `005` / `006` — voir [`migrations/README.md`](./migrations/README.md)
 2. **`VITE_ADMIN_PIN`** en build (CI / Pages) + **`ADMIN_PIN`** runtime Functions (même valeur)
 3. Binding D1 `DB` → `quiz-pixfan-scores` sur le projet Pages
 

@@ -39,7 +39,7 @@ describe('pixfanCta', () => {
     expect(cta.fromMistakes).toBe(false);
   });
 
-  it('targets local guides for light and retouching', () => {
+  it('targets local guides for light, retouching and genres', () => {
     const light = getPixfanCta('light-color');
     expect(light.primaryTarget).toBe('guide');
     expect(light.primaryUrl).toContain('/guides/lumiere-photo');
@@ -59,6 +59,12 @@ describe('pixfanCta', () => {
     expect(lr.primaryTarget).toBe('guide');
     expect(lr.primaryUrl).toContain('/guides/retouche-lightroom');
     expect(lr.secondaryUrl).toContain('category/logiciels-retouche');
+
+    const genres = getPixfanCta('genres');
+    expect(genres.topic).toBe('genres');
+    expect(genres.primaryTarget).toBe('guide');
+    expect(genres.primaryUrl).toContain('/guides/genres-photo');
+    expect(genres.primaryUrl).toContain('utm_content=guide');
   });
 
   it('uses pixfan.com when no local guide exists', () => {
@@ -103,6 +109,9 @@ describe('pixfanCta', () => {
     );
     expect(localGuideForMistake('retouching__r-1')?.path).toContain(
       '/guides/retouche-lightroom'
+    );
+    expect(localGuideForMistake('gen-1', 'genres')?.path).toContain(
+      '/guides/genres-photo'
     );
     expect(localGuideForMistake('gear-1', 'gear-lenses')).toBeNull();
   });
