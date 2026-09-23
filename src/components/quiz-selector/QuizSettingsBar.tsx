@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { PlayerNamePrompt } from '../PlayerNameInput';
+import { AccountSyncPanel } from '../AccountSyncPanel';
 import { notificationsSupported } from '../../utils/dailyReminder';
 import { downloadDailyChallengeIcs } from '../../utils/dailyChallengeCalendar';
 
@@ -116,6 +117,12 @@ export function QuizSettingsBar({
             >
               {t('home.addToCalendar')}
             </button>
+          </div>
+          <div className="setting-row setting-row--stack setting-row--account-sync">
+            <AccountSyncPanel
+              initialCode={recoveryCode}
+              onRecovered={onRecovered}
+            />
           </div>
         </div>
       )}

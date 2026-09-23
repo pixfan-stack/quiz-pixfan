@@ -7,7 +7,7 @@
  * CTA clicks reuse the same table with quiz_id markers:
  *   cta:{guide|newsletter|pixfan}:{topic}:{sourceQuizId}
  * Habit funnel events:
- *   evt:{reminder_on|reminder_off|ics_download|pwa_install|account_create|account_redeem}
+ *   evt:{reminder_on|reminder_off|ics_download|pwa_install|account_create|account_redeem|weak_spots_cta}
  *   percentage=0, correct_count=0, total_questions=1, time_taken_seconds=0
  */
 

@@ -10,6 +10,7 @@ export const HABIT_EVENTS = [
   'pwa_install',
   'account_create',
   'account_redeem',
+  'weak_spots_cta',
 ] as const;
 
 export type HabitEventName = (typeof HABIT_EVENTS)[number];

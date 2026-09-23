@@ -7,6 +7,12 @@ import {
 import { AccountSyncPanel } from './AccountSyncPanel';
 
 const PROMPT_SEEN_KEY = 'quiz-pixfan-name-prompt-seen';
+/** Custom event — footer / settings can open the sync surface. */
+export const OPEN_ACCOUNT_SYNC_EVENT = 'quiz-pixfan-open-account-sync';
+
+export function requestOpenAccountSync(): void {
+  window.dispatchEvent(new CustomEvent(OPEN_ACCOUNT_SYNC_EVENT));
+}
 
 function hasSeenPrompt(): boolean {
   try {
@@ -24,6 +30,8 @@ function markPromptSeen(): void {
   }
 }
 
+type ModalMode = 'name' | 'sync';
+
 interface PlayerNamePromptProps {
   /** Prefill recovery from magic link. */
   recoveryCode?: string | null;
@@ -31,8 +39,8 @@ interface PlayerNamePromptProps {
 }
 
 /**
- * Startup modal for the leaderboard display name + compact chip to edit later.
- * Also hosts light multi-device sync (recovery code).
+ * Startup modal for the leaderboard display name + visible sync chip.
+ * Sync also opens from settings / footer via `requestOpenAccountSync`.
  */
 export function PlayerNamePrompt({
   recoveryCode = null,
@@ -49,18 +57,34 @@ export function PlayerNamePrompt({
       Boolean(recoveryCode) ||
       (!getPlayerDisplayName() && !hasSeenPrompt())
   );
-  const [showSync, setShowSync] = useState(() => Boolean(recoveryCode));
+  const [modalMode, setModalMode] = useState<ModalMode>(() =>
+    recoveryCode ? 'sync' : 'name'
+  );
+  const [showSyncInName, setShowSyncInName] = useState(() =>
+    Boolean(recoveryCode)
+  );
 
   useEffect(() => {
     if (recoveryCode) {
+      setModalMode('sync');
       setOpen(true);
-      setShowSync(true);
+      setShowSyncInName(true);
     }
   }, [recoveryCode]);
+
+  useEffect(() => {
+    const onOpenSync = () => {
+      setModalMode('sync');
+      setOpen(true);
+    };
+    window.addEventListener(OPEN_ACCOUNT_SYNC_EVENT, onOpenSync);
+    return () => window.removeEventListener(OPEN_ACCOUNT_SYNC_EVENT, onOpenSync);
+  }, []);
 
   const close = useCallback(() => {
     markPromptSeen();
     setOpen(false);
+    setModalMode('name');
   }, []);
 
   const handleSave = useCallback(() => {
@@ -75,9 +99,11 @@ export function PlayerNamePrompt({
 
   useEffect(() => {
     if (!open) return;
-    const id = window.setTimeout(() => inputRef.current?.focus(), 50);
+    const id = window.setTimeout(() => {
+      if (modalMode === 'name') inputRef.current?.focus();
+    }, 50);
     return () => window.clearTimeout(id);
-  }, [open]);
+  }, [open, modalMode]);
 
   useEffect(() => {
     if (!open) return;
@@ -111,10 +137,16 @@ export function PlayerNamePrompt({
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [open, handleSkip, showSync]);
+  }, [open, handleSkip, modalMode, showSyncInName]);
 
   const openEditor = () => {
     setDraft(getPlayerDisplayName());
+    setModalMode('name');
+    setOpen(true);
+  };
+
+  const openSync = () => {
+    setModalMode('sync');
     setOpen(true);
   };
 
@@ -140,6 +172,14 @@ export function PlayerNamePrompt({
             ✎
           </span>
         </button>
+        <button
+          type="button"
+          className="player-chip player-chip--sync"
+          onClick={openSync}
+          aria-haspopup="dialog"
+        >
+          {t('account.saveProgress')}
+        </button>
       </div>
 
       {open && (
@@ -157,65 +197,91 @@ export function PlayerNamePrompt({
             aria-modal="true"
             aria-labelledby="player-modal-title"
           >
-            <h2 id="player-modal-title" className="player-modal__title">
-              {t('home.playerModalTitle')}
-            </h2>
-            <p className="player-modal__hint">{t('home.playerNameHint')}</p>
+            {modalMode === 'sync' ? (
+              <>
+                <h2 id="player-modal-title" className="player-modal__title">
+                  {t('account.saveProgressTitle')}
+                </h2>
+                <AccountSyncPanel
+                  initialCode={recoveryCode}
+                  autoFocusRedeem={Boolean(recoveryCode)}
+                  onRecovered={handleRecovered}
+                />
+                <div className="player-modal__actions">
+                  <button
+                    type="button"
+                    className="btn btn--ghost"
+                    onClick={handleSkip}
+                  >
+                    {t('account.closeSync')}
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2 id="player-modal-title" className="player-modal__title">
+                  {t('home.playerModalTitle')}
+                </h2>
+                <p className="player-modal__hint">{t('home.playerNameHint')}</p>
 
-            <label htmlFor={inputId} className="visually-hidden">
-              {t('home.playerName')}
-            </label>
-            <input
-              ref={inputRef}
-              id={inputId}
-              type="text"
-              className="player-modal__input"
-              value={draft}
-              maxLength={24}
-              placeholder={t('home.playerNamePlaceholder')}
-              onChange={(e) => setDraft(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  e.preventDefault();
-                  handleSave();
-                }
-              }}
-              autoComplete="nickname"
-              name="quiz-player-name"
-            />
+                <label htmlFor={inputId} className="visually-hidden">
+                  {t('home.playerName')}
+                </label>
+                <input
+                  ref={inputRef}
+                  id={inputId}
+                  type="text"
+                  className="player-modal__input"
+                  value={draft}
+                  maxLength={24}
+                  placeholder={t('home.playerNamePlaceholder')}
+                  onChange={(e) => setDraft(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      handleSave();
+                    }
+                  }}
+                  autoComplete="nickname"
+                  name="quiz-player-name"
+                />
 
-            <div className="player-modal__actions">
-              <button
-                type="button"
-                className="btn btn--ghost"
-                onClick={handleSkip}
-              >
-                {t('home.playerModalSkip')}
-              </button>
-              <button
-                type="button"
-                className="btn btn--primary"
-                onClick={handleSave}
-              >
-                {t('home.playerModalSave')}
-              </button>
-            </div>
+                <div className="player-modal__actions">
+                  <button
+                    type="button"
+                    className="btn btn--ghost"
+                    onClick={handleSkip}
+                  >
+                    {t('home.playerModalSkip')}
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn--primary"
+                    onClick={handleSave}
+                  >
+                    {t('home.playerModalSave')}
+                  </button>
+                </div>
 
-            <button
-              type="button"
-              className="account-sync-toggle"
-              aria-expanded={showSync}
-              onClick={() => setShowSync((v) => !v)}
-            >
-              {showSync ? t('account.hideSync') : t('account.showSync')}
-            </button>
+                <button
+                  type="button"
+                  className="account-sync-toggle"
+                  aria-expanded={showSyncInName}
+                  onClick={() => setShowSyncInName((v) => !v)}
+                >
+                  {showSyncInName
+                    ? t('account.hideSync')
+                    : t('account.showSync')}
+                </button>
 
-            {showSync && (
-              <AccountSyncPanel
-                initialCode={recoveryCode}
-                autoFocusRedeem={Boolean(recoveryCode)}
-                onRecovered={handleRecovered}
-              />
+                {showSyncInName && (
+                  <AccountSyncPanel
+                    initialCode={recoveryCode}
+                    autoFocusRedeem={Boolean(recoveryCode)}
+                    onRecovered={handleRecovered}
+                  />
+                )}
+              </>
             )}
           </div>
         </div>

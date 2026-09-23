@@ -760,6 +760,12 @@ a {
   font-weight: 500;
 }
 
+.quiz-card__meta-chip--due {
+  color: var(--color-primary);
+  font-weight: 650;
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+}
+
 .difficulty-filter {
   display: flex;
   flex-wrap: wrap;
@@ -1507,8 +1513,43 @@ a {
 
 .reengage-banner__actions {
   display: flex;
-  gap: 0.45rem;
   flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.weak-spots-due-chip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.75rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+}
+
+.weak-spots-due-chip__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.weak-spots-due-chip__desc {
+  margin: 0.2rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.result-weak-spots-cta {
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: stretch;
+}
+
+.result-weak-spots-cta .btn {
+  width: 100%;
 }
 
 .quiz-card__meta-chip--streak {
@@ -2403,6 +2444,17 @@ a {
   color: var(--color-primary);
 }
 
+button.app-footer__sync {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 .app-footer__version {
   color: var(--color-text-soft, var(--color-text-muted));
   font-size: 0.72rem;
@@ -2976,6 +3028,8 @@ a {
 .player-chip-bar {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .player-chip {
@@ -2993,6 +3047,11 @@ a {
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   transition: border-color 0.15s var(--ease-out), transform 0.15s var(--ease-out);
+}
+
+.player-chip--sync {
+  color: var(--color-primary);
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
 }
 
 .player-chip:hover {
@@ -3110,6 +3169,13 @@ a {
   margin-top: 0.35rem;
   padding-top: 0.85rem;
   border-top: 1px solid var(--color-border);
+}
+
+.setting-row--account-sync .account-sync {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  width: 100%;
 }
 
 .account-sync__title {

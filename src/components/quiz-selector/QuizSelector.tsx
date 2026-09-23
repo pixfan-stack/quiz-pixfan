@@ -5,6 +5,7 @@ import { WeeklyLeaders } from '../WeeklyLeaders';
 import { DailyNudge } from '../DailyNudge';
 import { SeasonBanner } from '../SeasonBanner';
 import { AchievementsPanel } from '../AchievementsPanel';
+import { WeakSpotsDueChip } from '../WeakSpotsDueChip';
 import { RANDOM_QUIZ_ID } from '../../utils/randomQuiz';
 import type { QuizSelectorProps } from './types';
 import { useQuizSelectorState } from './useQuizSelectorState';
@@ -58,6 +59,7 @@ export function QuizSelector({
       />
 
       <DailyNudge onPlayDaily={state.handleStartDaily} />
+      <WeakSpotsDueChip onReview={state.handleStartWeakSpots} />
       <SeasonBanner />
 
       {state.difficultyFilter === 'all' && (
@@ -100,6 +102,7 @@ export function QuizSelector({
         quizzes={quizzes}
         playCounts={state.playCounts}
         vaultCount={state.vaultCount}
+        dueCount={state.dueCount}
         lang={state.lang}
         getBestScore={state.getBestScore}
         onPrefetchQuiz={onPrefetchQuiz}

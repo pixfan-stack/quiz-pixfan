@@ -3,12 +3,17 @@ import type { Quiz } from '../types/quiz';
 import {
   buildWeakSpotsQuiz,
   clearMistakeVault,
+  getDueMistakeCount,
   getMistakeVault,
   getMistakeVaultCount,
+  isMistakeDue,
   mergeMistakeVaultEntries,
   mergeRemoteMistakeVault,
+  mistakeReviewScore,
   recordMistakes,
   resolveCorrectAnswers,
+  reviewIntervalDays,
+  shouldShowWeakSpotsDueChip,
   WEAK_SPOTS_QUIZ_ID,
 } from '../utils/mistakeVault';
 
@@ -158,5 +163,105 @@ describe('mistakeVault', () => {
     expect(getMistakeVault().some((e) => e.questionId === 'cat-a__q2')).toBe(
       true
     );
+  });
+
+  it('uses light SRS intervals 1d / 3d / 7d from missCount', () => {
+    expect(reviewIntervalDays({ missCount: 1 })).toBe(7);
+    expect(reviewIntervalDays({ missCount: 2 })).toBe(3);
+    expect(reviewIntervalDays({ missCount: 3 })).toBe(1);
+    expect(reviewIntervalDays({ missCount: 9 })).toBe(1);
+  });
+
+  it('marks entries due by lastMissedAt + interval', () => {
+    const now = Date.parse('2026-09-23T12:00:00.000Z');
+    const fresh = {
+      questionId: 'a',
+      sourceQuizId: 'cat-a',
+      missCount: 1,
+      lastMissedAt: '2026-09-23T11:00:00.000Z',
+    };
+    const due = {
+      questionId: 'b',
+      sourceQuizId: 'cat-a',
+      missCount: 1,
+      lastMissedAt: '2026-09-01T12:00:00.000Z',
+    };
+    expect(isMistakeDue(fresh, now)).toBe(false);
+    expect(isMistakeDue(due, now)).toBe(true);
+    expect(mistakeReviewScore(due, now)).toBeGreaterThan(
+      mistakeReviewScore(fresh, now)
+    );
+  });
+
+  it('prioritizes due vault entries in weak-spots pack', () => {
+    const now = Date.parse('2026-09-23T12:00:00.000Z');
+    // Seed storage directly with timed entries
+    localStorage.setItem(
+      'quiz-pixfan-mistake-vault',
+      JSON.stringify([
+        {
+          questionId: 'cat-a__q1',
+          sourceQuizId: 'cat-a',
+          missCount: 1,
+          lastMissedAt: '2026-09-23T11:00:00.000Z', // not due (7d)
+        },
+        {
+          questionId: 'cat-a__q2',
+          sourceQuizId: 'cat-a',
+          missCount: 1,
+          lastMissedAt: '2026-09-01T12:00:00.000Z', // due
+        },
+      ])
+    );
+    expect(getDueMistakeCount(now)).toBe(1);
+    const pack = buildWeakSpotsQuiz(sample, 10, now);
+    expect(pack?.questions[0]?.id).toBe('cat-a__q2');
+  });
+
+  it('shows home due chip at ≥3 dues', () => {
+    const now = Date.parse('2026-09-23T12:00:00.000Z');
+    const old = '2026-09-01T12:00:00.000Z';
+    localStorage.setItem(
+      'quiz-pixfan-mistake-vault',
+      JSON.stringify([
+        {
+          questionId: 'a',
+          sourceQuizId: 'x',
+          missCount: 1,
+          lastMissedAt: old,
+        },
+        {
+          questionId: 'b',
+          sourceQuizId: 'x',
+          missCount: 1,
+          lastMissedAt: old,
+        },
+      ])
+    );
+    expect(shouldShowWeakSpotsDueChip(now)).toBe(false);
+    localStorage.setItem(
+      'quiz-pixfan-mistake-vault',
+      JSON.stringify([
+        {
+          questionId: 'a',
+          sourceQuizId: 'x',
+          missCount: 1,
+          lastMissedAt: old,
+        },
+        {
+          questionId: 'b',
+          sourceQuizId: 'x',
+          missCount: 1,
+          lastMissedAt: old,
+        },
+        {
+          questionId: 'c',
+          sourceQuizId: 'x',
+          missCount: 1,
+          lastMissedAt: old,
+        },
+      ])
+    );
+    expect(shouldShowWeakSpotsDueChip(now)).toBe(true);
   });
 });
