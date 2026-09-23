@@ -55,7 +55,8 @@ type HabitEventName =
   | 'ics_download'
   | 'pwa_install'
   | 'account_create'
-  | 'account_redeem';
+  | 'account_redeem'
+  | 'weak_spots_cta';
 
 const ATTEMPT_MODES: AttemptMode[] = [
   'photo-reading',
@@ -72,6 +73,7 @@ const HABIT_EVENTS = new Set<HabitEventName>([
   'pwa_install',
   'account_create',
   'account_redeem',
+  'weak_spots_cta',
 ]);
 
 /** Exclude CTA + habit markers from real quiz attempt aggregates. */
@@ -198,6 +200,7 @@ function buildHabitEvents(
     'pwa_install',
     'account_create',
     'account_redeem',
+    'weak_spots_cta',
   ];
   return order
     .filter((e) => (map.get(e) ?? 0) > 0)

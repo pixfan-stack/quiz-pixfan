@@ -27,6 +27,11 @@ import { ResultShareSection } from './ResultShareSection';
 import type { ResultScreenProps } from './types';
 import { useResultScreenEffects } from './useResultScreenEffects';
 import { useResultShareActions } from './useResultShareActions';
+import {
+  getMistakeVaultCount,
+  isWeakSpotsQuizId,
+} from '../../utils/mistakeVault';
+import { trackHabitEvent } from '../../utils/analyticsApi';
 
 /**
  * Post-quiz results: score, message, high-score banner, confetti, social share, export.
@@ -37,6 +42,7 @@ export function ResultScreen({
   onRetry,
   onHome,
   onPlayDaily,
+  onPlayWeakSpots,
   onScoreSubmitted,
   categoryQuizIds = [],
   quizzes = [],
@@ -112,6 +118,11 @@ export function ResultScreen({
     isDaily,
     langCode,
   });
+
+  const showWeakSpotsCta =
+    Boolean(onPlayWeakSpots) &&
+    !isWeakSpotsQuizId(result.quizId) &&
+    (getMistakeVaultCount() > 0 || vaultSaved > 0);
 
   return (
     <>
@@ -284,6 +295,21 @@ export function ResultScreen({
               .filter((m) => !m.wasCorrect)
               .map((m) => m.question.id)}
           />
+
+          {showWeakSpotsCta && (
+            <div className="result-weak-spots-cta">
+              <button
+                type="button"
+                className="btn btn--secondary"
+                onClick={() => {
+                  void trackHabitEvent('weak_spots_cta');
+                  onPlayWeakSpots?.();
+                }}
+              >
+                {t('result.reviewWeakSpots')}
+              </button>
+            </div>
+          )}
 
           <Leaderboard
             quizId={result.quizId}

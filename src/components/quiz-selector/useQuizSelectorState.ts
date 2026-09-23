@@ -30,6 +30,7 @@ import {
 import { hasPlayedDailyToday } from '../../utils/reengage';
 import {
   buildWeakSpotsQuiz,
+  getDueMistakeCount,
   getMistakeVaultCount,
 } from '../../utils/mistakeVault';
 import {
@@ -85,6 +86,7 @@ export function useQuizSelectorState({
   const streakFreezes = getStreakFreezesAvailable();
   const dailyPlayed = hasPlayedDailyToday();
   const vaultCount = getMistakeVaultCount();
+  const dueCount = getDueMistakeCount();
   const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
   const [dailyCountdown, setDailyCountdown] = useState(() =>
     formatDailyCountdown(msUntilNextDaily(), langCode)
@@ -305,6 +307,7 @@ export function useQuizSelectorState({
     streakFreezes,
     dailyPlayed,
     vaultCount,
+    dueCount,
     dailyCountdown,
     dailyTeaser,
     dailyThemeChip,

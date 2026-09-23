@@ -25,6 +25,8 @@ interface QuizScreenProps {
   onHome: () => void;
   /** Jump straight into today’s daily challenge (re-engage CTA). */
   onPlayDaily?: () => void;
+  /** Jump into weak-spots practice from results. */
+  onPlayWeakSpots?: () => void;
   timePerQuestion?: number;
   antiCheat?: boolean;
   onScoreSubmitted?: () => void;
@@ -44,6 +46,7 @@ export default function QuizScreen({
   quiz,
   onHome,
   onPlayDaily,
+  onPlayWeakSpots,
   timePerQuestion = 0,
   antiCheat = false,
   onScoreSubmitted,
@@ -66,6 +69,7 @@ export default function QuizScreen({
         onRetry={engine.reset}
         onHome={onHome}
         onPlayDaily={onPlayDaily}
+        onPlayWeakSpots={onPlayWeakSpots}
         onScoreSubmitted={onScoreSubmitted}
         categoryQuizIds={categoryQuizIds}
         quizzes={quizzes}

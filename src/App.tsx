@@ -39,6 +39,7 @@ import {
 } from './utils/photoReading';
 import { APP_VERSION } from './version';
 import { pullAndMergeAccountProgress } from './utils/accountSync';
+import { requestOpenAccountSync } from './components/PlayerNameInput';
 
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
 const AdminScreen = lazy(() => import('./components/AdminScreen'));
@@ -232,6 +233,14 @@ export default function App() {
     startQuiz(buildDailyQuiz(quizzes));
   }, [quizzes, startQuiz]);
 
+  const handlePlayWeakSpots = useCallback(() => {
+    if (quizzes.length === 0) return;
+    const pack = buildWeakSpotsQuiz(quizzes);
+    if (!pack) return;
+    prefetchQuizScreen();
+    startQuiz(pack);
+  }, [quizzes, startQuiz]);
+
   const handleHome = () => {
     setActiveQuiz(null);
     setTargetScore(null);
@@ -310,6 +319,7 @@ export default function App() {
                 quiz={activeQuiz}
                 onHome={handleHome}
                 onPlayDaily={handlePlayDaily}
+                onPlayWeakSpots={handlePlayWeakSpots}
                 timePerQuestion={settings.timePerQuestion}
                 antiCheat={settings.antiCheat}
                 onScoreSubmitted={handleScoreSubmitted}
@@ -365,6 +375,21 @@ export default function App() {
           </a>
         </nav>
         <div className="app-footer__inner">
+          <button
+            type="button"
+            className="app-footer__link app-footer__sync"
+            onClick={() => {
+              if (view !== 'home') {
+                setActiveQuiz(null);
+                setTargetScore(null);
+                setView('home');
+                clearQuizHash();
+              }
+              requestOpenAccountSync();
+            }}
+          >
+            {t('footer.saveProgress')}
+          </button>
           <a
             href="https://www.pixfan.com"
             target="_blank"

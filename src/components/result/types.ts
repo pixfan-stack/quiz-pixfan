@@ -9,6 +9,8 @@ export interface ResultScreenProps {
   onHome: () => void;
   /** Start today’s daily challenge (re-engage CTA). */
   onPlayDaily?: () => void;
+  /** Jump into weak-spots practice from post-score CTA. */
+  onPlayWeakSpots?: () => void;
   onScoreSubmitted?: () => void;
   /** Category quiz ids for explorer / expert-trio achievements. */
   categoryQuizIds?: string[];

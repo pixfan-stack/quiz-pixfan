@@ -27,6 +27,7 @@ interface MorePacksSectionProps {
   quizzes: Quiz[];
   playCounts: Map<string, number>;
   vaultCount: number;
+  dueCount: number;
   lang: string;
   getBestScore: (quizId: string) => BestScore;
   onPrefetchQuiz?: () => void;
@@ -45,6 +46,7 @@ export function MorePacksSection({
   quizzes,
   playCounts,
   vaultCount,
+  dueCount,
   lang,
   getBestScore,
   onPrefetchQuiz,
@@ -127,6 +129,11 @@ export function MorePacksSection({
                           count: Math.min(vaultCount, WEAK_SPOTS_QUESTION_COUNT),
                         })}
                       </span>
+                      {dueCount > 0 && (
+                        <span className="quiz-card__meta-chip quiz-card__meta-chip--due">
+                          {t('home.weakSpotsDueCount', { count: dueCount })}
+                        </span>
+                      )}
                     </div>
                     <span className="quiz-card__cta">
                       {t('home.start')}

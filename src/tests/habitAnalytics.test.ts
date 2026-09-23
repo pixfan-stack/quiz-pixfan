@@ -55,6 +55,7 @@ describe('habitAnalytics', () => {
       { quizId: 'evt:pwa_install', count: 2 },
       { quizId: 'evt:account_create', count: 4 },
       { quizId: 'evt:account_redeem', count: 1 },
+      { quizId: 'evt:weak_spots_cta', count: 6 },
       { quizId: 'evt:bogus', count: 9 },
     ]);
     expect(events).toEqual([
@@ -64,6 +65,7 @@ describe('habitAnalytics', () => {
       { event: 'pwa_install', count: 2 },
       { event: 'account_create', count: 4 },
       { event: 'account_redeem', count: 1 },
+      { event: 'weak_spots_cta', count: 6 },
     ]);
   });
 

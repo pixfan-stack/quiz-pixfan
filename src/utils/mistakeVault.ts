@@ -2,8 +2,11 @@ import type { AnswerReviewItem, Question, Quiz } from '../types/quiz';
 
 export const WEAK_SPOTS_QUIZ_ID = 'weak-spots';
 export const WEAK_SPOTS_QUESTION_COUNT = 10;
+/** Home chip appears when at least this many vault entries are due. */
+export const WEAK_SPOTS_DUE_CHIP_THRESHOLD = 3;
 const STORAGE_KEY = 'quiz-pixfan-mistake-vault';
 const MAX_ENTRIES = 80;
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 export interface MistakeVaultEntry {
   questionId: string;
@@ -46,6 +49,57 @@ export function getMistakeVault(): MistakeVaultEntry[] {
 
 export function getMistakeVaultCount(): number {
   return readVault().length;
+}
+
+/**
+ * Light SRS interval (days) from miss severity.
+ * Stubborn mistakes (higher missCount) come due sooner: 1d / 3d / 7d.
+ */
+export function reviewIntervalDays(entry: Pick<MistakeVaultEntry, 'missCount'>): number {
+  if (entry.missCount >= 3) return 1;
+  if (entry.missCount === 2) return 3;
+  return 7;
+}
+
+/** True when enough time has passed since lastMissedAt for the entry's interval. */
+export function isMistakeDue(
+  entry: MistakeVaultEntry,
+  nowMs: number = Date.now()
+): boolean {
+  const last = Date.parse(entry.lastMissedAt);
+  if (Number.isNaN(last)) return true;
+  return nowMs - last >= reviewIntervalDays(entry) * DAY_MS;
+}
+
+/**
+ * Priority score for spaced review: dues first, then missCount, then age.
+ * Higher = pull sooner into weak-spots.
+ */
+export function mistakeReviewScore(
+  entry: MistakeVaultEntry,
+  nowMs: number = Date.now()
+): number {
+  const dueBonus = isMistakeDue(entry, nowMs) ? 1000 : 0;
+  const last = Date.parse(entry.lastMissedAt);
+  const ageDays = Number.isNaN(last) ? 0 : (nowMs - last) / DAY_MS;
+  return dueBonus + entry.missCount * 10 + ageDays;
+}
+
+export function getDueMistakeEntries(
+  nowMs: number = Date.now()
+): MistakeVaultEntry[] {
+  return readVault().filter((e) => isMistakeDue(e, nowMs));
+}
+
+export function getDueMistakeCount(nowMs: number = Date.now()): number {
+  return getDueMistakeEntries(nowMs).length;
+}
+
+/** Home “à revoir” chip when enough dues are waiting. */
+export function shouldShowWeakSpotsDueChip(
+  nowMs: number = Date.now()
+): boolean {
+  return getDueMistakeCount(nowMs) >= WEAK_SPOTS_DUE_CHIP_THRESHOLD;
 }
 
 function normalizeVaultEntry(raw: unknown): MistakeVaultEntry | null {
@@ -236,10 +290,13 @@ export function isWeakSpotsQuizId(quizId: string): boolean {
   return quizId === WEAK_SPOTS_QUIZ_ID;
 }
 
-/** Build a practice pack from vaulted question ids still present in the catalog. */
+/** Build a practice pack from vaulted question ids still present in the catalog.
+ *  Due (SRS) entries are drawn first; remaining slots fill by review score.
+ */
 export function buildWeakSpotsQuiz(
   quizzes: Quiz[],
-  count = WEAK_SPOTS_QUESTION_COUNT
+  count = WEAK_SPOTS_QUESTION_COUNT,
+  nowMs: number = Date.now()
 ): Quiz | null {
   const vault = readVault();
   if (vault.length === 0 || quizzes.length === 0) return null;
@@ -256,10 +313,20 @@ export function buildWeakSpotsQuiz(
     }
   }
 
+  const ranked = [...vault].sort(
+    (a, b) =>
+      mistakeReviewScore(b, nowMs) - mistakeReviewScore(a, nowMs) ||
+      b.missCount - a.missCount ||
+      Date.parse(b.lastMissedAt) - Date.parse(a.lastMissedAt)
+  );
+
   const picked: Question[] = [];
-  for (const entry of vault) {
+  const seen = new Set<string>();
+  for (const entry of ranked) {
     const q = pool.get(entry.questionId);
-    if (q) picked.push(q);
+    if (!q || seen.has(q.id)) continue;
+    seen.add(q.id);
+    picked.push(q);
     if (picked.length >= count) break;
   }
 
