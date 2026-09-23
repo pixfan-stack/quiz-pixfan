@@ -29,6 +29,26 @@
     "mainEntityOfPage": "https://quiz.pixfan.fr/guides/triangle-exposition"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Guides",
+        "item": "https://quiz.pixfan.fr/guides/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Triangle d’exposition",
+        "item": "https://quiz.pixfan.fr/guides/triangle-exposition"
+      }
+    ]
+  }
+  </script>
   <script>
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
@@ -43,6 +63,10 @@
       <a href="/guides/">Guides</a>
       <a href="/s/exposure-basics">Quiz exposition</a>
       <span class="lang-switch muted"><a href="?lang=fr">FR</a> · <a href="?lang=en">EN</a></span>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Fil d’Ariane">
+      <a href="/guides/">Guides</a><span class="breadcrumb__sep" aria-hidden="true">→</span><span class="breadcrumb__current">Triangle d’exposition</span>
     </nav>
 
     <article class="fr">

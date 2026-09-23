@@ -318,6 +318,8 @@
     "streak3Desc": "Reach a 3-day daily streak.",
     "streak7": "Week warrior",
     "streak7Desc": "Reach a 7-day daily streak.",
+    "streak14": "Two weeks",
+    "streak14Desc": "Reach a 14-day daily streak.",
     "perfect": "Flawless",
     "perfectDesc": "Score 100% on any quiz.",
     "randomPerfect": "Chaos master",
@@ -327,7 +329,11 @@
     "explorer": "Explorer",
     "explorerDesc": "Play every category at least once.",
     "duelist": "Duelist",
-    "duelistDesc": "Finish a friend duel."
+    "duelistDesc": "Finish a friend duel.",
+    "photoReader": "Photo reader",
+    "photoReaderDesc": "Finish photo-reading mode 3 times.",
+    "vaultClear": "Vault cleared",
+    "vaultClearDesc": "Master 10 weak spots (resolved mistakes)."
   },
   "footer": {
     "copyright": "© {{year}} pixfan.com — Learn photography, choose your gear",

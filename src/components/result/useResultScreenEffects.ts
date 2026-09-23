@@ -47,22 +47,25 @@ export function useResultScreenEffects({
     formatDailyCountdown(msUntilNextDaily(), langCode)
   );
 
-  // Daily streak + achievements + mistake vault (local)
+  // Daily streak + mistake vault + achievements (local)
   useEffect(() => {
     markQuizPlayed();
     const streakState = recordDailyCompletion(result.quizId);
     setDailyStreak(streakState.currentStreak);
     setFreezeConsumed(streakState.freezeConsumed);
+    // Resolve before unlock so vault-clear can count this run
+    const cleared = resolveCorrectAnswers(result.reviews ?? []);
+    setVaultCleared(cleared);
+    setVaultSaved(recordMistakes(result.mistakes ?? []));
     const newly = unlockAchievements({
       quizId: result.quizId,
       percentage: result.percentage,
       categoryQuizIds,
       highscores: getAllHighScores(),
       streak: streakState,
+      vaultClearedThisRun: cleared,
     });
     setNewAchievements(newly);
-    setVaultSaved(recordMistakes(result.mistakes ?? []));
-    setVaultCleared(resolveCorrectAnswers(result.reviews ?? []));
   }, [result.quizId, result.percentage, result.mistakes, result.reviews, categoryQuizIds]);
 
   useEffect(() => {

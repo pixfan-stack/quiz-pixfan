@@ -29,6 +29,26 @@
     "mainEntityOfPage": "https://quiz.pixfan.fr/guides/composition-photo"
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Guides",
+        "item": "https://quiz.pixfan.fr/guides/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Composition photo",
+        "item": "https://quiz.pixfan.fr/guides/composition-photo"
+      }
+    ]
+  }
+  </script>
   <script>
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
@@ -43,6 +63,10 @@
       <a href="/guides/">Guides</a>
       <a href="/s/composition">Quiz composition</a>
       <span class="lang-switch muted"><a href="?lang=fr">FR</a> · <a href="?lang=en">EN</a></span>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Fil d’Ariane">
+      <a href="/guides/">Guides</a><span class="breadcrumb__sep" aria-hidden="true">→</span><span class="breadcrumb__current">Composition photo</span>
     </nav>
 
     <article class="fr">
