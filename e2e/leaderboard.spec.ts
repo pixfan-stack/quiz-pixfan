@@ -23,7 +23,7 @@ test.describe('Leaderboard profile', () => {
     await page.getByRole('button', { name: /Plus tard|Later/i }).click();
     await expect(page.getByRole('dialog')).toHaveCount(0);
 
-    await page.locator('.player-chip').click();
+    await page.locator('.player-chip:not(.player-chip--sync)').click();
     await expect(page.getByRole('dialog')).toBeVisible();
   });
 
