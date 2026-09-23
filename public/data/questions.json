@@ -323,7 +323,16 @@
             "en": "Long exposures blur moving water into a smooth “silk” look. A tripod (and ND filters in daylight) keep the rest sharp.",
             "fr": "Les poses longues floutent l'eau en mouvement pour un rendu soyeux. Un trépied (et des filtres ND en plein jour) gardent le reste net."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1518182170546-07661fd94144.avif",
+          "imageAlt": {
+            "en": "Silky waterfall long exposure — slow shutter territory",
+            "fr": "Cascade soyeuse en pose longue — terrain de l’obturateur lent"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-7",
@@ -649,7 +658,16 @@
             "en": "Depth of field is controlled by aperture, subject distance, and focal length. ISO affects sensitivity and noise, not depth of field.",
             "fr": "La profondeur de champ est contrôlée par l'ouverture, la distance au sujet et la focale. L'ISO affecte la sensibilité et le bruit, pas la profondeur de champ."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1493863641943-9b68992a8d07.avif",
+          "imageAlt": {
+            "en": "Photographer with shallow depth of field behind the subject",
+            "fr": "Photographe avec faible profondeur de champ derrière le sujet"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-14",
@@ -835,7 +853,16 @@
             "en": "Higher ISO amplifies signal but also noise, reduces dynamic range, and can cause color fidelity issues. Sharpness doesn't improve.",
             "fr": "Un ISO plus élevé amplifie le signal mais aussi le bruit, réduit la plage dynamique et peut causer des problèmes de fidélité colorimétrique. La netteté ne s'améliore pas."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
+          "imageAlt": {
+            "en": "City lights at night — high ISO trade-offs",
+            "fr": "Lumières de ville la nuit — compromis haut ISO"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-18",
@@ -1232,6 +1259,15 @@
           "explanation": {
             "en": "A sharp, well-exposed high-ISO frame beats a clean but blurry one.",
             "fr": "Un cliché net et bien exposé à haut ISO bat un fichier « propre » mais flou."
+          },
+          "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
+          "imageAlt": {
+            "en": "Night sky — noise vs blur when raising ISO",
+            "fr": "Ciel nocturne — bruit vs flou en montant l’ISO"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -5661,7 +5697,7 @@
             "en": "Classic camera",
             "fr": "Appareil classique"
           },
-          "difficulty": "medium",
+          "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
@@ -5716,7 +5752,7 @@
             "en": "Vintage photography gear",
             "fr": "Matériel photo vintage"
           },
-          "difficulty": "medium",
+          "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
@@ -5878,7 +5914,7 @@
             "en": "Leibovitz’s work for Rolling Stone, Vanity Fair and beyond defined modern celebrity portraiture with cinematic staging.",
             "fr": "Le travail de Leibovitz pour Rolling Stone, Vanity Fair et au-delà a défini le portrait de célébrités moderne, très mis en scène."
           },
-          "difficulty": "medium",
+          "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage camera — icons of photographic history",
@@ -5933,7 +5969,16 @@
             "en": "Announced publicly in 1839, the daguerreotype created a detailed unique positive on a polished silver-coated copper plate — a milestone for popular photography.",
             "fr": "Annoncé publiquement en 1839, le daguerréotype créait un positif unique et détaillé sur plaque de cuivre argentée — un jalon pour la photo grand public."
           },
-          "difficulty": "medium"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
+          "imageAlt": {
+            "en": "Vintage camera suggesting early photographic processes",
+            "fr": "Appareil vintage évoquant les premiers procédés photo"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-7",
@@ -5979,7 +6024,16 @@
             "en": "Released in 1900, the Brownie made photography accessible to children and amateurs with its $1 price tag.",
             "fr": "Lancé en 1900, le Brownie a rendu la photographie accessible aux enfants et amateurs avec son prix de 1$."
           },
-          "difficulty": "medium"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
+          "imageAlt": {
+            "en": "Classic camera body — democratized snapshot culture",
+            "fr": "Boîtier classique — culture du cliché démocratisé"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-8",
@@ -6025,7 +6079,7 @@
             "en": "Steven Sasson's Kodak prototype weighed 8 pounds, took 23 seconds to capture an image, and recorded to cassette tape.",
             "fr": "Le prototype Kodak de Steven Sasson pesait 3,6 kg, prenait 23 secondes pour capturer une image et enregistrait sur cassette."
           },
-          "difficulty": "hard"
+          "difficulty": "medium"
         },
         {
           "id": "hist-9",
@@ -6073,7 +6127,16 @@
             "en": "Lange ('Migrant Mother'), Evans, and Rothstein photographed Depression-era poverty for the Farm Security Administration.",
             "fr": "Lange ('Mère migrante'), Evans et Rothstein ont photographié la pauvreté de l'ère Dépression pour la Farm Security Administration."
           },
-          "difficulty": "hard"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
+          "imageAlt": {
+            "en": "Documentary landscape mood — Depression-era photo tradition",
+            "fr": "Paysage documentaire — tradition photo des années de crise"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-10",
@@ -6119,7 +6182,7 @@
             "en": "Curated by Edward Steichen in 1955, it traveled worldwide reaching 9 million visitors, celebrating universal human experiences.",
             "fr": "Curatée par Edward Steichen en 1955, elle a voyagé dans le monde entier touchant 9 millions de visiteurs, célébrant les expériences humaines universelles."
           },
-          "difficulty": "hard"
+          "difficulty": "medium"
         },
         {
           "id": "hist-11",
@@ -6212,7 +6275,7 @@
             "en": "Napalm Girl and Tank Man had direct impacts on war perception and policy. Migrant Mother affected Depression response, Earthrise environmental awareness.",
             "fr": "Fille au napalm et Homme au char ont eu un impact direct sur la perception de la guerre et les politiques. Mère migrante a affecté la réponse à la Dépression, Levée de Terre la sensibilisation environnementale."
           },
-          "difficulty": "hard"
+          "difficulty": "medium"
         },
         {
           "id": "hist-13",
@@ -6258,7 +6321,16 @@
             "en": "The Zone System divides tonal values into 11 zones (0-black to X-white), giving photographers precise control over exposure and development.",
             "fr": "Le Système de Zones divise les valeurs tonales en 11 zones (0-noir à X-blanc), donnant aux photographes un contrôle précis sur l'exposition et le développement."
           },
-          "difficulty": "hard"
+          "difficulty": "hard",
+          "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
+          "imageAlt": {
+            "en": "Dramatic tonal landscape — Zone System territory",
+            "fr": "Paysage aux tons dramatiques — terrain du Zone System"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-14",
@@ -6304,7 +6376,7 @@
             "en": "Stieglitz elevated photography to art; Atget documented Paris. Both influenced modern photography's evolution significantly.",
             "fr": "Stieglitz a élevé la photographie au rang d'art ; Atget a documenté Paris. Tous deux ont significativement influencé l'évolution de la photographie moderne."
           },
-          "difficulty": "hard"
+          "difficulty": "medium"
         },
         {
           "id": "hist-15",
@@ -6352,7 +6424,7 @@
             "en": "Instagram transformed photography into a social, visual language. Smartphones replaced dedicated cameras for casual users.",
             "fr": "Instagram a transformé la photographie en un langage visuel et social. Les smartphones ont remplacé les appareils dédiés pour les utilisateurs occasionnels."
           },
-          "difficulty": "hard",
+          "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1611162616305-c69b3fa7fbe0.avif",
           "imageAlt": {
             "en": "Social media icon — Instagram’s impact on photography",
@@ -6407,7 +6479,16 @@
             "en": "Published in Life magazine in 1945, this iconic image symbolized relief and joy at WWII's end, though the subjects' identities remain unknown.",
             "fr": "Publié dans Life magazine en 1945, cette image iconique symbolise le soulagement et la joie à la fin de la Seconde Guerre mondiale, bien que les identités des sujets restent inconnues."
           },
-          "difficulty": "hard"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
+          "imageAlt": {
+            "en": "Crowded urban square — iconic photojournalism moments",
+            "fr": "Place urbaine bondée — moments iconiques du photojournalisme"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "hist-17",
@@ -6453,7 +6534,7 @@
             "en": "Robert Cornelius' daguerreotype from 1839 is considered the first American self-portrait and first photograph of a person.",
             "fr": "Le daguerréotype de Robert Cornelius de 1839 est considéré comme le premier autoportrait américain et la première photographie d'une personne."
           },
-          "difficulty": "hard"
+          "difficulty": "medium"
         },
         {
           "id": "hist-18",
@@ -6696,6 +6777,15 @@
           "explanation": {
             "en": "The image is iconic — and a reminder that “documentary” photos can be directed.",
             "fr": "L’image est iconique — et rappelle qu’une photo « documentaire » peut être dirigée."
+          },
+          "imageUrl": "/images/packs/photo-1495616811223-4d98c6e9c869.avif",
+          "imageAlt": {
+            "en": "Parisian street atmosphere — staged vs candid debates",
+            "fr": "Atmosphère de rue parisienne — débats mise en scène vs candide"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -6754,7 +6844,7 @@
           }
         }
       ],
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "id": "public-domain",
@@ -8204,7 +8294,16 @@
             "en": "Wildlife work mixes telephoto reach, timing, patience and ethics. Studio softboxes are not the field standard.",
             "fr": "La photo animalière mêle portée télé, timing, patience et éthique. Les softboxes de studio ne sont pas la norme sur le terrain."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1564349683136-77e08dba1ef7.avif",
+          "imageAlt": {
+            "en": "Wildlife subject in natural habitat",
+            "fr": "Sujet wildlife dans son habitat naturel"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-6",
@@ -8344,7 +8443,16 @@
             "en": "Food stylists use techniques like glycerin for steam, toothpicks for structure, and lighting to make food look appetizing.",
             "fr": "Les stylistes alimentaires utilisent des techniques comme le glycérin pour la vapeur, des cure-dents pour la structure et l'éclairage pour rendre la nourriture appétissante."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1504674900247-0877df9cc836.avif",
+          "imageAlt": {
+            "en": "Styled food plate ready for a food-photography setup",
+            "fr": "Assiette stylisée prête pour un setup food photo"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-9",
@@ -8438,7 +8546,16 @@
             "en": "Astrophotography needs stability (tripod), tracking for long exposures, and fast wide lenses. Macro is for close-ups.",
             "fr": "L'astrophotographie nécessite stabilité (trépied), suivi pour longues expositions et objectifs larges lumineux. Le macro est pour les gros plans."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
+          "imageAlt": {
+            "en": "Starry night sky for astrophotography",
+            "fr": "Ciel étoilé pour l’astrophotographie"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-11",
@@ -8906,7 +9023,16 @@
             "en": "Night photography demands different techniques: stability, light management, and noise control.",
             "fr": "La photographie nocturne exige différentes techniques : stabilité, gestion de la lumière et contrôle du bruit."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1519501025264-65ba15a82390.avif",
+          "imageAlt": {
+            "en": "Night city skyline — night photography trade-offs",
+            "fr": "Skyline urbain de nuit — compromis de la photo nocturne"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-21",
@@ -11208,6 +11334,15 @@
           "explanation": {
             "en": "BY = attribution; NC = non-commercial. Always read the exact CC deed.",
             "fr": "BY = attribution ; NC = non commercial. Lisez toujours le texte exact de la licence."
+          },
+          "imageUrl": "/images/packs/photo-1450101499163-c8848c66ca85.avif",
+          "imageAlt": {
+            "en": "License paperwork — Creative Commons choices matter",
+            "fr": "Documents de licence — les choix Creative Commons comptent"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11365,6 +11500,15 @@
           "explanation": {
             "en": "Freedom of panorama and trademark/property rules vary widely by country.",
             "fr": "La liberté de panorama et les règles de marque/propriété varient fortement selon les pays."
+          },
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
+          "imageAlt": {
+            "en": "Public street and buildings — freer to photograph, not always to sell",
+            "fr": "Rue et bâtiments publics — plus libre à photographier, pas toujours à vendre"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11413,6 +11557,15 @@
           "explanation": {
             "en": "Legality is not the only standard—respect and consent matter, especially with children.",
             "fr": "La légalité n’est pas le seul critère — respect et consentement comptent, surtout avec les enfants."
+          },
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
+          "imageAlt": {
+            "en": "Recognizable person — dignity and consent habits",
+            "fr": "Personne reconnaissable — dignité et réflexes de consentement"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11654,6 +11807,15 @@
           "explanation": {
             "en": "Legal and ethical debates continue around training data, opt-outs and likeness.",
             "fr": "Les débats juridiques et éthiques continuent sur les données d’entraînement, opt-out et ressemblance."
+          },
+          "imageUrl": "/images/packs/photo-1677442136019-21780ecad995.avif",
+          "imageAlt": {
+            "en": "Abstract AI / neural imagery — scraped-training debates",
+            "fr": "Imagerie abstraite IA — débats sur l’entraînement scrapé"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -11803,6 +11965,15 @@
           "explanation": {
             "en": "Clear contracts prevent disputes; keep records of what was delivered.",
             "fr": "Un contrat clair évite les litiges ; archivez ce qui a été livré."
+          },
+          "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
+          "imageAlt": {
+            "en": "Handshake — clear delivery agreements with clients",
+            "fr": "Poignée de main — accords de livraison clairs avec les clients"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12191,6 +12362,15 @@
           "explanation": {
             "en": "AI can be art. Passing it off as a captured photograph without saying so breaks trust.",
             "fr": "L’IA peut être de l’art. La faire passer pour une photo capturée sans le dire casse la confiance."
+          },
+          "imageUrl": "/images/packs/photo-1620712943543-bcc4688e7485.avif",
+          "imageAlt": {
+            "en": "Robot / AI metaphor — disclose synthetic images honestly",
+            "fr": "Métaphore robot / IA — divulguer honnêtement les images synthétiques"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14565,6 +14745,1050 @@
           "imageCredit": {
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash"
+          }
+        }
+      ]
+    },
+    {
+      "id": "portrait-light",
+      "title": {
+        "en": "Portrait & light (Pixfan path)",
+        "fr": "Portrait & lumière (parcours Pixfan)"
+      },
+      "description": {
+        "en": "Key, fill, window light, and flattering face light — the portrait craft Pixfan teaches before heavy retouching.",
+        "fr": "Clé, fill, lumière de fenêtre et lumière flatteuse sur le visage — le craft portrait que Pixfan enseigne avant la grosse retouche."
+      },
+      "difficulty": "medium",
+      "questions": [
+        {
+          "id": "pl-01",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "In a classic one-light portrait, the main light shaping the face is called the…",
+            "fr": "Dans un portrait classique à une lumière, la lumière principale qui sculpte le visage s’appelle…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Key light",
+                "fr": "La lumière clé (key)"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Hair light only",
+                "fr": "Seulement le hair light"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Background gel",
+                "fr": "Le gélatiné de fond"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Catchlight gel",
+                "fr": "Le gélatiné catchlight"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "The key sets direction and contrast on the face; fill and accents come after.",
+            "fr": "La clé pose la direction et le contraste sur le visage ; fill et accents viennent ensuite."
+          },
+          "imageUrl": "/images/packs/photo-1531746020798-e6953c6e8e04.avif",
+          "imageAlt": {
+            "en": "Close portrait with soft directional light on the face",
+            "fr": "Portrait serré avec lumière directionnelle douce sur le visage"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-02",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Rembrandt lighting is recognized by…",
+            "fr": "La lumière Rembrandt se reconnaît à…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A triangle of light on the shadowed cheek under the eye",
+                "fr": "Un triangle de lumière sur la joue ombrée sous l’œil"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Even flat light with zero nose shadow",
+                "fr": "Une lumière plate sans aucune ombre de nez"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only rim light from behind",
+                "fr": "Seulement un rim light de derrière"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Red/cyan split gel on both cheeks",
+                "fr": "Un split gel rouge/cyan sur les deux joues"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Key ≈45° up and to the side creates the classic cheek triangle.",
+            "fr": "Une clé ≈45° en hauteur et de côté crée le triangle classique sur la joue."
+          },
+          "imageUrl": "/images/packs/photo-1544005313-94ddf0286df2.avif",
+          "imageAlt": {
+            "en": "Face lit from the side — Rembrandt / loop lighting territory",
+            "fr": "Visage éclairé de côté — terrain Rembrandt / loop"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-03",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Harsh noon sun outdoors for a flattering headshot — best first rescue?",
+            "fr": "Soleil de midi cruel pour un portrait flatteur — premier sauvetage ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Open shade, diffuser, or bounce fill — soften the overhead punch",
+                "fr": "Ombre ouverte, diffuseur ou fill en bounce — adoucir le coup d’en haut"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Always underexpose two stops and crush skin",
+                "fr": "Toujours sous-exposer de 2 IL et écraser la peau"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Shoot only at f/22 facing the sun",
+                "fr": "Shooter seulement à f/22 face au soleil"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Disable white balance forever",
+                "fr": "Désactiver la balance des blancs pour toujours"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Portrait craft prioritizes flattering face light; don’t fight hard overhead sun bare.",
+            "fr": "Le craft portrait priorise une lumière flatteuse sur le visage ; ne subis pas le soleil zénithal nu."
+          },
+          "imageUrl": "/images/packs/photo-1438761681033-6461ffad8d80.avif",
+          "imageAlt": {
+            "en": "Warm outdoor portrait in flattering open shade",
+            "fr": "Portrait outdoor chaud à l’ombre ouverte flatteuse"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-04",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "What does fill light mainly do in a portrait?",
+            "fr": "Que fait surtout le fill light en portrait ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Lift shadow side contrast without becoming a second hard key",
+                "fr": "Remonter le contraste du côté ombre sans devenir une seconde clé dure"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Replace the need for a key light",
+                "fr": "Remplacer le besoin d’une lumière clé"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only light the background seamless",
+                "fr": "Éclairer seulement le fond cyclorama"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Freeze motion like a high-speed flash",
+                "fr": "Figer le mouvement comme un flash ultra-rapide"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Fill controls how deep shadows feel; key still owns direction.",
+            "fr": "Le fill contrôle la profondeur des ombres ; la clé garde la direction."
+          }
+        },
+        {
+          "id": "pl-05",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "A classic flattering full-frame portrait focal-length instinct is often…",
+            "fr": "Un réflexe de focale flatteuse en portrait plein format est souvent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Short tele (~70–105 mm) with a moderate working distance",
+                "fr": "Petit télé (~70–105 mm) avec une distance de travail raisonnable"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Ultra-wide at arm’s length for every headshot",
+                "fr": "Ultra grand-angle à bout de bras pour chaque tête"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Fish-eye for corporate headshots",
+                "fr": "Fish-eye pour les portraits corporate"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only 14 mm for beauty work",
+                "fr": "Seulement 14 mm pour la beauté"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Short teles compress gently and keep facial proportions natural at a polite distance.",
+            "fr": "Les petits télés compressent doucement et gardent des proportions naturelles à bonne distance."
+          },
+          "imageUrl": "/images/packs/photo-1500648767791-00dcc994a43e.avif",
+          "imageAlt": {
+            "en": "Short-tele portrait look with compressed background",
+            "fr": "Look portrait petit télé avec arrière-plan compressé"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-06",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Butterfly (Paramount) lighting places the key…",
+            "fr": "La lumière papillon (Paramount) place la clé…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "High and centered, casting a small nose shadow under the nose",
+                "fr": "Haute et centrée, avec une petite ombre sous le nez"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Low from the floor for horror shadows",
+                "fr": "Basse depuis le sol pour des ombres d’horreur"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Directly behind the subject only",
+                "fr": "Directement derrière le sujet seulement"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "As two opposing hard rim lights with no front light",
+                "fr": "Comme deux rim durs opposés sans lumière frontale"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Classic beauty/old-Hollywood key sits high on axis for a butterfly nose shadow.",
+            "fr": "La clé beauté / vieux Hollywood est haute sur l’axe pour l’ombre papillon sous le nez."
+          }
+        },
+        {
+          "id": "pl-07",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Catchlights in the eyes usually tell you…",
+            "fr": "Les catchlights dans les yeux indiquent surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Where the key (and fill) sat relative to the subject",
+                "fr": "Où étaient la clé (et le fill) par rapport au sujet"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "The exact ISO the camera used",
+                "fr": "L’ISO exact utilisé par l’appareil"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Whether the lens is prime or zoom",
+                "fr": "Si l’objectif est une focale fixe ou un zoom"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "That the photo is always AI-generated",
+                "fr": "Que la photo est toujours générée par IA"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Read the eye reflections to reverse-engineer light position and modifier size.",
+            "fr": "Lis les reflets dans l’œil pour retrouver position et taille de la source."
+          },
+          "imageUrl": "/images/packs/photo-1494790108377-be9c29b29330.avif",
+          "imageAlt": {
+            "en": "Catchlights visible in the eyes under soft key light",
+            "fr": "Catchlights visibles dans les yeux sous une clé douce"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-08",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Window light portrait: subject faces the window. Softest look usually comes from…",
+            "fr": "Portrait à la fenêtre : le sujet face à la fenêtre. Le look le plus doux vient souvent de…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A large north-facing / overcast window acting like a softbox",
+                "fr": "Une grande fenêtre nord / ciel couvert qui agit comme une softbox"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Hard direct sun speckles through venetian blinds only",
+                "fr": "Seulement des taches de soleil dur à travers des stores"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A tiny spotlight from across the room",
+                "fr": "Un tout petit spot de l’autre bout de la pièce"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Turning the subject’s back fully to the window always",
+                "fr": "Toujours tourner le dos complètement à la fenêtre"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Large, soft, diffused sources wrap the face; harsh sun through glass is another tool.",
+            "fr": "Une grande source proche et diffusée enveloppe le visage ; le soleil dur à travers la vitre est un autre outil."
+          }
+        },
+        {
+          "id": "pl-09",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Golden-hour outdoor portraits often work because…",
+            "fr": "Les portraits golden hour marchent souvent parce que…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Low warm light is softer and more directional than harsh midday sun",
+                "fr": "La lumière basse et chaude est plus douce et directionnelle que le midi cruel"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "ISO must be locked at 50 forever",
+                "fr": "L’ISO doit rester bloqué à 50 pour toujours"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "White balance disappears as a concept",
+                "fr": "La balance des blancs disparaît comme concept"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "You can only shoot silhouettes then",
+                "fr": "Tu ne peux shooter que des silhouettes à ce moment-là"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Angle + warmth + longer shadows give flattering shape without fighting overhead sun.",
+            "fr": "L’angle + la chaleur + les ombres longues sculptent sans combattre le soleil zénithal."
+          },
+          "imageUrl": "/images/packs/photo-1517841905240-472988babdf9.avif",
+          "imageAlt": {
+            "en": "Outdoor portrait with golden-hour rim light",
+            "fr": "Portrait outdoor avec lumière d’accent golden hour"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-10",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "Which choices usually soften a hard key on a face?",
+            "fr": "Quels choix adoucissent généralement une clé dure sur un visage ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Larger modifier / diffuser closer to the subject",
+                "fr": "Modificateur plus grand / diffuseur plus proche du sujet"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Moving a bare bulb farther and smaller in the frame",
+                "fr": "Éloigner une ampoule nue pour la rendre plus petite"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Adding bounce or a reflector as gentle fill",
+                "fr": "Ajouter un bounce ou un réflecteur en fill doux"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Always raising Clarity to +100 in-camera",
+                "fr": "Toujours monter Clarity à +100 dans l’appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "c"
+          ],
+          "explanation": {
+            "en": "Bigger/closer sources wrap; fill lifts shadows. Tiny distant bare bulbs get harder.",
+            "fr": "Sources plus grandes/proches = plus d’enveloppe ; le fill remonte les ombres. Une ampoule nue lointaine durcit."
+          }
+        },
+        {
+          "id": "pl-11",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Clamshell beauty lighting typically combines…",
+            "fr": "La lumière beauté « clamshell » combine typiquement…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A key from above and a fill/reflector from below under the chin",
+                "fr": "Une clé du dessus et un fill/réflecteur sous le menton"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only two rim lights and a black flag on the face",
+                "fr": "Seulement deux rim lights et un drapeau noir sur le visage"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A single candle at floor level",
+                "fr": "Une seule bougie au niveau du sol"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Cross-polarized flash through a microscope",
+                "fr": "Un flash polarisé croisé à travers un microscope"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Top key + under-fill opens eye sockets and softens under-chin shadows.",
+            "fr": "Clé du dessus + fill dessous ouvre les orbites et adoucit sous le menton."
+          },
+          "imageUrl": "/images/packs/photo-1487412720507-e7ab37603c6f.avif",
+          "imageAlt": {
+            "en": "Soft beauty light wrapping the face evenly",
+            "fr": "Lumière beauté douce enveloppant le visage"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-12",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Split lighting on a face means…",
+            "fr": "La lumière split sur un visage signifie…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Half the face in key, half essentially in shadow",
+                "fr": "Une moitié de visage en clé, l’autre essentiellement à l’ombre"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Even loop shadows on both cheeks identically",
+                "fr": "Des ombres loop identiques sur les deux joues"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only hair light with no front exposure",
+                "fr": "Seulement un hair light sans expo frontale"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "RGB continuous lights cycling every second",
+                "fr": "Des LED RGB qui cyclent chaque seconde"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Key at ~90° creates a dramatic half-and-half face — useful, not default flattering.",
+            "fr": "Une clé à ~90° crée un demi-visage dramatique — utile, pas le flatteur par défaut."
+          }
+        },
+        {
+          "id": "pl-13",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "You want creamy background separation on a portrait without moving outdoors. First instinct?",
+            "fr": "Tu veux un fond crémeux en portrait sans sortir. Premier réflexe ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Wider aperture + more subject-to-background distance + longer focal length",
+                "fr": "Ouverture plus ouverte + plus de distance sujet–fond + focale plus longue"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "f/16 and put the subject against the seamless at 10 cm",
+                "fr": "f/16 et coller le sujet à 10 cm du fond"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Raise ISO until noise blurs the background",
+                "fr": "Monter l’ISO jusqu’à ce que le bruit floute le fond"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Always use the built-in popup flash bounced off nothing",
+                "fr": "Toujours le flash pop-up sans bounce"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "DOF is optics + geometry — aperture, distance, and focal length work together.",
+            "fr": "La PdC = optique + géométrie — ouverture, distances et focale travaillent ensemble."
+          },
+          "imageUrl": "/images/packs/photo-1529626455594-4ff0802cfb7e.avif",
+          "imageAlt": {
+            "en": "Fashion-leaning portrait with controlled contrast",
+            "fr": "Portrait mode avec contraste maîtrisé"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-14",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Lighting ratio ~4:1 (key vs fill) on a face generally feels…",
+            "fr": "Un ratio d’éclairage ~4:1 (clé vs fill) sur un visage paraît généralement…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Fairly contrasty / dramatic compared with 2:1",
+                "fr": "Assez contrasté / dramatique par rapport à 2:1"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Completely flat like overcast noon fill",
+                "fr": "Totalement plat comme un fill de midi couvert"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Identical to butterfly with no shadows",
+                "fr": "Identique au papillon sans aucune ombre"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A white-balance setting, not a contrast idea",
+                "fr": "Un réglage de balance des blancs, pas une idée de contraste"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Higher key-to-fill ratios deepen the shadow side; 2:1 is gentler, 8:1 more dramatic.",
+            "fr": "Plus le ratio clé/fill monte, plus le côté ombre s’assombrit ; 2:1 est plus doux, 8:1 plus dramatique."
+          }
+        },
+        {
+          "id": "pl-15",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Broad vs short lighting: short lighting typically…",
+            "fr": "Broad vs short lighting : le short lighting typiquement…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Lights the side of the face turned away from camera — often slimming",
+                "fr": "Éclaire le côté du visage tourné loin de la caméra — souvent amincissant"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Always lights only the ears from behind",
+                "fr": "N’éclaire toujours que les oreilles depuis derrière"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Means using only wide-angle lenses",
+                "fr": "Signifie n’utiliser que des grands-angles"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Is identical to flat on-camera flash",
+                "fr": "Est identique au flash cobra plat sur l’appareil"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Short lighting puts more shadow toward camera — classic flattering pattern for many faces.",
+            "fr": "Le short lighting met plus d’ombre vers la caméra — schéma classique flatteur pour beaucoup de visages."
+          },
+          "imageUrl": "/images/packs/photo-1507003211169-0a1dd7228f2d.avif",
+          "imageAlt": {
+            "en": "Male portrait with clean key and gentle fill",
+            "fr": "Portrait masculin avec clé nette et fill doux"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-16",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Backlit portrait: you want face detail AND a glowing rim. Sensible exposure approach?",
+            "fr": "Portrait à contre-jour : tu veux le visage lisible ET un rim lumineux. Approche d’expo sensée ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Expose for the face (or add fill/flash), accept or shape the bright rim",
+                "fr": "Exposer pour le visage (ou ajouter fill/flash), accepter ou sculpter le rim clair"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Meter only the sky and crush the face to black always",
+                "fr": "Mesurer seulement le ciel et écraser le visage au noir toujours"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Disable all metering and guess ISO 25600",
+                "fr": "Désactiver toute mesure et miser sur ISO 25600"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Use the smallest aperture and slowest shutter possible indoors",
+                "fr": "Utiliser la plus petite ouverture et le plus lent obturateur en intérieur"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Protect the face first; rim is a bonus you can fill against or embrace as highlight.",
+            "fr": "Protège d’abord le visage ; le rim est un bonus que tu combles ou que tu assumes en haute lumière."
+          }
+        },
+        {
+          "id": "pl-17",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Hard beauty dish vs large softbox close to the face — typical difference?",
+            "fr": "Beauty dish dure vs grande softbox proche du visage — différence typique ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Beauty dish = punchier contrast/specular; big softbox = softer wrap",
+                "fr": "Beauty dish = contraste/spéculaire plus punchy ; grande softbox = enveloppe plus douce"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "They are optically identical at any distance",
+                "fr": "Elles sont optiquement identiques à toute distance"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Softboxes always create harsher nose shadows",
+                "fr": "Les softbox créent toujours des ombres de nez plus dures"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Beauty dishes only work underwater",
+                "fr": "Les beauty dishes ne marchent que sous l’eau"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Modifier size/distance and design change specular quality — not just “bright vs dark”.",
+            "fr": "Taille/distance et design du modificateur changent le spéculaire — pas seulement « clair vs sombre »."
+          },
+          "imageUrl": "/images/packs/photo-1515886657613-9f3515b0c78f.avif",
+          "imageAlt": {
+            "en": "Full-length fashion portrait — light shape on the figure",
+            "fr": "Portrait mode en pied — dessin de lumière sur la silhouette"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-18",
+          "type": "multiple",
+          "difficulty": "hard",
+          "text": {
+            "en": "Which habits help keep skin tones believable under mixed portrait light?",
+            "fr": "Quelles habitudes aident à garder des tons chair crédibles sous lumière portrait mixte ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Set / gel lights toward a consistent white balance plan",
+                "fr": "Régler / gélatiner les lumières vers un plan de balance cohérent"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Check a grey card or known neutral when casts fight",
+                "fr": "Vérifier une charte grise ou un neutre connu quand les dominantes se battent"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always max magenta and yellow “for warmth” blindly",
+                "fr": "Toujours max magenta et jaune « pour la chaleur » à l’aveugle"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Ignore the histogram because portraits don’t clip",
+                "fr": "Ignorer l’histogramme car les portraits ne crament jamais"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b"
+          ],
+          "explanation": {
+            "en": "Mixed sources need a WB plan; references beat guessing saturation.",
+            "fr": "Les sources mixtes demandent un plan WB ; les références battent la saturation au feeling."
+          }
+        },
+        {
+          "id": "pl-19",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Environmental portrait usually means…",
+            "fr": "Un portrait environnemental signifie surtout…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Showing the person in a context that tells something about them",
+                "fr": "Montrer la personne dans un contexte qui en dit quelque chose"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only studio seamless with zero background props",
+                "fr": "Seulement un fond studio sans aucun accessoire"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Macro of an eye and nothing else",
+                "fr": "Une macro d’œil et rien d’autre"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Aerial landscapes without people",
+                "fr": "Des paysages aériens sans personnes"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Environment supports the story — workplace, home, street — not just a headshot crop.",
+            "fr": "L’environnement porte l’histoire — travail, maison, rue — pas seulement un crop tête."
+          },
+          "imageUrl": "/images/packs/photo-1524504388940-b1c1722653e1.avif",
+          "imageAlt": {
+            "en": "Environmental portrait with window light from camera-left",
+            "fr": "Portrait environnemental avec lumière de fenêtre à gauche"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-20",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Myth: “More lights always make a better portrait.” Better framing?",
+            "fr": "Mythe : « Plus de lumières = forcément un meilleur portrait. » Meilleure nuance ?"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "One well-placed key (plus optional fill) beats cluttered conflicting sources",
+                "fr": "Une clé bien placée (plus fill optionnel) bat des sources multiples qui se battent"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "You must use at least five strobes for every headshot",
+                "fr": "Il faut au moins cinq flashs pour chaque portrait"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Natural light is illegal in studios",
+                "fr": "La lumière naturelle est illégale en studio"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Portrait light only exists inside Lightroom masks",
+                "fr": "La lumière portrait n’existe que dans les masques Lightroom"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Intentional simple light reads; extra lights need a job or they muddy the face.",
+            "fr": "Une lumière simple et intentionnelle se lit ; chaque lumière en plus doit avoir un rôle."
+          },
+          "imageUrl": "/images/packs/photo-1552374196-c4e7ffc6e126.avif",
+          "imageAlt": {
+            "en": "Dramatic portrait with harder side light and deep shadows",
+            "fr": "Portrait dramatique avec lumière latérale plus dure et ombres profondes"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         }
       ]

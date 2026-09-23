@@ -21,6 +21,10 @@ const LABELS: Record<string, { en: string; fr: string }> = {
     en: 'Lightroom workflow',
     fr: 'Workflow Lightroom',
   },
+  'portrait-light': {
+    en: 'Portrait & light',
+    fr: 'Portrait & lumière',
+  },
   random: { en: 'Random mix', fr: 'Mix aléatoire' },
   'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
   'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },

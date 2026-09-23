@@ -33,10 +33,11 @@ describe('questions.json', () => {
     'photo-rights',
     'retouching',
     'lightroom-workflow',
+    'portrait-light',
   ] as const;
 
-  it('has exactly 11 category quizzes', () => {
-    expect(data.quizzes.length).toBe(11);
+  it('has exactly 12 category quizzes', () => {
+    expect(data.quizzes.length).toBe(12);
   });
 
   it('keeps a solid question count per quiz', () => {
@@ -203,6 +204,11 @@ describe('questions.json', () => {
     'retouching',
     'lightroom-workflow',
     'gear-lenses',
+    'exposure-basics',
+    'genres',
+    'history-icons',
+    'photo-rights',
+    'portrait-light',
   ] as const)('%s has 8–14 illustrated questions with credits', (id) => {
     const quiz = data.quizzes.find((q) => q.id === id);
     expect(quiz).toBeDefined();
@@ -214,6 +220,26 @@ describe('questions.json', () => {
       expect(q.imageCredit?.fr).toBeTruthy();
       expect(q.imageUrl).toMatch(/^\/images\//);
     }
+  });
+
+  it('history-icons is rebalanced away from a hard outlier', () => {
+    const history = data.quizzes.find((q) => q.id === 'history-icons');
+    expect(history).toBeDefined();
+    expect(history!.difficulty).toBe('medium');
+    const hard = history!.questions.filter((q) => q.difficulty === 'hard');
+    expect(hard.length).toBeLessThanOrEqual(6);
+    expect(hard.length).toBeGreaterThanOrEqual(3);
+  });
+
+  it('portrait-light quiz is a solid Pixfan thematic pack', () => {
+    const quiz = data.quizzes.find((q) => q.id === 'portrait-light');
+    expect(quiz).toBeDefined();
+    expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
+    const illustrated = quiz!.questions.filter((q) => q.imageUrl);
+    expect(illustrated.length).toBeGreaterThanOrEqual(8);
+    expect(quiz!.title.fr).toMatch(/Portrait/i);
+    expect(quiz!.description.en.toLowerCase()).toContain('pixfan');
+    expect(quiz!.description.fr.toLowerCase()).toContain('pixfan');
   });
 
   it('lightroom-workflow quiz is a solid Pixfan thematic pack', () => {

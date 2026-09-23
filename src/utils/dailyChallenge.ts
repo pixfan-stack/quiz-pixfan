@@ -12,6 +12,9 @@ export type DailyThemeId =
   | 'light'
   | 'composition'
   | 'gear'
+  | 'genres'
+  | 'rights'
+  | 'history'
   | 'mixed';
 
 export interface DailyTheme {
@@ -93,6 +96,45 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       fr: '10 questions partagées orientées boîtiers, optiques et accessoires.',
     },
     chip: { en: 'Gear week', fr: 'Semaine matériel' },
+  },
+  {
+    id: 'genres',
+    quizIds: ['genres', 'portrait-light'],
+    title: {
+      en: 'Daily challenge · Genres week',
+      fr: 'Défi du jour · semaine genres',
+    },
+    description: {
+      en: '10 shared questions biased toward photo genres and portrait light.',
+      fr: '10 questions partagées orientées genres photo et portrait & lumière.',
+    },
+    chip: { en: 'Genres week', fr: 'Semaine genres' },
+  },
+  {
+    id: 'rights',
+    quizIds: ['photo-rights'],
+    title: {
+      en: 'Daily challenge · Rights week',
+      fr: 'Défi du jour · semaine droits',
+    },
+    description: {
+      en: '10 shared questions biased toward photo rights and ethics.',
+      fr: '10 questions partagées orientées droits et éthique photo.',
+    },
+    chip: { en: 'Rights week', fr: 'Semaine droits' },
+  },
+  {
+    id: 'history',
+    quizIds: ['history-icons', 'public-domain'],
+    title: {
+      en: 'Daily challenge · History week',
+      fr: 'Défi du jour · semaine histoire',
+    },
+    description: {
+      en: '10 shared questions biased toward photo history and public-domain icons.',
+      fr: '10 questions partagées orientées histoire photo et icônes domaine public.',
+    },
+    chip: { en: 'History week', fr: 'Semaine histoire' },
   },
   {
     id: 'mixed',

@@ -7,8 +7,8 @@
  * - API: network only (no stale leaderboard cache)
  */
 
-const CACHE_NAME = 'quiz-pixfan-v9';
-const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v3';
+const CACHE_NAME = 'quiz-pixfan-v10';
+const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v4';
 
 const OFFLINE_URLS = [
   '/',
@@ -47,6 +47,7 @@ const IMAGE_URLS = [
   '/images/public-domain/talbot-open-door.avif',
   '/images/packs/photo-1418065460487-3e41a6c84dc5.avif',
   '/images/packs/photo-1419242902214-272b3f66ee7a.avif',
+  '/images/packs/photo-1438761681033-6461ffad8d80.avif',
   '/images/packs/photo-1441974231531-c6227db76b6e.avif',
   '/images/packs/photo-1449824913935-59a10b8d2000.avif',
   '/images/packs/photo-1450101499163-c8848c66ca85.avif',
@@ -60,36 +61,48 @@ const IMAGE_URLS = [
   '/images/packs/photo-1470252649378-9c29740c9fa8.avif',
   '/images/packs/photo-1472214103451-9374bd1c798e.avif',
   '/images/packs/photo-1486312338219-ce68d2c6f44d.avif',
+  '/images/packs/photo-1487412720507-e7ab37603c6f.avif',
   '/images/packs/photo-1492691527719-9d1e07e534b4.avif',
   '/images/packs/photo-1493246507139-91e8fad9978e.avif',
   '/images/packs/photo-1493863641943-9b68992a8d07.avif',
+  '/images/packs/photo-1494790108377-be9c29b29330.avif',
   '/images/packs/photo-1495616811223-4d98c6e9c869.avif',
   '/images/packs/photo-1498050108023-c5249f4df085.avif',
   '/images/packs/photo-1499750310107-5fef28a66643.avif',
   '/images/packs/photo-1500530855697-b586d89ba3ee.avif',
   '/images/packs/photo-1500534314209-a25ddb2bd429.avif',
+  '/images/packs/photo-1500648767791-00dcc994a43e.avif',
   '/images/packs/photo-1501594907352-04cda38ebc29.avif',
   '/images/packs/photo-1501785888041-af3ef285b470.avif',
   '/images/packs/photo-1502082553048-f009c37129b9.avif',
   '/images/packs/photo-1502920917128-1aa500764cbd.avif',
+  '/images/packs/photo-1504674900247-0877df9cc836.avif',
   '/images/packs/photo-1506905925346-21bda4d32df4.avif',
+  '/images/packs/photo-1507003211169-0a1dd7228f2d.avif',
   '/images/packs/photo-1510127034890-ba27508e9f1c.avif',
   '/images/packs/photo-1511707171634-5f897ff02aa9.avif',
   '/images/packs/photo-1512499617640-c74ae3a79d37.avif',
   '/images/packs/photo-1512941937669-90a1b58e7e9c.avif',
   '/images/packs/photo-1514565131-fce0801e5785.avif',
   '/images/packs/photo-1515378791036-0648a3ef77b2.avif',
+  '/images/packs/photo-1515886657613-9f3515b0c78f.avif',
   '/images/packs/photo-1516035069371-29a1b244cc32.avif',
   '/images/packs/photo-1517694712202-14dd9538aa97.avif',
+  '/images/packs/photo-1517841905240-472988babdf9.avif',
   '/images/packs/photo-1518182170546-07661fd94144.avif',
   '/images/packs/photo-1519501025264-65ba15a82390.avif',
   '/images/packs/photo-1519741497674-611481863552.avif',
   '/images/packs/photo-1521791136064-7986c2920216.avif',
+  '/images/packs/photo-1524504388940-b1c1722653e1.avif',
   '/images/packs/photo-1526170375885-4d8ecf77b99f.avif',
+  '/images/packs/photo-1529626455594-4ff0802cfb7e.avif',
   '/images/packs/photo-1531297484001-80022131f5a1.avif',
+  '/images/packs/photo-1531746020798-e6953c6e8e04.avif',
   '/images/packs/photo-1534528741775-53994a69daeb.avif',
   '/images/packs/photo-1542038784456-1ea8e935640e.avif',
+  '/images/packs/photo-1544005313-94ddf0286df2.avif',
   '/images/packs/photo-1550745165-9bc0b252726f.avif',
+  '/images/packs/photo-1552374196-c4e7ffc6e126.avif',
   '/images/packs/photo-1552674605-db6ffd4facb5.avif',
   '/images/packs/photo-1554048612-b6a482bc67e5.avif',
   '/images/packs/photo-1554118811-1e0d58224f24.avif',
@@ -98,11 +111,14 @@ const IMAGE_URLS = [
   '/images/packs/photo-1556656793-08538906a9f8.avif',
   '/images/packs/photo-1558655146-d09347e92766.avif',
   '/images/packs/photo-1561070791-2526d30994b5.avif',
+  '/images/packs/photo-1564349683136-77e08dba1ef7.avif',
   '/images/packs/photo-1580910051074-3eb694886505.avif',
   '/images/packs/photo-1598327105666-5b89351aff97.avif',
   '/images/packs/photo-1606983340126-99ab4feaa64a.avif',
   '/images/packs/photo-1611162616305-c69b3fa7fbe0.avif',
   '/images/packs/photo-1618005182384-a83a8bd57fbe.avif',
+  '/images/packs/photo-1620712943543-bcc4688e7485.avif',
+  '/images/packs/photo-1677442136019-21780ecad995.avif',
 ];
 
 self.addEventListener('install', (event) => {

@@ -18,6 +18,7 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('lightroom-workflow')).toBe('retouching');
     expect(resolvePixfanTopic('photo-rights')).toBe('rights');
     expect(resolvePixfanTopic('light-color')).toBe('light');
+    expect(resolvePixfanTopic('portrait-light')).toBe('light');
   });
 
   it('falls back for challenge packs', () => {
@@ -65,6 +66,11 @@ describe('pixfanCta', () => {
     expect(genres.primaryTarget).toBe('guide');
     expect(genres.primaryUrl).toContain('/guides/genres-photo');
     expect(genres.primaryUrl).toContain('utm_content=guide');
+
+    const portrait = getPixfanCta('portrait-light');
+    expect(portrait.topic).toBe('light');
+    expect(portrait.primaryTarget).toBe('guide');
+    expect(portrait.primaryUrl).toContain('/guides/lumiere-photo');
   });
 
   it('uses pixfan.com when no local guide exists', () => {

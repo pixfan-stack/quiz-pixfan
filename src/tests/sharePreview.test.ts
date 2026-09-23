@@ -31,6 +31,9 @@ describe('sharePreview', () => {
     expect(quizLabel('lightroom-workflow', 'fr')).toBe('Workflow Lightroom');
     expect(quizLabel('lightroom-workflow', 'en')).toBe('Lightroom workflow');
     expect(normalizeQuizId('lightroom-workflow')).toBe('lightroom-workflow');
+    expect(quizLabel('portrait-light', 'fr')).toBe('Portrait & lumière');
+    expect(quizLabel('portrait-light', 'en')).toBe('Portrait & light');
+    expect(normalizeQuizId('portrait-light')).toBe('portrait-light');
     expect(quizLabel('daily-2026-07-26', 'fr')).toBe('Défi du jour');
     expect(quizLabel('duel-abcd2345', 'en')).toBe('Friend duel');
   });
