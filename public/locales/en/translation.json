@@ -194,7 +194,8 @@
     "reviewGuide_composition": "Read the composition guide",
     "reviewGuide_smartphone": "Read the smartphone photography guide",
     "reviewGuide_light": "Read the light guide",
-    "reviewGuide_retouching": "Read the retouching / Lightroom guide"
+    "reviewGuide_retouching": "Read the retouching / Lightroom guide",
+    "reviewGuide_genres": "Read the photography genres guide"
   },
   "share": {
     "text": "I scored {{percent}}% ({{score}}/{{total}}) on \"{{quizTitle}}\" — Quiz PixFan. Can you beat me?",
@@ -275,8 +276,9 @@
     "topic_history_failedDesc": "Photo culture to revisit — icons and inspiration on Pixfan.",
     "topic_history_cta": "Open inspiration & culture",
     "topic_genres_desc": "Dive into portrait, landscape, street and more.",
-    "topic_genres_failedDesc": "Genres slowed you down — explore them on Pixfan.",
+    "topic_genres_failedDesc": "Genres slowed you down — a short guide to clarify intent.",
     "topic_genres_cta": "Explore photo genres",
+    "topic_genres_guideCta": "Read the photography genres guide",
     "topic_smartphone_desc": "Make the most of your phone camera in real conditions.",
     "topic_smartphone_failedDesc": "Smartphone photo to revisit — a practical guide to improve fast.",
     "topic_smartphone_cta": "Smartphone photo tips",
@@ -324,7 +326,8 @@
     "guideComposition": "Composition",
     "guideSmartphone": "Smartphone photo",
     "guideLight": "Light",
-    "guideRetouching": "Retouching / Lightroom"
+    "guideRetouching": "Retouching / Lightroom",
+    "guideGenres": "Photo genres"
   },
   "pwa": {
     "installTitle": "Install Quiz PixFan",

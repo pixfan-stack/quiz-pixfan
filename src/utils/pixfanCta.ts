@@ -44,6 +44,7 @@ const LOCAL_GUIDES: Partial<Record<PixfanTopic, string>> = {
   smartphone: '/guides/photo-smartphone',
   light: '/guides/lumiere-photo',
   retouching: '/guides/retouche-lightroom',
+  genres: '/guides/genres-photo',
 };
 
 const TOPIC_URLS: Record<PixfanTopic, string> = {

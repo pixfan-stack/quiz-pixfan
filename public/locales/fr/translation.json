@@ -194,7 +194,8 @@
     "reviewGuide_composition": "Relire le guide composition",
     "reviewGuide_smartphone": "Relire le guide photo smartphone",
     "reviewGuide_light": "Relire le guide lumière",
-    "reviewGuide_retouching": "Relire le guide retouche / Lightroom"
+    "reviewGuide_retouching": "Relire le guide retouche / Lightroom",
+    "reviewGuide_genres": "Relire le guide genres photo"
   },
   "share": {
     "text": "J'ai fait {{percent}} % ({{score}}/{{total}}) sur « {{quizTitle}} » — Quiz PixFan. Tu peux faire mieux ?",
@@ -275,8 +276,9 @@
     "topic_history_failedDesc": "Culture photo à retravailler — inspiration et icônes sur Pixfan.",
     "topic_history_cta": "Ouvrir Inspiration & culture",
     "topic_genres_desc": "Explorez portrait, paysage, street et bien plus.",
-    "topic_genres_failedDesc": "Les genres photo vous ont freiné — explorez-les sur Pixfan.",
+    "topic_genres_failedDesc": "Les genres photo vous ont freiné — un guide court pour clarifier les intentions.",
     "topic_genres_cta": "Découvrir les genres",
+    "topic_genres_guideCta": "Lire le guide genres photo",
     "topic_smartphone_desc": "Tirez le meilleur de votre téléphone en conditions réelles.",
     "topic_smartphone_failedDesc": "Photo smartphone à revoir — un guide pratique pour progresser vite.",
     "topic_smartphone_cta": "Astuces photo smartphone",
@@ -324,7 +326,8 @@
     "guideComposition": "Composition",
     "guideSmartphone": "Photo smartphone",
     "guideLight": "Lumière",
-    "guideRetouching": "Retouche / Lightroom"
+    "guideRetouching": "Retouche / Lightroom",
+    "guideGenres": "Genres photo"
   },
   "pwa": {
     "installTitle": "Installer Quiz PixFan",

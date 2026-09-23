@@ -360,6 +360,9 @@ export default function App() {
           <a href="/guides/retouche-lightroom" className="app-footer__link">
             {t('footer.guideRetouching')}
           </a>
+          <a href="/guides/genres-photo" className="app-footer__link">
+            {t('footer.guideGenres')}
+          </a>
         </nav>
         <div className="app-footer__inner">
           <a

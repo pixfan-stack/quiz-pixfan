@@ -1,16 +1,16 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.13.0**).
+Document à jour avec l’état réel du dépôt (**v1.15.0**).
 
 ## ✅ Livré
 
-- Contenu : **11 quiz · 285 questions · ~97 illustrées** (`public/data/questions.json`)
+- Contenu : **11 quiz · 285 questions · 132 illustrées** (`public/data/questions.json`)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots
 - Engagement : défi du jour, duel, succès, streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
 - Compte léger : code de récupération + sync streak / succès / high scores / **vault** / badges saison (migrations `005` + `006`)
-- Produit : CTA pixfan.com + newsletter, modes photo-reading / mix / aléatoire, guides ↔ quiz
-- Technique : **PWA** (manifest, SW, install prompt), footer i18n, **admin** `#/admin` (export JSON, signalements, analytics)
+- Produit : CTA pixfan.com + newsletter, modes photo-reading / mix / aléatoire, guides ↔ quiz (dont **genres**)
+- Technique : **PWA** (manifest, SW, install prompt), footer i18n, **admin** `#/admin` (export JSON, signalements, analytics habit + modes)
 
 ## 🔜 Ops prod (P0 — reste live)
 
@@ -21,9 +21,9 @@ Document à jour avec l’état réel du dépôt (**v1.13.0**).
 
 ## 🔜 Suite produit possible
 
-- [ ] Appliquer migration D1 `006` en prod (vault + badges saison) après merge P1
-- [ ] Enrichir images sur quiz techniques + miroir Unsplash offline
-- [ ] Dashboard CTA ventilé + guides locaux manquants
-- [ ] Découpage `AdminScreen` / polish SEO (sitemap lightroom)
+- [ ] Appliquer migration D1 `006` en prod (vault + badges saison) si pas encore fait
+- [ ] Enrichir images sur packs encore sous-illustrés (`exposure-basics`, `genres`, …)
+- [ ] SRS vault + CTA weak-spots (vague 1.16 P2)
+- [ ] BreadcrumbList guides + éventuel guide droits (vague 1.16 P1.4 / P1.3 suite)
 
-Contenu : `public/data/questions.json`. Priorisation détaillée hors dépôt si besoin.
+Contenu : `public/data/questions.json`. Priorisation : [`vague-1-16`](docs hors dépôt) / release notes.
