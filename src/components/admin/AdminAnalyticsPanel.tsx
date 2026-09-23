@@ -10,7 +10,7 @@ interface AdminAnalyticsPanelProps {
 }
 
 /**
- * Analytics tab: attempt summary, CTA breakdown, quiz table, recent days.
+ * Analytics tab: attempt summary, modes, habit events, CTA breakdown, quiz table, recent days.
  */
 export function AdminAnalyticsPanel({
   analytics,
@@ -71,7 +71,90 @@ export function AdminAnalyticsPanel({
                 {t('admin.analyticsCta')}
               </span>
             </div>
+            <div
+              className="admin__analytics-stat"
+              data-testid="admin-analytics-cta-conversion"
+            >
+              <span className="admin__analytics-stat__value">
+                {analytics.summary.ctaConversionPct}%
+              </span>
+              <span className="admin__analytics-stat__label">
+                {t('admin.analyticsCtaConversion')}
+              </span>
+            </div>
           </div>
+
+          {analytics.modes.length > 0 && (
+            <div
+              className="admin__analytics-modes"
+              data-testid="admin-analytics-modes"
+            >
+              <p className="admin__section-title">
+                {t('admin.analyticsModesBreakdown')}
+              </p>
+              <p className="admin__hint">{t('admin.analyticsModesHint')}</p>
+              <div className="admin__analytics-table-wrap">
+                <table className="admin__analytics-table">
+                  <thead>
+                    <tr>
+                      <th>{t('admin.analyticsColMode')}</th>
+                      <th>{t('admin.analyticsColAttempts')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {analytics.modes.map((row) => (
+                      <tr key={row.mode}>
+                        <td>
+                          <strong>
+                            {t(`admin.analyticsMode_${row.mode}`)}
+                          </strong>
+                          <div className="admin__report-id">{row.mode}</div>
+                        </td>
+                        <td>{row.attempts}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {analytics.events.length > 0 && (
+            <div
+              className="admin__analytics-events"
+              data-testid="admin-analytics-events"
+            >
+              <p className="admin__section-title">
+                {t('admin.analyticsHabitEvents')}
+              </p>
+              <p className="admin__hint">{t('admin.analyticsHabitHint')}</p>
+              <div className="admin__analytics-table-wrap">
+                <table className="admin__analytics-table">
+                  <thead>
+                    <tr>
+                      <th>{t('admin.analyticsColEvent')}</th>
+                      <th>{t('admin.analyticsColCount')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {analytics.events.map((row) => (
+                      <tr key={row.event}>
+                        <td>
+                          <strong>
+                            {t(`admin.analyticsEvent_${row.event}`)}
+                          </strong>
+                          <div className="admin__report-id">
+                            evt:{row.event}
+                          </div>
+                        </td>
+                        <td>{row.count}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
 
           {(analytics.cta.byTarget.length > 0 ||
             analytics.cta.byTopic.length > 0) && (

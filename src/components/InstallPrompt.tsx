@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { trackHabitEvent } from '../utils/analyticsApi';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -41,7 +42,10 @@ export function InstallPrompt() {
 
   const install = async () => {
     await deferred.prompt();
-    await deferred.userChoice;
+    const choice = await deferred.userChoice;
+    if (choice.outcome === 'accepted') {
+      void trackHabitEvent('pwa_install');
+    }
     dismiss();
   };
 

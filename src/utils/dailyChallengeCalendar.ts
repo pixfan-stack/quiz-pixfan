@@ -2,6 +2,7 @@
  * Build / download a recurring .ics reminder for the daily challenge.
  */
 
+import { trackHabitEvent } from './analyticsApi';
 import { APP_SHARE_URL } from './share';
 import { getDailyQuizId } from './dailyChallenge';
 
@@ -88,4 +89,5 @@ export function downloadDailyChallengeIcs(opts: {
   a.click();
   a.remove();
   URL.revokeObjectURL(href);
+  void trackHabitEvent('ics_download');
 }

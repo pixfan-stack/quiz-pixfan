@@ -4,6 +4,10 @@ import {
   type PixfanCtaTarget,
   type PixfanTopic,
 } from './pixfanCta';
+import {
+  habitEventQuizId,
+  type HabitEventName,
+} from './habitAnalytics';
 
 export interface QuizStats {
   quizId: string;
@@ -47,6 +51,20 @@ export async function trackCtaClick(payload: {
       payload.topic,
       payload.sourceQuizId
     ),
+    percentage: 0,
+    correctCount: 0,
+    totalQuestions: 1,
+    timeTakenSeconds: 0,
+  });
+}
+
+/**
+ * Record a habit-funnel event in `quiz_attempts`.
+ * Encoded as quiz_id `evt:{name}` with zeroed metrics (same pattern as CTA).
+ */
+export async function trackHabitEvent(event: HabitEventName): Promise<void> {
+  await trackQuizAttempt({
+    quizId: habitEventQuizId(event),
     percentage: 0,
     correctCount: 0,
     totalQuestions: 1,

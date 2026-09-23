@@ -3,6 +3,7 @@
  * Uses Notification API + service worker showNotification — no push server.
  */
 
+import { trackHabitEvent } from './analyticsApi';
 import { hasPlayedDailyToday, isStandalonePwa } from './reengage';
 
 const ENABLED_KEY = 'quiz-pixfan-daily-reminder';
@@ -17,11 +18,15 @@ export function isDailyReminderEnabled(): boolean {
 }
 
 export function setDailyReminderEnabled(enabled: boolean): void {
+  const prev = isDailyReminderEnabled();
   try {
     if (enabled) localStorage.setItem(ENABLED_KEY, '1');
     else localStorage.removeItem(ENABLED_KEY);
   } catch {
     // ignore
+  }
+  if (prev !== enabled) {
+    void trackHabitEvent(enabled ? 'reminder_on' : 'reminder_off');
   }
 }
 

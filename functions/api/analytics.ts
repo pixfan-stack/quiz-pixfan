@@ -6,6 +6,8 @@
  *
  * CTA clicks reuse the same table with quiz_id markers:
  *   cta:{guide|newsletter|pixfan}:{topic}:{sourceQuizId}
+ * Habit funnel events:
+ *   evt:{reminder_on|reminder_off|ics_download|pwa_install|account_create|account_redeem}
  *   percentage=0, correct_count=0, total_questions=1, time_taken_seconds=0
  */
 
@@ -118,7 +120,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
                 ROUND(AVG(percentage), 1) as avgPercentage,
                 ROUND(AVG(time_taken_seconds), 0) as avgTimeSeconds
          FROM quiz_attempts
-         WHERE quiz_id NOT LIKE 'cta:%'
+         WHERE quiz_id NOT LIKE 'cta:%' AND quiz_id NOT LIKE 'evt:%'
          GROUP BY quiz_id
          ORDER BY attempts DESC`
       ).all<QuizStats>();
