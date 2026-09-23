@@ -29,6 +29,8 @@ interface FeaturedQuizCardsProps {
   dailyThemeChip: string;
   /** Themed daily description for the home card. */
   dailyThemeDesc: string;
+  /** Local guide URL for the editorial week (UTM daily_theme), if any. */
+  dailyGuideUrl: string | null;
   dailyPlayed: boolean;
   dailyLinkCopied: boolean;
   dailyCountdown: string;
@@ -50,6 +52,7 @@ export function FeaturedQuizCards({
   dailyTeaser,
   dailyThemeChip,
   dailyThemeDesc,
+  dailyGuideUrl,
   dailyPlayed,
   dailyLinkCopied,
   dailyCountdown,
@@ -201,6 +204,16 @@ export function FeaturedQuizCards({
         >
           {dailyLinkCopied ? '✓' : '🔗'}
         </button>
+        {dailyGuideUrl ? (
+          <a
+            className="quiz-card-guide-link"
+            href={dailyGuideUrl}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {t('home.reviseGuide')}
+            <span aria-hidden="true"> →</span>
+          </a>
+        ) : null}
       </li>
 
       <li>

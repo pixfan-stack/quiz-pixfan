@@ -34,6 +34,51 @@ const LABELS: Record<string, { en: string; fr: string }> = {
   'mix-hard': { en: 'Hard mix', fr: 'Mix difficile' },
 };
 
+/**
+ * Editorial week chips — order must match `DAILY_THEME_ROTATION`
+ * in `src/utils/dailyChallenge.ts` (ISO week % length).
+ */
+export const DAILY_THEME_CHIPS: readonly { en: string; fr: string }[] = [
+  { en: 'Lightroom week', fr: 'Semaine Lightroom' },
+  { en: 'Smartphone week', fr: 'Semaine smartphone' },
+  { en: 'Light week', fr: 'Semaine lumière' },
+  { en: 'Composition week', fr: 'Semaine composition' },
+  { en: 'Gear week', fr: 'Semaine matériel' },
+  { en: 'Genres week', fr: 'Semaine genres' },
+  { en: 'Rights week', fr: 'Semaine droits' },
+  { en: 'History week', fr: 'Semaine histoire' },
+  { en: 'Mixed week', fr: 'Semaine mixte' },
+];
+
+/** ISO week number (UTC), 1–53 — mirrored from dailyChallenge for CF functions. */
+export function getUtcIsoWeek(date: Date): number {
+  const d = new Date(
+    Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
+  );
+  d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
+}
+
+export function dailyThemeChipForDate(
+  date: Date,
+  lang: 'en' | 'fr'
+): string {
+  const week = getUtcIsoWeek(date);
+  const idx = (week - 1) % DAILY_THEME_CHIPS.length;
+  return DAILY_THEME_CHIPS[idx]![lang];
+}
+
+export function parseDailyQuizDate(quizId: string): Date | null {
+  const m = /^daily-(\d{4})-(\d{2})-(\d{2})$/.exec(quizId);
+  if (!m) return null;
+  const y = Number(m[1]);
+  const mo = Number(m[2]);
+  const d = Number(m[3]);
+  if (!y || mo < 1 || mo > 12 || d < 1 || d > 31) return null;
+  return new Date(Date.UTC(y, mo - 1, d));
+}
+
 export function normalizeQuizId(raw: string): string | null {
   const id = decodeURIComponent(raw).trim();
   if (!QUIZ_ID_RE.test(id)) return null;
@@ -53,6 +98,13 @@ export function parseLang(raw: string | null): 'en' | 'fr' {
 
 export function quizLabel(quizId: string, lang: 'en' | 'fr'): string {
   if (quizId.startsWith('daily-')) {
+    const date = parseDailyQuizDate(quizId);
+    if (date) {
+      const chip = dailyThemeChipForDate(date, lang);
+      return lang === 'fr'
+        ? `Défi du jour · ${chip}`
+        : `Daily challenge · ${chip}`;
+    }
     return lang === 'fr' ? 'Défi du jour' : 'Daily challenge';
   }
   if (quizId.startsWith('duel-')) {

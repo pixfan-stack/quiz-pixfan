@@ -66,34 +66,45 @@ export function PixfanCta({
           <a
             className="btn btn--ghost"
             href={cta.secondaryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={
+              cta.secondaryTarget === 'guide' ? undefined : '_blank'
+            }
+            rel={
+              cta.secondaryTarget === 'guide'
+                ? undefined
+                : 'noopener noreferrer'
+            }
             onClick={() => onCtaClick(cta.secondaryTarget!)}
           >
-            {t(`pixfan.topic_${cta.topic}_secondaryCta`)}
+            {cta.secondaryTarget === 'newsletter'
+              ? t('pixfan.newsletterCta')
+              : t(`pixfan.topic_${cta.topic}_secondaryCta`)}
             <span aria-hidden="true"> →</span>
           </a>
         ) : null}
       </div>
 
-      <div className="pixfan-cta__newsletter">
-        <p className="pixfan-cta__newsletter-title">
-          {t('pixfan.newsletterTitle')}
-        </p>
-        <p className="pixfan-cta__newsletter-desc">
-          {t('pixfan.newsletterDesc')}
-        </p>
-        <a
-          className="pixfan-cta__newsletter-link"
-          href={cta.newsletterUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => onCtaClick('newsletter')}
-        >
-          {t('pixfan.newsletterCta')}
-          <span aria-hidden="true"> →</span>
-        </a>
-      </div>
+      {/* Soft newsletter block — skip when secondary is already newsletter. */}
+      {cta.secondaryTarget !== 'newsletter' ? (
+        <div className="pixfan-cta__newsletter">
+          <p className="pixfan-cta__newsletter-title">
+            {t('pixfan.newsletterTitle')}
+          </p>
+          <p className="pixfan-cta__newsletter-desc">
+            {t('pixfan.newsletterDesc')}
+          </p>
+          <a
+            className="pixfan-cta__newsletter-link"
+            href={cta.newsletterUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => onCtaClick('newsletter')}
+          >
+            {t('pixfan.newsletterCta')}
+            <span aria-hidden="true"> →</span>
+          </a>
+        </div>
+      ) : null}
     </aside>
   );
 }
