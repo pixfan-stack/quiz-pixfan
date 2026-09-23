@@ -2682,6 +2682,12 @@ a {
   gap: 0.65rem;
 }
 
+.admin__analytics-modes,
+.admin__analytics-events {
+  display: grid;
+  gap: 0.65rem;
+}
+
 .admin__analytics-cta-grids {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));

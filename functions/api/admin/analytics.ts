@@ -7,6 +7,9 @@
  *
  * CTA clicks are stored as quiz_id `cta:{target}:{topic}:{sourceQuizId}`
  * and returned as a target × topic breakdown (P3 funnel).
+ *
+ * Habit events use quiz_id `evt:{name}` (reminder / ics / pwa / account).
+ * Attempts are also ventilated by mode (photo-reading / daily / duel / weak-spots / packs).
  */
 
 import { json } from '../utils';
@@ -39,15 +42,57 @@ export interface CtaAnalyticsBreakdown {
   rows: CtaClickRow[];
 }
 
+type AttemptMode =
+  | 'photo-reading'
+  | 'daily'
+  | 'duel'
+  | 'weak-spots'
+  | 'packs';
+
+type HabitEventName =
+  | 'reminder_on'
+  | 'reminder_off'
+  | 'ics_download'
+  | 'pwa_install'
+  | 'account_create'
+  | 'account_redeem';
+
+const ATTEMPT_MODES: AttemptMode[] = [
+  'photo-reading',
+  'daily',
+  'duel',
+  'weak-spots',
+  'packs',
+];
+
+const HABIT_EVENTS = new Set<HabitEventName>([
+  'reminder_on',
+  'reminder_off',
+  'ics_download',
+  'pwa_install',
+  'account_create',
+  'account_redeem',
+]);
+
+/** Exclude CTA + habit markers from real quiz attempt aggregates. */
+const REAL_ATTEMPT_WHERE =
+  `quiz_id NOT LIKE 'cta:%' AND quiz_id NOT LIKE 'evt:%'`;
+
 export interface AnalyticsDashboard {
   summary: {
     totalAttempts: number;
     avgPercentage: number;
     uniqueQuizzes: number;
     ctaClicks: number;
+    /** CTA clicks / quiz attempts as percentage (0–100). */
+    ctaConversionPct: number;
   };
   /** Ventilation CTA : guide / newsletter / pixfan × topic. */
   cta: CtaAnalyticsBreakdown;
+  /** Attempts by play mode (excludes cta:/evt: markers). */
+  modes: Array<{ mode: AttemptMode; attempts: number }>;
+  /** Habit funnel evt:* counters. */
+  events: Array<{ event: HabitEventName; count: number }>;
   quizzes: QuizAttemptStats[];
   recentDays: Array<{ day: string; attempts: number }>;
 }
@@ -105,6 +150,65 @@ function buildCtaBreakdown(
   return { byTarget, byTopic, rows };
 }
 
+function classifyAttemptMode(quizId: string): AttemptMode {
+  if (quizId === 'photo-reading') return 'photo-reading';
+  if (quizId === 'weak-spots') return 'weak-spots';
+  if (quizId.startsWith('daily-')) return 'daily';
+  if (quizId.startsWith('duel-')) return 'duel';
+  return 'packs';
+}
+
+function buildModeCounts(
+  rawRows: Array<{ quizId: string; attempts: number }>
+): Array<{ mode: AttemptMode; attempts: number }> {
+  const map = new Map<AttemptMode, number>();
+  for (const raw of rawRows) {
+    const attempts = Number(raw.attempts) || 0;
+    if (attempts <= 0) continue;
+    const mode = classifyAttemptMode(raw.quizId);
+    map.set(mode, (map.get(mode) ?? 0) + attempts);
+  }
+  return ATTEMPT_MODES.filter((m) => (map.get(m) ?? 0) > 0).map((mode) => ({
+    mode,
+    attempts: map.get(mode) ?? 0,
+  }));
+}
+
+function parseHabitEvent(quizId: string): HabitEventName | null {
+  if (!quizId.startsWith('evt:')) return null;
+  const name = quizId.slice(4) as HabitEventName;
+  return HABIT_EVENTS.has(name) ? name : null;
+}
+
+function buildHabitEvents(
+  rawRows: Array<{ quizId: string; count: number }>
+): Array<{ event: HabitEventName; count: number }> {
+  const map = new Map<HabitEventName, number>();
+  for (const raw of rawRows) {
+    const count = Number(raw.count) || 0;
+    if (count <= 0) continue;
+    const event = parseHabitEvent(raw.quizId);
+    if (!event) continue;
+    map.set(event, (map.get(event) ?? 0) + count);
+  }
+  const order: HabitEventName[] = [
+    'reminder_on',
+    'reminder_off',
+    'ics_download',
+    'pwa_install',
+    'account_create',
+    'account_redeem',
+  ];
+  return order
+    .filter((e) => (map.get(e) ?? 0) > 0)
+    .map((event) => ({ event, count: map.get(event) ?? 0 }));
+}
+
+function ctaConversionPct(ctaClicks: number, totalAttempts: number): number {
+  if (totalAttempts <= 0) return 0;
+  return Math.round((1000 * ctaClicks) / totalAttempts) / 10;
+}
+
 export const onRequestOptions: PagesFunction = async () => {
   return json(null, 204);
 };
@@ -121,8 +225,11 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       avgPercentage: 0,
       uniqueQuizzes: 0,
       ctaClicks: 0,
+      ctaConversionPct: 0,
     },
     cta: emptyCta(),
+    modes: [],
+    events: [],
     quizzes: [],
     recentDays: [],
   };
@@ -141,7 +248,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
            ROUND(AVG(percentage), 1) as avgPercentage,
            COUNT(DISTINCT quiz_id) as uniqueQuizzes
          FROM quiz_attempts
-         WHERE quiz_id NOT LIKE 'cta:%'`
+         WHERE ${REAL_ATTEMPT_WHERE}`
       )
       .first<{
         totalAttempts: number;
@@ -168,6 +275,26 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       )
       .all<{ quizId: string; clicks: number }>();
 
+    const modeGroupRows = await db
+      .prepare(
+        `SELECT quiz_id as quizId, COUNT(*) as attempts
+         FROM quiz_attempts
+         WHERE ${REAL_ATTEMPT_WHERE}
+         GROUP BY quiz_id`
+      )
+      .all<{ quizId: string; attempts: number }>();
+
+    const eventGroupRows = await db
+      .prepare(
+        `SELECT quiz_id as quizId, COUNT(*) as count
+         FROM quiz_attempts
+         WHERE quiz_id LIKE 'evt:%'
+         GROUP BY quiz_id
+         ORDER BY count DESC
+         LIMIT 50`
+      )
+      .all<{ quizId: string; count: number }>();
+
     const quizRows = await db
       .prepare(
         `SELECT quiz_id as quizId,
@@ -179,7 +306,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
                   1
                 ) as lowScoreRate
          FROM quiz_attempts
-         WHERE quiz_id NOT LIKE 'cta:%'
+         WHERE ${REAL_ATTEMPT_WHERE}
          GROUP BY quiz_id
          ORDER BY attempts DESC
          LIMIT 50`
@@ -191,7 +318,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
         `SELECT substr(created_at, 1, 10) as day,
                 COUNT(*) as attempts
          FROM quiz_attempts
-         WHERE quiz_id NOT LIKE 'cta:%'
+         WHERE ${REAL_ATTEMPT_WHERE}
            AND created_at >= strftime('%Y-%m-%dT%H:%M:%SZ', 'now', '-14 days')
          GROUP BY day
          ORDER BY day DESC
@@ -206,14 +333,30 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       }))
     );
 
+    const totalAttempts = Number(summaryRow?.totalAttempts) || 0;
+    const ctaClicks = Number(ctaRow?.ctaClicks) || 0;
+
     const dashboard: AnalyticsDashboard = {
       summary: {
-        totalAttempts: Number(summaryRow?.totalAttempts) || 0,
+        totalAttempts,
         avgPercentage: Number(summaryRow?.avgPercentage) || 0,
         uniqueQuizzes: Number(summaryRow?.uniqueQuizzes) || 0,
-        ctaClicks: Number(ctaRow?.ctaClicks) || 0,
+        ctaClicks,
+        ctaConversionPct: ctaConversionPct(ctaClicks, totalAttempts),
       },
       cta,
+      modes: buildModeCounts(
+        (modeGroupRows.results ?? []).map((row) => ({
+          quizId: row.quizId,
+          attempts: Number(row.attempts) || 0,
+        }))
+      ),
+      events: buildHabitEvents(
+        (eventGroupRows.results ?? []).map((row) => ({
+          quizId: row.quizId,
+          count: Number(row.count) || 0,
+        }))
+      ),
       quizzes: (quizRows.results ?? []).map((row) => ({
         quizId: row.quizId,
         attempts: Number(row.attempts) || 0,

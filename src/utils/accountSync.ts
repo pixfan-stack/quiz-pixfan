@@ -30,6 +30,7 @@ import {
   setPlayerDisplayName,
   setPlayerId,
 } from './player';
+import { trackHabitEvent } from './analyticsApi';
 import { isRemoteScoresEnabled } from './remoteScores';
 import { normalizeRecoveryCode } from './recoveryCode';
 import {
@@ -127,6 +128,7 @@ export async function createRecoveryCode(): Promise<{
       if (res.status === 429) return { ok: false, error: 'rate_limited' };
       return { ok: false, error: data.error ?? 'create_failed' };
     }
+    void trackHabitEvent('account_create');
     return { ok: true, code: data.code, expiresAt: data.expiresAt };
   } catch {
     return { ok: false, error: 'network' };
@@ -207,6 +209,7 @@ export async function redeemRecoveryCode(rawCode: string): Promise<{
       }).catch(() => {});
     }
 
+    void trackHabitEvent('account_redeem');
     return { ok: true, progress: data.progress };
   } catch {
     return { ok: false, error: 'network' };
