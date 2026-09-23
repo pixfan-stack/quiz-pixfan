@@ -4,7 +4,7 @@ Document à jour avec l’état réel du dépôt (**v1.15.0**).
 
 ## ✅ Livré
 
-- Contenu : **11 quiz · 285 questions · 132 illustrées** (`public/data/questions.json`)
+- Contenu : **12 quiz · 305 questions · 164 illustrées** (`public/data/questions.json`)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots
 - Engagement : défi du jour, duel, succès, streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
@@ -22,8 +22,8 @@ Document à jour avec l’état réel du dépôt (**v1.15.0**).
 ## 🔜 Suite produit possible
 
 - [ ] Appliquer migration D1 `006` en prod (vault + badges saison) si pas encore fait
-- [ ] Enrichir images sur packs encore sous-illustrés (`exposure-basics`, `genres`, …)
-- [ ] SRS vault + CTA weak-spots (vague 1.16 P2)
+- [x] Enrichir images packs sous-illustrés + quiz `portrait-light` + rebalance `history-icons` (vague 1.16 P3)
+- [x] SRS vault + CTA weak-spots (vague 1.16 P2)
 - [ ] BreadcrumbList guides + éventuel guide droits (vague 1.16 P1.4 / P1.3 suite)
 
 Contenu : `public/data/questions.json`. Priorisation : [`vague-1-16`](docs hors dépôt) / release notes.
