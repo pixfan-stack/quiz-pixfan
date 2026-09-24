@@ -13,6 +13,11 @@ export function parseQuizIdFromHash(hash: string): string | null {
   return match ? decodeURIComponent(match[1]) : null;
 }
 
+/** True for `#/daily` (stable daily shortcut used in guides / sitemap). */
+export function isDailyShortcutHash(hash: string): boolean {
+  return /^#\/daily(?:\?.*)?$/.test(hash);
+}
+
 /** Read `score` from hash query (`#/quiz/id?score=80`) or location search. */
 export function parseScoreFromLocation(
   hash = typeof window !== 'undefined' ? window.location.hash : '',

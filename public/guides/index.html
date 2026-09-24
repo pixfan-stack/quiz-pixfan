@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guides quiz photo — apprendre puis s’entraîner | Quiz PixFan</title>
-  <meta name="description" content="Guides gratuits sur l’exposition, la composition, la lumière, la retouche Lightroom, les genres photo et le smartphone, avec quiz interactifs FR/EN sur Quiz PixFan." />
+  <meta name="description" content="Guides gratuits sur l’exposition, la composition, la lumière, la retouche, les genres, le smartphone, le matériel, les droits et l’histoire photo, avec quiz interactifs FR/EN sur Quiz PixFan." />
   <link rel="canonical" href="https://quiz.pixfan.fr/guides/" />
   <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/guides/?lang=fr" />
   <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/guides/?lang=en" />
@@ -12,11 +12,51 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://quiz.pixfan.fr/guides/" />
   <meta property="og:title" content="Guides quiz photo | Quiz PixFan" />
-  <meta property="og:description" content="Apprenez exposition, composition, lumière, genres, retouche et smartphone, puis testez-vous." />
+  <meta property="og:description" content="Apprenez exposition, composition, lumière, genres, retouche, smartphone, matériel, droits et histoire — puis testez-vous." />
   <meta property="fb:app_id" content="1845182679783128" />
   <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <meta property="og:locale" content="fr_FR" />
   <link rel="stylesheet" href="/guides/guides.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Quiz PixFan",
+        "item": "https://quiz.pixfan.fr/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://quiz.pixfan.fr/guides/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Guides photo Quiz PixFan",
+    "description": "Guides locaux liés aux quiz interactifs Quiz PixFan.",
+    "numberOfItems": 9,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Triangle d’exposition", "url": "https://quiz.pixfan.fr/guides/triangle-exposition" },
+      { "@type": "ListItem", "position": 2, "name": "Composition photo", "url": "https://quiz.pixfan.fr/guides/composition-photo" },
+      { "@type": "ListItem", "position": 3, "name": "Lumière photo", "url": "https://quiz.pixfan.fr/guides/lumiere-photo" },
+      { "@type": "ListItem", "position": 4, "name": "Retouche & Lightroom", "url": "https://quiz.pixfan.fr/guides/retouche-lightroom" },
+      { "@type": "ListItem", "position": 5, "name": "Photo au smartphone", "url": "https://quiz.pixfan.fr/guides/photo-smartphone" },
+      { "@type": "ListItem", "position": 6, "name": "Genres photographiques", "url": "https://quiz.pixfan.fr/guides/genres-photo" },
+      { "@type": "ListItem", "position": 7, "name": "Matériel photo", "url": "https://quiz.pixfan.fr/guides/materiel-photo" },
+      { "@type": "ListItem", "position": 8, "name": "Droits & éthique photo", "url": "https://quiz.pixfan.fr/guides/droits-ethique-photo" },
+      { "@type": "ListItem", "position": 9, "name": "Histoire & icônes", "url": "https://quiz.pixfan.fr/guides/histoire-photo" }
+    ]
+  }
+  </script>
   <script>
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
@@ -29,7 +69,7 @@
     <nav class="nav" aria-label="Navigation">
       <a class="nav__brand" href="/">Quiz PixFan</a>
       <a href="/guides/">Guides</a>
-      <a href="/#/daily">Défi du jour</a>
+      <a href="/s/daily">Défi du jour</a>
       <span class="lang-switch muted">
         <a href="?lang=fr">FR</a> · <a href="?lang=en">EN</a>
       </span>
@@ -68,6 +108,21 @@
         <p>Portrait, street, paysage, macro — l’intention avant le boîtier.</p>
         <a class="cta-secondary" href="/guides/genres-photo">Lire le guide →</a>
       </div>
+      <div class="card">
+        <h2>Matériel photo</h2>
+        <p>Capteurs, focales, stabilisation et filtres utiles.</p>
+        <a class="cta-secondary" href="/guides/materiel-photo">Lire le guide →</a>
+      </div>
+      <div class="card">
+        <h2>Droits &amp; éthique</h2>
+        <p>Droit d’auteur, licences, model release et bonnes pratiques.</p>
+        <a class="cta-secondary" href="/guides/droits-ethique-photo">Lire le guide →</a>
+      </div>
+      <div class="card">
+        <h2>Histoire &amp; icônes</h2>
+        <p>Inventions, photographes mythiques et domaine public.</p>
+        <a class="cta-secondary" href="/guides/histoire-photo">Lire le guide →</a>
+      </div>
       <p><a class="cta" href="/">Lancer un quiz</a></p>
     </div>
 
@@ -103,6 +158,21 @@
         <h2>Photography genres</h2>
         <p>Portrait, street, landscape, macro — intention before gear.</p>
         <a class="cta-secondary" href="/guides/genres-photo?lang=en">Read the guide →</a>
+      </div>
+      <div class="card">
+        <h2>Photo gear</h2>
+        <p>Sensors, focal lengths, stabilization, and useful filters.</p>
+        <a class="cta-secondary" href="/guides/materiel-photo?lang=en">Read the guide →</a>
+      </div>
+      <div class="card">
+        <h2>Rights &amp; ethics</h2>
+        <p>Copyright, licenses, model releases, and good practice.</p>
+        <a class="cta-secondary" href="/guides/droits-ethique-photo?lang=en">Read the guide →</a>
+      </div>
+      <div class="card">
+        <h2>History &amp; icons</h2>
+        <p>Inventions, iconic photographers, and public-domain images.</p>
+        <a class="cta-secondary" href="/guides/histoire-photo?lang=en">Read the guide →</a>
       </div>
       <p><a class="cta" href="/?lang=en">Start a quiz</a></p>
     </div>
