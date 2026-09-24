@@ -23,6 +23,7 @@ import {
   mergeRemoteSeasonBadges,
   unlockSeasonParticipant,
 } from '../utils/seasonEngagement';
+import { summarizeAccountProgress } from '../utils/accountSync';
 import type { Question } from '../types/quiz';
 
 describe('normalizeRecoveryCode', () => {
@@ -157,5 +158,34 @@ describe('progress merge helpers', () => {
     mergeRemoteSeasonBadges({ '2026-09': 'participant' });
     expect(getSeasonBadges()['2026-07']).toBe('participant');
     expect(getSeasonBadges()['2026-09']).toBe('participant');
+  });
+
+  it('summarizeAccountProgress extracts vault / badges / streak counts', () => {
+    expect(
+      summarizeAccountProgress({
+        streak: {
+          lastDailyId: 'daily-2026-09-24',
+          currentStreak: 4,
+          bestStreak: 6,
+          freezesAvailable: 1,
+          freezeWeekKey: null,
+        },
+        achievements: ['first-finish', 'daily-first'],
+        vault: [
+          {
+            questionId: 'a',
+            sourceQuizId: 'x',
+            missCount: 1,
+            lastMissedAt: '2026-09-01T00:00:00.000Z',
+          },
+        ],
+        seasonBadges: { '2026-09': 'top10' },
+      })
+    ).toEqual({
+      vault: 1,
+      badges: 1,
+      streak: 4,
+      achievements: 2,
+    });
   });
 });

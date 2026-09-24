@@ -43,7 +43,38 @@ interface VaultEntry {
   lastMissedAt: string;
 }
 
-type SeasonBadgeMap = Record<string, 'participant'>;
+type SeasonCosmetic = 'participant' | 'streak-season' | 'top10' | 'podium';
+type SeasonBadgeMap = Record<string, SeasonCosmetic>;
+
+const SEASON_COSMETICS: readonly SeasonCosmetic[] = [
+  'participant',
+  'streak-season',
+  'top10',
+  'podium',
+];
+
+const COSMETIC_RANK: Record<SeasonCosmetic, number> = {
+  participant: 1,
+  'streak-season': 2,
+  top10: 3,
+  podium: 4,
+};
+
+function isSeasonCosmetic(value: unknown): value is SeasonCosmetic {
+  return (
+    typeof value === 'string' &&
+    (SEASON_COSMETICS as readonly string[]).includes(value)
+  );
+}
+
+function pickHigherSeasonCosmetic(
+  a: SeasonCosmetic | undefined,
+  b: SeasonCosmetic | undefined
+): SeasonCosmetic | undefined {
+  if (!a) return b;
+  if (!b) return a;
+  return COSMETIC_RANK[a] >= COSMETIC_RANK[b] ? a : b;
+}
 
 interface HighScoreRow {
   quizId: string;
@@ -285,20 +316,25 @@ function parseSeasonBadges(raw: unknown): SeasonBadgeMap {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
   const out: SeasonBadgeMap = {};
   for (const [id, value] of Object.entries(raw as Record<string, unknown>)) {
-    if (value === 'participant' && /^\d{4}-\d{2}$/.test(id)) {
-      out[id] = 'participant';
+    if (isSeasonCosmetic(value) && /^\d{4}-\d{2}$/.test(id)) {
+      out[id] = value;
     }
   }
   const ids = Object.keys(out).sort().reverse().slice(0, MAX_SEASON_BADGES);
   const capped: SeasonBadgeMap = {};
   for (const id of ids) {
-    capped[id] = 'participant';
+    capped[id] = out[id]!;
   }
   return capped;
 }
 
 function mergeSeasonBadges(a: SeasonBadgeMap, b: SeasonBadgeMap): SeasonBadgeMap {
-  return parseSeasonBadges({ ...a, ...b });
+  const merged: SeasonBadgeMap = { ...a };
+  for (const [id, cosmetic] of Object.entries(b) as [string, SeasonCosmetic][]) {
+    const kept = pickHigherSeasonCosmetic(merged[id], cosmetic);
+    if (kept) merged[id] = kept;
+  }
+  return parseSeasonBadges(merged);
 }
 
 async function loadHighScores(

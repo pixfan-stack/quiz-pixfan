@@ -1,7 +1,11 @@
 import type { CSSProperties } from 'react';
 import type { TFunction } from 'i18next';
 import type { QuizResult } from '../../types/quiz';
-import type { MasteryNextTarget } from '../../utils/mastery';
+import {
+  masteryLabelKey,
+  type MasteryNextTarget,
+  type ParcoursMastery,
+} from '../../utils/mastery';
 
 interface ResultHeroProps {
   result: QuizResult;
@@ -9,6 +13,8 @@ interface ResultHeroProps {
   badgeKey: string;
   masteryKey: string | null;
   masteryNext: MasteryNextTarget | null;
+  /** Aggregate light+portrait+exposure mastery when finishing a parcours pack. */
+  parcoursMastery?: ParcoursMastery | null;
   displayName: string;
   t: TFunction;
 }
@@ -19,9 +25,22 @@ export function ResultHero({
   badgeKey,
   masteryKey,
   masteryNext,
+  parcoursMastery = null,
   displayName,
   t,
 }: ResultHeroProps) {
+  const parcoursKey = parcoursMastery
+    ? masteryLabelKey(parcoursMastery.tier)
+    : null;
+  const masteryRingPct = masteryNext
+    ? Math.min(
+        100,
+        Math.round((masteryNext.current / masteryNext.threshold) * 100)
+      )
+    : masteryKey
+      ? 100
+      : null;
+
   return (
     <>
       <div className="result-hero">
@@ -40,6 +59,28 @@ export function ResultHero({
             <span className="result-ring__unit">%</span>
           </div>
         </div>
+
+        {masteryRingPct != null && (
+          <div
+            className="result-mastery-ring"
+            style={{ '--p': masteryRingPct } as CSSProperties}
+            role="img"
+            aria-label={
+              masteryNext
+                ? t('result.masteryNext', {
+                    need: masteryNext.need,
+                    tier: t(`home.mastery_${masteryNext.nextTier}`),
+                  })
+                : masteryKey
+                  ? t(masteryKey)
+                  : undefined
+            }
+          >
+            <span className="result-mastery-ring__label">
+              {masteryKey ? t(masteryKey) : t('home.mastery_bronze')}
+            </span>
+          </div>
+        )}
 
         <p className="result-hero__score">
           {t('result.score', {
@@ -66,6 +107,18 @@ export function ResultHero({
             {t('result.masteryNext', {
               need: masteryNext.need,
               tier: t(`home.mastery_${masteryNext.nextTier}`),
+            })}
+          </p>
+        )}
+        {parcoursMastery && parcoursMastery.played > 0 && (
+          <p className="result-parcours-mastery" role="status">
+            {t('result.parcoursMastery', {
+              average: parcoursMastery.average,
+              played: parcoursMastery.played,
+              total: 3,
+              tier: parcoursKey
+                ? t(parcoursKey)
+                : t('result.parcoursMasteryNone'),
             })}
           </p>
         )}

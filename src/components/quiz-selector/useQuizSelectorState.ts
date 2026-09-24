@@ -37,7 +37,7 @@ import {
   buildDifficultyMix,
   filterQuizzesByDifficulty,
 } from '../../utils/difficulty';
-import { buildDuelQuiz, createDuelSeed } from '../../utils/duel';
+import { buildDuelQuiz, createDuelSeed, getDuelPhotoTeaser } from '../../utils/duel';
 import {
   getDisplayDailyStreak,
   getStreakFreezesAvailable,
@@ -110,6 +110,10 @@ export function useQuizSelectorState({
   }, []);
   const photoTeaser = useMemo(
     () => (quizzes.length > 0 ? getPhotoReadingTeaser(quizzes) : null),
+    [quizzes]
+  );
+  const duelTeaser = useMemo(
+    () => (quizzes.length > 0 ? getDuelPhotoTeaser(quizzes) : null),
     [quizzes]
   );
   const photoPoolCount = useMemo(
@@ -315,6 +319,7 @@ export function useQuizSelectorState({
     dueCount,
     dailyCountdown,
     dailyTeaser,
+    duelTeaser,
     dailyThemeChip,
     dailyThemeDesc,
     dailyGuideUrl,

@@ -1,6 +1,6 @@
 import type { HighScoreRecord } from '../types/quiz';
 import { isDailyQuizId } from './dailyChallenge';
-import type { DailyStreakState } from './dailyStreak';
+import { getDailyStreak, type DailyStreakState } from './dailyStreak';
 import { isDuelQuizId } from './duel';
 import { isPhotoReadingQuizId } from './photoReading';
 import { RANDOM_QUIZ_ID } from './randomQuiz';
@@ -283,4 +283,46 @@ export function unlockAchievements(input: AchievementEvalInput): AchievementId[]
 
 export function getAchievementDef(id: AchievementId): AchievementDef {
   return ACHIEVEMENTS.find((a) => a.id === id) ?? ACHIEVEMENTS[0]!;
+}
+
+export interface AchievementProgress {
+  current: number;
+  threshold: number;
+}
+
+const STREAK_THRESHOLDS: Partial<Record<AchievementId, number>> = {
+  'streak-3': 3,
+  'streak-7': 7,
+  'streak-14': 14,
+};
+
+/**
+ * Progress toward a threshold-based achievement (photo-reader, vault-clear, streaks).
+ * Returns null for binary achievements.
+ */
+export function getAchievementProgress(
+  id: AchievementId
+): AchievementProgress | null {
+  if (id === 'photo-reader') {
+    return {
+      current: Math.min(getPhotoReadingPlayCount(), PHOTO_READER_THRESHOLD),
+      threshold: PHOTO_READER_THRESHOLD,
+    };
+  }
+  if (id === 'vault-clear') {
+    return {
+      current: Math.min(getVaultResolvedTotal(), VAULT_CLEAR_THRESHOLD),
+      threshold: VAULT_CLEAR_THRESHOLD,
+    };
+  }
+  const streakThreshold = STREAK_THRESHOLDS[id];
+  if (streakThreshold != null) {
+    const streak = getDailyStreak();
+    const best = Math.max(streak.currentStreak, streak.bestStreak);
+    return {
+      current: Math.min(best, streakThreshold),
+      threshold: streakThreshold,
+    };
+  }
+  return null;
 }

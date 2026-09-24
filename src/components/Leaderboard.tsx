@@ -15,7 +15,7 @@ import {
   hasReportedPlayer,
   markPlayerReported,
 } from '../utils/nameReports';
-import { getSeasonBadge } from '../utils/seasonEngagement';
+import { getSeasonBadge, seasonCosmeticLabelKey } from '../utils/seasonEngagement';
 
 interface LeaderboardProps {
   quizId?: string;
@@ -223,14 +223,18 @@ function PeriodTabs({
 }) {
   const { t } = useTranslation();
   const daysLeft = getSeasonDaysRemaining();
-  const hasBadge = getSeasonBadge(seasonId) === 'participant';
+  const seasonBadge = getSeasonBadge(seasonId);
+  const hasBadge = seasonBadge != null;
   return (
     <div className="leaderboard__header">
       <h3 className="leaderboard__title">{t('leaderboard.title')}</h3>
       <p className="leaderboard__season">
         {t('leaderboard.seasonLabel', { season: seasonId })}
-        {hasBadge && (
-          <span className="leaderboard__season-badge" title={t('season.participantBadge', { season: seasonId })}>
+        {hasBadge && seasonBadge && (
+          <span
+            className="leaderboard__season-badge"
+            title={t(seasonCosmeticLabelKey(seasonBadge), { season: seasonId })}
+          >
             {' '}
             🏅
           </span>

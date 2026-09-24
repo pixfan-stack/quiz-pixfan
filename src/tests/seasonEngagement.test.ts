@@ -5,14 +5,20 @@ import {
   getSeasonStart,
 } from '../utils/leaderboardPeriod';
 import {
+  cosmeticFromMonthRank,
   dismissSeasonBanner,
   getSeasonBadge,
   getSeasonBadges,
   getSeasonBannerKind,
   listSeasonBadges,
   mergeRemoteSeasonBadges,
+  mergeSeasonBadgeMaps,
+  parseSeasonBadges,
+  pickHigherSeasonCosmetic,
   SEASON_ENDING_SOON_DAYS,
+  unlockSeasonFromRank,
   unlockSeasonParticipant,
+  unlockSeasonStreak,
 } from '../utils/seasonEngagement';
 
 describe('season period helpers', () => {
@@ -63,6 +69,66 @@ describe('seasonEngagement', () => {
     expect(listSeasonBadges()).toEqual([
       { seasonId: '2026-09', cosmetic: 'participant' },
     ]);
+  });
+
+  it('maps month rank to top10 / podium cosmetics', () => {
+    expect(cosmeticFromMonthRank(1)).toBe('podium');
+    expect(cosmeticFromMonthRank(3)).toBe('podium');
+    expect(cosmeticFromMonthRank(4)).toBe('top10');
+    expect(cosmeticFromMonthRank(10)).toBe('top10');
+    expect(cosmeticFromMonthRank(11)).toBeNull();
+    expect(cosmeticFromMonthRank(null)).toBeNull();
+  });
+
+  it('upgrades season cosmetics without downgrading', () => {
+    expect(pickHigherSeasonCosmetic('participant', 'top10')).toBe('top10');
+    expect(pickHigherSeasonCosmetic('podium', 'top10')).toBe('podium');
+    unlockSeasonParticipant('2026-09');
+    expect(unlockSeasonFromRank(8, '2026-09')).toBe(true);
+    expect(getSeasonBadge('2026-09')).toBe('top10');
+    expect(unlockSeasonFromRank(2, '2026-09')).toBe(true);
+    expect(getSeasonBadge('2026-09')).toBe('podium');
+    expect(unlockSeasonFromRank(9, '2026-09')).toBe(false);
+    expect(getSeasonBadge('2026-09')).toBe('podium');
+  });
+
+  it('unlocks streak-season at threshold without beating podium', () => {
+    expect(unlockSeasonStreak(6, '2026-09')).toBe(false);
+    expect(unlockSeasonStreak(7, '2026-09')).toBe(true);
+    expect(getSeasonBadge('2026-09')).toBe('streak-season');
+    unlockSeasonFromRank(1, '2026-09');
+    expect(unlockSeasonStreak(14, '2026-09')).toBe(false);
+    expect(getSeasonBadge('2026-09')).toBe('podium');
+  });
+
+  it('parseSeasonBadges accepts known cosmetics and rejects junk', () => {
+    expect(
+      parseSeasonBadges({
+        '2026-09': 'podium',
+        '2026-08': 'top10',
+        '2026-07': 'streak-season',
+        '2026-06': 'participant',
+        'bad': 'podium',
+        '2026-05': 'legendary',
+      })
+    ).toEqual({
+      '2026-09': 'podium',
+      '2026-08': 'top10',
+      '2026-07': 'streak-season',
+      '2026-06': 'participant',
+    });
+  });
+
+  it('mergeSeasonBadgeMaps keeps the higher tier per season', () => {
+    expect(
+      mergeSeasonBadgeMaps(
+        { '2026-09': 'participant' },
+        { '2026-09': 'top10', '2026-08': 'streak-season' }
+      )
+    ).toEqual({
+      '2026-09': 'top10',
+      '2026-08': 'streak-season',
+    });
   });
 
   it('mergeRemoteSeasonBadges unions maps', () => {

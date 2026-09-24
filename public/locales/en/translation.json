@@ -73,6 +73,7 @@
     "difficulty_easy": "Easy",
     "difficulty_medium": "Medium",
     "difficulty_hard": "Hard",
+    "difficultyEmpty": "No packs at this difficulty yet.",
     "startDifficultyMix": "Start this level mix",
     "playerName": "Display name",
     "playerNameHint": "It will appear on the leaderboard after each quiz.",
@@ -103,6 +104,7 @@
     "redeem": "Recover",
     "redeeming": "Recovering…",
     "redeemSuccess": "Progress synced! High scores, streak, achievements, and weak spots are up to date.",
+    "redeemSummary": "Weak spots: {{vault}} · Season badges: {{badges}} · Streak: {{streak}} · Achievements: {{achievements}}",
     "errInvalid": "Invalid code. Check the XXXX-XXXX-XXXX format.",
     "errUnknown": "Unknown code. It may already have been used, or was generated on another device.",
     "errExpired": "This code has expired. Generate a new one.",
@@ -139,6 +141,8 @@
     "newHighScore": "New high score!",
     "previousBest": "Previous best: {{percent}}%",
     "masteryNext": "{{need}}% more to {{tier}}",
+    "parcoursMastery": "Path mastery: {{average}}% ({{played}}/{{total}}) · {{tier}}",
+    "parcoursMasteryNone": "not started",
     "message_perfect": "Perfect score! You're a genius!",
     "message_great": "Great job! Almost perfect!",
     "message_good": "Nice work! Keep practicing!",
@@ -264,7 +268,10 @@
     "dismiss": "Not now",
     "badgesTitle": "Season badges",
     "badgesEmpty": "Finish a quiz to earn this season’s participant badge.",
-    "participantBadge": "Participant · {{season}}"
+    "participantBadge": "Participant · {{season}}",
+    "top10Badge": "Top 10 · {{season}}",
+    "podiumBadge": "Podium · {{season}}",
+    "streakSeasonBadge": "Season streak · {{season}}"
   },
   "pixfan": {
     "eyebrow": "Pixfan next step",
@@ -327,6 +334,7 @@
   "achievements": {
     "title": "Achievements",
     "progress": "{{unlocked}} / {{total}} unlocked",
+    "counter": "{{current}}/{{threshold}}",
     "new": "New",
     "firstFinish": "First finish",
     "firstFinishDesc": "Complete any quiz.",

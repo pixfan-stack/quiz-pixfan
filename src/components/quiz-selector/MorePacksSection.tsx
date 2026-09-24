@@ -76,20 +76,28 @@ export function MorePacksSection({
           role="group"
           aria-label={t('home.difficultyFilter')}
         >
-          {(['all', 'easy', 'medium', 'hard'] as const).map((level) => (
-            <button
-              key={level}
-              type="button"
-              className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}`}
-              onClick={() => {
-                setDifficultyFilter(level);
-                if (level !== 'all') setMorePacksOpen(true);
-              }}
-              aria-pressed={difficultyFilter === level}
-            >
-              {t(`home.difficulty_${level}`)}
-            </button>
-          ))}
+          {(['all', 'easy', 'medium', 'hard'] as const).map((level) => {
+            if (level !== 'all') {
+              const count = quizzes.filter(
+                (q) => deriveQuizDifficulty(q) === level
+              ).length;
+              if (count === 0) return null;
+            }
+            return (
+              <button
+                key={level}
+                type="button"
+                className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}`}
+                onClick={() => {
+                  setDifficultyFilter(level);
+                  if (level !== 'all') setMorePacksOpen(true);
+                }}
+                aria-pressed={difficultyFilter === level}
+              >
+                {t(`home.difficulty_${level}`)}
+              </button>
+            );
+          })}
           {difficultyFilter !== 'all' && (
             <button
               type="button"
@@ -101,6 +109,12 @@ export function MorePacksSection({
             </button>
           )}
         </div>
+
+        {difficultyFilter !== 'all' && visibleQuizzes.length === 0 && (
+          <p className="difficulty-filter__empty" role="status">
+            {t('home.difficultyEmpty')}
+          </p>
+        )}
 
         <ul className="quiz-list">
           {quizzes.length > 0 &&

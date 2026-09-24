@@ -245,11 +245,17 @@ describe('questions.json', () => {
   it('lightroom-workflow quiz is a solid Pixfan thematic pack', () => {
     const quiz = data.quizzes.find((q) => q.id === 'lightroom-workflow');
     expect(quiz).toBeDefined();
+    expect(quiz!.difficulty).toBe('hard');
     expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
     const hard = quiz!.questions.filter((q) => q.difficulty === 'hard');
     expect(hard.length).toBeGreaterThanOrEqual(5);
     expect(quiz!.title.fr).toMatch(/Lightroom/i);
     expect(quiz!.description.en.toLowerCase()).toContain('pixfan');
     expect(quiz!.description.fr.toLowerCase()).toContain('pixfan');
+  });
+
+  it('exposes at least one hard pack for the difficulty filter', () => {
+    const hardPacks = data.quizzes.filter((q) => q.difficulty === 'hard');
+    expect(hardPacks.length).toBeGreaterThanOrEqual(1);
   });
 });

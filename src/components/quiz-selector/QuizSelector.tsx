@@ -76,6 +76,7 @@ export function QuizSelector({
           photoTeaser={state.photoTeaser}
           photoPoolCount={state.photoPoolCount}
           dailyTeaser={state.dailyTeaser}
+          duelTeaser={state.duelTeaser}
           dailyThemeChip={state.dailyThemeChip}
           dailyThemeDesc={state.dailyThemeDesc}
           dailyGuideUrl={state.dailyGuideUrl}

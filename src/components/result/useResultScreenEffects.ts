@@ -13,11 +13,18 @@ import {
 } from '../../utils/dailyChallenge';
 import { recordDailyCompletion } from '../../utils/dailyStreak';
 import { getAllHighScores } from '../../utils/highscore';
-import { submitRemoteHighScore } from '../../utils/highscoreApi';
+import {
+  fetchLeaderboard,
+  submitRemoteHighScore,
+} from '../../utils/highscoreApi';
 import { recordMistakes, resolveCorrectAnswers } from '../../utils/mistakeVault';
 import { getPlayerId } from '../../utils/player';
 import { markQuizPlayed } from '../../utils/reengage';
-import { unlockSeasonParticipant } from '../../utils/seasonEngagement';
+import {
+  unlockSeasonFromRank,
+  unlockSeasonParticipant,
+  unlockSeasonStreak,
+} from '../../utils/seasonEngagement';
 import type { LangCode } from './types';
 
 interface UseResultScreenEffectsArgs {
@@ -53,6 +60,8 @@ export function useResultScreenEffects({
     const streakState = recordDailyCompletion(result.quizId);
     setDailyStreak(streakState.currentStreak);
     setFreezeConsumed(streakState.freezeConsumed);
+    unlockSeasonParticipant();
+    unlockSeasonStreak(streakState.currentStreak);
     // Resolve before unlock so vault-clear can count this run
     const cleared = resolveCorrectAnswers(result.reviews ?? []);
     setVaultCleared(cleared);
@@ -77,9 +86,8 @@ export function useResultScreenEffects({
     return () => window.clearInterval(id);
   }, [isDaily, langCode]);
 
-  // Sync to Cloudflare D1 + analytics
+  // Sync to Cloudflare D1 + analytics + season rank cosmetics
   useEffect(() => {
-    unlockSeasonParticipant();
     void submitRemoteHighScore({
       quizId: result.quizId,
       playerId: getPlayerId(),
@@ -88,10 +96,21 @@ export function useResultScreenEffects({
       correctCount: result.correctCount,
       totalQuestions: result.totalQuestions,
     })
-      .then((ok) => {
-        if (ok) {
-          setLeaderboardRefresh((n) => n + 1);
-          onScoreSubmitted?.();
+      .then(async (ok) => {
+        if (!ok) return;
+        setLeaderboardRefresh((n) => n + 1);
+        onScoreSubmitted?.();
+        try {
+          const board = await fetchLeaderboard({
+            period: 'month',
+            limit: 10,
+            playerId: getPlayerId(),
+          });
+          unlockSeasonFromRank(board.viewer?.rank ?? null);
+          // Re-push badges after rank enrichment
+          void pushAccountProgress();
+        } catch {
+          // ignore rank enrichment failures
         }
       })
       .catch(() => {});
