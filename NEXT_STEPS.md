@@ -1,6 +1,6 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.16.0**).
+Document à jour avec l’état réel du dépôt (**v1.16.1**).
 
 ## ✅ Livré
 
@@ -18,7 +18,9 @@ Document à jour avec l’état réel du dépôt (**v1.16.0**).
 - [x] `VITE_ADMIN_PIN` en **build** Pages / CI (SPA `#/admin`)
 - [x] **`ADMIN_PIN` (+ `VITE_ADMIN_PIN`) runtime Pages Functions** — vérifié live 2026-09-20 (`/api/admin/analytics` + `/reports` → 200). Docs : `DEPLOYMENT.md` § Admin PIN runtime ; code distingue 503 (absent) vs 401 (mauvais PIN) après merge.
 - [x] Rate-limit `create_code` / `redeem` sur `/api/account` (repo)
-- [ ] **Lire Admin Analytics 7–14 j post v1.16.0** (habit funnel, modes, CTA) — checklist dans `vague-1-16` § P0.3 ; **ne pas inventer de chiffres**
+- [ ] **Lire Admin Analytics 7–14 j post v1.16.1** (habit funnel, modes, CTA) — checklist dans `vague-1-16` § P0.3 ; **ne pas inventer de chiffres**
+- [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
+- [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — repo vague 1.17 P0
 
 ## 🔜 Suite produit possible
 
