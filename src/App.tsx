@@ -268,9 +268,9 @@ export default function App() {
     setLeaderboardRefreshToken((n) => n + 1);
   };
 
-  const handleScoreSubmitted = () => {
+  const handleScoreSubmitted = useCallback(() => {
     setLeaderboardRefreshToken((n) => n + 1);
-  };
+  }, []);
 
   return (
     <div className="app">
