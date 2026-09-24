@@ -2,7 +2,7 @@
 
 Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-**Version courante : v1.15.0**
+**Version courante : v1.16.0**
 
 ## Contenu actuel
 
@@ -10,7 +10,7 @@ Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur *
 - Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes
 - Galerie domaine public, genres, smartphone, droits & éthique, retouche, workflow Lightroom, **portrait & lumière**
 - Modes générés : défi du jour, photo-reading, duel, mix difficulté, points faibles, aléatoire
-- Guides locaux : exposition, composition, lumière, retouche, smartphone, **genres**
+- Guides locaux : exposition, composition, lumière, retouche, smartphone, **genres** (BreadcrumbList JSON-LD)
 
 Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/`).
 
@@ -20,7 +20,7 @@ Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/
 - Scores locaux (localStorage) + scores distants / classements via D1
 - Classements période (semaine / mois) + signalement de pseudo
 - Compte léger (code de récupération + sync streak / succès / high scores / vault / saisons)
-- Streak, freezes, succès, maîtrise, saisons
+- Streak, freezes, succès (dont photo-reader · vault-clear · streak-14), maîtrise, saisons
 - Revue d’erreurs / weak spots, CTA Pixfan / newsletter
 - PWA (manifest, service worker, install prompt)
 - Admin minimal `#/admin` (édition session, signalements, analytics, export JSON) si `VITE_ADMIN_PIN` est défini au **build** ; APIs admin nécessitent aussi `ADMIN_PIN` / `VITE_ADMIN_PIN` **runtime**

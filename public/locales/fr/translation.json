@@ -318,6 +318,8 @@
     "streak3Desc": "Atteignez une série de 3 jours.",
     "streak7": "Guerrier de la semaine",
     "streak7Desc": "Atteignez une série de 7 jours.",
+    "streak14": "Deux semaines",
+    "streak14Desc": "Atteignez une série de 14 jours.",
     "perfect": "Sans faute",
     "perfectDesc": "Obtenez 100 % sur un quiz.",
     "randomPerfect": "Maître du chaos",
@@ -327,7 +329,11 @@
     "explorer": "Explorateur",
     "explorerDesc": "Jouez chaque catégorie au moins une fois.",
     "duelist": "Duelliste",
-    "duelistDesc": "Terminez un duel entre amis."
+    "duelistDesc": "Terminez un duel entre amis.",
+    "photoReader": "Lecteur d’images",
+    "photoReaderDesc": "Terminez le mode photo-reading 3 fois.",
+    "vaultClear": "Vault rangé",
+    "vaultClearDesc": "Maîtrisez 10 points faibles (erreurs résolues)."
   },
   "footer": {
     "copyright": "© {{year}} pixfan.com — Apprendre la photo, choisir son matériel",
