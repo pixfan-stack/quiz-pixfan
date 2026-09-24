@@ -5,6 +5,7 @@ import {
   parseScoreParam,
 } from '../utils/duelOutcome';
 import {
+  isDailyShortcutHash,
   parseQuizIdFromHash,
   parseScoreFromLocation,
   quizHashPath,
@@ -37,5 +38,11 @@ describe('routing score in hash', () => {
       80
     );
     expect(parseScoreFromLocation('#/quiz/composition', '?score=55')).toBe(55);
+  });
+
+  it('recognizes #/daily shortcut', () => {
+    expect(isDailyShortcutHash('#/daily')).toBe(true);
+    expect(isDailyShortcutHash('#/daily?x=1')).toBe(true);
+    expect(isDailyShortcutHash('#/quiz/daily-2026-09-24')).toBe(false);
   });
 });

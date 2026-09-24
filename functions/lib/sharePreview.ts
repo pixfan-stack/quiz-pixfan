@@ -79,8 +79,17 @@ export function parseDailyQuizDate(quizId: string): Date | null {
   return new Date(Date.UTC(y, mo - 1, d));
 }
 
+/** Stable alias `daily` → UTC calendar id `daily-YYYY-MM-DD`. */
+export function todaysDailyQuizId(date = new Date()): string {
+  const y = date.getUTCFullYear();
+  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const d = String(date.getUTCDate()).padStart(2, '0');
+  return `daily-${y}-${m}-${d}`;
+}
+
 export function normalizeQuizId(raw: string): string | null {
   const id = decodeURIComponent(raw).trim();
+  if (id === 'daily') return todaysDailyQuizId();
   if (!QUIZ_ID_RE.test(id)) return null;
   return id;
 }

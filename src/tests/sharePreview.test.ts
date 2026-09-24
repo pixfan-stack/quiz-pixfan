@@ -19,6 +19,7 @@ describe('sharePreview', () => {
     expect(normalizeQuizId('composition')).toBe('composition');
     expect(normalizeQuizId('daily-2026-07-26')).toBe('daily-2026-07-26');
     expect(normalizeQuizId('duel-abcd2345')).toBe('duel-abcd2345');
+    expect(normalizeQuizId('daily')).toMatch(/^daily-\d{4}-\d{2}-\d{2}$/);
     expect(normalizeQuizId('../evil')).toBeNull();
     expect(normalizeQuizId('')).toBeNull();
   });

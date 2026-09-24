@@ -99,29 +99,41 @@ describe('pixfanCta', () => {
     expect(portrait.secondaryTarget).toBe('pixfan');
   });
 
-  it('uses pixfan hub + newsletter secondary for orphan topics', () => {
+  it('targets local guides for gear, rights and history with Pixfan secondary', () => {
     const gear = getPixfanCta('gear-lenses');
     expect(gear.topic).toBe('gear');
-    expect(gear.primaryTarget).toBe('pixfan');
-    expect(gear.primaryUrl).toContain('https://www.pixfan.com/materiel-photo/');
-    expect(gear.primaryUrl).toContain('utm_content=pixfan');
-    expect(gear.secondaryTarget).toBe('newsletter');
-    expect(gear.secondaryUrl).toContain('/newsletter/');
-    expect(gear.secondaryUrl).toContain('utm_content=newsletter');
+    expect(gear.primaryTarget).toBe('guide');
+    expect(gear.primaryUrl).toContain('/guides/materiel-photo');
+    expect(gear.primaryUrl).toContain('utm_content=guide');
+    expect(gear.secondaryTarget).toBe('pixfan');
+    expect(gear.secondaryUrl).toContain('https://www.pixfan.com/materiel-photo/');
+    expect(gear.secondaryUrl).toContain('utm_content=pixfan');
 
     const history = getPixfanCta('history-icons');
-    expect(history.primaryTarget).toBe('pixfan');
-    expect(history.secondaryTarget).toBe('newsletter');
-    expect(history.secondaryUrl).toContain('/newsletter/');
+    expect(history.primaryTarget).toBe('guide');
+    expect(history.primaryUrl).toContain('/guides/histoire-photo');
+    expect(history.secondaryTarget).toBe('pixfan');
+    expect(history.secondaryUrl).toContain(
+      'https://www.pixfan.com/inspiration-culture/'
+    );
+
+    const publicDomain = getPixfanCta('public-domain');
+    expect(publicDomain.topic).toBe('history');
+    expect(publicDomain.primaryTarget).toBe('guide');
+    expect(publicDomain.primaryUrl).toContain('/guides/histoire-photo');
+
+    const mixHard = getPixfanCta('mix-hard');
+    expect(mixHard.topic).toBe('history');
+    expect(mixHard.primaryTarget).toBe('guide');
 
     const rights = getPixfanCta('photo-rights');
-    expect(rights.primaryTarget).toBe('pixfan');
-    expect(rights.primaryUrl).toContain(
+    expect(rights.primaryTarget).toBe('guide');
+    expect(rights.primaryUrl).toContain('/guides/droits-ethique-photo');
+    expect(rights.secondaryTarget).toBe('pixfan');
+    expect(rights.secondaryUrl).toContain(
       'maitriser-la-cession-de-droits-dauteur-en-photographie-guide-pratique'
     );
-    expect(rights.primaryUrl).not.toContain('?s=');
-    expect(rights.secondaryTarget).toBe('newsletter');
-    expect(rights.secondaryUrl).toContain('/newsletter/');
+    expect(rights.secondaryUrl).not.toContain('?s=');
   });
 
   it('resolves daily-theme local guide URLs with UTM', () => {
@@ -137,9 +149,15 @@ describe('pixfanCta', () => {
     expect(localGuideUrlForDailyTheme('genres')).toContain(
       '/guides/genres-photo'
     );
-    expect(localGuideUrlForDailyTheme('gear')).toBeNull();
-    expect(localGuideUrlForDailyTheme('rights')).toBeNull();
-    expect(localGuideUrlForDailyTheme('history')).toBeNull();
+    expect(localGuideUrlForDailyTheme('gear')).toContain(
+      '/guides/materiel-photo'
+    );
+    expect(localGuideUrlForDailyTheme('rights')).toContain(
+      '/guides/droits-ethique-photo'
+    );
+    expect(localGuideUrlForDailyTheme('history')).toContain(
+      '/guides/histoire-photo'
+    );
     expect(localGuideUrlForDailyTheme('mixed')).toBeNull();
   });
 
@@ -181,7 +199,18 @@ describe('pixfanCta', () => {
     expect(localGuideForMistake('gen-1', 'genres')?.path).toContain(
       '/guides/genres-photo'
     );
-    expect(localGuideForMistake('gear-1', 'gear-lenses')).toBeNull();
+    expect(localGuideForMistake('gear-1', 'gear-lenses')?.path).toContain(
+      '/guides/materiel-photo'
+    );
+    expect(localGuideForMistake('photo-rights__r-1')?.path).toContain(
+      '/guides/droits-ethique-photo'
+    );
+    expect(localGuideForMistake('hist-1', 'history-icons')?.path).toContain(
+      '/guides/histoire-photo'
+    );
+    expect(localGuideForMistake('public-domain__pd-1')?.path).toContain(
+      '/guides/histoire-photo'
+    );
   });
 
   it('encodes and parses CTA clicks for quiz_attempts analytics', () => {

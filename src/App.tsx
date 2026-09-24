@@ -7,7 +7,7 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { QuizSelector } from './components/QuizSelector';
 import { InstallPrompt } from './components/InstallPrompt';
 import { buildRandomQuiz, RANDOM_QUIZ_ID } from './utils/randomQuiz';
-import { buildDailyQuiz, isDailyQuizId } from './utils/dailyChallenge';
+import { buildDailyQuiz, getDailyQuizId, isDailyQuizId } from './utils/dailyChallenge';
 import {
   buildDifficultyMix,
   isDifficultyMixId,
@@ -21,8 +21,10 @@ import {
 import { isAdminEnabled, isAdminHash } from './utils/adminAuth';
 import {
   clearQuizHash,
+  isDailyShortcutHash,
   parseQuizIdFromHash,
   parseScoreFromLocation,
+  quizHashPath,
   setQuizHash,
 } from './utils/routing';
 import {
@@ -142,6 +144,20 @@ export default function App() {
     }
 
     if (quizzes.length === 0) return;
+
+    // Stable `#/daily` → rewrite to dated hash (replaceState, no hashchange), then start.
+    if (isDailyShortcutHash(window.location.hash)) {
+      const dailyId = getDailyQuizId();
+      const url = new URL(window.location.href);
+      window.history.replaceState(
+        null,
+        '',
+        url.pathname + url.search + quizHashPath(dailyId)
+      );
+      startQuiz(buildDailyQuiz(quizzes));
+      return;
+    }
+
     const quizId = parseQuizIdFromHash(window.location.hash);
     if (!quizId || view === 'quiz' || view === 'admin') return;
     const scoreFromLink = parseScoreFromLocation();
@@ -212,7 +228,10 @@ export default function App() {
         return;
       }
       // Deep link while the SPA is already open (share landings, in-app browsers).
-      if (parseQuizIdFromHash(window.location.hash)) {
+      if (
+        parseQuizIdFromHash(window.location.hash) ||
+        isDailyShortcutHash(window.location.hash)
+      ) {
         setActiveQuiz(null);
         setView('home');
         setRouteEpoch((n) => n + 1);
@@ -372,6 +391,15 @@ export default function App() {
           </a>
           <a href="/guides/genres-photo" className="app-footer__link">
             {t('footer.guideGenres')}
+          </a>
+          <a href="/guides/materiel-photo" className="app-footer__link">
+            {t('footer.guideGear')}
+          </a>
+          <a href="/guides/droits-ethique-photo" className="app-footer__link">
+            {t('footer.guideRights')}
+          </a>
+          <a href="/guides/histoire-photo" className="app-footer__link">
+            {t('footer.guideHistory')}
           </a>
         </nav>
         <div className="app-footer__inner">
