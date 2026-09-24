@@ -16,6 +16,9 @@
   <meta property="fb:app_id" content="1845182679783128" />
   <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <meta property="og:locale" content="fr_FR" />
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <meta name="theme-color" content="#f3538c" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="/guides/guides.css" />
   <script type="application/ld+json">
   {
@@ -57,15 +60,25 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="nav" aria-label="Navigation">
-      <a class="nav__brand" href="/">Quiz PixFan</a>
-      <a href="/guides/">Guides</a>
-      <a href="/s/retouching">Quiz retouche</a>
-      <span class="lang-switch muted"><a href="?lang=fr">FR</a> · <a href="?lang=en">EN</a></span>
-    </nav>
-
-    <nav class="breadcrumb" aria-label="Fil d’Ariane">
+<div class="guide-app">
+  <header class="app-header">
+    <div class="app-header__brand">
+      <a class="app-header__logo-container" href="/" aria-label="Quiz PixFan">
+        <span class="logo-pix">Pix</span><span class="logo-fan">fan</span><span class="logo-badge">Quiz</span>
+      </a>
+    </div>
+    <div class="app-header__controls">
+      <a class="guide-nav-link" href="/guides/">Guides</a>
+      <a class="guide-nav-link" href="/s/retouching">Quiz retouche</a>
+      <a class="app-header__pixfan-link" href="https://www.pixfan.com" target="_blank" rel="noopener noreferrer" title="pixfan.com">pixfan.com</a>
+      <nav class="lang-switcher" aria-label="Language">
+        <a class="lang-switcher__btn" href="?lang=fr">FR</a>
+        <a class="lang-switcher__btn" href="?lang=en">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+<nav class="breadcrumb" aria-label="Fil d’Ariane">
       <a href="/guides/">Guides</a><span class="breadcrumb__sep" aria-hidden="true">→</span><span class="breadcrumb__current">Retouche & Lightroom</span>
     </nav>
 
@@ -121,10 +134,25 @@
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/lumiere-photo?lang=en">Photo light</a> · <a href="https://www.pixfan.com/category/logiciels-retouche/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=retouche-lightroom&amp;utm_content=pixfan">Pixfan retouching offer</a></p>
       </div>
     </article>
-
-    <footer class="footer">
-      <a href="/guides/">Guides</a> · <a href="/">quiz.pixfan.fr</a> · <a href="https://www.pixfan.com" rel="noopener">pixfan.com</a>
-    </footer>
-  </div>
+  </main>
+  <footer class="app-footer">
+    <nav class="app-footer__guides" aria-label="Guides">
+      <a href="/guides/" class="app-footer__link">Guides</a>
+      <a href="/guides/triangle-exposition" class="app-footer__link">Exposition</a>
+      <a href="/guides/composition-photo" class="app-footer__link">Composition</a>
+      <a href="/guides/photo-smartphone" class="app-footer__link">Smartphone</a>
+      <a href="/guides/lumiere-photo" class="app-footer__link">Lumière</a>
+      <a href="/guides/retouche-lightroom" class="app-footer__link">Retouche</a>
+      <a href="/guides/genres-photo" class="app-footer__link">Genres</a>
+      <a href="/guides/materiel-photo" class="app-footer__link">Matériel</a>
+      <a href="/guides/droits-ethique-photo" class="app-footer__link">Droits</a>
+      <a href="/guides/histoire-photo" class="app-footer__link">Histoire</a>
+    </nav>
+    <div class="app-footer__inner">
+      <a href="/" class="app-footer__link">quiz.pixfan.fr</a>
+      <a href="https://www.pixfan.com" class="app-footer__link" target="_blank" rel="noopener noreferrer">pixfan.com</a>
+    </div>
+  </footer>
+</div>
 </body>
 </html>
