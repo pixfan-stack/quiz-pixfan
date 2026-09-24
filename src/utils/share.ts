@@ -68,6 +68,7 @@ export function ogImageUrl(
     'retouching',
     'lightroom-workflow',
     'portrait-light',
+    'marques-photo',
     'random',
     'weak-spots',
     'photo-reading',

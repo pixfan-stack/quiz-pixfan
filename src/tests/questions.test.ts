@@ -34,10 +34,11 @@ describe('questions.json', () => {
     'retouching',
     'lightroom-workflow',
     'portrait-light',
+    'marques-photo',
   ] as const;
 
-  it('has exactly 12 category quizzes', () => {
-    expect(data.quizzes.length).toBe(12);
+  it('has exactly 13 category quizzes', () => {
+    expect(data.quizzes.length).toBe(13);
   });
 
   it('keeps a solid question count per quiz', () => {
@@ -209,6 +210,7 @@ describe('questions.json', () => {
     'history-icons',
     'photo-rights',
     'portrait-light',
+    'marques-photo',
   ] as const)('%s has illustrated questions with credits (P4 densify)', (id) => {
     const quiz = data.quizzes.find((q) => q.id === id);
     expect(quiz).toBeDefined();
@@ -281,6 +283,25 @@ describe('questions.json', () => {
     expect(quiz!.title.fr).toMatch(/Lightroom/i);
     expect(quiz!.description.en.toLowerCase()).toContain('pixfan');
     expect(quiz!.description.fr.toLowerCase()).toContain('pixfan');
+  });
+
+  it('marques-photo quiz covers brand history without trademark fluff', () => {
+    const quiz = data.quizzes.find((q) => q.id === 'marques-photo');
+    expect(quiz).toBeDefined();
+    expect(quiz!.difficulty).toBe('medium');
+    expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
+    expect(quiz!.questions.length).toBeLessThanOrEqual(26);
+    const illustrated = quiz!.questions.filter((q) => q.imageUrl);
+    expect(illustrated.length).toBeGreaterThanOrEqual(14);
+    expect(quiz!.title.fr).toMatch(/marques/i);
+    expect(quiz!.description.en.toLowerCase()).toContain('pixfan');
+    expect(quiz!.description.fr.toLowerCase()).toContain('pixfan');
+    const blob = JSON.stringify(quiz).toLowerCase();
+    for (const brand of ['canon', 'nikon', 'leica', 'sony'] as const) {
+      expect(blob).toContain(brand);
+    }
+    // Prefer founding / systems facts — no "best brand" marketing
+    expect(blob).not.toMatch(/best (camera )?brand|meilleure marque/);
   });
 
   it('exposes at least one hard pack for the difficulty filter', () => {

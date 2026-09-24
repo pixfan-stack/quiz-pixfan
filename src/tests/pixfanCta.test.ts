@@ -20,6 +20,8 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('photo-rights')).toBe('rights');
     expect(resolvePixfanTopic('light-color')).toBe('light');
     expect(resolvePixfanTopic('portrait-light')).toBe('light');
+    expect(resolvePixfanTopic('marques-photo')).toBe('history');
+    expect(resolvePixfanTopic('history-icons')).toBe('history');
   });
 
   it('falls back for challenge packs', () => {
@@ -121,6 +123,11 @@ describe('pixfanCta', () => {
     expect(publicDomain.topic).toBe('history');
     expect(publicDomain.primaryTarget).toBe('guide');
     expect(publicDomain.primaryUrl).toContain('/guides/histoire-photo');
+
+    const brands = getPixfanCta('marques-photo');
+    expect(brands.topic).toBe('history');
+    expect(brands.primaryTarget).toBe('guide');
+    expect(brands.primaryUrl).toContain('/guides/histoire-photo');
 
     const mixHard = getPixfanCta('mix-hard');
     expect(mixHard.topic).toBe('history');

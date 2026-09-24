@@ -52,6 +52,9 @@ describe('sharePreview', () => {
     expect(quizLabel('portrait-light', 'fr')).toBe('Portrait & lumière');
     expect(quizLabel('portrait-light', 'en')).toBe('Portrait & light');
     expect(normalizeQuizId('portrait-light')).toBe('portrait-light');
+    expect(quizLabel('marques-photo', 'fr')).toBe('Histoire des marques');
+    expect(quizLabel('marques-photo', 'en')).toBe('Brand history');
+    expect(normalizeQuizId('marques-photo')).toBe('marques-photo');
     expect(quizLabel('duel-abcd2345', 'en')).toBe('Friend duel');
   });
 

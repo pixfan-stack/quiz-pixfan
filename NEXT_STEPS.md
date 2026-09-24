@@ -4,7 +4,7 @@ Document à jour avec l’état réel du dépôt (**v1.17.0**).
 
 ## ✅ Livré
 
-- Contenu : **12 quiz · 317 questions · 199 illustrées** (`public/data/questions.json`)
+- Contenu : **13 quiz · 341 questions · 223 illustrées** (`public/data/questions.json`)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots (SRS léger)
 - Engagement : défi du jour, duel, succès (photo-reader · vault-clear · streak-14 + badges saison), streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
