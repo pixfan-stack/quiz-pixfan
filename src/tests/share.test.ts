@@ -28,8 +28,12 @@ describe('share', () => {
     expect(share).toContain('score=80');
     expect(share).toContain('lang=fr');
     const og = ogImageUrl('duel-abcd2345', { score: 55, lang: 'en' });
-    expect(og).toContain('/og-image.png');
+    expect(og).toContain('/og/themes/duel-70.png');
     expect(og).not.toContain('/api/og');
+    expect(ogImageUrl('composition')).toContain('/og/themes/composition.png');
+    expect(ogImageUrl('composition', { score: 88 })).toContain(
+      '/og/themes/composition-90.png'
+    );
   });
 
   it('resolves share kind from quiz id', () => {

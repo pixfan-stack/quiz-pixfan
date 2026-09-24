@@ -5,9 +5,12 @@ import {
   DAILY_THEME_CHIPS,
   dailyThemeChipForDate,
   normalizeQuizId,
+  ogScoreTier,
+  ogThemeSlug,
   parseLang,
   parseScore,
   quizLabel,
+  themeOgImageUrl,
 } from '../../functions/lib/sharePreview';
 import {
   DAILY_THEME_ROTATION,
@@ -64,6 +67,30 @@ describe('sharePreview', () => {
     expect(dailyThemeChipForDate(date, 'fr')).toBe(theme.chip.fr);
   });
 
+  it('maps quiz ids to OG theme slugs and score tiers (P4.D)', () => {
+    expect(ogThemeSlug('composition')).toBe('composition');
+    expect(ogThemeSlug('daily-2026-09-21')).toBe('daily');
+    expect(ogThemeSlug('duel-abcd2345')).toBe('duel');
+    expect(ogThemeSlug('random-mix')).toBe('random');
+    expect(ogThemeSlug('unknown-pack')).toBe('default');
+    expect(ogScoreTier(null)).toBeNull();
+    expect(ogScoreTier(78)).toBe(80);
+    expect(ogScoreTier(95)).toBe(90);
+    expect(ogScoreTier(100)).toBe(100);
+  });
+
+  it('builds theme OG PNG URLs for share cards', () => {
+    expect(themeOgImageUrl('https://quiz.pixfan.fr', 'composition')).toContain(
+      '/og/themes/composition.png'
+    );
+    expect(
+      themeOgImageUrl('https://quiz.pixfan.fr', 'composition', 82)
+    ).toContain('/og/themes/composition-80.png');
+    expect(
+      themeOgImageUrl('https://quiz.pixfan.fr', 'daily-2026-09-21', 90)
+    ).toContain('/og/themes/daily-90.png');
+  });
+
   it('builds SVG and HTML previews', () => {
     const svg = buildOgSvg({
       quizId: 'composition',
@@ -79,11 +106,11 @@ describe('sharePreview', () => {
       score: 80,
       lang: 'fr',
       pageUrl: 'https://quiz.pixfan.fr/s/composition?score=80',
-      ogImageUrl: 'https://quiz.pixfan.fr/og-image.png?v=4',
+      ogImageUrl: 'https://quiz.pixfan.fr/og/themes/composition-80.png?v1',
       appOrigin: 'https://quiz.pixfan.fr',
     });
     expect(html).toContain('og:image');
-    expect(html).toContain('/og-image.png');
+    expect(html).toContain('/og/themes/composition-80.png');
     expect(html).toContain('fb:app_id');
     expect(html).toContain('1845182679783128');
     expect(html).toContain('/#/quiz/composition?score=80');
@@ -98,11 +125,12 @@ describe('sharePreview', () => {
       score: 90,
       lang: 'fr',
       pageUrl: 'https://quiz.pixfan.fr/s/daily-2026-09-21?score=90',
-      ogImageUrl: 'https://quiz.pixfan.fr/og-image.png?v=4',
+      ogImageUrl: 'https://quiz.pixfan.fr/og/themes/daily-90.png?v1',
       appOrigin: 'https://quiz.pixfan.fr',
     });
     expect(html).toContain(chip);
     expect(html).toContain('og:title');
+    expect(html).toContain('/og/themes/daily-90.png');
   });
 
   it('builds a mobile-friendly duel landing with large CTA', () => {
@@ -111,7 +139,7 @@ describe('sharePreview', () => {
       score: 70,
       lang: 'fr',
       pageUrl: 'https://quiz.pixfan.fr/s/duel-abcd2345?score=70&lang=fr',
-      ogImageUrl: 'https://quiz.pixfan.fr/og-image.png?v=4',
+      ogImageUrl: 'https://quiz.pixfan.fr/og/themes/duel-70.png?v1',
       appOrigin: 'https://quiz.pixfan.fr',
     });
     expect(html).toContain('Relever le duel');

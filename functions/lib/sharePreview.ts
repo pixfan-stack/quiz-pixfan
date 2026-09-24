@@ -134,11 +134,59 @@ export function escapeXml(value: string): string {
 /**
  * Absolute PNG URL for Open Graph / Twitter cards.
  * Major social crawlers reject SVG (`/api/og`) as og:image.
+ * Default brand card (home / guides); share pages prefer theme cards.
  */
 export const OG_IMAGE_PATH = '/og-image.png?v=4';
+export const OG_THEME_VERSION = 'v1';
+
+/** Score tiers pre-baked under `public/og/themes/{slug}-{score}.png`. */
+export const OG_SCORE_TIERS = [70, 80, 90, 100] as const;
+
+/**
+ * Map a quiz id to a stable theme slug for pre-baked OG PNGs.
+ * Daily / duel / mixes collapse to shared cards.
+ */
+export function ogThemeSlug(quizId: string): string {
+  if (quizId.startsWith('daily-')) return 'daily';
+  if (quizId.startsWith('duel-')) return 'duel';
+  if (quizId === 'random-mix') return 'random';
+  if (LABELS[quizId]) return quizId;
+  return 'default';
+}
+
+/** Nearest pre-baked score tier, or null when score absent. */
+export function ogScoreTier(score: number | null): number | null {
+  if (score == null || !Number.isFinite(score)) return null;
+  let best: number = OG_SCORE_TIERS[0]!;
+  let bestDist = Math.abs(score - best);
+  for (const tier of OG_SCORE_TIERS) {
+    const d = Math.abs(score - tier);
+    if (d < bestDist) {
+      best = tier;
+      bestDist = d;
+    }
+  }
+  return best;
+}
 
 export function staticOgImageUrl(origin: string): string {
   return `${origin.replace(/\/$/, '')}${OG_IMAGE_PATH}`;
+}
+
+/**
+ * Theme (and optional score-tier) PNG under `/og/themes/`.
+ * Falls back to the brand card only when slug is somehow empty.
+ */
+export function themeOgImageUrl(
+  origin: string,
+  quizId: string,
+  score: number | null = null
+): string {
+  const base = origin.replace(/\/$/, '');
+  const slug = ogThemeSlug(quizId);
+  const tier = ogScoreTier(score);
+  const file = tier != null ? `${slug}-${tier}.png` : `${slug}.png`;
+  return `${base}/og/themes/${file}?${OG_THEME_VERSION}`;
 }
 
 /** 1200×630 SVG Open Graph card. */

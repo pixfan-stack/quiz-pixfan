@@ -4,7 +4,7 @@ Document à jour avec l’état réel du dépôt (**v1.16.1**).
 
 ## ✅ Livré
 
-- Contenu : **12 quiz · 305 questions · 164 illustrées** (`public/data/questions.json`)
+- Contenu : **12 quiz · 317 questions · 199 illustrées** (`public/data/questions.json`)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots (SRS léger)
 - Engagement : défi du jour, duel, succès (photo-reader · vault-clear · streak-14 + badges saison), streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
@@ -28,6 +28,8 @@ Document à jour avec l’état réel du dépôt (**v1.16.1**).
 - [x] Enrichir images packs sous-illustrés + quiz `portrait-light` + rebalance `history-icons` (vague 1.16 P3)
 - [x] SRS vault + CTA weak-spots (vague 1.16 P2)
 - [x] BreadcrumbList guides + succès manquants (vague 1.16 P1.4 / P2.3)
-- [ ] Éventuel guide droits / gear / history (suite P1.3)
+- [x] Guides droits / matériel / histoire (vague 1.17 P2)
+- [x] Densifier illus packs + allonger Lightroom / portrait + OG thèmes (vague 1.17 P4.A/B/D)
+- [ ] Éventuel +1 quiz thématique (vague 1.17 P4.C — optionnel, data-driven)
 
 Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt.
