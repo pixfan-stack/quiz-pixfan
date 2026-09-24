@@ -17,6 +17,9 @@ export interface Env {
   DB: D1Database;
 }
 
+/** Soft per-IP cooldown (Cache API) — mirrors account.ts; blocks burst spam. */
+const ANALYTICS_COOLDOWN_MS = 1_000;
+
 interface AttemptBody {
   quizId: string;
   percentage: number;
@@ -32,11 +35,58 @@ interface QuizStats {
   avgTimeSeconds: number;
 }
 
+function clientIp(request: Request): string {
+  return (
+    request.headers.get('CF-Connecting-IP')?.trim() ||
+    request.headers.get('X-Forwarded-For')?.split(',')[0]?.trim() ||
+    'unknown'
+  );
+}
+
+/**
+ * Cache-API cooldown keyed by IP (no schema change).
+ * Fails open if cache is unavailable (e.g. some local runtimes).
+ */
+async function isIpRateLimited(
+  request: Request,
+  cooldownMs: number
+): Promise<boolean> {
+  const ip = clientIp(request);
+  const cacheKey = new Request(
+    `https://rate-limit.quiz-pixfan.internal/analytics/post/${encodeURIComponent(ip)}`
+  );
+  try {
+    const cache = caches.default;
+    const hit = await cache.match(cacheKey);
+    if (hit) {
+      const last = Number(await hit.text());
+      if (!Number.isNaN(last) && Date.now() - last < cooldownMs) {
+        return true;
+      }
+    }
+    await cache.put(
+      cacheKey,
+      new Response(String(Date.now()), {
+        headers: {
+          'Cache-Control': `max-age=${Math.ceil(cooldownMs / 1000) + 1}`,
+        },
+      })
+    );
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 export const onRequestOptions: PagesFunction = async () => {
   return json(null, 204);
 };
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
+  if (await isIpRateLimited(context.request, ANALYTICS_COOLDOWN_MS)) {
+    return json({ error: 'Rate limit: wait before posting again' }, 429);
+  }
+
   let body: AttemptBody;
   try {
     body = (await context.request.json()) as AttemptBody;

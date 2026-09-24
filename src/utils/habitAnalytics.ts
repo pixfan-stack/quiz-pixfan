@@ -3,6 +3,9 @@
  * (same zeroed-metrics pattern as CTA clicks).
  */
 
+import { isDifficultyMixId } from './difficulty';
+import { RANDOM_QUIZ_ID } from './randomQuiz';
+
 export const HABIT_EVENTS = [
   'reminder_on',
   'reminder_off',
@@ -40,6 +43,8 @@ export const ATTEMPT_MODES = [
   'daily',
   'duel',
   'weak-spots',
+  'mix',
+  'random',
   'packs',
 ] as const;
 
@@ -51,6 +56,8 @@ export function classifyAttemptMode(quizId: string): AttemptMode {
   if (quizId === 'weak-spots') return 'weak-spots';
   if (quizId.startsWith('daily-')) return 'daily';
   if (quizId.startsWith('duel-')) return 'duel';
+  if (isDifficultyMixId(quizId)) return 'mix';
+  if (quizId === RANDOM_QUIZ_ID) return 'random';
   return 'packs';
 }
 

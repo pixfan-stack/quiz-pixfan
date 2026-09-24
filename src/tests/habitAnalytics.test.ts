@@ -26,7 +26,10 @@ describe('habitAnalytics', () => {
     expect(classifyAttemptMode('daily-2026-09-23')).toBe('daily');
     expect(classifyAttemptMode('duel-abcd2345')).toBe('duel');
     expect(classifyAttemptMode('exposure-basics')).toBe('packs');
-    expect(classifyAttemptMode('mix-easy')).toBe('packs');
+    expect(classifyAttemptMode('mix-easy')).toBe('mix');
+    expect(classifyAttemptMode('mix-medium')).toBe('mix');
+    expect(classifyAttemptMode('mix-hard')).toBe('mix');
+    expect(classifyAttemptMode('random-mix')).toBe('random');
   });
 
   it('aggregates mode and habit counts', () => {
@@ -37,6 +40,9 @@ describe('habitAnalytics', () => {
       { quizId: 'duel-abcd2345', attempts: 2 },
       { quizId: 'weak-spots', attempts: 4 },
       { quizId: 'exposure-basics', attempts: 7 },
+      { quizId: 'mix-easy', attempts: 3 },
+      { quizId: 'mix-hard', attempts: 2 },
+      { quizId: 'random-mix', attempts: 6 },
       { quizId: 'evt:reminder_on', attempts: 99 },
       { quizId: 'cta:guide:light:x', attempts: 50 },
     ]);
@@ -45,6 +51,8 @@ describe('habitAnalytics', () => {
       { mode: 'daily', attempts: 8 },
       { mode: 'duel', attempts: 2 },
       { mode: 'weak-spots', attempts: 4 },
+      { mode: 'mix', attempts: 5 },
+      { mode: 'random', attempts: 6 },
       { mode: 'packs', attempts: 7 },
     ]);
 
