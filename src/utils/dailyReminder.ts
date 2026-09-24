@@ -8,6 +8,7 @@ import { hasPlayedDailyToday, isStandalonePwa } from './reengage';
 
 const ENABLED_KEY = 'quiz-pixfan-daily-reminder';
 const LAST_SHOWN_KEY = 'quiz-pixfan-daily-reminder-shown';
+const PROMPT_DISMISS_KEY = 'quiz-pixfan-reminder-prompt-day';
 
 export function isDailyReminderEnabled(): boolean {
   try {
@@ -34,16 +35,37 @@ export function notificationsSupported(): boolean {
   return typeof window !== 'undefined' && 'Notification' in window;
 }
 
+function utcDayKey(date = new Date()): string {
+  return date.toISOString().slice(0, 10);
+}
+
+/**
+ * Soft post-daily prompt: offer local reminder + .ics when reminder is off
+ * and the banner was not dismissed for the UTC day.
+ */
+export function shouldShowDailyReminderPrompt(): boolean {
+  if (isDailyReminderEnabled()) return false;
+  try {
+    return localStorage.getItem(PROMPT_DISMISS_KEY) !== utcDayKey();
+  } catch {
+    return true;
+  }
+}
+
+export function dismissDailyReminderPrompt(now = new Date()): void {
+  try {
+    localStorage.setItem(PROMPT_DISMISS_KEY, utcDayKey(now));
+  } catch {
+    // ignore
+  }
+}
+
 export async function requestDailyReminderPermission(): Promise<boolean> {
   if (!notificationsSupported()) return false;
   const result = await Notification.requestPermission();
   const ok = result === 'granted';
   setDailyReminderEnabled(ok);
   return ok;
-}
-
-function utcDayKey(date = new Date()): string {
-  return date.toISOString().slice(0, 10);
 }
 
 function alreadyShownToday(): boolean {

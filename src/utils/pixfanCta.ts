@@ -55,7 +55,8 @@ const TOPIC_URLS: Record<PixfanTopic, string> = {
   history: `${PIXFAN}/inspiration-culture/`,
   genres: `${PIXFAN}/apprendre-la-photo/genres-photo/`,
   smartphone: `${PIXFAN}/apprendre-la-photo/`,
-  rights: `${PIXFAN}/?s=droit+auteur`,
+  /** Stable editorial guide (search `?s=droit+auteur` was a weak funnel). */
+  rights: `${PIXFAN}/maitriser-la-cession-de-droits-dauteur-en-photographie-guide-pratique/`,
   /** Live category hub (bare `/logiciels-retouche/` 404s → home). */
   retouching: `${PIXFAN}/category/logiciels-retouche/`,
   default: `${PIXFAN}/apprendre-la-photo-guide-complet-debutants-quiz/`,
@@ -219,10 +220,15 @@ export function getPixfanCta(
   };
 
   // When primary is a local guide, offer the matching Pixfan hub as secondary
-  // (retouching + genres — topics with both a guide and a strong hub).
+  // (all guided topics — convert without waiting for more local guides).
   if (
     primaryTarget === 'guide' &&
-    (topic === 'retouching' || topic === 'genres')
+    (topic === 'retouching' ||
+      topic === 'genres' ||
+      topic === 'exposure' ||
+      topic === 'composition' ||
+      topic === 'light' ||
+      topic === 'smartphone')
   ) {
     cta.secondaryTarget = 'pixfan';
     cta.secondaryUrl = withUtm(TOPIC_URLS[topic], quizId, 'pixfan');

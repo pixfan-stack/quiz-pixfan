@@ -36,16 +36,35 @@ describe('pixfanCta', () => {
     expect(cta.primaryUrl).toContain('utm_source=quiz');
     expect(cta.primaryUrl).toContain('utm_campaign=exposure-basics');
     expect(cta.primaryUrl).toContain('utm_content=guide');
+    expect(cta.secondaryTarget).toBe('pixfan');
+    expect(cta.secondaryUrl).toContain(
+      'https://www.pixfan.com/apprendre-la-photo/bases-et-reglages/'
+    );
+    expect(cta.secondaryUrl).toContain('utm_content=pixfan');
     expect(cta.newsletterUrl).toContain('/newsletter/');
     expect(cta.newsletterUrl).toContain('utm_content=newsletter');
     expect(cta.fromMistakes).toBe(false);
+
+    const composition = getPixfanCta('composition');
+    expect(composition.secondaryTarget).toBe('pixfan');
+    expect(composition.secondaryUrl).toContain(
+      'https://www.pixfan.com/apprendre-la-photo/'
+    );
+
+    const phone = getPixfanCta('smartphone');
+    expect(phone.primaryTarget).toBe('guide');
+    expect(phone.secondaryTarget).toBe('pixfan');
+    expect(phone.secondaryUrl).toContain('utm_content=pixfan');
   });
 
   it('targets local guides for light, retouching and genres', () => {
     const light = getPixfanCta('light-color');
     expect(light.primaryTarget).toBe('guide');
     expect(light.primaryUrl).toContain('/guides/lumiere-photo');
-    expect(light.secondaryUrl).toBeUndefined();
+    expect(light.secondaryTarget).toBe('pixfan');
+    expect(light.secondaryUrl).toContain(
+      'https://www.pixfan.com/apprendre-la-photo/'
+    );
 
     const retouch = getPixfanCta('retouching');
     expect(retouch.primaryTarget).toBe('guide');
@@ -77,6 +96,7 @@ describe('pixfanCta', () => {
     expect(portrait.topic).toBe('light');
     expect(portrait.primaryTarget).toBe('guide');
     expect(portrait.primaryUrl).toContain('/guides/lumiere-photo');
+    expect(portrait.secondaryTarget).toBe('pixfan');
   });
 
   it('uses pixfan hub + newsletter secondary for orphan topics', () => {
@@ -96,6 +116,10 @@ describe('pixfanCta', () => {
 
     const rights = getPixfanCta('photo-rights');
     expect(rights.primaryTarget).toBe('pixfan');
+    expect(rights.primaryUrl).toContain(
+      'maitriser-la-cession-de-droits-dauteur-en-photographie-guide-pratique'
+    );
+    expect(rights.primaryUrl).not.toContain('?s=');
     expect(rights.secondaryTarget).toBe('newsletter');
     expect(rights.secondaryUrl).toContain('/newsletter/');
   });
