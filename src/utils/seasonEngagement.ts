@@ -1,5 +1,5 @@
 /**
- * Season (calendar month) banners + cosmetic participant badges.
+ * Season (calendar month) banners + cosmetic badges.
  * Kept separate from ACHIEVEMENT_IDS so account sync stays on a fixed whitelist.
  */
 
@@ -12,11 +12,36 @@ const BADGES_KEY = 'quiz-pixfan-season-cosmetics';
 /** Show “ending soon” when this many UTC days (or fewer) remain. */
 export const SEASON_ENDING_SOON_DAYS = 3;
 
+/** Daily streak required for the streak-season cosmetic. */
+export const SEASON_STREAK_THRESHOLD = 7;
+
 export type SeasonBannerKind = 'started' | 'ending';
 
-export type SeasonCosmetic = 'participant';
+export const SEASON_COSMETICS = [
+  'participant',
+  'streak-season',
+  'top10',
+  'podium',
+] as const;
+
+export type SeasonCosmetic = (typeof SEASON_COSMETICS)[number];
 
 type SeasonBadgeMap = Record<string, SeasonCosmetic>;
+
+/** Higher rank = better cosmetic (used for merge). */
+const COSMETIC_RANK: Record<SeasonCosmetic, number> = {
+  participant: 1,
+  'streak-season': 2,
+  top10: 3,
+  podium: 4,
+};
+
+function isSeasonCosmetic(value: unknown): value is SeasonCosmetic {
+  return (
+    typeof value === 'string' &&
+    (SEASON_COSMETICS as readonly string[]).includes(value)
+  );
+}
 
 function readJson<T>(key: string, fallback: T): T {
   try {
@@ -36,13 +61,33 @@ function writeJson(key: string, value: unknown): void {
   }
 }
 
+/** Keep the higher-tier cosmetic when both sides claim a season. */
+export function pickHigherSeasonCosmetic(
+  a: SeasonCosmetic | null | undefined,
+  b: SeasonCosmetic | null | undefined
+): SeasonCosmetic | null {
+  if (!a) return b ?? null;
+  if (!b) return a;
+  return COSMETIC_RANK[a] >= COSMETIC_RANK[b] ? a : b;
+}
+
+/** Map a monthly leaderboard rank to a season cosmetic (or null if unranked / outside top 10). */
+export function cosmeticFromMonthRank(
+  rank: number | null | undefined
+): SeasonCosmetic | null {
+  if (rank == null || !Number.isFinite(rank) || rank < 1) return null;
+  if (rank <= 3) return 'podium';
+  if (rank <= 10) return 'top10';
+  return null;
+}
+
 /** Sanitize an unknown season-badges payload (API / storage). */
 export function parseSeasonBadges(raw: unknown): SeasonBadgeMap {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return {};
   const out: SeasonBadgeMap = {};
   for (const [id, value] of Object.entries(raw as Record<string, unknown>)) {
-    if (value === 'participant' && /^\d{4}-\d{2}$/.test(id)) {
-      out[id] = 'participant';
+    if (isSeasonCosmetic(value) && /^\d{4}-\d{2}$/.test(id)) {
+      out[id] = value;
     }
   }
   // Cap map size to avoid unbounded growth across years
@@ -54,19 +99,24 @@ export function parseSeasonBadges(raw: unknown): SeasonBadgeMap {
   return capped;
 }
 
-/** Union two badge maps (participant wins). */
+/** Union two badge maps (higher cosmetic wins per season). */
 export function mergeSeasonBadgeMaps(
   a: SeasonBadgeMap,
   b: SeasonBadgeMap
 ): SeasonBadgeMap {
-  return parseSeasonBadges({ ...a, ...b });
+  const merged: SeasonBadgeMap = { ...a };
+  for (const [id, cosmetic] of Object.entries(b)) {
+    const kept = pickHigherSeasonCosmetic(merged[id], cosmetic);
+    if (kept) merged[id] = kept;
+  }
+  return parseSeasonBadges(merged);
 }
 
 export function getSeasonBadges(): SeasonBadgeMap {
   return parseSeasonBadges(readJson<Record<string, unknown>>(BADGES_KEY, {}));
 }
 
-/** Merge remote season badges into localStorage (union). */
+/** Merge remote season badges into localStorage (union, higher tier wins). */
 export function mergeRemoteSeasonBadges(
   remote: SeasonBadgeMap | unknown
 ): SeasonBadgeMap {
@@ -79,21 +129,77 @@ export function getSeasonBadge(seasonId = getMonthPeriodId()): SeasonCosmetic | 
   return getSeasonBadges()[seasonId] ?? null;
 }
 
+function unlockSeasonCosmetic(
+  cosmetic: SeasonCosmetic,
+  seasonId = getMonthPeriodId()
+): boolean {
+  const badges = getSeasonBadges();
+  const current = badges[seasonId];
+  const next = pickHigherSeasonCosmetic(current, cosmetic);
+  if (!next || next === current) return false;
+  badges[seasonId] = next;
+  writeJson(BADGES_KEY, badges);
+  return true;
+}
+
 /** Unlock the cosmetic participant badge for a season (idempotent). */
 export function unlockSeasonParticipant(
   seasonId = getMonthPeriodId()
 ): boolean {
-  const badges = getSeasonBadges();
-  if (badges[seasonId] === 'participant') return false;
-  badges[seasonId] = 'participant';
-  writeJson(BADGES_KEY, badges);
-  return true;
+  return unlockSeasonCosmetic('participant', seasonId);
+}
+
+/** Unlock streak-season when daily streak meets the threshold (does not downgrade top10/podium). */
+export function unlockSeasonStreak(
+  currentStreak: number,
+  seasonId = getMonthPeriodId()
+): boolean {
+  if (currentStreak < SEASON_STREAK_THRESHOLD) return false;
+  return unlockSeasonCosmetic('streak-season', seasonId);
+}
+
+/** Unlock top10 / podium from monthly rank (does not downgrade a higher tier). */
+export function unlockSeasonFromRank(
+  rank: number | null | undefined,
+  seasonId = getMonthPeriodId()
+): boolean {
+  const cosmetic = cosmeticFromMonthRank(rank);
+  if (!cosmetic) return false;
+  return unlockSeasonCosmetic(cosmetic, seasonId);
 }
 
 export function listSeasonBadges(): { seasonId: string; cosmetic: SeasonCosmetic }[] {
   return Object.entries(getSeasonBadges())
     .map(([seasonId, cosmetic]) => ({ seasonId, cosmetic }))
     .sort((a, b) => b.seasonId.localeCompare(a.seasonId));
+}
+
+/** i18n key for a season cosmetic badge label. */
+export function seasonCosmeticLabelKey(cosmetic: SeasonCosmetic): string {
+  switch (cosmetic) {
+    case 'podium':
+      return 'season.podiumBadge';
+    case 'top10':
+      return 'season.top10Badge';
+    case 'streak-season':
+      return 'season.streakSeasonBadge';
+    default:
+      return 'season.participantBadge';
+  }
+}
+
+/** Emoji icon for a season cosmetic. */
+export function seasonCosmeticIcon(cosmetic: SeasonCosmetic): string {
+  switch (cosmetic) {
+    case 'podium':
+      return '🥇';
+    case 'top10':
+      return '🔟';
+    case 'streak-season':
+      return '🔥';
+    default:
+      return '🏅';
+  }
 }
 
 /**

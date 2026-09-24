@@ -36,6 +36,7 @@ import { normalizeRecoveryCode } from './recoveryCode';
 import {
   getSeasonBadges,
   mergeRemoteSeasonBadges,
+  type SeasonCosmetic,
 } from './seasonEngagement';
 
 export interface SyncedStreak {
@@ -52,9 +53,32 @@ export interface AccountProgress {
   streak: SyncedStreak;
   achievements: string[];
   vault?: MistakeVaultEntry[];
-  seasonBadges?: Record<string, 'participant'>;
+  seasonBadges?: Record<string, SeasonCosmetic>;
   highscores: LocalHighScoreInput[];
   updatedAt?: string | null;
+}
+
+/** Counts shown after a successful redeem (post-merge local view preferred). */
+export interface RedeemProgressSummary {
+  vault: number;
+  badges: number;
+  streak: number;
+  achievements: number;
+}
+
+/** Derive redeem summary counts from a progress payload. */
+export function summarizeAccountProgress(
+  progress: Pick<
+    AccountProgress,
+    'streak' | 'achievements' | 'vault' | 'seasonBadges'
+  >
+): RedeemProgressSummary {
+  return {
+    vault: progress.vault?.length ?? 0,
+    badges: Object.keys(progress.seasonBadges ?? {}).length,
+    streak: progress.streak.currentStreak,
+    achievements: progress.achievements.length,
+  };
 }
 
 function toSyncedStreak(state: DailyStreakState): SyncedStreak {

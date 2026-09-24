@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import {
   createRecoveryCode,
   redeemRecoveryCode,
+  summarizeAccountProgress,
+  type RedeemProgressSummary,
 } from '../utils/accountSync';
 import { isRemoteScoresEnabled } from '../utils/remoteScores';
 import {
@@ -44,6 +46,8 @@ export function AccountSyncPanel({
   const [issuedCode, setIssuedCode] = useState<string | null>(null);
   const [draftCode, setDraftCode] = useState(() => initialCode ?? '');
   const [copied, setCopied] = useState<'code' | 'link' | null>(null);
+  const [redeemSummary, setRedeemSummary] =
+    useState<RedeemProgressSummary | null>(null);
   const enabled = isRemoteScoresEnabled();
 
   useEffect(() => {
@@ -103,12 +107,14 @@ export function AccountSyncPanel({
     }
     setStatus('redeeming');
     setErrorKey(null);
+    setRedeemSummary(null);
     const result = await redeemRecoveryCode(normalized);
-    if (!result.ok) {
+    if (!result.ok || !result.progress) {
       setStatus('error');
       setErrorKey(mapError(result.error));
       return;
     }
+    setRedeemSummary(summarizeAccountProgress(result.progress));
     setStatus('redeemed');
     onRecovered?.();
   }, [draftCode, mapError, onRecovered]);
@@ -222,9 +228,19 @@ export function AccountSyncPanel({
       </div>
 
       {status === 'redeemed' && (
-        <p className="account-sync__success" role="status">
-          {t('account.redeemSuccess')}
-        </p>
+        <div className="account-sync__success" role="status">
+          <p>{t('account.redeemSuccess')}</p>
+          {redeemSummary && (
+            <p className="account-sync__summary" data-testid="redeem-summary">
+              {t('account.redeemSummary', {
+                vault: redeemSummary.vault,
+                badges: redeemSummary.badges,
+                streak: redeemSummary.streak,
+                achievements: redeemSummary.achievements,
+              })}
+            </p>
+          )}
+        </div>
       )}
       {status === 'error' && errorKey && (
         <p className="account-sync__error" role="alert">

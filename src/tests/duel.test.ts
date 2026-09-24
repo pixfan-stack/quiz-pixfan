@@ -4,6 +4,7 @@ import {
   buildDuelQuiz,
   createDuelSeed,
   duelQuizId,
+  getDuelPhotoTeaser,
   isDuelQuizId,
   parseDuelSeed,
 } from '../utils/duel';
@@ -19,6 +20,7 @@ const sample: Quiz[] = [
       text: { en: `Q${i}`, fr: `Q${i}` },
       answers: [{ id: 'a', text: { en: 'A', fr: 'A' } }],
       correctAnswers: ['a'],
+      imageUrl: i === 0 ? '/images/packs/a.avif' : undefined,
     })),
   },
   {
@@ -31,6 +33,7 @@ const sample: Quiz[] = [
       text: { en: `Q${i}`, fr: `Q${i}` },
       answers: [{ id: 'a', text: { en: 'A', fr: 'A' } }],
       correctAnswers: ['a'],
+      imageUrl: i === 1 ? '/images/packs/b.avif' : undefined,
     })),
   },
 ];
@@ -56,5 +59,13 @@ describe('duel', () => {
     const a = buildDuelQuiz(sample, 'abcd2345');
     const b = buildDuelQuiz(sample, 'zzzz9999');
     expect(a.questions.map((q) => q.id)).not.toEqual(b.questions.map((q) => q.id));
+  });
+
+  it('returns a stable illustrated teaser for the home card', () => {
+    const a = getDuelPhotoTeaser(sample);
+    const b = getDuelPhotoTeaser(sample);
+    expect(a?.imageUrl).toBeTruthy();
+    expect(a?.id).toBe(b?.id);
+    expect(getDuelPhotoTeaser([])).toBeNull();
   });
 });

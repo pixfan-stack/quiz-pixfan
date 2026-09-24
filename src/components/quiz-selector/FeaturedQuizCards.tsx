@@ -25,6 +25,7 @@ interface FeaturedQuizCardsProps {
   photoTeaser: Teaser | null;
   photoPoolCount: number;
   dailyTeaser: Teaser | null;
+  duelTeaser: Teaser | null;
   /** Editorial week chip, e.g. "Lightroom week". */
   dailyThemeChip: string;
   /** Themed daily description for the home card. */
@@ -50,6 +51,7 @@ export function FeaturedQuizCards({
   photoTeaser,
   photoPoolCount,
   dailyTeaser,
+  duelTeaser,
   dailyThemeChip,
   dailyThemeDesc,
   dailyGuideUrl,
@@ -225,9 +227,21 @@ export function FeaturedQuizCards({
           onFocus={onPrefetchQuiz}
           aria-label={t('home.duel')}
         >
-          <span className="quiz-card__icon" aria-hidden="true">
-            ⚔️
-          </span>
+          {duelTeaser?.imageUrl ? (
+            <span className="quiz-card__teaser" aria-hidden="true">
+              <img
+                src={duelTeaser.imageUrl}
+                alt=""
+                className="quiz-card__teaser-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </span>
+          ) : (
+            <span className="quiz-card__icon" aria-hidden="true">
+              ⚔️
+            </span>
+          )}
           <div className="quiz-card__body">
             <h3 className="quiz-card__title">{t('home.duel')}</h3>
             <p className="quiz-card__desc">{t('home.duelDesc')}</p>

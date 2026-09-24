@@ -1241,6 +1241,71 @@ a {
   color: var(--pixfan-pink);
 }
 
+.result-mastery-ring {
+  --p: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0.75rem auto 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from -90deg,
+    var(--pixfan-pink) 0%,
+    color-mix(in srgb, var(--pixfan-pink) 70%, #fbbf24) calc(var(--p) * 1%),
+    #e5e7eb calc(var(--p) * 1%)
+  );
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 3px var(--color-surface);
+}
+
+.result-mastery-ring::before {
+  content: '';
+  position: absolute;
+  width: 3.35rem;
+  height: 3.35rem;
+  border-radius: 50%;
+  background: var(--color-surface);
+}
+
+.result-mastery-ring {
+  position: relative;
+}
+
+.result-mastery-ring__label {
+  position: relative;
+  z-index: 1;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.15;
+  color: var(--pixfan-pink);
+  max-width: 3rem;
+}
+
+.result-parcours-mastery {
+  margin: 0.45rem 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.difficulty-filter__empty {
+  margin: 0.65rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.account-sync__success p {
+  margin: 0;
+}
+
+.account-sync__summary {
+  margin-top: 0.35rem !important;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
 .quiz-card__meta-chip--mastery.is-bronze {
   color: #9a6234;
   font-weight: 700;
@@ -1647,6 +1712,36 @@ a {
   margin-top: 0.15rem;
   color: var(--color-text-muted);
   font-size: 0.82rem;
+}
+
+.achievement-card__progress {
+  margin-top: 0.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.achievement-card__counter {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--pixfan-pink);
+  letter-spacing: 0.02em;
+}
+
+.achievement-card__bar {
+  display: block;
+  height: 0.35rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-alt);
+  overflow: hidden;
+}
+
+.achievement-card__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--pixfan-pink);
+  transition: width 0.35s var(--ease-out);
 }
 
 .achievement-card__new {

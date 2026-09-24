@@ -70,3 +70,24 @@ export function buildDuelQuiz(
     questions: picked,
   };
 }
+
+/**
+ * Stable illustrated teaser for the home duel card.
+ * Uses a fixed seed so the image does not flicker on every render.
+ */
+export function getDuelPhotoTeaser(quizzes: Quiz[]): Question | null {
+  const illustrated: Question[] = [];
+  for (const quiz of quizzes) {
+    for (const q of quiz.questions) {
+      if (!q.imageUrl) continue;
+      illustrated.push({
+        ...q,
+        id: `${quiz.id}__${q.id}`,
+      });
+    }
+  }
+  if (illustrated.length === 0) return null;
+  const rand = seededRandom(hashSeed('duel-teaser'));
+  const shuffled = seededShuffle(illustrated, rand);
+  return shuffled[0] ?? null;
+}

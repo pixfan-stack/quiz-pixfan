@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import {
   ACHIEVEMENTS,
+  getAchievementProgress,
   getUnlockedAchievements,
   type AchievementId,
 } from '../utils/achievements';
@@ -8,6 +9,8 @@ import { getMonthPeriodId } from '../utils/leaderboardPeriod';
 import {
   getSeasonBadge,
   listSeasonBadges,
+  seasonCosmeticIcon,
+  seasonCosmeticLabelKey,
 } from '../utils/seasonEngagement';
 
 interface AchievementsPanelProps {
@@ -57,6 +60,12 @@ export function AchievementsPanel({
         {list.map((a) => {
           const isUnlocked = unlocked.has(a.id);
           const isNew = highlight.has(a.id);
+          const progress = getAchievementProgress(a.id);
+          const showProgress = progress != null && !isUnlocked;
+          const pct =
+            progress != null && progress.threshold > 0
+              ? Math.min(100, (progress.current / progress.threshold) * 100)
+              : 0;
           return (
             <li
               key={a.id}
@@ -77,6 +86,35 @@ export function AchievementsPanel({
                   )}
                 </span>
                 <span className="achievement-card__desc">{t(a.descKey)}</span>
+                {showProgress && progress && (
+                  <div
+                    className="achievement-card__progress"
+                    data-testid={`achievement-progress-${a.id}`}
+                  >
+                    <span className="achievement-card__counter">
+                      {t('achievements.counter', {
+                        current: progress.current,
+                        threshold: progress.threshold,
+                      })}
+                    </span>
+                    <span
+                      className="achievement-card__bar"
+                      role="progressbar"
+                      aria-valuemin={0}
+                      aria-valuemax={progress.threshold}
+                      aria-valuenow={progress.current}
+                      aria-label={t('achievements.counter', {
+                        current: progress.current,
+                        threshold: progress.threshold,
+                      })}
+                    >
+                      <span
+                        className="achievement-card__bar-fill"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </span>
+                  </div>
+                )}
               </div>
             </li>
           );
@@ -89,20 +127,20 @@ export function AchievementsPanel({
             <p className="season-badges__empty">{t('season.badgesEmpty')}</p>
           ) : (
             <ul className="season-badges__list">
-              {seasonBadges.map(({ seasonId }) => (
+              {seasonBadges.map(({ seasonId, cosmetic }) => (
                 <li
                   key={seasonId}
-                  className={`season-badge${
+                  className={`season-badge season-badge--${cosmetic}${
                     seasonId === currentSeasonId && currentSeasonBadge
                       ? ' is-current'
                       : ''
                   }`}
                 >
                   <span className="season-badge__icon" aria-hidden="true">
-                    🏅
+                    {seasonCosmeticIcon(cosmetic)}
                   </span>
                   <span className="season-badge__label">
-                    {t('season.participantBadge', { season: seasonId })}
+                    {t(seasonCosmeticLabelKey(cosmetic), { season: seasonId })}
                   </span>
                 </li>
               ))}

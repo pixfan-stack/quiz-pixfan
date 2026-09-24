@@ -73,6 +73,7 @@
     "difficulty_easy": "Facile",
     "difficulty_medium": "Intermédiaire",
     "difficulty_hard": "Difficile",
+    "difficultyEmpty": "Aucun pack à ce niveau pour le moment.",
     "startDifficultyMix": "Lancer un mix de ce niveau",
     "playerName": "Pseudo",
     "playerNameHint": "Il apparaîtra dans le classement après chaque partie.",
@@ -103,6 +104,7 @@
     "redeem": "Récupérer",
     "redeeming": "Récupération…",
     "redeemSuccess": "Progrès synchronisé ! Records, série, succès et points faibles sont à jour.",
+    "redeemSummary": "Points faibles : {{vault}} · Badges saison : {{badges}} · Série : {{streak}} · Succès : {{achievements}}",
     "errInvalid": "Code invalide. Vérifiez le format XXXX-XXXX-XXXX.",
     "errUnknown": "Code inconnu. Il a peut‑être déjà été utilisé, ou généré sur un autre appareil.",
     "errExpired": "Ce code a expiré. Générez-en un nouveau.",
@@ -139,6 +141,8 @@
     "newHighScore": "Nouveau record !",
     "previousBest": "Ancien record : {{percent}} %",
     "masteryNext": "Encore {{need}} % pour {{tier}}",
+    "parcoursMastery": "Maîtrise parcours : {{average}} % ({{played}}/{{total}}) · {{tier}}",
+    "parcoursMasteryNone": "pas commencé",
     "message_perfect": "Score parfait ! Vous êtes un génie !",
     "message_great": "Excellent ! Presque parfait !",
     "message_good": "Bien joué ! Continuez à vous entraîner !",
@@ -264,7 +268,10 @@
     "dismiss": "Plus tard",
     "badgesTitle": "Badges de saison",
     "badgesEmpty": "Terminez un quiz pour gagner le badge de la saison en cours.",
-    "participantBadge": "Participant · {{season}}"
+    "participantBadge": "Participant · {{season}}",
+    "top10Badge": "Top 10 · {{season}}",
+    "podiumBadge": "Podium · {{season}}",
+    "streakSeasonBadge": "Série de saison · {{season}}"
   },
   "pixfan": {
     "eyebrow": "Suite Pixfan",
@@ -327,6 +334,7 @@
   "achievements": {
     "title": "Succès",
     "progress": "{{unlocked}} / {{total}} débloqués",
+    "counter": "{{current}}/{{threshold}}",
     "new": "Nouveau",
     "firstFinish": "Première partie",
     "firstFinishDesc": "Terminez n’importe quel quiz.",

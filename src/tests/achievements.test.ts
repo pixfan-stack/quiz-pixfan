@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import {
+  getAchievementProgress,
   getPhotoReadingPlayCount,
   getUnlockedAchievements,
   getVaultResolvedTotal,
@@ -161,5 +162,58 @@ describe('achievements', () => {
     expect(newly).toEqual(
       expect.arrayContaining(['daily-first', 'streak-3', 'streak-7', 'streak-14'])
     );
+  });
+
+  it('reports progress counters for threshold achievements', () => {
+    expect(getAchievementProgress('first-finish')).toBeNull();
+
+    unlockAchievements({
+      quizId: PHOTO_READING_ID,
+      percentage: 50,
+      categoryQuizIds: [],
+      highscores: {},
+      streak: emptyStreak,
+    });
+    unlockAchievements({
+      quizId: PHOTO_READING_ID,
+      percentage: 50,
+      categoryQuizIds: [],
+      highscores: {},
+      streak: emptyStreak,
+    });
+    expect(getAchievementProgress('photo-reader')).toEqual({
+      current: 2,
+      threshold: PHOTO_READER_THRESHOLD,
+    });
+
+    unlockAchievements({
+      quizId: 'weak-spots',
+      percentage: 70,
+      categoryQuizIds: [],
+      highscores: {},
+      streak: emptyStreak,
+      vaultClearedThisRun: 7,
+    });
+    expect(getAchievementProgress('vault-clear')).toEqual({
+      current: 7,
+      threshold: VAULT_CLEAR_THRESHOLD,
+    });
+
+    localStorage.setItem(
+      'quiz-pixfan-daily-streak',
+      JSON.stringify({
+        ...emptyStreak,
+        currentStreak: 5,
+        bestStreak: 5,
+      })
+    );
+    expect(getAchievementProgress('streak-7')).toEqual({
+      current: 5,
+      threshold: 7,
+    });
+    expect(getAchievementProgress('streak-3')).toEqual({
+      current: 3,
+      threshold: 3,
+    });
   });
 });

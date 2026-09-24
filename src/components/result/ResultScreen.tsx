@@ -14,10 +14,14 @@ import { isDuelQuizId } from '../../utils/duel';
 import { compareDuelScores } from '../../utils/duelOutcome';
 import { isDailyQuizId } from '../../utils/dailyChallenge';
 import {
+  getParcoursMastery,
+  isMasteryEligible,
+  isParcoursQuizId,
   masteryLabelKey,
   masteryTierFromPercent,
   nextMasteryTarget,
 } from '../../utils/mastery';
+import { getAllHighScores } from '../../utils/highscore';
 import { Leaderboard } from '../Leaderboard';
 import { MistakesReview } from '../MistakesReview';
 import { AchievementsPanel } from '../AchievementsPanel';
@@ -67,18 +71,22 @@ export function ResultScreen({
     shouldShowResultReengage(result.quizId)
   );
 
-  const isCategoryQuiz = categoryQuizIds.includes(result.quizId);
+  const showMastery = isMasteryEligible(result.quizId, categoryQuizIds);
   const effectiveBest = Math.max(
     result.percentage,
     result.previousBest ?? 0
   );
-  const masteryNext = isCategoryQuiz
-    ? nextMasteryTarget(effectiveBest)
-    : null;
-  const masteryTier = isCategoryQuiz
+  const masteryNext = showMastery ? nextMasteryTarget(effectiveBest) : null;
+  const masteryTier = showMastery
     ? masteryTierFromPercent(effectiveBest)
     : 'none';
   const masteryKey = masteryLabelKey(masteryTier);
+  const parcoursMastery = isParcoursQuizId(result.quizId)
+    ? getParcoursMastery({
+        ...getAllHighScores(),
+        [result.quizId]: { percentage: effectiveBest },
+      })
+    : null;
 
   const {
     shareGrid,
@@ -149,6 +157,7 @@ export function ResultScreen({
             badgeKey={badgeKey}
             masteryKey={masteryKey}
             masteryNext={masteryNext}
+            parcoursMastery={parcoursMastery}
             displayName={displayName}
             t={t}
           />
