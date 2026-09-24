@@ -46,13 +46,57 @@ export function socialShareUrl(
   return u.toString();
 }
 
-/** Absolute OG image URL (static PNG — social crawlers reject SVG). */
+/**
+ * Absolute OG image URL — theme PNG under `/og/themes/` (score snaps to
+ * pre-baked tiers). Social crawlers reject SVG `/api/og?format=svg`.
+ */
 export function ogImageUrl(
-  _quizId: string,
-  _opts: SocialShareOptions = {}
+  quizId: string,
+  opts: SocialShareOptions = {}
 ): string {
   const base = APP_SHARE_URL.replace(/\/$/, '');
-  return `${base}/og-image.png?v=4`;
+  const known = new Set([
+    'exposure-basics',
+    'composition',
+    'light-color',
+    'gear-lenses',
+    'history-icons',
+    'public-domain',
+    'genres',
+    'smartphone',
+    'photo-rights',
+    'retouching',
+    'lightroom-workflow',
+    'portrait-light',
+    'random',
+    'weak-spots',
+    'photo-reading',
+    'mix-easy',
+    'mix-medium',
+    'mix-hard',
+  ]);
+  const slug = quizId.startsWith('daily-')
+    ? 'daily'
+    : quizId.startsWith('duel-')
+      ? 'duel'
+      : quizId === 'random-mix'
+        ? 'random'
+        : known.has(quizId)
+          ? quizId
+          : 'default';
+  const score =
+    opts.score != null && Number.isFinite(opts.score)
+      ? Math.round(Math.min(100, Math.max(0, opts.score)))
+      : null;
+  const tiers = [70, 80, 90, 100] as const;
+  let tier: number | null = null;
+  if (score != null) {
+    tier = tiers.reduce((best, t) =>
+      Math.abs(score - t) < Math.abs(score - best) ? t : best
+    );
+  }
+  const file = tier != null ? `${slug}-${tier}.png` : `${slug}.png`;
+  return `${base}/og/themes/${file}?v1`;
 }
 
 export type SharePlatform = 'twitter' | 'facebook' | 'linkedin' | 'whatsapp';

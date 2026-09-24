@@ -3,13 +3,14 @@ import {
   normalizeQuizId,
   parseLang,
   parseScore,
-  staticOgImageUrl,
+  themeOgImageUrl,
 } from '../lib/sharePreview';
 
 /**
  * Open Graph image endpoint.
  *
- * Default: 302 → static PNG (Facebook / LinkedIn / X / Slack reject SVG).
+ * Default: 302 → theme PNG under `/og/themes/` (Facebook / LinkedIn / X / Slack
+ * reject SVG). Score snaps to the nearest pre-baked tier (70/80/90/100).
  * Debug / legacy: `?format=svg` still returns the dynamic SVG card.
  *
  * GET /api/og?quiz=composition&score=80&lang=fr
@@ -22,9 +23,10 @@ export const onRequestGet: PagesFunction = async (context) => {
     return new Response('Invalid quiz id', { status: 400 });
   }
 
+  const score = parseScore(url.searchParams.get('score'));
+  const lang = parseLang(url.searchParams.get('lang'));
+
   if (url.searchParams.get('format') === 'svg') {
-    const score = parseScore(url.searchParams.get('score'));
-    const lang = parseLang(url.searchParams.get('lang'));
     const svg = buildOgSvg({ quizId, score, lang });
     return new Response(svg, {
       status: 200,
@@ -36,7 +38,7 @@ export const onRequestGet: PagesFunction = async (context) => {
     });
   }
 
-  return Response.redirect(staticOgImageUrl(url.origin), 302);
+  return Response.redirect(themeOgImageUrl(url.origin, quizId, score), 302);
 };
 
 /** Social crawlers often probe with HEAD before fetching the image. */
@@ -55,5 +57,6 @@ export const onRequestHead: PagesFunction = async (context) => {
       },
     });
   }
-  return Response.redirect(staticOgImageUrl(url.origin), 302);
+  const score = parseScore(url.searchParams.get('score'));
+  return Response.redirect(themeOgImageUrl(url.origin, quizId, score), 302);
 };

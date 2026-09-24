@@ -7,8 +7,8 @@
  * - API: network only (no stale leaderboard cache)
  */
 
-const CACHE_NAME = 'quiz-pixfan-v10';
-const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v4';
+const CACHE_NAME = 'quiz-pixfan-v11';
+const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v5';
 
 const OFFLINE_URLS = [
   '/',

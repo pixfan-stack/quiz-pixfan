@@ -209,17 +209,46 @@ describe('questions.json', () => {
     'history-icons',
     'photo-rights',
     'portrait-light',
-  ] as const)('%s has 8–14 illustrated questions with credits', (id) => {
+  ] as const)('%s has illustrated questions with credits (P4 densify)', (id) => {
     const quiz = data.quizzes.find((q) => q.id === id);
     expect(quiz).toBeDefined();
     const illustrated = quiz!.questions.filter((q) => q.imageUrl);
     expect(illustrated.length).toBeGreaterThanOrEqual(8);
-    expect(illustrated.length).toBeLessThanOrEqual(14);
+    // P4.A pushed under-illustrated packs toward ≥55–60% (often 15–22).
+    expect(illustrated.length).toBeLessThanOrEqual(24);
     for (const q of illustrated) {
       expect(q.imageCredit?.en).toBeTruthy();
       expect(q.imageCredit?.fr).toBeTruthy();
       expect(q.imageUrl).toMatch(/^\/images\//);
     }
+  });
+
+  it('P4.A under-illustrated packs reach ≥55% images', () => {
+    for (const id of ['retouching', 'composition', 'smartphone'] as const) {
+      const quiz = data.quizzes.find((q) => q.id === id);
+      expect(quiz).toBeDefined();
+      const ill = quiz!.questions.filter((q) => q.imageUrl).length;
+      expect(ill / quiz!.questions.length).toBeGreaterThanOrEqual(0.55);
+    }
+  });
+
+  it('P4.B short Pixfan packs are lengthened toward ~25–28', () => {
+    for (const id of ['lightroom-workflow', 'portrait-light'] as const) {
+      const quiz = data.quizzes.find((q) => q.id === id);
+      expect(quiz).toBeDefined();
+      expect(quiz!.questions.length).toBeGreaterThanOrEqual(25);
+      expect(quiz!.questions.length).toBeLessThanOrEqual(30);
+    }
+  });
+
+  it('has at least 300 questions and ~190 illustrated after P4 densify', () => {
+    const total = data.quizzes.reduce((sum, q) => sum + q.questions.length, 0);
+    const ill = data.quizzes.reduce(
+      (sum, q) => sum + q.questions.filter((x) => x.imageUrl).length,
+      0
+    );
+    expect(total).toBeGreaterThanOrEqual(300);
+    expect(ill).toBeGreaterThanOrEqual(185);
   });
 
   it('history-icons is rebalanced away from a hard outlier', () => {

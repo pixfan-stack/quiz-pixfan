@@ -1965,7 +1965,16 @@
             "en": "Symmetry evokes order, stability, and beauty. It's powerful in architecture, reflections, and formal portraits.",
             "fr": "La symétrie évoque l'ordre, la stabilité et la beauté. Elle est puissante en architecture, reflets et portraits formels."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
+          "imageAlt": {
+            "en": "Symmetric urban square — symmetry’s calm pull",
+            "fr": "Place urbaine symétrique — l’attrait calme de la symétrie"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-8",
@@ -2162,7 +2171,16 @@
             "en": "Diagonals introduce energy and direction, unlike horizontal (calm) or vertical (stable) lines. They're powerful for action and drama.",
             "fr": "Les diagonales introduisent énergie et direction, contrairement aux lignes horizontales (calme) ou verticales (stabilité). Elles sont puissantes pour l'action et le drame."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
+          "imageAlt": {
+            "en": "Mountain ridges as diagonal energy lines",
+            "fr": "Crêtes de montagne comme lignes diagonales énergiques"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-12",
@@ -2254,7 +2272,16 @@
             "en": "Cropping is a powerful compositional tool that can eliminate distractions, change perspective, and redirect viewer attention.",
             "fr": "Le recadrage est un outil compositionnel puissant qui peut éliminer les distractions, changer la perspective et rediriger l'attention du spectateur."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
+          "imageAlt": {
+            "en": "Landscape ready for a thoughtful crop decision",
+            "fr": "Paysage prêt pour une décision de recadrage réfléchie"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-14",
@@ -2348,7 +2375,16 @@
             "en": "Giving a subject space to look or move into prevents a cramped feeling and feels more natural and balanced.",
             "fr": "Donner au sujet de l'espace pour regarder ou se déplacer évite un sentiment d'encombrement et semble plus naturel et équilibré."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
+          "imageAlt": {
+            "en": "Portrait with looking room / nose room ahead of the gaze",
+            "fr": "Portrait avec espace de regard / nose room devant le regard"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-16",
@@ -2394,7 +2430,16 @@
             "en": "Complementary colors or stark contrasts create focal points and guide the viewer's eye through intentional design.",
             "fr": "Les couleurs complémentaires ou les contrastes marqués créent des points focaux et guident l'œil du spectateur par intentionnalité."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1493246507139-91e8fad9978e.avif",
+          "imageAlt": {
+            "en": "Strong color contrast between land and sky",
+            "fr": "Fort contraste de couleur entre terre et ciel"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-17",
@@ -2487,7 +2532,16 @@
             "en": "High angles (looking down) can diminish a subject's presence, show context, or create a bird's-eye perspective.",
             "fr": "Les angles hauts (regarder vers le bas) peuvent diminuer la présence d'un sujet, montrer le contexte ou créer une perspective aérienne."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1470252649378-9c29740c9fa8.avif",
+          "imageAlt": {
+            "en": "High-angle overlook compressing a landscape scene",
+            "fr": "Vue plongeante compressant une scène de paysage"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "comp-19",
@@ -2737,6 +2791,15 @@
           "explanation": {
             "en": "Intention = choices. Closer, cleaner, level, and timed beats “spray and pray”.",
             "fr": "L’intention, ce sont des choix. Plus près, plus propre, droit et bien cadencé battent le mode rafale aveugle."
+          },
+          "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
+          "imageAlt": {
+            "en": "Intentional street framing that elevates a snapshot",
+            "fr": "Cadrage de rue intentionnel qui élève un instantané"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -2838,6 +2901,15 @@
           "explanation": {
             "en": "Rules are tools. Centered frames can feel intentional and powerful.",
             "fr": "Les règles sont des outils. Un cadrage centré peut être volontaire et fort."
+          },
+          "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
+          "imageAlt": {
+            "en": "Centered mountain subject — when centering works",
+            "fr": "Sujet montagneux centré — quand le centrage fonctionne"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -10043,7 +10115,16 @@
             "en": "RAW keeps more linear data before aggressive phone processing.",
             "fr": "Le RAW conserve plus de données avant le traitement agressif du téléphone."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1511707171634-5f897ff02aa9.avif",
+          "imageAlt": {
+            "en": "Phone camera UI — RAW / Pro mode territory",
+            "fr": "Interface caméra téléphone — terrain mode RAW / Pro"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-9",
@@ -10146,7 +10227,16 @@
             "en": "Short focal lengths exaggerate perspective; edges can look warped.",
             "fr": "Les courtes focales exagèrent la perspective ; les bords se déforment."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1512499617640-c74ae3a79d37.avif",
+          "imageAlt": {
+            "en": "Ultra-wide phone perspective stretching a scene",
+            "fr": "Perspective ultra grand-angle téléphone étirant une scène"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-11",
@@ -10293,7 +10383,16 @@
             "en": "Overlays guide framing without changing exposure technology.",
             "fr": "Les overlays guident le cadrage sans changer la technique d’exposition."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
+          "imageAlt": {
+            "en": "Phone held for a careful grid-aligned frame",
+            "fr": "Téléphone tenu pour un cadrage soigné sur la grille"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-14",
@@ -10387,7 +10486,16 @@
             "en": "Close focus means shallow depth of field; stability and light help.",
             "fr": "La mise au point proche implique une PdC faible ; stabilité et lumière aident."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1504674900247-0877df9cc836.avif",
+          "imageAlt": {
+            "en": "Close food detail — phone macro territory",
+            "fr": "Détail food serré — terrain macro téléphone"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-16",
@@ -10573,7 +10681,16 @@
             "en": "Backlight scenes blow highlights; HDR and careful exposure help.",
             "fr": "Le contre-jour brûle les HL ; HDR et exposition soignée aident."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
+          "imageAlt": {
+            "en": "Shooting toward bright light — phone sun / flare control",
+            "fr": "Prise de vue face à une lumière vive — contrôle soleil / flare"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "phone-20",
@@ -10720,6 +10837,15 @@
           "explanation": {
             "en": "UI eats the top and bottom. Keep faces in the safe central zone.",
             "fr": "L’interface mange le haut et le bas. Garde les visages dans la zone centrale sûre."
+          },
+          "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
+          "imageAlt": {
+            "en": "Tall phone screen — Stories / Reels 9:16 framing",
+            "fr": "Écran téléphone vertical — cadrage Stories / Reels 9:16"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -10766,6 +10892,15 @@
           "explanation": {
             "en": "Night mode is multi-frame computational photography. Hold still (or brace) while it works.",
             "fr": "Le mode Nuit est de la photo computationnelle multi-vues. Reste stable le temps du calcul."
+          },
+          "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
+          "imageAlt": {
+            "en": "Night city lights — phone night-mode stability",
+            "fr": "Lumières de ville la nuit — stabilité du mode nuit"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -10867,6 +11002,15 @@
           "explanation": {
             "en": "Simulation is useful — check edges before you trust it.",
             "fr": "La simulation est utile — vérifie les contours avant de faire confiance."
+          },
+          "imageUrl": "/images/packs/photo-1544005313-94ddf0286df2.avif",
+          "imageAlt": {
+            "en": "Portrait with soft background — computational blur nuance",
+            "fr": "Portrait au fond doux — nuance du flou computationnel"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12699,6 +12843,15 @@
           "explanation": {
             "en": "They emphasize mid-frequency contrast; overuse looks crunchy.",
             "fr": "Ils insistent sur le contraste de moyennes fréquences ; trop en mettre donne un rendu « croustillant »."
+          },
+          "imageUrl": "/images/packs/photo-1470071459604-3b5ec3a7fe05.avif",
+          "imageAlt": {
+            "en": "Misty forest texture — clarity / structure slider territory",
+            "fr": "Texture de forêt brumeuse — terrain clarté / structure"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12800,6 +12953,15 @@
           "explanation": {
             "en": "Skin sits in subtle orange/yellow ranges—over-shifting looks fake.",
             "fr": "La peau vit dans des oranges/jaunes subtils — trop décaler devient faux."
+          },
+          "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
+          "imageAlt": {
+            "en": "Moody colored landscape — extreme HSL shift risk",
+            "fr": "Paysage aux couleurs d’ambiance — risque de shifts HSL extrêmes"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13061,6 +13223,15 @@
           "explanation": {
             "en": "Start with global exposure/WB and framing before micro-retouch.",
             "fr": "Commencez par exposition/BB et cadrage avant la micro-retouche."
+          },
+          "imageUrl": "/images/packs/photo-1460925895917-afdab827c52f.avif",
+          "imageAlt": {
+            "en": "Laptop dashboard — first checks when opening a file to edit",
+            "fr": "Tableau de bord — premiers contrôles à l’ouverture d’un fichier"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13153,6 +13324,15 @@
           "explanation": {
             "en": "Subtle vignettes guide the eye; heavy ones look dated fast.",
             "fr": "Un vignettage subtil guide le regard ; trop fort, il vieillit vite."
+          },
+          "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
+          "imageAlt": {
+            "en": "Mountain vista — classic vignette framing metaphor",
+            "fr": "Vue de montagne — métaphore de vignettage classique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13311,6 +13491,15 @@
           "explanation": {
             "en": "Advanced technique—easy to overdo and plasticize skin.",
             "fr": "Technique avancée — facile d’en abuser et de plastifier la peau."
+          },
+          "imageUrl": "/images/packs/photo-1531746020798-e6953c6e8e04.avif",
+          "imageAlt": {
+            "en": "Close portrait skin texture — frequency separation territory",
+            "fr": "Texture de peau en portrait serré — terrain séparation de fréquences"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13414,6 +13603,15 @@
           "explanation": {
             "en": "Soft proofing simulates print gamut/paper before wasting ink.",
             "fr": "Le soft proof simule le gamut/papier avant de gaspiller de l’encre."
+          },
+          "imageUrl": "/images/packs/photo-1499750310107-5fef28a66643.avif",
+          "imageAlt": {
+            "en": "Laptop and coffee — soft-proof before print / client delivery",
+            "fr": "Portable et café — soft proof avant print / livraison"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13609,6 +13807,15 @@
           "explanation": {
             "en": "Ship clean files matched to the destination — not your working rejects.",
             "fr": "Livre des fichiers propres adaptés à la destination — pas tes rejects de travail."
+          },
+          "imageUrl": "/images/packs/photo-1454165804606-c3d57bc86b40.avif",
+          "imageAlt": {
+            "en": "Checklist documents — last checks before client send",
+            "fr": "Documents checklist — dernières vérifs avant envoi client"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -13926,6 +14133,15 @@
           "explanation": {
             "en": "Virtual copies are alternate recipes pointing at the same file.",
             "fr": "Une copie virtuelle = une autre recette pointant le même fichier."
+          },
+          "imageUrl": "/images/packs/photo-1555949963-aa79dcee981c.avif",
+          "imageAlt": {
+            "en": "Colorful UI panels — virtual copies for alternate looks",
+            "fr": "Panneaux UI colorés — copies virtuelles pour looks alternatifs"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14027,6 +14243,15 @@
           "explanation": {
             "en": "Output sharpening matches the medium. Don’t reuse print settings blindly for Instagram or a client web gallery.",
             "fr": "La netteté de sortie suit le support. N’applique pas des réglages impression à Instagram ou une galerie web client sans réfléchir."
+          },
+          "imageUrl": "/images/packs/photo-1558655146-d09347e92766.avif",
+          "imageAlt": {
+            "en": "Design swatches — Screen vs Print export sharpening",
+            "fr": "Nuanciers — netteté d’export Screen vs Print"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14284,6 +14509,15 @@
           "explanation": {
             "en": "Optical profiles straighten known lens quirks — not creative focus mistakes.",
             "fr": "Les profils optiques redressent les défauts d’objectifs connus — pas les erreurs de focus créatives."
+          },
+          "imageUrl": "/images/packs/photo-1526170375885-4d8ecf77b99f.avif",
+          "imageAlt": {
+            "en": "Prime lens — Lens Corrections / profile fixes",
+            "fr": "Objectif fixe — corrections d’objectif / profils"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14385,6 +14619,15 @@
           "explanation": {
             "en": "Basic gets you close; curves refine contrast and color with finer control.",
             "fr": "Le Basic rapproche ; la courbe raffine contraste et couleur avec plus de contrôle."
+          },
+          "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
+          "imageAlt": {
+            "en": "Moody tones — Tone Curve vs Basic panel judgment",
+            "fr": "Tons d’ambiance — jugement Courbe vs panneau Basic"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -14746,6 +14989,300 @@
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash"
           }
+        },
+        {
+          "id": "lr-21",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Healthy Lightroom Classic catalog hygiene usually includes…",
+            "fr": "Une hygiène saine de catalogue Lightroom Classic inclut surtout…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Deleting the catalog after every export “to stay light”",
+                "fr": "Supprimer le catalogue après chaque export « pour rester léger »"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Storing the only catalog copy on a USB stick you lose weekly",
+                "fr": "Garder l’unique copie sur une clé USB perdue chaque semaine"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Never backing up because Smart Previews are a full archive",
+                "fr": "Ne jamais sauvegarder car les Smart Previews sont une archive complète"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Regular catalog backups + knowing where the .lrcat lives",
+                "fr": "Sauvegardes régulières du catalogue + savoir où vit le .lrcat"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Edits live in the catalog; backups are non-negotiable Pixfan hygiene.",
+            "fr": "Les edits vivent dans le catalogue ; les sauvegardes sont non négociables façon Pixfan."
+          },
+          "imageUrl": "/images/packs/photo-1486312338219-ce68d2c6f44d.avif",
+          "imageAlt": {
+            "en": "Hands on a laptop — catalog backup discipline",
+            "fr": "Mains sur un portable — discipline de sauvegarde catalogue"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "lr-22",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Before a big Develop sync across similar frames, a smart Pixfan habit is…",
+            "fr": "Avant une grosse sync Développement sur des vues similaires, une bonne habitude Pixfan est…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Sync everything blindly including healing spots from other faces",
+                "fr": "Tout syncer à l’aveugle y compris les healing d’autres visages"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Disable previews so mistakes stay invisible longer",
+                "fr": "Désactiver les previews pour cacher les erreurs plus longtemps"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Convert the whole shoot to JPEG before syncing",
+                "fr": "Convertir tout le shooting en JPEG avant de syncer"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Spot-check one hero, sync deliberately, then QA outliers (faces, dust, crops)",
+                "fr": "Valider un hero, syncer exprès, puis QA les outliers (visages, poussière, crops)"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Sync is a multiplier — good looks and bad mistakes both scale.",
+            "fr": "La sync multiplie — les beaux looks et les mauvaises erreurs aussi."
+          }
+        },
+        {
+          "id": "lr-23",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "You need a B&W version without losing the color master. Clean approach?",
+            "fr": "Tu veux une version N&B sans perdre le master couleur. Approche propre ?"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Export JPEG, reopen, desaturate, overwrite the RAW",
+                "fr": "Exporter JPEG, rouvrir, désaturer, écraser le RAW"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Delete all color edits so only B&W remains forever",
+                "fr": "Supprimer tous les edits couleur pour ne garder que le N&B"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Change the camera profile to monochrome in-camera only",
+                "fr": "Changer seulement le profil monochrome dans l’appareil"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Virtual copy (or snapshot) for B&W; keep the color master intact",
+                "fr": "Copie virtuelle (ou snapshot) pour le N&B ; garder le master couleur intact"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Virtual copies keep non-destructive forks of the same master file.",
+            "fr": "Les copies virtuelles gardent des forks non destructifs du même master."
+          }
+        },
+        {
+          "id": "lr-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Client delivery from Lightroom — which export habit is most Pixfan-solid?",
+            "fr": "Livraison client depuis Lightroom — quelle habitude d’export est la plus solide façon Pixfan ?"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Always export ProPhoto JPEG at 300% size “for safety”",
+                "fr": "Toujours exporter du JPEG ProPhoto à 300 % « par sécurité »"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Email the catalog file instead of rendered images",
+                "fr": "Envoyer le fichier catalogue au lieu des images rendues"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Skip sharpening and color profile on every web export",
+                "fr": "Sauter netteté et profil couleur sur chaque export web"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Named presets per destination (web sRGB / print) + quick visual QA of exports",
+                "fr": "Préréglages nommés par destination (web sRGB / print) + QA visuelle rapide des exports"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Repeatable export presets + a last look beat one-off guessing.",
+            "fr": "Des presets d’export répétables + un dernier coup d’œil battent l’improvisation."
+          },
+          "imageUrl": "/images/packs/photo-1498050108023-c5249f4df085.avif",
+          "imageAlt": {
+            "en": "Laptop coding desk — batch sync QA before delivery",
+            "fr": "Bureau portable — QA après sync batch avant livraison"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "lr-25",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "A luminance range mask is especially useful when you want to…",
+            "fr": "Un masque de gamme luminance est surtout utile quand tu veux…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Replace the need for any white-balance control",
+                "fr": "Remplacer tout contrôle de balance des blancs"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Automatically write IPTC copyright into every export",
+                "fr": "Écrire automatiquement le copyright IPTC dans chaque export"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Force every sky to neon purple regardless of selection",
+                "fr": "Forcer chaque ciel en violet néon sans sélection"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Limit a local adjustment to bright or dark tonal regions",
+                "fr": "Limiter un réglage local aux zones tonales claires ou sombres"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Range masks refine where a local edit lands by tone or color.",
+            "fr": "Les masques de gamme précisent où un edit local s’applique (ton / couleur)."
+          }
+        },
+        {
+          "id": "lr-26",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Myth: “More Clarity always makes a photo look more professional.” Better framing?",
+            "fr": "Mythe : « Plus de Clarté = forcément plus pro. » Meilleure nuance ?"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Clarity only affects the blue channel in print",
+                "fr": "La Clarté n’affecte que le canal bleu à l’impression"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "You must max Clarity on every landscape forever",
+                "fr": "Il faut maxer la Clarté sur chaque paysage pour toujours"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Clarity replaces Lens Corrections completely",
+                "fr": "La Clarté remplace totalement les Corrections d’objectif"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Clarity is a midtone contrast tool — easy to crunch skin and haze for no gain",
+                "fr": "La Clarté est un contraste de tons moyens — facile d’écraser peau et brume sans gain"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Use Clarity with intent; faces and soft atmospheres often want restraint.",
+            "fr": "Utilise la Clarté avec intention ; visages et atmosphères douces veulent souvent de la retenue."
+          }
         }
       ]
     },
@@ -14970,6 +15507,15 @@
           "explanation": {
             "en": "Fill controls how deep shadows feel; key still owns direction.",
             "fr": "Le fill contrôle la profondeur des ombres ; la clé garde la direction."
+          },
+          "imageUrl": "/images/packs/photo-1507003211169-0a1dd7228f2d.avif",
+          "imageAlt": {
+            "en": "Male portrait with gentle fill lifting the shadow side",
+            "fr": "Portrait masculin avec fill doux remontant le côté ombre"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -15071,6 +15617,15 @@
           "explanation": {
             "en": "Classic beauty/old-Hollywood key sits high on axis for a butterfly nose shadow.",
             "fr": "La clé beauté / vieux Hollywood est haute sur l’axe pour l’ombre papillon sous le nez."
+          },
+          "imageUrl": "/images/packs/photo-1487412720507-e7ab37603c6f.avif",
+          "imageAlt": {
+            "en": "Beauty light high on axis — butterfly / Paramount vibe",
+            "fr": "Lumière beauté haute sur l’axe — vibe papillon / Paramount"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -15172,6 +15727,15 @@
           "explanation": {
             "en": "Large, soft, diffused sources wrap the face; harsh sun through glass is another tool.",
             "fr": "Une grande source proche et diffusée enveloppe le visage ; le soleil dur à travers la vitre est un autre outil."
+          },
+          "imageUrl": "/images/packs/photo-1438761681033-6461ffad8d80.avif",
+          "imageAlt": {
+            "en": "Soft window-light portrait facing the window",
+            "fr": "Portrait douce lumière de fenêtre face à la fenêtre"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -15375,6 +15939,15 @@
           "explanation": {
             "en": "Key at ~90° creates a dramatic half-and-half face — useful, not default flattering.",
             "fr": "Une clé à ~90° crée un demi-visage dramatique — utile, pas le flatteur par défaut."
+          },
+          "imageUrl": "/images/packs/photo-1552374196-c4e7ffc6e126.avif",
+          "imageAlt": {
+            "en": "Dramatic split light carving half the face",
+            "fr": "Lumière split dramatique sculptant une moitié du visage"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -15789,6 +16362,300 @@
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-21",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "A hair / rim light behind the subject is mainly there to…",
+            "fr": "Un hair / rim light derrière le sujet sert surtout à…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Replace the key light entirely",
+                "fr": "Remplacer entièrement la lumière clé"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Force every portrait into flat beauty light",
+                "fr": "Forcer chaque portrait en lumière beauté plate"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only change white balance in the shadows",
+                "fr": "Changer seulement la balance des blancs dans les ombres"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Separate hair/shoulders from a dark background and add polish",
+                "fr": "Détacher cheveux/épaules d’un fond sombre et ajouter du polish"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Rim/hair lights carve separation; they rarely replace a proper key.",
+            "fr": "Rim/hair sculptent la séparation ; ils remplacent rarement une vraie clé."
+          },
+          "imageUrl": "/images/packs/photo-1517841905240-472988babdf9.avif",
+          "imageAlt": {
+            "en": "Golden-hour rim light wrapping a portrait subject",
+            "fr": "Rim light golden hour enveloppant un sujet portrait"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-22",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Clamshell beauty lighting typically pairs…",
+            "fr": "La lumière beauté « clamshell » associe typiquement…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Two hard rim lights with zero front light",
+                "fr": "Deux rim durs sans aucune lumière frontale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Only a bare speedlight on-camera pointed at the ceiling forever",
+                "fr": "Seulement un speedlight nu sur l’appareil pointé plafond pour toujours"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A single red gel behind the subject as the only source",
+                "fr": "Un seul gélatiné rouge derrière le sujet comme unique source"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "A soft key above + a weaker fill/reflector below the chin line",
+                "fr": "Une clé douce au-dessus + un fill/réflecteur plus faible sous le menton"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Clamshell wraps soft light for beauty/clean commercial faces.",
+            "fr": "Le clamshell enveloppe une lumière douce pour visages beauté / commercial clean."
+          }
+        },
+        {
+          "id": "pl-23",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Subject has deep-set eyes under a hat brim. First light fix?",
+            "fr": "Sujet aux yeux enfoncés sous un bord de chapeau. Premier correctif lumière ?"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Only crush blacks harder so eye sockets disappear",
+                "fr": "Seulement écraser encore plus les noirs pour faire disparaître les orbites"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always shoot at f/22 facing noon sun",
+                "fr": "Toujours shooter à f/22 face au soleil de midi"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Disable autofocus and hope for catchlights",
+                "fr": "Désactiver l’AF et espérer des catchlights"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Raise fill / bounce / lower the key angle so eyes catch light",
+                "fr": "Monter le fill / bounce / baisser l’angle de clé pour éclairer les yeux"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Portrait craft prioritizes readable eyes — lift the sockets before styling drama.",
+            "fr": "Le craft portrait priorise des yeux lisibles — remonte les orbites avant le drama stylé."
+          }
+        },
+        {
+          "id": "pl-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Short lighting (vs broad) generally means…",
+            "fr": "Le short lighting (vs broad) signifie généralement…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Key lights only the background seamless",
+                "fr": "La clé n’éclaire que le fond cyclorama"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "No key light is used at all",
+                "fr": "Aucune lumière clé n’est utilisée"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "The lens is always wider than 24 mm",
+                "fr": "L’objectif est toujours plus grand-angle que 24 mm"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Key lights the side of the face turned away from camera — often slimming",
+                "fr": "La clé éclaire le côté du visage tourné loin de la caméra — souvent amincissant"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Short lighting emphasizes the shadow side toward camera — a classic flattering pattern.",
+            "fr": "Le short lighting met l’ombre vers la caméra — un schéma classique flatteur."
+          }
+        },
+        {
+          "id": "pl-25",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "Mixed window + tungsten practicals muddy skin. Best on-set habit?",
+            "fr": "Fenêtre + practicals tungstène mélangés salissent la peau. Meilleure habitude plateau ?"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Always auto white-balance every frame and ignore the room lights",
+                "fr": "Toujours en balance auto et ignorer les lumières de la pièce"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Push Clarity to +100 to “fix” color casts",
+                "fr": "Monter la Clarté à +100 pour « réparer » les dominantes"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Convert to neon green so casts become a style forever",
+                "fr": "Passer en vert néon pour transformer les dominantes en style"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Commit to one dominant color temp (gel/practicals) or separate the sources",
+                "fr": "Choisir une température dominante (gélatine/practicals) ou séparer les sources"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Mixed CCT fights skin; decide a dominant and support it.",
+            "fr": "Les CCT mélangés se battent sur la peau ; choisis une dominante et tiens-la."
+          },
+          "imageUrl": "/images/packs/photo-1524504388940-b1c1722653e1.avif",
+          "imageAlt": {
+            "en": "Environmental window-light portrait for mixed-color habits",
+            "fr": "Portrait environnemental fenêtre — habitudes lumière mixte"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "pl-26",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Myth: “Softboxes always remove all shadows.” Better framing?",
+            "fr": "Mythe : « Les softbox enlèvent toutes les ombres. » Meilleure nuance ?"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Softboxes erase the need for any fill forever",
+                "fr": "Les softbox éliminent tout besoin de fill pour toujours"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Softboxes only work outdoors at noon",
+                "fr": "Les softbox ne marchent qu’en extérieur à midi"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Softboxes force every catchlight to disappear",
+                "fr": "Les softbox forcent chaque catchlight à disparaître"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Soft light still has direction — size/distance change softness, not physics",
+                "fr": "Une lumière douce a encore une direction — taille/distance changent la douceur, pas la physique"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Modifiers soften edges; they don’t delete directional shaping.",
+            "fr": "Les modificateurs adoucissent les bords ; ils n’effacent pas le modelé directionnel."
           }
         }
       ]
