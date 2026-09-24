@@ -25,6 +25,10 @@ const LABELS: Record<string, { en: string; fr: string }> = {
     en: 'Portrait & light',
     fr: 'Portrait & lumière',
   },
+  'marques-photo': {
+    en: 'Brand history',
+    fr: 'Histoire des marques',
+  },
   random: { en: 'Random mix', fr: 'Mix aléatoire' },
   'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
   'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },

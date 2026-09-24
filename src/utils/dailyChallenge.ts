@@ -125,7 +125,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
   },
   {
     id: 'history',
-    quizIds: ['history-icons', 'public-domain'],
+    quizIds: ['history-icons', 'public-domain', 'marques-photo'],
     title: {
       en: 'Daily challenge · History week',
       fr: 'Défi du jour · semaine histoire',

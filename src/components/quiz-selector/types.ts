@@ -25,6 +25,7 @@ export const QUIZ_ICONS: Record<string, string> = {
   retouching: '✨',
   'lightroom-workflow': '🖥️',
   'portrait-light': '💡',
+  'marques-photo': '🏷️',
 };
 
 export interface QuizWithScore {

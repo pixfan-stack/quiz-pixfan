@@ -7,8 +7,8 @@
  * - API: network only (no stale leaderboard cache)
  */
 
-const CACHE_NAME = 'quiz-pixfan-v11';
-const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v5';
+const CACHE_NAME = 'quiz-pixfan-v12';
+const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v6';
 
 const OFFLINE_URLS = [
   '/',
@@ -119,6 +119,8 @@ const IMAGE_URLS = [
   '/images/packs/photo-1618005182384-a83a8bd57fbe.avif',
   '/images/packs/photo-1620712943543-bcc4688e7485.avif',
   '/images/packs/photo-1677442136019-21780ecad995.avif',
+  '/images/packs/photo-1471341971476-ae15ff5dd4ea.avif',
+  '/images/packs/photo-1581591524425-c7e0978865fc.avif',
 ];
 
 self.addEventListener('install', (event) => {

@@ -94,6 +94,8 @@ Dead-URL replacements (see `URL_REPLACEMENTS` in `scripts/mirror-unsplash-images
 | `photo-1620712943543-bcc4688e7485.avif` | [`photo-1620712943543-bcc4688e7485`](https://images.unsplash.com/photo-1620712943543-bcc4688e7485) | 1 |
 | `photo-1677442136019-21780ecad995.avif` | [`photo-1677442136019-21780ecad995`](https://images.unsplash.com/photo-1677442136019-21780ecad995) | 1 |
 | `photo-1531297484001-80022131f5a1.avif` | [`photo-1531297484001-80022131f5a1`](https://images.unsplash.com/photo-1531297484001-80022131f5a1) | 0 |
+| `photo-1471341971476-ae15ff5dd4ea.avif` | [`photo-1471341971476-ae15ff5dd4ea`](https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea) | 1 |
+| `photo-1581591524425-c7e0978865fc.avif` | [`photo-1581591524425-c7e0978865fc`](https://images.unsplash.com/photo-1581591524425-c7e0978865fc) | 1 |
 
 Refresh: `python3 scripts/mirror-unsplash-images.py`
 P5 enrich: `python3 scripts/p5-enrich-pack-images.py`
