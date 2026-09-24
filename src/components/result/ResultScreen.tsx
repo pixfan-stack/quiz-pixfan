@@ -22,6 +22,7 @@ import { Leaderboard } from '../Leaderboard';
 import { MistakesReview } from '../MistakesReview';
 import { AchievementsPanel } from '../AchievementsPanel';
 import { PixfanCta } from '../PixfanCta';
+import { DailyReminderPrompt } from '../DailyReminderPrompt';
 import { ResultHero } from './ResultHero';
 import { ResultShareSection } from './ResultShareSection';
 import type { ResultScreenProps } from './types';
@@ -287,6 +288,8 @@ export function ResultScreen({
             onShare={handleShare}
             t={t}
           />
+
+          {isDaily ? <DailyReminderPrompt /> : null}
 
           <PixfanCta
             quizId={result.quizId}

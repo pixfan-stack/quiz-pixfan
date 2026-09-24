@@ -18,6 +18,23 @@ export function isStandalonePwa(): boolean {
   return Boolean(mq || ios);
 }
 
+/**
+ * iPhone / iPad (incl. iPadOS desktop UA). Used for Add-to-Home-Screen hints
+ * because Safari never fires `beforeinstallprompt`.
+ */
+export function isIosDevice(): boolean {
+  if (typeof navigator === 'undefined') return false;
+  const ua = navigator.userAgent;
+  if (/iPad|iPhone|iPod/.test(ua)) return true;
+  // iPadOS 13+ may report as MacIntel with touch
+  return navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+}
+
+/** Show manual install steps when on iOS Safari (not already installed). */
+export function shouldShowIosInstallHint(): boolean {
+  return isIosDevice() && !isStandalonePwa();
+}
+
 /** Mark that the user finished a quiz (for home nudge timing). */
 export function markQuizPlayed(now = new Date()): void {
   try {

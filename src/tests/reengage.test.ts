@@ -3,9 +3,11 @@ import {
   dismissHomeDailyNudge,
   dismissResultReengage,
   hasPlayedDailyToday,
+  isIosDevice,
   isStandalonePwa,
   markQuizPlayed,
   shouldShowHomeDailyNudge,
+  shouldShowIosInstallHint,
   shouldShowResultReengage,
 } from '../utils/reengage';
 import { getDailyQuizId } from '../utils/dailyChallenge';
@@ -37,7 +39,6 @@ describe('reengage', () => {
     expect(shouldShowResultReengage('composition')).toBe(false);
   });
 
-
   it('hides result reengage after dismiss for the day', () => {
     dismissResultReengage();
     expect(shouldShowResultReengage('composition')).toBe(false);
@@ -57,5 +58,10 @@ describe('reengage', () => {
   it('detects daily not played by default', () => {
     expect(hasPlayedDailyToday()).toBe(false);
     expect(getDailyQuizId()).toMatch(/^daily-\d{4}-\d{2}-\d{2}$/);
+  });
+
+  it('treats desktop test env as non-iOS', () => {
+    expect(isIosDevice()).toBe(false);
+    expect(shouldShowIosInstallHint()).toBe(false);
   });
 });

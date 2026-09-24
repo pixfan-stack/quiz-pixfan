@@ -65,6 +65,16 @@ export function ResultShareSection({
               </span>
               {t('result.exportImage')}
             </button>
+            <button
+              type="button"
+              className="btn btn--ghost btn--block"
+              onClick={() => void onExportImage('story')}
+            >
+              <span className="btn__icon" aria-hidden="true">
+                ▢
+              </span>
+              {t('result.exportStory')}
+            </button>
             {quizzesLength > 0 && (
               <button
                 type="button"
@@ -163,19 +173,21 @@ export function ResultShareSection({
         <summary className="share-more__summary">
           {t('result.shareMore')}
         </summary>
-        <div className="export-section">
-          <p className="export-section__hint">{t('result.exportSquareHint')}</p>
-          <button
-            type="button"
-            className="btn btn--ghost btn--block"
-            onClick={() => void onExportImage('story')}
-          >
-            <span className="btn__icon" aria-hidden="true">
-              ▢
-            </span>
-            {t('result.exportStory')}
-          </button>
-        </div>
+        {!isDaily ? (
+          <div className="export-section">
+            <p className="export-section__hint">{t('result.exportSquareHint')}</p>
+            <button
+              type="button"
+              className="btn btn--ghost btn--block"
+              onClick={() => void onExportImage('story')}
+            >
+              <span className="btn__icon" aria-hidden="true">
+                ▢
+              </span>
+              {t('result.exportStory')}
+            </button>
+          </div>
+        ) : null}
         <p className="share-section__platforms-label">
           {t('result.shareAlso')}
         </p>
