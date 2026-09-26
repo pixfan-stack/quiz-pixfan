@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Quiz } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
@@ -59,20 +59,37 @@ export function Leaderboard({
     return map;
   }, [quizzes, lang]);
 
+  // Hard-reload spinner only when the board identity changes (quiz/period), not
+  // when refreshToken bumps after a score submit — that was flickering forever
+  // when submits looped.
+  const boardKey = `${quizId ?? ''}|${period}|${limit}`;
+  const prevBoardKeyRef = useRef<string | null>(null);
+
   useEffect(() => {
-    setLoading(true);
+    let cancelled = false;
+    const hardReload = prevBoardKeyRef.current !== boardKey;
+    prevBoardKeyRef.current = boardKey;
+    if (hardReload) setLoading(true);
+
     fetchLeaderboard({ quizId, limit, playerId: currentPlayerId, period })
       .then((res) => {
+        if (cancelled) return;
         setEntries(res.leaderboard);
         setViewer(res.viewer ?? null);
         if (res.seasonId) setSeasonId(res.seasonId);
       })
       .catch(() => {
+        if (cancelled) return;
         setEntries([]);
         setViewer(null);
       })
-      .finally(() => setLoading(false));
-  }, [quizId, limit, currentPlayerId, refreshToken, period]);
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [quizId, limit, currentPlayerId, refreshToken, period, boardKey]);
 
   const handleReport = async (entry: LeaderboardEntry) => {
     if (

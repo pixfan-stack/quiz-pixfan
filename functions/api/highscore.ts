@@ -33,6 +33,8 @@ interface HighScoreRecord {
 
 const MAX_DISPLAY_NAME = 24;
 const MAX_PLAYER_ID = 64;
+/** Per-player POST cooldown — Cache API (updated_at alone misses display-name-only writes). */
+const HIGHSCORE_COOLDOWN_MS = 3_000;
 
 function sanitizeDisplayName(raw: string): string {
   const trimmed = raw.trim().replace(/[\u0000-\u001F\u007F]/g, '');
@@ -45,6 +47,37 @@ function sanitizePlayerId(raw: string): string | null {
   if (!id || id.length > MAX_PLAYER_ID) return null;
   if (!/^[a-zA-Z0-9-]+$/.test(id)) return null;
   return id;
+}
+
+/**
+ * Cache-API cooldown keyed by playerId (no schema change).
+ * Fails open if cache is unavailable (e.g. some local runtimes).
+ */
+async function isPlayerRateLimited(playerId: string): Promise<boolean> {
+  const cacheKey = new Request(
+    `https://rate-limit.quiz-pixfan.internal/highscore/post/${encodeURIComponent(playerId)}`
+  );
+  try {
+    const cache = caches.default;
+    const hit = await cache.match(cacheKey);
+    if (hit) {
+      const last = Number(await hit.text());
+      if (!Number.isNaN(last) && Date.now() - last < HIGHSCORE_COOLDOWN_MS) {
+        return true;
+      }
+    }
+    await cache.put(
+      cacheKey,
+      new Response(String(Date.now()), {
+        headers: {
+          'Cache-Control': `max-age=${Math.ceil(HIGHSCORE_COOLDOWN_MS / 1000) + 1}`,
+        },
+      })
+    );
+    return false;
+  } catch {
+    return false;
+  }
 }
 
 export const onRequestOptions: PagesFunction = async () => {
@@ -131,24 +164,12 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   const updatedAt = new Date().toISOString();
 
+  if (await isPlayerRateLimited(playerId)) {
+    return json({ error: 'Rate limit: wait before submitting again' }, 429);
+  }
+
   try {
     if (context.env.DB) {
-      const rateRow = await context.env.DB.prepare(
-        `SELECT updated_at as updatedAt FROM player_highscores
-         WHERE player_id = ?
-         ORDER BY updated_at DESC
-         LIMIT 1`
-      )
-        .bind(playerId)
-        .first<{ updatedAt: string }>();
-
-      if (rateRow?.updatedAt) {
-        const lastMs = Date.parse(rateRow.updatedAt);
-        if (!Number.isNaN(lastMs) && Date.now() - lastMs < 3000) {
-          return json({ error: 'Rate limit: wait before submitting again' }, 429);
-        }
-      }
-
       const existing = await context.env.DB.prepare(
         `SELECT quiz_id as quizId, player_id as playerId, display_name as displayName,
                 percentage, correct_count as correctCount,

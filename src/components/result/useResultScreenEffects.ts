@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { QuizResult } from '../../types/quiz';
 import { useConfetti } from '../../hooks/useConfetti';
 import {
@@ -54,6 +54,13 @@ export function useResultScreenEffects({
     formatDailyCountdown(msUntilNextDaily(), langCode)
   );
 
+  // Keep latest callback without re-firing the sync effect on parent re-renders.
+  const onScoreSubmittedRef = useRef(onScoreSubmitted);
+  onScoreSubmittedRef.current = onScoreSubmitted;
+
+  // Parent often passes a fresh array each render — stabilize for effect deps.
+  const categoryQuizIdsKey = categoryQuizIds.join('\0');
+
   // Daily streak + mistake vault + achievements (local)
   useEffect(() => {
     markQuizPlayed();
@@ -69,13 +76,21 @@ export function useResultScreenEffects({
     const newly = unlockAchievements({
       quizId: result.quizId,
       percentage: result.percentage,
-      categoryQuizIds,
+      categoryQuizIds: categoryQuizIdsKey
+        ? categoryQuizIdsKey.split('\0')
+        : [],
       highscores: getAllHighScores(),
       streak: streakState,
       vaultClearedThisRun: cleared,
     });
     setNewAchievements(newly);
-  }, [result.quizId, result.percentage, result.mistakes, result.reviews, categoryQuizIds]);
+  }, [
+    result.quizId,
+    result.percentage,
+    result.mistakes,
+    result.reviews,
+    categoryQuizIdsKey,
+  ]);
 
   useEffect(() => {
     if (!isDaily) return;
@@ -86,8 +101,10 @@ export function useResultScreenEffects({
     return () => window.clearInterval(id);
   }, [isDaily, langCode]);
 
-  // Sync to Cloudflare D1 + analytics + season rank cosmetics
+  // Sync to Cloudflare D1 + analytics + season rank cosmetics — once per result.
   useEffect(() => {
+    let cancelled = false;
+
     void submitRemoteHighScore({
       quizId: result.quizId,
       playerId: getPlayerId(),
@@ -97,15 +114,16 @@ export function useResultScreenEffects({
       totalQuestions: result.totalQuestions,
     })
       .then(async (ok) => {
-        if (!ok) return;
+        if (!ok || cancelled) return;
         setLeaderboardRefresh((n) => n + 1);
-        onScoreSubmitted?.();
+        onScoreSubmittedRef.current?.();
         try {
           const board = await fetchLeaderboard({
             period: 'month',
             limit: 10,
             playerId: getPlayerId(),
           });
+          if (cancelled) return;
           unlockSeasonFromRank(board.viewer?.rank ?? null);
           // Re-push badges after rank enrichment
           void pushAccountProgress();
@@ -128,8 +146,18 @@ export function useResultScreenEffects({
       timeTakenSeconds: result.timeTakenSeconds,
     });
 
-    return () => window.clearTimeout(syncTimer);
-  }, [result, displayName, onScoreSubmitted]);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(syncTimer);
+    };
+  }, [
+    result.quizId,
+    result.percentage,
+    result.correctCount,
+    result.totalQuestions,
+    result.timeTakenSeconds,
+    displayName,
+  ]);
 
   // Confetti for perfect scores
   const { fire, isAnimating, canvasRef } = useConfetti();
