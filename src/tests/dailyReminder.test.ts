@@ -37,7 +37,8 @@ describe('dailyReminder', () => {
   });
 
   it('hides reminder prompt after dismiss for the day', () => {
-    dismissDailyReminderPrompt(new Date('2026-09-24T12:00:00Z'));
+    // Must dismiss for "today" (UTC) — hardcoded calendar dates go stale.
+    dismissDailyReminderPrompt(new Date());
     expect(shouldShowDailyReminderPrompt()).toBe(false);
   });
 });
