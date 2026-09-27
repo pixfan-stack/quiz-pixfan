@@ -65,6 +65,7 @@ const IMAGE_URLS = [
   '/images/packs/photo-1469474968028-56623f02e42e.avif',
   '/images/packs/photo-1470071459604-3b5ec3a7fe05.avif',
   '/images/packs/photo-1470252649378-9c29740c9fa8.avif',
+  '/images/packs/photo-1471341971476-ae15ff5dd4ea.avif',
   '/images/packs/photo-1472214103451-9374bd1c798e.avif',
   '/images/packs/photo-1486312338219-ce68d2c6f44d.avif',
   '/images/packs/photo-1487412720507-e7ab37603c6f.avif',
@@ -119,14 +120,13 @@ const IMAGE_URLS = [
   '/images/packs/photo-1561070791-2526d30994b5.avif',
   '/images/packs/photo-1564349683136-77e08dba1ef7.avif',
   '/images/packs/photo-1580910051074-3eb694886505.avif',
+  '/images/packs/photo-1581591524425-c7e0978865fc.avif',
   '/images/packs/photo-1598327105666-5b89351aff97.avif',
   '/images/packs/photo-1606983340126-99ab4feaa64a.avif',
   '/images/packs/photo-1611162616305-c69b3fa7fbe0.avif',
   '/images/packs/photo-1618005182384-a83a8bd57fbe.avif',
   '/images/packs/photo-1620712943543-bcc4688e7485.avif',
   '/images/packs/photo-1677442136019-21780ecad995.avif',
-  '/images/packs/photo-1471341971476-ae15ff5dd4ea.avif',
-  '/images/packs/photo-1581591524425-c7e0978865fc.avif',
 ];
 
 self.addEventListener('install', (event) => {
