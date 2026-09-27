@@ -8,6 +8,7 @@ import { getMonthPeriodId, getSeasonDaysRemaining } from './leaderboardPeriod';
 const LAST_SEEN_KEY = 'quiz-pixfan-last-season-seen';
 const ENDING_DISMISS_KEY = 'quiz-pixfan-season-ending-dismissed';
 const BADGES_KEY = 'quiz-pixfan-season-cosmetics';
+const WRAP_DISMISS_KEY = 'quiz-pixfan-season-wrap-dismissed';
 
 /** Show “ending soon” when this many UTC days (or fewer) remain. */
 export const SEASON_ENDING_SOON_DAYS = 3;
@@ -15,7 +16,7 @@ export const SEASON_ENDING_SOON_DAYS = 3;
 /** Daily streak required for the streak-season cosmetic. */
 export const SEASON_STREAK_THRESHOLD = 7;
 
-export type SeasonBannerKind = 'started' | 'ending';
+export type SeasonBannerKind = 'started' | 'ending' | 'wrap';
 
 export const SEASON_COSMETICS = [
   'participant',
@@ -204,12 +205,26 @@ export function seasonCosmeticIcon(cosmetic: SeasonCosmetic): string {
 
 /**
  * Which home/leaderboard season banner to show (if any).
- * “started” wins over “ending” when the player has not seen this season yet.
+ * Priority: wrap (previous season badges on first days of new month) >
+ * started (unseen season) > ending (last days).
  */
 export function getSeasonBannerKind(
   date = new Date()
 ): SeasonBannerKind | null {
   const seasonId = getMonthPeriodId(date);
+  const wrap = getSeasonWrapSummary(date);
+  if (wrap) {
+    let wrapDismissed: string | null = null;
+    try {
+      wrapDismissed = localStorage.getItem(WRAP_DISMISS_KEY);
+    } catch {
+      // Keep the default null value when localStorage is unavailable.
+    }
+    if (wrapDismissed !== seasonId) {
+      return 'wrap';
+    }
+  }
+
   let lastSeen: string | null = null;
   try {
     lastSeen = localStorage.getItem(LAST_SEEN_KEY);
@@ -234,12 +249,42 @@ export function getSeasonBannerKind(
   return 'ending';
 }
 
+/** Previous calendar-month season id (UTC), e.g. 2026-09 → 2026-08. */
+export function getPreviousSeasonId(date = new Date()): string {
+  const d = new Date(
+    Date.UTC(date.getUTCFullYear(), date.getUTCMonth() - 1, 1)
+  );
+  return getMonthPeriodId(d);
+}
+
+/**
+ * Local wrap summary for season rollover: previous month’s badge if any.
+ * Shown early in the new month (first 3 UTC days) when a badge was earned.
+ */
+export function getSeasonWrapSummary(
+  date = new Date()
+): { seasonId: string; cosmetic: SeasonCosmetic } | null {
+  if (date.getUTCDate() > SEASON_ENDING_SOON_DAYS) return null;
+  const prevId = getPreviousSeasonId(date);
+  const cosmetic = getSeasonBadges()[prevId];
+  if (!cosmetic) return null;
+  return { seasonId: prevId, cosmetic };
+}
+
 export function dismissSeasonBanner(
   kind: SeasonBannerKind,
   date = new Date()
 ): void {
   const seasonId = getMonthPeriodId(date);
   try {
+    if (kind === 'wrap') {
+      localStorage.setItem(WRAP_DISMISS_KEY, seasonId);
+      // Mark current season seen so wrap doesn’t fight “started” forever.
+      if (localStorage.getItem(LAST_SEEN_KEY) !== seasonId) {
+        localStorage.setItem(LAST_SEEN_KEY, seasonId);
+      }
+      return;
+    }
     if (kind === 'started') {
       localStorage.setItem(LAST_SEEN_KEY, seasonId);
       return;

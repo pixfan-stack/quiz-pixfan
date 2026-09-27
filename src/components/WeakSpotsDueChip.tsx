@@ -24,6 +24,7 @@ export function WeakSpotsDueChip({ onReview }: WeakSpotsDueChipProps) {
       className="weak-spots-due-chip"
       role="region"
       aria-label={t('home.weakSpotsDueChip', { count: dueCount })}
+      data-testid="weak-spots-due-chip"
     >
       <div className="weak-spots-due-chip__body">
         <p className="weak-spots-due-chip__title">

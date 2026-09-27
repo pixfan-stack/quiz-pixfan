@@ -14,6 +14,9 @@ export const HABIT_EVENTS = [
   'account_create',
   'account_redeem',
   'weak_spots_cta',
+  'share_image_square',
+  'share_image_story',
+  'share_native',
 ] as const;
 
 export type HabitEventName = (typeof HABIT_EVENTS)[number];
