@@ -2,15 +2,15 @@
 
 Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-**Version courante : v1.17.0**
+**Version courante : v1.17.4**
 
 ## Contenu actuel
 
 - **13 quiz** · **341 questions** · **223 illustrées**
-- Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes
+- Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes, **histoire des marques**
 - Galerie domaine public, genres, smartphone, droits & éthique, retouche, workflow Lightroom, **portrait & lumière**
 - Modes générés : défi du jour, photo-reading, duel, mix difficulté, points faibles, aléatoire
-- Guides locaux : exposition, composition, lumière, retouche, smartphone, **genres** (BreadcrumbList JSON-LD)
+- Guides locaux : exposition, composition, lumière, retouche, smartphone, genres, **matériel**, **droits & éthique**, **histoire** (BreadcrumbList JSON-LD)
 
 Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/`).
 

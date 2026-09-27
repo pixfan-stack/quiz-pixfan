@@ -1,2 +1,7 @@
+# SEO assets — explicit 200 so a missing file races to a rewrite target,
+# not the SPA catch-all (which would return index.html as application/xml false-positive).
+/sitemap.xml    /sitemap.xml    200
+/robots.txt     /robots.txt     200
+
 # Cloudflare Pages SPA fallback (safe even without client-side routes)
 /*    /index.html   200
