@@ -3397,3 +3397,18 @@ button.app-footer__sync {
   font-weight: 600;
   color: var(--color-danger, #b91c1c);
 }
+
+/* ---------- prefers-reduced-motion (SPA) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .question-card,
+  .feedback,
+  .highscore-banner,
+  .quiz-settings-panel,
+  .player-modal {
+    animation: none !important;
+  }
+
+  .progress-track__fill {
+    transition: none !important;
+  }
+}

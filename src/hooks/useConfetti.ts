@@ -27,6 +27,14 @@ const CONFETTI_COLORS = [
   '#f59e0b', '#10b981', '#ef4444', '#8b5cf6',
 ];
 
+/** True when the OS/user asks to minimize non-essential motion. */
+export function prefersReducedMotion(): boolean {
+  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+    return false;
+  }
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 function createParticles(count: number): Particle[] {
   const particles: Particle[] = [];
   const centerX = window.innerWidth / 2;
@@ -101,6 +109,8 @@ export function useConfetti() {
   }, []);
 
   const fire = useCallback((count: number = 80) => {
+    // Respect prefers-reduced-motion: skip canvas bursts entirely.
+    if (prefersReducedMotion()) return;
     particlesRef.current = createParticles(count);
     setIsAnimating(true);
     animate();

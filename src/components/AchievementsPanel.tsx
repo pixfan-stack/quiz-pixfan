@@ -41,7 +41,8 @@ export function AchievementsPanel({
   return (
     <section
       className={`achievements${compact ? ' achievements--compact' : ''}`}
-      aria-labelledby="achievements-title"
+      aria-labelledby={compact ? undefined : 'achievements-title'}
+      aria-label={compact ? t('achievements.title') : undefined}
     >
       {!compact && (
         <>
