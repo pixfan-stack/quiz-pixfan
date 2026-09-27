@@ -9,9 +9,10 @@
  * and returned as a target × topic breakdown (P3 funnel).
  *
  * Habit events use quiz_id `evt:{name}` (reminder / ics / pwa / account).
- * Attempts are also ventilated by mode (photo-reading / daily / duel / weak-spots / packs).
+ * Attempts are also ventilated by mode (photo-reading / daily / duel / weak-spots / mix / random / packs).
  */
 
+import { buildModeCounts, type AttemptMode } from '../../lib/attemptModes';
 import { json } from '../utils';
 import { authorizeAdmin, type AdminPinEnv } from './auth';
 
@@ -42,13 +43,6 @@ export interface CtaAnalyticsBreakdown {
   rows: CtaClickRow[];
 }
 
-type AttemptMode =
-  | 'photo-reading'
-  | 'daily'
-  | 'duel'
-  | 'weak-spots'
-  | 'packs';
-
 type HabitEventName =
   | 'reminder_on'
   | 'reminder_off'
@@ -57,14 +51,6 @@ type HabitEventName =
   | 'account_create'
   | 'account_redeem'
   | 'weak_spots_cta';
-
-const ATTEMPT_MODES: AttemptMode[] = [
-  'photo-reading',
-  'daily',
-  'duel',
-  'weak-spots',
-  'packs',
-];
 
 const HABIT_EVENTS = new Set<HabitEventName>([
   'reminder_on',
@@ -150,30 +136,6 @@ function buildCtaBreakdown(
     .sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
 
   return { byTarget, byTopic, rows };
-}
-
-function classifyAttemptMode(quizId: string): AttemptMode {
-  if (quizId === 'photo-reading') return 'photo-reading';
-  if (quizId === 'weak-spots') return 'weak-spots';
-  if (quizId.startsWith('daily-')) return 'daily';
-  if (quizId.startsWith('duel-')) return 'duel';
-  return 'packs';
-}
-
-function buildModeCounts(
-  rawRows: Array<{ quizId: string; attempts: number }>
-): Array<{ mode: AttemptMode; attempts: number }> {
-  const map = new Map<AttemptMode, number>();
-  for (const raw of rawRows) {
-    const attempts = Number(raw.attempts) || 0;
-    if (attempts <= 0) continue;
-    const mode = classifyAttemptMode(raw.quizId);
-    map.set(mode, (map.get(mode) ?? 0) + attempts);
-  }
-  return ATTEMPT_MODES.filter((m) => (map.get(m) ?? 0) > 0).map((mode) => ({
-    mode,
-    attempts: map.get(mode) ?? 0,
-  }));
 }
 
 function parseHabitEvent(quizId: string): HabitEventName | null {
