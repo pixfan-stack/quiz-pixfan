@@ -234,6 +234,20 @@ describe('questions.json', () => {
     }
   });
 
+  it('Vague 1.18 P3 under-illustrated packs reach ≥55% images', () => {
+    for (const id of [
+      'exposure-basics',
+      'genres',
+      'light-color',
+      'gear-lenses',
+    ] as const) {
+      const quiz = data.quizzes.find((q) => q.id === id);
+      expect(quiz).toBeDefined();
+      const ill = quiz!.questions.filter((q) => q.imageUrl).length;
+      expect(ill / quiz!.questions.length).toBeGreaterThanOrEqual(0.55);
+    }
+  });
+
   it('P4.B short Pixfan packs are lengthened toward ~25–28', () => {
     for (const id of ['lightroom-workflow', 'portrait-light'] as const) {
       const quiz = data.quizzes.find((q) => q.id === id);
