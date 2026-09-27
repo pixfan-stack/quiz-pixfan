@@ -13,6 +13,10 @@
  */
 
 import { buildModeCounts, type AttemptMode } from '../../lib/attemptModes';
+import {
+  buildDailyThemeDayCounts,
+  type DailyThemeDayCount,
+} from '../../lib/dailyThemes';
 import { json } from '../utils';
 import { authorizeAdmin, type AdminPinEnv } from './auth';
 
@@ -50,7 +54,10 @@ type HabitEventName =
   | 'pwa_install'
   | 'account_create'
   | 'account_redeem'
-  | 'weak_spots_cta';
+  | 'weak_spots_cta'
+  | 'share_image_square'
+  | 'share_image_story'
+  | 'share_native';
 
 const HABIT_EVENTS = new Set<HabitEventName>([
   'reminder_on',
@@ -60,6 +67,9 @@ const HABIT_EVENTS = new Set<HabitEventName>([
   'account_create',
   'account_redeem',
   'weak_spots_cta',
+  'share_image_square',
+  'share_image_story',
+  'share_native',
 ]);
 
 /** Exclude CTA + habit markers from real quiz attempt aggregates. */
@@ -83,6 +93,8 @@ export interface AnalyticsDashboard {
   events: Array<{ event: HabitEventName; count: number }>;
   quizzes: QuizAttemptStats[];
   recentDays: Array<{ day: string; attempts: number }>;
+  /** Daily-challenge attempts × editorial theme (last 14 UTC days). */
+  dailyThemes: DailyThemeDayCount[];
 }
 
 const CTA_TARGETS = new Set<CtaTarget>(['guide', 'newsletter', 'pixfan']);
@@ -163,6 +175,9 @@ function buildHabitEvents(
     'account_create',
     'account_redeem',
     'weak_spots_cta',
+    'share_image_square',
+    'share_image_story',
+    'share_native',
   ];
   return order
     .filter((e) => (map.get(e) ?? 0) > 0)
@@ -197,6 +212,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     events: [],
     quizzes: [],
     recentDays: [],
+    dailyThemes: [],
   };
 
   if (!context.env.DB) {
@@ -291,6 +307,16 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       )
       .all<{ day: string; attempts: number }>();
 
+    const dailyThemeRows = await db
+      .prepare(
+        `SELECT quiz_id as quizId, COUNT(*) as attempts
+         FROM quiz_attempts
+         WHERE quiz_id LIKE 'daily-%'
+           AND created_at >= strftime('%Y-%m-%dT%H:%M:%SZ', 'now', '-14 days')
+         GROUP BY quiz_id`
+      )
+      .all<{ quizId: string; attempts: number }>();
+
     const cta = buildCtaBreakdown(
       (ctaGroupRows.results ?? []).map((row) => ({
         quizId: row.quizId,
@@ -333,6 +359,12 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
         day: row.day,
         attempts: Number(row.attempts) || 0,
       })),
+      dailyThemes: buildDailyThemeDayCounts(
+        (dailyThemeRows.results ?? []).map((row) => ({
+          quizId: row.quizId,
+          attempts: Number(row.attempts) || 0,
+        }))
+      ),
     };
 
     return json(dashboard);

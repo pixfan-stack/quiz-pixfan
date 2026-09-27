@@ -307,6 +307,43 @@ export function AdminAnalyticsPanel({
               </ul>
             </div>
           )}
+
+          {analytics.dailyThemes.length > 0 && (
+            <div
+              className="admin__analytics-daily-themes"
+              data-testid="admin-analytics-daily-themes"
+            >
+              <p className="admin__section-title">
+                {t('admin.analyticsDailyThemes')}
+              </p>
+              <p className="admin__hint">{t('admin.analyticsDailyThemesHint')}</p>
+              <div className="admin__analytics-table-wrap">
+                <table className="admin__analytics-table">
+                  <thead>
+                    <tr>
+                      <th>{t('admin.analyticsColDay')}</th>
+                      <th>{t('admin.analyticsColTheme')}</th>
+                      <th>{t('admin.analyticsColAttempts')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {analytics.dailyThemes.map((row) => (
+                      <tr key={row.day}>
+                        <td>{row.day}</td>
+                        <td>
+                          <strong>
+                            {t(`admin.analyticsDailyTheme_${row.theme}`)}
+                          </strong>
+                          <div className="admin__report-id">{row.theme}</div>
+                        </td>
+                        <td>{row.attempts}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
         </>
       )}
     </div>

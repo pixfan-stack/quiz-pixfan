@@ -21,6 +21,7 @@ import {
   shareResultImage,
   type ExportImageFormat,
 } from '../../utils/exportResult';
+import { trackHabitEvent } from '../../utils/analyticsApi';
 import {
   buildDuelQuiz,
   createDuelSeed,
@@ -103,9 +104,14 @@ export function useResultShareActions({
   const handleNativeShare = useCallback(async () => {
     const payload = buildScorePayload();
     const outcome = await nativeShareScore(payload, t('app.title'));
-    if (outcome === 'shared' || outcome === 'aborted') return;
+    if (outcome === 'shared') {
+      void trackHabitEvent('share_native');
+      return;
+    }
+    if (outcome === 'aborted') return;
     const ok = await copySharePayload(payload);
     if (ok) {
+      void trackHabitEvent('share_native');
       setShareFallbackCopied(true);
       window.setTimeout(() => setShareFallbackCopied(false), 2000);
     }
@@ -184,6 +190,9 @@ export function useResultShareActions({
         if (!shared) {
           downloadResultImage(blob, quiz.id, format);
         }
+        void trackHabitEvent(
+          format === 'story' ? 'share_image_story' : 'share_image_square'
+        );
       } catch {
         // Silently fail — not critical
       }

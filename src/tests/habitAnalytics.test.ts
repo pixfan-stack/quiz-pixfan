@@ -64,6 +64,9 @@ describe('habitAnalytics', () => {
       { quizId: 'evt:account_create', count: 4 },
       { quizId: 'evt:account_redeem', count: 1 },
       { quizId: 'evt:weak_spots_cta', count: 6 },
+      { quizId: 'evt:share_image_square', count: 8 },
+      { quizId: 'evt:share_image_story', count: 11 },
+      { quizId: 'evt:share_native', count: 7 },
       { quizId: 'evt:bogus', count: 9 },
     ]);
     expect(events).toEqual([
@@ -74,6 +77,9 @@ describe('habitAnalytics', () => {
       { event: 'account_create', count: 4 },
       { event: 'account_redeem', count: 1 },
       { event: 'weak_spots_cta', count: 6 },
+      { event: 'share_image_square', count: 8 },
+      { event: 'share_image_story', count: 11 },
+      { event: 'share_native', count: 7 },
     ]);
   });
 

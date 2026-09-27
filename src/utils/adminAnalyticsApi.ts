@@ -8,6 +8,7 @@ import type {
   AttemptModeCount,
   HabitEventCount,
 } from './habitAnalytics';
+import type { DailyThemeDayCount } from './dailyThemeAnalytics';
 
 export interface AdminQuizAttemptStats {
   quizId: string;
@@ -34,6 +35,8 @@ export interface AdminAnalyticsDashboard {
   events: HabitEventCount[];
   quizzes: AdminQuizAttemptStats[];
   recentDays: Array<{ day: string; attempts: number }>;
+  /** Daily-challenge attempts × editorial theme (last 14 UTC days). */
+  dailyThemes: DailyThemeDayCount[];
 }
 
 function emptyCta(): CtaAnalyticsBreakdown {
@@ -89,6 +92,9 @@ export async function fetchAdminAnalytics(): Promise<{
     }
     if (!Array.isArray(data.events)) {
       data.events = [];
+    }
+    if (!Array.isArray(data.dailyThemes)) {
+      data.dailyThemes = [];
     }
     return { ok: true, data };
   } catch {

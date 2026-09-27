@@ -62,6 +62,20 @@ describe('seasonEngagement', () => {
     expect(getSeasonBannerKind(late)).toBeNull();
   });
 
+  it('shows wrap banner early in a new month when previous season had a badge', () => {
+    unlockSeasonParticipant('2026-09');
+    const oct1 = new Date(Date.UTC(2026, 9, 1));
+    expect(getSeasonBannerKind(oct1)).toBe('wrap');
+    dismissSeasonBanner('wrap', oct1);
+    expect(getSeasonBannerKind(oct1)).toBeNull();
+  });
+
+  it('does not wrap mid-month even with a previous badge', () => {
+    unlockSeasonParticipant('2026-08');
+    const mid = new Date(Date.UTC(2026, 8, 10));
+    expect(getSeasonBannerKind(mid)).toBe('started');
+  });
+
   it('unlocks participant cosmetic badges per season', () => {
     expect(unlockSeasonParticipant('2026-09')).toBe(true);
     expect(unlockSeasonParticipant('2026-09')).toBe(false);

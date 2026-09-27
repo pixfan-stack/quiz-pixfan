@@ -4,16 +4,20 @@ import { getMonthPeriodId, getSeasonDaysRemaining } from '../utils/leaderboardPe
 import {
   dismissSeasonBanner,
   getSeasonBannerKind,
+  getSeasonWrapSummary,
+  seasonCosmeticIcon,
+  seasonCosmeticLabelKey,
   type SeasonBannerKind,
 } from '../utils/seasonEngagement';
 
 /**
- * Soft home banner for season start / season ending soon.
+ * Soft home banner for season start / ending soon / previous-season wrap.
  */
 export function SeasonBanner() {
   const { t } = useTranslation();
   const seasonId = useMemo(() => getMonthPeriodId(), []);
   const daysLeft = useMemo(() => getSeasonDaysRemaining(), []);
+  const wrap = useMemo(() => getSeasonWrapSummary(), []);
   const [kind, setKind] = useState<SeasonBannerKind | null>(() =>
     getSeasonBannerKind()
   );
@@ -26,14 +30,23 @@ export function SeasonBanner() {
   };
 
   const daysForCopy = daysLeft <= 0 ? 1 : daysLeft;
-  const title =
-    kind === 'started'
-      ? t('season.startedTitle', { season: seasonId })
-      : t('season.endingTitle', { season: seasonId });
-  const desc =
-    kind === 'started'
-      ? t('season.startedDesc')
-      : t('season.endingDesc', { days: daysLeft, count: daysForCopy });
+  let title: string;
+  let desc: string;
+  if (kind === 'wrap' && wrap) {
+    title = t('season.wrapTitle', { season: wrap.seasonId });
+    desc = t('season.wrapDesc', {
+      badge: t(seasonCosmeticLabelKey(wrap.cosmetic), {
+        season: wrap.seasonId,
+      }),
+      icon: seasonCosmeticIcon(wrap.cosmetic),
+    });
+  } else if (kind === 'started') {
+    title = t('season.startedTitle', { season: seasonId });
+    desc = t('season.startedDesc');
+  } else {
+    title = t('season.endingTitle', { season: seasonId });
+    desc = t('season.endingDesc', { days: daysLeft, count: daysForCopy });
+  }
 
   return (
     <div
