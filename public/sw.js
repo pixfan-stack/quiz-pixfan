@@ -2,12 +2,13 @@
  * Service Worker for Quiz PixFan — offline-friendly caching.
  *
  * - Navigations: network-first, offline shell fallback
+ * - Guides (/guides/*): network-first, cache last-opened + shell (not SPA index)
  * - Static assets: stale-while-revalidate
  * - Same-origin /images/: cache-first (photo-reading / public-domain offline)
  * - API: network only (no stale leaderboard cache)
  */
 
-const CACHE_NAME = 'quiz-pixfan-v12';
+const CACHE_NAME = 'quiz-pixfan-v13';
 const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v6';
 
 const OFFLINE_URLS = [
@@ -20,6 +21,11 @@ const OFFLINE_URLS = [
   '/favicon.png',
   '/icon-192.png',
   '/icon-512.png',
+  // Guides shell — offline CTA must not fall back to SPA home
+  '/guides/',
+  '/guides/index.html',
+  '/guides/guides.css',
+  '/guides/theme.js',
 ];
 
 /** Local illustrated assets used by public-domain / packs / photo-reading offline. */
@@ -127,7 +133,13 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     (async () => {
       const shell = await caches.open(CACHE_NAME);
-      await shell.addAll(OFFLINE_URLS);
+      await Promise.all(
+        OFFLINE_URLS.map((url) =>
+          shell.add(url).catch(() => {
+            /* best-effort — missing asset must not fail install */
+          })
+        )
+      );
       const images = await caches.open(IMAGE_CACHE_NAME);
       await Promise.all(
         IMAGE_URLS.map((url) =>
@@ -154,6 +166,35 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
+/** True for local guide HTML navigations (pretty URL or .html). */
+function isGuidePath(pathname) {
+  return pathname === '/guides' || pathname.startsWith('/guides/');
+}
+
+/**
+ * Offline fallback for a guide navigation: last-opened URL, .html twin,
+ * then guides index shell — never the SPA home (which breaks CTAs).
+ */
+async function matchGuideOffline(request, url) {
+  const cache = await caches.open(CACHE_NAME);
+  const candidates = [
+    request,
+    url.pathname,
+    url.pathname.endsWith('/') ? url.pathname + 'index.html' : null,
+    url.pathname.endsWith('.html')
+      ? url.pathname.replace(/\.html$/, '')
+      : url.pathname + '.html',
+    '/guides/',
+    '/guides/index.html',
+  ].filter(Boolean);
+
+  for (const key of candidates) {
+    const hit = await cache.match(key);
+    if (hit) return hit;
+  }
+  return cache.match('/index.html');
+}
+
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
@@ -176,14 +217,33 @@ self.addEventListener('fetch', (event) => {
 
   // App shell / navigations: network-first
   if (event.request.mode === 'navigate') {
+    const guideNav = isGuidePath(url.pathname);
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put('/index.html', clone));
+          if (response.ok) {
+            const forCache = response.clone();
+            caches.open(CACHE_NAME).then(async (cache) => {
+              if (guideNav) {
+                // Last-opened guide SWR — store under request URL, not SPA index
+                await cache.put(event.request, forCache.clone());
+                try {
+                  await cache.put(url.pathname, forCache);
+                } catch {
+                  /* ignore duplicate-key / opaque edge cases */
+                }
+              } else {
+                await cache.put('/index.html', forCache);
+              }
+            });
+          }
           return response;
         })
-        .catch(() => caches.match('/index.html'))
+        .catch(() =>
+          guideNav
+            ? matchGuideOffline(event.request, url)
+            : caches.match('/index.html')
+        )
     );
     return;
   }
@@ -211,7 +271,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Static: stale-while-revalidate
+  // Static (incl. /guides/*.css|js): stale-while-revalidate
   event.respondWith(
     caches.open(CACHE_NAME).then(async (cache) => {
       const cached = await cache.match(event.request);
