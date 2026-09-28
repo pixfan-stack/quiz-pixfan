@@ -36,6 +36,8 @@ interface QuizScreenProps {
   quizzes?: Quiz[];
   /** Challenger score to beat (from shared duel / score link). */
   targetScore?: number | null;
+  /** School session — no public leaderboard. */
+  classeMode?: boolean;
 }
 
 /**
@@ -53,6 +55,7 @@ export default function QuizScreen({
   categoryQuizIds = [],
   quizzes = [],
   targetScore = null,
+  classeMode = false,
 }: QuizScreenProps) {
   const { t } = useTranslation();
   const engine = useQuizEngine(quiz, { timePerQuestion, antiCheat });
@@ -74,6 +77,7 @@ export default function QuizScreen({
         categoryQuizIds={categoryQuizIds}
         quizzes={quizzes}
         targetScore={targetScore}
+        classeMode={classeMode}
       />
     );
   }
@@ -84,6 +88,11 @@ export default function QuizScreen({
 
   return (
     <>
+      {classeMode && (
+        <p className="classe-mode-banner" role="status">
+          {t('classe.banner')}
+        </p>
+      )}
       {targetScore != null && (
         <p className="duel-target-banner" role="status">
           {t('quiz.beatTarget', { percent: targetScore })}

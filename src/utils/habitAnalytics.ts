@@ -17,6 +17,10 @@ export const HABIT_EVENTS = [
   'share_image_square',
   'share_image_story',
   'share_native',
+  'scolaires_hub',
+  'scolaires_parcours_c4_regard',
+  'scolaires_parcours_c4_lumiere',
+  'scolaires_parcours_c4_emi_droits',
 ] as const;
 
 export type HabitEventName = (typeof HABIT_EVENTS)[number];

@@ -159,4 +159,23 @@ describe('useResultScreenEffects', () => {
 
     expect(submitRemoteHighScore).toHaveBeenCalledTimes(postsAfterMount);
   });
+
+  it('skips remote highscore submit in classe mode', async () => {
+    renderHook(() =>
+      useResultScreenEffects({
+        result,
+        categoryQuizIds: ['a'],
+        displayName: 'Élève-test',
+        isDaily: false,
+        langCode: 'fr',
+        classeMode: true,
+      })
+    );
+
+    await waitFor(() => {
+      expect(trackQuizAttempt).toHaveBeenCalled();
+    });
+    await new Promise((r) => setTimeout(r, 30));
+    expect(submitRemoteHighScore).not.toHaveBeenCalled();
+  });
 });

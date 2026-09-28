@@ -9,6 +9,7 @@ describe('sitemap / SEO hygiene', () => {
     expect(sitemap).toContain('<urlset');
     expect(sitemap).toContain('https://quiz.pixfan.fr/s/marques-photo');
     expect(sitemap).toContain('https://quiz.pixfan.fr/s/flash-studio');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/');
     expect(sitemap).toContain('<lastmod>2026-09-28</lastmod>');
     expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
   });

@@ -7,6 +7,9 @@
     "home": "Home",
     "language": "Language"
   },
+  "classe": {
+    "banner": "Class mode — no public leaderboard"
+  },
   "home": {
     "welcome": "Choose a quiz to get started",
     "selectQuiz": "Photos to analyze, daily challenge, or a duel",

@@ -18,4 +18,6 @@ export interface ResultScreenProps {
   quizzes?: Quiz[];
   /** Challenger score to beat (shared duel). */
   targetScore?: number | null;
+  /** School session — skip public leaderboard submit / UI. */
+  classeMode?: boolean;
 }

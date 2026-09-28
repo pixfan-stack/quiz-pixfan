@@ -21,7 +21,9 @@ import {
 import { isAdminEnabled, isAdminHash } from './utils/adminAuth';
 import {
   clearQuizHash,
+  ensureClasseSearchParam,
   isDailyShortcutHash,
+  parseClasseModeFromLocation,
   parseQuizIdFromHash,
   parseScoreFromLocation,
   quizHashPath,
@@ -73,6 +75,10 @@ export default function App() {
   });
   const [leaderboardRefreshToken, setLeaderboardRefreshToken] = useState(0);
   const [targetScore, setTargetScore] = useState<number | null>(null);
+  /** School session — no public leaderboard / duel / season chrome. */
+  const [classeMode, setClasseMode] = useState(() =>
+    parseClasseModeFromLocation()
+  );
   /** Bumped on hash deep-links so duel/share routes open even if already on home. */
   const [routeEpoch, setRouteEpoch] = useState(0);
   const [recoveryCode, setRecoveryCode] = useState<string | null>(() =>
@@ -83,6 +89,12 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = (i18n.resolvedLanguage ?? i18n.language).slice(0, 2);
   }, [i18n.language, i18n.resolvedLanguage]);
+
+  useEffect(() => {
+    if (!parseClasseModeFromLocation()) return;
+    setClasseMode(true);
+    ensureClasseSearchParam();
+  }, [routeEpoch]);
 
   // Soft pull of remote streak/achievements once per session (merge-safe)
   useEffect(() => {
@@ -113,12 +125,20 @@ export default function App() {
   const startQuiz = useCallback(
     (quiz: Quiz, opts?: { targetScore?: number | null }) => {
       const score = opts?.targetScore ?? null;
+      const classe = classeMode || parseClasseModeFromLocation();
+      if (classe) {
+        setClasseMode(true);
+        ensureClasseSearchParam();
+      }
       setActiveQuiz(quiz);
       setTargetScore(score);
       setView('quiz');
-      setQuizHash(quiz.id, score != null ? { score } : undefined);
+      setQuizHash(quiz.id, {
+        ...(score != null ? { score } : {}),
+        ...(classe ? { classe: true } : {}),
+      });
     },
-    []
+    [classeMode]
   );
 
   const openAdmin = useCallback(() => {
@@ -149,10 +169,13 @@ export default function App() {
     if (isDailyShortcutHash(window.location.hash)) {
       const dailyId = getDailyQuizId();
       const url = new URL(window.location.href);
+      const classe = classeMode || parseClasseModeFromLocation();
       window.history.replaceState(
         null,
         '',
-        url.pathname + url.search + quizHashPath(dailyId)
+        url.pathname +
+          url.search +
+          quizHashPath(dailyId, classe ? { classe: true } : undefined)
       );
       startQuiz(buildDailyQuiz(quizzes));
       return;
@@ -206,7 +229,7 @@ export default function App() {
     if (found) {
       startQuiz(found, { targetScore: scoreFromLink });
     }
-  }, [quizzes, startQuiz, view, routeEpoch]);
+  }, [quizzes, startQuiz, view, routeEpoch, classeMode]);
 
   useEffect(() => {
     const onHashChange = () => {
@@ -319,7 +342,12 @@ export default function App() {
         <ErrorBoundary>
           {view === 'home' && (
             <>
-              <InstallPrompt />
+              {!classeMode && <InstallPrompt />}
+              {classeMode && (
+                <p className="classe-mode-banner" role="status">
+                  {t('classe.banner')}
+                </p>
+              )}
               <QuizSelector
                 quizzes={quizzes}
                 onSelect={handleSelectQuiz}
@@ -328,6 +356,7 @@ export default function App() {
                 leaderboardRefreshToken={leaderboardRefreshToken}
                 recoveryCode={recoveryCode}
                 onRecovered={handleRecovered}
+                classeMode={classeMode}
               />
             </>
           )}
@@ -345,6 +374,7 @@ export default function App() {
                 categoryQuizIds={quizzes.map((q) => q.id)}
                 quizzes={quizzes}
                 targetScore={targetScore}
+                classeMode={classeMode}
               />
             </Suspense>
           )}

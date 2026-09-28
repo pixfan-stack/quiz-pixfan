@@ -44,6 +44,8 @@ interface FeaturedQuizCardsProps {
   onStartDaily: () => void;
   onStartDuel: () => void;
   onCopyDailyLink: (event: MouseEvent) => void;
+  /** Hide daily + duel cards (school mode). */
+  showCompetitive?: boolean;
 }
 
 export function FeaturedQuizCards({
@@ -67,6 +69,7 @@ export function FeaturedQuizCards({
   onStartDaily,
   onStartDuel,
   onCopyDailyLink,
+  showCompetitive = true,
 }: FeaturedQuizCardsProps) {
   const { t } = useTranslation();
 
@@ -130,6 +133,7 @@ export function FeaturedQuizCards({
         </li>
       )}
 
+      {showCompetitive && (
       <li className="quiz-card-with-copy">
         <button
           type="button"
@@ -217,7 +221,9 @@ export function FeaturedQuizCards({
           </a>
         ) : null}
       </li>
+      )}
 
+      {showCompetitive && (
       <li>
         <button
           type="button"
@@ -261,6 +267,7 @@ export function FeaturedQuizCards({
           </div>
         </button>
       </li>
+      )}
     </ul>
   );
 }

@@ -247,6 +247,14 @@ export function buildOgSvg(opts: {
 </svg>`;
 }
 
+function deepLinkQuery(score: number | null, classe?: boolean): string {
+  const params = new URLSearchParams();
+  if (score != null) params.set('score', String(score));
+  if (classe) params.set('classe', '1');
+  const q = params.toString();
+  return q ? `?${q}` : '';
+}
+
 export function buildShareHtml(opts: {
   quizId: string;
   score: number | null;
@@ -254,6 +262,8 @@ export function buildShareHtml(opts: {
   pageUrl: string;
   ogImageUrl: string;
   appOrigin: string;
+  /** School session — forwarded into the hash deep link. */
+  classe?: boolean;
 }): string {
   const label = quizLabel(opts.quizId, opts.lang);
   const title =
@@ -273,9 +283,7 @@ export function buildShareHtml(opts: {
         ? `Rejoins le quiz « ${label} » sur Quiz PixFan.`
         : `Join the “${label}” quiz on Quiz PixFan.`;
 
-  const scoreQuery =
-    opts.score != null ? `?score=${encodeURIComponent(String(opts.score))}` : '';
-  const deepLink = `${opts.appOrigin}/#/quiz/${encodeURIComponent(opts.quizId)}${scoreQuery}`;
+  const deepLink = `${opts.appOrigin}/#/quiz/${encodeURIComponent(opts.quizId)}${deepLinkQuery(opts.score, opts.classe)}`;
   const safeTitle = escapeXml(title);
   const safeDesc = escapeXml(description);
   const isDuel = opts.quizId.startsWith('duel-');

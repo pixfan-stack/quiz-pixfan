@@ -20,6 +20,9 @@ describe('share', () => {
   it('builds quiz deep links', () => {
     expect(quizShareUrl('composition')).toContain('#/quiz/composition');
     expect(quizShareUrl('duel-abcd2345')).toContain('duel-abcd2345');
+    expect(quizShareUrl('composition', { classe: true })).toContain(
+      'classe=1'
+    );
   });
 
   it('builds crawlable social share and OG URLs', () => {
@@ -27,6 +30,9 @@ describe('share', () => {
     expect(share).toContain('/s/composition');
     expect(share).toContain('score=80');
     expect(share).toContain('lang=fr');
+    expect(socialShareUrl('photo-rights', { classe: true })).toContain(
+      'classe=1'
+    );
     const og = ogImageUrl('duel-abcd2345', { score: 55, lang: 'en' });
     expect(og).toContain('/og/themes/duel-70.png');
     expect(og).not.toContain('/api/og');

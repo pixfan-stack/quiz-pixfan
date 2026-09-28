@@ -8,7 +8,7 @@ import {
 
 /**
  * Crawlable share landing page with dynamic OG tags.
- * GET /s/:id?score=80&lang=fr → redirects humans to /#/quiz/:id
+ * GET /s/:id?score=80&lang=fr&classe=1 → redirects humans to /#/quiz/:id?…
  */
 export const onRequestGet: PagesFunction<{ id: string }> = async (context) => {
   const rawId = context.params.id;
@@ -22,6 +22,8 @@ export const onRequestGet: PagesFunction<{ id: string }> = async (context) => {
   const url = new URL(context.request.url);
   const score = parseScore(url.searchParams.get('score'));
   const lang = parseLang(url.searchParams.get('lang'));
+  const classeRaw = url.searchParams.get('classe');
+  const classe = classeRaw === '1' || classeRaw === 'true';
   const origin = url.origin;
   // Theme PNG (+ score tier) — Facebook / LinkedIn / X / Slack reject SVG.
   const ogImageUrl = themeOgImageUrl(origin, quizId, score);
@@ -34,6 +36,7 @@ export const onRequestGet: PagesFunction<{ id: string }> = async (context) => {
     pageUrl,
     ogImageUrl,
     appOrigin: origin,
+    classe,
   });
 
   return new Response(html, {

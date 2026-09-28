@@ -52,6 +52,7 @@ export function ResultScreen({
   categoryQuizIds = [],
   quizzes = [],
   targetScore = null,
+  classeMode = false,
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
@@ -126,6 +127,7 @@ export function ResultScreen({
     onScoreSubmitted,
     isDaily,
     langCode,
+    classeMode,
   });
 
   const showWeakSpotsCta =
@@ -151,6 +153,11 @@ export function ResultScreen({
 
       <section className="result-section">
         <div className="card result-card">
+          {classeMode && (
+            <p className="classe-mode-banner" role="status">
+              {t('classe.banner')}
+            </p>
+          )}
           <ResultHero
             result={result}
             messageKey={messageKey}
@@ -159,10 +166,11 @@ export function ResultScreen({
             masteryNext={masteryNext}
             parcoursMastery={parcoursMastery}
             displayName={displayName}
+            showLeaderboardName={!classeMode}
             t={t}
           />
 
-          {result.isNewHighScore && (
+          {result.isNewHighScore && !classeMode && (
             <div className="highscore-banner" role="status">
               ★ {t('result.newHighScore')}
               {result.previousBest !== null && (
@@ -190,7 +198,7 @@ export function ResultScreen({
             </div>
           )}
 
-          {isDaily && (
+          {isDaily && !classeMode && (
             <div className="daily-ceremony" role="status">
               <p className="daily-ceremony__title">
                 {t('result.dailyCeremonyTitle')}
@@ -230,7 +238,7 @@ export function ResultScreen({
             </p>
           )}
 
-          {newAchievements.length > 0 && (
+          {newAchievements.length > 0 && !classeMode && (
             <div className="result-achievements-unlock" role="status">
               <p className="result-achievements-unlock__title">
                 {t('result.newAchievements')}
@@ -239,7 +247,7 @@ export function ResultScreen({
             </div>
           )}
 
-          {showReengage && (
+          {showReengage && !classeMode && (
             <div className="reengage-banner" role="status">
               <div className="reengage-banner__body">
                 <p className="reengage-banner__title">
@@ -284,7 +292,8 @@ export function ResultScreen({
           <ResultShareSection
             isDaily={isDaily}
             isDuel={isDuel}
-            quizzesLength={quizzes.length}
+            quizzesLength={classeMode ? 0 : quizzes.length}
+            hideChallenge={classeMode}
             gridCopied={gridCopied}
             challengeCopied={challengeCopied}
             linkCopied={linkCopied}
@@ -298,15 +307,17 @@ export function ResultScreen({
             t={t}
           />
 
-          {isDaily ? <DailyReminderPrompt /> : null}
+          {isDaily && !classeMode ? <DailyReminderPrompt /> : null}
 
-          <PixfanCta
-            quizId={result.quizId}
-            percentage={result.percentage}
-            mistakeQuestionIds={(result.mistakes ?? [])
-              .filter((m) => !m.wasCorrect)
-              .map((m) => m.question.id)}
-          />
+          {!classeMode && (
+            <PixfanCta
+              quizId={result.quizId}
+              percentage={result.percentage}
+              mistakeQuestionIds={(result.mistakes ?? [])
+                .filter((m) => !m.wasCorrect)
+                .map((m) => m.question.id)}
+            />
+          )}
 
           {showWeakSpotsCta && (
             <div className="result-weak-spots-cta">
@@ -323,12 +334,14 @@ export function ResultScreen({
             </div>
           )}
 
-          <Leaderboard
-            quizId={result.quizId}
-            limit={10}
-            quizzes={[quiz]}
-            refreshToken={leaderboardRefresh}
-          />
+          {!classeMode && (
+            <Leaderboard
+              quizId={result.quizId}
+              limit={10}
+              quizzes={[quiz]}
+              refreshToken={leaderboardRefresh}
+            />
+          )}
 
           <div className="btn-row">
             <button type="button" className="btn btn--primary" onClick={onRetry}>

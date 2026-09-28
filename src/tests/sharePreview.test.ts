@@ -124,6 +124,19 @@ describe('sharePreview', () => {
     expect(html).toContain('80 %');
   });
 
+  it('forwards classe=1 into the share deep link', () => {
+    const html = buildShareHtml({
+      quizId: 'photo-rights',
+      score: null,
+      lang: 'fr',
+      pageUrl: 'https://quiz.pixfan.fr/s/photo-rights?classe=1',
+      ogImageUrl: 'https://quiz.pixfan.fr/og/themes/photo-rights.png?v1',
+      appOrigin: 'https://quiz.pixfan.fr',
+      classe: true,
+    });
+    expect(html).toContain('/#/quiz/photo-rights?classe=1');
+  });
+
   it('builds daily share HTML with theme chip in title', () => {
     const date = new Date(Date.UTC(2026, 8, 21));
     const chip = getDailyTheme(date).chip.fr;
