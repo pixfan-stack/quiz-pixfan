@@ -55,6 +55,9 @@ describe('sharePreview', () => {
     expect(quizLabel('marques-photo', 'fr')).toBe('Histoire des marques');
     expect(quizLabel('marques-photo', 'en')).toBe('Brand history');
     expect(normalizeQuizId('marques-photo')).toBe('marques-photo');
+    expect(quizLabel('flash-studio', 'fr')).toBe('Flash & studio');
+    expect(quizLabel('flash-studio', 'en')).toBe('Flash & studio');
+    expect(normalizeQuizId('flash-studio')).toBe('flash-studio');
     expect(quizLabel('duel-abcd2345', 'en')).toBe('Friend duel');
   });
 
@@ -72,6 +75,7 @@ describe('sharePreview', () => {
 
   it('maps quiz ids to OG theme slugs and score tiers (P4.D)', () => {
     expect(ogThemeSlug('composition')).toBe('composition');
+    expect(ogThemeSlug('flash-studio')).toBe('flash-studio');
     expect(ogThemeSlug('daily-2026-09-21')).toBe('daily');
     expect(ogThemeSlug('duel-abcd2345')).toBe('duel');
     expect(ogThemeSlug('random-mix')).toBe('random');

@@ -25,6 +25,7 @@ const THEMES = [
   ['lightroom-workflow', 'Lightroom workflow', 'Workflow Lightroom'],
   ['portrait-light', 'Portrait & light', 'Portrait & lumière'],
   ['marques-photo', 'Brand history', 'Histoire des marques'],
+  ['flash-studio', 'Flash & studio', 'Flash & studio'],
   ['daily', 'Daily challenge', 'Défi du jour'],
   ['duel', 'Friend duel', 'Duel entre amis'],
   ['random', 'Random mix', 'Mix aléatoire'],

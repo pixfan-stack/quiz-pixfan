@@ -60,14 +60,14 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
   },
   {
     id: 'light',
-    quizIds: ['light-color', 'exposure-basics'],
+    quizIds: ['light-color', 'exposure-basics', 'flash-studio'],
     title: {
       en: 'Daily challenge · Light week',
       fr: 'Défi du jour · semaine lumière',
     },
     description: {
-      en: '10 shared questions biased toward light, color, and exposure.',
-      fr: '10 questions partagées orientées lumière, couleur et exposition.',
+      en: '10 shared questions biased toward light, color, flash, and exposure.',
+      fr: '10 questions partagées orientées lumière, couleur, flash et exposition.',
     },
     chip: { en: 'Light week', fr: 'Semaine lumière' },
   },

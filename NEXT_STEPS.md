@@ -4,7 +4,7 @@ Document à jour avec l’état réel du dépôt (**v1.17.4**).
 
 ## ✅ Livré
 
-- Contenu : **13 quiz · 341 questions · 223 illustrées** (`public/data/questions.json`), dont pack **`marques-photo`** (Histoire des marques)
+- Contenu : **14 quiz · 365 questions · 256 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`** (Histoire des marques) et **`flash-studio`** (Flash & studio)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots (SRS léger)
 - Engagement : défi du jour, duel, succès (photo-reader · vault-clear · streak-14 + badges saison), streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
@@ -33,6 +33,6 @@ Document à jour avec l’état réel du dépôt (**v1.17.4**).
 - [x] Guides droits / matériel / histoire (vague 1.17 P2)
 - [x] Densifier illus packs + allonger Lightroom / portrait + OG thèmes (vague 1.17 P4.A/B/D)
 - [x] Pack **`marques-photo`** (vague 1.17 P4.C / post-wave) — livré live depuis v1.17.1+
-- [ ] Éventuel **14ᵉ** quiz thématique — seulement après lecture modes/CTA (vague 1.18 P4), data-driven
+- [x] Pack **`flash-studio`** (vague 1.18 P4 — 14ᵉ quiz) — Flash & studio
 
 Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt.

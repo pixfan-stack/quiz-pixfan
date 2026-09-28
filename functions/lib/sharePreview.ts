@@ -29,6 +29,10 @@ const LABELS: Record<string, { en: string; fr: string }> = {
     en: 'Brand history',
     fr: 'Histoire des marques',
   },
+  'flash-studio': {
+    en: 'Flash & studio',
+    fr: 'Flash & studio',
+  },
   random: { en: 'Random mix', fr: 'Mix aléatoire' },
   'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
   'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },
