@@ -59,6 +59,7 @@ type HabitEventName =
   | 'share_image_story'
   | 'share_native'
   | 'scolaires_hub'
+  | 'scolaires_parcours_c3_decouvrir'
   | 'scolaires_parcours_c4_regard'
   | 'scolaires_parcours_c4_lumiere'
   | 'scolaires_parcours_c4_emi_droits';
@@ -75,6 +76,7 @@ const HABIT_EVENTS = new Set<HabitEventName>([
   'share_image_story',
   'share_native',
   'scolaires_hub',
+  'scolaires_parcours_c3_decouvrir',
   'scolaires_parcours_c4_regard',
   'scolaires_parcours_c4_lumiere',
   'scolaires_parcours_c4_emi_droits',
@@ -187,6 +189,7 @@ function buildHabitEvents(
     'share_image_story',
     'share_native',
     'scolaires_hub',
+    'scolaires_parcours_c3_decouvrir',
     'scolaires_parcours_c4_regard',
     'scolaires_parcours_c4_lumiere',
     'scolaires_parcours_c4_emi_droits',

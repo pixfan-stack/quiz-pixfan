@@ -2,6 +2,7 @@
   "quizzes": [
     {
       "id": "exposure-basics",
+      "tags": ["scolaires", "c4"],
       "title": {
         "en": "Exposure Triangle",
         "fr": "Triangle d'exposition"
@@ -1625,6 +1626,7 @@
     },
     {
       "id": "composition",
+      "tags": ["scolaires", "c3", "c4"],
       "title": {
         "en": "Composition & Framing",
         "fr": "Composition & cadrage"
@@ -3267,6 +3269,7 @@
     },
     {
       "id": "light-color",
+      "tags": ["scolaires", "c4"],
       "title": {
         "en": "Light & Color",
         "fr": "Lumière & couleur"
@@ -5792,6 +5795,7 @@
     },
     {
       "id": "history-icons",
+      "tags": ["scolaires", "c4"],
       "title": {
         "en": "History & Iconic Photographers",
         "fr": "Histoire & photographes iconiques"
@@ -7001,6 +7005,7 @@
     },
     {
       "id": "public-domain",
+      "tags": ["scolaires", "c4"],
       "title": {
         "en": "Public domain gallery",
         "fr": "Galerie domaine public"
@@ -8170,6 +8175,7 @@
     },
     {
       "id": "genres",
+      "tags": ["scolaires", "c3"],
       "title": {
         "en": "Photography Genres",
         "fr": "Genres photographiques"
@@ -9801,6 +9807,7 @@
     },
     {
       "id": "smartphone",
+      "tags": ["scolaires", "c4"],
       "title": {
         "en": "Smartphone Photography",
         "fr": "Photo au smartphone"
@@ -11440,6 +11447,7 @@
     },
     {
       "id": "photo-rights",
+      "tags": ["scolaires", "c3", "c4"],
       "difficulty": "medium",
       "title": {
         "en": "Rights & Ethics",

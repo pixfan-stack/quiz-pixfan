@@ -10,6 +10,37 @@
   "classe": {
     "banner": "Class mode — no public leaderboard"
   },
+  "scolaires": {
+    "chip": "Schools",
+    "chipHint": "Curriculum-aligned paths",
+    "eyebrow": "Teachers & students",
+    "title": "Schools — photo & curriculum",
+    "subtitle": "Free cycle 3–4 and media-literacy paths, no account, with class mode.",
+    "minutes": "~{{count}} min",
+    "startSeance": "Start the session",
+    "moreLinks": "School links",
+    "openHub": "Scolaires guides page",
+    "printSheet": "Print session sheet",
+    "backHome": "Back to home",
+    "parcours": {
+      "c3-decouvrir": {
+        "title": "Discover photography (cycle 3)",
+        "desc": "Image genres and simple photo reading — CM1–CM2–6ᵉ language."
+      },
+      "c4-regard": {
+        "title": "Reading an image (cycle 4)",
+        "desc": "Frame, composition, then illustrated photo analysis."
+      },
+      "c4-lumiere": {
+        "title": "Light & photography",
+        "desc": "Exposure and light quality for visual language."
+      },
+      "c4-emi-droits": {
+        "title": "Image rights (media literacy)",
+        "desc": "Privacy, sharing, and media-image ethics."
+      }
+    }
+  },
   "home": {
     "welcome": "Choose a quiz to get started",
     "selectQuiz": "Photos to analyze, daily challenge, or a duel",
@@ -78,6 +109,8 @@
     "difficulty_hard": "Hard",
     "difficultyEmpty": "No packs at this difficulty yet.",
     "startDifficultyMix": "Start this level mix",
+    "filterScolaires": "Schools",
+    "badgeScolaires": "Schools",
     "playerName": "Display name",
     "playerNameHint": "It will appear on the leaderboard after each quiz.",
     "playerNamePlaceholder": "e.g. Alex, Shutterbug…",
@@ -371,6 +404,7 @@
     "version": "v{{version}}",
     "admin": "Edit questions",
     "guides": "Photo guides",
+    "scolaires": "Schools",
     "guideExposure": "Exposure triangle",
     "guideComposition": "Composition",
     "guideSmartphone": "Smartphone photo",
@@ -464,6 +498,11 @@
     "analyticsEvent_share_image_square": "Share image (square)",
     "analyticsEvent_share_image_story": "Share image (Stories)",
     "analyticsEvent_share_native": "Native share",
+    "analyticsEvent_scolaires_hub": "Schools hub",
+    "analyticsEvent_scolaires_parcours_c3_decouvrir": "Path C3 discover",
+    "analyticsEvent_scolaires_parcours_c4_regard": "Path C4 reading",
+    "analyticsEvent_scolaires_parcours_c4_lumiere": "Path C4 light",
+    "analyticsEvent_scolaires_parcours_c4_emi_droits": "Path C4 image rights",
     "analyticsColMode": "Mode",
     "analyticsColEvent": "Event",
     "analyticsColCount": "Count",

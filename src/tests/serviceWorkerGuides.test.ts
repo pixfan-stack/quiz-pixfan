@@ -3,15 +3,16 @@ import sw from '../../public/sw.js?raw';
 import achievementsPanel from '../components/AchievementsPanel.tsx?raw';
 
 describe('P2 a11y / PWA hygiene', () => {
-  it('bumps SW cache to v14 and precaches guides shell', () => {
-    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v14'");
-    expect(sw).not.toContain("CACHE_NAME = 'quiz-pixfan-v13'");
+  it('bumps SW cache to v15 and precaches guides shell', () => {
+    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v15'");
+    expect(sw).not.toContain("CACHE_NAME = 'quiz-pixfan-v14'");
     expect(sw).toContain("'/guides/'");
     expect(sw).toContain("'/guides/index.html'");
     expect(sw).toContain("'/guides/guides.css'");
     expect(sw).toContain("'/guides/theme.js'");
     expect(sw).toContain("'/guides/scolaires/'");
     expect(sw).toContain("'/guides/scolaires/index.html'");
+    expect(sw).toContain("'/guides/scolaires/fiche-seance.html'");
   });
 
   it('keeps guide navigations out of the SPA index.html offline fallback path', () => {

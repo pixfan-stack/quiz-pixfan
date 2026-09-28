@@ -8,7 +8,7 @@
  * - API: network only (no stale leaderboard cache)
  */
 
-const CACHE_NAME = 'quiz-pixfan-v14';
+const CACHE_NAME = 'quiz-pixfan-v15';
 const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v6';
 
 const OFFLINE_URLS = [
@@ -28,6 +28,7 @@ const OFFLINE_URLS = [
   '/guides/theme.js',
   '/guides/scolaires/',
   '/guides/scolaires/index.html',
+  '/guides/scolaires/fiche-seance.html',
 ];
 
 /** Local illustrated assets used by public-domain / packs / photo-reading offline. */

@@ -22,6 +22,7 @@ export function QuizSelector({
   recoveryCode = null,
   onRecovered,
   classeMode = false,
+  onOpenScolaires,
 }: QuizSelectorProps) {
   const state = useQuizSelectorState({
     quizzes,
@@ -96,6 +97,23 @@ export function QuizSelector({
           onCopyDailyLink={state.handleCopyDailyLink}
           showCompetitive={!classeMode}
         />
+      )}
+
+      {onOpenScolaires && (
+        <div className="scolaires-home-chip" data-testid="scolaires-home-chip">
+          <button
+            type="button"
+            className="scolaires-home-chip__btn"
+            onClick={onOpenScolaires}
+          >
+            <span className="scolaires-home-chip__label">
+              {t('scolaires.chip')}
+            </span>
+            <span className="scolaires-home-chip__hint">
+              {t('scolaires.chipHint')}
+            </span>
+          </button>
+        </div>
       )}
 
       <MorePacksSection

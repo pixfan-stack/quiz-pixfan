@@ -12,6 +12,8 @@ export interface QuizSelectorProps {
   onRecovered?: () => void;
   /** Hide public leaderboard / duel / season chrome. */
   classeMode?: boolean;
+  /** Open in-app `#/scolaires` hub. */
+  onOpenScolaires?: () => void;
 }
 
 export const QUIZ_ICONS: Record<string, string> = {

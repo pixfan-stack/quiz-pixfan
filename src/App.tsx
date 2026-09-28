@@ -23,6 +23,7 @@ import {
   clearQuizHash,
   ensureClasseSearchParam,
   isDailyShortcutHash,
+  isScolairesHash,
   parseClasseModeFromLocation,
   parseQuizIdFromHash,
   parseScoreFromLocation,
@@ -44,11 +45,12 @@ import {
 import { APP_VERSION } from './version';
 import { pullAndMergeAccountProgress } from './utils/accountSync';
 import { requestOpenAccountSync } from './components/PlayerNameInput';
+import { ScolairesScreen } from './components/ScolairesScreen';
 
 const QuizScreen = lazy(() => import('./components/QuizScreen'));
 const AdminScreen = lazy(() => import('./components/AdminScreen'));
 
-type AppView = 'home' | 'quiz' | 'admin';
+type AppView = 'home' | 'quiz' | 'admin' | 'scolaires';
 
 interface QuizSettings {
   timePerQuestion: number;
@@ -64,9 +66,11 @@ function prefetchQuizScreen(): void {
  */
 export default function App() {
   const { t, i18n } = useTranslation();
-  const [view, setView] = useState<AppView>(() =>
-    isAdminHash(window.location.hash) ? 'admin' : 'home'
-  );
+  const [view, setView] = useState<AppView>(() => {
+    if (isAdminHash(window.location.hash)) return 'admin';
+    if (isScolairesHash(window.location.hash)) return 'scolaires';
+    return 'home';
+  });
   const [quizzes, setQuizzes] = useState<Quiz[]>([]);
   const [activeQuiz, setActiveQuiz] = useState<Quiz | null>(null);
   const [settings, setSettings] = useState<QuizSettings>({
@@ -149,9 +153,34 @@ export default function App() {
     window.history.pushState(null, '', url.pathname + url.search + url.hash);
   }, []);
 
+  const openScolaires = useCallback(() => {
+    setActiveQuiz(null);
+    setTargetScore(null);
+    setView('scolaires');
+    const url = new URL(window.location.href);
+    url.hash = '/scolaires';
+    window.history.pushState(null, '', url.pathname + url.search + url.hash);
+  }, []);
+
+  const startScolairesParcours = useCallback(
+    (quiz: Quiz) => {
+      setClasseMode(true);
+      ensureClasseSearchParam();
+      prefetchQuizScreen();
+      startQuiz(quiz);
+    },
+    [startQuiz]
+  );
+
   useEffect(() => {
     if (isAdminHash(window.location.hash)) {
       setView('admin');
+      setActiveQuiz(null);
+      return;
+    }
+
+    if (isScolairesHash(window.location.hash)) {
+      setView('scolaires');
       setActiveQuiz(null);
       return;
     }
@@ -236,6 +265,11 @@ export default function App() {
       if (isAdminHash(window.location.hash)) {
         setActiveQuiz(null);
         setView('admin');
+        return;
+      }
+      if (isScolairesHash(window.location.hash)) {
+        setActiveQuiz(null);
+        setView('scolaires');
         return;
       }
       if (isRecoverHash(window.location.hash)) {
@@ -357,8 +391,17 @@ export default function App() {
                 recoveryCode={recoveryCode}
                 onRecovered={handleRecovered}
                 classeMode={classeMode}
+                onOpenScolaires={openScolaires}
               />
             </>
+          )}
+          {view === 'scolaires' && (
+            <ScolairesScreen
+              quizzes={quizzes}
+              onHome={handleHome}
+              onStartParcours={startScolairesParcours}
+              classeMode={classeMode}
+            />
           )}
           {view === 'quiz' && activeQuiz && (
             <Suspense>
@@ -394,6 +437,9 @@ export default function App() {
         <nav className="app-footer__guides" aria-label={t('footer.guides')}>
           <a href="/guides/" className="app-footer__link">
             {t('footer.guides')}
+          </a>
+          <a href="#/scolaires" className="app-footer__link">
+            {t('footer.scolaires')}
           </a>
           <a
             href="/guides/triangle-exposition"

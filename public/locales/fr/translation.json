@@ -10,6 +10,37 @@
   "classe": {
     "banner": "Mode classe — sans classement public"
   },
+  "scolaires": {
+    "chip": "Scolaires",
+    "chipHint": "Parcours programme officiel",
+    "eyebrow": "Enseignants & élèves",
+    "title": "Scolaires — photo & programme",
+    "subtitle": "Parcours gratuits cycle 3–4 et EMI, sans compte, avec mode classe.",
+    "minutes": "~{{count}} min",
+    "startSeance": "Lancer la séance",
+    "moreLinks": "Liens scolaires",
+    "openHub": "Page guides Scolaires",
+    "printSheet": "Imprimer la fiche séance",
+    "backHome": "Retour à l’accueil",
+    "parcours": {
+      "c3-decouvrir": {
+        "title": "Découvrir la photo (cycle 3)",
+        "desc": "Genres d’images et lecture simple — langage adapté CM1–CM2–6ᵉ."
+      },
+      "c4-regard": {
+        "title": "Lire une image (cycle 4)",
+        "desc": "Cadre, composition, puis analyse d’images illustrées."
+      },
+      "c4-lumiere": {
+        "title": "Lumière & photographie",
+        "desc": "Exposition et qualité de la lumière pour le langage plastique."
+      },
+      "c4-emi-droits": {
+        "title": "Droit à l’image (EMI)",
+        "desc": "Vie privée, diffusion, éthique de l’image médiatique."
+      }
+    }
+  },
   "home": {
     "welcome": "Choisissez un quiz pour commencer",
     "selectQuiz": "Photos à analyser, défi du jour, ou un duel",
@@ -78,6 +109,8 @@
     "difficulty_hard": "Difficile",
     "difficultyEmpty": "Aucun pack à ce niveau pour le moment.",
     "startDifficultyMix": "Lancer un mix de ce niveau",
+    "filterScolaires": "Scolaires",
+    "badgeScolaires": "Scolaires",
     "playerName": "Pseudo",
     "playerNameHint": "Il apparaîtra dans le classement après chaque partie.",
     "playerNamePlaceholder": "Ex. Marie, PhotoFan…",
@@ -371,6 +404,7 @@
     "version": "v{{version}}",
     "admin": "Éditer les questions",
     "guides": "Guides photo",
+    "scolaires": "Scolaires",
     "guideExposure": "Triangle d’exposition",
     "guideComposition": "Composition",
     "guideSmartphone": "Photo smartphone",
@@ -464,6 +498,11 @@
     "analyticsEvent_share_image_square": "Partage image (carré)",
     "analyticsEvent_share_image_story": "Partage image (Stories)",
     "analyticsEvent_share_native": "Partage natif",
+    "analyticsEvent_scolaires_hub": "Hub scolaires",
+    "analyticsEvent_scolaires_parcours_c3_decouvrir": "Parcours C3 découvrir",
+    "analyticsEvent_scolaires_parcours_c4_regard": "Parcours C4 regard",
+    "analyticsEvent_scolaires_parcours_c4_lumiere": "Parcours C4 lumière",
+    "analyticsEvent_scolaires_parcours_c4_emi_droits": "Parcours C4 EMI droits",
     "analyticsColMode": "Mode",
     "analyticsColEvent": "Événement",
     "analyticsColCount": "Total",

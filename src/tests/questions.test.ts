@@ -6,6 +6,7 @@ describe('questions.json', () => {
     quizzes: Array<{
       id: string;
       difficulty?: string;
+      tags?: string[];
       title: { en: string; fr: string };
       description: { en: string; fr: string };
       questions: Array<{
@@ -74,6 +75,15 @@ describe('questions.json', () => {
         expect(q.difficulty).toMatch(/^(easy|medium|hard)$/);
       }
     }
+  });
+
+  it('tags scolaires packs without changing the 14-card catalog', () => {
+    const tagged = data.quizzes.filter((q) => Array.isArray(q.tags));
+    expect(tagged.length).toBeGreaterThanOrEqual(6);
+    for (const quiz of tagged) {
+      expect(quiz.tags).toContain('scolaires');
+    }
+    expect(data.quizzes.length).toBe(14);
   });
 
   it('all questions have required fields', () => {

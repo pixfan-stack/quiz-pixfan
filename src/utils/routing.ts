@@ -32,6 +32,11 @@ export function isDailyShortcutHash(hash: string): boolean {
   return /^#\/daily(?:\?.*)?$/.test(hash);
 }
 
+/** True for `#/scolaires` (in-app school hub). */
+export function isScolairesHash(hash: string): boolean {
+  return /^#\/scolaires(?:\?.*)?$/.test(hash);
+}
+
 function hashQuery(hash: string): string | null {
   const qIndex = hash.indexOf('?');
   return qIndex !== -1 ? hash.slice(qIndex + 1) : null;
