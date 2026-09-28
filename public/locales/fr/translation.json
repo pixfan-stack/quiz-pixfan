@@ -15,7 +15,7 @@
     "chipHint": "Parcours programme officiel",
     "eyebrow": "Enseignants & élèves",
     "title": "Scolaires — photo & programme",
-    "subtitle": "Parcours gratuits cycle 3–4 et EMI, sans compte, avec mode classe.",
+    "subtitle": "Parcours gratuits cycle 3–4, lycée et EMI, sans compte, avec mode classe.",
     "minutes": "~{{count}} min",
     "startSeance": "Lancer la séance",
     "moreLinks": "Liens scolaires",
@@ -38,6 +38,10 @@
       "c4-emi-droits": {
         "title": "Droit à l’image (EMI)",
         "desc": "Vie privée, diffusion, éthique de l’image médiatique."
+      },
+      "lycee-pratique": {
+        "title": "Pratique image fixe (lycée)",
+        "desc": "Portrait & lumière, flash/studio, puis retouche — label lycée / approfondissement."
       }
     }
   },
@@ -503,6 +507,7 @@
     "analyticsEvent_scolaires_parcours_c4_regard": "Parcours C4 regard",
     "analyticsEvent_scolaires_parcours_c4_lumiere": "Parcours C4 lumière",
     "analyticsEvent_scolaires_parcours_c4_emi_droits": "Parcours C4 EMI droits",
+    "analyticsEvent_scolaires_parcours_lycee_pratique": "Parcours lycée pratique",
     "analyticsColMode": "Mode",
     "analyticsColEvent": "Événement",
     "analyticsColCount": "Total",

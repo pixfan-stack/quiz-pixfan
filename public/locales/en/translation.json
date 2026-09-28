@@ -15,7 +15,7 @@
     "chipHint": "Curriculum-aligned paths",
     "eyebrow": "Teachers & students",
     "title": "Schools — photo & curriculum",
-    "subtitle": "Free cycle 3–4 and media-literacy paths, no account, with class mode.",
+    "subtitle": "Free cycle 3–4, lycée and media-literacy paths, no account, with class mode.",
     "minutes": "~{{count}} min",
     "startSeance": "Start the session",
     "moreLinks": "School links",
@@ -38,6 +38,10 @@
       "c4-emi-droits": {
         "title": "Image rights (media literacy)",
         "desc": "Privacy, sharing, and media-image ethics."
+      },
+      "lycee-pratique": {
+        "title": "Still-image practice (lycée)",
+        "desc": "Portrait & light, flash/studio, then retouching — lycée / deeper craft label."
       }
     }
   },
@@ -503,6 +507,7 @@
     "analyticsEvent_scolaires_parcours_c4_regard": "Path C4 reading",
     "analyticsEvent_scolaires_parcours_c4_lumiere": "Path C4 light",
     "analyticsEvent_scolaires_parcours_c4_emi_droits": "Path C4 image rights",
+    "analyticsEvent_scolaires_parcours_lycee_pratique": "Path lycée practice",
     "analyticsColMode": "Mode",
     "analyticsColEvent": "Event",
     "analyticsColCount": "Count",

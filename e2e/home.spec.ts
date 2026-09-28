@@ -21,7 +21,7 @@ test.describe('Homepage', () => {
     await expect(page.locator('.difficulty-filter')).toBeVisible();
     await expect(page.locator('.weekly-leaders')).toBeVisible();
     await expect(page.locator('.achievements')).toBeVisible();
-    await expect(page.locator(CATEGORY_CARD)).toHaveCount(14);
+    await expect(page.locator(CATEGORY_CARD)).toHaveCount(15);
   });
 
   test('copies daily link without starting a quiz; duel has no scoreless invite', async ({

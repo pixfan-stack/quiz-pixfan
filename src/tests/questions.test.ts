@@ -39,13 +39,18 @@ describe('questions.json', () => {
     'flash-studio',
   ] as const;
 
-  it('has exactly 14 category quizzes', () => {
-    expect(data.quizzes.length).toBe(14);
+  it('has exactly 15 category quizzes', () => {
+    expect(data.quizzes.length).toBe(15);
   });
 
   it('keeps a solid question count per quiz', () => {
     for (const quiz of data.quizzes) {
-      const min = quiz.id === 'public-domain' ? 18 : 20;
+      const min =
+        quiz.id === 'public-domain'
+          ? 18
+          : quiz.id === 'lexique-image-fixe'
+            ? 10
+            : 20;
       expect(quiz.questions.length).toBeGreaterThanOrEqual(min);
     }
   });
@@ -77,13 +82,18 @@ describe('questions.json', () => {
     }
   });
 
-  it('tags scolaires packs without changing the 14-card catalog', () => {
+  it('tags scolaires packs and ships lexique without dropping the catalog', () => {
     const tagged = data.quizzes.filter((q) => Array.isArray(q.tags));
-    expect(tagged.length).toBeGreaterThanOrEqual(6);
+    expect(tagged.length).toBeGreaterThanOrEqual(10);
     for (const quiz of tagged) {
       expect(quiz.tags).toContain('scolaires');
     }
-    expect(data.quizzes.length).toBe(14);
+    expect(data.quizzes.length).toBe(15);
+    const lexique = data.quizzes.find((q) => q.id === 'lexique-image-fixe');
+    expect(lexique).toBeDefined();
+    expect(lexique!.questions.length).toBeLessThanOrEqual(15);
+    expect(lexique!.questions.every((q) => !q.imageUrl)).toBe(true);
+    expect(lexique!.tags).toEqual(expect.arrayContaining(['scolaires', 'lycee']));
   });
 
   it('all questions have required fields', () => {

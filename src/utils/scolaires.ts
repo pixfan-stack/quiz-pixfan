@@ -10,7 +10,8 @@ export type ScolairesParcoursId =
   | 'c3-decouvrir'
   | 'c4-regard'
   | 'c4-lumiere'
-  | 'c4-emi-droits';
+  | 'c4-emi-droits'
+  | 'lycee-pratique';
 
 export interface ScolairesParcours {
   id: ScolairesParcoursId;
@@ -47,6 +48,12 @@ export const SCOLAIRES_PARCOURS: readonly ScolairesParcours[] = [
     event: 'scolaires_parcours_c4_emi_droits',
     startQuizId: 'photo-rights',
     minutes: 20,
+  },
+  {
+    id: 'lycee-pratique',
+    event: 'scolaires_parcours_lycee_pratique',
+    startQuizId: 'portrait-light',
+    minutes: 30,
   },
 ] as const;
 

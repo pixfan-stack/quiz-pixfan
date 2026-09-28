@@ -22,6 +22,7 @@ export const HABIT_EVENTS = [
   'scolaires_parcours_c4_regard',
   'scolaires_parcours_c4_lumiere',
   'scolaires_parcours_c4_emi_droits',
+  'scolaires_parcours_lycee_pratique',
 ] as const;
 
 export type HabitEventName = (typeof HABIT_EVENTS)[number];
