@@ -16,6 +16,8 @@ interface ResultHeroProps {
   /** Aggregate light+portrait+exposure mastery when finishing a parcours pack. */
   parcoursMastery?: ParcoursMastery | null;
   displayName: string;
+  /** Hide public leaderboard attribution in school mode. */
+  showLeaderboardName?: boolean;
   t: TFunction;
 }
 
@@ -27,6 +29,7 @@ export function ResultHero({
   masteryNext,
   parcoursMastery = null,
   displayName,
+  showLeaderboardName = true,
   t,
 }: ResultHeroProps) {
   const parcoursKey = parcoursMastery
@@ -122,9 +125,11 @@ export function ResultHero({
             })}
           </p>
         )}
-        <p className="result-leaderboard-name">
-          {t('result.leaderboardAs', { name: displayName })}
-        </p>
+        {showLeaderboardName && (
+          <p className="result-leaderboard-name">
+            {t('result.leaderboardAs', { name: displayName })}
+          </p>
+        )}
       </div>
 
       {result.tabSwitchPenalty != null && result.tabSwitchPenalty > 0 && (

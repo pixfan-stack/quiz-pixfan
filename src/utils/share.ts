@@ -15,15 +15,21 @@ export const APP_SHARE_URL =
   import.meta.env.VITE_APP_URL ?? 'https://quiz.pixfan.fr';
 
 /** Deep-link URL for a specific quiz (hash routing). */
-export function quizShareUrl(quizId: string): string {
+export function quizShareUrl(
+  quizId: string,
+  opts?: { classe?: boolean }
+): string {
   const base = APP_SHARE_URL.replace(/\/$/, '');
-  return `${base}/#/quiz/${encodeURIComponent(quizId)}`;
+  const path = `${base}/#/quiz/${encodeURIComponent(quizId)}`;
+  return opts?.classe ? `${path}?classe=1` : path;
 }
 
 export interface SocialShareOptions {
   /** Percent score 0–100 for OG preview. */
   score?: number;
   lang?: 'en' | 'fr';
+  /** School session — forwarded to `/s/:id?classe=1` → hash deep link. */
+  classe?: boolean;
 }
 
 /**
@@ -43,6 +49,7 @@ export function socialShareUrl(
     );
   }
   if (opts.lang) u.searchParams.set('lang', opts.lang);
+  if (opts.classe) u.searchParams.set('classe', '1');
   return u.toString();
 }
 

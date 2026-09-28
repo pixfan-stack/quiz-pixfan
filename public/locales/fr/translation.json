@@ -7,6 +7,9 @@
     "home": "Accueil",
     "language": "Langue"
   },
+  "classe": {
+    "banner": "Mode classe — sans classement public"
+  },
   "home": {
     "welcome": "Choisissez un quiz pour commencer",
     "selectQuiz": "Photos à analyser, défi du jour, ou un duel",

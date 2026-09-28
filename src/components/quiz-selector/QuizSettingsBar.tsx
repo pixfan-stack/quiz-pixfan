@@ -16,6 +16,7 @@ interface QuizSettingsBarProps {
   reminderOn: boolean;
   onToggleReminder: () => void;
   langCode: 'en' | 'fr';
+  classeMode?: boolean;
 }
 
 export function QuizSettingsBar({
@@ -30,15 +31,18 @@ export function QuizSettingsBar({
   reminderOn,
   onToggleReminder,
   langCode,
+  classeMode = false,
 }: QuizSettingsBarProps) {
   const { t } = useTranslation();
 
   return (
     <div className="quiz-settings-bar">
-      <PlayerNamePrompt
-        recoveryCode={recoveryCode}
-        onRecovered={onRecovered}
-      />
+      {!classeMode && (
+        <PlayerNamePrompt
+          recoveryCode={recoveryCode}
+          onRecovered={onRecovered}
+        />
+      )}
       <button
         type="button"
         className="btn btn--ghost btn--small"

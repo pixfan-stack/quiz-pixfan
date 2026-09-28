@@ -10,6 +10,8 @@ export interface QuizSelectorProps {
   leaderboardRefreshToken?: number;
   recoveryCode?: string | null;
   onRecovered?: () => void;
+  /** Hide public leaderboard / duel / season chrome. */
+  classeMode?: boolean;
 }
 
 export const QUIZ_ICONS: Record<string, string> = {

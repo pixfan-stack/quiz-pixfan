@@ -7,6 +7,8 @@ interface ResultShareSectionProps {
   isDaily: boolean;
   isDuel: boolean;
   quizzesLength: number;
+  /** Hide duel / challenge friend CTAs (school mode). */
+  hideChallenge?: boolean;
   gridCopied: boolean;
   challengeCopied: boolean;
   linkCopied: boolean;
@@ -24,6 +26,7 @@ export function ResultShareSection({
   isDaily,
   isDuel,
   quizzesLength,
+  hideChallenge = false,
   gridCopied,
   challengeCopied,
   linkCopied,
@@ -75,7 +78,7 @@ export function ResultShareSection({
               </span>
               {t('result.exportStory')}
             </button>
-            {quizzesLength > 0 && (
+            {quizzesLength > 0 && !hideChallenge && (
               <button
                 type="button"
                 className="btn btn--ghost btn--block"
@@ -151,7 +154,7 @@ export function ResultShareSection({
               </span>
               {t('result.exportImage')}
             </button>
-            {quizzesLength > 0 && (
+            {quizzesLength > 0 && !hideChallenge && (
               <button
                 type="button"
                 className="btn btn--ghost btn--block"

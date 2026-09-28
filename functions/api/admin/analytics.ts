@@ -57,7 +57,11 @@ type HabitEventName =
   | 'weak_spots_cta'
   | 'share_image_square'
   | 'share_image_story'
-  | 'share_native';
+  | 'share_native'
+  | 'scolaires_hub'
+  | 'scolaires_parcours_c4_regard'
+  | 'scolaires_parcours_c4_lumiere'
+  | 'scolaires_parcours_c4_emi_droits';
 
 const HABIT_EVENTS = new Set<HabitEventName>([
   'reminder_on',
@@ -70,6 +74,10 @@ const HABIT_EVENTS = new Set<HabitEventName>([
   'share_image_square',
   'share_image_story',
   'share_native',
+  'scolaires_hub',
+  'scolaires_parcours_c4_regard',
+  'scolaires_parcours_c4_lumiere',
+  'scolaires_parcours_c4_emi_droits',
 ]);
 
 /** Exclude CTA + habit markers from real quiz attempt aggregates. */
@@ -178,6 +186,10 @@ function buildHabitEvents(
     'share_image_square',
     'share_image_story',
     'share_native',
+    'scolaires_hub',
+    'scolaires_parcours_c4_regard',
+    'scolaires_parcours_c4_lumiere',
+    'scolaires_parcours_c4_emi_droits',
   ];
   return order
     .filter((e) => (map.get(e) ?? 0) > 0)

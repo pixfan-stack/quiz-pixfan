@@ -21,6 +21,7 @@ export function QuizSelector({
   leaderboardRefreshToken = 0,
   recoveryCode = null,
   onRecovered,
+  classeMode = false,
 }: QuizSelectorProps) {
   const state = useQuizSelectorState({
     quizzes,
@@ -56,13 +57,14 @@ export function QuizSelector({
         reminderOn={state.reminderOn}
         onToggleReminder={state.handleToggleReminder}
         langCode={state.langCode}
+        classeMode={classeMode}
       />
 
-      <DailyNudge onPlayDaily={state.handleStartDaily} />
+      {!classeMode && <DailyNudge onPlayDaily={state.handleStartDaily} />}
       <WeakSpotsDueChip onReview={state.handleStartWeakSpots} />
-      <SeasonBanner />
+      {!classeMode && <SeasonBanner />}
 
-      {state.difficultyFilter === 'all' && (
+      {!classeMode && state.difficultyFilter === 'all' && (
         <WeeklyLeaders
           quizzes={quizzes}
           refreshToken={leaderboardRefreshToken}
@@ -92,6 +94,7 @@ export function QuizSelector({
           onStartDaily={state.handleStartDaily}
           onStartDuel={state.handleStartDuel}
           onCopyDailyLink={state.handleCopyDailyLink}
+          showCompetitive={!classeMode}
         />
       )}
 
@@ -114,37 +117,39 @@ export function QuizSelector({
         onStartDifficultyMix={state.handleStartDifficultyMix}
       />
 
-      <AchievementsPanel />
+      {!classeMode && <AchievementsPanel />}
 
-      <div
-        className="leaderboard-section"
-        ref={state.leaderboardSectionRef}
-        id="leaderboard"
-      >
-        <select
-          className="setting-select"
-          value={state.leaderboardQuizId ?? ''}
-          onChange={(e) =>
-            state.setLeaderboardQuizId(e.target.value || undefined)
-          }
-          aria-label={t('leaderboard.title')}
+      {!classeMode && (
+        <div
+          className="leaderboard-section"
+          ref={state.leaderboardSectionRef}
+          id="leaderboard"
         >
-          <option value="">{t('leaderboard.filterAll')}</option>
-          {quizzes.map((quiz) => (
-            <option key={quiz.id} value={quiz.id}>
-              {pickLocale(quiz.title, state.lang)}
-            </option>
-          ))}
-          <option value={RANDOM_QUIZ_ID}>{t('home.randomQuiz')}</option>
-        </select>
-        <Leaderboard
-          quizId={state.leaderboardQuizId}
-          limit={20}
-          quizzes={quizzes}
-          refreshToken={leaderboardRefreshToken}
-          defaultPeriod="week"
-        />
-      </div>
+          <select
+            className="setting-select"
+            value={state.leaderboardQuizId ?? ''}
+            onChange={(e) =>
+              state.setLeaderboardQuizId(e.target.value || undefined)
+            }
+            aria-label={t('leaderboard.title')}
+          >
+            <option value="">{t('leaderboard.filterAll')}</option>
+            {quizzes.map((quiz) => (
+              <option key={quiz.id} value={quiz.id}>
+                {pickLocale(quiz.title, state.lang)}
+              </option>
+            ))}
+            <option value={RANDOM_QUIZ_ID}>{t('home.randomQuiz')}</option>
+          </select>
+          <Leaderboard
+            quizId={state.leaderboardQuizId}
+            limit={20}
+            quizzes={quizzes}
+            refreshToken={leaderboardRefreshToken}
+            defaultPeriod="week"
+          />
+        </div>
+      )}
     </section>
   );
 }

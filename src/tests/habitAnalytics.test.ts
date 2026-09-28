@@ -13,9 +13,13 @@ describe('habitAnalytics', () => {
   it('encodes and parses habit event quiz_ids', () => {
     expect(habitEventQuizId('reminder_on')).toBe('evt:reminder_on');
     expect(habitEventQuizId('ics_download')).toBe('evt:ics_download');
+    expect(habitEventQuizId('scolaires_hub')).toBe('evt:scolaires_hub');
     expect(isHabitEventQuizId('evt:pwa_install')).toBe(true);
     expect(isHabitEventQuizId('cta:guide:light:x')).toBe(false);
     expect(parseHabitEventQuizId('evt:account_create')).toBe('account_create');
+    expect(parseHabitEventQuizId('evt:scolaires_parcours_c4_regard')).toBe(
+      'scolaires_parcours_c4_regard'
+    );
     expect(parseHabitEventQuizId('evt:unknown')).toBeNull();
     expect(parseHabitEventQuizId('cta:guide:light:x')).toBeNull();
   });
@@ -67,6 +71,8 @@ describe('habitAnalytics', () => {
       { quizId: 'evt:share_image_square', count: 8 },
       { quizId: 'evt:share_image_story', count: 11 },
       { quizId: 'evt:share_native', count: 7 },
+      { quizId: 'evt:scolaires_hub', count: 4 },
+      { quizId: 'evt:scolaires_parcours_c4_regard', count: 2 },
       { quizId: 'evt:bogus', count: 9 },
     ]);
     expect(events).toEqual([
@@ -80,6 +86,8 @@ describe('habitAnalytics', () => {
       { event: 'share_image_square', count: 8 },
       { event: 'share_image_story', count: 11 },
       { event: 'share_native', count: 7 },
+      { event: 'scolaires_hub', count: 4 },
+      { event: 'scolaires_parcours_c4_regard', count: 2 },
     ]);
   });
 

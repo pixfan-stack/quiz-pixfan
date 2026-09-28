@@ -34,6 +34,8 @@ interface UseResultScreenEffectsArgs {
   onScoreSubmitted?: () => void;
   isDaily: boolean;
   langCode: LangCode;
+  /** Skip remote highscore / season rank when true. */
+  classeMode?: boolean;
 }
 
 export function useResultScreenEffects({
@@ -43,6 +45,7 @@ export function useResultScreenEffects({
   onScoreSubmitted,
   isDaily,
   langCode,
+  classeMode = false,
 }: UseResultScreenEffectsArgs) {
   const [leaderboardRefresh, setLeaderboardRefresh] = useState(0);
   const [newAchievements, setNewAchievements] = useState<AchievementId[]>([]);
@@ -105,33 +108,35 @@ export function useResultScreenEffects({
   useEffect(() => {
     let cancelled = false;
 
-    void submitRemoteHighScore({
-      quizId: result.quizId,
-      playerId: getPlayerId(),
-      displayName,
-      percentage: result.percentage,
-      correctCount: result.correctCount,
-      totalQuestions: result.totalQuestions,
-    })
-      .then(async (ok) => {
-        if (!ok || cancelled) return;
-        setLeaderboardRefresh((n) => n + 1);
-        onScoreSubmittedRef.current?.();
-        try {
-          const board = await fetchLeaderboard({
-            period: 'month',
-            limit: 10,
-            playerId: getPlayerId(),
-          });
-          if (cancelled) return;
-          unlockSeasonFromRank(board.viewer?.rank ?? null);
-          // Re-push badges after rank enrichment
-          void pushAccountProgress();
-        } catch {
-          // ignore rank enrichment failures
-        }
+    if (!classeMode) {
+      void submitRemoteHighScore({
+        quizId: result.quizId,
+        playerId: getPlayerId(),
+        displayName,
+        percentage: result.percentage,
+        correctCount: result.correctCount,
+        totalQuestions: result.totalQuestions,
       })
-      .catch(() => {});
+        .then(async (ok) => {
+          if (!ok || cancelled) return;
+          setLeaderboardRefresh((n) => n + 1);
+          onScoreSubmittedRef.current?.();
+          try {
+            const board = await fetchLeaderboard({
+              period: 'month',
+              limit: 10,
+              playerId: getPlayerId(),
+            });
+            if (cancelled) return;
+            unlockSeasonFromRank(board.viewer?.rank ?? null);
+            // Re-push badges after rank enrichment
+            void pushAccountProgress();
+          } catch {
+            // ignore rank enrichment failures
+          }
+        })
+        .catch(() => {});
+    }
 
     // Streak + achievements (after local unlock effect has run)
     const syncTimer = window.setTimeout(() => {
@@ -157,6 +162,7 @@ export function useResultScreenEffects({
     result.totalQuestions,
     result.timeTakenSeconds,
     displayName,
+    classeMode,
   ]);
 
   // Confetti for perfect scores
