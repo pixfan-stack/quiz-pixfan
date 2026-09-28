@@ -4,11 +4,12 @@ import redirects from '../../public/_redirects?raw';
 import headers from '../../public/_headers?raw';
 
 describe('sitemap / SEO hygiene', () => {
-  it('is well-formed XML with current lastmod and flash-studio', () => {
+  it('is well-formed XML with current lastmod and lexique-image-fixe', () => {
     expect(sitemap.startsWith('<?xml')).toBe(true);
     expect(sitemap).toContain('<urlset');
     expect(sitemap).toContain('https://quiz.pixfan.fr/s/marques-photo');
     expect(sitemap).toContain('https://quiz.pixfan.fr/s/flash-studio');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/s/lexique-image-fixe');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/');
     expect(sitemap).toContain(
       'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html'

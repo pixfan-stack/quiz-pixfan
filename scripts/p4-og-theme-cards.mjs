@@ -26,6 +26,7 @@ const THEMES = [
   ['portrait-light', 'Portrait & light', 'Portrait & lumière'],
   ['marques-photo', 'Brand history', 'Histoire des marques'],
   ['flash-studio', 'Flash & studio', 'Flash & studio'],
+  ['lexique-image-fixe', 'Still-image lexicon', 'Lexique image fixe'],
   ['daily', 'Daily challenge', 'Défi du jour'],
   ['duel', 'Friend duel', 'Duel entre amis'],
   ['random', 'Random mix', 'Mix aléatoire'],
