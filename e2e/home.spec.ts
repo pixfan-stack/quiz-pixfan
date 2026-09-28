@@ -24,7 +24,7 @@ test.describe('Homepage', () => {
     await expect(page.locator(CATEGORY_CARD)).toHaveCount(14);
   });
 
-  it('copies daily link without starting a quiz; duel has no scoreless invite', async ({
+  test('copies daily link without starting a quiz; duel has no scoreless invite', async ({
     page,
     context,
   }) => {
