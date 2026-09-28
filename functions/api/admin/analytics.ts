@@ -62,7 +62,8 @@ type HabitEventName =
   | 'scolaires_parcours_c3_decouvrir'
   | 'scolaires_parcours_c4_regard'
   | 'scolaires_parcours_c4_lumiere'
-  | 'scolaires_parcours_c4_emi_droits';
+  | 'scolaires_parcours_c4_emi_droits'
+  | 'scolaires_parcours_lycee_pratique';
 
 const HABIT_EVENTS = new Set<HabitEventName>([
   'reminder_on',
@@ -80,6 +81,7 @@ const HABIT_EVENTS = new Set<HabitEventName>([
   'scolaires_parcours_c4_regard',
   'scolaires_parcours_c4_lumiere',
   'scolaires_parcours_c4_emi_droits',
+  'scolaires_parcours_lycee_pratique',
 ]);
 
 /** Exclude CTA + habit markers from real quiz attempt aggregates. */
@@ -193,6 +195,7 @@ function buildHabitEvents(
     'scolaires_parcours_c4_regard',
     'scolaires_parcours_c4_lumiere',
     'scolaires_parcours_c4_emi_droits',
+    'scolaires_parcours_lycee_pratique',
   ];
   return order
     .filter((e) => (map.get(e) ?? 0) > 0)

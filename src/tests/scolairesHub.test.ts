@@ -3,24 +3,31 @@ import hub from '../../public/guides/scolaires/index.html?raw';
 import fiche from '../../public/guides/scolaires/fiche-seance.html?raw';
 import guidesIndex from '../../public/guides/index.html?raw';
 import genresGuide from '../../public/guides/genres-photo.html?raw';
+import retoucheGuide from '../../public/guides/retouche-lightroom.html?raw';
 
-describe('scolaires P0+P1 hub', () => {
-  it('ships FR hub with H1, 4 parcours, classe séance links, MEN disclaimer', () => {
+describe('scolaires P0–P2 hub', () => {
+  it('ships FR hub with H1, 5 parcours, classe séance links, MEN disclaimer', () => {
     expect(hub).toContain('<h1>Scolaires — photo &amp; programme officiel</h1>');
     expect(hub).toContain('id="c3-decouvrir"');
     expect(hub).toContain('id="c4-regard"');
     expect(hub).toContain('id="c4-lumiere"');
     expect(hub).toContain('id="c4-emi-droits"');
+    expect(hub).toContain('id="lycee-pratique"');
     expect(hub).toContain('/s/genres?classe=1');
     expect(hub).toContain('/s/photo-reading?classe=1');
     expect(hub).toContain('/s/exposure-basics?classe=1');
     expect(hub).toContain('/s/photo-rights?classe=1');
+    expect(hub).toContain('/s/portrait-light?classe=1');
+    expect(hub).toContain('/s/lexique-image-fixe?classe=1');
     expect(hub).toContain('Pas d’affiliation au ministère');
     expect(hub).toContain('rel="canonical" href="https://quiz.pixfan.fr/guides/scolaires/"');
     expect(hub).toContain("trackEvt('scolaires_hub')");
     expect(hub).toContain('scolaires_parcours_c3_decouvrir');
+    expect(hub).toContain('scolaires_parcours_lycee_pratique');
     expect(hub).toContain('/guides/scolaires/fiche-seance.html');
     expect(hub).toContain('/#/scolaires');
+    expect(hub).toContain('id="corpus-bac"');
+    expect(hub).toContain('eduscol.education.fr');
     expect(hub).toContain('guides.css');
     expect(hub).toContain('theme.js');
   });
@@ -30,7 +37,9 @@ describe('scolaires P0+P1 hub', () => {
     expect(fiche).toContain('window.print()');
     expect(fiche).toContain('id="c3-decouvrir"');
     expect(fiche).toContain('id="c4-regard"');
+    expect(fiche).toContain('id="lycee-pratique"');
     expect(fiche).toContain('/s/genres?classe=1');
+    expect(fiche).toContain('/s/portrait-light?classe=1');
     expect(fiche).toContain('Contenu original PixFan');
   });
 
@@ -39,7 +48,8 @@ describe('scolaires P0+P1 hub', () => {
     expect(guidesIndex).toContain('Scolaires');
   });
 
-  it('links cycle 3 from genres guide', () => {
+  it('links cycle 3 from genres guide and lycée from retouche guide', () => {
     expect(genresGuide).toContain('/guides/scolaires/#c3-decouvrir');
+    expect(retoucheGuide).toContain('/guides/scolaires/#lycee-pratique');
   });
 });
