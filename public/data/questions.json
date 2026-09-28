@@ -277,7 +277,16 @@
             "en": "Each full stop halves the light. From f/2.8 → f/4 → f/5.6 is two stops smaller (less light, more depth of field).",
             "fr": "Chaque stop plein divise la lumière par deux. De f/2.8 → f/4 → f/5.6 : deux stops de moins de lumière, plus de profondeur de champ."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
+          "imageAlt": {
+            "en": "Mountain ridges with deep focus — stopping down for more depth of field",
+            "fr": "Crêtes de montagne nettes — fermer le diaphragme pour plus de profondeur de champ"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-6",
@@ -378,7 +387,16 @@
             "en": "Underexposure means insufficient light reaches the sensor, causing shadow detail loss and potential clipping to pure black.",
             "fr": "La sous-exposition signifie qu'il y a insuffisance de lumière sur le capteur, causant une perte de détail dans les ombres et un écrêtage potentiel sur le noir pur."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
+          "imageAlt": {
+            "en": "Moody dark landscape — underexposure crushed shadows",
+            "fr": "Paysage sombre d’ambiance — sous-exposition qui écrase les ombres"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-8",
@@ -564,7 +582,16 @@
             "en": "ND filters act like sunglasses for your lens, reducing light intake uniformly across the spectrum, enabling slow shutter speeds even in bright conditions.",
             "fr": "Les filtres ND agissent comme des lunettes de soleil pour votre objectif, réduisant uniformément l'entrée de lumière, permettant des vitesses d'obturation lentes même en conditions lumineuses."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1493246507139-91e8fad9978e.avif",
+          "imageAlt": {
+            "en": "Bright daylight vista — ND filter territory for longer exposures",
+            "fr": "Vue en plein jour — terrain filtre ND pour allonger l’exposition"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-12",
@@ -908,7 +935,16 @@
             "en": "Exposure compensation lets you bias the camera's metering toward brighter (+) or darker (-) exposures, useful for high-key or low-key scenes.",
             "fr": "La compensation d'exposition vous permet d'orienter la mesure vers des expositions plus claires (+) ou plus sombres (-), utile pour les scènes haute clé ou basse clé."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1495616811223-4d98c6e9c869.avif",
+          "imageAlt": {
+            "en": "Bright reflective water at sunset — exposure compensation judgment",
+            "fr": "Eau réfléchissante au coucher de soleil — jugement de compensation d’exposition"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-19",
@@ -954,7 +990,16 @@
             "en": "Bracketing takes multiple shots at different exposures, ensuring at least one is optimal and enabling HDR blending or safety nets.",
             "fr": "Le bracketing prend plusieurs photos à différentes expositions, garantissant qu'au moins une est optimale et permettant le fusion HDR ou des sauvegardes."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1470252649378-9c29740c9fa8.avif",
+          "imageAlt": {
+            "en": "High-contrast sunrise through trees — classic bracketing scene",
+            "fr": "Lever de soleil à fort contraste à travers les arbres — scène de bracketing classique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "exp-20",
@@ -3710,7 +3755,16 @@
             "en": "Color grading shapes the visual tone and emotion of an image or film, going beyond simple white balance correction.",
             "fr": "Le color grading façonne le ton visuel et l'émotion d'une image ou film, allant au-delà de la simple correction de balance des blancs."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1499750310107-5fef28a66643.avif",
+          "imageAlt": {
+            "en": "Laptop on a desk — color grading in post territory",
+            "fr": "Portable sur un bureau — terrain étalonnage / color grading en post"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "light-10",
@@ -4361,6 +4415,15 @@
           "explanation": {
             "en": "Two color temperatures in one shot create orange/blue fights. Pick a hero light or gel/correct one source.",
             "fr": "Deux températures de couleur = guerre orange/bleu. Choisis une lumière dominante ou corrige/gélatine une source."
+          },
+          "imageUrl": "/images/packs/photo-1554118811-1e0d58224f24.avif",
+          "imageAlt": {
+            "en": "Warm indoor cafe light mixed with cooler ambience — mixed WB challenge",
+            "fr": "Lumière chaude de café mixée à une ambiance plus froide — défi balance des blancs"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -4893,7 +4956,16 @@
             "en": "IS/OSS/VRI compensates for small camera movements, allowing sharper images at shutter speeds 2-5 stops slower than normal.",
             "fr": "L'IS/OSS/VRI compense les petits mouvements de l'appareil, permettant des images plus nettes à des vitesses d'obturation 2-5 stops plus lentes que la normale."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
+          "imageAlt": {
+            "en": "Handheld camera outdoors — image stabilization vs shutter speed",
+            "fr": "Appareil tenu à main levée — stabilisation vs vitesse d’obturation"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-8",
@@ -5099,7 +5171,16 @@
             "en": "Mirrorless cameras excel in size, AF innovation, and EVF features. DSLRs often still lead in battery longevity.",
             "fr": "Les appareils sans miroir excellent en taille, innovation AF et fonctionnalités VE. Les reflex mènent souvent encore en longévité de batterie."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
+          "imageAlt": {
+            "en": "Modern camera body close-up — mirrorless vs DSLR ergonomics",
+            "fr": "Boîtier moderne en gros plan — ergonomie mirrorless vs reflex"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gear-12",
@@ -8469,7 +8550,16 @@
             "en": "Sports photography demands technical skill, anticipation, and adaptability to changing conditions.",
             "fr": "La photographie sportive exige une compétence technique, une anticipation et une adaptabilité aux conditions changeantes."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1552674605-db6ffd4facb5.avif",
+          "imageAlt": {
+            "en": "Athlete in motion — sports photography timing and shutter craft",
+            "fr": "Athlète en mouvement — timing et vitesse d’obturation en photo sport"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-8",
@@ -8673,7 +8763,16 @@
             "en": "Fashion photography sells lifestyle and aspiration, combining clothing presentation with artistic vision.",
             "fr": "La photographie de mode vend un style de vie et l'aspiration, combinant présentation de vêtements et vision artistique."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1515886657613-9f3515b0c78f.avif",
+          "imageAlt": {
+            "en": "Styled fashion pose — editorial fashion photography focus",
+            "fr": "Pose mode stylisée — focus photo de mode éditoriale"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-12",
@@ -8721,7 +8820,16 @@
             "en": "Architectural photography celebrates design through careful composition, perspective correction, and lighting.",
             "fr": "La photographie architecturale célèbre le design par une composition soignée, correction de perspective et éclairage."
           },
-          "difficulty": "easy"
+          "difficulty": "easy",
+          "imageUrl": "/images/packs/photo-1452421822248-d4c2b47f0c81.avif",
+          "imageAlt": {
+            "en": "Built environment lines — architectural photography geometry",
+            "fr": "Lignes du bâti — géométrie de la photo d’architecture"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-13",
@@ -9047,7 +9155,16 @@
             "en": "Drones democratized aerial photography, enabling unique perspectives for real estate, landscape, and event coverage.",
             "fr": "Les drones ont démocratisé la photographie aérienne, permettant des perspectives uniques pour l'immobilier, paysage et couverture d'événements."
           },
-          "difficulty": "medium"
+          "difficulty": "medium",
+          "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
+          "imageAlt": {
+            "en": "Elevated landscape overlook — drone / aerial photography viewpoint",
+            "fr": "Vue surélevée sur un paysage — point de vue drone / aérien"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         },
         {
           "id": "gen-20",
@@ -9510,6 +9627,15 @@
           "explanation": {
             "en": "Parallel planes prevent keystoning; shift lenses help when you can’t back up.",
             "fr": "Des plans parallèles évitent le keystone ; le shift aide quand on ne peut pas reculer."
+          },
+          "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
+          "imageAlt": {
+            "en": "Tall city verticals at night — architecture interior/exterior lean control",
+            "fr": "Verticales urbaines la nuit — contrôle des fuyantes en architecture"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
