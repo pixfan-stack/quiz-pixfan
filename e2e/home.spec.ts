@@ -24,7 +24,7 @@ test.describe('Homepage', () => {
     await expect(page.locator(CATEGORY_CARD)).toHaveCount(14);
   });
 
-  test('copies daily link without starting a quiz; duel has no scoreless invite', async ({
+  it('copies daily link without starting a quiz; duel has no scoreless invite', async ({
     page,
     context,
   }) => {
@@ -42,7 +42,18 @@ test.describe('Homepage', () => {
     ).toHaveCount(0);
   });
 
-
+  test('opens #/scolaires from home chip and returns home', async ({ page }) => {
+    await expect(page.getByTestId('scolaires-home-chip')).toBeVisible({
+      timeout: 8000,
+    });
+    await page.getByTestId('scolaires-home-chip').locator('button').click();
+    await expect(page.getByTestId('scolaires-screen')).toBeVisible({
+      timeout: 8000,
+    });
+    expect(page.url()).toContain('#/scolaires');
+    await page.getByRole('button', { name: /retour à l’accueil|back to home/i }).click();
+    await expect(page.getByTestId('scolaires-home-chip')).toBeVisible();
+  });
 
   test('displays quiz titles in French by default', async ({ page }) => {
     const firstCard = page.locator('.quiz-card').first();

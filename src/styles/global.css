@@ -1373,6 +1373,135 @@ a {
   color: var(--color-text);
 }
 
+.scolaires-home-chip {
+  max-width: var(--max-width);
+  margin: 0 auto 1rem;
+}
+
+.scolaires-home-chip__btn {
+  appearance: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--pixfan-pink) 28%, var(--color-border));
+  background: color-mix(in srgb, var(--pixfan-pink) 6%, var(--color-surface));
+  color: var(--color-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.scolaires-home-chip__btn:hover {
+  border-color: var(--pixfan-pink);
+  background: color-mix(in srgb, var(--pixfan-pink) 12%, var(--color-surface));
+}
+
+.scolaires-home-chip__label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.scolaires-home-chip__hint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.scolaires {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 0 1.5rem;
+}
+
+.scolaires__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.scolaires__list {
+  list-style: none;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.scolaires__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.scolaires__card-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.scolaires__mins {
+  font-weight: 500;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.scolaires__card-desc {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.scolaires__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.scolaires__links .cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.scolaires__links .cta-secondary:hover {
+  border-color: var(--pixfan-pink);
+}
+
+.quiz-card__meta-chip--scolaires,
+.difficulty-chip--scolaires.is-active {
+  color: #fff;
+}
+
+.quiz-card__meta-chip--scolaires {
+  background: color-mix(in srgb, var(--pixfan-pink) 85%, #000);
+  border-color: transparent;
+  color: #fff;
+}
+
+.difficulty-chip--scolaires:not(.is-active) {
+  border-color: color-mix(in srgb, var(--pixfan-pink) 40%, var(--color-border));
+  color: var(--pixfan-pink);
+}
+
 .duel-outcome {
   margin: 1rem 0 0;
   padding: 0.85rem 1rem;

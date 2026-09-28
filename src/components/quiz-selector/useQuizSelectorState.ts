@@ -35,8 +35,8 @@ import {
 } from '../../utils/mistakeVault';
 import {
   buildDifficultyMix,
-  filterQuizzesByDifficulty,
 } from '../../utils/difficulty';
+import { filterQuizzesByPackFilter, type PackFilter } from '../../utils/packFilter';
 import { buildDuelQuiz, createDuelSeed, getDuelPhotoTeaser } from '../../utils/duel';
 import {
   getDisplayDailyStreak,
@@ -49,7 +49,7 @@ import {
 } from '../../utils/photoReading';
 import { socialShareUrl } from '../../utils/share';
 import { localGuideUrlForDailyTheme } from '../../utils/pixfanCta';
-import type { DifficultyFilter, QuizSelectorProps, QuizWithScore } from './types';
+import type { QuizSelectorProps, QuizWithScore } from './types';
 
 type UseQuizSelectorStateArgs = Pick<
   QuizSelectorProps,
@@ -80,7 +80,7 @@ export function useQuizSelectorState({
   const [leaderboardQuizId, setLeaderboardQuizId] = useState<string | undefined>(undefined);
   const [playCounts, setPlayCounts] = useState<Map<string, number>>(new Map());
   const [morePacksOpen, setMorePacksOpen] = useState(false);
-  const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>('all');
+  const [difficultyFilter, setDifficultyFilter] = useState<PackFilter>('all');
   const [dailyLinkCopied, setDailyLinkCopied] = useState(false);
   const [reminderOn, setReminderOn] = useState(() => isDailyReminderEnabled());
   const dailyStreak = getDisplayDailyStreak();
@@ -170,7 +170,7 @@ export function useQuizSelectorState({
   };
 
   const visibleQuizzes = useMemo(
-    () => filterQuizzesByDifficulty(quizzes, difficultyFilter),
+    () => filterQuizzesByPackFilter(quizzes, difficultyFilter),
     [quizzes, difficultyFilter]
   );
 
@@ -253,7 +253,13 @@ export function useQuizSelectorState({
   };
 
   const handleStartDifficultyMix = () => {
-    if (quizzes.length === 0 || difficultyFilter === 'all') return;
+    if (
+      quizzes.length === 0 ||
+      difficultyFilter === 'all' ||
+      difficultyFilter === 'scolaires'
+    ) {
+      return;
+    }
     handleStartQuiz(buildDifficultyMix(quizzes, difficultyFilter));
   };
 

@@ -12,7 +12,9 @@ import {
 } from '../../utils/mastery';
 import type { getHighScore } from '../../utils/highscore';
 import type { fetchRemoteHighScore } from '../../utils/highscoreApi';
-import { QUIZ_ICONS, type DifficultyFilter } from './types';
+import { quizHasScolairesTag } from '../../utils/scolaires';
+import { QUIZ_ICONS } from './types';
+import type { PackFilter } from '../../utils/packFilter';
 
 type BestScore =
   | ReturnType<typeof getHighScore>
@@ -21,8 +23,8 @@ type BestScore =
 interface MorePacksSectionProps {
   morePacksOpen: boolean;
   setMorePacksOpen: (value: boolean | ((prev: boolean) => boolean)) => void;
-  difficultyFilter: DifficultyFilter;
-  setDifficultyFilter: (value: DifficultyFilter) => void;
+  difficultyFilter: PackFilter;
+  setDifficultyFilter: (value: PackFilter) => void;
   visibleQuizzes: Quiz[];
   quizzes: Quiz[];
   playCounts: Map<string, number>;
@@ -76,29 +78,38 @@ export function MorePacksSection({
           role="group"
           aria-label={t('home.difficultyFilter')}
         >
-          {(['all', 'easy', 'medium', 'hard'] as const).map((level) => {
-            if (level !== 'all') {
-              const count = quizzes.filter(
-                (q) => deriveQuizDifficulty(q) === level
-              ).length;
-              if (count === 0) return null;
+          {(['all', 'scolaires', 'easy', 'medium', 'hard'] as const).map(
+            (level) => {
+              if (level === 'easy' || level === 'medium' || level === 'hard') {
+                const count = quizzes.filter(
+                  (q) => deriveQuizDifficulty(q) === level
+                ).length;
+                if (count === 0) return null;
+              }
+              if (level === 'scolaires') {
+                const count = quizzes.filter(quizHasScolairesTag).length;
+                if (count === 0) return null;
+              }
+              return (
+                <button
+                  key={level}
+                  type="button"
+                  className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}${level === 'scolaires' ? ' difficulty-chip--scolaires' : ''}`}
+                  onClick={() => {
+                    setDifficultyFilter(level);
+                    if (level !== 'all') setMorePacksOpen(true);
+                  }}
+                  aria-pressed={difficultyFilter === level}
+                >
+                  {level === 'scolaires'
+                    ? t('home.filterScolaires')
+                    : t(`home.difficulty_${level}`)}
+                </button>
+              );
             }
-            return (
-              <button
-                key={level}
-                type="button"
-                className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}`}
-                onClick={() => {
-                  setDifficultyFilter(level);
-                  if (level !== 'all') setMorePacksOpen(true);
-                }}
-                aria-pressed={difficultyFilter === level}
-              >
-                {t(`home.difficulty_${level}`)}
-              </button>
-            );
-          })}
-          {difficultyFilter !== 'all' && (
+          )}
+          {difficultyFilter !== 'all' &&
+            difficultyFilter !== 'scolaires' && (
             <button
               type="button"
               className="btn btn--ghost btn--small"
@@ -244,6 +255,11 @@ export function MorePacksSection({
                       >
                         {t(`home.difficulty_${difficulty}`)}
                       </span>
+                      {quizHasScolairesTag(quiz) && (
+                        <span className="quiz-card__meta-chip quiz-card__meta-chip--scolaires">
+                          {t('home.badgeScolaires')}
+                        </span>
+                      )}
                       {masteryKey && (
                         <span
                           className={`quiz-card__meta-chip quiz-card__meta-chip--mastery is-${mastery}`}

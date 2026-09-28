@@ -53,6 +53,11 @@ export interface Quiz {
   questions: Question[];
   /** Overall quiz difficulty used for filters and badges. */
   difficulty?: Difficulty;
+  /**
+   * Optional curation tags (e.g. `scolaires`, `c3`, `c4`).
+   * Metadata only — does not change questions.
+   */
+  tags?: string[];
 }
 
 export interface QuizzesData {

@@ -228,6 +228,19 @@ function validateQuiz(
     ok = false;
   }
 
+  if (value.tags != null) {
+    if (
+      !Array.isArray(value.tags) ||
+      !value.tags.every((tag) => typeof tag === 'string' && tag.trim().length > 0)
+    ) {
+      issues.push({
+        path: `${path}.tags`,
+        message: 'must be an array of non-empty strings',
+      });
+      ok = false;
+    }
+  }
+
   if (!Array.isArray(value.questions) || value.questions.length === 0) {
     issues.push({
       path: `${path}.questions`,

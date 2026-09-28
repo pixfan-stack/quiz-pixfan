@@ -14,6 +14,9 @@ describe('habitAnalytics', () => {
     expect(habitEventQuizId('reminder_on')).toBe('evt:reminder_on');
     expect(habitEventQuizId('ics_download')).toBe('evt:ics_download');
     expect(habitEventQuizId('scolaires_hub')).toBe('evt:scolaires_hub');
+    expect(habitEventQuizId('scolaires_parcours_c3_decouvrir')).toBe(
+      'evt:scolaires_parcours_c3_decouvrir'
+    );
     expect(isHabitEventQuizId('evt:pwa_install')).toBe(true);
     expect(isHabitEventQuizId('cta:guide:light:x')).toBe(false);
     expect(parseHabitEventQuizId('evt:account_create')).toBe('account_create');
