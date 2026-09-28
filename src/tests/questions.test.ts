@@ -35,10 +35,11 @@ describe('questions.json', () => {
     'lightroom-workflow',
     'portrait-light',
     'marques-photo',
+    'flash-studio',
   ] as const;
 
-  it('has exactly 13 category quizzes', () => {
-    expect(data.quizzes.length).toBe(13);
+  it('has exactly 14 category quizzes', () => {
+    expect(data.quizzes.length).toBe(14);
   });
 
   it('keeps a solid question count per quiz', () => {
@@ -211,6 +212,7 @@ describe('questions.json', () => {
     'photo-rights',
     'portrait-light',
     'marques-photo',
+    'flash-studio',
   ] as const)('%s has illustrated questions with credits (P4 densify)', (id) => {
     const quiz = data.quizzes.find((q) => q.id === id);
     expect(quiz).toBeDefined();
@@ -316,6 +318,26 @@ describe('questions.json', () => {
     }
     // Prefer founding / systems facts — no "best brand" marketing
     expect(blob).not.toMatch(/best (camera )?brand|meilleure marque/);
+  });
+
+  it('flash-studio quiz is a solid Pixfan flash & studio pack', () => {
+    const quiz = data.quizzes.find((q) => q.id === 'flash-studio');
+    expect(quiz).toBeDefined();
+    expect(quiz!.difficulty).toBe('medium');
+    expect(quiz!.questions.length).toBeGreaterThanOrEqual(20);
+    expect(quiz!.questions.length).toBeLessThanOrEqual(26);
+    const illustrated = quiz!.questions.filter((q) => q.imageUrl);
+    expect(illustrated.length / quiz!.questions.length).toBeGreaterThanOrEqual(
+      0.55
+    );
+    expect(quiz!.title.fr).toMatch(/flash/i);
+    expect(quiz!.title.en).toMatch(/flash/i);
+    expect(quiz!.description.en.toLowerCase()).toContain('pixfan');
+    expect(quiz!.description.fr.toLowerCase()).toContain('pixfan');
+    const blob = JSON.stringify(quiz).toLowerCase();
+    for (const term of ['ttl', 'softbox', 'hss', 'sync'] as const) {
+      expect(blob).toContain(term);
+    }
   });
 
   it('exposes at least one hard pack for the difficulty filter', () => {

@@ -4,11 +4,12 @@ import redirects from '../../public/_redirects?raw';
 import headers from '../../public/_headers?raw';
 
 describe('sitemap / SEO hygiene', () => {
-  it('is well-formed XML with current lastmod and marques-photo', () => {
+  it('is well-formed XML with current lastmod and flash-studio', () => {
     expect(sitemap.startsWith('<?xml')).toBe(true);
     expect(sitemap).toContain('<urlset');
     expect(sitemap).toContain('https://quiz.pixfan.fr/s/marques-photo');
-    expect(sitemap).toContain('<lastmod>2026-09-27</lastmod>');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/s/flash-studio');
+    expect(sitemap).toContain('<lastmod>2026-09-28</lastmod>');
     expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
   });
 

@@ -83,7 +83,13 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
     return 'exposure';
   }
   if (quizId === 'composition') return 'composition';
-  if (quizId === 'light-color' || quizId === 'portrait-light') return 'light';
+  if (
+    quizId === 'light-color' ||
+    quizId === 'portrait-light' ||
+    quizId === 'flash-studio'
+  ) {
+    return 'light';
+  }
   if (quizId === 'gear-lenses') return 'gear';
   if (
     quizId === 'history-icons' ||

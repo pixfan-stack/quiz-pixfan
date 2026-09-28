@@ -20,6 +20,7 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('photo-rights')).toBe('rights');
     expect(resolvePixfanTopic('light-color')).toBe('light');
     expect(resolvePixfanTopic('portrait-light')).toBe('light');
+    expect(resolvePixfanTopic('flash-studio')).toBe('light');
     expect(resolvePixfanTopic('marques-photo')).toBe('history');
     expect(resolvePixfanTopic('history-icons')).toBe('history');
   });
@@ -128,6 +129,12 @@ describe('pixfanCta', () => {
     expect(brands.topic).toBe('history');
     expect(brands.primaryTarget).toBe('guide');
     expect(brands.primaryUrl).toContain('/guides/histoire-photo');
+
+    const flashStudio = getPixfanCta('flash-studio');
+    expect(flashStudio.topic).toBe('light');
+    expect(flashStudio.primaryTarget).toBe('guide');
+    expect(flashStudio.primaryUrl).toContain('/guides/lumiere-photo');
+    expect(flashStudio.secondaryTarget).toBe('pixfan');
 
     const mixHard = getPixfanCta('mix-hard');
     expect(mixHard.topic).toBe('history');

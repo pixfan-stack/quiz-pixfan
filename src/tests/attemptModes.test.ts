@@ -19,6 +19,7 @@ describe('functions/lib/attemptModes', () => {
       'duel-abcd2345',
       'exposure-basics',
       'marques-photo',
+      'flash-studio',
       'mix-easy',
       'mix-medium',
       'mix-hard',

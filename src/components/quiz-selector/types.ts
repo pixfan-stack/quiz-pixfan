@@ -26,6 +26,7 @@ export const QUIZ_ICONS: Record<string, string> = {
   'lightroom-workflow': '🖥️',
   'portrait-light': '💡',
   'marques-photo': '🏷️',
+  'flash-studio': '⚡',
 };
 
 export interface QuizWithScore {
