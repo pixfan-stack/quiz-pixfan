@@ -131,6 +131,7 @@ export function ResultScreen({
   });
 
   const showWeakSpotsCta =
+    !classeMode &&
     Boolean(onPlayWeakSpots) &&
     !isWeakSpotsQuizId(result.quizId) &&
     (getMistakeVaultCount() > 0 || vaultSaved > 0);
@@ -289,23 +290,24 @@ export function ResultScreen({
             quizId={result.quizId}
           />
 
-          <ResultShareSection
-            isDaily={isDaily}
-            isDuel={isDuel}
-            quizzesLength={classeMode ? 0 : quizzes.length}
-            hideChallenge={classeMode}
-            gridCopied={gridCopied}
-            challengeCopied={challengeCopied}
-            linkCopied={linkCopied}
-            shareFallbackCopied={shareFallbackCopied}
-            onCopyDailyGrid={handleCopyDailyGrid}
-            onChallengeFriend={handleChallengeFriend}
-            onCopyDuelLink={handleCopyDuelLink}
-            onNativeShare={handleNativeShare}
-            onExportImage={handleExportImage}
-            onShare={handleShare}
-            t={t}
-          />
+          {!classeMode && (
+            <ResultShareSection
+              isDaily={isDaily}
+              isDuel={isDuel}
+              quizzesLength={quizzes.length}
+              gridCopied={gridCopied}
+              challengeCopied={challengeCopied}
+              linkCopied={linkCopied}
+              shareFallbackCopied={shareFallbackCopied}
+              onCopyDailyGrid={handleCopyDailyGrid}
+              onChallengeFriend={handleChallengeFriend}
+              onCopyDuelLink={handleCopyDuelLink}
+              onNativeShare={handleNativeShare}
+              onExportImage={handleExportImage}
+              onShare={handleShare}
+              t={t}
+            />
+          )}
 
           {isDaily && !classeMode ? <DailyReminderPrompt /> : null}
 
