@@ -25,6 +25,17 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('flash-studio')).toBe('light');
     expect(resolvePixfanTopic('marques-photo')).toBe('history');
     expect(resolvePixfanTopic('history-icons')).toBe('history');
+    expect(resolvePixfanTopic('photo-reading')).toBe('composition');
+  });
+
+  it('targets composition guide for photo-reading (not beginner default)', () => {
+    expect(resolvePixfanTopic('photo-reading')).not.toBe('default');
+    const photoReading = getPixfanCta('photo-reading');
+    expect(photoReading.topic).toBe('composition');
+    expect(photoReading.primaryTarget).toBe('guide');
+    expect(photoReading.primaryUrl).toContain('/guides/composition-photo');
+    expect(photoReading.primaryUrl).toContain('utm_campaign=photo-reading');
+    expect(photoReading.secondaryTarget).toBe('pixfan');
   });
 
   it('targets rights guide for lexique-image-fixe (not beginner default)', () => {

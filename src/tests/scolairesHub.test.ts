@@ -59,6 +59,23 @@ describe('scolaires P0–P2 hub', () => {
     expect(fiche).toContain('Contenu original PixFan');
   });
 
+  it('ships fiche EN article + lang switcher + hreflang (vague 1.21 P1)', () => {
+    expect(fiche).toContain('class="lang-switcher"');
+    expect(fiche).toContain('href="?lang=fr"');
+    expect(fiche).toContain('href="?lang=en"');
+    expect(fiche).toContain('hreflang="en"');
+    expect(fiche).toContain('hreflang="fr"');
+    expect(fiche).toContain('hreflang="x-default"');
+    expect(fiche).toContain('<h1>Lesson sheet — Schools Quiz PixFan</h1>');
+    expect(fiche).toContain('class="en"');
+    expect(fiche).toContain('class="fr"');
+    expect(fiche).toContain('id="grille-duree-en"');
+    expect(fiche).toContain('Name a portrait, a landscape');
+    expect(fiche).toContain('Where does honest retouching stop');
+    expect(fiche).toContain('document.documentElement.lang');
+    expect(hub).toContain('/guides/scolaires/fiche-seance.html?lang=en');
+  });
+
   it('ships fiche timing grid + one débrief prompt per parcours (vague 1.19 P2)', () => {
     expect(fiche).toContain('id="grille-duree"');
     expect(fiche).toContain('class="fiche-timing"');

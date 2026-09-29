@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fiche séance Scolaires | Quiz PixFan</title>
-  <meta name="description" content="Fiche séance imprimable Quiz PixFan — parcours scolaires cycle 3–4 et EMI. Contenu original PixFan, alignement pédagogique BO 2020." />
+  <meta name="description" content="Fiche séance imprimable Quiz PixFan — parcours scolaires cycle 3–4 et EMI. Contenu original PixFan, alignement pédagogique BO 2020. FR/EN." />
   <link rel="canonical" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />
+  <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=fr" />
+  <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <meta name="theme-color" content="#f3538c" />
   <meta name="robots" content="index,follow" />
@@ -70,6 +73,7 @@
       .app-footer,
       .fiche-actions,
       .breadcrumb,
+      .lang-switcher,
       .no-print {
         display: none !important;
       }
@@ -101,6 +105,12 @@
       }
     }
   </style>
+  <script>
+    (function () {
+      var p = new URLSearchParams(location.search).get('lang');
+      if (p === 'en' || p === 'fr') document.documentElement.lang = p;
+    })();
+  </script>
   <script src="/guides/theme.js"></script>
 </head>
 <body>
@@ -113,6 +123,10 @@
     </div>
     <div class="app-header__controls">
       <a class="guide-nav-link" href="/guides/scolaires/">Scolaires</a>
+      <nav class="lang-switcher" aria-label="Language">
+        <a class="lang-switcher__btn" href="?lang=fr">FR</a>
+        <a class="lang-switcher__btn" href="?lang=en">EN</a>
+      </nav>
       <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Mode nuit" title="Mode nuit">🌙</button>
     </div>
   </header>
@@ -123,7 +137,7 @@
       <span class="breadcrumb__current">Fiche séance</span>
     </nav>
 
-    <article>
+    <article class="fr">
       <h1>Fiche séance — Scolaires Quiz PixFan</h1>
       <p class="lead">Une page pour préparer et projeter une séance (15–30&nbsp;min). Contenu original PixFan — alignement pédagogique BOEN n°31 du 30 juillet 2020, sans affiliation MEN. Inclut le parcours lycée.</p>
       <div class="fiche-actions">
@@ -217,6 +231,102 @@
       </div>
 
       <p class="muted" style="margin-top:1rem">Quiz PixFan — contenu original. Pas de reproduction de manuels ni de corpus limitatif bac. Hub : https://quiz.pixfan.fr/guides/scolaires/</p>
+    </article>
+
+    <article class="en">
+      <h1>Lesson sheet — Schools Quiz PixFan</h1>
+      <p class="lead">One page to prepare and project a lesson (15–30&nbsp;min). Original PixFan content — pedagogical alignment with BOEN no.&nbsp;31 of 30 July 2020, no MEN affiliation. Includes the lycée path.</p>
+      <div class="fiche-actions">
+        <button type="button" class="cta" onclick="window.print()">Print / PDF</button>
+        <a class="cta-secondary" href="/guides/scolaires/?lang=en">Back to hub</a>
+      </div>
+
+      <p class="fiche-meta"><strong>Equipment:</strong> smartphone, tablet or computer · browser · Wi‑Fi (or PWA already installed). <strong>Class mode:</strong> links below open the quiz with no public leaderboard (<code>?classe=1</code>).</p>
+
+      <table class="fiche-timing" id="grille-duree-en" aria-label="Path timing grid">
+        <thead>
+          <tr>
+            <th>Path</th>
+            <th>Duration</th>
+            <th>Guide</th>
+            <th>Quiz</th>
+            <th>Debrief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Discover photography (C3)</td><td>~15&nbsp;min</td><td>2–3</td><td>8–10</td><td>2–3</td></tr>
+          <tr><td>Reading an image (C4)</td><td>~20&nbsp;min</td><td>3–4</td><td>12–14</td><td>3–4</td></tr>
+          <tr><td>Light &amp; photo</td><td>~25&nbsp;min</td><td>4–5</td><td>14–16</td><td>3–4</td></tr>
+          <tr><td>Image rights (EMI)</td><td>~20&nbsp;min</td><td>3–4</td><td>10–12</td><td>4–5</td></tr>
+          <tr><td>Still-image practice (lycée)</td><td>~30&nbsp;min</td><td>3–5</td><td>18–22</td><td>4–5</td></tr>
+        </tbody>
+      </table>
+
+      <div class="fiche-grid">
+        <section class="fiche-block" id="c3-decouvrir-en">
+          <h3>1. Discover photography (cycle 3) · ~15&nbsp;min</h3>
+          <p class="fiche-meta">CM1–CM2–6ᵉ — image genres, simple vocabulary.</p>
+          <ol>
+            <li>Read / project the genres guide (2–3&nbsp;min).</li>
+            <li>Start the Genres quiz in class mode.</li>
+            <li>Option: 5 minutes of Photos to analyse.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> “Name a portrait, a landscape, and a street photo — what changes in the frame?”</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/genres?classe=1&amp;lang=en</p>
+        </section>
+
+        <section class="fiche-block" id="c4-regard-en">
+          <h3>2. Reading an image (cycle 4) · ~20&nbsp;min</h3>
+          <p class="fiche-meta">Frame, composition, point of view.</p>
+          <ol>
+            <li>Composition guide (key points on the board).</li>
+            <li>Photos to analyse quiz (class mode).</li>
+            <li>Composition quiz if time allows.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> “On 2 images that work or fail: where is the subject, from where do we look, what does the framing tell?”</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/photo-reading?classe=1&amp;lang=en</p>
+        </section>
+
+        <section class="fiche-block" id="c4-lumiere-en">
+          <h3>3. Light &amp; photography · ~25&nbsp;min</h3>
+          <p class="fiche-meta">Exposure, direction and quality of light.</p>
+          <ol>
+            <li>Light guide (or exposure triangle).</li>
+            <li>Exposure basics quiz.</li>
+            <li>Light &amp; colour quiz.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> “What intent (mood / contrast) could you aim for by changing only the light?”</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/exposure-basics?classe=1&amp;lang=en</p>
+        </section>
+
+        <section class="fiche-block" id="c4-emi-droits-en">
+          <h3>4. Image rights (EMI) · ~20&nbsp;min</h3>
+          <p class="fiche-meta">Privacy, publishing, media images.</p>
+          <ol>
+            <li>Rights &amp; ethics guide.</li>
+            <li>Photo rights quiz (class mode).</li>
+            <li>Recall pupils’ image rights (CLEMI) if real-world shooting.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> “Can we publish a class photo on a network? Who decides, and why?”</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/photo-rights?classe=1&amp;lang=en</p>
+        </section>
+
+        <section class="fiche-block" id="lycee-pratique-en">
+          <h3>5. Still-image practice (lycée) · ~30&nbsp;min</h3>
+          <p class="fiche-meta">Lycée / deeper label — portrait, flash, retouching.</p>
+          <ol>
+            <li>Option: Still-image lexicon (vocabulary, 12&nbsp;text Q).</li>
+            <li>Portrait &amp; light quiz (class mode).</li>
+            <li>Flash &amp; studio quiz.</li>
+            <li>Retouching guide → Retouching quiz.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> “Where does honest retouching stop? Name one gesture that informs and one that misleads.”</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/portrait-light?classe=1&amp;lang=en</p>
+          <p class="fiche-url">Lexicon: https://quiz.pixfan.fr/s/lexique-image-fixe?classe=1&amp;lang=en</p>
+        </section>
+      </div>
+
+      <p class="muted" style="margin-top:1rem">Quiz PixFan — original content. No textbook or limited baccalaureate corpus reproductions. Hub: https://quiz.pixfan.fr/guides/scolaires/?lang=en</p>
     </article>
   </main>
   <footer class="app-footer no-print">
