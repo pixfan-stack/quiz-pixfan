@@ -40,7 +40,7 @@ export interface AdminAnalyticsDashboard {
 }
 
 function emptyCta(): CtaAnalyticsBreakdown {
-  return { byTarget: [], byTopic: [], rows: [] };
+  return { byTarget: [], byTopic: [], bySlot: [], rows: [] };
 }
 
 function adminHeaders(): HeadersInit {
@@ -77,6 +77,9 @@ export async function fetchAdminAnalytics(): Promise<{
     // Older deployments may omit newer fields — keep UI resilient.
     if (!data.cta) {
       data.cta = emptyCta();
+    }
+    if (!Array.isArray(data.cta.bySlot)) {
+      data.cta.bySlot = [];
     }
     if (typeof data.summary?.ctaConversionPct !== 'number') {
       const attempts = data.summary?.totalAttempts ?? 0;

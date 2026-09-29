@@ -1,5 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { getPixfanCta, type PixfanCtaTarget } from '../utils/pixfanCta';
+import {
+  getPixfanCta,
+  type CtaSlot,
+  type PixfanCtaTarget,
+} from '../utils/pixfanCta';
 import { trackCtaClick } from '../utils/analyticsApi';
 
 interface PixfanCtaProps {
@@ -29,11 +33,15 @@ export function PixfanCta({
       ? `pixfan.topic_${cta.topic}_guideCta`
       : `pixfan.topic_${cta.topic}_cta`;
 
-  const onCtaClick = (target: PixfanCtaTarget) => {
+  const onCtaClick = (
+    target: PixfanCtaTarget,
+    slot: Exclude<CtaSlot, 'legacy'>
+  ) => {
     void trackCtaClick({
       sourceQuizId: quizId,
       target,
       topic: cta.topic,
+      slot,
     });
   };
 
@@ -57,7 +65,7 @@ export function PixfanCta({
           rel={
             cta.primaryTarget === 'guide' ? undefined : 'noopener noreferrer'
           }
-          onClick={() => onCtaClick(cta.primaryTarget)}
+          onClick={() => onCtaClick(cta.primaryTarget, 'primary')}
         >
           {t(primaryCtaKey)}
           <span aria-hidden="true"> →</span>
@@ -74,7 +82,7 @@ export function PixfanCta({
                 ? undefined
                 : 'noopener noreferrer'
             }
-            onClick={() => onCtaClick(cta.secondaryTarget!)}
+            onClick={() => onCtaClick(cta.secondaryTarget!, 'secondary')}
           >
             {cta.secondaryTarget === 'newsletter'
               ? t('pixfan.newsletterCta')
@@ -98,7 +106,7 @@ export function PixfanCta({
             href={cta.newsletterUrl}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => onCtaClick('newsletter')}
+            onClick={() => onCtaClick('newsletter', 'newsletter')}
           >
             {t('pixfan.newsletterCta')}
             <span aria-hidden="true"> →</span>

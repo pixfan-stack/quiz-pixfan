@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   buildAttemptModeCounts,
   buildHabitEventCounts,
+  buildScolairesFunnel,
   classifyAttemptMode,
   ctaConversionPct,
   habitEventQuizId,
@@ -98,5 +99,26 @@ describe('habitAnalytics', () => {
     expect(ctaConversionPct(0, 0)).toBe(0);
     expect(ctaConversionPct(5, 100)).toBe(5);
     expect(ctaConversionPct(1, 3)).toBe(33.3);
+  });
+
+  it('builds scolaires mini-funnel from habit events (zeros OK)', () => {
+    const empty = buildScolairesFunnel([]);
+    expect(empty.hub).toBe(0);
+    expect(empty.parcoursTotal).toBe(0);
+    expect(empty.hubToParcoursPct).toBe(0);
+    expect(empty.parcours).toHaveLength(5);
+    expect(empty.parcours.every((p) => p.count === 0)).toBe(true);
+
+    const funnel = buildScolairesFunnel([
+      { event: 'scolaires_hub', count: 10 },
+      { event: 'scolaires_parcours_c4_regard', count: 3 },
+      { event: 'scolaires_parcours_c3_decouvrir', count: 2 },
+      { event: 'reminder_on', count: 99 },
+    ]);
+    expect(funnel.hub).toBe(10);
+    expect(funnel.parcoursTotal).toBe(5);
+    expect(funnel.hubToParcoursPct).toBe(50);
+    expect(funnel.parcours.find((p) => p.event === 'scolaires_parcours_c4_regard')?.count).toBe(3);
+    expect(funnel.parcours.find((p) => p.event === 'scolaires_parcours_lycee_pratique')?.count).toBe(0);
   });
 });

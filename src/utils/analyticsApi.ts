@@ -1,6 +1,7 @@
 import { isRemoteScoresEnabled } from './remoteScores';
 import {
   ctaAnalyticsQuizId,
+  type CtaSlot,
   type PixfanCtaTarget,
   type PixfanTopic,
 } from './pixfanCta';
@@ -38,18 +39,20 @@ export async function trackQuizAttempt(payload: {
 
 /**
  * Record a result-screen CTA click in `quiz_attempts` via the same endpoint.
- * Encoded as quiz_id `cta:{target}:{topic}:{sourceQuizId}` with zeroed metrics.
+ * Encoded as quiz_id `cta:{target}:{topic}:{sourceQuizId}:{slot}` with zeroed metrics.
  */
 export async function trackCtaClick(payload: {
   sourceQuizId: string;
   target: PixfanCtaTarget;
   topic: PixfanTopic;
+  slot: Exclude<CtaSlot, 'legacy'>;
 }): Promise<void> {
   await trackQuizAttempt({
     quizId: ctaAnalyticsQuizId(
       payload.target,
       payload.topic,
-      payload.sourceQuizId
+      payload.sourceQuizId,
+      payload.slot
     ),
     percentage: 0,
     correctCount: 0,

@@ -124,3 +124,47 @@ export function ctaConversionPct(
   if (totalAttempts <= 0) return 0;
   return Math.round((1000 * ctaClicks) / totalAttempts) / 10;
 }
+
+export const SCOLAIRES_PARCOURS_EVENTS = [
+  'scolaires_parcours_c3_decouvrir',
+  'scolaires_parcours_c4_regard',
+  'scolaires_parcours_c4_lumiere',
+  'scolaires_parcours_c4_emi_droits',
+  'scolaires_parcours_lycee_pratique',
+] as const;
+
+export type ScolairesParcoursEvent =
+  (typeof SCOLAIRES_PARCOURS_EVENTS)[number];
+
+export interface ScolairesFunnel {
+  hub: number;
+  parcoursTotal: number;
+  /** Hub → any parcours start (0–100). */
+  hubToParcoursPct: number;
+  parcours: Array<{ event: ScolairesParcoursEvent; count: number }>;
+}
+
+/**
+ * Mini-funnel scolaires from existing habit events (no invented counts).
+ * Always returns a structure — zeros are valid empty state.
+ */
+export function buildScolairesFunnel(
+  events: HabitEventCount[]
+): ScolairesFunnel {
+  const map = new Map<HabitEventName, number>();
+  for (const row of events) {
+    map.set(row.event, Number(row.count) || 0);
+  }
+  const hub = map.get('scolaires_hub') ?? 0;
+  const parcours = SCOLAIRES_PARCOURS_EVENTS.map((event) => ({
+    event,
+    count: map.get(event) ?? 0,
+  }));
+  const parcoursTotal = parcours.reduce((sum, row) => sum + row.count, 0);
+  return {
+    hub,
+    parcoursTotal,
+    hubToParcoursPct: ctaConversionPct(parcoursTotal, hub),
+    parcours,
+  };
+}
