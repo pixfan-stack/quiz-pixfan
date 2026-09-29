@@ -5,8 +5,9 @@
  *
  * Auth: header X-Admin-Pin must match runtime ADMIN_PIN (preferred) or VITE_ADMIN_PIN.
  *
- * CTA clicks are stored as quiz_id `cta:{target}:{topic}:{sourceQuizId}`
- * and returned as a target × topic breakdown (P3 funnel).
+ * CTA clicks are stored as quiz_id `cta:{target}:{topic}:{sourceQuizId}:{slot}`
+ * (slot = primary|secondary|newsletter; legacy 4-part ids still parse).
+ * and returned as a target × topic × slot breakdown.
  *
  * Habit events use quiz_id `evt:{name}` (reminder / ics / pwa / account).
  * Attempts are also ventilated by mode (photo-reading / daily / duel / weak-spots / mix / random / packs).
@@ -33,17 +34,23 @@ export interface QuizAttemptStats {
 }
 
 type CtaTarget = 'guide' | 'newsletter' | 'pixfan';
+type CtaSlot = 'primary' | 'secondary' | 'newsletter' | 'legacy';
+
+const CTA_SLOTS: CtaSlot[] = ['primary', 'secondary', 'newsletter', 'legacy'];
+const CTA_SLOT_SET = new Set<string>(CTA_SLOTS);
 
 export interface CtaClickRow {
   target: CtaTarget;
   topic: string;
   sourceQuizId: string;
+  slot: CtaSlot;
   clicks: number;
 }
 
 export interface CtaAnalyticsBreakdown {
   byTarget: Array<{ target: CtaTarget; clicks: number }>;
   byTopic: Array<{ topic: string; clicks: number }>;
+  bySlot: Array<{ slot: CtaSlot; clicks: number }>;
   rows: CtaClickRow[];
 }
 
@@ -113,19 +120,31 @@ const CTA_TARGETS = new Set<CtaTarget>(['guide', 'newsletter', 'pixfan']);
 
 function parseCtaQuizId(
   quizId: string
-): { target: CtaTarget; topic: string; sourceQuizId: string } | null {
+): {
+  target: CtaTarget;
+  topic: string;
+  sourceQuizId: string;
+  slot: CtaSlot;
+} | null {
   if (!quizId.startsWith('cta:')) return null;
   const parts = quizId.split(':');
   if (parts.length < 4) return null;
   const target = parts[1] as CtaTarget;
   const topic = parts[2];
-  const sourceQuizId = parts.slice(3).join(':');
+  let sourceQuizId: string;
+  let slot: CtaSlot = 'legacy';
+  if (parts.length >= 5 && CTA_SLOT_SET.has(parts[parts.length - 1])) {
+    slot = parts[parts.length - 1] as CtaSlot;
+    sourceQuizId = parts.slice(3, -1).join(':');
+  } else {
+    sourceQuizId = parts.slice(3).join(':');
+  }
   if (!CTA_TARGETS.has(target) || !topic || !sourceQuizId) return null;
-  return { target, topic, sourceQuizId };
+  return { target, topic, sourceQuizId, slot };
 }
 
 function emptyCta(): CtaAnalyticsBreakdown {
-  return { byTarget: [], byTopic: [], rows: [] };
+  return { byTarget: [], byTopic: [], bySlot: [], rows: [] };
 }
 
 function buildCtaBreakdown(
@@ -133,6 +152,7 @@ function buildCtaBreakdown(
 ): CtaAnalyticsBreakdown {
   const byTargetMap = new Map<CtaTarget, number>();
   const byTopicMap = new Map<string, number>();
+  const bySlotMap = new Map<CtaSlot, number>();
   const rows: CtaClickRow[] = [];
 
   for (const raw of rawRows) {
@@ -146,6 +166,7 @@ function buildCtaBreakdown(
       (byTargetMap.get(parsed.target) ?? 0) + clicks
     );
     byTopicMap.set(parsed.topic, (byTopicMap.get(parsed.topic) ?? 0) + clicks);
+    bySlotMap.set(parsed.slot, (bySlotMap.get(parsed.slot) ?? 0) + clicks);
   }
 
   rows.sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
@@ -159,7 +180,11 @@ function buildCtaBreakdown(
     .map(([topic, clicks]) => ({ topic, clicks }))
     .sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
 
-  return { byTarget, byTopic, rows };
+  const bySlot = CTA_SLOTS.filter((s) => (bySlotMap.get(s) ?? 0) > 0).map(
+    (slot) => ({ slot, clicks: bySlotMap.get(slot) ?? 0 })
+  );
+
+  return { byTarget, byTopic, bySlot, rows };
 }
 
 function parseHabitEvent(quizId: string): HabitEventName | null {

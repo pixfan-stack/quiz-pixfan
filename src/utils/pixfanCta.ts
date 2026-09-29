@@ -259,14 +259,24 @@ export function getPixfanCta(
   return cta;
 }
 
-/** Analytics quiz_id marker stored in `quiz_attempts` for CTA clicks. */
+/** UI slot for a CTA click (primary / secondary / newsletter soft block). */
+export const CTA_SLOTS = ['primary', 'secondary', 'newsletter', 'legacy'] as const;
+export type CtaSlot = (typeof CTA_SLOTS)[number];
+
+const CTA_SLOT_SET = new Set<string>(CTA_SLOTS);
+
+/**
+ * Analytics quiz_id marker stored in `quiz_attempts` for CTA clicks.
+ * Format: `cta:{target}:{topic}:{sourceQuizId}:{slot}` (slot optional on legacy rows).
+ */
 export function ctaAnalyticsQuizId(
   target: PixfanCtaTarget,
   topic: PixfanTopic,
-  sourceQuizId: string
+  sourceQuizId: string,
+  slot: Exclude<CtaSlot, 'legacy'> = 'primary'
 ): string {
   const src = sourceQuizId.slice(0, 48).replace(/[^a-zA-Z0-9._-]/g, '_');
-  return `cta:${target}:${topic}:${src}`;
+  return `cta:${target}:${topic}:${src}:${slot}`;
 }
 
 export function isCtaAnalyticsQuizId(quizId: string): boolean {
@@ -277,12 +287,14 @@ export interface ParsedCtaAnalyticsId {
   target: PixfanCtaTarget;
   topic: string;
   sourceQuizId: string;
+  /** `legacy` when the stored id pre-dates slot encoding. */
+  slot: CtaSlot;
 }
 
 const CTA_TARGETS = new Set<PixfanCtaTarget>(['guide', 'newsletter', 'pixfan']);
 
 /**
- * Parse `cta:{target}:{topic}:{sourceQuizId}` for admin breakdowns.
+ * Parse `cta:{target}:{topic}:{sourceQuizId}[:{slot}]` for admin breakdowns.
  * Returns null when the id is not a CTA marker or is malformed.
  */
 export function parseCtaAnalyticsQuizId(
@@ -293,30 +305,40 @@ export function parseCtaAnalyticsQuizId(
   if (parts.length < 4) return null;
   const target = parts[1] as PixfanCtaTarget;
   const topic = parts[2];
-  const sourceQuizId = parts.slice(3).join(':');
+  let sourceQuizId: string;
+  let slot: CtaSlot = 'legacy';
+  if (parts.length >= 5 && CTA_SLOT_SET.has(parts[parts.length - 1])) {
+    slot = parts[parts.length - 1] as CtaSlot;
+    sourceQuizId = parts.slice(3, -1).join(':');
+  } else {
+    sourceQuizId = parts.slice(3).join(':');
+  }
   if (!CTA_TARGETS.has(target) || !topic || !sourceQuizId) return null;
-  return { target, topic, sourceQuizId };
+  return { target, topic, sourceQuizId, slot };
 }
 
 export interface CtaClickRow {
   target: PixfanCtaTarget;
   topic: string;
   sourceQuizId: string;
+  slot: CtaSlot;
   clicks: number;
 }
 
 export interface CtaAnalyticsBreakdown {
   byTarget: Array<{ target: PixfanCtaTarget; clicks: number }>;
   byTopic: Array<{ topic: string; clicks: number }>;
+  bySlot: Array<{ slot: CtaSlot; clicks: number }>;
   rows: CtaClickRow[];
 }
 
-/** Aggregate raw `cta:…` quiz_id counts into target × topic breakdowns. */
+/** Aggregate raw `cta:…` quiz_id counts into target × topic × slot breakdowns. */
 export function buildCtaAnalyticsBreakdown(
   rawRows: Array<{ quizId: string; clicks: number }>
 ): CtaAnalyticsBreakdown {
   const byTargetMap = new Map<PixfanCtaTarget, number>();
   const byTopicMap = new Map<string, number>();
+  const bySlotMap = new Map<CtaSlot, number>();
   const rows: CtaClickRow[] = [];
 
   for (const raw of rawRows) {
@@ -330,6 +352,7 @@ export function buildCtaAnalyticsBreakdown(
       (byTargetMap.get(parsed.target) ?? 0) + clicks
     );
     byTopicMap.set(parsed.topic, (byTopicMap.get(parsed.topic) ?? 0) + clicks);
+    bySlotMap.set(parsed.slot, (bySlotMap.get(parsed.slot) ?? 0) + clicks);
   }
 
   rows.sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
@@ -343,5 +366,9 @@ export function buildCtaAnalyticsBreakdown(
     .map(([topic, clicks]) => ({ topic, clicks }))
     .sort((a, b) => b.clicks - a.clicks || a.topic.localeCompare(b.topic));
 
-  return { byTarget, byTopic, rows };
+  const bySlot = CTA_SLOTS.filter((s) => (bySlotMap.get(s) ?? 0) > 0).map(
+    (slot) => ({ slot, clicks: bySlotMap.get(slot) ?? 0 })
+  );
+
+  return { byTarget, byTopic, bySlot, rows };
 }

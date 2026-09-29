@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import type { AdminAnalyticsDashboard } from '../../utils/adminAnalyticsApi';
+import { buildScolairesFunnel } from '../../utils/habitAnalytics';
 
 interface AdminAnalyticsPanelProps {
   analytics: AdminAnalyticsDashboard | null;
@@ -20,6 +21,9 @@ export function AdminAnalyticsPanel({
   onRefresh,
 }: AdminAnalyticsPanelProps) {
   const { t } = useTranslation();
+  const scolaires = analytics
+    ? buildScolairesFunnel(analytics.events)
+    : null;
 
   return (
     <div className="admin__analytics" data-testid="admin-analytics">
@@ -119,6 +123,69 @@ export function AdminAnalyticsPanel({
             </div>
           )}
 
+          {scolaires && (
+            <div
+              className="admin__analytics-scolaires"
+              data-testid="admin-analytics-scolaires"
+            >
+              <p className="admin__section-title">
+                {t('admin.analyticsScolairesFunnel')}
+              </p>
+              <p className="admin__hint">{t('admin.analyticsScolairesHint')}</p>
+              <div className="admin__analytics-summary">
+                <div className="admin__analytics-stat">
+                  <span className="admin__analytics-stat__value">
+                    {scolaires.hub}
+                  </span>
+                  <span className="admin__analytics-stat__label">
+                    {t('admin.analyticsEvent_scolaires_hub')}
+                  </span>
+                </div>
+                <div className="admin__analytics-stat">
+                  <span className="admin__analytics-stat__value">
+                    {scolaires.parcoursTotal}
+                  </span>
+                  <span className="admin__analytics-stat__label">
+                    {t('admin.analyticsScolairesParcours')}
+                  </span>
+                </div>
+                <div className="admin__analytics-stat">
+                  <span className="admin__analytics-stat__value">
+                    {scolaires.hubToParcoursPct}%
+                  </span>
+                  <span className="admin__analytics-stat__label">
+                    {t('admin.analyticsScolairesConversion')}
+                  </span>
+                </div>
+              </div>
+              <div className="admin__analytics-table-wrap">
+                <table className="admin__analytics-table">
+                  <thead>
+                    <tr>
+                      <th>{t('admin.analyticsColEvent')}</th>
+                      <th>{t('admin.analyticsColCount')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {scolaires.parcours.map((row) => (
+                      <tr key={row.event}>
+                        <td>
+                          <strong>
+                            {t(`admin.analyticsEvent_${row.event}`)}
+                          </strong>
+                          <div className="admin__report-id">
+                            evt:{row.event}
+                          </div>
+                        </td>
+                        <td>{row.count}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
           {analytics.events.length > 0 && (
             <div
               className="admin__analytics-events"
@@ -157,7 +224,8 @@ export function AdminAnalyticsPanel({
           )}
 
           {(analytics.cta.byTarget.length > 0 ||
-            analytics.cta.byTopic.length > 0) && (
+            analytics.cta.byTopic.length > 0 ||
+            (analytics.cta.bySlot?.length ?? 0) > 0) && (
             <div
               className="admin__analytics-cta"
               data-testid="admin-analytics-cta"
@@ -216,6 +284,34 @@ export function AdminAnalyticsPanel({
                     </table>
                   </div>
                 )}
+                {(analytics.cta.bySlot?.length ?? 0) > 0 && (
+                  <div
+                    className="admin__analytics-table-wrap"
+                    data-testid="admin-analytics-cta-slots"
+                  >
+                    <table className="admin__analytics-table">
+                      <thead>
+                        <tr>
+                          <th>{t('admin.analyticsColCtaSlot')}</th>
+                          <th>{t('admin.analyticsColClicks')}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {analytics.cta.bySlot.map((row) => (
+                          <tr key={row.slot}>
+                            <td>
+                              <strong>
+                                {t(`admin.analyticsCtaSlot_${row.slot}`)}
+                              </strong>
+                              <div className="admin__report-id">{row.slot}</div>
+                            </td>
+                            <td>{row.clicks}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
               {analytics.cta.rows.length > 0 && (
                 <div className="admin__analytics-table-wrap">
@@ -224,6 +320,7 @@ export function AdminAnalyticsPanel({
                       <tr>
                         <th>{t('admin.analyticsColCtaTarget')}</th>
                         <th>{t('admin.analyticsColCtaTopic')}</th>
+                        <th>{t('admin.analyticsColCtaSlot')}</th>
                         <th>{t('admin.analyticsColCtaSource')}</th>
                         <th>{t('admin.analyticsColClicks')}</th>
                       </tr>
@@ -231,10 +328,11 @@ export function AdminAnalyticsPanel({
                     <tbody>
                       {analytics.cta.rows.map((row) => (
                         <tr
-                          key={`${row.target}:${row.topic}:${row.sourceQuizId}`}
+                          key={`${row.target}:${row.topic}:${row.sourceQuizId}:${row.slot ?? 'legacy'}`}
                         >
                           <td>{row.target}</td>
                           <td>{row.topic}</td>
+                          <td>{row.slot ?? 'legacy'}</td>
                           <td>
                             <span className="admin__report-id">
                               {row.sourceQuizId}

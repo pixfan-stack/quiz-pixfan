@@ -239,27 +239,47 @@ describe('pixfanCta', () => {
 
   it('encodes and parses CTA clicks for quiz_attempts analytics', () => {
     const id = ctaAnalyticsQuizId('guide', 'exposure', 'daily-2026-09-19');
-    expect(id).toBe('cta:guide:exposure:daily-2026-09-19');
+    expect(id).toBe('cta:guide:exposure:daily-2026-09-19:primary');
     expect(isCtaAnalyticsQuizId(id)).toBe(true);
     expect(isCtaAnalyticsQuizId('daily-2026-09-19')).toBe(false);
     expect(parseCtaAnalyticsQuizId(id)).toEqual({
       target: 'guide',
       topic: 'exposure',
       sourceQuizId: 'daily-2026-09-19',
+      slot: 'primary',
+    });
+    expect(
+      parseCtaAnalyticsQuizId(
+        ctaAnalyticsQuizId('pixfan', 'light', 'light-color', 'secondary')
+      )
+    ).toEqual({
+      target: 'pixfan',
+      topic: 'light',
+      sourceQuizId: 'light-color',
+      slot: 'secondary',
+    });
+    expect(
+      parseCtaAnalyticsQuizId('cta:guide:exposure:daily-2026-09-19')
+    ).toEqual({
+      target: 'guide',
+      topic: 'exposure',
+      sourceQuizId: 'daily-2026-09-19',
+      slot: 'legacy',
     });
     expect(parseCtaAnalyticsQuizId('cta:bad')).toBeNull();
   });
 
-  it('aggregates CTA rows by target and topic', () => {
+  it('aggregates CTA rows by target, topic and slot', () => {
     const breakdown = buildCtaAnalyticsBreakdown([
-      { quizId: 'cta:guide:light:light-color', clicks: 5 },
-      { quizId: 'cta:newsletter:light:light-color', clicks: 2 },
-      { quizId: 'cta:guide:retouching:retouching', clicks: 3 },
-      { quizId: 'cta:pixfan:gear:gear-lenses', clicks: 4 },
+      { quizId: 'cta:guide:light:light-color:primary', clicks: 5 },
+      { quizId: 'cta:newsletter:light:light-color:newsletter', clicks: 2 },
+      { quizId: 'cta:guide:retouching:retouching:primary', clicks: 3 },
+      { quizId: 'cta:pixfan:gear:gear-lenses:secondary', clicks: 4 },
+      { quizId: 'cta:guide:history:history-icons', clicks: 1 },
       { quizId: 'cta:broken', clicks: 9 },
     ]);
     expect(breakdown.byTarget).toEqual([
-      { target: 'guide', clicks: 8 },
+      { target: 'guide', clicks: 9 },
       { target: 'newsletter', clicks: 2 },
       { target: 'pixfan', clicks: 4 },
     ]);
@@ -267,10 +287,18 @@ describe('pixfanCta', () => {
       { topic: 'light', clicks: 7 },
       { topic: 'gear', clicks: 4 },
       { topic: 'retouching', clicks: 3 },
+      { topic: 'history', clicks: 1 },
+    ]);
+    expect(breakdown.bySlot).toEqual([
+      { slot: 'primary', clicks: 8 },
+      { slot: 'secondary', clicks: 4 },
+      { slot: 'newsletter', clicks: 2 },
+      { slot: 'legacy', clicks: 1 },
     ]);
     expect(breakdown.rows[0]).toMatchObject({
       target: 'guide',
       topic: 'light',
+      slot: 'primary',
       clicks: 5,
     });
   });

@@ -30,6 +30,22 @@ describe('scolaires P0–P2 hub', () => {
     expect(hub).toContain('eduscol.education.fr');
     expect(hub).toContain('guides.css');
     expect(hub).toContain('theme.js');
+    expect(hub).toContain('class="fr"');
+  });
+
+  it('ships EN article + lang switcher + hreflang (vague 1.20 P1)', () => {
+    expect(hub).toContain('class="lang-switcher"');
+    expect(hub).toContain('href="?lang=fr"');
+    expect(hub).toContain('href="?lang=en"');
+    expect(hub).toContain('hreflang="en"');
+    expect(hub).toContain('hreflang="fr"');
+    expect(hub).toContain('<h1>Schools — photo &amp; French national curriculum</h1>');
+    expect(hub).toContain('class="en"');
+    expect(hub).toContain('No affiliation with the French Ministry of Education');
+    expect(hub).toContain('Start the lesson');
+    expect(hub).toContain('Copy lesson link');
+    expect(hub).toContain('/s/genres?classe=1&amp;lang=en');
+    expect(hub).toContain('document.documentElement.lang');
   });
 
   it('ships printable fiche séance with print CSS', () => {

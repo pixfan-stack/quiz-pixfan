@@ -3,8 +3,21 @@ import sitemap from '../../public/sitemap.xml?raw';
 import redirects from '../../public/_redirects?raw';
 import headers from '../../public/_headers?raw';
 
+/** Floor: home / hub scolaires must not lag behind the last catalog vague. */
+const LASTMOD_FLOOR = '2026-09-29';
+
+function lastmodForLoc(loc: string): string | null {
+  const escaped = loc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = sitemap.match(
+    new RegExp(
+      `<loc>${escaped}</loc>\\s*<lastmod>(\\d{4}-\\d{2}-\\d{2})</lastmod>`
+    )
+  );
+  return match?.[1] ?? null;
+}
+
 describe('sitemap / SEO hygiene', () => {
-  it('is well-formed XML with current lastmod and lexique-image-fixe', () => {
+  it('lists lexique + scolaires and keeps home/hub lastmod ≥ floor', () => {
     expect(sitemap.startsWith('<?xml')).toBe(true);
     expect(sitemap).toContain('<urlset');
     expect(sitemap).toContain('https://quiz.pixfan.fr/s/marques-photo');
@@ -14,7 +27,20 @@ describe('sitemap / SEO hygiene', () => {
     expect(sitemap).toContain(
       'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html'
     );
-    expect(sitemap).toContain('<lastmod>2026-09-28</lastmod>');
+
+    const home = lastmodForLoc('https://quiz.pixfan.fr/');
+    const hub = lastmodForLoc('https://quiz.pixfan.fr/guides/scolaires/');
+    const fiche = lastmodForLoc(
+      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html'
+    );
+    expect(home).toBeTruthy();
+    expect(hub).toBeTruthy();
+    expect(fiche).toBeTruthy();
+    expect(home! >= LASTMOD_FLOOR).toBe(true);
+    expect(hub! >= LASTMOD_FLOOR).toBe(true);
+    expect(fiche! >= LASTMOD_FLOOR).toBe(true);
+
+    // Guard against accidental rollback to pre-lexique dates.
     expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
   });
 

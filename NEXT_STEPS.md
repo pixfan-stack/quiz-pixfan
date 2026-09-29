@@ -1,6 +1,6 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.18.4**).
+Document à jour avec l’état réel du dépôt (**v1.19.0**).
 
 ## ✅ Livré
 
@@ -21,7 +21,7 @@ Document à jour avec l’état réel du dépôt (**v1.18.4**).
 - [ ] **Vague 1.19 P0.4 — Lire Admin Analytics 7–14 j** (habit funnel, modes `mix`/`random` / packs dont `lexique-image-fixe`, `evt:scolaires_*`, CTA primary/secondary) — checklist `vague-1-16` § P0.3 + notes ci-dessous ; **ne pas inventer de chiffres** ; Web Push = **non par défaut** tant que non remplie
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.18.4** + 15 quiz · 377 Q · lexique (vague 1.19 P0)
+- [x] Docs headline → **v1.19.0** + 15 quiz · 386 Q · 268 illus (vague 1.19 release + 1.20 P0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home 2026-09-28 (vague 1.19 P0)
 
 ### Ops Antony — checklist P0.4 (hors code)
