@@ -1,6 +1,6 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.19.0**).
+Document à jour avec l’état réel du dépôt (**v1.20.0**).
 
 ## ✅ Livré
 
@@ -18,22 +18,22 @@ Document à jour avec l’état réel du dépôt (**v1.19.0**).
 - [x] `VITE_ADMIN_PIN` en **build** Pages / CI (SPA `#/admin`)
 - [x] **`ADMIN_PIN` (+ `VITE_ADMIN_PIN`) runtime Pages Functions** — vérifié live 2026-09-20 (`/api/admin/analytics` + `/reports` → 200). Docs : `DEPLOYMENT.md` § Admin PIN runtime ; code distingue 503 (absent) vs 401 (mauvais PIN) après merge.
 - [x] Rate-limit `create_code` / `redeem` sur `/api/account` (repo)
-- [ ] **Vague 1.19 P0.4 — Lire Admin Analytics 7–14 j** (habit funnel, modes `mix`/`random` / packs dont `lexique-image-fixe`, `evt:scolaires_*`, CTA primary/secondary) — checklist `vague-1-16` § P0.3 + notes ci-dessous ; **ne pas inventer de chiffres** ; Web Push = **non par défaut** tant que non remplie
+- [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.19.0** + 15 quiz · 386 Q · 268 illus (vague 1.19 release + 1.20 P0)
-- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home 2026-09-28 (vague 1.19 P0)
+- [x] Docs headline → **v1.20.0** + 15 quiz · 386 Q · 268 illus (vague 1.20 release + 1.21 P0)
+- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires ≥ 2026-09-29 (vague 1.19–1.20)
 
 ### Ops Antony — checklist P0.4 (hors code)
 
-À faire sur https://quiz.pixfan.fr/#/admin → Analytics (PIN). Coller les vrais compteurs ici ou pad privé — **pas de données inventées**. Web Push reste **non** par défaut.
+Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Push / salon / 16ᵉ restent **non**. À re-lire : slots CTA `primary`/`secondary`/`newsletter` (post-1.20) + funnel c4.
 
-- [ ] Date de lecture analytics : ________ (fenêtre 7 j / 14 j)
-- [ ] Habit funnel : `evt:reminder_*` / `ics` / `pwa_install` / `account_*`
-- [ ] Modes : packs (dont lexique) / mix / random / photo-reading / daily / duel / weak-spots
-- [ ] Scolaires : `evt:scolaires_*` (volume non nul ?)
-- [ ] CTA : `ctaConversionPct`
-- [ ] Décision Web Push : oui / non / revoir — date ________
+- [x] Date de lecture analytics : **2026-09-29** (all-time + `recentDays` 14 j)
+- [x] Habit funnel : `reminder_*` / `ics` / `pwa_install` = **0** → push no-go
+- [x] Modes : photo-reading dominant · packs 9 · lexique 0 · mix/duel 0
+- [x] Scolaires : hub 7 · parcours 2 (c4 = 0) → salon no-go
+- [x] CTA : conversion **0,4 %** · slots v1.20 encore à 0 (legacy 2)
+- [x] Décision Web Push : **non** — 2026-09-29
 - [ ] **`npm run db:verify:006`** (prod) — pass/fail colonnes `vault_json` / `season_badges_json` : ________
 
 ## 🔜 Suite produit possible

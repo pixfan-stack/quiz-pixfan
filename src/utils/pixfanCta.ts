@@ -100,6 +100,8 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
   }
   if (quizId === 'genres') return 'genres';
   if (quizId === 'smartphone') return 'smartphone';
+  // Dominant mode (~photo-reading): local composition guide, not beginner default.
+  if (quizId === 'photo-reading') return 'composition';
   if (quizId === 'photo-rights' || quizId === 'lexique-image-fixe') {
     return 'rights';
   }
