@@ -100,7 +100,9 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
   }
   if (quizId === 'genres') return 'genres';
   if (quizId === 'smartphone') return 'smartphone';
-  if (quizId === 'photo-rights') return 'rights';
+  if (quizId === 'photo-rights' || quizId === 'lexique-image-fixe') {
+    return 'rights';
+  }
   if (quizId === 'retouching' || quizId === 'lightroom-workflow') {
     return 'retouching';
   }

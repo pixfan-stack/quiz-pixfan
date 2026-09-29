@@ -18,11 +18,21 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('retouching')).toBe('retouching');
     expect(resolvePixfanTopic('lightroom-workflow')).toBe('retouching');
     expect(resolvePixfanTopic('photo-rights')).toBe('rights');
+    expect(resolvePixfanTopic('lexique-image-fixe')).toBe('rights');
+    expect(resolvePixfanTopic('lexique-image-fixe')).not.toBe('default');
     expect(resolvePixfanTopic('light-color')).toBe('light');
     expect(resolvePixfanTopic('portrait-light')).toBe('light');
     expect(resolvePixfanTopic('flash-studio')).toBe('light');
     expect(resolvePixfanTopic('marques-photo')).toBe('history');
     expect(resolvePixfanTopic('history-icons')).toBe('history');
+  });
+
+  it('targets rights guide for lexique-image-fixe (not beginner default)', () => {
+    const lexique = getPixfanCta('lexique-image-fixe');
+    expect(lexique.topic).toBe('rights');
+    expect(lexique.topic).not.toBe('default');
+    expect(lexique.primaryTarget).toBe('guide');
+    expect(lexique.primaryUrl).toContain('/guides/droits-ethique-photo');
   });
 
   it('falls back for challenge packs', () => {
