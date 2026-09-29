@@ -77,6 +77,7 @@ export function ogImageUrl(
     'portrait-light',
     'marques-photo',
     'flash-studio',
+    'lexique-image-fixe',
     'random',
     'weak-spots',
     'photo-reading',

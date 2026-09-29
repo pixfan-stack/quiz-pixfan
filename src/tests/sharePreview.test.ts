@@ -58,6 +58,9 @@ describe('sharePreview', () => {
     expect(quizLabel('flash-studio', 'fr')).toBe('Flash & studio');
     expect(quizLabel('flash-studio', 'en')).toBe('Flash & studio');
     expect(normalizeQuizId('flash-studio')).toBe('flash-studio');
+    expect(quizLabel('lexique-image-fixe', 'fr')).toBe('Lexique image fixe');
+    expect(quizLabel('lexique-image-fixe', 'en')).toBe('Still-image lexicon');
+    expect(normalizeQuizId('lexique-image-fixe')).toBe('lexique-image-fixe');
     expect(quizLabel('duel-abcd2345', 'en')).toBe('Friend duel');
   });
 
@@ -76,6 +79,7 @@ describe('sharePreview', () => {
   it('maps quiz ids to OG theme slugs and score tiers (P4.D)', () => {
     expect(ogThemeSlug('composition')).toBe('composition');
     expect(ogThemeSlug('flash-studio')).toBe('flash-studio');
+    expect(ogThemeSlug('lexique-image-fixe')).toBe('lexique-image-fixe');
     expect(ogThemeSlug('daily-2026-09-21')).toBe('daily');
     expect(ogThemeSlug('duel-abcd2345')).toBe('duel');
     expect(ogThemeSlug('random-mix')).toBe('random');
@@ -93,6 +97,9 @@ describe('sharePreview', () => {
     expect(
       themeOgImageUrl('https://quiz.pixfan.fr', 'composition', 82)
     ).toContain('/og/themes/composition-80.png');
+    expect(
+      themeOgImageUrl('https://quiz.pixfan.fr', 'lexique-image-fixe')
+    ).toContain('/og/themes/lexique-image-fixe.png');
     expect(
       themeOgImageUrl('https://quiz.pixfan.fr', 'daily-2026-09-21', 90)
     ).toContain('/og/themes/daily-90.png');

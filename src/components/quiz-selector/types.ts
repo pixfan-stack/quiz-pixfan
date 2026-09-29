@@ -31,6 +31,7 @@ export const QUIZ_ICONS: Record<string, string> = {
   'portrait-light': '💡',
   'marques-photo': '🏷️',
   'flash-studio': '⚡',
+  'lexique-image-fixe': '📖',
 };
 
 export interface QuizWithScore {

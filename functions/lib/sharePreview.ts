@@ -33,6 +33,10 @@ const LABELS: Record<string, { en: string; fr: string }> = {
     en: 'Flash & studio',
     fr: 'Flash & studio',
   },
+  'lexique-image-fixe': {
+    en: 'Still-image lexicon',
+    fr: 'Lexique image fixe',
+  },
   random: { en: 'Random mix', fr: 'Mix aléatoire' },
   'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
   'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },
