@@ -4,7 +4,7 @@ Document à jour avec l’état réel du dépôt (**v1.18.4**).
 
 ## ✅ Livré
 
-- Contenu : **15 quiz · 377 questions · 256 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots (SRS léger)
 - Engagement : défi du jour, duel, succès (photo-reader · vault-clear · streak-14 + badges saison), streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)

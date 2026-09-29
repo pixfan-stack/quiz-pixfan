@@ -46,6 +46,25 @@
       font-size: 0.82rem;
       word-break: break-all;
     }
+    .fiche-timing {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .fiche-timing th,
+    .fiche-timing td {
+      border: 1px solid var(--color-border, #ddd);
+      padding: 0.35rem 0.5rem;
+      text-align: left;
+    }
+    .fiche-timing th {
+      background: var(--color-surface-muted, #f6f6f6);
+    }
+    .fiche-debrief {
+      margin: 0.4rem 0 0;
+      font-size: 0.92rem;
+    }
     @media print {
       .app-header,
       .app-footer,
@@ -114,6 +133,25 @@
 
       <p class="fiche-meta"><strong>Matériel :</strong> smartphone, tablette ou ordinateur · navigateur · Wi‑Fi (ou PWA déjà installée). <strong>Mode classe :</strong> les liens ci-dessous ouvrent le quiz sans classement public (<code>?classe=1</code>).</p>
 
+      <table class="fiche-timing" id="grille-duree" aria-label="Grille durée des parcours">
+        <thead>
+          <tr>
+            <th>Parcours</th>
+            <th>Durée</th>
+            <th>Guide</th>
+            <th>Quiz</th>
+            <th>Débrief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Découvrir la photo (C3)</td><td>~15&nbsp;min</td><td>2–3</td><td>8–10</td><td>2–3</td></tr>
+          <tr><td>Lire une image (C4)</td><td>~20&nbsp;min</td><td>3–4</td><td>12–14</td><td>3–4</td></tr>
+          <tr><td>Lumière &amp; photo</td><td>~25&nbsp;min</td><td>4–5</td><td>14–16</td><td>3–4</td></tr>
+          <tr><td>Droit à l’image (EMI)</td><td>~20&nbsp;min</td><td>3–4</td><td>10–12</td><td>4–5</td></tr>
+          <tr><td>Pratique image fixe (lycée)</td><td>~30&nbsp;min</td><td>3–5</td><td>18–22</td><td>4–5</td></tr>
+        </tbody>
+      </table>
+
       <div class="fiche-grid">
         <section class="fiche-block" id="c3-decouvrir">
           <h3>1. Découvrir la photo (cycle 3) · ~15&nbsp;min</h3>
@@ -122,8 +160,8 @@
             <li>Lire / projeter le guide genres (2–3&nbsp;min).</li>
             <li>Lancer le quiz Genres en mode classe.</li>
             <li>Option : 5 minutes de Photos à analyser.</li>
-            <li>Débrief : « Qu’est-ce qu’une photo de portrait / paysage / rue ? »</li>
           </ol>
+          <p class="fiche-debrief"><strong>Débrief :</strong> « Citez une photo de portrait, une de paysage, une de rue — qu’est-ce qui change dans le cadre ? »</p>
           <p class="fiche-url">https://quiz.pixfan.fr/s/genres?classe=1</p>
         </section>
 
@@ -134,8 +172,8 @@
             <li>Guide composition (points clés au tableau).</li>
             <li>Quiz Photos à analyser (mode classe).</li>
             <li>Quiz Composition si le temps le permet.</li>
-            <li>Débrief collectif sur 2–3 images / erreurs fréquentes.</li>
           </ol>
+          <p class="fiche-debrief"><strong>Débrief :</strong> « Sur 2 images ratées ou réussies : où est le sujet, d’où regarde-t-on, que raconte le cadrage ? »</p>
           <p class="fiche-url">https://quiz.pixfan.fr/s/photo-reading?classe=1</p>
         </section>
 
@@ -146,8 +184,8 @@
             <li>Guide lumière (ou triangle d’exposition).</li>
             <li>Quiz Bases de l’exposition.</li>
             <li>Quiz Lumière &amp; couleur.</li>
-            <li>Relier à une intention plastique (contraste, ambiance).</li>
           </ol>
+          <p class="fiche-debrief"><strong>Débrief :</strong> « Quelle intention (ambiance / contraste) pourriez-vous viser en changeant seulement la lumière ? »</p>
           <p class="fiche-url">https://quiz.pixfan.fr/s/exposure-basics?classe=1</p>
         </section>
 
@@ -157,9 +195,9 @@
           <ol>
             <li>Guide droits &amp; éthique.</li>
             <li>Quiz droits photo (mode classe).</li>
-            <li>Débat hors app (optionnel) : partager une photo de classe ?</li>
             <li>Rappeler le droit à l’image des élèves (CLEMI) si prise de vue réelle.</li>
           </ol>
+          <p class="fiche-debrief"><strong>Débrief :</strong> « Peut-on publier une photo de la classe sur un réseau ? Qui décide, et pourquoi ? »</p>
           <p class="fiche-url">https://quiz.pixfan.fr/s/photo-rights?classe=1</p>
         </section>
 
@@ -170,8 +208,9 @@
             <li>Option : Lexique image fixe (vocabulaire, 12&nbsp;Q texte).</li>
             <li>Quiz Portrait &amp; lumière (mode classe).</li>
             <li>Quiz Flash &amp; studio.</li>
-            <li>Guide retouche → quiz Retouche ; débrief éthique (ne pas tromper).</li>
+            <li>Guide retouche → quiz Retouche.</li>
           </ol>
+          <p class="fiche-debrief"><strong>Débrief :</strong> « Où s’arrête une retouche honnête ? Citez un geste qui informe et un geste qui trompe. »</p>
           <p class="fiche-url">https://quiz.pixfan.fr/s/portrait-light?classe=1</p>
           <p class="fiche-url">Lexique : https://quiz.pixfan.fr/s/lexique-image-fixe?classe=1</p>
         </section>

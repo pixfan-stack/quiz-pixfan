@@ -43,6 +43,19 @@ describe('scolaires P0–P2 hub', () => {
     expect(fiche).toContain('Contenu original PixFan');
   });
 
+  it('ships fiche timing grid + one débrief prompt per parcours (vague 1.19 P2)', () => {
+    expect(fiche).toContain('id="grille-duree"');
+    expect(fiche).toContain('class="fiche-timing"');
+    expect(fiche).toContain('class="fiche-debrief"');
+    expect(fiche).toContain('Citez une photo de portrait');
+    expect(fiche).toContain('Peut-on publier une photo de la classe');
+    expect(fiche).toContain('Où s’arrête une retouche honnête');
+    expect(hub).toContain('id="grille-duree"');
+    expect(hub).toContain('Prompts de débrief');
+    expect(hub).toContain('Citez une photo de portrait');
+    expect(hub).toContain('Peut-on publier une photo de la classe');
+  });
+
   it('is listed from the guides index', () => {
     expect(guidesIndex).toContain('/guides/scolaires/');
     expect(guidesIndex).toContain('Scolaires');

@@ -19,6 +19,23 @@
   <meta name="theme-color" content="#f3538c" />
   <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="/guides/guides.css" />
+  <style>
+    .fiche-timing {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .fiche-timing th,
+    .fiche-timing td {
+      border: 1px solid var(--color-border, #ddd);
+      padding: 0.35rem 0.5rem;
+      text-align: left;
+    }
+    .fiche-timing th {
+      background: var(--color-surface-muted, #f6f6f6);
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -214,12 +231,39 @@
         </ul>
         <h3>Prérequis matériel</h3>
         <p>Smartphone, tablette ou ordinateur avec navigateur. Wi‑Fi fragile : installer la PWA (menu navigateur → «&nbsp;Installer l’app&nbsp;») après un premier chargement du pack.</p>
+        <h3 id="grille-duree">Grille durée (guide · quiz · débrief)</h3>
+        <table class="fiche-timing" aria-label="Grille durée des parcours">
+          <thead>
+            <tr>
+              <th>Parcours</th>
+              <th>Total</th>
+              <th>Guide</th>
+              <th>Quiz</th>
+              <th>Débrief</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Découvrir la photo (C3)</td><td>~15&nbsp;min</td><td>2–3</td><td>8–10</td><td>2–3</td></tr>
+            <tr><td>Lire une image (C4)</td><td>~20&nbsp;min</td><td>3–4</td><td>12–14</td><td>3–4</td></tr>
+            <tr><td>Lumière &amp; photo</td><td>~25&nbsp;min</td><td>4–5</td><td>14–16</td><td>3–4</td></tr>
+            <tr><td>Droit à l’image (EMI)</td><td>~20&nbsp;min</td><td>3–4</td><td>10–12</td><td>4–5</td></tr>
+            <tr><td>Pratique image fixe (lycée)</td><td>~30&nbsp;min</td><td>3–5</td><td>18–22</td><td>4–5</td></tr>
+          </tbody>
+        </table>
+        <h3>Prompts de débrief (1 / parcours)</h3>
+        <ul>
+          <li><strong>C3 découvrir :</strong> « Citez une photo de portrait, une de paysage, une de rue — qu’est-ce qui change dans le cadre ? »</li>
+          <li><strong>C4 regard :</strong> « Sur 2 images : où est le sujet, d’où regarde-t-on, que raconte le cadrage ? »</li>
+          <li><strong>C4 lumière :</strong> « Quelle intention (ambiance / contraste) en changeant seulement la lumière ? »</li>
+          <li><strong>EMI droits :</strong> « Peut-on publier une photo de la classe sur un réseau ? Qui décide, et pourquoi ? »</li>
+          <li><strong>Lycée pratique :</strong> « Où s’arrête une retouche honnête ? Un geste qui informe vs un geste qui trompe. »</li>
+        </ul>
         <h3>Consigne de séance</h3>
         <ol>
           <li>Partager le <strong>lien de séance</strong> (bouton ci-dessus) — il ouvre le quiz en <em>mode classe</em> (<code>?classe=1</code>) : pas de classement public, pas d’incitation highscore.</li>
           <li>Laisser 2–3&nbsp;min pour le guide (ou projeter les points clés).</li>
           <li>Lancer le quiz (explications après chaque question).</li>
-          <li>Débrief collectif à partir des erreurs / vocabulaire.</li>
+          <li>Débrief collectif avec le prompt du parcours (ci-dessus).</li>
         </ol>
         <p><a class="cta-secondary" href="/guides/scolaires/fiche-seance.html">Version imprimable (1 page)</a></p>
         <h3>Disclaimer programme</h3>

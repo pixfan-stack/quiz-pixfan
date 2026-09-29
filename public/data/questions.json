@@ -2,7 +2,10 @@
   "quizzes": [
     {
       "id": "exposure-basics",
-      "tags": ["scolaires", "c4"],
+      "tags": [
+        "scolaires",
+        "c4"
+      ],
       "title": {
         "en": "Exposure Triangle",
         "fr": "Triangle d'exposition"
@@ -1626,7 +1629,11 @@
     },
     {
       "id": "composition",
-      "tags": ["scolaires", "c3", "c4"],
+      "tags": [
+        "scolaires",
+        "c3",
+        "c4"
+      ],
       "title": {
         "en": "Composition & Framing",
         "fr": "Composition & cadrage"
@@ -3269,7 +3276,10 @@
     },
     {
       "id": "light-color",
-      "tags": ["scolaires", "c4"],
+      "tags": [
+        "scolaires",
+        "c4"
+      ],
       "title": {
         "en": "Light & Color",
         "fr": "Lumière & couleur"
@@ -5789,13 +5799,183 @@
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
+        },
+        {
+          "id": "gear-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "You need tack-sharp landscapes on a windy ridgeline. Best first gear instinct?",
+            "fr": "Paysages ultra nets sur une crête venteuse. Premier réflexe matériel ?"
+          },
+          "answers": [
+            {
+              "id": "d",
+              "text": {
+                "en": "Disable IBIS and walk while shooting long exposures",
+                "fr": "Désactiver l’IBIS et marcher pendant les poses longues"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Stable support + shield the camera from gusts; don’t trust handheld miracles",
+                "fr": "Appui stable + abriter l’appareil du vent ; ne pas compter sur le miracle à main levée"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only raise ISO to five digits and hope",
+                "fr": "Seulement monter l’ISO à cinq chiffres et espérer"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Always remove the lens hood in wind",
+                "fr": "Toujours retirer le pare-soleil par grand vent"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Wind shake ruins sharpness faster than most people expect — brace, weight, and shelter the rig.",
+            "fr": "Le vent ruine la netteté plus vite qu’on croit — cale, leste et abrite le setup."
+          },
+          "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
+          "imageAlt": {
+            "en": "Mountain ridge landscape — wind and stability matter",
+            "fr": "Crête de montagne — le vent et la stabilité comptent"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "gear-25",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "A “nifty fifty” (≈50 mm full-frame equivalent) is popular mainly because…",
+            "fr": "Le « nifty fifty » (≈50 mm équiv. plein format) est populaire surtout parce que…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "It always equals a telescope for wildlife",
+                "fr": "Il égale toujours une longue-vue pour l’animalier"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "It disables autofocus by design",
+                "fr": "Il désactive l’autofocus par conception"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "It’s a versatile normal FOV, often bright and relatively affordable",
+                "fr": "C’est un champ « normal » polyvalent, souvent lumineux et assez abordable"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "It only works underwater",
+                "fr": "Il ne fonctionne que sous l’eau"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "A fast-ish normal prime teaches seeing without ultra-wide distortion or heavy tele reach.",
+            "fr": "Une focale fixe « normale » un peu lumineuse enseigne le regard sans déformation ultra grand-angle ni portée télé."
+          },
+          "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
+          "imageAlt": {
+            "en": "Camera with prime lens — classic normal focal length",
+            "fr": "Appareil avec focale fixe — focale normale classique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "gear-26",
+          "type": "multiple",
+          "difficulty": "medium",
+          "text": {
+            "en": "Before a paid event, sensible lens / body checks include…",
+            "fr": "Avant un événement payé, de bons checks optique / boîtier incluent…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Clean front elements and confirm cards/batteries",
+                "fr": "Nettoyer les lentilles frontales et vérifier cartes / batteries"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Test AF and a quick exposure on the actual bodies you’ll use",
+                "fr": "Tester l’AF et une expo rapide sur les boîtiers réellement utilisés"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Arrive with zero spare glass and one nearly empty card",
+                "fr": "Arriver sans optique de secours et une carte presque pleine"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Pack a backup body or a known fallback phone workflow",
+                "fr": "Prévoir un boîtier de secours ou un plan B téléphone connu"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
+          "explanation": {
+            "en": "Paid work fails on logistics more often than on exotic glass — clean, test, redundancies.",
+            "fr": "Le travail payé échoue plus souvent sur la logistique que sur l’optique exotique — propre, testé, redondant."
+          },
+          "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
+          "imageAlt": {
+            "en": "Camera body close-up — pre-event gear checks",
+            "fr": "Gros plan de boîtier — checks matériel avant événement"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         }
       ],
       "difficulty": "medium"
     },
     {
       "id": "history-icons",
-      "tags": ["scolaires", "c4"],
+      "tags": [
+        "scolaires",
+        "c4"
+      ],
       "title": {
         "en": "History & Iconic Photographers",
         "fr": "Histoire & photographes iconiques"
@@ -6999,13 +7179,181 @@
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
+        },
+        {
+          "id": "hist-24",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Kodak’s Brownie (1900) mattered culturally mainly because it…",
+            "fr": "Le Brownie Kodak (1900) a compté culturellement surtout parce qu’il…"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Invented digital sensors overnight",
+                "fr": "A inventé les capteurs numériques du jour au lendemain"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only printed cyanotypes forever",
+                "fr": "N’a imprimé que des cyanotypes pour toujours"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Banned all professional studios",
+                "fr": "A interdit tous les studios professionnels"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Made snapshot photography cheap and accessible to amateurs",
+                "fr": "A rendu la photo « snapshot » bon marché et accessible aux amateurs"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "The Brownie wave democratized everyday picture-making — a social shift as much as a tech one.",
+            "fr": "La vague Brownie a démocratisé la photo du quotidien — un basculement social autant que technique."
+          },
+          "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
+          "imageAlt": {
+            "en": "Vintage camera — democratization of amateur photography",
+            "fr": "Appareil vintage — démocratisation de la photo amateur"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "hist-25",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Magnum Photos (founded 1947) is best remembered as…",
+            "fr": "Magnum Photos (fondée en 1947) est surtout retenue comme…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "A cooperative agency where photographers kept rights and editorial voice",
+                "fr": "Une coopérative où les photographes gardaient droits et voix éditoriale"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "A film emulsion factory in Rochester only",
+                "fr": "Une usine d’émulsion uniquement à Rochester"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "A smartphone filter pack from 2015",
+                "fr": "Un pack de filtres smartphone de 2015"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "A camera brand that only sold disposable flash cubes",
+                "fr": "Une marque d’appareils qui ne vendait que des cubes flash jetables"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Magnum’s model centered photographer authorship and ownership — landmark for reportage culture.",
+            "fr": "Le modèle Magnum place l’auteur et la propriété côté photographe — jalon de la culture reportage."
+          },
+          "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
+          "imageAlt": {
+            "en": "Street scene — reportage and agency culture",
+            "fr": "Scène de rue — culture reportage et agences"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
+        },
+        {
+          "id": "hist-26",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "When people say digital “killed” film overnight in the 2000s, the fairest nuance is…",
+            "fr": "Quand on dit que le numérique a « tué » l’argentique du jour au lendemain dans les années 2000, la nuance juste est…"
+          },
+          "answers": [
+            {
+              "id": "c",
+              "text": {
+                "en": "Only disposable cameras survived after JPEG was invented",
+                "fr": "Seuls les appareils jetables ont survécu après l’invention du JPEG"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Adoption was gradual — workflows, cost, and culture shifted over years, not one week",
+                "fr": "L’adoption a été progressive — workflows, coûts et culture ont basculé sur des années, pas en une semaine"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Film ceased to exist physically in 2001 worldwide",
+                "fr": "L’argentique a cessé d’exister physiquement en 2001 dans le monde entier"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Digital never reached professional newsrooms",
+                "fr": "Le numérique n’a jamais atteint les rédactions pro"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Digital disrupted film markets, but the transition was staggered across genres and budgets.",
+            "fr": "Le numérique a bouleversé les marchés argentiques, mais la transition a été échelonnée selon genres et budgets."
+          },
+          "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
+          "imageAlt": {
+            "en": "Handheld camera outdoors — film-to-digital transition era",
+            "fr": "Appareil à main levée outdoor — ère de transition argentique → numérique"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+          }
         }
       ],
       "difficulty": "medium"
     },
     {
       "id": "public-domain",
-      "tags": ["scolaires", "c4"],
+      "tags": [
+        "scolaires",
+        "c4"
+      ],
       "title": {
         "en": "Public domain gallery",
         "fr": "Galerie domaine public"
@@ -8170,12 +8518,180 @@
             "en": "Frances Benjamin Johnston — public domain (Library of Congress / Wikimedia Commons)",
             "fr": "Frances Benjamin Johnston — domaine public (Library of Congress / Wikimedia Commons)"
           }
+        },
+        {
+          "id": "pd-22",
+          "type": "single",
+          "difficulty": "medium",
+          "text": {
+            "en": "Many FSA / U.S. federal agency photographs are often reusable because…",
+            "fr": "Beaucoup de photos FSA / d’agences fédérales US sont souvent réutilisables parce que…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "U.S. federal government works are generally not protected by copyright",
+                "fr": "Les œuvres du gouvernement fédéral US ne sont en général pas protégées par le copyright"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Every black-and-white photo older than 10 years is free worldwide",
+                "fr": "Toute photo N&B de plus de 10 ans est libre partout dans le monde"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Instagram always waives rights on historical images",
+                "fr": "Instagram renonce toujours aux droits sur les images historiques"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only museum gift shops can use them",
+                "fr": "Seules les boutiques de musées peuvent les utiliser"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "U.S. federal works are a classic public-domain corpus — still verify the exact file and any later overlays.",
+            "fr": "Les œuvres fédérales US forment un corpus domaine public classique — vérifie quand même le fichier exact et d’éventuelles couches ultérieures."
+          },
+          "imageUrl": "/images/public-domain/lange-migrant-mother.avif",
+          "imageAlt": {
+            "en": "Migrant Mother — FSA documentary photograph",
+            "fr": "Migrant Mother — photographie documentaire FSA"
+          },
+          "imageCredit": {
+            "en": "Dorothea Lange — public domain (U.S. federal / Library of Congress)",
+            "fr": "Dorothea Lange — domaine public (fédéral US / Library of Congress)"
+          }
+        },
+        {
+          "id": "pd-23",
+          "type": "single",
+          "difficulty": "easy",
+          "text": {
+            "en": "Niépce’s View from the Window at Le Gras (c. 1826–27) is usually treated as public domain because…",
+            "fr": "Le Point de vue du Gras de Niépce (v. 1826–27) est en général traité comme domaine public parce que…"
+          },
+          "answers": [
+            {
+              "id": "a",
+              "text": {
+                "en": "Copyright terms for that era’s author have long expired",
+                "fr": "Les délais de protection pour l’auteur de cette époque sont largement expirés"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Any photo of a window is automatically free",
+                "fr": "Toute photo de fenêtre est automatiquement libre"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "UNESCO owns exclusive worldwide rights forever",
+                "fr": "L’UNESCO détient l’exclusivité mondiale à perpétuité"
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "en": "Only RAW files can enter the public domain",
+                "fr": "Seuls les fichiers RAW entrent dans le domaine public"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "Very old works typically sit in the public domain after long copyright terms — confirm the specific reproduction you use.",
+            "fr": "Les œuvres très anciennes tombent en domaine public après de longs délais — confirme la reproduction précise que tu utilises."
+          },
+          "imageUrl": "/images/public-domain/niepce-le-gras.avif",
+          "imageAlt": {
+            "en": "Earliest surviving camera photograph — View from the Window at Le Gras",
+            "fr": "Plus ancienne photo d’appareil conservée — Point de vue du Gras"
+          },
+          "imageCredit": {
+            "en": "Nicéphore Niépce — public domain (Wikimedia Commons)",
+            "fr": "Nicéphore Niépce — domaine public (Wikimedia Commons)"
+          }
+        },
+        {
+          "id": "pd-24",
+          "type": "single",
+          "difficulty": "hard",
+          "text": {
+            "en": "You want to print a public-domain Muybridge plate in a commercial book. Safest habit?",
+            "fr": "Tu veux imprimer une planche Muybridge domaine public dans un livre commercial. Réflexe le plus sûr ?"
+          },
+          "answers": [
+            {
+              "id": "b",
+              "text": {
+                "en": "Assume Google Images thumbnails prove zero rights forever",
+                "fr": "Croire que les miniatures Google Images prouvent zéro droit pour toujours"
+              }
+            },
+            {
+              "id": "d",
+              "text": {
+                "en": "Only publish if you recreate the horse with AI first",
+                "fr": "Ne publier que si tu recrées d’abord le cheval en IA"
+              }
+            },
+            {
+              "id": "a",
+              "text": {
+                "en": "Confirm the scan/source is actually PD (not a modern museum photo with fresh rights)",
+                "fr": "Vérifier que le scan/source est bien DP (pas une photo musée moderne encore protégée)"
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "en": "Never credit historical authors once PD",
+                "fr": "Ne jamais créditer les auteurs historiques une fois en DP"
+              }
+            }
+          ],
+          "correctAnswers": [
+            "a"
+          ],
+          "explanation": {
+            "en": "The underlying work can be PD while a particular photograph of a print still carries rights — check provenance.",
+            "fr": "L’œuvre sous-jacente peut être DP alors qu’une photo moderne du tirage reste protégée — vérifie la provenance."
+          },
+          "imageUrl": "/images/public-domain/muybridge-horse.avif",
+          "imageAlt": {
+            "en": "Muybridge horse locomotion sequence plate",
+            "fr": "Planche de locomotion du cheval de Muybridge"
+          },
+          "imageCredit": {
+            "en": "Eadweard Muybridge — public domain (Wikimedia Commons)",
+            "fr": "Eadweard Muybridge — domaine public (Wikimedia Commons)"
+          }
         }
       ]
     },
     {
       "id": "genres",
-      "tags": ["scolaires", "c3"],
+      "tags": [
+        "scolaires",
+        "c3"
+      ],
       "title": {
         "en": "Photography Genres",
         "fr": "Genres photographiques"
@@ -9807,7 +10323,10 @@
     },
     {
       "id": "smartphone",
-      "tags": ["scolaires", "c4"],
+      "tags": [
+        "scolaires",
+        "c4"
+      ],
       "title": {
         "en": "Smartphone Photography",
         "fr": "Photo au smartphone"
@@ -11447,7 +11966,11 @@
     },
     {
       "id": "photo-rights",
-      "tags": ["scolaires", "c3", "c4"],
+      "tags": [
+        "scolaires",
+        "c3",
+        "c4"
+      ],
       "difficulty": "medium",
       "title": {
         "en": "Rights & Ethics",
@@ -11890,6 +12413,15 @@
           "explanation": {
             "en": "Employment and assignment contracts often transfer economic rights—read before assuming ownership.",
             "fr": "Contrats de travail ou de cession transfèrent souvent les droits patrimoniaux — lisez avant de présumer la propriété."
+          },
+          "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
+          "imageAlt": {
+            "en": "Handshake over papers — work-for-hire and client contracts",
+            "fr": "Poignée de main sur des documents — commande et contrats client"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12140,6 +12672,15 @@
           "explanation": {
             "en": "Public place ≠ free to harm dignity; laws on privacy and image rights vary.",
             "fr": "Lieu public ≠ droit de nuire à la dignité ; droits à l’image/vie privée varient."
+          },
+          "imageUrl": "/images/packs/photo-1438761681033-6461ffad8d80.avif",
+          "imageAlt": {
+            "en": "Recognizable private person — dignity and consent before publish",
+            "fr": "Personne privée reconnaissable — dignité et consentement avant publication"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12594,6 +13135,15 @@
           "explanation": {
             "en": "Technique is easy; consent and honesty with the people in (and owning) the story matter more.",
             "fr": "La technique est facile ; le consentement et l’honnêteté envers ceux qui vivent (et portent) l’histoire comptent plus."
+          },
+          "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
+          "imageAlt": {
+            "en": "Wedding celebration — editing people out has social weight",
+            "fr": "Célébration de mariage — effacer des personnes a un poids social"
+          },
+          "imageCredit": {
+            "en": "Unsplash — free to use (Unsplash License)",
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
           }
         },
         {
@@ -12701,7 +13251,10 @@
     },
     {
       "id": "retouching",
-      "tags": ["scolaires", "lycee"],
+      "tags": [
+        "scolaires",
+        "lycee"
+      ],
       "difficulty": "medium",
       "title": {
         "en": "Editing & Retouching",
@@ -15423,7 +15976,10 @@
     },
     {
       "id": "portrait-light",
-      "tags": ["scolaires", "lycee"],
+      "tags": [
+        "scolaires",
+        "lycee"
+      ],
       "title": {
         "en": "Portrait & light (Pixfan path)",
         "fr": "Portrait & lumière (parcours Pixfan)"
@@ -18133,7 +18689,10 @@
     },
     {
       "id": "flash-studio",
-      "tags": ["scolaires", "lycee"],
+      "tags": [
+        "scolaires",
+        "lycee"
+      ],
       "title": {
         "en": "Flash & studio",
         "fr": "Flash & studio"
@@ -19425,7 +19984,10 @@
     },
     {
       "id": "lexique-image-fixe",
-      "tags": ["scolaires", "lycee"],
+      "tags": [
+        "scolaires",
+        "lycee"
+      ],
       "difficulty": "medium",
       "title": {
         "en": "Still-image lexicon",
@@ -19474,7 +20036,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Framing decides inclusion/exclusion: edges, crop, and what the viewer is invited to see.",
             "fr": "Le cadrage décide de l’inclusion / exclusion : bords, recadrage, et ce que le regard est invité à voir."
@@ -19518,7 +20082,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Contre-plongée = camera below, looking up (often monumental). Plongée = camera above, looking down.",
             "fr": "Contre-plongée = caméra en bas, regard vers le haut (souvent monumental). Plongée = caméra en haut, regard vers le bas."
@@ -19562,7 +20128,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Shot scale (plan large → gros plan) describes how much of the subject fills the frame.",
             "fr": "L’échelle de plan (plan large → gros plan) décrit la place du sujet dans le cadre."
@@ -19606,7 +20174,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Indexical signs keep a real connection to what they indicate; useful vocabulary for reading photographs as traces.",
             "fr": "Les signes indexicaux gardent un lien réel avec ce qu’ils indiquent ; vocabulaire utile pour lire la photo comme trace."
@@ -19650,7 +20220,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Iconic relation = resemblance. Distinct from index (trace) and symbol (convention).",
             "fr": "Relation iconique = ressemblance. Distinct de l’index (trace) et du symbole (convention)."
@@ -19694,7 +20266,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Viewpoint = spatial position and angle that structure what we see and how we feel about it.",
             "fr": "Le point de vue = position et angle qui structurent ce que l’on voit et l’effet produit."
@@ -19738,7 +20312,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Hors-champ is what framing implies beyond the edges — a key idea for reading still images.",
             "fr": "Le hors-champ est ce que le cadrage implique hors des bords — notion clé pour lire l’image fixe."
@@ -19782,7 +20358,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Shallow DoF isolates the subject; deep DoF keeps more of the scene sharp.",
             "fr": "Une PdC courte isole le sujet ; une PdC longue garde davantage de netteté dans la scène."
@@ -19826,7 +20404,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Overexposure = too much light recorded; underexposure = too little.",
             "fr": "Surexposition = trop de lumière enregistrée ; sous-exposition = trop peu."
@@ -19870,7 +20450,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Curriculum language contrasts image fixe (photo, etc.) with image animée (video, animation).",
             "fr": "Le vocabulaire de programme oppose image fixe (photo, etc.) et image animée (vidéo, animation)."
@@ -19914,7 +20496,11 @@
               }
             }
           ],
-          "correctAnswers": ["a", "b", "d"],
+          "correctAnswers": [
+            "a",
+            "b",
+            "d"
+          ],
           "explanation": {
             "en": "Position, crop, and horizon angle are framing/viewpoint decisions — not network settings.",
             "fr": "Position, recadrage et angle d’horizon sont des décisions de cadrage / point de vue — pas des réglages réseau."
@@ -19958,7 +20544,9 @@
               }
             }
           ],
-          "correctAnswers": ["a"],
+          "correctAnswers": [
+            "a"
+          ],
           "explanation": {
             "en": "Quiz PixFan keeps original lexicon questions and points to official lists externally — never embeds protected corpus images.",
             "fr": "Quiz PixFan garde un lexique original et renvoie aux listes officielles en externe — jamais d’images du corpus limitatif."
