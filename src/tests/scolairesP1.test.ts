@@ -35,15 +35,16 @@ describe('scolaires P1 routing & tags', () => {
     expect(isScolairesHash('#/daily')).toBe(false);
   });
 
-  it('lists 5 curated parcours including cycle 3 and lycée', () => {
+  it('lists 5 curated parcours with cycle 4 first (vague 1.22)', () => {
     expect(SCOLAIRES_PARCOURS.map((p) => p.id)).toEqual([
-      'c3-decouvrir',
       'c4-regard',
       'c4-lumiere',
       'c4-emi-droits',
+      'c3-decouvrir',
       'lycee-pratique',
     ]);
-    expect(SCOLAIRES_PARCOURS[0]?.startQuizId).toBe('genres');
+    expect(SCOLAIRES_PARCOURS[0]?.startQuizId).toBe('photo-reading');
+    expect(SCOLAIRES_PARCOURS[0]?.recommended).toBe(true);
     expect(SCOLAIRES_PARCOURS[4]?.startQuizId).toBe('portrait-light');
   });
 

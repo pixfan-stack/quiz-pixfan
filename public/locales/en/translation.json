@@ -15,7 +15,8 @@
     "chipHint": "Curriculum-aligned paths",
     "eyebrow": "Teachers & students",
     "title": "Schools — photo & curriculum",
-    "subtitle": "Free cycle 3–4, lycée and media-literacy paths, no account, with class mode.",
+    "subtitle": "Collège cycle 4 first (image reading, light, media literacy), then cycle 3 and lycée — no account, class mode.",
+    "recommended": "Collège",
     "minutes": "~{{count}} min",
     "startSeance": "Start the session",
     "moreLinks": "School links",
@@ -29,10 +30,10 @@
       },
       "c4-regard": {
         "title": "Reading an image (cycle 4)",
-        "desc": "Frame, composition, then illustrated photo analysis."
+        "desc": "Recommended collège path — frame, composition, then illustrated analysis."
       },
       "c4-lumiere": {
-        "title": "Light & photography",
+        "title": "Light & photography (cycle 4)",
         "desc": "Exposure and light quality for visual language."
       },
       "c4-emi-droits": {
@@ -215,6 +216,9 @@
     "vaultSaved": "{{count}} miss(es) saved to your weak spots",
     "vaultCleared": "{{count}} weak spot(s) cleared from your list",
     "reviewWeakSpots": "Review my mistakes",
+    "continueCompositionTitle": "Keep going in the app",
+    "continueCompositionDesc": "After reading photos, lock in framing with the Composition pack.",
+    "continueCompositionCta": "Start Composition",
     "exportImage": "Square image (Instagram / WhatsApp)",
     "exportStory": "Stories image (9:16)",
     "exportSquareHint": "1080×1080 — perfect for status & feed",
@@ -335,6 +339,9 @@
     "topic_composition_cta": "Explore composition guides",
     "topic_composition_guideCta": "Read the composition guide",
     "topic_composition_secondaryCta": "Learn photography on Pixfan",
+    "photoReading_desc": "You just read real photos — the composition guide locks in framing, lines and balance.",
+    "photoReading_failedDesc": "Some images resisted — the composition guide clarifies what the frame is saying.",
+    "photoReading_guideCta": "Read the guide after photo reading",
     "topic_light_desc": "Understand natural light, color temperature and atmosphere.",
     "topic_light_failedDesc": "Light tripped you up — a short guide to read it better.",
     "topic_light_cta": "Read light & color guides",

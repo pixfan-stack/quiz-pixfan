@@ -17,6 +17,7 @@ interface ScolairesScreenProps {
 
 /**
  * In-app school hub (`#/scolaires`) — lists curated parcours, FR-first.
+ * Order: cycle 4 (collège) first, then cycle 3, then lycée.
  */
 export function ScolairesScreen({
   quizzes,
@@ -56,10 +57,23 @@ export function ScolairesScreen({
 
       <ul className="scolaires__list">
         {SCOLAIRES_PARCOURS.map((parcours) => (
-          <li key={parcours.id} className="scolaires__card">
+          <li
+            key={parcours.id}
+            className={
+              parcours.recommended
+                ? 'scolaires__card scolaires__card--recommended'
+                : 'scolaires__card'
+            }
+            data-testid={`scolaires-card-${parcours.id}`}
+          >
             <div className="scolaires__card-body">
               <h3 className="scolaires__card-title">
                 {t(`scolaires.parcours.${parcours.id}.title`)}
+                {parcours.recommended ? (
+                  <span className="scolaires__badge">
+                    {t('scolaires.recommended')}
+                  </span>
+                ) : null}
                 <span className="scolaires__mins">
                   {' '}
                   · {t('scolaires.minutes', { count: parcours.minutes })}

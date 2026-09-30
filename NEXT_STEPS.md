@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.20.0**).
+Document à jour avec l’état réel du dépôt (**v1.21.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.21** : fiche enseignant EN · photo-reading → CTA composition · copy histoire↔marques · docs v1.20.0 (puis bump **v1.21.0**)
 - Pédagogie : difficultés filtrables, revue des erreurs / weak spots (SRS léger)
 - Engagement : défi du jour, duel, succès (photo-reader · vault-clear · streak-14 + badges saison), streak + freezes, **maîtrise** + home featured, saisons
 - Classement : tout temps + saisons semaine/mois, signalement de pseudo (API + migration `004`)
@@ -21,8 +22,8 @@ Document à jour avec l’état réel du dépôt (**v1.20.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.20.0** + 15 quiz · 386 Q · 268 illus (vague 1.20 release + 1.21 P0)
-- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires ≥ 2026-09-29 (vague 1.19–1.20)
+- [x] Docs headline → **v1.21.0** + 15 quiz · 386 Q · 268 illus (vague 1.21 release + 1.22 P0)
+- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires ≥ 2026-09-30 (vague 1.19–1.22)
 
 ### Ops Antony — checklist P0.4 (hors code)
 

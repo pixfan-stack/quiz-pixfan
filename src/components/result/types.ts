@@ -11,6 +11,8 @@ export interface ResultScreenProps {
   onPlayDaily?: () => void;
   /** Jump into weak-spots practice from post-score CTA. */
   onPlayWeakSpots?: () => void;
+  /** After photo-reading — continue with the composition pack. */
+  onPlayComposition?: () => void;
   onScoreSubmitted?: () => void;
   /** Category quiz ids for explorer / expert-trio achievements. */
   categoryQuizIds?: string[];

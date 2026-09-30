@@ -36,6 +36,43 @@
     .fiche-timing th {
       background: var(--color-surface-muted, #f6f6f6);
     }
+    .hub-jump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.65rem;
+      margin: 0.75rem 0 1.1rem;
+      padding: 0;
+      list-style: none;
+    }
+    .hub-jump a {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid var(--color-border, #ddd);
+      border-radius: 0.35rem;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: inherit;
+    }
+    .hub-jump a:hover {
+      border-color: var(--pixfan-pink, #f3538c);
+    }
+    .parcours-badge {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.08rem 0.45rem;
+      border-radius: 0.3rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      color: #fff;
+      background: var(--pixfan-pink, #f3538c);
+    }
+    .card--recommended {
+      border-color: color-mix(in srgb, var(--pixfan-pink, #f3538c) 45%, var(--color-border, #ddd));
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -62,32 +99,32 @@
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Parcours scolaires Quiz PixFan",
-    "description": "Parcours cycle 3–4, lycée et EMI alignés sur le programme officiel français.",
+    "description": "Parcours cycle 4 (collège) d’abord, puis cycle 3, EMI et lycée — alignés sur le programme officiel français.",
     "numberOfItems": 5,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Découvrir la photo (cycle 3)",
-        "url": "https://quiz.pixfan.fr/s/genres?classe=1"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
         "name": "Lire une image (cycle 4)",
         "url": "https://quiz.pixfan.fr/s/photo-reading?classe=1"
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 2,
         "name": "Lumière & photographie",
         "url": "https://quiz.pixfan.fr/s/exposure-basics?classe=1"
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 3,
         "name": "Droit à l’image (EMI)",
         "url": "https://quiz.pixfan.fr/s/photo-rights?classe=1"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Découvrir la photo (cycle 3)",
+        "url": "https://quiz.pixfan.fr/s/genres?classe=1"
       },
       {
         "@type": "ListItem",
@@ -133,36 +170,27 @@
 
     <article class="fr">
       <h1>Scolaires — photo &amp; programme officiel</h1>
-      <p class="lead">Parcours gratuits pour enseignants et élèves (cycle&nbsp;3–4 arts plastiques, lycée option/spé, EMI) : guides + quiz déjà en ligne, sans compte, avec un mode classe sans classement public.</p>
+      <p class="lead">Priorité <strong>collège cycle&nbsp;4</strong> (lire une image, lumière, EMI), puis cycle&nbsp;3 et lycée : guides + quiz déjà en ligne, sans compte, mode classe sans classement public.</p>
       <p class="muted">Complément de séance (15–30&nbsp;min), pas un LMS. Images domaine public / originales. Pas d’affiliation au ministère de l’Éducation nationale.</p>
       <p>
         <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html">Imprimer la fiche séance</a>
         <a class="cta-secondary" href="/#/scolaires">Ouvrir dans l’app</a>
       </p>
+      <nav aria-label="Aller aux parcours">
+        <ul class="hub-jump">
+          <li><a href="#cycle-4">Collège (cycle 4)</a></li>
+          <li><a href="#emi">EMI</a></li>
+          <li><a href="#cycle-3">Cycle 3</a></li>
+          <li><a href="#lycee">Lycée</a></li>
+        </ul>
+      </nav>
 
-      <h2 id="cycle-3">Cycle 3 — découvrir la photo</h2>
-      <p>Langage simple (CM1–CM2–6ᵉ) : catégories d’images, image photographiée, narration visuelle — aligné BOEN n°31 du 30 juillet 2020.</p>
+      <h2 id="cycle-4">Cycle 4 — arts plastiques (collège)</h2>
+      <p>Cœur collège — aligné sur les programmes en vigueur (BOEN n°31 du 30 juillet 2020) : représentation, images / réalité / fiction, pratiques de l’image fixe (photographie), numérique.</p>
 
-      <div class="card" id="c3-decouvrir" data-parcours="c3-decouvrir" data-event="scolaires_parcours_c3_decouvrir">
-        <h3>Découvrir la photo <span class="muted">· ~15&nbsp;min</span></h3>
-        <p>Qu’est-ce qu’un genre photo ? Puis quelques images à regarder ensemble — sans jargon technique.</p>
-        <ol>
-          <li><a href="/guides/genres-photo">Guide genres (extrait)</a></li>
-          <li><a href="/s/genres?classe=1">Quiz Genres</a> (facile, mode classe)</li>
-          <li><a href="/s/photo-reading?classe=1">Option : Photos à analyser</a></li>
-        </ol>
-        <p>
-          <a class="cta" href="/s/genres?classe=1" data-track-parcours>Lancer la séance</a>
-          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1" data-copied="Lien copié !">Copier le lien de séance</button>
-        </p>
-      </div>
-
-      <h2 id="cycle-4">Cycle 4 — arts plastiques</h2>
-      <p>Aligné sur les programmes en vigueur (BOEN n°31 du 30 juillet 2020) : représentation, images / réalité / fiction, pratiques de l’image fixe (photographie), numérique.</p>
-
-      <div class="card" id="c4-regard" data-parcours="c4-regard" data-event="scolaires_parcours_c4_regard">
-        <h3>Lire une image <span class="muted">· ~20&nbsp;min</span></h3>
-        <p>Cadre, composition, point de vue — puis analyse d’images illustrées.</p>
+      <div class="card card--recommended" id="c4-regard" data-parcours="c4-regard" data-event="scolaires_parcours_c4_regard">
+        <h3>Lire une image <span class="parcours-badge">Collège</span> <span class="muted">· ~20&nbsp;min</span></h3>
+        <p>Parcours recommandé pour démarrer en cycle&nbsp;4 : cadre, composition, point de vue — puis analyse d’images illustrées.</p>
         <ol>
           <li><a href="/guides/composition-photo">Guide composition</a></li>
           <li><a href="/s/photo-reading?classe=1">Quiz Photos à analyser</a> (mode classe)</li>
@@ -200,6 +228,23 @@
         <p>
           <a class="cta" href="/s/photo-rights?classe=1" data-track-parcours>Lancer la séance</a>
           <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-rights?classe=1" data-copied="Lien copié !">Copier le lien de séance</button>
+        </p>
+      </div>
+
+      <h2 id="cycle-3">Cycle 3 — découvrir la photo</h2>
+      <p>Langage simple (CM1–CM2–6ᵉ) : catégories d’images, image photographiée, narration visuelle — aligné BOEN n°31 du 30 juillet 2020.</p>
+
+      <div class="card" id="c3-decouvrir" data-parcours="c3-decouvrir" data-event="scolaires_parcours_c3_decouvrir">
+        <h3>Découvrir la photo <span class="muted">· ~15&nbsp;min</span></h3>
+        <p>Qu’est-ce qu’un genre photo ? Puis quelques images à regarder ensemble — sans jargon technique.</p>
+        <ol>
+          <li><a href="/guides/genres-photo">Guide genres (extrait)</a></li>
+          <li><a href="/s/genres?classe=1">Quiz Genres</a> (facile, mode classe)</li>
+          <li><a href="/s/photo-reading?classe=1">Option : Photos à analyser</a></li>
+        </ol>
+        <p>
+          <a class="cta" href="/s/genres?classe=1" data-track-parcours>Lancer la séance</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1" data-copied="Lien copié !">Copier le lien de séance</button>
         </p>
       </div>
 
@@ -296,36 +341,27 @@
 
     <article class="en">
       <h1>Schools — photo &amp; French national curriculum</h1>
-      <p class="lead">Free paths for teachers and students (cycle&nbsp;3–4 visual arts, lycée option/specialty, media literacy / EMI): live guides + quizzes, no account, with class mode and no public leaderboard.</p>
+      <p class="lead"><strong>Collège cycle&nbsp;4 first</strong> (image reading, light, media literacy / EMI), then cycle&nbsp;3 and lycée: live guides + quizzes, no account, class mode without a public leaderboard.</p>
       <p class="muted">Lesson complement (15–30&nbsp;min), not an LMS. Public-domain / original images. No affiliation with the French Ministry of Education.</p>
       <p>
         <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html?lang=en">Print the lesson sheet</a>
         <a class="cta-secondary" href="/#/scolaires">Open in the app</a>
       </p>
+      <nav aria-label="Jump to paths">
+        <ul class="hub-jump">
+          <li><a href="#cycle-4-en">Collège (cycle 4)</a></li>
+          <li><a href="#emi-en">Media literacy</a></li>
+          <li><a href="#cycle-3-en">Cycle 3</a></li>
+          <li><a href="#lycee-en">Lycée</a></li>
+        </ul>
+      </nav>
 
-      <h2 id="cycle-3-en">Cycle 3 — discover photography</h2>
-      <p>Simple language (CM1–CM2–6ᵉ): image categories, photographic image, visual narration — aligned with BOEN no.&nbsp;31 of 30 July 2020.</p>
+      <h2 id="cycle-4-en">Cycle 4 — visual arts (collège)</h2>
+      <p>Core collège path — aligned with programmes in force (BOEN no.&nbsp;31 of 30 July 2020): representation, images / reality / fiction, still-image practices (photography), digital.</p>
 
-      <div class="card" data-parcours="c3-decouvrir" data-event="scolaires_parcours_c3_decouvrir">
-        <h3>Discover photography <span class="muted">· ~15&nbsp;min</span></h3>
-        <p>What is a photo genre? Then a few images to look at together — without technical jargon.</p>
-        <ol>
-          <li><a href="/guides/genres-photo?lang=en">Genres guide (excerpt)</a></li>
-          <li><a href="/s/genres?classe=1&amp;lang=en">Genres quiz</a> (easy, class mode)</li>
-          <li><a href="/s/photo-reading?classe=1&amp;lang=en">Option: Photos to analyse</a></li>
-        </ol>
-        <p>
-          <a class="cta" href="/s/genres?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
-          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1" data-copied="Link copied!">Copy lesson link</button>
-        </p>
-      </div>
-
-      <h2 id="cycle-4-en">Cycle 4 — visual arts</h2>
-      <p>Aligned with programmes in force (BOEN no.&nbsp;31 of 30 July 2020): representation, images / reality / fiction, still-image practices (photography), digital.</p>
-
-      <div class="card" data-parcours="c4-regard" data-event="scolaires_parcours_c4_regard">
-        <h3>Reading an image <span class="muted">· ~20&nbsp;min</span></h3>
-        <p>Frame, composition, point of view — then illustrated image analysis.</p>
+      <div class="card card--recommended" data-parcours="c4-regard" data-event="scolaires_parcours_c4_regard">
+        <h3>Reading an image <span class="parcours-badge">Collège</span> <span class="muted">· ~20&nbsp;min</span></h3>
+        <p>Recommended cycle&nbsp;4 start: frame, composition, point of view — then illustrated image analysis.</p>
         <ol>
           <li><a href="/guides/composition-photo?lang=en">Composition guide</a></li>
           <li><a href="/s/photo-reading?classe=1&amp;lang=en">Photos to analyse quiz</a> (class mode)</li>
@@ -363,6 +399,23 @@
         <p>
           <a class="cta" href="/s/photo-rights?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
           <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-rights?classe=1" data-copied="Link copied!">Copy lesson link</button>
+        </p>
+      </div>
+
+      <h2 id="cycle-3-en">Cycle 3 — discover photography</h2>
+      <p>Simple language (CM1–CM2–6ᵉ): image categories, photographic image, visual narration — aligned with BOEN no.&nbsp;31 of 30 July 2020.</p>
+
+      <div class="card" data-parcours="c3-decouvrir" data-event="scolaires_parcours_c3_decouvrir">
+        <h3>Discover photography <span class="muted">· ~15&nbsp;min</span></h3>
+        <p>What is a photo genre? Then a few images to look at together — without technical jargon.</p>
+        <ol>
+          <li><a href="/guides/genres-photo?lang=en">Genres guide (excerpt)</a></li>
+          <li><a href="/s/genres?classe=1&amp;lang=en">Genres quiz</a> (easy, class mode)</li>
+          <li><a href="/s/photo-reading?classe=1&amp;lang=en">Option: Photos to analyse</a></li>
+        </ol>
+        <p>
+          <a class="cta" href="/s/genres?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1" data-copied="Link copied!">Copy lesson link</button>
         </p>
       </div>
 
@@ -506,6 +559,17 @@
   }
 
   document.querySelectorAll('[data-track-parcours]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var card = el.closest('[data-event]');
+      if (card && card.getAttribute('data-event')) {
+        trackEvt(card.getAttribute('data-event'));
+      }
+    });
+  });
+
+  /* Also count séance quiz deep-links inside a parcours card (not only « Lancer »). */
+  document.querySelectorAll('[data-event] a[href*="classe=1"]').forEach(function (el) {
+    if (el.hasAttribute('data-track-parcours')) return;
     el.addEventListener('click', function () {
       var card = el.closest('[data-event]');
       if (card && card.getAttribute('data-event')) {
