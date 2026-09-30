@@ -33,6 +33,29 @@ describe('scolaires P0–P2 hub', () => {
     expect(hub).toContain('class="fr"');
   });
 
+  it('orders cycle 4 first with jump nav + collège badge (vague 1.22)', () => {
+    const c4 = hub.indexOf('id="cycle-4"');
+    const c3 = hub.indexOf('id="cycle-3"');
+    const regard = hub.indexOf('id="c4-regard"');
+    const decouvrir = hub.indexOf('id="c3-decouvrir"');
+    expect(c4).toBeGreaterThan(0);
+    expect(c3).toBeGreaterThan(c4);
+    expect(regard).toBeGreaterThan(0);
+    expect(decouvrir).toBeGreaterThan(regard);
+    expect(hub).toContain('class="hub-jump"');
+    expect(hub).toContain('href="#cycle-4"');
+    expect(hub).toContain('parcours-badge');
+    expect(hub).toContain('card--recommended');
+    expect(hub).toContain('Priorité <strong>collège cycle&nbsp;4</strong>');
+    expect(hub).toContain('a[href*="classe=1"]');
+    // ItemList JSON-LD lists c4-regard first
+    const itemList = hub.indexOf('"@type": "ItemList"');
+    const firstPath = hub.indexOf('"Lire une image (cycle 4)"', itemList);
+    const c3Path = hub.indexOf('"Découvrir la photo (cycle 3)"', itemList);
+    expect(firstPath).toBeGreaterThan(itemList);
+    expect(c3Path).toBeGreaterThan(firstPath);
+  });
+
   it('ships EN article + lang switcher + hreflang (vague 1.20 P1)', () => {
     expect(hub).toContain('class="lang-switcher"');
     expect(hub).toContain('href="?lang=fr"');
@@ -46,6 +69,8 @@ describe('scolaires P0–P2 hub', () => {
     expect(hub).toContain('Copy lesson link');
     expect(hub).toContain('/s/genres?classe=1&amp;lang=en');
     expect(hub).toContain('document.documentElement.lang');
+    expect(hub).toContain('<strong>Collège cycle&nbsp;4 first</strong>');
+    expect(hub).toContain('href="#cycle-4-en"');
   });
 
   it('ships printable fiche séance with print CSS', () => {

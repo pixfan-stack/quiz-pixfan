@@ -1446,6 +1446,25 @@ a {
   background: var(--color-surface);
 }
 
+.scolaires__card--recommended {
+  border-color: color-mix(in srgb, var(--pixfan-pink) 45%, var(--color-border));
+  background: color-mix(in srgb, var(--pixfan-pink) 6%, var(--color-surface));
+}
+
+.scolaires__badge {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #fff;
+  background: var(--pixfan-pink);
+}
+
 .scolaires__card-title {
   margin: 0 0 0.25rem;
   font-size: 1.05rem;
@@ -1995,6 +2014,27 @@ a {
 
 .pixfan-cta__newsletter-link:hover {
   text-decoration: underline;
+}
+
+.result-continue-pack {
+  margin: 0.85rem 0 0.5rem;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--color-surface) 90%, var(--color-bg, #fff));
+}
+
+.result-continue-pack__title {
+  margin: 0 0 0.25rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.result-continue-pack__desc {
+  margin: 0 0 0.7rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .mistakes-review {

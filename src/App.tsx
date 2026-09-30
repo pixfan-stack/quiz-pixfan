@@ -317,6 +317,13 @@ export default function App() {
     startQuiz(pack);
   }, [quizzes, startQuiz]);
 
+  const handlePlayComposition = useCallback(() => {
+    const pack = quizzes.find((q) => q.id === 'composition');
+    if (!pack) return;
+    prefetchQuizScreen();
+    startQuiz(pack);
+  }, [quizzes, startQuiz]);
+
   const handleHome = () => {
     setActiveQuiz(null);
     setTargetScore(null);
@@ -411,6 +418,7 @@ export default function App() {
                 onHome={handleHome}
                 onPlayDaily={handlePlayDaily}
                 onPlayWeakSpots={handlePlayWeakSpots}
+                onPlayComposition={handlePlayComposition}
                 timePerQuestion={settings.timePerQuestion}
                 antiCheat={settings.antiCheat}
                 onScoreSubmitted={handleScoreSubmitted}

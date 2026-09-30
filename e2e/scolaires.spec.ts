@@ -35,13 +35,18 @@ async function completeCurrentQuiz(
 }
 
 test.describe('Scolaires P2 / mode classe', () => {
-  test('hub #/scolaires lists lycée and starts portrait-light', async ({
+  test('hub #/scolaires lists c4 first then lycée and starts portrait-light', async ({
     page,
   }) => {
     await page.goto('/#/scolaires');
     await expect(page.getByTestId('scolaires-screen')).toBeVisible({
       timeout: 8000,
     });
+    const cards = page.locator('.scolaires__card');
+    await expect(cards.first()).toHaveAttribute(
+      'data-testid',
+      'scolaires-card-c4-regard'
+    );
     await expect(
       page.getByTestId('scolaires-start-lycee-pratique')
     ).toBeVisible();

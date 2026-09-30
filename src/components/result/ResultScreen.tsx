@@ -36,6 +36,7 @@ import {
   getMistakeVaultCount,
   isWeakSpotsQuizId,
 } from '../../utils/mistakeVault';
+import { isPhotoReadingQuizId } from '../../utils/photoReading';
 import { trackHabitEvent } from '../../utils/analyticsApi';
 
 /**
@@ -48,6 +49,7 @@ export function ResultScreen({
   onHome,
   onPlayDaily,
   onPlayWeakSpots,
+  onPlayComposition,
   onScoreSubmitted,
   categoryQuizIds = [],
   quizzes = [],
@@ -135,6 +137,12 @@ export function ResultScreen({
     Boolean(onPlayWeakSpots) &&
     !isWeakSpotsQuizId(result.quizId) &&
     (getMistakeVaultCount() > 0 || vaultSaved > 0);
+
+  const showPhotoReadingContinue =
+    !classeMode &&
+    Boolean(onPlayComposition) &&
+    isPhotoReadingQuizId(result.quizId) &&
+    quizzes.some((q) => q.id === 'composition');
 
   return (
     <>
@@ -291,6 +299,37 @@ export function ResultScreen({
           />
 
           {!classeMode && (
+            <PixfanCta
+              quizId={result.quizId}
+              percentage={result.percentage}
+              mistakeQuestionIds={(result.mistakes ?? [])
+                .filter((m) => !m.wasCorrect)
+                .map((m) => m.question.id)}
+            />
+          )}
+
+          {showPhotoReadingContinue && (
+            <div
+              className="result-continue-pack"
+              data-testid="result-continue-composition"
+            >
+              <p className="result-continue-pack__title">
+                {t('result.continueCompositionTitle')}
+              </p>
+              <p className="result-continue-pack__desc">
+                {t('result.continueCompositionDesc')}
+              </p>
+              <button
+                type="button"
+                className="btn btn--secondary"
+                onClick={() => onPlayComposition?.()}
+              >
+                {t('result.continueCompositionCta')}
+              </button>
+            </div>
+          )}
+
+          {!classeMode && (
             <ResultShareSection
               isDaily={isDaily}
               isDuel={isDuel}
@@ -310,16 +349,6 @@ export function ResultScreen({
           )}
 
           {isDaily && !classeMode ? <DailyReminderPrompt /> : null}
-
-          {!classeMode && (
-            <PixfanCta
-              quizId={result.quizId}
-              percentage={result.percentage}
-              mistakeQuestionIds={(result.mistakes ?? [])
-                .filter((m) => !m.wasCorrect)
-                .map((m) => m.question.id)}
-            />
-          )}
 
           {showWeakSpotsCta && (
             <div className="result-weak-spots-cta">

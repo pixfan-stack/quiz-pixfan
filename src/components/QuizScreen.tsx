@@ -27,6 +27,8 @@ interface QuizScreenProps {
   onPlayDaily?: () => void;
   /** Jump into weak-spots practice from results. */
   onPlayWeakSpots?: () => void;
+  /** After photo-reading — continue with composition pack. */
+  onPlayComposition?: () => void;
   timePerQuestion?: number;
   antiCheat?: boolean;
   onScoreSubmitted?: () => void;
@@ -49,6 +51,7 @@ export default function QuizScreen({
   onHome,
   onPlayDaily,
   onPlayWeakSpots,
+  onPlayComposition,
   timePerQuestion = 0,
   antiCheat = false,
   onScoreSubmitted,
@@ -73,6 +76,7 @@ export default function QuizScreen({
         onHome={onHome}
         onPlayDaily={onPlayDaily}
         onPlayWeakSpots={onPlayWeakSpots}
+        onPlayComposition={onPlayComposition}
         onScoreSubmitted={onScoreSubmitted}
         categoryQuizIds={categoryQuizIds}
         quizzes={quizzes}

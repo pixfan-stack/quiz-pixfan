@@ -38,6 +38,19 @@ describe('pixfanCta', () => {
     expect(photoReading.secondaryTarget).toBe('pixfan');
   });
 
+  it('keeps photo-reading → composition for dedicated result copy (vague 1.22)', () => {
+    const cta = getPixfanCta('photo-reading');
+    expect(cta.topic).toBe('composition');
+    expect(cta.primaryTarget).toBe('guide');
+    expect(cta.fromMistakes).toBe(false);
+    // Mistakes from photo-reading compound ids still resolve to composition
+    const fromMistakes = getPixfanCta('photo-reading', {
+      mistakeQuestionIds: ['composition__q1'],
+    });
+    expect(fromMistakes.topic).toBe('composition');
+    expect(fromMistakes.fromMistakes).toBe(true);
+  });
+
   it('targets rights guide for lexique-image-fixe (not beginner default)', () => {
     const lexique = getPixfanCta('lexique-image-fixe');
     expect(lexique.topic).toBe('rights');

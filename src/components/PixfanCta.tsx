@@ -5,6 +5,7 @@ import {
   type PixfanCtaTarget,
 } from '../utils/pixfanCta';
 import { trackCtaClick } from '../utils/analyticsApi';
+import { isPhotoReadingQuizId } from '../utils/photoReading';
 
 interface PixfanCtaProps {
   quizId: string;
@@ -28,8 +29,18 @@ export function PixfanCta({
   const titleKey = cta.fromMistakes
     ? `pixfan.${tone}FailedTitle`
     : `pixfan.${tone}Title`;
-  const primaryCtaKey =
-    cta.primaryTarget === 'guide'
+  const photoReadingCopy =
+    isPhotoReadingQuizId(quizId) && cta.topic === 'composition';
+  const leadKey = photoReadingCopy
+    ? cta.fromMistakes
+      ? 'pixfan.photoReading_failedDesc'
+      : 'pixfan.photoReading_desc'
+    : cta.fromMistakes
+      ? `pixfan.topic_${cta.topic}_failedDesc`
+      : `pixfan.topic_${cta.topic}_desc`;
+  const primaryCtaKey = photoReadingCopy
+    ? 'pixfan.photoReading_guideCta'
+    : cta.primaryTarget === 'guide'
       ? `pixfan.topic_${cta.topic}_guideCta`
       : `pixfan.topic_${cta.topic}_cta`;
 
@@ -46,16 +57,16 @@ export function PixfanCta({
   };
 
   return (
-    <aside className="pixfan-cta" aria-labelledby="pixfan-cta-title">
+    <aside
+      className="pixfan-cta"
+      aria-labelledby="pixfan-cta-title"
+      data-testid="pixfan-cta"
+    >
       <p className="pixfan-cta__eyebrow">{t('pixfan.eyebrow')}</p>
       <h3 id="pixfan-cta-title" className="pixfan-cta__title">
         {t(titleKey)}
       </h3>
-      <p className="pixfan-cta__lead">
-        {cta.fromMistakes
-          ? t(`pixfan.topic_${cta.topic}_failedDesc`)
-          : t(`pixfan.topic_${cta.topic}_desc`)}
-      </p>
+      <p className="pixfan-cta__lead">{t(leadKey)}</p>
 
       <div className="pixfan-cta__actions">
         <a

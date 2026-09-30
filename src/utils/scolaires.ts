@@ -21,21 +21,21 @@ export interface ScolairesParcours {
   startQuizId: string;
   /** Approx duration label key suffix under scolaires.parcours.* */
   minutes: number;
+  /** Highlight as recommended collège entry (cycle 4). */
+  recommended?: boolean;
 }
 
-/** Stable curated paths — order matches hub HTML. */
+/**
+ * Stable curated paths — cycle 4 first (primary audience), then C3, then lycée.
+ * Order matches hub HTML jump nav.
+ */
 export const SCOLAIRES_PARCOURS: readonly ScolairesParcours[] = [
-  {
-    id: 'c3-decouvrir',
-    event: 'scolaires_parcours_c3_decouvrir',
-    startQuizId: 'genres',
-    minutes: 15,
-  },
   {
     id: 'c4-regard',
     event: 'scolaires_parcours_c4_regard',
     startQuizId: 'photo-reading',
     minutes: 20,
+    recommended: true,
   },
   {
     id: 'c4-lumiere',
@@ -48,6 +48,12 @@ export const SCOLAIRES_PARCOURS: readonly ScolairesParcours[] = [
     event: 'scolaires_parcours_c4_emi_droits',
     startQuizId: 'photo-rights',
     minutes: 20,
+  },
+  {
+    id: 'c3-decouvrir',
+    event: 'scolaires_parcours_c3_decouvrir',
+    startQuizId: 'genres',
+    minutes: 15,
   },
   {
     id: 'lycee-pratique',

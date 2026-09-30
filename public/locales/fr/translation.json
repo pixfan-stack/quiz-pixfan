@@ -15,7 +15,8 @@
     "chipHint": "Parcours programme officiel",
     "eyebrow": "Enseignants & élèves",
     "title": "Scolaires — photo & programme",
-    "subtitle": "Parcours gratuits cycle 3–4, lycée et EMI, sans compte, avec mode classe.",
+    "subtitle": "Priorité collège cycle 4 (lire une image, lumière, EMI), puis cycle 3 et lycée — sans compte, mode classe.",
+    "recommended": "Collège",
     "minutes": "~{{count}} min",
     "startSeance": "Lancer la séance",
     "moreLinks": "Liens scolaires",
@@ -29,10 +30,10 @@
       },
       "c4-regard": {
         "title": "Lire une image (cycle 4)",
-        "desc": "Cadre, composition, puis analyse d’images illustrées."
+        "desc": "Parcours collège recommandé — cadre, composition, puis analyse d’images."
       },
       "c4-lumiere": {
-        "title": "Lumière & photographie",
+        "title": "Lumière & photographie (cycle 4)",
         "desc": "Exposition et qualité de la lumière pour le langage plastique."
       },
       "c4-emi-droits": {
@@ -215,6 +216,9 @@
     "vaultSaved": "{{count}} erreur(s) ajoutée(s) à vos points faibles",
     "vaultCleared": "{{count}} point(s) faible(s) maîtrisé(s) — retiré(s) de la liste",
     "reviewWeakSpots": "Réviser mes erreurs",
+    "continueCompositionTitle": "Continuer dans l’app",
+    "continueCompositionDesc": "Après la lecture d’images, ancrez le cadrage avec le pack Composition.",
+    "continueCompositionCta": "Lancer Composition",
     "exportImage": "Image carrée (Instagram / WhatsApp)",
     "exportStory": "Image Stories (9:16)",
     "exportSquareHint": "1080×1080 — idéal statut & fil",
@@ -335,6 +339,9 @@
     "topic_composition_cta": "Explorer la composition",
     "topic_composition_guideCta": "Lire le guide composition",
     "topic_composition_secondaryCta": "Apprendre la photo sur Pixfan",
+    "photoReading_desc": "Vous venez de lire des images — le guide composition ancre cadrage, lignes et équilibre.",
+    "photoReading_failedDesc": "Certaines images ont résisté — le guide composition clarifie ce que le cadre raconte.",
+    "photoReading_guideCta": "Lire le guide après lecture d’images",
     "topic_light_desc": "Comprenez la lumière naturelle, la température et l’ambiance.",
     "topic_light_failedDesc": "La lumière vous a posé problème — un guide court pour la lire mieux.",
     "topic_light_cta": "Lire les guides lumière",
