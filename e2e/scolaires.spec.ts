@@ -51,28 +51,37 @@ test.describe('Scolaires URL + chrome', () => {
     page,
   }) => {
     await page.goto('/guides/');
+    await expect(page.locator('h1').first()).toContainText(/Guides/i, {
+      timeout: 8000,
+    });
     await expect(
       page.locator('a.guide-nav-link[href="/guides/scolaires/"]')
-    ).toBeVisible({ timeout: 8000 });
+    ).toBeVisible();
     await expect(
       page.locator('a.app-footer__link[href="/guides/scolaires/"]')
     ).toBeVisible();
     await page.goto('/guides/scolaires/');
-    await expect(page.locator('h1').first()).toContainText(/Scolaires|Schools/i);
+    await expect(
+      page.locator('article.fr h1, article.en h1').first()
+    ).toContainText(/Scolaires|Schools/i);
     expect(page.url()).toMatch(/\/guides\/scolaires\/?/);
   });
 
   test('guide pages expose Scolaires in chrome (triangle + genres)', async ({
     page,
   }) => {
+    // Explicit .html for Vite; CF Pages also serves extensionless pretty URLs.
     for (const path of [
-      '/guides/triangle-exposition',
-      '/guides/genres-photo',
+      '/guides/triangle-exposition.html',
+      '/guides/genres-photo.html',
     ]) {
       await page.goto(path);
+      await expect(page.locator('article.fr h1, article.en h1').first()).toBeVisible({
+        timeout: 8000,
+      });
       await expect(
         page.locator('a.guide-nav-link[href="/guides/scolaires/"]')
-      ).toBeVisible({ timeout: 8000 });
+      ).toBeVisible();
       await expect(
         page.locator('a.app-footer__link[href="/guides/scolaires/"]')
       ).toBeVisible();
