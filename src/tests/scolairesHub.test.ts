@@ -119,8 +119,26 @@ describe('scolaires P0–P2 hub', () => {
     expect(guidesIndex).toContain('Scolaires');
   });
 
+  it('guides index chrome links Scolaires via real URL', () => {
+    expect(guidesIndex).toMatch(
+      /class="guide-nav-link" href="\/guides\/scolaires\/"/
+    );
+    expect(guidesIndex).toContain(
+      'href="/guides/scolaires/" class="app-footer__link">Scolaires'
+    );
+  });
+
   it('links cycle 3 from genres guide and lycée from retouche guide', () => {
     expect(genresGuide).toContain('/guides/scolaires/#c3-decouvrir');
     expect(retoucheGuide).toContain('/guides/scolaires/#lycee-pratique');
+  });
+
+  it('genres and retouche chrome include Scolaires footer entry', () => {
+    expect(genresGuide).toContain(
+      'href="/guides/scolaires/" class="app-footer__link">Scolaires'
+    );
+    expect(retoucheGuide).toContain(
+      'href="/guides/scolaires/" class="app-footer__link">Scolaires'
+    );
   });
 });

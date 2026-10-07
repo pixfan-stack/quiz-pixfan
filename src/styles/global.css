@@ -150,7 +150,8 @@ a {
   min-width: 0;
 }
 
-.app-header__pixfan-link {
+.app-header__pixfan-link,
+.guide-nav-link {
   display: flex; align-items: center; gap: 0.35rem;
   text-decoration: none;
   color: var(--color-text-muted);
@@ -162,9 +163,15 @@ a {
   transition: all 0.2s;
   white-space: nowrap;
 }
-.app-header__pixfan-link:hover {
+.app-header__pixfan-link:hover,
+.guide-nav-link:hover {
   color: var(--color-primary);
   border-color: var(--color-primary);
+}
+.guide-nav-link.is-active {
+  color: var(--pixfan-pink);
+  border-color: color-mix(in srgb, var(--pixfan-pink) 40%, var(--color-border));
+  background: var(--color-primary-soft);
 }
 
 .app-header__logo-container {
@@ -2620,12 +2627,14 @@ a {
   color: var(--color-text-muted);
 }
 
-.dark-mode .app-header__pixfan-link {
+.dark-mode .app-header__pixfan-link,
+.dark-mode .guide-nav-link {
   border-color: var(--color-border);
   color: var(--color-text-muted);
 }
 
-.dark-mode .app-header__pixfan-link:hover {
+.dark-mode .app-header__pixfan-link:hover,
+.dark-mode .guide-nav-link:hover {
   border-color: var(--pixfan-pink);
   color: var(--pixfan-pink);
 }
