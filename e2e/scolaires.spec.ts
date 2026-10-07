@@ -34,6 +34,61 @@ async function completeCurrentQuiz(
   await expect(page.locator('.result-section')).toBeVisible({ timeout: 8000 });
 }
 
+test.describe('Scolaires URL + chrome', () => {
+  test('app header and footer Scolaires use real /guides/scolaires/ URL', async ({
+    page,
+  }) => {
+    await page.goto('/');
+    const header = page.getByTestId('header-scolaires-link');
+    const footer = page.getByTestId('footer-scolaires-link');
+    await expect(header).toBeVisible({ timeout: 8000 });
+    await expect(footer).toBeVisible();
+    await expect(header).toHaveAttribute('href', '/guides/scolaires/');
+    await expect(footer).toHaveAttribute('href', '/guides/scolaires/');
+  });
+
+  test('static hub /guides/scolaires/ is crawlable and linked from guides index', async ({
+    page,
+  }) => {
+    await page.goto('/guides/');
+    await expect(page.locator('h1').first()).toContainText(/Guides/i, {
+      timeout: 8000,
+    });
+    await expect(
+      page.locator('a.guide-nav-link[href="/guides/scolaires/"]')
+    ).toBeVisible();
+    await expect(
+      page.locator('a.app-footer__link[href="/guides/scolaires/"]')
+    ).toBeVisible();
+    await page.goto('/guides/scolaires/');
+    await expect(
+      page.locator('article.fr h1, article.en h1').first()
+    ).toContainText(/Scolaires|Schools/i);
+    expect(page.url()).toMatch(/\/guides\/scolaires\/?/);
+  });
+
+  test('guide pages expose Scolaires in chrome (triangle + genres)', async ({
+    page,
+  }) => {
+    // Explicit .html for Vite; CF Pages also serves extensionless pretty URLs.
+    for (const path of [
+      '/guides/triangle-exposition.html',
+      '/guides/genres-photo.html',
+    ]) {
+      await page.goto(path);
+      await expect(page.locator('article.fr h1, article.en h1').first()).toBeVisible({
+        timeout: 8000,
+      });
+      await expect(
+        page.locator('a.guide-nav-link[href="/guides/scolaires/"]')
+      ).toBeVisible();
+      await expect(
+        page.locator('a.app-footer__link[href="/guides/scolaires/"]')
+      ).toBeVisible();
+    }
+  });
+});
+
 test.describe('Scolaires P2 / mode classe', () => {
   test('hub #/scolaires lists c4 first then lycée and starts portrait-light', async ({
     page,

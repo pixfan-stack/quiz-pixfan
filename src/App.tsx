@@ -357,6 +357,16 @@ export default function App() {
         </div>
 
         <div className="app-header__controls">
+          <a href="/guides/" className="guide-nav-link">
+            {t('footer.guides')}
+          </a>
+          <a
+            href="/guides/scolaires/"
+            className="guide-nav-link"
+            data-testid="header-scolaires-link"
+          >
+            {t('footer.scolaires')}
+          </a>
           <a
             href="https://www.pixfan.com"
             target="_blank"
@@ -446,7 +456,11 @@ export default function App() {
           <a href="/guides/" className="app-footer__link">
             {t('footer.guides')}
           </a>
-          <a href="#/scolaires" className="app-footer__link">
+          <a
+            href="/guides/scolaires/"
+            className="app-footer__link"
+            data-testid="footer-scolaires-link"
+          >
             {t('footer.scolaires')}
           </a>
           <a
