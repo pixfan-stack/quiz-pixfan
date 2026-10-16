@@ -49,17 +49,17 @@ test.describe('Homepage', () => {
     ).toHaveCount(0);
   });
 
-  test('opens #/scolaires from home chip and returns home', async ({ page }) => {
+  test('home chip links to real /guides/scolaires/ hub', async ({ page }) => {
     await expect(page.getByTestId('scolaires-home-chip')).toBeVisible({
       timeout: 8000,
     });
-    await page.getByTestId('scolaires-home-chip').locator('button').click();
-    await expect(page.getByTestId('scolaires-screen')).toBeVisible({
-      timeout: 8000,
-    });
-    expect(page.url()).toContain('#/scolaires');
-    await page.getByRole('button', { name: /retour à l’accueil|back to home/i }).click();
-    await expect(page.getByTestId('scolaires-home-chip')).toBeVisible();
+    const link = page.getByTestId('scolaires-home-chip-link');
+    await expect(link).toHaveAttribute('href', '/guides/scolaires/');
+    await link.click();
+    await expect(
+      page.locator('article.fr h1, article.en h1').first()
+    ).toContainText(/Scolaires|Schools/i, { timeout: 8000 });
+    expect(page.url()).toMatch(/\/guides\/scolaires\/?/);
   });
 
   test('displays quiz titles in French by default', async ({ page }) => {

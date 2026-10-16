@@ -23,7 +23,6 @@ export function QuizSelector({
   recoveryCode = null,
   onRecovered,
   classeMode = false,
-  onOpenScolaires,
 }: QuizSelectorProps) {
   const state = useQuizSelectorState({
     quizzes,
@@ -98,22 +97,20 @@ export function QuizSelector({
         />
       )}
 
-      {onOpenScolaires && (
-        <div className="scolaires-home-chip" data-testid="scolaires-home-chip">
-          <button
-            type="button"
-            className="scolaires-home-chip__btn"
-            onClick={onOpenScolaires}
-          >
-            <span className="scolaires-home-chip__label">
-              {t('scolaires.chip')}
-            </span>
-            <span className="scolaires-home-chip__hint">
-              {t('scolaires.chipHint')}
-            </span>
-          </button>
-        </div>
-      )}
+      <div className="scolaires-home-chip" data-testid="scolaires-home-chip">
+        <a
+          className="scolaires-home-chip__btn"
+          href="/guides/scolaires/"
+          data-testid="scolaires-home-chip-link"
+        >
+          <span className="scolaires-home-chip__label">
+            {t('scolaires.chip')}
+          </span>
+          <span className="scolaires-home-chip__hint">
+            {t('scolaires.chipHint')}
+          </span>
+        </a>
+      </div>
 
       <MorePacksSection
         morePacksOpen={state.morePacksOpen}

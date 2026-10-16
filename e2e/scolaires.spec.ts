@@ -87,6 +87,13 @@ test.describe('Scolaires URL + chrome', () => {
       ).toBeVisible();
     }
   });
+
+  test('triangle guide links Pour la classe to c4-lumiere', async ({ page }) => {
+    await page.goto('/guides/triangle-exposition.html');
+    await expect(
+      page.locator('article.fr a[href="/guides/scolaires/#c4-lumiere"]')
+    ).toBeVisible({ timeout: 8000 });
+  });
 });
 
 test.describe('Scolaires P2 / mode classe', () => {

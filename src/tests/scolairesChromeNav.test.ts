@@ -55,4 +55,12 @@ describe('scolaires chrome URL + nav', () => {
       'href="/guides/scolaires/" class="app-footer__link">Scolaires'
     );
   });
+
+  it('triangle / smartphone / matériel expose Pour la classe (vague 1.23)', () => {
+    expect(triangle).toContain('/guides/scolaires/#c4-lumiere');
+    expect(triangle).toMatch(/Pour la classe|For the classroom/);
+    expect(smartphone).toContain('Pour la classe → parcours Scolaires');
+    expect(materiel).toContain('/guides/scolaires/#lycee-pratique');
+    expect(materiel).toMatch(/Pour la classe|For the classroom/);
+  });
 });

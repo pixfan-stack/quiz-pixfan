@@ -153,15 +153,6 @@ export default function App() {
     window.history.pushState(null, '', url.pathname + url.search + url.hash);
   }, []);
 
-  const openScolaires = useCallback(() => {
-    setActiveQuiz(null);
-    setTargetScore(null);
-    setView('scolaires');
-    const url = new URL(window.location.href);
-    url.hash = '/scolaires';
-    window.history.pushState(null, '', url.pathname + url.search + url.hash);
-  }, []);
-
   const startScolairesParcours = useCallback(
     (quiz: Quiz) => {
       setClasseMode(true);
@@ -408,7 +399,6 @@ export default function App() {
                 recoveryCode={recoveryCode}
                 onRecovered={handleRecovered}
                 classeMode={classeMode}
-                onOpenScolaires={openScolaires}
               />
             </>
           )}
