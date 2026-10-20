@@ -3,28 +3,25 @@ import { test, expect, openMorePacks, CATEGORY_CARD } from './fixtures';
 test.describe('Language Switching', () => {
   test('switches to English', async ({ page }) => {
     await page.goto('/');
-    
-    // Click language switcher
-    const langBtn = page.locator('.lang-switcher__btn').first();
-    await langBtn.click();
-    
-    // Check English text appears
-    const welcomeText = page.locator('.page-title');
-    await expect(welcomeText).toContainText('Choose a quiz', { timeout: 5000 });
+
+    // Click EN in the language switcher
+    await page.getByRole('button', { name: 'EN', exact: true }).click();
+
+    // Brand-first hero lead is locale-specific (`.page-title` retired from home)
+    await expect(page.locator('.home-hero__lead')).toContainText('Photos to analyze', {
+      timeout: 5000,
+    });
   });
 
   test('switches back to French', async ({ page }) => {
     await page.goto('/');
-    
-    // Switch to English first
-    await page.locator('.lang-switcher__btn').first().click();
-    await expect(page.locator('.page-title')).toContainText('Choose a quiz');
-    
-    // Switch back to French
-    await page.locator('.lang-switcher__btn').nth(1).click();
-    
-    // Check French text
-    await expect(page.locator('.page-title')).toContainText('Choisissez un quiz');
+
+    await page.getByRole('button', { name: 'EN', exact: true }).click();
+    await expect(page.locator('.home-hero__lead')).toContainText('Photos to analyze');
+
+    await page.getByRole('button', { name: 'FR', exact: true }).click();
+
+    await expect(page.locator('.home-hero__lead')).toContainText('Photos à analyser');
   });
 
   test('quiz questions display in selected language', async ({ page }) => {

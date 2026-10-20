@@ -9,9 +9,11 @@ import {
   seasonCosmeticLabelKey,
   type SeasonBannerKind,
 } from '../utils/seasonEngagement';
+import { hasCompletedAnyQuiz } from '../utils/reengage';
 
 /**
  * Soft home banner for season start / ending soon / previous-season wrap.
+ * Deferred until after the first completed quiz (first-contact quieter).
  */
 export function SeasonBanner() {
   const { t } = useTranslation();
@@ -19,7 +21,7 @@ export function SeasonBanner() {
   const daysLeft = useMemo(() => getSeasonDaysRemaining(), []);
   const wrap = useMemo(() => getSeasonWrapSummary(), []);
   const [kind, setKind] = useState<SeasonBannerKind | null>(() =>
-    getSeasonBannerKind()
+    hasCompletedAnyQuiz() ? getSeasonBannerKind() : null
   );
 
   if (!kind) return null;

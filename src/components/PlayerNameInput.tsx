@@ -2,32 +2,16 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   getPlayerDisplayName,
+  markNamePromptSeen,
   setPlayerDisplayName,
 } from '../utils/player';
 import { AccountSyncPanel } from './AccountSyncPanel';
 
-const PROMPT_SEEN_KEY = 'quiz-pixfan-name-prompt-seen';
 /** Custom event — footer / settings can open the sync surface. */
 export const OPEN_ACCOUNT_SYNC_EVENT = 'quiz-pixfan-open-account-sync';
 
 export function requestOpenAccountSync(): void {
   window.dispatchEvent(new CustomEvent(OPEN_ACCOUNT_SYNC_EVENT));
-}
-
-function hasSeenPrompt(): boolean {
-  try {
-    return localStorage.getItem(PROMPT_SEEN_KEY) === '1';
-  } catch {
-    return false;
-  }
-}
-
-function markPromptSeen(): void {
-  try {
-    localStorage.setItem(PROMPT_SEEN_KEY, '1');
-  } catch {
-    // private mode
-  }
 }
 
 type ModalMode = 'name' | 'sync';
@@ -39,7 +23,9 @@ interface PlayerNamePromptProps {
 }
 
 /**
- * Startup modal for the leaderboard display name + visible sync chip.
+ * Display-name chip + optional modal.
+ * First-visit auto-gate is deferred — open only for recovery links or
+ * when the player opens the chip. Soft ask lives on the result screen.
  * Sync also opens from settings / footer via `requestOpenAccountSync`.
  */
 export function PlayerNamePrompt({
@@ -52,11 +38,7 @@ export function PlayerNamePrompt({
   const dialogRef = useRef<HTMLDivElement>(null);
   const [displayName, setDisplayName] = useState(() => getPlayerDisplayName());
   const [draft, setDraft] = useState(() => getPlayerDisplayName());
-  const [open, setOpen] = useState(
-    () =>
-      Boolean(recoveryCode) ||
-      (!getPlayerDisplayName() && !hasSeenPrompt())
-  );
+  const [open, setOpen] = useState(() => Boolean(recoveryCode));
   const [modalMode, setModalMode] = useState<ModalMode>(() =>
     recoveryCode ? 'sync' : 'name'
   );
@@ -82,7 +64,7 @@ export function PlayerNamePrompt({
   }, []);
 
   const close = useCallback(() => {
-    markPromptSeen();
+    markNamePromptSeen();
     setOpen(false);
     setModalMode('name');
   }, []);

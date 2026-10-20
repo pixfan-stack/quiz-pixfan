@@ -1,26 +1,28 @@
 import { test, expect, openMorePacks } from './fixtures';
 
 test.describe('Leaderboard profile', () => {
-  test('shows name modal for first-time visitors', async ({ page }) => {
+  test('does not auto-open name modal on first home visit', async ({ page }) => {
     await page.addInitScript(() => {
       localStorage.removeItem('quiz-pixfan-player-display-name');
       localStorage.removeItem('quiz-pixfan-name-prompt-seen');
+      localStorage.removeItem('quiz-pixfan-last-played-at');
+      localStorage.removeItem('quiz-pixfan-highscores');
     });
 
     await page.goto('/');
 
-    await expect(page.getByRole('dialog')).toBeVisible();
-    await expect(page.locator('.player-modal__title')).toBeVisible();
+    await expect(page.getByRole('dialog')).toHaveCount(0);
+    await expect(page.getByTestId('home-hero')).toBeVisible();
+    await expect(page.locator('.player-chip:not(.player-chip--sync)')).toBeVisible();
   });
 
-  test('chip opens name editor after skip', async ({ page }) => {
+  test('chip opens name editor without prior auto-gate', async ({ page }) => {
     await page.addInitScript(() => {
       localStorage.removeItem('quiz-pixfan-player-display-name');
       localStorage.removeItem('quiz-pixfan-name-prompt-seen');
     });
 
     await page.goto('/');
-    await page.getByRole('button', { name: /Plus tard|Later/i }).click();
     await expect(page.getByRole('dialog')).toHaveCount(0);
 
     await page.locator('.player-chip:not(.player-chip--sync)').click();

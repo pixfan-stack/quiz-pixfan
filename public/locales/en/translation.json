@@ -48,7 +48,8 @@
   },
   "home": {
     "welcome": "Choose a quiz to get started",
-    "selectQuiz": "Photos to analyze, daily challenge, or a duel",
+    "selectQuiz": "Photos to analyze, daily challenge, or a duel — no account needed to start.",
+    "packFilter": "Paths",
     "start": "Start quiz",
     "questionsCount": "{{count}} questions",
     "photoPoolCount": "{{count}} photos in the pool",
@@ -107,7 +108,7 @@
     "dailyNudgeDesc": "You’re on the installed app — take today’s daily pack.",
     "dailyNudgePlay": "Play",
     "dailyNudgeDismiss": "Later",
-    "difficultyFilter": "Difficulty",
+    "difficultyFilter": "By difficulty",
     "difficulty_all": "All levels",
     "difficulty_easy": "Easy",
     "difficulty_medium": "Medium",
@@ -383,6 +384,7 @@
   "achievements": {
     "title": "Achievements",
     "progress": "{{unlocked}} / {{total}} unlocked",
+    "teaserSummary": "Earn achievements by playing — show list",
     "counter": "{{current}}/{{threshold}}",
     "new": "New",
     "firstFinish": "First finish",

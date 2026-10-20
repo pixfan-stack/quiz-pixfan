@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import {
   dismissHomeDailyNudge,
   dismissResultReengage,
+  hasCompletedAnyQuiz,
   hasPlayedDailyToday,
   isIosDevice,
   isStandalonePwa,
@@ -15,6 +16,27 @@ import { getDailyQuizId } from '../utils/dailyChallenge';
 describe('reengage', () => {
   beforeEach(() => {
     localStorage.clear();
+  });
+
+  it('detects first-run vs completed any quiz', () => {
+    expect(hasCompletedAnyQuiz()).toBe(false);
+    markQuizPlayed(new Date('2026-07-26T12:00:00Z'));
+    expect(hasCompletedAnyQuiz()).toBe(true);
+  });
+
+  it('treats a local high score as completed play', () => {
+    localStorage.setItem(
+      'quiz-pixfan-highscores',
+      JSON.stringify({
+        composition: {
+          quizId: 'composition',
+          percentage: 70,
+          correctCount: 7,
+          totalQuestions: 10,
+        },
+      })
+    );
+    expect(hasCompletedAnyQuiz()).toBe(true);
   });
 
   it('shows result reengage for non-daily quizzes when daily not played', () => {

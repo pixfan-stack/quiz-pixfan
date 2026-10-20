@@ -27,6 +27,7 @@ import { MistakesReview } from '../MistakesReview';
 import { AchievementsPanel } from '../AchievementsPanel';
 import { PixfanCta } from '../PixfanCta';
 import { DailyReminderPrompt } from '../DailyReminderPrompt';
+import { ResultNameSoftAsk } from '../ResultNameSoftAsk';
 import { ResultHero } from './ResultHero';
 import { ResultShareSection } from './ResultShareSection';
 import type { ResultScreenProps } from './types';
@@ -178,6 +179,8 @@ export function ResultScreen({
             showLeaderboardName={!classeMode}
             t={t}
           />
+
+          {!classeMode && <ResultNameSoftAsk />}
 
           {result.isNewHighScore && !classeMode && (
             <div className="highscore-banner" role="status">

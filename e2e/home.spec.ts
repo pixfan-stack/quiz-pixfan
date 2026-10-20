@@ -18,10 +18,17 @@ test.describe('Homepage', () => {
     await openMorePacks(page);
 
     await expect(page.locator('.quiz-card--random')).toBeVisible();
-    await expect(page.locator('.difficulty-filter')).toBeVisible();
-    await expect(page.locator('.weekly-leaders')).toBeVisible();
+    await expect(page.locator('.difficulty-filter').first()).toBeVisible();
+    await expect(page.locator('.difficulty-filter-more')).toBeVisible();
     await expect(page.locator('.achievements')).toBeVisible();
+    await expect(page.getByTestId('achievements-teaser')).toBeVisible();
     await expect(page.locator(CATEGORY_CARD)).toHaveCount(15);
+  });
+
+  test('shows brand-first hero with photo CTA', async ({ page }) => {
+    await expect(page.getByTestId('home-hero')).toBeVisible();
+    await expect(page.getByTestId('home-hero-cta')).toBeVisible();
+    await expect(page.locator('.home-hero__brand')).toContainText(/Quiz PixFan|PixFan/i);
   });
 
   test('copies daily link without starting a quiz; duel has no scoreless invite', async ({
@@ -75,8 +82,20 @@ test.describe('Homepage', () => {
     await expect(page.locator('.page-title, .quiz-header, h1, h2').first()).toBeVisible();
   });
 
-  test('shows season start banner on first visit of a season', async ({ page }) => {
+  test('hides season banner before any play', async ({ page }) => {
     await page.addInitScript(() => {
+      localStorage.removeItem('quiz-pixfan-last-season-seen');
+      localStorage.removeItem('quiz-pixfan-season-ending-dismissed');
+      localStorage.removeItem('quiz-pixfan-last-played-at');
+      localStorage.removeItem('quiz-pixfan-highscores');
+    });
+    await page.goto('/');
+    await expect(page.getByTestId('season-banner')).toHaveCount(0);
+  });
+
+  test('shows season start banner after first play', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('quiz-pixfan-last-played-at', new Date().toISOString());
       localStorage.removeItem('quiz-pixfan-last-season-seen');
       localStorage.removeItem('quiz-pixfan-season-ending-dismissed');
     });
