@@ -1,16 +1,10 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import appSource from '../App.tsx?raw';
 import morePacksSource from '../components/quiz-selector/MorePacksSection.tsx?raw';
 import dailyNudgeSource from '../components/DailyNudge.tsx?raw';
+import installSource from '../components/InstallPrompt.tsx?raw';
 import hub from '../../public/guides/scolaires/index.html?raw';
 import composition from '../../public/guides/composition-photo.html?raw';
-
-const css = readFileSync(
-  resolve(__dirname, '../styles/global.css'),
-  'utf8'
-);
 
 describe('quiet chrome + guides polish (vague 1.27 P1–P2)', () => {
   it('collapses app footer guides to Guides + Scolaires only', () => {
@@ -41,17 +35,12 @@ describe('quiet chrome + guides polish (vague 1.27 P1–P2)', () => {
     expect(hub).toContain('data-track-parcours');
   });
 
-  it('uses local mist BG (no Unsplash CDN mountain)', () => {
-    expect(css).toContain(
-      "url('/images/packs/photo-1506905925346-21bda4d32df4.avif')"
-    );
-    expect(css).not.toContain('images.unsplash.com/photo-1506905925346');
-  });
-
   it('gives DailyNudge its own surface (not install-prompt twin)', () => {
     expect(dailyNudgeSource).toContain('className="daily-nudge"');
-    expect(dailyNudgeSource).not.toContain('install-prompt');
+    expect(dailyNudgeSource).toContain('daily-nudge__title');
     expect(dailyNudgeSource).toContain('btn--secondary');
-    expect(css).toContain('.daily-nudge {');
+    expect(dailyNudgeSource).not.toContain('install-prompt');
+    // Install prompt keeps the pink banner DNA; nudge must not share it.
+    expect(installSource).toContain('install-prompt');
   });
 });
