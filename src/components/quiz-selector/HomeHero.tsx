@@ -60,7 +60,7 @@ export function HomeHero({
             </p>
             <a
               className="home-hero__teachers"
-              href="/guides/scolaires/"
+              href="/guides/scolaires/#c4-regard"
               data-testid="home-hero-scolaires"
             >
               {t('home.teachersCta')}

@@ -328,7 +328,7 @@ export function ResultScreen({
                 {t('result.continueCompositionCta')}
               </button>
               <a
-                className="result-continue-pack__scolaires"
+                className="btn btn--secondary result-continue-pack__scolaires"
                 href="/guides/scolaires/#c4-regard"
                 data-testid="result-continue-scolaires"
               >
@@ -356,7 +356,7 @@ export function ResultScreen({
                 {t('result.continueLightCta')}
               </button>
               <a
-                className="result-continue-pack__scolaires"
+                className="btn btn--secondary result-continue-pack__scolaires"
                 href="/guides/scolaires/#c4-lumiere"
                 data-testid="result-continue-scolaires-light"
               >

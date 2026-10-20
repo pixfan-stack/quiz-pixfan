@@ -43,7 +43,7 @@ describe('scolaires P0–P2 hub', () => {
     expect(regard).toBeGreaterThan(0);
     expect(decouvrir).toBeGreaterThan(regard);
     expect(hub).toContain('class="hub-jump"');
-    expect(hub).toContain('href="#cycle-4"');
+    expect(hub).toContain('href="#c4-regard"');
     expect(hub).toContain('parcours-badge');
     expect(hub).toContain('card--recommended');
     expect(hub).toContain('Priorité <strong>collège cycle&nbsp;4</strong>');
@@ -70,7 +70,8 @@ describe('scolaires P0–P2 hub', () => {
     expect(hub).toContain('/s/genres?classe=1&amp;lang=en');
     expect(hub).toContain('document.documentElement.lang');
     expect(hub).toContain('<strong>Collège cycle&nbsp;4 first</strong>');
-    expect(hub).toContain('href="#cycle-4-en"');
+    expect(hub).toContain('href="#c4-regard-en"');
+    expect(hub).toContain('id="c4-regard-en"');
   });
 
   it('ships printable fiche séance with print CSS', () => {

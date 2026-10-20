@@ -18,7 +18,8 @@ import {
   isDuelQuizId,
   parseDuelSeed,
 } from './utils/duel';
-import { isAdminEnabled, isAdminHash } from './utils/adminAuth';
+import { isAdminEnabled, isAdminHash, isAdminUnlocked } from './utils/adminAuth';
+import { hasCompletedAnyQuiz } from './utils/reengage';
 import {
   clearQuizHash,
   ensureClasseSearchParam,
@@ -499,21 +500,24 @@ export default function App() {
           </a>
         </nav>
         <div className="app-footer__inner">
-          <button
-            type="button"
-            className="app-footer__link app-footer__sync"
-            onClick={() => {
-              if (view !== 'home') {
-                setActiveQuiz(null);
-                setTargetScore(null);
-                setView('home');
-                clearQuizHash();
-              }
-              requestOpenAccountSync();
-            }}
-          >
-            {t('footer.saveProgress')}
-          </button>
+          {hasCompletedAnyQuiz() && (
+            <button
+              type="button"
+              className="app-footer__link app-footer__sync"
+              data-testid="footer-save-progress"
+              onClick={() => {
+                if (view !== 'home') {
+                  setActiveQuiz(null);
+                  setTargetScore(null);
+                  setView('home');
+                  clearQuizHash();
+                }
+                requestOpenAccountSync();
+              }}
+            >
+              {t('footer.saveProgress')}
+            </button>
+          )}
           <a
             href="https://www.pixfan.com"
             target="_blank"
@@ -525,10 +529,11 @@ export default function App() {
           <span className="app-footer__version">
             {t('footer.version', { version: APP_VERSION })}
           </span>
-          {isAdminEnabled() && (
+          {isAdminEnabled() && isAdminUnlocked() && (
             <button
               type="button"
               className="app-footer__admin"
+              data-testid="footer-admin"
               onClick={openAdmin}
             >
               {t('footer.admin')}
