@@ -29,6 +29,9 @@ test.describe('Homepage', () => {
     await expect(page.getByTestId('home-hero')).toBeVisible();
     await expect(page.getByTestId('home-hero-cta')).toBeVisible();
     await expect(page.locator('.home-hero__brand')).toContainText(/Quiz PixFan|PixFan/i);
+    await expect(page.getByTestId('home-hero-no-account')).toBeVisible();
+    const teachers = page.getByTestId('home-hero-scolaires');
+    await expect(teachers).toHaveAttribute('href', '/guides/scolaires/');
   });
 
   test('quiets empty home leaderboard into a teaser', async ({ page }) => {

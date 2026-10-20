@@ -315,6 +315,13 @@ export default function App() {
     startQuiz(pack);
   }, [quizzes, startQuiz]);
 
+  const handlePlayLightColor = useCallback(() => {
+    const pack = quizzes.find((q) => q.id === 'light-color');
+    if (!pack) return;
+    prefetchQuizScreen();
+    startQuiz(pack);
+  }, [quizzes, startQuiz]);
+
   const handleHome = () => {
     setActiveQuiz(null);
     setTargetScore(null);
@@ -419,6 +426,7 @@ export default function App() {
                 onPlayDaily={handlePlayDaily}
                 onPlayWeakSpots={handlePlayWeakSpots}
                 onPlayComposition={handlePlayComposition}
+                onPlayLightColor={handlePlayLightColor}
                 timePerQuestion={settings.timePerQuestion}
                 antiCheat={settings.antiCheat}
                 onScoreSubmitted={handleScoreSubmitted}

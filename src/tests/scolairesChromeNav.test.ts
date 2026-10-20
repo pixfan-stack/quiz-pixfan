@@ -11,6 +11,7 @@ import materiel from '../../public/guides/materiel-photo.html?raw';
 import droits from '../../public/guides/droits-ethique-photo.html?raw';
 import histoire from '../../public/guides/histoire-photo.html?raw';
 import hub from '../../public/guides/scolaires/index.html?raw';
+import quizSelectorSource from '../components/quiz-selector/QuizSelector.tsx?raw';
 
 const guidePages: Array<{ name: string; html: string }> = [
   { name: 'index', html: guidesIndex },
@@ -62,5 +63,28 @@ describe('scolaires chrome URL + nav', () => {
     expect(smartphone).toContain('Pour la classe → parcours Scolaires');
     expect(materiel).toContain('/guides/scolaires/#lycee-pratique');
     expect(materiel).toMatch(/Pour la classe|For the classroom/);
+  });
+
+  it('EN classroom links on lumière / droits / genres / retouche (vague 1.24)', () => {
+    expect(lumiere).toContain('/guides/scolaires/#c4-lumiere');
+    expect(lumiere).toMatch(/For the classroom/);
+    expect(droits).toContain('/guides/scolaires/#c4-emi-droits');
+    expect(droits).toMatch(/For the classroom/);
+    expect(genres).toContain('/guides/scolaires/#c3-decouvrir');
+    expect(genres).toMatch(/For the classroom/);
+    expect(retouche).toContain('/guides/scolaires/#lycee-pratique');
+    expect(retouche).toMatch(/For the classroom/);
+  });
+});
+
+describe('scolaires home chip order (vague 1.24)', () => {
+  it('places chip before WeeklyLeaders in QuizSelector source', () => {
+    const chipIdx = quizSelectorSource.indexOf(
+      'data-testid="scolaires-home-chip"'
+    );
+    const weeklyIdx = quizSelectorSource.indexOf('<WeeklyLeaders');
+    expect(chipIdx).toBeGreaterThan(-1);
+    expect(weeklyIdx).toBeGreaterThan(-1);
+    expect(chipIdx).toBeLessThan(weeklyIdx);
   });
 });

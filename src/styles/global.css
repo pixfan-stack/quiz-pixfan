@@ -524,6 +524,28 @@ a {
   max-width: 38ch;
 }
 
+.home-hero__reassure {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 36ch;
+}
+
+.home-hero__teachers {
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.home-hero__teachers:hover,
+.home-hero__teachers:focus-visible {
+  color: #fff;
+}
+
 @keyframes home-hero-in {
   from {
     opacity: 0;

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import resultScreenSource from '../components/result/ResultScreen.tsx?raw';
+import softAskSource from '../components/ResultNameSoftAsk.tsx?raw';
 import fr from '../../public/locales/fr/translation.json';
 import en from '../../public/locales/en/translation.json';
 
@@ -25,5 +26,38 @@ describe('photo-reading continue placement (vague 1.23)', () => {
   it('ships FR/EN copy for scolaires soft link', () => {
     expect(fr.result.continueScolairesCta).toMatch(/collège/i);
     expect(en.result.continueScolairesCta).toMatch(/classroom|middle-school/i);
+  });
+});
+
+describe('composition → light continue (vague 1.24)', () => {
+  it('renders light continue before PixfanCta', () => {
+    const lightIdx = resultScreenSource.indexOf(
+      'data-testid="result-continue-light"'
+    );
+    const ctaIdx = resultScreenSource.indexOf('<PixfanCta');
+    expect(lightIdx).toBeGreaterThan(-1);
+    expect(lightIdx).toBeLessThan(ctaIdx);
+  });
+
+  it('exposes soft scolaires link to c4-lumiere after composition', () => {
+    expect(resultScreenSource).toContain(
+      'data-testid="result-continue-scolaires-light"'
+    );
+    expect(resultScreenSource).toContain('/guides/scolaires/#c4-lumiere');
+    expect(fr.result.continueLightCta).toMatch(/lumière|couleur/i);
+    expect(en.result.continueLightCta).toMatch(/light|color/i);
+    expect(fr.result.continueScolairesLightCta).toMatch(/lumière/i);
+    expect(en.result.continueScolairesLightCta).toMatch(/light|classroom/i);
+  });
+});
+
+describe('result soft-ask copy (vague 1.24)', () => {
+  it('uses dedicated softAsk keys, not gate modal titles', () => {
+    expect(softAskSource).toContain('result.softAskTitle');
+    expect(softAskSource).toContain('result.softAskHint');
+    expect(softAskSource).not.toContain('home.playerModalTitle');
+    expect(softAskSource).not.toContain('home.playerModalSkip');
+    expect(fr.result.softAskTitle).toMatch(/pseudo|classement/i);
+    expect(en.result.softAskTitle).toMatch(/display name|leaderboard/i);
   });
 });

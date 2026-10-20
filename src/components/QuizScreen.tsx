@@ -29,6 +29,8 @@ interface QuizScreenProps {
   onPlayWeakSpots?: () => void;
   /** After photo-reading — continue with composition pack. */
   onPlayComposition?: () => void;
+  /** After composition — continue with light-color pack. */
+  onPlayLightColor?: () => void;
   timePerQuestion?: number;
   antiCheat?: boolean;
   onScoreSubmitted?: () => void;
@@ -52,6 +54,7 @@ export default function QuizScreen({
   onPlayDaily,
   onPlayWeakSpots,
   onPlayComposition,
+  onPlayLightColor,
   timePerQuestion = 0,
   antiCheat = false,
   onScoreSubmitted,
@@ -77,6 +80,7 @@ export default function QuizScreen({
         onPlayDaily={onPlayDaily}
         onPlayWeakSpots={onPlayWeakSpots}
         onPlayComposition={onPlayComposition}
+        onPlayLightColor={onPlayLightColor}
         onScoreSubmitted={onScoreSubmitted}
         categoryQuizIds={categoryQuizIds}
         quizzes={quizzes}

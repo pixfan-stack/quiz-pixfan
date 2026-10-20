@@ -91,14 +91,6 @@ export function QuizSelector({
         />
       )}
 
-      {!classeMode && state.difficultyFilter === 'all' && (
-        <WeeklyLeaders
-          quizzes={quizzes}
-          refreshToken={leaderboardRefreshToken}
-          onSeeAll={state.scrollToLeaderboard}
-        />
-      )}
-
       <div className="scolaires-home-chip" data-testid="scolaires-home-chip">
         <a
           className="scolaires-home-chip__btn"
@@ -113,6 +105,14 @@ export function QuizSelector({
           </span>
         </a>
       </div>
+
+      {!classeMode && state.difficultyFilter === 'all' && (
+        <WeeklyLeaders
+          quizzes={quizzes}
+          refreshToken={leaderboardRefreshToken}
+          onSeeAll={state.scrollToLeaderboard}
+        />
+      )}
 
       <MorePacksSection
         morePacksOpen={state.morePacksOpen}

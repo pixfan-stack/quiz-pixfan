@@ -51,6 +51,7 @@ export function ResultScreen({
   onPlayDaily,
   onPlayWeakSpots,
   onPlayComposition,
+  onPlayLightColor,
   onScoreSubmitted,
   categoryQuizIds = [],
   quizzes = [],
@@ -144,6 +145,12 @@ export function ResultScreen({
     Boolean(onPlayComposition) &&
     isPhotoReadingQuizId(result.quizId) &&
     quizzes.some((q) => q.id === 'composition');
+
+  const showCompositionContinue =
+    !classeMode &&
+    Boolean(onPlayLightColor) &&
+    result.quizId === 'composition' &&
+    quizzes.some((q) => q.id === 'light-color');
 
   return (
     <>
@@ -326,6 +333,34 @@ export function ResultScreen({
                 data-testid="result-continue-scolaires"
               >
                 {t('result.continueScolairesCta')}
+              </a>
+            </div>
+          )}
+
+          {showCompositionContinue && (
+            <div
+              className="result-continue-pack"
+              data-testid="result-continue-light"
+            >
+              <p className="result-continue-pack__title">
+                {t('result.continueLightTitle')}
+              </p>
+              <p className="result-continue-pack__desc">
+                {t('result.continueLightDesc')}
+              </p>
+              <button
+                type="button"
+                className="btn btn--secondary"
+                onClick={() => onPlayLightColor?.()}
+              >
+                {t('result.continueLightCta')}
+              </button>
+              <a
+                className="result-continue-pack__scolaires"
+                href="/guides/scolaires/#c4-lumiere"
+                data-testid="result-continue-scolaires-light"
+              >
+                {t('result.continueScolairesLightCta')}
               </a>
             </div>
           )}

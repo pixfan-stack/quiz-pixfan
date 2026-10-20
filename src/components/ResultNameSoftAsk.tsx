@@ -34,8 +34,8 @@ export function ResultNameSoftAsk() {
 
   return (
     <div className="result-name-soft" data-testid="result-name-soft-ask" role="region">
-      <p className="result-name-soft__title">{t('home.playerModalTitle')}</p>
-      <p className="result-name-soft__hint">{t('home.playerNameHint')}</p>
+      <p className="result-name-soft__title">{t('result.softAskTitle')}</p>
+      <p className="result-name-soft__hint">{t('result.softAskHint')}</p>
       <label htmlFor={inputId} className="visually-hidden">
         {t('home.playerName')}
       </label>
@@ -58,10 +58,10 @@ export function ResultNameSoftAsk() {
       />
       <div className="result-name-soft__actions">
         <button type="button" className="btn btn--ghost btn--small" onClick={dismiss}>
-          {t('home.playerModalSkip')}
+          {t('result.softAskSkip')}
         </button>
         <button type="button" className="btn btn--primary btn--small" onClick={handleSave}>
-          {t('home.playerModalSave')}
+          {t('result.softAskSave')}
         </button>
       </div>
     </div>
