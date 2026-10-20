@@ -2377,16 +2377,13 @@ a {
 }
 
 .result-continue-pack__scolaires {
-  display: inline-block;
+  display: inline-flex;
   margin-top: 0.65rem;
-  font-size: 0.88rem;
-  color: var(--color-text-muted);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
+  text-decoration: none;
 }
 
 .result-continue-pack__scolaires:hover {
-  color: var(--color-text);
+  text-decoration: none;
 }
 
 .mistakes-review {

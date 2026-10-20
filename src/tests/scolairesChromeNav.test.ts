@@ -77,14 +77,10 @@ describe('scolaires chrome URL + nav', () => {
   });
 });
 
-describe('scolaires home chip order (vague 1.24)', () => {
-  it('places chip before WeeklyLeaders in QuizSelector source', () => {
-    const chipIdx = quizSelectorSource.indexOf(
-      'data-testid="scolaires-home-chip"'
-    );
-    const weeklyIdx = quizSelectorSource.indexOf('<WeeklyLeaders');
-    expect(chipIdx).toBeGreaterThan(-1);
-    expect(weeklyIdx).toBeGreaterThan(-1);
-    expect(chipIdx).toBeLessThan(weeklyIdx);
+describe('scolaires home distill (vague 1.26)', () => {
+  it('removes mid-page chip; WeeklyLeaders stays post-play only', () => {
+    expect(quizSelectorSource).not.toContain('scolaires-home-chip');
+    expect(quizSelectorSource).toContain('<WeeklyLeaders');
+    expect(quizSelectorSource).toContain('postPlay && state.difficultyFilter');
   });
 });

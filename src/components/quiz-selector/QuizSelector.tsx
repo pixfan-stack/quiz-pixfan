@@ -98,21 +98,6 @@ export function QuizSelector({
         />
       )}
 
-      <div className="scolaires-home-chip" data-testid="scolaires-home-chip">
-        <a
-          className="scolaires-home-chip__btn"
-          href="/guides/scolaires/"
-          data-testid="scolaires-home-chip-link"
-        >
-          <span className="scolaires-home-chip__label">
-            {t('scolaires.chip')}
-          </span>
-          <span className="scolaires-home-chip__hint">
-            {t('scolaires.chipHint')}
-          </span>
-        </a>
-      </div>
-
       {!classeMode && postPlay && state.difficultyFilter === 'all' && (
         <WeeklyLeaders
           quizzes={quizzes}

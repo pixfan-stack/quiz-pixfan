@@ -33,7 +33,7 @@ test.describe('Homepage', () => {
     await expect(page.locator('.home-hero__brand')).toContainText(/Quiz PixFan|PixFan/i);
     await expect(page.getByTestId('home-hero-no-account')).toBeVisible();
     const teachers = page.getByTestId('home-hero-scolaires');
-    await expect(teachers).toHaveAttribute('href', '/guides/scolaires/');
+    await expect(teachers).toHaveAttribute('href', '/guides/scolaires/#c4-regard');
   });
 
   test('defers Install and Save chips before first play', async ({ page }) => {
@@ -46,6 +46,9 @@ test.describe('Homepage', () => {
     await page.goto('/');
     await expect(page.getByTestId('install-prompt')).toHaveCount(0);
     await expect(page.getByTestId('player-chip-bar')).toHaveCount(0);
+    await expect(page.getByTestId('footer-save-progress')).toHaveCount(0);
+    await expect(page.getByTestId('footer-admin')).toHaveCount(0);
+    await expect(page.getByTestId('scolaires-home-chip')).toHaveCount(0);
     await expect(page.locator('.quiz-settings-bar')).toBeVisible();
   });
 
@@ -94,17 +97,16 @@ test.describe('Homepage', () => {
     ).toHaveCount(0);
   });
 
-  test('home chip links to real /guides/scolaires/ hub', async ({ page }) => {
-    await expect(page.getByTestId('scolaires-home-chip')).toBeVisible({
-      timeout: 8000,
-    });
-    const link = page.getByTestId('scolaires-home-chip-link');
-    await expect(link).toHaveAttribute('href', '/guides/scolaires/');
+  test('hero teachers link deep-links to hub c4-regard', async ({ page }) => {
+    const link = page.getByTestId('home-hero-scolaires');
+    await expect(link).toBeVisible({ timeout: 8000 });
+    await expect(link).toHaveAttribute('href', '/guides/scolaires/#c4-regard');
     await link.click();
     await expect(
       page.locator('article.fr h1, article.en h1').first()
     ).toContainText(/Scolaires|Schools/i, { timeout: 8000 });
-    expect(page.url()).toMatch(/\/guides\/scolaires\/?/);
+    expect(page.url()).toMatch(/\/guides\/scolaires\/?#c4-regard/);
+    await expect(page.locator('#c4-regard')).toBeVisible();
   });
 
   test('displays quiz titles in French by default', async ({ page }) => {
