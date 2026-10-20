@@ -7,21 +7,26 @@ test.describe('Language Switching', () => {
     // Click EN in the language switcher
     await page.getByRole('button', { name: 'EN', exact: true }).click();
 
-    // Brand-first hero lead is locale-specific (`.page-title` retired from home)
-    await expect(page.locator('.home-hero__lead')).toContainText('Photos to analyze', {
-      timeout: 5000,
-    });
+    // Persuade hero lead is locale-specific (vague 1.24)
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Read real photos — composition, light, framing.',
+      { timeout: 5000 }
+    );
   });
 
   test('switches back to French', async ({ page }) => {
     await page.goto('/');
 
     await page.getByRole('button', { name: 'EN', exact: true }).click();
-    await expect(page.locator('.home-hero__lead')).toContainText('Photos to analyze');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Read real photos — composition, light, framing.'
+    );
 
     await page.getByRole('button', { name: 'FR', exact: true }).click();
 
-    await expect(page.locator('.home-hero__lead')).toContainText('Photos à analyser');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Lisez de vraies photos — composition, lumière, cadrage.'
+    );
   });
 
   test('quiz questions display in selected language', async ({ page }) => {
