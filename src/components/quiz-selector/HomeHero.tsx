@@ -8,7 +8,7 @@ interface HomeHeroProps {
 }
 
 /**
- * First-viewport Persuade surface: brand-first, one photo signal, one CTA.
+ * First-viewport Persuade surface: brand-first, one photo signal, one CTA group.
  */
 export function HomeHero({
   photoTeaserUrl,
@@ -55,6 +55,16 @@ export function HomeHero({
               </span>
             </button>
             <p className="home-hero__cta-hint">{t('home.photoReadingDesc')}</p>
+            <p className="home-hero__reassure" data-testid="home-hero-no-account">
+              {t('home.noAccountHint')}
+            </p>
+            <a
+              className="home-hero__teachers"
+              href="/guides/scolaires/"
+              data-testid="home-hero-scolaires"
+            >
+              {t('home.teachersCta')}
+            </a>
           </div>
         )}
       </div>

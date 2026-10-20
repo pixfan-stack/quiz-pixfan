@@ -13,6 +13,8 @@ export interface ResultScreenProps {
   onPlayWeakSpots?: () => void;
   /** After photo-reading — continue with the composition pack. */
   onPlayComposition?: () => void;
+  /** After composition — continue with the light-color pack. */
+  onPlayLightColor?: () => void;
   onScoreSubmitted?: () => void;
   /** Category quiz ids for explorer / expert-trio achievements. */
   categoryQuizIds?: string[];
