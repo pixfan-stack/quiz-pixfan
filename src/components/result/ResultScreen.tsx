@@ -301,16 +301,7 @@ export function ResultScreen({
             quizId={result.quizId}
           />
 
-          {!classeMode && (
-            <PixfanCta
-              quizId={result.quizId}
-              percentage={result.percentage}
-              mistakeQuestionIds={(result.mistakes ?? [])
-                .filter((m) => !m.wasCorrect)
-                .map((m) => m.question.id)}
-            />
-          )}
-
+          {/* In-app pack suite before external Pixfan CTA (packs << photo-reading). */}
           {showPhotoReadingContinue && (
             <div
               className="result-continue-pack"
@@ -329,7 +320,24 @@ export function ResultScreen({
               >
                 {t('result.continueCompositionCta')}
               </button>
+              <a
+                className="result-continue-pack__scolaires"
+                href="/guides/scolaires/#c4-regard"
+                data-testid="result-continue-scolaires"
+              >
+                {t('result.continueScolairesCta')}
+              </a>
             </div>
+          )}
+
+          {!classeMode && (
+            <PixfanCta
+              quizId={result.quizId}
+              percentage={result.percentage}
+              mistakeQuestionIds={(result.mistakes ?? [])
+                .filter((m) => !m.wasCorrect)
+                .map((m) => m.question.id)}
+            />
           )}
 
           {!classeMode && (

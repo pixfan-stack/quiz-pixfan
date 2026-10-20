@@ -2,7 +2,7 @@
 
 Quiz photo bilingue (FR / EN) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-**Version courante : v1.21.0**
+**Version courante : v1.22.2**
 
 ## Contenu actuel
 

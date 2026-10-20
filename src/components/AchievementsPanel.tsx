@@ -110,10 +110,14 @@ export function AchievementsPanel({
   return (
     <section
       className={`achievements${compact ? ' achievements--compact' : ''}`}
-      aria-labelledby={compact ? undefined : 'achievements-title'}
-      aria-label={compact ? t('achievements.title') : undefined}
+      aria-labelledby={
+        compact || collapseLockedWall ? undefined : 'achievements-title'
+      }
+      aria-label={
+        compact || collapseLockedWall ? t('achievements.title') : undefined
+      }
     >
-      {!compact && (
+      {!compact && !collapseLockedWall && (
         <>
           <h3 id="achievements-title" className="achievements__title">
             {t('achievements.title')}
@@ -127,41 +131,49 @@ export function AchievementsPanel({
         </>
       )}
       {collapseLockedWall ? (
-        <details className="achievements__teaser" data-testid="achievements-teaser">
+        <details
+          className="achievements__teaser"
+          data-testid="achievements-teaser"
+        >
           <summary className="achievements__teaser-summary">
             {t('achievements.teaserSummary')}
           </summary>
+          <h3 id="achievements-title" className="achievements__title">
+            {t('achievements.title')}
+          </h3>
+          <p className="achievements__subtitle">
+            {t('achievements.progress', {
+              unlocked: unlocked.size,
+              total: ACHIEVEMENTS.length,
+            })}
+          </p>
           {grid}
         </details>
       ) : (
         grid
       )}
-      {!compact && (
+      {!compact && seasonBadges.length > 0 && (
         <div className="season-badges" data-testid="season-badges">
           <h4 className="season-badges__title">{t('season.badgesTitle')}</h4>
-          {seasonBadges.length === 0 ? (
-            <p className="season-badges__empty">{t('season.badgesEmpty')}</p>
-          ) : (
-            <ul className="season-badges__list">
-              {seasonBadges.map(({ seasonId, cosmetic }) => (
-                <li
-                  key={seasonId}
-                  className={`season-badge season-badge--${cosmetic}${
-                    seasonId === currentSeasonId && currentSeasonBadge
-                      ? ' is-current'
-                      : ''
-                  }`}
-                >
-                  <span className="season-badge__icon" aria-hidden="true">
-                    {seasonCosmeticIcon(cosmetic)}
-                  </span>
-                  <span className="season-badge__label">
-                    {t(seasonCosmeticLabelKey(cosmetic), { season: seasonId })}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          )}
+          <ul className="season-badges__list">
+            {seasonBadges.map(({ seasonId, cosmetic }) => (
+              <li
+                key={seasonId}
+                className={`season-badge season-badge--${cosmetic}${
+                  seasonId === currentSeasonId && currentSeasonBadge
+                    ? ' is-current'
+                    : ''
+                }`}
+              >
+                <span className="season-badge__icon" aria-hidden="true">
+                  {seasonCosmeticIcon(cosmetic)}
+                </span>
+                <span className="season-badge__label">
+                  {t(seasonCosmeticLabelKey(cosmetic), { season: seasonId })}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </section>
