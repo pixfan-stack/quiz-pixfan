@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { pickLocale } from '../../utils/locale';
 import { Leaderboard } from '../Leaderboard';
@@ -34,6 +35,7 @@ export function QuizSelector({
     onRecovered,
   });
   const { t } = useTranslation();
+  const [leaderboardHasEntries, setLeaderboardHasEntries] = useState(false);
 
   return (
     <section className="home">
@@ -135,32 +137,38 @@ export function QuizSelector({
 
       {!classeMode && (
         <div
-          className="leaderboard-section"
+          className={`leaderboard-section${
+            leaderboardHasEntries ? '' : ' leaderboard-section--quiet'
+          }`}
           ref={state.leaderboardSectionRef}
           id="leaderboard"
         >
-          <select
-            className="setting-select"
-            value={state.leaderboardQuizId ?? ''}
-            onChange={(e) =>
-              state.setLeaderboardQuizId(e.target.value || undefined)
-            }
-            aria-label={t('leaderboard.title')}
-          >
-            <option value="">{t('leaderboard.filterAll')}</option>
-            {quizzes.map((quiz) => (
-              <option key={quiz.id} value={quiz.id}>
-                {pickLocale(quiz.title, state.lang)}
-              </option>
-            ))}
-            <option value={RANDOM_QUIZ_ID}>{t('home.randomQuiz')}</option>
-          </select>
+          {leaderboardHasEntries && (
+            <select
+              className="setting-select"
+              value={state.leaderboardQuizId ?? ''}
+              onChange={(e) =>
+                state.setLeaderboardQuizId(e.target.value || undefined)
+              }
+              aria-label={t('leaderboard.title')}
+            >
+              <option value="">{t('leaderboard.filterAll')}</option>
+              {quizzes.map((quiz) => (
+                <option key={quiz.id} value={quiz.id}>
+                  {pickLocale(quiz.title, state.lang)}
+                </option>
+              ))}
+              <option value={RANDOM_QUIZ_ID}>{t('home.randomQuiz')}</option>
+            </select>
+          )}
           <Leaderboard
             quizId={state.leaderboardQuizId}
             limit={20}
             quizzes={quizzes}
             refreshToken={leaderboardRefreshToken}
             defaultPeriod="week"
+            quietEmpty
+            onHasEntriesChange={setLeaderboardHasEntries}
           />
         </div>
       )}

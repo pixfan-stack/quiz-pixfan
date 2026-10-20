@@ -25,6 +25,12 @@ interface LeaderboardProps {
   refreshToken?: number;
   /** Initial period tab (home defaults to week for social proof). */
   defaultPeriod?: LeaderboardPeriod;
+  /**
+   * Home quieter empty: hide loading chrome; collapse empty board into a teaser.
+   * Also reports whether the board has rows (for hiding the quiz filter).
+   */
+  quietEmpty?: boolean;
+  onHasEntriesChange?: (hasEntries: boolean) => void;
 }
 
 const PERIODS: LeaderboardPeriod[] = ['all', 'week', 'month'];
@@ -35,6 +41,8 @@ export function Leaderboard({
   quizzes,
   refreshToken = 0,
   defaultPeriod = 'month',
+  quietEmpty = false,
+  onHasEntriesChange,
 }: LeaderboardProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
@@ -46,6 +54,8 @@ export function Leaderboard({
   const [seasonId, setSeasonId] = useState(getMonthPeriodId());
   const [reportedIds, setReportedIds] = useState<Set<string>>(() => new Set());
   const [reportBusyId, setReportBusyId] = useState<string | null>(null);
+  const onHasEntriesChangeRef = useRef(onHasEntriesChange);
+  onHasEntriesChangeRef.current = onHasEntriesChange;
 
   const showQuizColumn = !quizId && quizzes && quizzes.length > 0;
 
@@ -91,6 +101,15 @@ export function Leaderboard({
     };
   }, [quizId, limit, currentPlayerId, refreshToken, period, boardKey]);
 
+  useEffect(() => {
+    if (!onHasEntriesChangeRef.current) return;
+    if (loading) {
+      onHasEntriesChangeRef.current(false);
+      return;
+    }
+    onHasEntriesChangeRef.current(entries.length > 0 || viewer != null);
+  }, [loading, entries.length, viewer]);
+
   const handleReport = async (entry: LeaderboardEntry) => {
     if (
       entry.playerId === currentPlayerId ||
@@ -123,6 +142,16 @@ export function Leaderboard({
   };
 
   if (loading) {
+    if (quietEmpty) {
+      return (
+        <div
+          className="leaderboard leaderboard--quiet-loading"
+          data-testid="leaderboard-quiet-loading"
+          aria-busy="true"
+          aria-label={t('common.loading')}
+        />
+      );
+    }
     return (
       <div className="leaderboard">
         <PeriodTabs period={period} onChange={setPeriod} seasonId={seasonId} />
@@ -132,6 +161,22 @@ export function Leaderboard({
   }
 
   if (entries.length === 0 && !viewer) {
+    if (quietEmpty) {
+      return (
+        <div
+          className="leaderboard leaderboard--empty-teaser"
+          data-testid="leaderboard-empty-teaser"
+        >
+          <details className="leaderboard__teaser">
+            <summary className="leaderboard__teaser-summary">
+              {t('leaderboard.emptyTeaser')}
+            </summary>
+            <PeriodTabs period={period} onChange={setPeriod} seasonId={seasonId} />
+            <p className="leaderboard-empty">{t('leaderboard.emptyInvite')}</p>
+          </details>
+        </div>
+      );
+    }
     return (
       <div className="leaderboard">
         <PeriodTabs period={period} onChange={setPeriod} seasonId={seasonId} />

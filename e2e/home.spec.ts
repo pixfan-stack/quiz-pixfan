@@ -31,6 +31,29 @@ test.describe('Homepage', () => {
     await expect(page.locator('.home-hero__brand')).toContainText(/Quiz PixFan|PixFan/i);
   });
 
+  test('quiets empty home leaderboard into a teaser', async ({ page }) => {
+    await page.route('**/api/leaderboard**', async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ leaderboard: [] }),
+      });
+    });
+    await page.goto('/');
+    await expect(page.getByTestId('leaderboard-quiet-loading')).toHaveCount(0, {
+      timeout: 10000,
+    });
+    const teaser = page.getByTestId('leaderboard-empty-teaser');
+    await expect(teaser).toBeVisible({ timeout: 8000 });
+    await expect(teaser.locator('summary')).toContainText(
+      /Classement|Leaderboard/i
+    );
+    await expect(page.locator('.leaderboard-section .setting-select')).toHaveCount(
+      0
+    );
+    await expect(page.getByTestId('season-badges')).toHaveCount(0);
+  });
+
   test('copies daily link without starting a quiz; duel has no scoreless invite', async ({
     page,
     context,

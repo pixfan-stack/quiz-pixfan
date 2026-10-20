@@ -285,6 +285,8 @@
     "date": "Date",
     "empty": "No scores yet",
     "emptyPeriod": "No scores for this period yet",
+    "emptyTeaser": "Leaderboard — play to appear",
+    "emptyInvite": "The board is quiet for now. Finish a quiz to join the leaderboard.",
     "filterAll": "All quizzes",
     "yourPosition": "Your position",
     "player": "Player",

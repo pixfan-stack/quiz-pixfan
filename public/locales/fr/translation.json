@@ -285,6 +285,8 @@
     "date": "Date",
     "empty": "Aucun score pour le moment",
     "emptyPeriod": "Aucun score pour cette période",
+    "emptyTeaser": "Classement — joue pour apparaître",
+    "emptyInvite": "La salle est calme pour l’instant. Terminez un quiz pour rejoindre le classement.",
     "filterAll": "Tous les quiz",
     "yourPosition": "Votre position",
     "player": "Joueur",

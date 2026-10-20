@@ -24,10 +24,10 @@ describe('P2 a11y / PWA hygiene', () => {
 
   it('names compact AchievementsPanel without a missing labelledby id', () => {
     expect(achievementsPanel).toContain(
-      "aria-labelledby={compact ? undefined : 'achievements-title'}"
+      'compact || collapseLockedWall ? undefined : \'achievements-title\''
     );
     expect(achievementsPanel).toContain(
-      "aria-label={compact ? t('achievements.title') : undefined}"
+      "compact || collapseLockedWall ? t('achievements.title') : undefined"
     );
   });
 });

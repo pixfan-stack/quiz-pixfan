@@ -43,7 +43,7 @@
   --color-surface-alt: #f1f3f8;
   --color-text: #1a1a2e;
   --color-text-muted: #4b5563;
-  --color-text-soft: #6b7280;
+  --color-text-soft: #595f6d;
   --color-border: rgba(0, 0, 0, 0.08);
   --color-border-strong: rgba(0, 0, 0, 0.12);
   --color-primary: var(--pixfan-pink-cta);
@@ -762,7 +762,7 @@ a {
   place-items: center;
   font-size: 1.25rem;
   color: #fff;
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   grid-row: span 2;
   align-self: start;
 }
@@ -830,7 +830,7 @@ a {
   gap: 0.3rem;
   padding: 0.45rem 0.85rem;
   border-radius: var(--radius-sm);
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   color: #fff;
   font-size: 0.82rem;
   font-weight: 600;
@@ -942,7 +942,7 @@ a {
 .progress-track__fill {
   height: 100%;
   border-radius: var(--radius-full);
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   transition: width 0.4s var(--ease-out);
 }
 
@@ -1045,7 +1045,7 @@ a {
 }
 
 .difficulty-chip.is-active {
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   border-color: var(--pixfan-pink);
   color: #fff;
 }
@@ -1185,7 +1185,7 @@ a {
 
 .answer-option.is-selected .answer-option__letter {
   color: #fff;
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   border-color: transparent;
 }
 
@@ -1289,7 +1289,7 @@ a {
   height: 100%;
   width: var(--pct, 100%);
   border-radius: var(--radius-full);
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   transition: width 0.3s linear, background 0.3s;
 }
 
@@ -1626,7 +1626,7 @@ a {
 
 .scolaires-home-chip {
   max-width: var(--max-width);
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.75rem;
 }
 
 .scolaires-home-chip__btn {
@@ -1715,7 +1715,7 @@ a {
   text-transform: uppercase;
   vertical-align: middle;
   color: #fff;
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
 }
 
 .scolaires__card-title {
@@ -2065,7 +2065,11 @@ a {
 }
 
 .achievements {
-  margin: 1.75rem 0 1.25rem;
+  margin: 1.1rem 0 0.75rem;
+}
+
+.achievements:has(.achievements__teaser) {
+  margin: 0.75rem 0 0.5rem;
 }
 
 .achievements__title {
@@ -2154,7 +2158,7 @@ a {
   display: block;
   height: 100%;
   border-radius: var(--radius-full);
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   transition: width 0.35s var(--ease-out);
 }
 
@@ -2165,7 +2169,7 @@ a {
   letter-spacing: 0.04em;
   padding: 0.1rem 0.4rem;
   border-radius: var(--radius-full);
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   color: #fff;
 }
 
@@ -2456,7 +2460,7 @@ a {
   margin-top: 1rem;
   padding: 0.85rem 1rem;
   border-radius: var(--radius-sm);
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   color: #fff;
   text-align: center;
   font-weight: 700;
@@ -2665,7 +2669,7 @@ a {
 }
 
 .toggle-btn--on {
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   color: #fff;
   border-color: transparent;
 }
@@ -2858,7 +2862,7 @@ a {
 }
 
 .dark-mode .difficulty-chip.is-active {
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   border-color: var(--pixfan-pink);
   color: #fff;
 }
@@ -3450,7 +3454,7 @@ button.app-footer__sync {
 }
 
 .leaderboard__period-chip.is-active {
-  background: var(--pixfan-pink);
+  background: var(--pixfan-pink-cta);
   border-color: var(--pixfan-pink);
   color: #fff;
 }
@@ -3579,11 +3583,53 @@ button.app-footer__sync {
 }
 
 .leaderboard-section {
-  margin-top: 2rem;
+  margin-top: 1.25rem;
+}
+
+.leaderboard-section--quiet {
+  margin-top: 0.75rem;
 }
 
 .leaderboard-section .setting-select {
   margin-bottom: 1rem;
+}
+
+.leaderboard--quiet-loading {
+  min-height: 0;
+  margin: 0;
+}
+
+.leaderboard--empty-teaser {
+  margin: 0;
+}
+
+.leaderboard__teaser {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  padding: 0.15rem 0.85rem 0.15rem;
+}
+
+.leaderboard__teaser-summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 0.65rem 0;
+}
+
+.leaderboard__teaser-summary::-webkit-details-marker {
+  display: none;
+}
+
+.leaderboard__teaser[open] {
+  padding-bottom: 0.75rem;
+}
+
+.leaderboard__teaser[open] .leaderboard__teaser-summary {
+  margin-bottom: 0.35rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 /* ---------- Player name (leaderboard) ---------- */
