@@ -14,10 +14,12 @@ describe('home social quieter (critique P2 leftovers)', () => {
     expect(leaderboardSource).toContain('emptyTeaser');
   });
 
-  it('home QuizSelector uses quietEmpty and hides filter until rows exist', () => {
+  it('home QuizSelector uses quietEmpty post-play and hides filter until rows exist', () => {
     expect(quizSelectorSource).toContain('quietEmpty');
     expect(quizSelectorSource).toContain('leaderboardHasEntries');
     expect(quizSelectorSource).toContain('leaderboard-section--quiet');
+    expect(quizSelectorSource).toContain('postPlay && (');
+    expect(quizSelectorSource).toContain('HomePhotoCloser');
   });
 
   it('AchievementsPanel hides empty season badges and collapses 0/12 chrome', () => {

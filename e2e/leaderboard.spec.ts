@@ -13,13 +13,17 @@ test.describe('Leaderboard profile', () => {
 
     await expect(page.getByRole('dialog')).toHaveCount(0);
     await expect(page.getByTestId('home-hero')).toBeVisible();
-    await expect(page.locator('.player-chip:not(.player-chip--sync)')).toBeVisible();
+    // Save / display-name chips stay hidden until post-play (vague 1.25).
+    await expect(page.getByTestId('player-chip-bar')).toHaveCount(0);
   });
 
-  test('chip opens name editor without prior auto-gate', async ({ page }) => {
+  test('chip opens name editor after first play without prior auto-gate', async ({
+    page,
+  }) => {
     await page.addInitScript(() => {
       localStorage.removeItem('quiz-pixfan-player-display-name');
       localStorage.removeItem('quiz-pixfan-name-prompt-seen');
+      localStorage.setItem('quiz-pixfan-last-played-at', new Date().toISOString());
     });
 
     await page.goto('/');

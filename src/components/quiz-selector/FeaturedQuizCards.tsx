@@ -46,6 +46,11 @@ interface FeaturedQuizCardsProps {
   onCopyDailyLink: (event: MouseEvent) => void;
   /** Hide daily + duel cards (school mode). */
   showCompetitive?: boolean;
+  /**
+   * When false, skip the photo featured card (hero already owns the
+   * flagship Start). Keep true in classe mode where competitive cards are off.
+   */
+  showPhotoFeatured?: boolean;
 }
 
 export function FeaturedQuizCards({
@@ -70,12 +75,15 @@ export function FeaturedQuizCards({
   onStartDuel,
   onCopyDailyLink,
   showCompetitive = true,
+  showPhotoFeatured = true,
 }: FeaturedQuizCardsProps) {
   const { t } = useTranslation();
+  const showPhoto = photoPackAvailable && showPhotoFeatured;
+  if (!showPhoto && !showCompetitive) return null;
 
   return (
     <ul className="quiz-list quiz-list--featured" aria-label={t('home.featuredSection')}>
-      {photoPackAvailable && (
+      {showPhoto && (
         <li>
           <button
             type="button"
@@ -84,6 +92,7 @@ export function FeaturedQuizCards({
             onMouseEnter={onPrefetchQuiz}
             onFocus={onPrefetchQuiz}
             aria-label={t('home.photoReading')}
+            data-testid="featured-photo-card"
           >
             {photoTeaser?.imageUrl ? (
               <span className="quiz-card__teaser quiz-card__teaser--hero" aria-hidden="true">
@@ -117,10 +126,7 @@ export function FeaturedQuizCards({
                     {t('home.photoPoolCount', { count: photoPoolCount })}
                   </span>
                 )}
-                <HighScoreBadge
-                  showEmpty
-                  bestScore={getBestScore(PHOTO_READING_ID)}
-                />
+                <HighScoreBadge bestScore={getBestScore(PHOTO_READING_ID)} />
               </div>
               <span className="quiz-card__cta">
                 {t('home.start')}
@@ -137,7 +143,7 @@ export function FeaturedQuizCards({
       <li className="quiz-card-with-copy">
         <button
           type="button"
-          className={`quiz-card quiz-card--daily${dailyPlayed ? ' quiz-card--played' : ''}`}
+          className={`quiz-card quiz-card--daily quiz-card--secondary${dailyPlayed ? ' quiz-card--played' : ''}`}
           onClick={onStartDaily}
           onMouseEnter={onPrefetchQuiz}
           onFocus={onPrefetchQuiz}
@@ -191,9 +197,9 @@ export function FeaturedQuizCards({
                   {t('home.dailyPlayed')}
                 </span>
               )}
-              <HighScoreBadge showEmpty bestScore={getBestScore(dailyId)} />
+              <HighScoreBadge bestScore={getBestScore(dailyId)} />
             </div>
-            <span className="quiz-card__cta">
+            <span className="quiz-card__cta quiz-card__cta--secondary">
               {dailyPlayed ? t('home.dailyReplay') : t('home.start')}
               <span className="quiz-card__cta-arrow" aria-hidden="true">
                 →
@@ -227,7 +233,7 @@ export function FeaturedQuizCards({
       <li>
         <button
           type="button"
-          className="quiz-card quiz-card--duel"
+          className="quiz-card quiz-card--duel quiz-card--secondary"
           onClick={onStartDuel}
           onMouseEnter={onPrefetchQuiz}
           onFocus={onPrefetchQuiz}
@@ -258,7 +264,7 @@ export function FeaturedQuizCards({
                 {t('home.questionsCount', { count: DUEL_QUESTION_COUNT })}
               </span>
             </div>
-            <span className="quiz-card__cta">
+            <span className="quiz-card__cta quiz-card__cta--secondary">
               {t('home.start')}
               <span className="quiz-card__cta-arrow" aria-hidden="true">
                 →
