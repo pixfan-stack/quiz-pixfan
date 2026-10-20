@@ -76,50 +76,81 @@ export function MorePacksSection({
         <div
           className="difficulty-filter"
           role="group"
-          aria-label={t('home.difficultyFilter')}
+          aria-label={t('home.packFilter')}
         >
-          {(['all', 'scolaires', 'easy', 'medium', 'hard'] as const).map(
-            (level) => {
-              if (level === 'easy' || level === 'medium' || level === 'hard') {
-                const count = quizzes.filter(
-                  (q) => deriveQuizDifficulty(q) === level
-                ).length;
-                if (count === 0) return null;
-              }
-              if (level === 'scolaires') {
-                const count = quizzes.filter(quizHasScolairesTag).length;
-                if (count === 0) return null;
-              }
+          {(['all', 'scolaires'] as const).map((level) => {
+            if (level === 'scolaires') {
+              const count = quizzes.filter(quizHasScolairesTag).length;
+              if (count === 0) return null;
+            }
+            return (
+              <button
+                key={level}
+                type="button"
+                className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}${level === 'scolaires' ? ' difficulty-chip--scolaires' : ''}`}
+                onClick={() => {
+                  setDifficultyFilter(level);
+                  if (level !== 'all') setMorePacksOpen(true);
+                }}
+                aria-pressed={difficultyFilter === level}
+              >
+                {level === 'scolaires'
+                  ? t('home.filterScolaires')
+                  : t('home.difficulty_all')}
+              </button>
+            );
+          })}
+        </div>
+
+        <details
+          className="difficulty-filter-more"
+          open={
+            difficultyFilter === 'easy' ||
+            difficultyFilter === 'medium' ||
+            difficultyFilter === 'hard'
+          }
+        >
+          <summary className="difficulty-filter-more__summary">
+            {t('home.difficultyFilter')}
+          </summary>
+          <div
+            className="difficulty-filter difficulty-filter--nested"
+            role="group"
+            aria-label={t('home.difficultyFilter')}
+          >
+            {(['easy', 'medium', 'hard'] as const).map((level) => {
+              const count = quizzes.filter(
+                (q) => deriveQuizDifficulty(q) === level
+              ).length;
+              if (count === 0) return null;
               return (
                 <button
                   key={level}
                   type="button"
-                  className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}${level === 'scolaires' ? ' difficulty-chip--scolaires' : ''}`}
+                  className={`difficulty-chip${difficultyFilter === level ? ' is-active' : ''}`}
                   onClick={() => {
                     setDifficultyFilter(level);
-                    if (level !== 'all') setMorePacksOpen(true);
+                    setMorePacksOpen(true);
                   }}
                   aria-pressed={difficultyFilter === level}
                 >
-                  {level === 'scolaires'
-                    ? t('home.filterScolaires')
-                    : t(`home.difficulty_${level}`)}
+                  {t(`home.difficulty_${level}`)}
                 </button>
               );
-            }
-          )}
-          {difficultyFilter !== 'all' &&
-            difficultyFilter !== 'scolaires' && (
-            <button
-              type="button"
-              className="btn btn--ghost btn--small"
-              onClick={onStartDifficultyMix}
-              disabled={visibleQuizzes.length === 0}
-            >
-              {t('home.startDifficultyMix')}
-            </button>
-          )}
-        </div>
+            })}
+            {difficultyFilter !== 'all' &&
+              difficultyFilter !== 'scolaires' && (
+              <button
+                type="button"
+                className="btn btn--ghost btn--small"
+                onClick={onStartDifficultyMix}
+                disabled={visibleQuizzes.length === 0}
+              >
+                {t('home.startDifficultyMix')}
+              </button>
+            )}
+          </div>
+        </details>
 
         {difficultyFilter !== 'all' && visibleQuizzes.length === 0 && (
           <p className="difficulty-filter__empty" role="status">
@@ -220,7 +251,11 @@ export function MorePacksSection({
             const difficulty = deriveQuizDifficulty(quiz);
             const mastery = masteryTierFromPercent(bestScore?.percentage);
             const masteryKey = masteryLabelKey(mastery);
-            const masteryNext = nextMasteryTarget(bestScore?.percentage);
+            // Hide mastery-next without a recorded score (0% "need 50 for Bronze" reads broken).
+            const masteryNext =
+              bestScore != null
+                ? nextMasteryTarget(bestScore.percentage)
+                : null;
             return (
               <li key={quiz.id}>
                 <button

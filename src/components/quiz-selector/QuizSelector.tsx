@@ -10,6 +10,7 @@ import { RANDOM_QUIZ_ID } from '../../utils/randomQuiz';
 import type { QuizSelectorProps } from './types';
 import { useQuizSelectorState } from './useQuizSelectorState';
 import { QuizSettingsBar } from './QuizSettingsBar';
+import { HomeHero } from './HomeHero';
 import { FeaturedQuizCards } from './FeaturedQuizCards';
 import { MorePacksSection } from './MorePacksSection';
 
@@ -37,14 +38,12 @@ export function QuizSelector({
 
   return (
     <section className="home">
-      <header className="home-hero">
-        <p className="home-hero__eyebrow">
-          <span className="home-hero__eyebrow-dot" aria-hidden="true" />
-          {t('app.title')}
-        </p>
-        <h2 className="page-title">{t('home.welcome')}</h2>
-        <p className="page-subtitle">{t('home.selectQuiz')}</p>
-      </header>
+      <HomeHero
+        photoTeaserUrl={state.photoTeaser?.imageUrl}
+        photoPackAvailable={state.photoPackAvailable}
+        onStartPhotoReading={state.handleStartPhotoReading}
+        onPrefetchQuiz={onPrefetchQuiz}
+      />
 
       <QuizSettingsBar
         recoveryCode={state.recoveryCode}
@@ -64,14 +63,6 @@ export function QuizSelector({
       {!classeMode && <DailyNudge onPlayDaily={state.handleStartDaily} />}
       <WeakSpotsDueChip onReview={state.handleStartWeakSpots} />
       {!classeMode && <SeasonBanner />}
-
-      {!classeMode && state.difficultyFilter === 'all' && (
-        <WeeklyLeaders
-          quizzes={quizzes}
-          refreshToken={leaderboardRefreshToken}
-          onSeeAll={state.scrollToLeaderboard}
-        />
-      )}
 
       {quizzes.length > 0 && (
         <FeaturedQuizCards
@@ -96,6 +87,14 @@ export function QuizSelector({
           onStartDuel={state.handleStartDuel}
           onCopyDailyLink={state.handleCopyDailyLink}
           showCompetitive={!classeMode}
+        />
+      )}
+
+      {!classeMode && state.difficultyFilter === 'all' && (
+        <WeeklyLeaders
+          quizzes={quizzes}
+          refreshToken={leaderboardRefreshToken}
+          onSeeAll={state.scrollToLeaderboard}
         />
       )}
 

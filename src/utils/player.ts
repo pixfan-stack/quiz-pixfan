@@ -1,6 +1,24 @@
 const PLAYER_ID_KEY = 'quiz-pixfan-player-id';
 const DISPLAY_NAME_KEY = 'quiz-pixfan-player-display-name';
+const NAME_PROMPT_SEEN_KEY = 'quiz-pixfan-name-prompt-seen';
 export const MAX_DISPLAY_NAME_LENGTH = 24;
+
+/** True after the player skipped or saved the soft name ask. */
+export function hasSeenNamePrompt(): boolean {
+  try {
+    return localStorage.getItem(NAME_PROMPT_SEEN_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+export function markNamePromptSeen(): void {
+  try {
+    localStorage.setItem(NAME_PROMPT_SEEN_KEY, '1');
+  } catch {
+    // private mode
+  }
+}
 
 /** Stable anonymous id for this browser (persisted in localStorage). */
 export function getPlayerId(): string {

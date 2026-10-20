@@ -48,7 +48,8 @@
   },
   "home": {
     "welcome": "Choisissez un quiz pour commencer",
-    "selectQuiz": "Photos à analyser, défi du jour, ou un duel",
+    "selectQuiz": "Photos à analyser, défi du jour, ou un duel — sans compte pour commencer.",
+    "packFilter": "Parcours",
     "start": "Lancer le quiz",
     "questionsCount": "{{count}} questions",
     "photoPoolCount": "{{count}} photos dans le pool",
@@ -107,7 +108,7 @@
     "dailyNudgeDesc": "Vous avez installé l’app — relevez le défi d’aujourd’hui.",
     "dailyNudgePlay": "Jouer",
     "dailyNudgeDismiss": "Plus tard",
-    "difficultyFilter": "Difficulté",
+    "difficultyFilter": "Par difficulté",
     "difficulty_all": "Tous niveaux",
     "difficulty_easy": "Facile",
     "difficulty_medium": "Intermédiaire",
@@ -383,6 +384,7 @@
   "achievements": {
     "title": "Succès",
     "progress": "{{unlocked}} / {{total}} débloqués",
+    "teaserSummary": "Gagnez des succès en jouant — voir la liste",
     "counter": "{{current}}/{{threshold}}",
     "new": "Nouveau",
     "firstFinish": "Première partie",

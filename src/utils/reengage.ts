@@ -1,10 +1,23 @@
 import { getDailyQuizId } from './dailyChallenge';
 import { getDailyStreak } from './dailyStreak';
-import { getHighScore } from './highscore';
+import { getAllHighScores, getHighScore } from './highscore';
 
 const LAST_PLAYED_KEY = 'quiz-pixfan-last-played-at';
 const RESULT_NUDGE_KEY = 'quiz-pixfan-result-nudge-day';
 const HOME_NUDGE_KEY = 'quiz-pixfan-home-nudge-day';
+
+/**
+ * True once the browser has finished at least one quiz (local high score
+ * or last-played stamp). Used to defer season / social chrome until post-play.
+ */
+export function hasCompletedAnyQuiz(): boolean {
+  try {
+    if (localStorage.getItem(LAST_PLAYED_KEY)) return true;
+  } catch {
+    // ignore
+  }
+  return Object.keys(getAllHighScores()).length > 0;
+}
 
 function utcDayKey(date = new Date()): string {
   return date.toISOString().slice(0, 10);

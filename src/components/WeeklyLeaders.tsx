@@ -39,10 +39,14 @@ export function WeeklyLeaders({
     return q ? pickLocale(q.title, lang) : quizId;
   };
 
+  // Hide empty / loading strip — empty social proof is first-contact noise.
+  if (loading || entries.length === 0) return null;
+
   return (
     <section
       className="weekly-leaders"
       aria-labelledby="weekly-leaders-title"
+      data-testid="weekly-leaders"
     >
       <div className="weekly-leaders__header">
         <h3 id="weekly-leaders-title" className="weekly-leaders__title">
@@ -59,28 +63,18 @@ export function WeeklyLeaders({
         )}
       </div>
 
-      {loading && (
-        <p className="weekly-leaders__empty">{t('common.loading')}</p>
-      )}
-
-      {!loading && entries.length === 0 && (
-        <p className="weekly-leaders__empty">{t('home.weeklyLeadersEmpty')}</p>
-      )}
-
-      {!loading && entries.length > 0 && (
-        <ol className="weekly-leaders__list">
-          {entries.map((entry, index) => (
-            <li key={`${entry.quizId}-${entry.playerId}`} className="weekly-leaders__row">
-              <span className="weekly-leaders__rank" aria-hidden="true">
-                {index + 1}
-              </span>
-              <span className="weekly-leaders__name">{entry.displayName}</span>
-              <span className="weekly-leaders__quiz">{titleFor(entry.quizId)}</span>
-              <span className="weekly-leaders__score">{entry.percentage}%</span>
-            </li>
-          ))}
-        </ol>
-      )}
+      <ol className="weekly-leaders__list">
+        {entries.map((entry, index) => (
+          <li key={`${entry.quizId}-${entry.playerId}`} className="weekly-leaders__row">
+            <span className="weekly-leaders__rank" aria-hidden="true">
+              {index + 1}
+            </span>
+            <span className="weekly-leaders__name">{entry.displayName}</span>
+            <span className="weekly-leaders__quiz">{titleFor(entry.quizId)}</span>
+            <span className="weekly-leaders__score">{entry.percentage}%</span>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

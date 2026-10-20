@@ -38,25 +38,9 @@ export function AchievementsPanel({
   const seasonBadges = compact ? [] : listSeasonBadges();
   const currentSeasonBadge = getSeasonBadge(currentSeasonId);
 
-  return (
-    <section
-      className={`achievements${compact ? ' achievements--compact' : ''}`}
-      aria-labelledby={compact ? undefined : 'achievements-title'}
-      aria-label={compact ? t('achievements.title') : undefined}
-    >
-      {!compact && (
-        <>
-          <h3 id="achievements-title" className="achievements__title">
-            {t('achievements.title')}
-          </h3>
-          <p className="achievements__subtitle">
-            {t('achievements.progress', {
-              unlocked: unlocked.size,
-              total: ACHIEVEMENTS.length,
-            })}
-          </p>
-        </>
-      )}
+  const collapseLockedWall = !compact && unlocked.size === 0;
+
+  const grid = (
       <ul className="achievements__grid">
         {list.map((a) => {
           const isUnlocked = unlocked.has(a.id);
@@ -121,6 +105,37 @@ export function AchievementsPanel({
           );
         })}
       </ul>
+  );
+
+  return (
+    <section
+      className={`achievements${compact ? ' achievements--compact' : ''}`}
+      aria-labelledby={compact ? undefined : 'achievements-title'}
+      aria-label={compact ? t('achievements.title') : undefined}
+    >
+      {!compact && (
+        <>
+          <h3 id="achievements-title" className="achievements__title">
+            {t('achievements.title')}
+          </h3>
+          <p className="achievements__subtitle">
+            {t('achievements.progress', {
+              unlocked: unlocked.size,
+              total: ACHIEVEMENTS.length,
+            })}
+          </p>
+        </>
+      )}
+      {collapseLockedWall ? (
+        <details className="achievements__teaser" data-testid="achievements-teaser">
+          <summary className="achievements__teaser-summary">
+            {t('achievements.teaserSummary')}
+          </summary>
+          {grid}
+        </details>
+      ) : (
+        grid
+      )}
       {!compact && (
         <div className="season-badges" data-testid="season-badges">
           <h4 className="season-badges__title">{t('season.badgesTitle')}</h4>

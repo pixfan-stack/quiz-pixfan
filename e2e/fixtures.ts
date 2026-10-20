@@ -21,7 +21,7 @@ export async function openMorePacks(page: Page): Promise<void> {
     (el) => (el as HTMLDetailsElement).open
   );
   if (!isOpen) {
-    await details.locator('summary').click();
+    await details.locator('> summary.home-more-packs__summary').click();
   }
   await expect(page.locator('.home-more-packs__body')).toBeVisible();
 }
