@@ -13,7 +13,9 @@ import { useQuizSelectorState } from './useQuizSelectorState';
 import { QuizSettingsBar } from './QuizSettingsBar';
 import { HomeHero } from './HomeHero';
 import { FeaturedQuizCards } from './FeaturedQuizCards';
+import { HomePhotoCloser } from './HomePhotoCloser';
 import { MorePacksSection } from './MorePacksSection';
+import { hasCompletedAnyQuiz } from '../../utils/reengage';
 
 export function QuizSelector({
   quizzes,
@@ -36,6 +38,10 @@ export function QuizSelector({
   });
   const { t } = useTranslation();
   const [leaderboardHasEntries, setLeaderboardHasEntries] = useState(false);
+  const postPlay = hasCompletedAnyQuiz();
+  // Hero owns the photo-reading Start on the Persuade home; keep the
+  // featured photo card only in classe mode (no daily/duel peers).
+  const showPhotoFeatured = classeMode;
 
   return (
     <section className="home">
@@ -88,6 +94,7 @@ export function QuizSelector({
           onStartDuel={state.handleStartDuel}
           onCopyDailyLink={state.handleCopyDailyLink}
           showCompetitive={!classeMode}
+          showPhotoFeatured={showPhotoFeatured}
         />
       )}
 
@@ -106,7 +113,7 @@ export function QuizSelector({
         </a>
       </div>
 
-      {!classeMode && state.difficultyFilter === 'all' && (
+      {!classeMode && postPlay && state.difficultyFilter === 'all' && (
         <WeeklyLeaders
           quizzes={quizzes}
           refreshToken={leaderboardRefreshToken}
@@ -133,9 +140,20 @@ export function QuizSelector({
         onStartDifficultyMix={state.handleStartDifficultyMix}
       />
 
-      {!classeMode && <AchievementsPanel />}
+      {!classeMode && !postPlay && (
+        <HomePhotoCloser
+          photoPackAvailable={state.photoPackAvailable}
+          dailyPlayed={state.dailyPlayed}
+          dailyCountdown={state.dailyCountdown}
+          onStartPhotoReading={state.handleStartPhotoReading}
+          onStartDaily={state.handleStartDaily}
+          onPrefetchQuiz={onPrefetchQuiz}
+        />
+      )}
 
-      {!classeMode && (
+      {!classeMode && postPlay && <AchievementsPanel />}
+
+      {!classeMode && postPlay && (
         <div
           className={`leaderboard-section${
             leaderboardHasEntries ? '' : ' leaderboard-section--quiet'

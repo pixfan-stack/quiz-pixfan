@@ -12,7 +12,9 @@ test.describe('Homepage', () => {
   test('displays category quiz cards, daily challenge, duel and random mix', async ({ page }) => {
     await expect(page.locator('.quiz-card--daily')).toBeVisible();
     await expect(page.locator('.quiz-card--duel')).toBeVisible();
-    await expect(page.locator('.quiz-card--photo')).toBeVisible();
+    // Flagship lives on the hero — no duplicate featured photo card pre-play.
+    await expect(page.getByTestId('featured-photo-card')).toHaveCount(0);
+    await expect(page.getByTestId('home-hero-cta')).toBeVisible();
     await expect(page.locator('.home-more-packs')).toBeVisible();
 
     await openMorePacks(page);
@@ -20,8 +22,8 @@ test.describe('Homepage', () => {
     await expect(page.locator('.quiz-card--random')).toBeVisible();
     await expect(page.locator('.difficulty-filter').first()).toBeVisible();
     await expect(page.locator('.difficulty-filter-more')).toBeVisible();
-    await expect(page.locator('.achievements')).toBeVisible();
-    await expect(page.getByTestId('achievements-teaser')).toBeVisible();
+    await expect(page.getByTestId('home-photo-closer')).toBeVisible();
+    await expect(page.locator('.achievements')).toHaveCount(0);
     await expect(page.locator(CATEGORY_CARD)).toHaveCount(15);
   });
 
@@ -34,7 +36,23 @@ test.describe('Homepage', () => {
     await expect(teachers).toHaveAttribute('href', '/guides/scolaires/');
   });
 
-  test('quiets empty home leaderboard into a teaser', async ({ page }) => {
+  test('defers Install and Save chips before first play', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.removeItem('quiz-pixfan-last-played-at');
+      localStorage.removeItem('quiz-pixfan-highscores');
+      localStorage.removeItem('quiz-pixfan-player-display-name');
+      localStorage.removeItem('quiz-pixfan-install-dismissed');
+    });
+    await page.goto('/');
+    await expect(page.getByTestId('install-prompt')).toHaveCount(0);
+    await expect(page.getByTestId('player-chip-bar')).toHaveCount(0);
+    await expect(page.locator('.quiz-settings-bar')).toBeVisible();
+  });
+
+  test('quiets empty home leaderboard into a teaser after first play', async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('quiz-pixfan-last-played-at', new Date().toISOString());
+    });
     await page.route('**/api/leaderboard**', async (route) => {
       await route.fulfill({
         status: 200,
@@ -43,6 +61,7 @@ test.describe('Homepage', () => {
       });
     });
     await page.goto('/');
+    await expect(page.getByTestId('home-photo-closer')).toHaveCount(0);
     await expect(page.getByTestId('leaderboard-quiet-loading')).toHaveCount(0, {
       timeout: 10000,
     });

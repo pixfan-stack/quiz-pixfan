@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.23.0**).
+Document à jour avec l’état réel du dépôt (**v1.24.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.24** : hero Persuade (lead photo + sans compte + enseignants) · Composition → Lumière · soft-ask dédié · EN « For the classroom » · chip avant WeeklyLeaders · docs v1.23.0 (bump **v1.24.0**)
 - Vague **1.23** : suite Composition avant Pixfan CTA · soft `#c4-regard` · chip `/guides/scolaires/` · Pour la classe (3 guides) · empty social quieter (P2b) · docs v1.22.2 (bump **v1.23.0**)
 - Vague **1.22** : CTA haut + suite Composition après photo-reading · scolaires C4-first + track liens · docs v1.21.0 (bump **v1.22.0**)
 - Patch **v1.22.1** : chrome Scolaires → `/guides/scolaires/` (app + tous les guides)
@@ -26,9 +27,9 @@ Document à jour avec l’état réel du dépôt (**v1.23.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.23.0** + 15 quiz · 386 Q · 268 illus (vague 1.23 release + 1.24 P0)
-- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche ≥ 2026-10-20 (vague 1.19–1.24)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24
+- [x] Docs headline → **v1.24.0** + 15 quiz · 386 Q · 268 illus (vague 1.24 release + 1.25 P0)
+- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche ≥ 2026-10-20 (vague 1.19–1.25)
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25
 
 ### Ops Antony — checklist P0.4 (hors code)
 

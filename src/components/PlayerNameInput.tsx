@@ -5,6 +5,7 @@ import {
   markNamePromptSeen,
   setPlayerDisplayName,
 } from '../utils/player';
+import { hasCompletedAnyQuiz } from '../utils/reengage';
 import { AccountSyncPanel } from './AccountSyncPanel';
 
 /** Custom event — footer / settings can open the sync surface. */
@@ -26,6 +27,8 @@ interface PlayerNamePromptProps {
  * Display-name chip + optional modal.
  * First-visit auto-gate is deferred — open only for recovery links or
  * when the player opens the chip. Soft ask lives on the result screen.
+ * Chip bar itself stays hidden until post-play (or a name / recovery link)
+ * so Save / « Not set » do not compete with the Persuade hero.
  * Sync also opens from settings / footer via `requestOpenAccountSync`.
  */
 export function PlayerNamePrompt({
@@ -45,6 +48,10 @@ export function PlayerNamePrompt({
   const [showSyncInName, setShowSyncInName] = useState(() =>
     Boolean(recoveryCode)
   );
+  const showChipBar =
+    Boolean(recoveryCode) ||
+    Boolean(displayName) ||
+    hasCompletedAnyQuiz();
 
   useEffect(() => {
     if (recoveryCode) {
@@ -139,30 +146,32 @@ export function PlayerNamePrompt({
 
   return (
     <>
-      <div className="player-chip-bar">
-        <button
-          type="button"
-          className="player-chip"
-          onClick={openEditor}
-          aria-haspopup="dialog"
-        >
-          <span className="player-chip__label">{t('home.playerName')}</span>
-          <span className="player-chip__value">
-            {displayName || t('home.playerNameUnset')}
-          </span>
-          <span className="player-chip__edit" aria-hidden="true">
-            ✎
-          </span>
-        </button>
-        <button
-          type="button"
-          className="player-chip player-chip--sync"
-          onClick={openSync}
-          aria-haspopup="dialog"
-        >
-          {t('account.saveProgress')}
-        </button>
-      </div>
+      {showChipBar && (
+        <div className="player-chip-bar" data-testid="player-chip-bar">
+          <button
+            type="button"
+            className="player-chip"
+            onClick={openEditor}
+            aria-haspopup="dialog"
+          >
+            <span className="player-chip__label">{t('home.playerName')}</span>
+            <span className="player-chip__value">
+              {displayName || t('home.playerNameUnset')}
+            </span>
+            <span className="player-chip__edit" aria-hidden="true">
+              ✎
+            </span>
+          </button>
+          <button
+            type="button"
+            className="player-chip player-chip--sync"
+            onClick={openSync}
+            aria-haspopup="dialog"
+          >
+            {t('account.saveProgress')}
+          </button>
+        </div>
+      )}
 
       {open && (
         <div
