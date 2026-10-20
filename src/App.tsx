@@ -462,42 +462,6 @@ export default function App() {
           >
             {t('footer.scolaires')}
           </a>
-          <a
-            href="/guides/triangle-exposition"
-            className="app-footer__link"
-          >
-            {t('footer.guideExposure')}
-          </a>
-          <a
-            href="/guides/composition-photo"
-            className="app-footer__link"
-          >
-            {t('footer.guideComposition')}
-          </a>
-          <a
-            href="/guides/photo-smartphone"
-            className="app-footer__link"
-          >
-            {t('footer.guideSmartphone')}
-          </a>
-          <a href="/guides/lumiere-photo" className="app-footer__link">
-            {t('footer.guideLight')}
-          </a>
-          <a href="/guides/retouche-lightroom" className="app-footer__link">
-            {t('footer.guideRetouching')}
-          </a>
-          <a href="/guides/genres-photo" className="app-footer__link">
-            {t('footer.guideGenres')}
-          </a>
-          <a href="/guides/materiel-photo" className="app-footer__link">
-            {t('footer.guideGear')}
-          </a>
-          <a href="/guides/droits-ethique-photo" className="app-footer__link">
-            {t('footer.guideRights')}
-          </a>
-          <a href="/guides/histoire-photo" className="app-footer__link">
-            {t('footer.guideHistory')}
-          </a>
         </nav>
         <div className="app-footer__inner">
           {hasCompletedAnyQuiz() && (

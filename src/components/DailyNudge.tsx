@@ -25,18 +25,19 @@ export function DailyNudge({ onPlayDaily }: DailyNudgeProps) {
 
   return (
     <div
-      className="install-prompt daily-nudge"
+      className="daily-nudge"
       role="region"
       aria-label={t('home.dailyNudgeTitle')}
+      data-testid="daily-nudge"
     >
-      <div className="install-prompt__body">
-        <p className="install-prompt__title">{t('home.dailyNudgeTitle')}</p>
-        <p className="install-prompt__desc">{t('home.dailyNudgeDesc')}</p>
+      <div className="daily-nudge__body">
+        <p className="daily-nudge__title">{t('home.dailyNudgeTitle')}</p>
+        <p className="daily-nudge__desc">{t('home.dailyNudgeDesc')}</p>
       </div>
-      <div className="install-prompt__actions">
+      <div className="daily-nudge__actions">
         <button
           type="button"
-          className="btn btn--primary btn--small"
+          className="btn btn--secondary btn--small"
           onClick={() => {
             dismiss();
             onPlayDaily();

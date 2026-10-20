@@ -25,7 +25,8 @@ describe('scolaires P0–P2 hub', () => {
     expect(hub).toContain('scolaires_parcours_c3_decouvrir');
     expect(hub).toContain('scolaires_parcours_lycee_pratique');
     expect(hub).toContain('/guides/scolaires/fiche-seance.html');
-    expect(hub).toContain('/#/scolaires');
+    expect(hub).not.toContain('/#/scolaires');
+    expect(hub).not.toContain('>App</a>');
     expect(hub).toContain('id="corpus-bac"');
     expect(hub).toContain('eduscol.education.fr');
     expect(hub).toContain('guides.css');
