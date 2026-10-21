@@ -52,21 +52,21 @@ export function SeasonBanner() {
 
   return (
     <div
-      className="install-prompt season-banner"
+      className="season-banner"
       role="region"
       aria-label={title}
       aria-live="polite"
       data-testid="season-banner"
       data-kind={kind}
     >
-      <div className="install-prompt__body">
-        <p className="install-prompt__title">{title}</p>
-        <p className="install-prompt__desc">{desc}</p>
+      <div className="season-banner__body">
+        <p className="season-banner__title">{title}</p>
+        <p className="season-banner__desc">{desc}</p>
       </div>
-      <div className="install-prompt__actions">
+      <div className="season-banner__actions">
         <button
           type="button"
-          className="btn btn--primary btn--small"
+          className="btn btn--secondary btn--small"
           onClick={() => {
             dismiss();
             document.getElementById('leaderboard')?.scrollIntoView({

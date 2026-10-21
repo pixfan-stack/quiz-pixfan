@@ -28,6 +28,13 @@ describe('home social quieter (critique P2 leftovers)', () => {
     expect(achievementsSource).not.toContain('season.badgesEmpty');
   });
 
+  it('AchievementsPanel soft-locks remaining badges after first unlocks (vague 1.28)', () => {
+    expect(achievementsSource).toContain('softLockedWall');
+    expect(achievementsSource).toContain('data-testid="achievements-locked"');
+    expect(fr.achievements.lockedSummary).toMatch(/débloquer/i);
+    expect(en.achievements.lockedSummary).toMatch(/locked/i);
+  });
+
   it('exposes FR/EN empty leaderboard copy', () => {
     expect(fr.leaderboard.emptyTeaser).toMatch(/Classement/i);
     expect(fr.leaderboard.emptyInvite).toMatch(/calme/i);

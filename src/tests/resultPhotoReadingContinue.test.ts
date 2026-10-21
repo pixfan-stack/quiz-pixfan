@@ -61,3 +61,19 @@ describe('result soft-ask copy (vague 1.24)', () => {
     expect(en.result.softAskTitle).toMatch(/display name|leaderboard/i);
   });
 });
+
+describe('soft-ask after continue (vague 1.28)', () => {
+  it('places ResultNameSoftAsk after continue packs and before PixfanCta', () => {
+    const continueIdx = resultScreenSource.indexOf(
+      'data-testid="result-continue-composition"'
+    );
+    const lightIdx = resultScreenSource.indexOf(
+      'data-testid="result-continue-light"'
+    );
+    const softAskIdx = resultScreenSource.indexOf('<ResultNameSoftAsk');
+    const ctaIdx = resultScreenSource.indexOf('<PixfanCta');
+    expect(softAskIdx).toBeGreaterThan(continueIdx);
+    expect(softAskIdx).toBeGreaterThan(lightIdx);
+    expect(softAskIdx).toBeLessThan(ctaIdx);
+  });
+});

@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.26.0**).
+Document à jour avec l’état réel du dépôt (**v1.27.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.27** : guides classroom `cta-secondary` · MorePacks sans empty score · hub sans fork App · footer Guides+Scolaires · BG local AVIF · DailyNudge propre · docs v1.26.0 (bump **v1.27.0**)
 - Vague **1.26** : footer admin/Save différés · distill chip scolaires · hero `#c4-regard` · hub CTA-first + EN deep-links · classroom result CTAs · docs v1.25.0 (bump **v1.26.0**)
 - Vague **1.25** : Install + Save/name différés pré-play · flagship hero-only · Daily/Duel secondaires · chips plain · closer photo · AA hero shade · docs v1.24.0 (bump **v1.25.0**)
 - Vague **1.24** : hero Persuade (lead photo + sans compte + enseignants) · Composition → Lumière · soft-ask dédié · EN « For the classroom » · chip avant WeeklyLeaders · docs v1.23.0 (bump **v1.24.0**)
@@ -29,9 +30,9 @@ Document à jour avec l’état réel du dépôt (**v1.26.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.26.0** + 15 quiz · 386 Q · 268 illus (vague 1.26 release + 1.27 P0)
-- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche ≥ 2026-10-20 (vague 1.19–1.27)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27
+- [x] Docs headline → **v1.27.0** + 15 quiz · 386 Q · 268 illus (vague 1.27 release + 1.28 P0)
+- [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche ≥ 2026-10-21 (vague 1.19–1.28)
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28
 
 ### Ops Antony — checklist P0.4 (hors code)
 

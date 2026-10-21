@@ -187,8 +187,6 @@ export function ResultScreen({
             t={t}
           />
 
-          {!classeMode && <ResultNameSoftAsk />}
-
           {result.isNewHighScore && !classeMode && (
             <div className="highscore-banner" role="status">
               ★ {t('result.newHighScore')}
@@ -364,6 +362,9 @@ export function ResultScreen({
               </a>
             </div>
           )}
+
+          {/* Soft-ask after pack continue so Save/Skip cannot outrank the photo suite. */}
+          {!classeMode && <ResultNameSoftAsk />}
 
           {!classeMode && (
             <PixfanCta

@@ -39,72 +39,79 @@ export function AchievementsPanel({
   const currentSeasonBadge = getSeasonBadge(currentSeasonId);
 
   const collapseLockedWall = !compact && unlocked.size === 0;
+  const softLockedWall = !compact && unlocked.size > 0;
+  const unlockedList = softLockedWall
+    ? list.filter((a) => unlocked.has(a.id))
+    : list;
+  const lockedList = softLockedWall
+    ? list.filter((a) => !unlocked.has(a.id))
+    : [];
 
-  const grid = (
-      <ul className="achievements__grid">
-        {list.map((a) => {
-          const isUnlocked = unlocked.has(a.id);
-          const isNew = highlight.has(a.id);
-          const progress = getAchievementProgress(a.id);
-          const showProgress = progress != null && !isUnlocked;
-          const pct =
-            progress != null && progress.threshold > 0
-              ? Math.min(100, (progress.current / progress.threshold) * 100)
-              : 0;
-          return (
-            <li
-              key={a.id}
-              className={`achievement-card${isUnlocked ? ' is-unlocked' : ' is-locked'}${
-                isNew ? ' is-new' : ''
-              }`}
-            >
-              <span className="achievement-card__icon" aria-hidden="true">
-                {isUnlocked ? a.icon : '🔒'}
-              </span>
-              <div className="achievement-card__body">
-                <span className="achievement-card__title">
-                  {t(a.titleKey)}
-                  {isNew && (
-                    <span className="achievement-card__new">
-                      {t('achievements.new')}
-                    </span>
-                  )}
-                </span>
-                <span className="achievement-card__desc">{t(a.descKey)}</span>
-                {showProgress && progress && (
-                  <div
-                    className="achievement-card__progress"
-                    data-testid={`achievement-progress-${a.id}`}
-                  >
-                    <span className="achievement-card__counter">
-                      {t('achievements.counter', {
-                        current: progress.current,
-                        threshold: progress.threshold,
-                      })}
-                    </span>
-                    <span
-                      className="achievement-card__bar"
-                      role="progressbar"
-                      aria-valuemin={0}
-                      aria-valuemax={progress.threshold}
-                      aria-valuenow={progress.current}
-                      aria-label={t('achievements.counter', {
-                        current: progress.current,
-                        threshold: progress.threshold,
-                      })}
-                    >
-                      <span
-                        className="achievement-card__bar-fill"
-                        style={{ width: `${pct}%` }}
-                      />
-                    </span>
-                  </div>
+  const renderGrid = (items: typeof list) => (
+    <ul className="achievements__grid">
+      {items.map((a) => {
+        const isUnlocked = unlocked.has(a.id);
+        const isNew = highlight.has(a.id);
+        const progress = getAchievementProgress(a.id);
+        const showProgress = progress != null && !isUnlocked;
+        const pct =
+          progress != null && progress.threshold > 0
+            ? Math.min(100, (progress.current / progress.threshold) * 100)
+            : 0;
+        return (
+          <li
+            key={a.id}
+            className={`achievement-card${isUnlocked ? ' is-unlocked' : ' is-locked'}${
+              isNew ? ' is-new' : ''
+            }`}
+          >
+            <span className="achievement-card__icon" aria-hidden="true">
+              {isUnlocked ? a.icon : '🔒'}
+            </span>
+            <div className="achievement-card__body">
+              <span className="achievement-card__title">
+                {t(a.titleKey)}
+                {isNew && (
+                  <span className="achievement-card__new">
+                    {t('achievements.new')}
+                  </span>
                 )}
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+              </span>
+              <span className="achievement-card__desc">{t(a.descKey)}</span>
+              {showProgress && progress && (
+                <div
+                  className="achievement-card__progress"
+                  data-testid={`achievement-progress-${a.id}`}
+                >
+                  <span className="achievement-card__counter">
+                    {t('achievements.counter', {
+                      current: progress.current,
+                      threshold: progress.threshold,
+                    })}
+                  </span>
+                  <span
+                    className="achievement-card__bar"
+                    role="progressbar"
+                    aria-valuemin={0}
+                    aria-valuemax={progress.threshold}
+                    aria-valuenow={progress.current}
+                    aria-label={t('achievements.counter', {
+                      current: progress.current,
+                      threshold: progress.threshold,
+                    })}
+                  >
+                    <span
+                      className="achievement-card__bar-fill"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </span>
+                </div>
+              )}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
   );
 
   return (
@@ -147,10 +154,23 @@ export function AchievementsPanel({
               total: ACHIEVEMENTS.length,
             })}
           </p>
-          {grid}
+          {renderGrid(list)}
         </details>
       ) : (
-        grid
+        <>
+          {renderGrid(unlockedList)}
+          {softLockedWall && lockedList.length > 0 && (
+            <details
+              className="achievements__locked"
+              data-testid="achievements-locked"
+            >
+              <summary className="achievements__locked-summary">
+                {t('achievements.lockedSummary', { count: lockedList.length })}
+              </summary>
+              {renderGrid(lockedList)}
+            </details>
+          )}
+        </>
       )}
       {!compact && seasonBadges.length > 0 && (
         <div className="season-badges" data-testid="season-badges">

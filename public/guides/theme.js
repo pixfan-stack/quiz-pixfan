@@ -34,6 +34,7 @@
     var label = labels(isDark);
     btn.setAttribute('aria-label', label);
     btn.setAttribute('title', label);
+    btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
     btn.textContent = isDark ? '☀️' : '🌙';
   }
 
