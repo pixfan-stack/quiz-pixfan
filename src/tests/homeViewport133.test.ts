@@ -23,7 +23,7 @@ describe('scolaires SPA + smartphone quiet chrome (vague 1.33)', () => {
     expect(smartphone).toContain('cta-secondary');
     expect(smartphone).toContain('/guides/scolaires/#c3-decouvrir');
     expect(smartphone).toContain('Pour la classe → parcours Scolaires');
-    expect(smartphone).toContain('For class → Scolaires paths');
+    expect(smartphone).toContain('For the classroom → Schools paths');
     // Classroom CTA before related muted links (same order as other topics)
     for (const artClass of ['class="fr"', 'class="en"']) {
       const artStart = smartphone.indexOf(`<article ${artClass}`);

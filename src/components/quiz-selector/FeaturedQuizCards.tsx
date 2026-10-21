@@ -187,7 +187,7 @@ export function FeaturedQuizCards({
                   {t('home.dailyStreak', { count: dailyStreak })}
                 </span>
               )}
-              {streakFreezes > 0 && (
+              {dailyStreak > 0 && streakFreezes > 0 && (
                 <span className="quiz-card__meta-chip quiz-card__meta-chip--freeze">
                   {t('home.streakFreezeAvailable')}
                 </span>
