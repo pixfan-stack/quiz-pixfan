@@ -11,7 +11,6 @@
     "banner": "Class mode — no public leaderboard"
   },
   "scolaires": {
-    "chip": "Schools",
     "eyebrow": "Teachers & students",
     "title": "Schools — photo in class",
     "subtitle": "Collège cycle 4 first (image reading, light, media literacy), then cycle 3 and lycée — no account, class mode.",
@@ -70,7 +69,6 @@
     "dailyReplay": "Play again",
     "dailyStreak": "{{count}}-day streak",
     "streakFreezeAvailable": "1 streak freeze ready",
-    "streakFreezeUsed": "Streak freeze used",
     "addToCalendar": "Add to calendar (.ics)",
     "addToCalendarHint": "Local daily reminder at 9:00 — works without push notifications.",
     "dailyReminder": "Daily reminder",
@@ -110,7 +108,6 @@
     "linkCopied": "Link copied — ready to share!",
     "weeklyLeaders": "This week’s top",
     "weeklyLeadersSeeAll": "Full leaderboard",
-    "weeklyLeadersEmpty": "Be the first on the board this week!",
     "dailyNudgeTitle": "Today’s challenge is waiting",
     "dailyNudgeDesc": "You’re on the installed app — take today’s daily pack.",
     "dailyNudgePlay": "Play",
@@ -288,8 +285,7 @@
     "hashtags": "quiz,photography,challenge"
   },
   "highscore": {
-    "label": "Best",
-    "none": "No score yet"
+    "label": "Best"
   },
   "leaderboard": {
     "title": "Leaderboard",
@@ -436,15 +432,6 @@
     "admin": "Edit questions",
     "guides": "Photo guides",
     "scolaires": "Schools",
-    "guideExposure": "Exposure triangle",
-    "guideComposition": "Composition",
-    "guideSmartphone": "Smartphone photo",
-    "guideLight": "Light",
-    "guideRetouching": "Retouching / Lightroom",
-    "guideGenres": "Photo genres",
-    "guideGear": "Photo gear",
-    "guideRights": "Rights & ethics",
-    "guideHistory": "History & icons",
     "saveProgress": "Save my progress"
   },
   "pwa": {

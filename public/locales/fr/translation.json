@@ -11,7 +11,6 @@
     "banner": "Mode classe — sans classement public"
   },
   "scolaires": {
-    "chip": "Scolaires",
     "eyebrow": "Enseignants & élèves",
     "title": "Scolaires — photo en classe",
     "subtitle": "Priorité collège cycle 4 (lire une image, lumière, EMI), puis cycle 3 et lycée — sans compte, mode classe.",
@@ -70,7 +69,6 @@
     "dailyReplay": "Rejouer",
     "dailyStreak": "Série de {{count}} jour(s)",
     "streakFreezeAvailable": "1 gel de série dispo",
-    "streakFreezeUsed": "Gel de série utilisé",
     "addToCalendar": "Ajouter au calendrier (.ics)",
     "addToCalendarHint": "Rappel quotidien local à 9 h — fonctionne sans notification push.",
     "dailyReminder": "Rappel du défi",
@@ -110,7 +108,6 @@
     "linkCopied": "Lien copié — à partager !",
     "weeklyLeaders": "Top de la semaine",
     "weeklyLeadersSeeAll": "Voir le classement",
-    "weeklyLeadersEmpty": "Soyez le premier cette semaine !",
     "dailyNudgeTitle": "Le défi du jour vous attend",
     "dailyNudgeDesc": "Vous avez installé l’app — relevez le défi d’aujourd’hui.",
     "dailyNudgePlay": "Jouer",
@@ -288,8 +285,7 @@
     "hashtags": "quiz,photo,defi"
   },
   "highscore": {
-    "label": "Record",
-    "none": "Aucun score"
+    "label": "Record"
   },
   "leaderboard": {
     "title": "Classement",
@@ -436,15 +432,6 @@
     "admin": "Éditer les questions",
     "guides": "Guides photo",
     "scolaires": "Scolaires",
-    "guideExposure": "Triangle d’exposition",
-    "guideComposition": "Composition",
-    "guideSmartphone": "Photo smartphone",
-    "guideLight": "Lumière",
-    "guideRetouching": "Retouche / Lightroom",
-    "guideGenres": "Genres photo",
-    "guideGear": "Matériel photo",
-    "guideRights": "Droits & éthique",
-    "guideHistory": "Histoire & icônes",
     "saveProgress": "Sauvegarder mon progrès"
   },
   "pwa": {

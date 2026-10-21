@@ -2,8 +2,6 @@ import { useTranslation } from 'react-i18next';
 import type { HighScoreRecord } from '../types/quiz';
 
 interface HighScoreBadgeProps {
-  /** When true, show a muted "no score" label if empty. */
-  showEmpty?: boolean;
   /** Pre-computed best score (local + remote). */
   bestScore?: HighScoreRecord | null;
 }
@@ -11,23 +9,16 @@ interface HighScoreBadgeProps {
 /**
  * Displays the local best score percentage for a quiz.
  * Accepts an optional pre-computed best score from remote/local merge.
+ * Empty scores stay quiet (no "no score yet" chip on the landing).
  */
-export function HighScoreBadge({
-  showEmpty = false,
-  bestScore,
-}: HighScoreBadgeProps) {
+export function HighScoreBadge({ bestScore }: HighScoreBadgeProps) {
   const { t } = useTranslation();
 
   // Use the pre-computed best score if provided
   const record = bestScore;
 
   if (!record) {
-    if (!showEmpty) return null;
-    return (
-      <span className="highscore-badge highscore-badge--empty">
-        {t('highscore.none')}
-      </span>
-    );
+    return null;
   }
 
   return (
