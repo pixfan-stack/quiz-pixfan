@@ -12,9 +12,8 @@
   },
   "scolaires": {
     "chip": "Schools",
-    "chipHint": "Curriculum-aligned paths",
     "eyebrow": "Teachers & students",
-    "title": "Schools — photo & curriculum",
+    "title": "Schools — photo in class",
     "subtitle": "Collège cycle 4 first (image reading, light, media literacy), then cycle 3 and lycée — no account, class mode.",
     "recommended": "Collège",
     "minutes": "~{{count}} min",

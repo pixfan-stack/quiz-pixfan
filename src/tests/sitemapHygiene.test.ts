@@ -40,8 +40,20 @@ describe('sitemap / SEO hygiene', () => {
     expect(hub! >= LASTMOD_FLOOR).toBe(true);
     expect(fiche! >= LASTMOD_FLOOR).toBe(true);
 
+    // Pack / mode deep-links must not lag the catalog floor (vague 1.33).
+    const packLocs = [...sitemap.matchAll(/<loc>(https:\/\/quiz\.pixfan\.fr\/s\/[^<]+)<\/loc>/g)].map(
+      (m) => m[1]
+    );
+    expect(packLocs.length).toBeGreaterThan(10);
+    for (const loc of packLocs) {
+      const mod = lastmodForLoc(loc);
+      expect(mod, loc).toBeTruthy();
+      expect(mod! >= LASTMOD_FLOOR, loc).toBe(true);
+    }
+
     // Guard against accidental rollback to pre-lexique dates.
     expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
+    expect(sitemap).not.toMatch(/<lastmod>2026-09-\d{2}<\/lastmod>/);
   });
 
   it('excludes sitemap and robots from bare SPA catch-all precedence', () => {

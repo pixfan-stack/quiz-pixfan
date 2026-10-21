@@ -12,9 +12,8 @@
   },
   "scolaires": {
     "chip": "Scolaires",
-    "chipHint": "Parcours programme officiel",
     "eyebrow": "Enseignants & élèves",
-    "title": "Scolaires — photo & programme",
+    "title": "Scolaires — photo en classe",
     "subtitle": "Priorité collège cycle 4 (lire une image, lumière, EMI), puis cycle 3 et lycée — sans compte, mode classe.",
     "recommended": "Collège",
     "minutes": "~{{count}} min",
