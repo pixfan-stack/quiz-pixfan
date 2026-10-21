@@ -106,7 +106,7 @@ export function FeaturedQuizCards({
               </span>
             ) : (
               <span className="quiz-card__icon" aria-hidden="true">
-                🖼️
+                ✦
               </span>
             )}
             <div className="quiz-card__body">
@@ -161,7 +161,7 @@ export function FeaturedQuizCards({
             </span>
           ) : (
             <span className="quiz-card__icon" aria-hidden="true">
-              🗓️
+              ✦
             </span>
           )}
           <div className="quiz-card__body">
@@ -251,7 +251,7 @@ export function FeaturedQuizCards({
             </span>
           ) : (
             <span className="quiz-card__icon" aria-hidden="true">
-              ⚔️
+              ✦
             </span>
           )}
           <div className="quiz-card__body">

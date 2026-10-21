@@ -30,8 +30,9 @@ describe('home + scolaires polish (vague 1.26 P1–P2)', () => {
   it('dedupes hero lead vs CTA hint copy', () => {
     expect(fr.home.selectQuiz).toMatch(/Lisez de vraies photos/i);
     expect(en.home.selectQuiz).toMatch(/Read real photos/i);
-    expect(fr.home.photoReadingDesc).toMatch(/^10 questions/i);
-    expect(en.home.photoReadingDesc).toMatch(/^10 questions/i);
+    // Vague 1.29: card desc is recognition-framed (« pour toi si… ») — still not a lead twin.
+    expect(fr.home.photoReadingDesc).toMatch(/Pour toi si/i);
+    expect(en.home.photoReadingDesc).toMatch(/Choose this if/i);
     expect(fr.home.photoReadingDesc).not.toMatch(/^Lisez de vraies photos/i);
     expect(en.home.photoReadingDesc).not.toMatch(/^Read real photos/i);
   });
