@@ -2006,6 +2006,31 @@ a {
   border-radius: 2px;
 }
 
+/* Narrow: Start stays dominant — copy is an inline secondary control, not a title overlay. */
+@media (max-width: 520px) {
+  .quiz-card-copy-btn {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0.35rem 0 0;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .quiz-card-copy-btn::after {
+    content: attr(title);
+  }
+
+  .quiz-card--daily .quiz-card__meta-chip--freeze {
+    display: none;
+  }
+}
+
 .weekly-leaders {
   margin: 0 0 1.15rem;
   padding: 0.9rem 1rem;
@@ -2094,20 +2119,21 @@ a {
   align-items: center;
   justify-content: space-between;
   margin: 1rem 0 0;
-  padding: 0.85rem 1rem;
-  border: 1px solid color-mix(in srgb, var(--pixfan-pink) 35%, var(--color-border));
-  border-radius: var(--radius-sm);
-  background: color-mix(in srgb, var(--pixfan-pink) 8%, var(--color-surface));
+  padding: 0.75rem 0;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  background: transparent;
 }
 
 .reengage-banner__title {
   margin: 0;
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 650;
+  font-size: 0.92rem;
 }
 
 .reengage-banner__desc {
-  margin: 0.2rem 0 0;
+  margin: 0.15rem 0 0;
   color: var(--color-text-muted);
   font-size: 0.85rem;
 }
@@ -2115,7 +2141,37 @@ a {
 .reengage-banner__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.45rem;
+}
+
+.daily-reminder-prompt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 0;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.daily-reminder-prompt__title {
+  margin: 0;
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.daily-reminder-prompt__desc {
+  margin: 0.15rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.daily-reminder-prompt__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .weak-spots-due-chip {

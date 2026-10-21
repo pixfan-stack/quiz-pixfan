@@ -45,19 +45,20 @@ export function DailyReminderPrompt() {
 
   return (
     <div
-      className="reengage-banner daily-reminder-prompt"
+      className="daily-reminder-prompt"
       role="region"
       aria-label={t('result.reminderPromptTitle')}
+      data-testid="daily-reminder-prompt"
     >
-      <div className="reengage-banner__body">
-        <p className="reengage-banner__title">
+      <div className="daily-reminder-prompt__body">
+        <p className="daily-reminder-prompt__title">
           {t('result.reminderPromptTitle')}
         </p>
-        <p className="reengage-banner__desc">
+        <p className="daily-reminder-prompt__desc">
           {t('result.reminderPromptDesc')}
         </p>
       </div>
-      <div className="reengage-banner__actions">
+      <div className="daily-reminder-prompt__actions">
         {canNotify ? (
           <button
             type="button"

@@ -13,7 +13,7 @@ import {
 import type { getHighScore } from '../../utils/highscore';
 import type { fetchRemoteHighScore } from '../../utils/highscoreApi';
 import { quizHasScolairesTag } from '../../utils/scolaires';
-import { QUIZ_ICONS } from './types';
+import { QUIZ_ICON_MARK } from './types';
 import type { PackFilter } from '../../utils/packFilter';
 
 type BestScore =
@@ -265,7 +265,7 @@ export function MorePacksSection({
                   aria-label={`${t('home.start')}: ${pickLocale(quiz.title, lang)} (${t('home.questionsCount', { count: quiz.questions.length })})`}
                 >
                   <span className="quiz-card__icon" aria-hidden="true">
-                    {QUIZ_ICONS[quiz.id] ?? '✦'}
+                    {QUIZ_ICON_MARK}
                   </span>
                   <div className="quiz-card__body">
                     <h3 className="quiz-card__title">
