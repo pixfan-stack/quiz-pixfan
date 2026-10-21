@@ -54,7 +54,7 @@ export function HomeHero({
                 →
               </span>
             </button>
-            <p className="home-hero__cta-hint">{t('home.photoReadingDesc')}</p>
+            <p className="home-hero__cta-hint">{t('home.photoReadingHint')}</p>
             <p className="home-hero__reassure" data-testid="home-hero-no-account">
               {t('home.noAccountHint')}
             </p>

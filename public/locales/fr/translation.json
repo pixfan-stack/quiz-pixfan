@@ -63,7 +63,7 @@
     "antiCheatHint": "Chaque changement d’onglet retire 1 bonne réponse au score final.",
     "off": "Désactivé",
     "randomQuiz": "Mix aléatoire",
-    "randomQuizDesc": "20 questions tirées de toutes les catégories.",
+    "randomQuizDesc": "Pour toi si tu veux un mix de toutes les catégories — 20 questions.",
     "dailyChallenge": "Défi du jour",
     "dailyChallengeDesc": "Pour toi si tu veux un rituel photo du jour — 10 questions partagées, souvent avec une image.",
     "dailyPlayed": "Fait aujourd’hui",
@@ -82,7 +82,7 @@
     "duelDesc": "Pour toi si tu veux comparer un score avec un ami — mêmes 10 questions, défi après.",
     "duelLinkCopied": "Lien du duel copié !",
     "weakSpots": "Points faibles",
-    "weakSpotsDesc": "Révisez les questions que vous avez manquées.",
+    "weakSpotsDesc": "Pour toi si tu veux réviser ce que tu as manqué.",
     "weakSpotsCount": "{{count}} à pratiquer",
     "weakSpotsDueChip": "{{count}} à revoir",
     "weakSpotsDueChipDesc": "Révision espacée — erreurs dues aujourd’hui.",
@@ -90,6 +90,7 @@
     "weakSpotsDueCount": "{{count}} dues",
     "photoReading": "Photos à analyser",
     "photoReadingDesc": "Pour toi si tu préfères lire des images avant la technique — 10 photos illustrées.",
+    "photoReadingHint": "10 photos à lire — composition, lumière, smartphone.",
     "photoReadingBadge": "Photos illustrées",
     "photoCloserTitle": "Encore une photo ?",
     "photoCloserDesc": "Le hero est là pour démarrer — relancez une lecture photo, ou le défi du jour quand vous voulez.",
@@ -579,6 +580,8 @@
     "accessibilitySkipToContent": "Aller au contenu principal",
     "accessibilitySkipToMain": "Aller au quiz principal",
     "darkMode": "Mode sombre",
-    "lightMode": "Mode clair"
+    "lightMode": "Mode clair",
+    "darkModeShort": "Nuit",
+    "lightModeShort": "Jour"
   }
 }
