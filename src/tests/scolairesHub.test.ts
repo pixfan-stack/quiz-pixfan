@@ -7,7 +7,7 @@ import retoucheGuide from '../../public/guides/retouche-lightroom.html?raw';
 
 describe('scolaires P0–P2 hub', () => {
   it('ships FR hub with H1, 5 parcours, classe séance links, MEN disclaimer', () => {
-    expect(hub).toContain('<h1>Scolaires — photo &amp; programme officiel</h1>');
+    expect(hub).toContain('<h1>Scolaires — photo en classe</h1>');
     expect(hub).toContain('id="c3-decouvrir"');
     expect(hub).toContain('id="c4-regard"');
     expect(hub).toContain('id="c4-lumiere"');
@@ -74,7 +74,7 @@ describe('scolaires P0–P2 hub', () => {
     expect(hub).toContain('href="?lang=en"');
     expect(hub).toContain('hreflang="en"');
     expect(hub).toContain('hreflang="fr"');
-    expect(hub).toContain('<h1>Schools — photo &amp; French national curriculum</h1>');
+    expect(hub).toContain('<h1>Schools — photo in class</h1>');
     expect(hub).toContain('class="en"');
     expect(hub).toContain('No affiliation with the French Ministry of Education');
     expect(hub).toContain('Start the lesson');

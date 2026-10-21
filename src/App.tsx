@@ -384,7 +384,7 @@ export default function App() {
             aria-label={isDark ? t('common.lightMode') : t('common.darkMode')}
             title={isDark ? t('common.lightMode') : t('common.darkMode')}
           >
-            {isDark ? '☀️' : '🌙'}
+            {isDark ? t('common.lightModeShort') : t('common.darkModeShort')}
           </button>
         </div>
       </header>

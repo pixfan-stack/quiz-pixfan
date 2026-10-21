@@ -172,7 +172,7 @@ export function MorePacksSection({
                   aria-label={t('home.weakSpots')}
                 >
                   <span className="quiz-card__icon" aria-hidden="true">
-                    🎯
+                    ✦
                   </span>
                   <div className="quiz-card__body">
                     <h3 className="quiz-card__title">{t('home.weakSpots')}</h3>
@@ -212,7 +212,7 @@ export function MorePacksSection({
                 aria-label={t('home.randomQuiz')}
               >
                 <span className="quiz-card__icon" aria-hidden="true">
-                  🎲
+                  ✦
                 </span>
                 <div className="quiz-card__body">
                   <h3 className="quiz-card__title">{t('home.randomQuiz')}</h3>

@@ -28,6 +28,14 @@
     return en ? 'Dark mode' : 'Mode nuit';
   }
 
+  function shortLabel(isDark) {
+    var en = document.documentElement.lang === 'en';
+    if (isDark) {
+      return en ? 'Light' : 'Jour';
+    }
+    return en ? 'Dark' : 'Nuit';
+  }
+
   function syncToggle(isDark) {
     var btn = document.getElementById('dark-mode-toggle');
     if (!btn) return;
@@ -35,7 +43,7 @@
     btn.setAttribute('aria-label', label);
     btn.setAttribute('title', label);
     btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    btn.textContent = isDark ? '☀️' : '🌙';
+    btn.textContent = shortLabel(isDark);
   }
 
   function setDark(isDark) {

@@ -45,54 +45,19 @@ export function ResultShareSection({
 
       <div className="share-primary">
         {isDaily ? (
-          <>
-            <button
-              type="button"
-              className="btn btn--primary btn--block"
-              onClick={() => void onCopyDailyGrid()}
-            >
-              <span className="btn__icon" aria-hidden="true">
-                ▦
-              </span>
-              {gridCopied
-                ? t('result.copyDailyPrimaryDone')
-                : t('result.copyDailyPrimary')}
-            </button>
-            <button
-              type="button"
-              className="btn btn--secondary btn--block"
-              onClick={() => void onExportImage('square')}
-            >
-              <span className="btn__icon" aria-hidden="true">
-                ⬜
-              </span>
-              {t('result.exportImage')}
-            </button>
-            <button
-              type="button"
-              className="btn btn--ghost btn--block"
-              onClick={() => void onExportImage('story')}
-            >
-              <span className="btn__icon" aria-hidden="true">
-                ▢
-              </span>
-              {t('result.exportStory')}
-            </button>
-            {quizzesLength > 0 && !hideChallenge && (
-              <button
-                type="button"
-                className="btn btn--ghost btn--block"
-                onClick={() => void onChallengeFriend()}
-              >
-                <span className="btn__icon" aria-hidden="true">
-                  ⚔️
-                </span>
-                {challengeCopied
-                  ? t('result.challengeLinkCopied')
-                  : t('result.challengeFriend')}
-              </button>
-            )}
-          </>
+          <button
+            type="button"
+            className="btn btn--primary btn--block"
+            data-testid="share-daily-primary"
+            onClick={() => void onCopyDailyGrid()}
+          >
+            <span className="btn__icon" aria-hidden="true">
+              ▦
+            </span>
+            {gridCopied
+              ? t('result.copyDailyPrimaryDone')
+              : t('result.copyDailyPrimary')}
+          </button>
         ) : isDuel ? (
           <>
             <button
@@ -176,7 +141,45 @@ export function ResultShareSection({
         <summary className="share-more__summary">
           {t('result.shareMore')}
         </summary>
-        {!isDaily ? (
+        {isDaily ? (
+          <div className="export-section" data-testid="share-daily-more">
+            <p className="export-section__hint">{t('result.exportSquareHint')}</p>
+            <button
+              type="button"
+              className="btn btn--ghost btn--block"
+              onClick={() => void onExportImage('square')}
+            >
+              <span className="btn__icon" aria-hidden="true">
+                ⬜
+              </span>
+              {t('result.exportImage')}
+            </button>
+            <button
+              type="button"
+              className="btn btn--ghost btn--block"
+              onClick={() => void onExportImage('story')}
+            >
+              <span className="btn__icon" aria-hidden="true">
+                ▢
+              </span>
+              {t('result.exportStory')}
+            </button>
+            {quizzesLength > 0 && !hideChallenge && (
+              <button
+                type="button"
+                className="btn btn--ghost btn--block"
+                onClick={() => void onChallengeFriend()}
+              >
+                <span className="btn__icon" aria-hidden="true">
+                  ⚔️
+                </span>
+                {challengeCopied
+                  ? t('result.challengeLinkCopied')
+                  : t('result.challengeFriend')}
+              </button>
+            )}
+          </div>
+        ) : (
           <div className="export-section">
             <p className="export-section__hint">{t('result.exportSquareHint')}</p>
             <button
@@ -190,7 +193,7 @@ export function ResultShareSection({
               {t('result.exportStory')}
             </button>
           </div>
-        ) : null}
+        )}
         <p className="share-section__platforms-label">
           {t('result.shareAlso')}
         </p>

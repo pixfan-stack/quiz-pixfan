@@ -63,7 +63,7 @@
     "antiCheatHint": "Each tab switch removes 1 correct answer from your final score.",
     "off": "Off",
     "randomQuiz": "Random mix",
-    "randomQuizDesc": "20 questions from every category.",
+    "randomQuizDesc": "Choose this if you want a mix from every category — 20 questions.",
     "dailyChallenge": "Daily challenge",
     "dailyChallengeDesc": "Choose this if you want a daily photo ritual — 10 shared questions, often with an image.",
     "dailyPlayed": "Done today",
@@ -82,7 +82,7 @@
     "duelDesc": "Choose this if you want to compare a score with a friend — same 10 questions, challenge after.",
     "duelLinkCopied": "Duel link copied!",
     "weakSpots": "Weak spots",
-    "weakSpotsDesc": "Practice the questions you’ve missed.",
+    "weakSpotsDesc": "Choose this if you want to drill what you missed.",
     "weakSpotsCount": "{{count}} to practice",
     "weakSpotsDueChip": "{{count}} to review",
     "weakSpotsDueChipDesc": "Spaced review — mistakes that are due today.",
@@ -90,6 +90,7 @@
     "weakSpotsDueCount": "{{count}} due",
     "photoReading": "Photos to analyze",
     "photoReadingDesc": "Choose this if you prefer reading images before gear talk — 10 illustrated photos.",
+    "photoReadingHint": "10 photos to read — composition, light, smartphone.",
     "photoReadingBadge": "Illustrated photos",
     "photoCloserTitle": "One more photo?",
     "photoCloserDesc": "Start from the hero — replay a photo reading, or today’s challenge when you’re ready.",
@@ -579,6 +580,8 @@
     "accessibilitySkipToContent": "Skip to main content",
     "accessibilitySkipToMain": "Skip to quiz main",
     "darkMode": "Dark mode",
-    "lightMode": "Light mode"
+    "lightMode": "Light mode",
+    "darkModeShort": "Dark",
+    "lightModeShort": "Light"
   }
 }
