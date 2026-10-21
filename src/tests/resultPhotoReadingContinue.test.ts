@@ -51,10 +51,10 @@ describe('composition → light continue (vague 1.24)', () => {
   });
 });
 
-describe('result soft-ask copy (vague 1.24)', () => {
-  it('uses dedicated softAsk keys, not gate modal titles', () => {
+describe('result soft-ask copy (vague 1.24 / 1.31)', () => {
+  it('uses dedicated softAsk title key without hint paragraph', () => {
     expect(softAskSource).toContain('result.softAskTitle');
-    expect(softAskSource).toContain('result.softAskHint');
+    expect(softAskSource).not.toContain('result.softAskHint');
     expect(softAskSource).not.toContain('home.playerModalTitle');
     expect(softAskSource).not.toContain('home.playerModalSkip');
     expect(fr.result.softAskTitle).toMatch(/pseudo|classement/i);

@@ -1720,14 +1720,15 @@ a {
 .classe-mode-banner {
   max-width: var(--max-width);
   margin: 0 auto 0.75rem;
-  padding: 0.55rem 0.9rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid color-mix(in srgb, var(--pixfan-pink) 35%, var(--color-border));
-  background: color-mix(in srgb, var(--pixfan-pink) 8%, var(--color-surface));
+  padding: 0.55rem 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
   font-weight: 600;
   font-size: 0.9rem;
   text-align: center;
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 
 .scolaires-home-chip {
