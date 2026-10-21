@@ -60,7 +60,7 @@ export function ResultNameSoftAsk() {
         <button type="button" className="btn btn--ghost btn--small" onClick={dismiss}>
           {t('result.softAskSkip')}
         </button>
-        <button type="button" className="btn btn--primary btn--small" onClick={handleSave}>
+        <button type="button" className="btn btn--secondary btn--small" onClick={handleSave}>
           {t('result.softAskSave')}
         </button>
       </div>

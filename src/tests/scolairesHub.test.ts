@@ -57,6 +57,17 @@ describe('scolaires P0–P2 hub', () => {
     expect(c3Path).toBeGreaterThan(firstPath);
   });
 
+  it('promotes recommended Lancer above-fold before hub-more details (vague 1.28)', () => {
+    const hero = hub.indexOf('data-hub-hero-cta');
+    const more = hub.indexOf('class="hub-more"');
+    const regard = hub.indexOf('id="c4-regard"');
+    expect(hero).toBeGreaterThan(-1);
+    expect(more).toBeGreaterThan(hero);
+    expect(regard).toBeGreaterThan(more);
+    expect(hub).toContain('Lancer la séance (recommandé)');
+    expect(hub).toContain('Start the lesson (recommended)');
+  });
+
   it('ships EN article + lang switcher + hreflang (vague 1.20 P1)', () => {
     expect(hub).toContain('class="lang-switcher"');
     expect(hub).toContain('href="?lang=fr"');

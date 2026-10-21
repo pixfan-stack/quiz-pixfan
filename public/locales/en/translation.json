@@ -403,6 +403,7 @@
     "title": "Achievements",
     "progress": "{{unlocked}} / {{total}} unlocked",
     "teaserSummary": "Earn achievements by playing — show list",
+    "lockedSummary": "{{count}} still locked",
     "counter": "{{current}}/{{threshold}}",
     "new": "New",
     "firstFinish": "First finish",

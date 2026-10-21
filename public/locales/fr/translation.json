@@ -403,6 +403,7 @@
     "title": "Succès",
     "progress": "{{unlocked}} / {{total}} débloqués",
     "teaserSummary": "Gagnez des succès en jouant — voir la liste",
+    "lockedSummary": "{{count}} encore à débloquer",
     "counter": "{{current}}/{{threshold}}",
     "new": "Nouveau",
     "firstFinish": "Première partie",

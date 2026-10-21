@@ -648,12 +648,29 @@ a {
   display: none;
 }
 
+.achievements__locked {
+  margin: 0.75rem 0 0.35rem;
+}
+
+.achievements__locked-summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  list-style: none;
+}
+
+.achievements__locked-summary::-webkit-details-marker {
+  display: none;
+}
+
 .result-name-soft {
   margin: 0.85rem 0 1rem;
-  padding: 0.9rem 1rem;
-  border-radius: var(--radius);
-  border: 1px solid color-mix(in srgb, var(--pixfan-pink-cta) 28%, var(--color-border));
-  background: color-mix(in srgb, var(--pixfan-pink-soft) 70%, var(--color-surface));
+  padding: 0.75rem 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
 }
 
 .result-name-soft__title {
@@ -3454,7 +3471,33 @@ button.app-footer__sync {
 }
 
 .season-banner {
-  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.season-banner__title {
+  margin: 0;
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.season-banner__desc {
+  margin: 0.15rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.season-banner__actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
 }
 
 .season-badges {

@@ -380,6 +380,7 @@ export default function App() {
             type="button"
             className="dark-mode-toggle"
             onClick={toggleDark}
+            aria-pressed={isDark}
             aria-label={isDark ? t('common.lightMode') : t('common.darkMode')}
             title={isDark ? t('common.lightMode') : t('common.darkMode')}
           >

@@ -73,6 +73,23 @@
     .card--recommended {
       border-color: color-mix(in srgb, var(--pixfan-pink, #f3538c) 45%, var(--color-border, #ddd));
     }
+    .hub-hero-cta {
+      margin: 0.85rem 0 0.75rem;
+    }
+    .hub-more {
+      margin: 0 0 1.1rem;
+      padding: 0.55rem 0;
+      border-top: 1px solid var(--color-border, #ddd);
+      border-bottom: 1px solid var(--color-border, #ddd);
+    }
+    .hub-more > summary {
+      cursor: pointer;
+      font-weight: 650;
+      font-size: 0.92rem;
+    }
+    .hub-more[open] > summary {
+      margin-bottom: 0.55rem;
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -169,20 +186,26 @@
 
     <article class="fr">
       <h1>Scolaires — photo &amp; programme officiel</h1>
-      <p class="lead">Priorité <strong>collège cycle&nbsp;4</strong> (lire une image, lumière, EMI), puis cycle&nbsp;3 et lycée : guides + quiz déjà en ligne, sans compte, mode classe sans classement public.</p>
-      <p class="muted">Complément de séance (15–30&nbsp;min), pas un LMS. Images domaine public / originales. Pas d’affiliation au ministère de l’Éducation nationale.</p>
-      <p>
-        <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html">Imprimer la fiche séance</a>
+      <p class="lead">Priorité <strong>collège cycle&nbsp;4</strong> : lire une image, lumière, EMI — sans compte, mode classe.</p>
+      <p class="hub-hero-cta">
+        <a class="cta" href="/s/photo-reading?classe=1" data-track-parcours data-hub-hero-cta>Lancer la séance (recommandé)</a>
       </p>
-      <nav aria-label="Aller aux parcours">
-        <ul class="hub-jump">
-          <li><a href="#c4-regard">Lire une image (recommandé)</a></li>
-          <li><a href="#c4-lumiere">Lumière</a></li>
-          <li><a href="#emi">EMI</a></li>
-          <li><a href="#cycle-3">Cycle 3</a></li>
-          <li><a href="#lycee">Lycée</a></li>
-        </ul>
-      </nav>
+      <details class="hub-more">
+        <summary>Fiche, parcours &amp; précisions</summary>
+        <p class="muted">Complément de séance (15–30&nbsp;min), pas un LMS. Images domaine public / originales. Pas d’affiliation au ministère de l’Éducation nationale.</p>
+        <p>
+          <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html">Imprimer la fiche séance</a>
+        </p>
+        <nav aria-label="Aller aux parcours">
+          <ul class="hub-jump">
+            <li><a href="#c4-regard">Lire une image (recommandé)</a></li>
+            <li><a href="#c4-lumiere">Lumière</a></li>
+            <li><a href="#emi">EMI</a></li>
+            <li><a href="#cycle-3">Cycle 3</a></li>
+            <li><a href="#lycee">Lycée</a></li>
+          </ul>
+        </nav>
+      </details>
 
       <h2 id="cycle-4">Cycle 4 — arts plastiques (collège)</h2>
       <p>Cœur collège — aligné sur les programmes en vigueur (BOEN n°31 du 30 juillet 2020) : représentation, images / réalité / fiction, pratiques de l’image fixe (photographie), numérique.</p>
@@ -340,20 +363,26 @@
 
     <article class="en">
       <h1>Schools — photo &amp; French national curriculum</h1>
-      <p class="lead"><strong>Collège cycle&nbsp;4 first</strong> (image reading, light, media literacy / EMI), then cycle&nbsp;3 and lycée: live guides + quizzes, no account, class mode without a public leaderboard.</p>
-      <p class="muted">Lesson complement (15–30&nbsp;min), not an LMS. Public-domain / original images. No affiliation with the French Ministry of Education.</p>
-      <p>
-        <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html?lang=en">Print the lesson sheet</a>
+      <p class="lead"><strong>Collège cycle&nbsp;4 first</strong>: image reading, light, EMI — no account, class mode.</p>
+      <p class="hub-hero-cta">
+        <a class="cta" href="/s/photo-reading?classe=1&amp;lang=en" data-track-parcours data-hub-hero-cta>Start the lesson (recommended)</a>
       </p>
-      <nav aria-label="Jump to paths">
-        <ul class="hub-jump">
-          <li><a href="#c4-regard-en">Reading an image (recommended)</a></li>
-          <li><a href="#c4-lumiere-en">Light</a></li>
-          <li><a href="#emi-en">Media literacy</a></li>
-          <li><a href="#cycle-3-en">Cycle 3</a></li>
-          <li><a href="#lycee-en">Lycée</a></li>
-        </ul>
-      </nav>
+      <details class="hub-more">
+        <summary>Lesson sheet, paths &amp; notes</summary>
+        <p class="muted">Lesson complement (15–30&nbsp;min), not an LMS. Public-domain / original images. No affiliation with the French Ministry of Education.</p>
+        <p>
+          <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html?lang=en">Print the lesson sheet</a>
+        </p>
+        <nav aria-label="Jump to paths">
+          <ul class="hub-jump">
+            <li><a href="#c4-regard-en">Reading an image (recommended)</a></li>
+            <li><a href="#c4-lumiere-en">Light</a></li>
+            <li><a href="#emi-en">Media literacy</a></li>
+            <li><a href="#cycle-3-en">Cycle 3</a></li>
+            <li><a href="#lycee-en">Lycée</a></li>
+          </ul>
+        </nav>
+      </details>
 
       <h2 id="cycle-4-en">Cycle 4 — visual arts (collège)</h2>
       <p>Core collège path — aligned with programmes in force (BOEN no.&nbsp;31 of 30 July 2020): representation, images / reality / fiction, still-image practices (photography), digital.</p>
@@ -513,15 +542,6 @@
     <nav class="app-footer__guides" aria-label="Guides">
       <a href="/guides/" class="app-footer__link">Guides</a>
       <a href="/guides/scolaires/" class="app-footer__link">Scolaires</a>
-      <a href="/guides/triangle-exposition" class="app-footer__link">Exposition</a>
-      <a href="/guides/composition-photo" class="app-footer__link">Composition</a>
-      <a href="/guides/photo-smartphone" class="app-footer__link">Smartphone</a>
-      <a href="/guides/lumiere-photo" class="app-footer__link">Lumière</a>
-      <a href="/guides/retouche-lightroom" class="app-footer__link">Retouche</a>
-      <a href="/guides/genres-photo" class="app-footer__link">Genres</a>
-      <a href="/guides/materiel-photo" class="app-footer__link">Matériel</a>
-      <a href="/guides/droits-ethique-photo" class="app-footer__link">Droits</a>
-      <a href="/guides/histoire-photo" class="app-footer__link">Histoire</a>
     </nav>
     <div class="app-footer__inner">
       <a href="/" class="app-footer__link">quiz.pixfan.fr</a>
