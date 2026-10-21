@@ -363,7 +363,27 @@ export function ResultScreen({
             </div>
           )}
 
-          {/* Soft-ask after pack continue so Save/Skip cannot outrank the photo suite. */}
+          {/* Daily: share habit first. Soft-ask after pack continue so Save/Skip
+              cannot outrank the photo suite (non-Daily keeps soft-ask → Pixfan → share). */}
+          {!classeMode && isDaily && (
+            <ResultShareSection
+              isDaily={isDaily}
+              isDuel={isDuel}
+              quizzesLength={quizzes.length}
+              gridCopied={gridCopied}
+              challengeCopied={challengeCopied}
+              linkCopied={linkCopied}
+              shareFallbackCopied={shareFallbackCopied}
+              onCopyDailyGrid={handleCopyDailyGrid}
+              onChallengeFriend={handleChallengeFriend}
+              onCopyDuelLink={handleCopyDuelLink}
+              onNativeShare={handleNativeShare}
+              onExportImage={handleExportImage}
+              onShare={handleShare}
+              t={t}
+            />
+          )}
+
           {!classeMode && <ResultNameSoftAsk />}
 
           {!classeMode && (
@@ -376,7 +396,7 @@ export function ResultScreen({
             />
           )}
 
-          {!classeMode && (
+          {!classeMode && !isDaily && (
             <ResultShareSection
               isDaily={isDaily}
               isDuel={isDuel}

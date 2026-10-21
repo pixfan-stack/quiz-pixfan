@@ -35,7 +35,6 @@ export function ResultNameSoftAsk() {
   return (
     <div className="result-name-soft" data-testid="result-name-soft-ask" role="region">
       <p className="result-name-soft__title">{t('result.softAskTitle')}</p>
-      <p className="result-name-soft__hint">{t('result.softAskHint')}</p>
       <label htmlFor={inputId} className="visually-hidden">
         {t('home.playerName')}
       </label>
