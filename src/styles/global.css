@@ -94,11 +94,11 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(248, 249, 252, 0.88) 0%,
-      rgba(248, 249, 252, 0.82) 55%,
-      rgba(236, 240, 248, 0.92) 100%
+      rgba(248, 249, 252, 0.94) 0%,
+      rgba(248, 249, 252, 0.9) 55%,
+      rgba(236, 240, 248, 0.96) 100%
     ),
-    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=65');
+    url('/images/packs/photo-1506905925346-21bda4d32df4.avif');
   background-size: cover;
   background-position: center 30%;
   background-attachment: fixed;
@@ -2985,11 +2985,11 @@ a {
   background:
     linear-gradient(
       180deg,
-      rgba(17, 24, 39, 0.82) 0%,
-      rgba(17, 24, 39, 0.78) 50%,
-      rgba(17, 24, 39, 0.92) 100%
+      rgba(17, 24, 39, 0.9) 0%,
+      rgba(17, 24, 39, 0.88) 50%,
+      rgba(17, 24, 39, 0.96) 100%
     ),
-    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=65');
+    url('/images/packs/photo-1506905925346-21bda4d32df4.avif');
   background-size: cover;
   background-position: center 30%;
   background-attachment: fixed;
@@ -3163,6 +3163,36 @@ button.app-footer__sync {
 }
 
 .install-prompt__actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.daily-nudge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.daily-nudge__title {
+  margin: 0;
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.daily-nudge__desc {
+  margin: 0.15rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.daily-nudge__actions {
   display: flex;
   gap: 0.45rem;
   flex-wrap: wrap;

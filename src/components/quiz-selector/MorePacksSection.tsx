@@ -230,10 +230,7 @@ export function MorePacksSection({
                         })}
                       </span>
                     )}
-                    <HighScoreBadge
-                      showEmpty
-                      bestScore={getBestScore(RANDOM_QUIZ_ID)}
-                    />
+                    <HighScoreBadge bestScore={getBestScore(RANDOM_QUIZ_ID)} />
                   </div>
                   <span className="quiz-card__cta">
                     {t('home.start')}
@@ -315,7 +312,7 @@ export function MorePacksSection({
                           {t('home.playsCount', { count: plays })}
                         </span>
                       )}
-                      <HighScoreBadge showEmpty bestScore={bestScore} />
+                      <HighScoreBadge bestScore={bestScore} />
                     </div>
                     <span className="quiz-card__cta">
                       {t('home.start')}
