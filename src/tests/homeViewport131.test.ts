@@ -52,7 +52,10 @@ describe('result / guides quiet chrome (vague 1.31)', () => {
     expect(composition).toContain('href="/s/composition"');
     const triHeader = triangle.match(/<header[\s\S]*?<\/header>/)?.[0] ?? '';
     expect(triHeader).not.toMatch(/href="\/s\//);
-    expect(guidesIndex).toContain('href="/s/daily"');
+    // Guides index Daily nav removed in vague 1.32 — topic pages already quiet.
+    const indexHeader =
+      guidesIndex.match(/<header[\s\S]*?<\/header>/)?.[0] ?? '';
+    expect(indexHeader).not.toContain('href="/s/daily"');
   });
 
   it('classe-mode-banner is not an install-prompt pink twin', () => {
