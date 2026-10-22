@@ -4,9 +4,10 @@ import achievementsPanel from '../components/AchievementsPanel.tsx?raw';
 
 describe('P2 a11y / PWA hygiene', () => {
   it('bumps SW cache to v16 and precaches guides shell', () => {
-    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v19'");
-    expect(sw).not.toContain("CACHE_NAME = 'quiz-pixfan-v18'");
+    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v20'");
+    expect(sw).not.toContain("CACHE_NAME = 'quiz-pixfan-v19'");
     expect(sw).toContain('/locales/es/translation.json');
+    expect(sw).toContain('/locales/de/translation.json');
     expect(sw).toContain("'/guides/'");
     expect(sw).toContain("'/guides/index.html'");
     expect(sw).toContain("'/guides/guides.css'");

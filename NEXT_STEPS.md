@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.40.0**).
+Document à jour avec l’état réel du dépôt (**v1.41.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.41** : UI espagnole réelle (508) · un-stub ES · DE stub EN · SW es · docs v1.40.0 (bump **v1.41.0**)
 - Vague **1.40** : fondation ES/DE (stubs EN · switcher 4 langues · CSS/sniff interim) · guides-index twitter + `og:locale:alternate` · docs v1.39.0 (bump **v1.40.0**)
 - Vague **1.39** : hub JSON-LD EN sniff · fiche title de-dupe · `og:locale:alternate` twin · clipboard soft-fail · docs v1.38.0 (bump **v1.39.0**)
 - Vague **1.38** : EN teacher → hub `?lang=en` · hub/fiche twitter + `og:locale:alternate` · EN copy-seance · cycle-4 CTA · docs v1.37.0 (bump **v1.38.0**)
@@ -43,9 +44,9 @@ Document à jour avec l’état réel du dépôt (**v1.40.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.40.0** + 15 quiz · 386 Q · 268 illus (vague 1.40 release + 1.41 P0)
+- [x] Docs headline → **v1.41.0** + 15 quiz · 386 Q · 268 illus (vague 1.41 release + 1.42 P0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42
 
 ### Ops Antony — checklist P0.4 (hors code)
 

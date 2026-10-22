@@ -27,36 +27,27 @@ function leafEntries(obj: unknown, prefix = ''): [string, unknown][] {
 }
 
 describe('vague 1.41 — docs v1.40.0 + real ES UI + DE stub', () => {
-  it('docs headline cites v1.40.0; vague 1.40 listed; no-go through 1.41', () => {
-    expect(readme).toContain('v1.40.0');
-    expect(nextSteps).toContain('**v1.40.0**');
+  it('docs still mention vague 1.40; no-go line covers 1.41+', () => {
+    /* Docs headline moved to v1.41.0 in vague 1.42 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.40**');
     expect(nextSteps).toMatch(/no-go.*1\.41/);
+    expect(readme).toMatch(/v1\.4[01]\.0/);
   });
 
-  it('SUPPORTED_LANGUAGES still four langs; comments say ES real · DE stub', () => {
+  it('SUPPORTED_LANGUAGES still four langs; comments say ES real', () => {
     expect([...SUPPORTED_LANGUAGES]).toEqual(['en', 'fr', 'es', 'de']);
     expect(i18nSource).toContain('real Spanish UI');
-    expect(i18nSource).toContain('STUB = EN copy until 1.42');
     expect(switcherSource).toContain('real Spanish UI');
-    expect(stubsMd).toMatch(/de\/translation\.json.*EN copy/s);
     expect(stubsMd).toMatch(/es\/translation\.json.*real Spanish/s);
-    expect(stubsMd).not.toMatch(/es\/translation\.json` and `de/);
   });
 
-  it('es/de keep 508-key parity with en; de still EN-identical scaffold', () => {
+  it('es/de keep 508-key parity with en', () => {
     const enKeys = leafEntries(enLocale).map(([k]) => k).sort();
     const esKeys = leafEntries(esLocale).map(([k]) => k).sort();
     const deKeys = leafEntries(deLocale).map(([k]) => k).sort();
     expect(enKeys.length).toBe(508);
     expect(esKeys).toEqual(enKeys);
     expect(deKeys).toEqual(enKeys);
-
-    const enMap = Object.fromEntries(leafEntries(enLocale));
-    const deMap = Object.fromEntries(leafEntries(deLocale));
-    for (const k of enKeys) {
-      expect(deMap[k]).toBe(enMap[k]);
-    }
   });
 
   it('Spanish UI samples differ from EN (not a stub)', () => {
@@ -87,8 +78,8 @@ describe('vague 1.41 — docs v1.40.0 + real ES UI + DE stub', () => {
     expect(differing).toBeGreaterThan(450);
   });
 
-  it('SW precaches Spanish locale bundle (v19)', () => {
-    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v19'");
+  it('SW precaches Spanish locale bundle (v19+)', () => {
+    expect(sw).toMatch(/CACHE_NAME = 'quiz-pixfan-v(?:19|2\d)'/);
     expect(sw).toContain('/locales/es/translation.json');
   });
 });
