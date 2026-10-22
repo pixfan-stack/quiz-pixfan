@@ -35,11 +35,12 @@ describe('EN hub lang + share meta (vague 1.38)', () => {
     expect(guidesIndex).toContain(
       'href="/guides/scolaires/?lang=en">View school paths →'
     );
-    expect(heroSource).toContain("'/guides/scolaires/?lang=en#c4-regard'");
+    expect(heroSource).toContain('withGuideLang');
     expect(heroSource).toContain("'/guides/scolaires/#c4-regard'");
     expect(appSource).toContain('scolairesHubHref');
-    expect(appSource).toContain("'/guides/scolaires/?lang=en'");
+    expect(appSource).toContain('withGuideLang');
     expect(resultSource).toContain('scolairesLang');
+    expect(resultSource).toContain('guideLangQuery');
     expect(resultSource).toContain(
       'href={`/guides/scolaires/${scolairesLang}#c4-regard`}'
     );

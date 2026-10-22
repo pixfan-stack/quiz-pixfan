@@ -47,7 +47,7 @@ describe('EN meta/og + quiet chrome (vague 1.37)', () => {
     expect(fr.scolaires.openHub).not.toMatch(/^Page /);
     expect(en.scolaires.openHub).toBe('Schools guides hub');
     expect(scolairesSource).toContain('langQuery');
-    expect(scolairesSource).toContain('?lang=en');
+    expect(scolairesSource).toContain('guideLangQuery');
     expect(scolairesSource).toContain(
       'href={`/guides/scolaires/${langQuery}`}'
     );

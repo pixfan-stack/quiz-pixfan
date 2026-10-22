@@ -1,6 +1,9 @@
 import type { Quiz, QuizResult } from '../../types/quiz';
 
-export type LangCode = 'en' | 'fr';
+import type { ContentLanguage } from '../../utils/lang';
+
+/** Content lang for share / countdown helpers (es/de → en via toContentLang). */
+export type LangCode = ContentLanguage;
 
 export interface ResultScreenProps {
   quiz: Quiz;

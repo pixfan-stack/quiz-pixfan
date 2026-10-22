@@ -9,11 +9,11 @@ import resultShare from '../components/result/useResultShareActions.ts?raw';
 import shareSource from '../utils/share.ts?raw';
 
 describe('vague 1.39 — JSON-LD EN + soft clipboard + docs', () => {
-  it('docs headline cites v1.38.0; vague 1.38 listed; no-go through 1.39', () => {
-    expect(readme).toContain('v1.38.0');
-    expect(nextSteps).toContain('**v1.38.0**');
+  it('docs still mention vague 1.38; no-go line covers 1.39+', () => {
+    /* Docs headline moved to v1.39.0 in vague 1.40 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.38**');
     expect(nextSteps).toMatch(/no-go.*1\.39/);
+    expect(readme).toMatch(/v1\.3[89]\.0/);
   });
 
   it('hub sniff swaps JSON-LD to EN names and flips og:locale:alternate', () => {

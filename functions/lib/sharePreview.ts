@@ -72,13 +72,25 @@ export function getUtcIsoWeek(date: Date): number {
   return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
 }
 
+/** UI langs accepted on share / OG URLs (vague 1.40). */
+export type ShareLang = 'en' | 'fr' | 'es' | 'de';
+
+/** Locales with dedicated label strings today. */
+export type ContentLang = 'en' | 'fr';
+
+export function toContentLang(lang: ShareLang | string): ContentLang {
+  return lang === 'fr' || String(lang).toLowerCase().startsWith('fr')
+    ? 'fr'
+    : 'en';
+}
+
 export function dailyThemeChipForDate(
   date: Date,
-  lang: 'en' | 'fr'
+  lang: ShareLang | ContentLang
 ): string {
   const week = getUtcIsoWeek(date);
   const idx = (week - 1) % DAILY_THEME_CHIPS.length;
-  return DAILY_THEME_CHIPS[idx]![lang];
+  return DAILY_THEME_CHIPS[idx]![toContentLang(lang)];
 }
 
 export function parseDailyQuizDate(quizId: string): Date | null {
@@ -113,25 +125,30 @@ export function parseScore(raw: string | null): number | null {
   return Math.round(Math.min(100, Math.max(0, n)));
 }
 
-export function parseLang(raw: string | null): 'en' | 'fr' {
-  return raw?.toLowerCase().startsWith('fr') ? 'fr' : 'en';
+export function parseLang(raw: string | null): ShareLang {
+  const s = (raw ?? '').toLowerCase();
+  if (s.startsWith('fr')) return 'fr';
+  if (s.startsWith('es')) return 'es';
+  if (s.startsWith('de')) return 'de';
+  return 'en';
 }
 
-export function quizLabel(quizId: string, lang: 'en' | 'fr'): string {
+export function quizLabel(quizId: string, lang: ShareLang | ContentLang): string {
+  const content = toContentLang(lang);
   if (quizId.startsWith('daily-')) {
     const date = parseDailyQuizDate(quizId);
     if (date) {
-      const chip = dailyThemeChipForDate(date, lang);
-      return lang === 'fr'
+      const chip = dailyThemeChipForDate(date, content);
+      return content === 'fr'
         ? `Défi du jour · ${chip}`
         : `Daily challenge · ${chip}`;
     }
-    return lang === 'fr' ? 'Défi du jour' : 'Daily challenge';
+    return content === 'fr' ? 'Défi du jour' : 'Daily challenge';
   }
   if (quizId.startsWith('duel-')) {
-    return lang === 'fr' ? 'Duel entre amis' : 'Friend duel';
+    return content === 'fr' ? 'Duel entre amis' : 'Friend duel';
   }
-  return LABELS[quizId]?.[lang] ?? quizId;
+  return LABELS[quizId]?.[content] ?? quizId;
 }
 
 export function escapeXml(value: string): string {
@@ -205,17 +222,18 @@ export function themeOgImageUrl(
 export function buildOgSvg(opts: {
   quizId: string;
   score: number | null;
-  lang: 'en' | 'fr';
+  lang: ShareLang | ContentLang;
 }): string {
-  const { score, lang } = opts;
-  const title = escapeXml(quizLabel(opts.quizId, lang));
+  const { score } = opts;
+  const content = toContentLang(opts.lang);
+  const title = escapeXml(quizLabel(opts.quizId, content));
   const brand = 'Quiz PixFan';
   const hook =
     score != null
-      ? lang === 'fr'
+      ? content === 'fr'
         ? 'Bats mon score →'
         : 'Beat my score →'
-      : lang === 'fr'
+      : content === 'fr'
         ? 'Teste tes connaissances photo'
         : 'Test your photography knowledge';
   const font = 'font-family="system-ui,-apple-system,sans-serif"';
@@ -262,28 +280,27 @@ function deepLinkQuery(score: number | null, classe?: boolean): string {
 export function buildShareHtml(opts: {
   quizId: string;
   score: number | null;
-  lang: 'en' | 'fr';
+  lang: ShareLang | ContentLang;
   pageUrl: string;
   ogImageUrl: string;
   appOrigin: string;
   /** School session — forwarded into the hash deep link. */
   classe?: boolean;
 }): string {
-  const label = quizLabel(opts.quizId, opts.lang);
+  const content = toContentLang(opts.lang);
+  const label = quizLabel(opts.quizId, content);
   const title =
     opts.score != null
-      ? opts.lang === 'fr'
+      ? content === 'fr'
         ? `${opts.score} % — ${label} · Quiz PixFan`
         : `${opts.score}% — ${label} · Quiz PixFan`
-      : opts.lang === 'fr'
-        ? `${label} · Quiz PixFan`
-        : `${label} · Quiz PixFan`;
+      : `${label} · Quiz PixFan`;
   const description =
     opts.score != null
-      ? opts.lang === 'fr'
+      ? content === 'fr'
         ? `J’ai fait ${opts.score} % sur « ${label} ». Tu peux faire mieux ?`
         : `I scored ${opts.score}% on “${label}”. Can you beat me?`
-      : opts.lang === 'fr'
+      : content === 'fr'
         ? `Rejoins le quiz « ${label} » sur Quiz PixFan.`
         : `Join the “${label}” quiz on Quiz PixFan.`;
 
@@ -292,7 +309,7 @@ export function buildShareHtml(opts: {
   const safeDesc = escapeXml(description);
   const isDuel = opts.quizId.startsWith('duel-');
   const cta =
-    opts.lang === 'fr'
+    content === 'fr'
       ? isDuel
         ? 'Relever le duel'
         : 'Ouvrir le quiz'
@@ -300,7 +317,7 @@ export function buildShareHtml(opts: {
         ? 'Accept the duel'
         : 'Open the quiz';
   const mobileHint =
-    opts.lang === 'fr'
+    content === 'fr'
       ? 'Si le quiz ne s’ouvre pas, touchez le bouton ci-dessous.'
       : 'If the quiz does not open, tap the button below.';
 

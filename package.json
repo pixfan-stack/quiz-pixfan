@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.39.0",
   "type": "module",
-  "description": "Bilingual (FR/EN) quiz web app for Cloudflare Pages",
+  "description": "Multilingual (FR/EN + ES/DE UI scaffolds) quiz web app for Cloudflare Pages",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

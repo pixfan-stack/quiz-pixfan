@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { pickLocale } from '../../utils/locale';
+import { guideLangQuery, toContentLang } from '../../utils/lang';
 import {
   getPerformanceMessageKey,
   getResultBadgeKey,
@@ -60,8 +61,8 @@ export function ResultScreen({
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
-  const scolairesLang = i18n.language?.startsWith('en') ? '?lang=en' : '';
-  const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
+  const scolairesLang = guideLangQuery(i18n.language);
+  const langCode = toContentLang(lang);
   const quizTitle = pickLocale(quiz.title, lang);
   const messageKey = getPerformanceMessageKey(result.percentage);
   const badgeKey = getResultBadgeKey(result.percentage);

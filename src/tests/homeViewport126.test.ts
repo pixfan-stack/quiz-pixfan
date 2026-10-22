@@ -24,7 +24,7 @@ describe('home + scolaires polish (vague 1.26 P1–P2)', () => {
   it('removes mid-page scolaires chip; hero deep-links to c4-regard', () => {
     expect(selectorSource).not.toContain('scolaires-home-chip');
     expect(heroSource).toContain("'/guides/scolaires/#c4-regard'");
-    expect(heroSource).toContain("'/guides/scolaires/?lang=en#c4-regard'");
+    expect(heroSource).toContain('withGuideLang');
     expect(heroSource).toContain('data-testid="home-hero-scolaires"');
   });
 

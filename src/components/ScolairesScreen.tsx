@@ -7,6 +7,7 @@ import {
   isPhotoReadingQuizId,
 } from '../utils/photoReading';
 import { SCOLAIRES_PARCOURS } from '../utils/scolaires';
+import { guideLangQuery } from '../utils/lang';
 
 interface ScolairesScreenProps {
   quizzes: Quiz[];
@@ -26,7 +27,7 @@ export function ScolairesScreen({
   classeMode = false,
 }: ScolairesScreenProps) {
   const { t, i18n } = useTranslation();
-  const langQuery = i18n.language?.startsWith('en') ? '?lang=en' : '';
+  const langQuery = guideLangQuery(i18n.language);
 
   useEffect(() => {
     void trackHabitEvent('scolaires_hub');

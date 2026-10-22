@@ -21,7 +21,7 @@
   }
 
   function labels(isDark) {
-    var en = document.documentElement.lang === 'en';
+    var en = document.documentElement.lang !== 'fr';
     if (isDark) {
       return en ? 'Light mode' : 'Mode jour';
     }
@@ -29,7 +29,7 @@
   }
 
   function shortLabel(isDark) {
-    var en = document.documentElement.lang === 'en';
+    var en = document.documentElement.lang !== 'fr';
     if (isDark) {
       return en ? 'Light' : 'Jour';
     }

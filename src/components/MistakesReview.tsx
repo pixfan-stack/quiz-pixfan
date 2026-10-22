@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import type { AnswerReviewItem } from '../types/quiz';
 import { pickLocale } from '../utils/locale';
+import { guideLangQuery } from '../utils/lang';
 import { localGuideForMistake } from '../utils/pixfanCta';
 
 interface MistakesReviewProps {
@@ -69,7 +70,7 @@ export function MistakesReview({ mistakes, quizId }: MistakesReviewProps) {
                 <p className="mistakes-review__guide">
                   <a
                     className="mistakes-review__guide-link"
-                    href={`${guide.path}${lang.startsWith('en') ? '?lang=en' : ''}`}
+                    href={`${guide.path}${guideLangQuery(lang)}`}
                   >
                     {t(`result.reviewGuide_${guide.topic}`)}
                     <span aria-hidden="true"> →</span>

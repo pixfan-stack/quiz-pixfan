@@ -3,6 +3,7 @@ import { PlayerNamePrompt } from '../PlayerNameInput';
 import { AccountSyncPanel } from '../AccountSyncPanel';
 import { notificationsSupported } from '../../utils/dailyReminder';
 import { downloadDailyChallengeIcs } from '../../utils/dailyChallengeCalendar';
+import type { ContentLanguage } from '../../utils/lang';
 
 interface QuizSettingsBarProps {
   recoveryCode?: string | null;
@@ -15,7 +16,7 @@ interface QuizSettingsBarProps {
   setAntiCheat: (value: boolean | ((prev: boolean) => boolean)) => void;
   reminderOn: boolean;
   onToggleReminder: () => void;
-  langCode: 'en' | 'fr';
+  langCode: ContentLanguage;
   classeMode?: boolean;
 }
 

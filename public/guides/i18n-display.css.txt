@@ -1,0 +1,24 @@
+/* ---------- FR / EN (+ ES/DE interim → EN article) ---------- */
+
+.en {
+  display: none;
+}
+
+html[lang="en"] .fr,
+html[lang="es"] .fr,
+html[lang="de"] .fr {
+  display: none;
+}
+
+html[lang="en"] .en,
+html[lang="es"] .en,
+html[lang="de"] .en {
+  display: block;
+}
+
+html[lang="en"] span.en,
+html[lang="es"] span.en,
+html[lang="de"] span.en {
+  display: inline;
+}
+

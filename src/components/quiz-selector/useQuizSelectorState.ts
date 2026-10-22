@@ -21,6 +21,7 @@ import {
   msUntilNextDaily,
 } from '../../utils/dailyChallenge';
 import { pickLocale } from '../../utils/locale';
+import { toContentLang } from '../../utils/lang';
 import {
   isDailyReminderEnabled,
   maybeNotifyDailyReminder,
@@ -88,7 +89,7 @@ export function useQuizSelectorState({
   const dailyPlayed = hasPlayedDailyToday();
   const vaultCount = getMistakeVaultCount();
   const dueCount = getDueMistakeCount();
-  const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
+  const langCode = toContentLang(lang);
   const [dailyCountdown, setDailyCountdown] = useState(() =>
     formatDailyCountdown(msUntilNextDaily(), langCode)
   );
