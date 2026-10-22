@@ -16,7 +16,10 @@ export function HomeHero({
   onStartPhotoReading,
   onPrefetchQuiz,
 }: HomeHeroProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const teachersHref = i18n.language?.startsWith('en')
+    ? '/guides/scolaires/?lang=en#c4-regard'
+    : '/guides/scolaires/#c4-regard';
 
   return (
     <header
@@ -60,7 +63,7 @@ export function HomeHero({
             </p>
             <a
               className="home-hero__teachers"
-              href="/guides/scolaires/#c4-regard"
+              href={teachersHref}
               data-testid="home-hero-scolaires"
             >
               {t('home.teachersCta')}

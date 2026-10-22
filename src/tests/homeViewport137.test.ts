@@ -11,8 +11,9 @@ import en from '../../public/locales/en/translation.json';
 describe('EN meta/og + quiet chrome (vague 1.37)', () => {
   it('hub and fiche set EN meta description + og on ?lang=en', () => {
     expect(hub).toContain(
-      "ogTitle.setAttribute('content', 'Schools — photo in class | Quiz PixFan')"
+      "var enTitle = 'Schools — photo in class | Quiz PixFan'"
     );
+    expect(hub).toContain("ogTitle.setAttribute('content', enTitle)");
     expect(hub).toContain("ogLocale.setAttribute('content', 'en_US')");
     expect(hub).toContain('Free cycle 3–4, lycée and media-literacy paths');
     expect(fiche).toContain('meta[property="og:title"]');

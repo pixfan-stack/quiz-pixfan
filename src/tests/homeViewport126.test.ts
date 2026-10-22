@@ -23,7 +23,8 @@ describe('home + scolaires polish (vague 1.26 P1–P2)', () => {
 
   it('removes mid-page scolaires chip; hero deep-links to c4-regard', () => {
     expect(selectorSource).not.toContain('scolaires-home-chip');
-    expect(heroSource).toContain('href="/guides/scolaires/#c4-regard"');
+    expect(heroSource).toContain("'/guides/scolaires/#c4-regard'");
+    expect(heroSource).toContain("'/guides/scolaires/?lang=en#c4-regard'");
     expect(heroSource).toContain('data-testid="home-hero-scolaires"');
   });
 
@@ -41,8 +42,9 @@ describe('home + scolaires polish (vague 1.26 P1–P2)', () => {
     expect(resultSource).toContain(
       'btn btn--secondary result-continue-pack__scolaires'
     );
-    expect(resultSource).toContain('/guides/scolaires/#c4-regard');
-    expect(resultSource).toContain('/guides/scolaires/#c4-lumiere');
+    expect(resultSource).toContain('#c4-regard');
+    expect(resultSource).toContain('#c4-lumiere');
+    expect(resultSource).toContain('scolairesLang');
   });
 
   it('hub: EN parcours ids, jump to c4-regard, CTA before step list', () => {
