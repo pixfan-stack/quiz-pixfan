@@ -5,11 +5,11 @@
  * 1. Add a new key under the same path in ALL locale files:
  *    - public/locales/en/translation.json
  *    - public/locales/fr/translation.json
- *    - public/locales/es/translation.json  (STUB = EN copy until translated)
- *    - public/locales/de/translation.json  (STUB = EN copy until translated)
+ *    - public/locales/es/translation.json  (real Spanish UI — vague 1.41)
+ *    - public/locales/de/translation.json  (STUB = EN copy until 1.42)
  * 2. Use it in components via: t('section.key') or t('section.key', { var: value })
  *
- * ES/DE files are EN scaffolds (see public/locales/STUBS.md) — not real translations.
+ * DE remains an EN scaffold (see public/locales/STUBS.md). ES is real UI Spanish.
  *
  * Language preference is detected and persisted via i18next-browser-languagedetector
  * (localStorage key: "i18nextLng").

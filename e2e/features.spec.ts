@@ -29,6 +29,21 @@ test.describe('Language Switching', () => {
     );
   });
 
+  test('switches to Spanish UI via ?lang=es', async ({ page }) => {
+    await page.goto('/?lang=es');
+
+    await expect(page.locator('html')).toHaveAttribute('lang', 'es');
+    // Persuade hero lead + primary CTA (home.photoReading) — not home.start
+    // (start label is nested on cards with different aria-labels).
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Lee fotos reales — composición, luz, encuadre.',
+      { timeout: 5000 }
+    );
+    await expect(page.getByTestId('home-hero-cta')).toContainText(
+      'Fotos para analizar'
+    );
+  });
+
   test('quiz questions display in selected language', async ({ page }) => {
     await page.goto('/');
     
