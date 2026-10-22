@@ -25,7 +25,8 @@ export function ScolairesScreen({
   onStartParcours,
   classeMode = false,
 }: ScolairesScreenProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const langQuery = i18n.language?.startsWith('en') ? '?lang=en' : '';
 
   useEffect(() => {
     void trackHabitEvent('scolaires_hub');
@@ -96,10 +97,13 @@ export function ScolairesScreen({
       </ul>
 
       <nav className="scolaires__links" aria-label={t('scolaires.moreLinks')}>
-        <a className="cta-secondary" href="/guides/scolaires/">
+        <a className="cta-secondary" href={`/guides/scolaires/${langQuery}`}>
           {t('scolaires.openHub')}
         </a>
-        <a className="cta-secondary" href="/guides/scolaires/fiche-seance.html">
+        <a
+          className="cta-secondary"
+          href={`/guides/scolaires/fiche-seance.html${langQuery}`}
+        >
           {t('scolaires.printSheet')}
         </a>
         <button type="button" className="btn btn--ghost" onClick={onHome}>

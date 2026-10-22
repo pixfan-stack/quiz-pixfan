@@ -156,10 +156,42 @@
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
       if (p === 'en' || p === 'fr') document.documentElement.lang = p;
+      var desc = document.querySelector('meta[name="description"]');
+      var ogTitle = document.querySelector('meta[property="og:title"]');
+      var ogDesc = document.querySelector('meta[property="og:description"]');
+      var ogLocale = document.querySelector('meta[property="og:locale"]');
       if (p === 'en') {
         document.title = 'Schools — photo in class | Quiz PixFan';
+        if (desc) {
+          desc.setAttribute(
+            'content',
+            'Free cycle 3–4, lycée and media-literacy paths: discover photography, read an image, light, image rights, still-image practice. Quiz PixFan quizzes + guides, no account, class mode without a public leaderboard.'
+          );
+        }
+        if (ogTitle) ogTitle.setAttribute('content', 'Schools — photo in class | Quiz PixFan');
+        if (ogDesc) {
+          ogDesc.setAttribute(
+            'content',
+            'Cycle 3–4 / lycée / media-literacy paths: discover photography, read an image, light, image rights, still-image practice. Free, no account, shareable lesson links.'
+          );
+        }
+        if (ogLocale) ogLocale.setAttribute('content', 'en_US');
       } else if (p === 'fr') {
         document.title = 'Scolaires — photo en classe | Quiz PixFan';
+        if (desc) {
+          desc.setAttribute(
+            'content',
+            'Parcours pédagogiques gratuits cycle 3–4, lycée et EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Quiz + guides Quiz PixFan, sans compte, mode classe sans classement public.'
+          );
+        }
+        if (ogTitle) ogTitle.setAttribute('content', 'Scolaires — photo en classe | Quiz PixFan');
+        if (ogDesc) {
+          ogDesc.setAttribute(
+            'content',
+            'Parcours cycle 3–4 / lycée / EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Gratuit, sans compte, liens de séance partageables.'
+          );
+        }
+        if (ogLocale) ogLocale.setAttribute('content', 'fr_FR');
       }
     })();
   </script>

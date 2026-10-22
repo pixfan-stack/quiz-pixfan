@@ -16,7 +16,7 @@ describe('EN scolaires naming + EN titles (vague 1.36)', () => {
     expect(en.scolaires.openHub).not.toMatch(/page$/i);
     expect(en.scolaires.openHub).not.toMatch(/Scolaires/i);
     expect(fr.scolaires.printSheet).toBe('Imprimer la fiche séance');
-    expect(fr.scolaires.openHub).toBe('Page guides Scolaires');
+    expect(fr.scolaires.openHub).toBe('Hub Scolaires');
   });
 
   it('hub and fiche set EN document.title when ?lang=en', () => {
