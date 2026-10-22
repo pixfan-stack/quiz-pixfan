@@ -8,7 +8,7 @@
  * - API: network only (no stale leaderboard cache)
  */
 
-const CACHE_NAME = 'quiz-pixfan-v19';
+const CACHE_NAME = 'quiz-pixfan-v20';
 const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v6';
 
 const OFFLINE_URLS = [
@@ -19,6 +19,7 @@ const OFFLINE_URLS = [
   '/locales/fr/translation.json',
   '/locales/en/translation.json',
   '/locales/es/translation.json',
+  '/locales/de/translation.json',
   '/favicon.png',
   '/icon-192.png',
   '/icon-512.png',

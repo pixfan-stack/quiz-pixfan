@@ -44,6 +44,20 @@ test.describe('Language Switching', () => {
     );
   });
 
+  test('switches to German UI via ?lang=de', async ({ page }) => {
+    await page.goto('/?lang=de');
+
+    await expect(page.locator('html')).toHaveAttribute('lang', 'de');
+    // Same trap as Spanish: assert hero lead + CTA, not home.start.
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Echte Fotos lesen — Komposition, Licht, Bildausschnitt.',
+      { timeout: 5000 }
+    );
+    await expect(page.getByTestId('home-hero-cta')).toContainText(
+      'Fotos analysieren'
+    );
+  });
+
   test('quiz questions display in selected language', async ({ page }) => {
     await page.goto('/');
     

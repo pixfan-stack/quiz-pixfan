@@ -6,7 +6,7 @@
  *    - public/locales/en/translation.json → "share.*"
  *    - public/locales/fr/translation.json → "share.*"
  *    - public/locales/es/translation.json (Spanish UI)
- *    - public/locales/de/translation.json (STUB = EN until 1.42)
+ *    - public/locales/de/translation.json (German UI)
  *    Placeholders: {{score}}, {{total}}, {{percent}}, {{quizTitle}}
  * 2. Change APP_SHARE_URL below (or set VITE_APP_URL in a .env file).
  * 3. Hashtags live under "share.hashtags" in the same translation files.

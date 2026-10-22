@@ -6,10 +6,10 @@
  *    - public/locales/en/translation.json
  *    - public/locales/fr/translation.json
  *    - public/locales/es/translation.json  (real Spanish UI — vague 1.41)
- *    - public/locales/de/translation.json  (STUB = EN copy until 1.42)
+ *    - public/locales/de/translation.json  (real German UI — vague 1.42)
  * 2. Use it in components via: t('section.key') or t('section.key', { var: value })
  *
- * DE remains an EN scaffold (see public/locales/STUBS.md). ES is real UI Spanish.
+ * ES and DE are real UI translations (see public/locales/STUBS.md).
  *
  * Language preference is detected and persisted via i18next-browser-languagedetector
  * (localStorage key: "i18nextLng").
