@@ -29,6 +29,19 @@ test.describe('Language Switching', () => {
     );
   });
 
+  test('switches to Spanish UI via ?lang=es', async ({ page }) => {
+    await page.goto('/?lang=es');
+
+    await expect(page.locator('html')).toHaveAttribute('lang', 'es');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Lee fotos reales — composición, luz, encuadre.',
+      { timeout: 5000 }
+    );
+    await expect(
+      page.getByRole('button', { name: 'Empezar el quiz' }).first()
+    ).toBeVisible();
+  });
+
   test('quiz questions display in selected language', async ({ page }) => {
     await page.goto('/');
     

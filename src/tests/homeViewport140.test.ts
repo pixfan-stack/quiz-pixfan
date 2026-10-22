@@ -38,11 +38,11 @@ function leafKeys(obj: unknown, prefix = ''): string[] {
 }
 
 describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
-  it('docs headline cites v1.39.0; vague 1.39 listed; no-go through 1.40', () => {
-    expect(readme).toContain('v1.39.0');
-    expect(nextSteps).toContain('**v1.39.0**');
+  it('docs still mention vague 1.39; no-go line covers 1.40+', () => {
+    /* Docs headline moved to v1.40.0 in vague 1.41 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.39**');
     expect(nextSteps).toMatch(/no-go.*1\.40/);
+    expect(readme).toMatch(/v1\.4[01]\.0/);
   });
 
   it('SUPPORTED_LANGUAGES includes es and de; i18n imports stubs', () => {

@@ -1,7 +1,9 @@
-# Locale stubs (vague 1.40)
+# Locale stubs (vague 1.41)
 
-`es/translation.json` and `de/translation.json` are **EN copies** (scaffold).
+`de/translation.json` is still an **EN copy** (scaffold).
 
-- Not professional Spanish/German translations.
-- UI shows English strings when the user picks ES or DE until a later wave replaces these files.
+- Not a professional German translation.
+- UI shows English strings when the user picks DE until vague **1.42** replaces this file.
 - Keep leaf-key parity with `en/translation.json` (508 keys).
+
+`es/translation.json` is a **real Spanish UI** translation (vague 1.41) — no longer a stub.

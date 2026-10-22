@@ -1,8 +1,8 @@
 # Quiz PixFan
 
-Quiz photo multilingue (FR / EN + scaffolds ES / DE) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
+Quiz photo multilingue (FR / EN / ES + scaffold DE) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-**Version courante : v1.39.0**
+**Version courante : v1.40.0**
 
 ## Contenu actuel
 
@@ -16,7 +16,7 @@ Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/
 
 ## Fonctionnalités
 
-- FR/EN complets · ES/DE scaffolds UI (copie EN, voir `public/locales/STUBS.md`)
+- FR/EN/ES complets (UI) · DE scaffold UI (copie EN, voir `public/locales/STUBS.md`)
 - Scores locaux (localStorage) + scores distants / classements via D1
 - Classements période (semaine / mois) + signalement de pseudo
 - Compte léger (code de récupération + sync streak / succès / high scores / vault / saisons)
@@ -32,7 +32,7 @@ Source de vérité du contenu : **`public/data/questions.json`** (pas `src/data/
 | --- | --- |
 | UI | `QuizSelector`, `QuizScreen`, `ResultScreen`, `AdminScreen`, … |
 | Données | `public/data/questions.json` → `useQuizEngine` → résultats / scores |
-| i18n | `react-i18next` + `public/locales/{fr,en,es,de}/translation.json` (es/de = stubs EN) |
+| i18n | `react-i18next` + `public/locales/{fr,en,es,de}/translation.json` (es = UI réelle · de = stub EN) |
 | Backend | `functions/api/*` + D1 (`wrangler.toml`) |
 | Migrations | `migrations/` (+ `setup-schema.sql` pour install neuve) |
 

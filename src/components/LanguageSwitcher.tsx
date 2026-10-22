@@ -3,7 +3,7 @@ import { SUPPORTED_LANGUAGES, type SupportedLanguage } from '../i18n';
 
 /**
  * EN | FR | ES | DE language switcher.
- * ES/DE use EN UI stubs until translated (public/locales/STUBS.md).
+ * ES = real Spanish UI (vague 1.41). DE still uses EN stub (public/locales/STUBS.md).
  * Choice is persisted by i18next LanguageDetector (localStorage: i18nextLng).
  */
 export function LanguageSwitcher() {
