@@ -11,6 +11,7 @@ import {
   normalizeRecoveryCode,
   recoveryMagicHash,
 } from '../utils/recoveryCode';
+import { copyTextWithFallback } from '../utils/share';
 
 type SyncStatus =
   | 'idle'
@@ -120,13 +121,10 @@ export function AccountSyncPanel({
   }, [draftCode, mapError, onRecovered]);
 
   const copyText = useCallback(async (text: string, kind: 'code' | 'link') => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(kind);
-      window.setTimeout(() => setCopied(null), 2000);
-    } catch {
-      // ignore
-    }
+    const ok = await copyTextWithFallback(text);
+    if (!ok) return;
+    setCopied(kind);
+    window.setTimeout(() => setCopied(null), 2000);
   }, []);
 
   if (!enabled) {

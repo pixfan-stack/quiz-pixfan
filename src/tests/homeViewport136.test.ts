@@ -27,7 +27,7 @@ describe('EN scolaires naming + EN titles (vague 1.36)', () => {
       "document.title = 'Scolaires — photo en classe | Quiz PixFan'"
     );
     expect(fiche).toContain(
-      "document.title = 'Lesson sheet — Schools Quiz PixFan | Quiz PixFan'"
+      "document.title = 'Lesson sheet — Schools | Quiz PixFan'"
     );
     expect(fiche).toContain(
       "document.title = 'Fiche séance Scolaires | Quiz PixFan'"

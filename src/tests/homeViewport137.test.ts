@@ -14,14 +14,12 @@ describe('EN meta/og + quiet chrome (vague 1.37)', () => {
       "var enTitle = 'Schools — photo in class | Quiz PixFan'"
     );
     expect(hub).toContain("ogTitle.setAttribute('content', enTitle)");
-    expect(hub).toContain("ogLocale.setAttribute('content', 'en_US')");
+    expect(hub).toContain("setLocales('en_US', 'fr_FR')");
     expect(hub).toContain('Free cycle 3–4, lycée and media-literacy paths');
     expect(fiche).toContain('meta[property="og:title"]');
-    expect(fiche).toContain(
-      'Lesson sheet — Schools Quiz PixFan | Quiz PixFan'
-    );
+    expect(fiche).toContain('Lesson sheet — Schools | Quiz PixFan');
     expect(fiche).toContain('Printable Quiz PixFan lesson sheet');
-    expect(fiche).toContain("ogLocale.setAttribute('content', 'en_US')");
+    expect(fiche).toContain("setLocales('en_US', 'fr_FR')");
   });
 
   it('cycle-3 classroom CTAs share (cycle 3) suffix', () => {

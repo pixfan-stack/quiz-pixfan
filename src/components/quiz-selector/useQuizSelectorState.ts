@@ -47,7 +47,7 @@ import {
   collectIllustratedQuestions,
   getPhotoReadingTeaser,
 } from '../../utils/photoReading';
-import { socialShareUrl } from '../../utils/share';
+import { copyTextWithFallback, socialShareUrl } from '../../utils/share';
 import { localGuideUrlForDailyTheme } from '../../utils/pixfanCta';
 import type { QuizSelectorProps, QuizWithScore } from './types';
 
@@ -159,14 +159,10 @@ export function useQuizSelectorState({
   const handleCopyDailyLink = async (event: MouseEvent) => {
     event.stopPropagation();
     event.preventDefault();
-    try {
-      await navigator.clipboard.writeText(
-        socialShareUrl(getDailyQuizId(), { lang: langCode })
-      );
-      flashCopied(setDailyLinkCopied);
-    } catch {
-      // ignore
-    }
+    const ok = await copyTextWithFallback(
+      socialShareUrl(getDailyQuizId(), { lang: langCode })
+    );
+    if (ok) flashCopied(setDailyLinkCopied);
   };
 
   const visibleQuizzes = useMemo(
