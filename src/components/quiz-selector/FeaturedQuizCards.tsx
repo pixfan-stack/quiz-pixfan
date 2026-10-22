@@ -214,7 +214,7 @@ export function FeaturedQuizCards({
           aria-label={t('home.copyDailyLink')}
           title={t('home.copyDailyLink')}
         >
-          {dailyLinkCopied ? '✓' : '🔗'}
+          <span aria-hidden="true">{dailyLinkCopied ? 'OK' : 'URL'}</span>
         </button>
         {dailyGuideUrl ? (
           <a

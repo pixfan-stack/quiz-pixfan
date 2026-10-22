@@ -42,15 +42,15 @@ describe('dead locales + scolaires openHub (vague 1.35)', () => {
     expect(scolairesSource).toContain("t('scolaires.openHub')");
     expect(en.scolaires.openHub).toBe('Schools guides hub');
     expect(en.scolaires.openHub).not.toMatch(/Scolaires/i);
-    expect(fr.scolaires.openHub).toBe('Page guides Scolaires');
+    expect(fr.scolaires.openHub).toBe('Hub Scolaires');
   });
 
   it('histoire classroom CTA deep-links cycle 3 parcours', () => {
     expect(histoire).toContain(
-      'cta-secondary" href="/guides/scolaires/#c3-decouvrir">Pour la classe → parcours Scolaires'
+      'cta-secondary" href="/guides/scolaires/#c3-decouvrir">Pour la classe → parcours Scolaires (cycle 3)'
     );
     expect(histoire).toContain(
-      'cta-secondary" href="/guides/scolaires/#c3-decouvrir">For the classroom → Schools paths'
+      'cta-secondary" href="/guides/scolaires/#c3-decouvrir">For the classroom → Schools paths (cycle 3)'
     );
     expect(histoire).not.toContain(
       'cta-secondary" href="/guides/scolaires/">Pour la classe'

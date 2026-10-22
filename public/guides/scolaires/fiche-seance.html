@@ -9,6 +9,12 @@
   <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=fr" />
   <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=en" />
   <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />
+  <meta property="og:title" content="Fiche séance Scolaires | Quiz PixFan" />
+  <meta property="og:description" content="Fiche séance imprimable Quiz PixFan — parcours scolaires cycle 3–4 et EMI. Contenu original PixFan, alignement pédagogique BO 2020. FR/EN." />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <meta name="theme-color" content="#f3538c" />
   <meta name="robots" content="index,follow" />
@@ -109,10 +115,31 @@
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
       if (p === 'en' || p === 'fr') document.documentElement.lang = p;
+      var desc = document.querySelector('meta[name="description"]');
+      var ogTitle = document.querySelector('meta[property="og:title"]');
+      var ogDesc = document.querySelector('meta[property="og:description"]');
+      var ogLocale = document.querySelector('meta[property="og:locale"]');
       if (p === 'en') {
         document.title = 'Lesson sheet — Schools Quiz PixFan | Quiz PixFan';
+        var enDesc =
+          'Printable Quiz PixFan lesson sheet — cycle 3–4 and media-literacy paths. Original PixFan content, pedagogical alignment with BO 2020. FR/EN.';
+        if (desc) desc.setAttribute('content', enDesc);
+        if (ogTitle) {
+          ogTitle.setAttribute(
+            'content',
+            'Lesson sheet — Schools Quiz PixFan | Quiz PixFan'
+          );
+        }
+        if (ogDesc) ogDesc.setAttribute('content', enDesc);
+        if (ogLocale) ogLocale.setAttribute('content', 'en_US');
       } else if (p === 'fr') {
         document.title = 'Fiche séance Scolaires | Quiz PixFan';
+        var frDesc =
+          'Fiche séance imprimable Quiz PixFan — parcours scolaires cycle 3–4 et EMI. Contenu original PixFan, alignement pédagogique BO 2020. FR/EN.';
+        if (desc) desc.setAttribute('content', frDesc);
+        if (ogTitle) ogTitle.setAttribute('content', 'Fiche séance Scolaires | Quiz PixFan');
+        if (ogDesc) ogDesc.setAttribute('content', frDesc);
+        if (ogLocale) ogLocale.setAttribute('content', 'fr_FR');
       }
     })();
   </script>
