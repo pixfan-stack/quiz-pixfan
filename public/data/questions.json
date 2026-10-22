@@ -19991,11 +19991,13 @@
       "difficulty": "medium",
       "title": {
         "en": "Still-image lexicon",
-        "fr": "Lexique image fixe"
+        "fr": "Lexique image fixe",
+        "es": "Léxico de imagen fija"
       },
       "description": {
         "en": "Framing, viewpoint, shot scale, index/icon — original vocabulary for lycée arts (no copyrighted artworks).",
-        "fr": "Cadrage, point de vue, échelle de plan, index/icône — vocabulaire original pour le lycée arts (aucune œuvre sous droits)."
+        "fr": "Cadrage, point de vue, échelle de plan, index/icône — vocabulaire original pour le lycée arts (aucune œuvre sous droits).",
+        "es": "Encuadre, punto de vista, escala de plano, índice/icono — vocabulario original para bachillerato de artes (sin obras con derechos)."
       },
       "questions": [
         {
@@ -20004,35 +20006,40 @@
           "difficulty": "easy",
           "text": {
             "en": "In photography, “framing” mainly means…",
-            "fr": "En photographie, le « cadrage » désigne surtout…"
+            "fr": "En photographie, le « cadrage » désigne surtout…",
+            "es": "En fotografía, el «encuadre» designa sobre todo…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Choosing what enters the image and what stays outside",
-                "fr": "Choisir ce qui entre dans l’image et ce qui reste hors cadre"
+                "fr": "Choisir ce qui entre dans l’image et ce qui reste hors cadre",
+                "es": "Elegir qué entra en la imagen y qué queda fuera"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only buying a wooden picture frame",
-                "fr": "Uniquement acheter un cadre en bois"
+                "fr": "Uniquement acheter un cadre en bois",
+                "es": "Solo comprar un marco de madera"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Always shooting at 1/1000 s",
-                "fr": "Toujours photographier au 1/1000 s"
+                "fr": "Toujours photographier au 1/1000 s",
+                "es": "Fotografiar siempre a 1/1000 s"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Printing only in black and white",
-                "fr": "Imprimer uniquement en noir et blanc"
+                "fr": "Imprimer uniquement en noir et blanc",
+                "es": "Imprimir solo en blanco y negro"
               }
             }
           ],
@@ -20041,7 +20048,8 @@
           ],
           "explanation": {
             "en": "Framing decides inclusion/exclusion: edges, crop, and what the viewer is invited to see.",
-            "fr": "Le cadrage décide de l’inclusion / exclusion : bords, recadrage, et ce que le regard est invité à voir."
+            "fr": "Le cadrage décide de l’inclusion / exclusion : bords, recadrage, et ce que le regard est invité à voir.",
+            "es": "El encuadre decide inclusión/exclusión: bordes, recorte y lo que se invita a mirar."
           }
         },
         {
@@ -20050,35 +20058,40 @@
           "difficulty": "easy",
           "text": {
             "en": "A low camera angle looking upward is often called…",
-            "fr": "Un point de vue caméra bas regardant vers le haut s’appelle souvent…"
+            "fr": "Un point de vue caméra bas regardant vers le haut s’appelle souvent…",
+            "es": "Un punto de vista de cámara bajo mirando hacia arriba se llama a menudo…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "A low-angle shot (contre-plongée)",
-                "fr": "Une contre-plongée"
+                "fr": "Une contre-plongée",
+                "es": "Un contrapicado (contre-plongée)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "A high-angle shot (plongée)",
-                "fr": "Une plongée"
+                "fr": "Une plongée",
+                "es": "Un picado (plongée)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A Dutch angle only",
-                "fr": "Uniquement un angle hollandais"
+                "fr": "Uniquement un angle hollandais",
+                "es": "Solo un ángulo holandés"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A macro shot",
-                "fr": "Un plan macro"
+                "fr": "Un plan macro",
+                "es": "Un plano macro"
               }
             }
           ],
@@ -20087,7 +20100,8 @@
           ],
           "explanation": {
             "en": "Contre-plongée = camera below, looking up (often monumental). Plongée = camera above, looking down.",
-            "fr": "Contre-plongée = caméra en bas, regard vers le haut (souvent monumental). Plongée = caméra en haut, regard vers le bas."
+            "fr": "Contre-plongée = caméra en bas, regard vers le haut (souvent monumental). Plongée = caméra en haut, regard vers le bas.",
+            "es": "Contrapicado = cámara abajo, mirada hacia arriba (a menudo monumental). Picado = cámara arriba, mirada hacia abajo."
           }
         },
         {
@@ -20096,35 +20110,40 @@
           "difficulty": "easy",
           "text": {
             "en": "A close-up (gros plan) typically shows…",
-            "fr": "Un gros plan montre typiquement…"
+            "fr": "Un gros plan montre typiquement…",
+            "es": "Un primer plano (gros plan) muestra típicamente…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "A face or detail filling most of the frame",
-                "fr": "Un visage ou un détail remplissant l’essentiel du cadre"
+                "fr": "Un visage ou un détail remplissant l’essentiel du cadre",
+                "es": "Un rostro o un detalle que llena casi todo el cuadro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "An entire city skyline only",
-                "fr": "Uniquement une skyline de ville entière"
+                "fr": "Uniquement une skyline de ville entière",
+                "es": "Solo el skyline de una ciudad entera"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only the photographer’s feet",
-                "fr": "Uniquement les pieds du photographe"
+                "fr": "Uniquement les pieds du photographe",
+                "es": "Solo los pies del fotógrafo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Always a group of twenty people",
-                "fr": "Toujours un groupe de vingt personnes"
+                "fr": "Toujours un groupe de vingt personnes",
+                "es": "Siempre un grupo de veinte personas"
               }
             }
           ],
@@ -20133,7 +20152,8 @@
           ],
           "explanation": {
             "en": "Shot scale (plan large → gros plan) describes how much of the subject fills the frame.",
-            "fr": "L’échelle de plan (plan large → gros plan) décrit la place du sujet dans le cadre."
+            "fr": "L’échelle de plan (plan large → gros plan) décrit la place du sujet dans le cadre.",
+            "es": "La escala de plano (plano general → primer plano) describe cuánto del sujeto ocupa el cuadro."
           }
         },
         {
@@ -20142,35 +20162,40 @@
           "difficulty": "medium",
           "text": {
             "en": "In image analysis, an “index” (indice) often points to…",
-            "fr": "En analyse d’image, un « index » (indice) renvoie souvent à…"
+            "fr": "En analyse d’image, un « index » (indice) renvoie souvent à…",
+            "es": "En análisis de imagen, un «índice» (indice) remite a menudo a…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "A causal or physical trace (smoke → fire; footprint → presence)",
-                "fr": "Une trace causale ou physique (fumée → feu ; empreinte → présence)"
+                "fr": "Une trace causale ou physique (fumée → feu ; empreinte → présence)",
+                "es": "Una huella causal o física (humo → fuego; pisada → presencia)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "A purely arbitrary logo with no link to reality",
-                "fr": "Un logo purement arbitraire sans lien au réel"
+                "fr": "Un logo purement arbitraire sans lien au réel",
+                "es": "Un logo puramente arbitrario sin vínculo con lo real"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only the camera brand name",
-                "fr": "Uniquement le nom de la marque d’appareil"
+                "fr": "Uniquement le nom de la marque d’appareil",
+                "es": "Solo el nombre de la marca de la cámara"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A legal copyright notice",
-                "fr": "Une mention légale de copyright"
+                "fr": "Une mention légale de copyright",
+                "es": "Un aviso legal de copyright"
               }
             }
           ],
@@ -20179,7 +20204,8 @@
           ],
           "explanation": {
             "en": "Indexical signs keep a real connection to what they indicate; useful vocabulary for reading photographs as traces.",
-            "fr": "Les signes indexicaux gardent un lien réel avec ce qu’ils indiquent ; vocabulaire utile pour lire la photo comme trace."
+            "fr": "Les signes indexicaux gardent un lien réel avec ce qu’ils indiquent ; vocabulaire utile pour lire la photo comme trace.",
+            "es": "Los signos indexicales conservan un vínculo real con lo que indican; vocabulario útil para leer la foto como huella."
           }
         },
         {
@@ -20188,35 +20214,40 @@
           "difficulty": "medium",
           "text": {
             "en": "An “icon” (icône) in semiotic terms mainly…",
-            "fr": "Une « icône » au sens sémiotique…"
+            "fr": "Une « icône » au sens sémiotique…",
+            "es": "Un «icono» en sentido semiótico…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Resembles what it represents (likeness / analogy)",
-                "fr": "Ressemble à ce qu’elle représente (ressemblance / analogie)"
+                "fr": "Ressemble à ce qu’elle représente (ressemblance / analogie)",
+                "es": "Se parece a lo que representa (semejanza / analogía)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Is always a religious painting only",
-                "fr": "Est toujours uniquement une peinture religieuse"
+                "fr": "Est toujours uniquement une peinture religieuse",
+                "es": "Es siempre solo una pintura religiosa"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Means the file is encrypted",
-                "fr": "Signifie que le fichier est chiffré"
+                "fr": "Signifie que le fichier est chiffré",
+                "es": "Significa que el archivo está cifrado"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Proves copyright automatically",
-                "fr": "Prouve automatiquement le droit d’auteur"
+                "fr": "Prouve automatiquement le droit d’auteur",
+                "es": "Prueba automáticamente el derecho de autor"
               }
             }
           ],
@@ -20225,7 +20256,8 @@
           ],
           "explanation": {
             "en": "Iconic relation = resemblance. Distinct from index (trace) and symbol (convention).",
-            "fr": "Relation iconique = ressemblance. Distinct de l’index (trace) et du symbole (convention)."
+            "fr": "Relation iconique = ressemblance. Distinct de l’index (trace) et du symbole (convention).",
+            "es": "Relación icónica = semejanza. Distinta del índice (huella) y del símbolo (convención)."
           }
         },
         {
@@ -20234,35 +20266,40 @@
           "difficulty": "easy",
           "text": {
             "en": "“Point of view” in a still image refers to…",
-            "fr": "Le « point de vue » dans une image fixe désigne…"
+            "fr": "Le « point de vue » dans une image fixe désigne…",
+            "es": "El «punto de vista» en una imagen fija designa…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Where the camera (or implied eye) is placed relative to the scene",
-                "fr": "Où se place la caméra (ou l’œil implicite) par rapport à la scène"
+                "fr": "Où se place la caméra (ou l’œil implicite) par rapport à la scène",
+                "es": "Dónde se coloca la cámara (o el ojo implícito) respecto a la escena"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only the photographer’s political opinion",
-                "fr": "Uniquement l’opinion politique du photographe"
+                "fr": "Uniquement l’opinion politique du photographe",
+                "es": "Solo la opinión política del fotógrafo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "The print paper brand",
-                "fr": "La marque du papier d’impression"
+                "fr": "La marque du papier d’impression",
+                "es": "La marca del papel de impresión"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "The social-media like count",
-                "fr": "Le nombre de likes sur les réseaux"
+                "fr": "Le nombre de likes sur les réseaux",
+                "es": "El número de likes en redes"
               }
             }
           ],
@@ -20271,7 +20308,8 @@
           ],
           "explanation": {
             "en": "Viewpoint = spatial position and angle that structure what we see and how we feel about it.",
-            "fr": "Le point de vue = position et angle qui structurent ce que l’on voit et l’effet produit."
+            "fr": "Le point de vue = position et angle qui structurent ce que l’on voit et l’effet produit.",
+            "es": "Punto de vista = posición y ángulo que estructuran lo que se ve y el efecto producido."
           }
         },
         {
@@ -20280,35 +20318,40 @@
           "difficulty": "medium",
           "text": {
             "en": "What is “off-screen” (hors-champ) in a photograph?",
-            "fr": "Qu’est-ce que le « hors-champ » dans une photographie ?"
+            "fr": "Qu’est-ce que le « hors-champ » dans une photographie ?",
+            "es": "¿Qué es el «fuera de campo» (hors-champ) en una fotografía?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "What the frame suggests exists but does not show",
-                "fr": "Ce que le cadre suggère comme existant sans le montrer"
+                "fr": "Ce que le cadre suggère comme existant sans le montrer",
+                "es": "Lo que el cuadro sugiere que existe sin mostrarlo"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only pixels outside the JPEG file",
-                "fr": "Uniquement des pixels hors du fichier JPEG"
+                "fr": "Uniquement des pixels hors du fichier JPEG",
+                "es": "Solo píxeles fuera del archivo JPEG"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A mandatory watermark zone",
-                "fr": "Une zone de filigrane obligatoire"
+                "fr": "Une zone de filigrane obligatoire",
+                "es": "Una zona de marca de agua obligatoria"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "The EXIF GPS field only",
-                "fr": "Uniquement le champ GPS EXIF"
+                "fr": "Uniquement le champ GPS EXIF",
+                "es": "Solo el campo GPS EXIF"
               }
             }
           ],
@@ -20317,7 +20360,8 @@
           ],
           "explanation": {
             "en": "Hors-champ is what framing implies beyond the edges — a key idea for reading still images.",
-            "fr": "Le hors-champ est ce que le cadrage implique hors des bords — notion clé pour lire l’image fixe."
+            "fr": "Le hors-champ est ce que le cadrage implique hors des bords — notion clé pour lire l’image fixe.",
+            "es": "El fuera de campo es lo que el encuadre implica más allá de los bordes — noción clave para leer la imagen fija."
           }
         },
         {
@@ -20326,35 +20370,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Shallow depth of field usually means…",
-            "fr": "Une faible profondeur de champ signifie en général…"
+            "fr": "Une faible profondeur de champ signifie en général…",
+            "es": "Una poca profundidad de campo significa en general…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "A thin sharp plane; background often soft",
-                "fr": "Un plan net étroit ; l’arrière-plan souvent flou"
+                "fr": "Un plan net étroit ; l’arrière-plan souvent flou",
+                "es": "Un plano nítido estrecho; el fondo a menudo suave"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Everything from near to far is equally sharp",
-                "fr": "Tout est net du premier au dernier plan"
+                "fr": "Tout est net du premier au dernier plan",
+                "es": "Todo está nítido del primero al último plano"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "The image has no focus at all",
-                "fr": "L’image n’a aucune mise au point"
+                "fr": "L’image n’a aucune mise au point",
+                "es": "La imagen no tiene ningún enfoque"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "The photo must be black and white",
-                "fr": "La photo doit être en noir et blanc"
+                "fr": "La photo doit être en noir et blanc",
+                "es": "La foto debe ser en blanco y negro"
               }
             }
           ],
@@ -20363,7 +20412,8 @@
           ],
           "explanation": {
             "en": "Shallow DoF isolates the subject; deep DoF keeps more of the scene sharp.",
-            "fr": "Une PdC courte isole le sujet ; une PdC longue garde davantage de netteté dans la scène."
+            "fr": "Une PdC courte isole le sujet ; une PdC longue garde davantage de netteté dans la scène.",
+            "es": "Una PdC corta aísla el sujeto; una PdC larga mantiene más nitidez en la escena."
           }
         },
         {
@@ -20372,35 +20422,40 @@
           "difficulty": "easy",
           "text": {
             "en": "An overexposed still image is typically…",
-            "fr": "Une image fixe surexposée est en général…"
+            "fr": "Une image fixe surexposée est en général…",
+            "es": "Una imagen fija sobreexpuesta es en general…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Too bright; highlights may clip to pure white",
-                "fr": "Trop claire ; les hautes lumières peuvent « cramer » en blanc pur"
+                "fr": "Trop claire ; les hautes lumières peuvent « cramer » en blanc pur",
+                "es": "Demasiado clara; las altas luces pueden «quemarse» en blanco puro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Too dark overall",
-                "fr": "Globalement trop sombre"
+                "fr": "Globalement trop sombre",
+                "es": "Globalmente demasiado oscura"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Always sharper than a correct exposure",
-                "fr": "Toujours plus nette qu’une exposition correcte"
+                "fr": "Toujours plus nette qu’une exposition correcte",
+                "es": "Siempre más nítida que una exposición correcta"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Impossible on digital cameras",
-                "fr": "Impossible sur les appareils numériques"
+                "fr": "Impossible sur les appareils numériques",
+                "es": "Imposible en cámaras digitales"
               }
             }
           ],
@@ -20409,7 +20464,8 @@
           ],
           "explanation": {
             "en": "Overexposure = too much light recorded; underexposure = too little.",
-            "fr": "Surexposition = trop de lumière enregistrée ; sous-exposition = trop peu."
+            "fr": "Surexposition = trop de lumière enregistrée ; sous-exposition = trop peu.",
+            "es": "Sobreexposición = demasiada luz registrada; subexposición = demasiado poca."
           }
         },
         {
@@ -20418,35 +20474,40 @@
           "difficulty": "medium",
           "text": {
             "en": "“Still image” (image fixe) practice in art class typically includes…",
-            "fr": "La pratique de l’« image fixe » en arts plastiques inclut typiquement…"
+            "fr": "La pratique de l’« image fixe » en arts plastiques inclut typiquement…",
+            "es": "La práctica de la «imagen fija» en artes plásticas incluye típicamente…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Photography and other non-moving pictures (vs moving image)",
-                "fr": "La photographie et d’autres images non animées (vs image animée)"
+                "fr": "La photographie et d’autres images non animées (vs image animée)",
+                "es": "La fotografía y otras imágenes no animadas (vs imagen animada)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only live theatre performance",
-                "fr": "Uniquement le spectacle vivant"
+                "fr": "Uniquement le spectacle vivant",
+                "es": "Solo el espectáculo en vivo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only 3D video games",
-                "fr": "Uniquement les jeux vidéo 3D"
+                "fr": "Uniquement les jeux vidéo 3D",
+                "es": "Solo los videojuegos 3D"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only audio podcasts",
-                "fr": "Uniquement les podcasts audio"
+                "fr": "Uniquement les podcasts audio",
+                "es": "Solo los podcasts de audio"
               }
             }
           ],
@@ -20455,7 +20516,8 @@
           ],
           "explanation": {
             "en": "Curriculum language contrasts image fixe (photo, etc.) with image animée (video, animation).",
-            "fr": "Le vocabulaire de programme oppose image fixe (photo, etc.) et image animée (vidéo, animation)."
+            "fr": "Le vocabulaire de programme oppose image fixe (photo, etc.) et image animée (vidéo, animation).",
+            "es": "El vocabulario curricular contrapone imagen fija (foto, etc.) e imagen animada (vídeo, animación)."
           }
         },
         {
@@ -20464,35 +20526,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Which choices belong to framing / viewpoint work?",
-            "fr": "Quels choix relèvent du travail de cadrage / point de vue ?"
+            "fr": "Quels choix relèvent du travail de cadrage / point de vue ?",
+            "es": "¿Qué elecciones pertenecen al trabajo de encuadre / punto de vista?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Where you stand and how high the camera is",
-                "fr": "Où l’on se place et à quelle hauteur est la caméra"
+                "fr": "Où l’on se place et à quelle hauteur est la caméra",
+                "es": "Dónde te colocas y a qué altura está la cámara"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "What you crop in or out at the edges",
-                "fr": "Ce que l’on inclut ou exclut aux bords"
+                "fr": "Ce que l’on inclut ou exclut aux bords",
+                "es": "Qué incluyes o excluyes en los bordes"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "The Wi‑Fi password of the school",
-                "fr": "Le mot de passe Wi‑Fi de l’établissement"
+                "fr": "Le mot de passe Wi‑Fi de l’établissement",
+                "es": "La contraseña Wi‑Fi del centro"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Whether the horizon is level or tilted on purpose",
-                "fr": "Si l’horizon est droit ou incliné volontairement"
+                "fr": "Si l’horizon est droit ou incliné volontairement",
+                "es": "Si el horizonte está recto o inclinado a propósito"
               }
             }
           ],
@@ -20503,7 +20570,8 @@
           ],
           "explanation": {
             "en": "Position, crop, and horizon angle are framing/viewpoint decisions — not network settings.",
-            "fr": "Position, recadrage et angle d’horizon sont des décisions de cadrage / point de vue — pas des réglages réseau."
+            "fr": "Position, recadrage et angle d’horizon sont des décisions de cadrage / point de vue — pas des réglages réseau.",
+            "es": "Posición, recorte y ángulo del horizonte son decisiones de encuadre / punto de vista — no ajustes de red."
           }
         },
         {
@@ -20512,35 +20580,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Why avoid quizzing a copyrighted “programme limitatif” artwork with a reproduction?",
-            "fr": "Pourquoi éviter de quizzer une œuvre du « programme limitatif » avec une reproduction ?"
+            "fr": "Pourquoi éviter de quizzer une œuvre du « programme limitatif » avec une reproduction ?",
+            "es": "¿Por qué evitar evaluar una obra del «programme limitatif» con una reproducción?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Copyright risk + maintenance when the official list changes — prefer external éduscol links",
-                "fr": "Risque de droits + maintenance si la liste officielle change — préférer des liens éduscol externes"
+                "fr": "Risque de droits + maintenance si la liste officielle change — préférer des liens éduscol externes",
+                "es": "Riesgo de derechos + mantenimiento si cambia la lista oficial — preferir enlaces éduscol externos"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Because photographs cannot be discussed in class",
-                "fr": "Parce que l’on ne peut pas parler de photographie en classe"
+                "fr": "Parce que l’on ne peut pas parler de photographie en classe",
+                "es": "Porque no se puede hablar de fotografía en clase"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Because lycée students may not use browsers",
-                "fr": "Parce que les lycéens n’ont pas le droit d’utiliser un navigateur"
+                "fr": "Parce que les lycéens n’ont pas le droit d’utiliser un navigateur",
+                "es": "Porque el alumnado de bachillerato no puede usar un navegador"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Because vocabulary questions are illegal",
-                "fr": "Parce que les questions de vocabulaire sont illégales"
+                "fr": "Parce que les questions de vocabulaire sont illégales",
+                "es": "Porque las preguntas de vocabulario son ilegales"
               }
             }
           ],
@@ -20549,7 +20622,8 @@
           ],
           "explanation": {
             "en": "Quiz PixFan keeps original lexicon questions and points to official lists externally — never embeds protected corpus images.",
-            "fr": "Quiz PixFan garde un lexique original et renvoie aux listes officielles en externe — jamais d’images du corpus limitatif."
+            "fr": "Quiz PixFan garde un lexique original et renvoie aux listes officielles en externe — jamais d’images du corpus limitatif.",
+            "es": "Quiz PixFan conserva un léxico original y remite a las listas oficiales en externo — nunca incrusta imágenes del corpus limitativo."
           }
         }
       ]
