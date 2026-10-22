@@ -3,6 +3,7 @@ import {
   buildShareUrl,
   canNativeShare,
   copySharePayload,
+  copyTextWithFallback,
   nativeShareScore,
   ogImageUrl,
   quizShareUrl,
@@ -116,6 +117,23 @@ describe('share', () => {
     });
     expect(ok).toBe(true);
     expect(writeText).toHaveBeenCalledWith('Hello https://example.com');
+  });
+
+  it('copyTextWithFallback uses textarea when clipboard rejects', async () => {
+    Object.defineProperty(navigator, 'clipboard', {
+      value: {
+        writeText: vi.fn().mockRejectedValue(new Error('denied')),
+      },
+      configurable: true,
+    });
+    const exec = vi.fn((cmd: string) => cmd === 'copy');
+    // jsdom may omit execCommand — install a stub for the fallback path
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (document as any).execCommand = exec;
+
+    const ok = await copyTextWithFallback('plain-link');
+    expect(ok).toBe(true);
+    expect(exec).toHaveBeenCalledWith('copy');
   });
 
   it('shareOrCopy prefers native share and skips clipboard when shared', async () => {

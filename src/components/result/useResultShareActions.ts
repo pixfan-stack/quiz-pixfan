@@ -7,6 +7,7 @@ import {
 } from '../../utils/resultShareGrid';
 import {
   copySharePayload,
+  copyTextWithFallback,
   nativeShareScore,
   openShare,
   socialShareUrl,
@@ -82,13 +83,10 @@ export function useResultShareActions({
       url: shareUrl,
       lang: langCode,
     });
-    try {
-      await navigator.clipboard.writeText(block);
-      setGridCopied(true);
-      window.setTimeout(() => setGridCopied(false), 2000);
-    } catch {
-      // ignore
-    }
+    const ok = await copyTextWithFallback(block);
+    if (!ok) return;
+    setGridCopied(true);
+    window.setTimeout(() => setGridCopied(false), 2000);
   }, [
     langCode,
     result.answerMarks,

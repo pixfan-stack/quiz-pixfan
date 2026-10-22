@@ -124,17 +124,22 @@
       var ogTitle = document.querySelector('meta[property="og:title"]');
       var ogDesc = document.querySelector('meta[property="og:description"]');
       var ogLocale = document.querySelector('meta[property="og:locale"]');
+      var ogLocaleAlt = document.querySelector('meta[property="og:locale:alternate"]');
       var twTitle = document.querySelector('meta[name="twitter:title"]');
       var twDesc = document.querySelector('meta[name="twitter:description"]');
+      function setLocales(primary, alternate) {
+        if (ogLocale) ogLocale.setAttribute('content', primary);
+        if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
+      }
       if (p === 'en') {
-        document.title = 'Lesson sheet — Schools Quiz PixFan | Quiz PixFan';
-        var enTitle = 'Lesson sheet — Schools Quiz PixFan | Quiz PixFan';
+        document.title = 'Lesson sheet — Schools | Quiz PixFan';
+        var enTitle = 'Lesson sheet — Schools | Quiz PixFan';
         var enDesc =
           'Printable Quiz PixFan lesson sheet — cycle 3–4 and media-literacy paths. Original PixFan content, pedagogical alignment with BO 2020. FR/EN.';
         if (desc) desc.setAttribute('content', enDesc);
         if (ogTitle) ogTitle.setAttribute('content', enTitle);
         if (ogDesc) ogDesc.setAttribute('content', enDesc);
-        if (ogLocale) ogLocale.setAttribute('content', 'en_US');
+        setLocales('en_US', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', enTitle);
         if (twDesc) twDesc.setAttribute('content', enDesc);
       } else if (p === 'fr') {
@@ -145,7 +150,7 @@
         if (desc) desc.setAttribute('content', frDesc);
         if (ogTitle) ogTitle.setAttribute('content', frTitle);
         if (ogDesc) ogDesc.setAttribute('content', frDesc);
-        if (ogLocale) ogLocale.setAttribute('content', 'fr_FR');
+        setLocales('fr_FR', 'en_US');
         if (twTitle) twTitle.setAttribute('content', frTitle);
         if (twDesc) twDesc.setAttribute('content', frDesc);
       }

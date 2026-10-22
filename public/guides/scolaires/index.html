@@ -165,8 +165,60 @@
       var ogTitle = document.querySelector('meta[property="og:title"]');
       var ogDesc = document.querySelector('meta[property="og:description"]');
       var ogLocale = document.querySelector('meta[property="og:locale"]');
+      var ogLocaleAlt = document.querySelector('meta[property="og:locale:alternate"]');
       var twTitle = document.querySelector('meta[name="twitter:title"]');
       var twDesc = document.querySelector('meta[name="twitter:description"]');
+      function setLocales(primary, alternate) {
+        if (ogLocale) ogLocale.setAttribute('content', primary);
+        if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
+      }
+      function withLang(url, lang) {
+        if (!url || url.indexOf('lang=') !== -1) return url;
+        return url + (url.indexOf('?') === -1 ? '?' : '&') + 'lang=' + lang;
+      }
+      function applyJsonLdEn() {
+        var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+        for (var i = 0; i < scripts.length; i++) {
+          var raw = scripts[i].textContent;
+          if (!raw) continue;
+          try {
+            var data = JSON.parse(raw);
+            if (data['@type'] === 'BreadcrumbList' && data.itemListElement) {
+              for (var b = 0; b < data.itemListElement.length; b++) {
+                var crumb = data.itemListElement[b];
+                if (crumb.name === 'Scolaires') {
+                  crumb.name = 'Schools';
+                  crumb.item = withLang(crumb.item, 'en');
+                }
+              }
+              scripts[i].textContent = JSON.stringify(data);
+            } else if (data['@type'] === 'ItemList') {
+              data.name = 'Schools paths Quiz PixFan';
+              data.description =
+                'Cycle 4 (collège) first, then cycle 3, media literacy and lycée — image reading, light, image rights.';
+              var enNames = [
+                'Reading an image (cycle 4)',
+                'Light & photography',
+                'Image rights (EMI)',
+                'Discover photography (cycle 3)',
+                'Still-image practice (lycée)',
+              ];
+              if (data.itemListElement) {
+                for (var n = 0; n < data.itemListElement.length; n++) {
+                  if (enNames[n]) data.itemListElement[n].name = enNames[n];
+                  data.itemListElement[n].url = withLang(
+                    data.itemListElement[n].url,
+                    'en'
+                  );
+                }
+              }
+              scripts[i].textContent = JSON.stringify(data);
+            }
+          } catch (e) {
+            /* keep static FR JSON-LD */
+          }
+        }
+      }
       if (p === 'en') {
         document.title = 'Schools — photo in class | Quiz PixFan';
         var enTitle = 'Schools — photo in class | Quiz PixFan';
@@ -177,9 +229,10 @@
         if (desc) desc.setAttribute('content', enDescMeta);
         if (ogTitle) ogTitle.setAttribute('content', enTitle);
         if (ogDesc) ogDesc.setAttribute('content', enOgDesc);
-        if (ogLocale) ogLocale.setAttribute('content', 'en_US');
+        setLocales('en_US', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', enTitle);
         if (twDesc) twDesc.setAttribute('content', enOgDesc);
+        applyJsonLdEn();
       } else if (p === 'fr') {
         document.title = 'Scolaires — photo en classe | Quiz PixFan';
         var frTitle = 'Scolaires — photo en classe | Quiz PixFan';
@@ -190,7 +243,7 @@
         if (desc) desc.setAttribute('content', frDescMeta);
         if (ogTitle) ogTitle.setAttribute('content', frTitle);
         if (ogDesc) ogDesc.setAttribute('content', frOgDesc);
-        if (ogLocale) ogLocale.setAttribute('content', 'fr_FR');
+        setLocales('fr_FR', 'en_US');
         if (twTitle) twTitle.setAttribute('content', frTitle);
         if (twDesc) twDesc.setAttribute('content', frOgDesc);
       }

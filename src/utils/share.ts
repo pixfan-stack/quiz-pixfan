@@ -232,15 +232,20 @@ function copyViaTextarea(line: string): boolean {
   }
 }
 
+/** Clipboard API first, then textarea execCommand fallback. */
+export async function copyTextWithFallback(text: string): Promise<boolean> {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return copyViaTextarea(text);
+  }
+}
+
 /** Copy "text + url" for paste into any messenger. */
 export async function copySharePayload(payload: SharePayload): Promise<boolean> {
   const line = `${payload.text} ${payload.url}`.trim();
-  try {
-    await navigator.clipboard.writeText(line);
-    return true;
-  } catch {
-    return copyViaTextarea(line);
-  }
+  return copyTextWithFallback(line);
 }
 
 export type ShareOrCopyResult = 'shared' | 'copied' | 'aborted' | 'failed';
