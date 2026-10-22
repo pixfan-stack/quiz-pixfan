@@ -1,10 +1,8 @@
 {
   "app": {
-    "title": "Quiz PixFan",
-    "tagline": "Quiz photo. Partagez votre score."
+    "title": "Quiz PixFan"
   },
   "nav": {
-    "home": "Accueil",
     "language": "Langue"
   },
   "classe": {
@@ -45,7 +43,6 @@
     }
   },
   "home": {
-    "welcome": "Choisissez un quiz pour commencer",
     "selectQuiz": "Lisez de vraies photos — composition, lumière, cadrage.",
     "noAccountHint": "Sans compte pour commencer.",
     "teachersCta": "Enseignant·e ? Parcours scolaires →",
@@ -54,7 +51,6 @@
     "questionsCount": "{{count}} questions",
     "photoPoolCount": "{{count}} photos dans le pool",
     "playsCount": "{{count}} parties",
-    "bestScore": "Meilleur score : {{score}} %",
     "settings": "Paramètres",
     "timerMode": "Mode chronométré",
     "antiCheat": "Mode focus",
@@ -77,7 +73,6 @@
     "dailyReminderNotifyBody": "Les 10 questions du jour vous attendent. Battez votre score d’hier.",
     "duel": "Duel entre amis",
     "duelDesc": "Pour toi si tu veux comparer un score avec un ami — mêmes 10 questions, défi après.",
-    "duelLinkCopied": "Lien du duel copié !",
     "weakSpots": "Points faibles",
     "weakSpotsDesc": "Pour toi si tu veux réviser ce que tu as manqué.",
     "weakSpotsCount": "{{count}} à pratiquer",
@@ -104,7 +99,6 @@
     "morePacksHint": "Mix, catégories et points faibles",
     "copyDailyLink": "Copier le lien du défi du jour",
     "reviseGuide": "Réviser le guide",
-    "copyDuelLink": "Copier un lien de duel",
     "linkCopied": "Lien copié — à partager !",
     "weeklyLeaders": "Top de la semaine",
     "weeklyLeadersSeeAll": "Voir le classement",
@@ -136,7 +130,6 @@
     "hideSync": "Masquer la sync",
     "saveProgress": "Sauvegarder mon progrès",
     "saveProgressTitle": "Sauvegarder mon progrès",
-    "openSync": "Ouvrir la sync",
     "closeSync": "Fermer",
     "createLabel": "Sur cet appareil",
     "createCode": "Générer mon code",
@@ -216,8 +209,6 @@
     "dailyCountdown": "Prochain défi dans {{time}}",
     "comeBackTomorrow": "Revenez demain pour un nouveau pack.",
     "dailyGridLabel": "Grille de résultats",
-    "copyDailyGrid": "Copier les résultats",
-    "dailyGridCopied": "Copié !",
     "vaultSaved": "{{count}} erreur(s) ajoutée(s) à vos points faibles",
     "vaultCleared": "{{count}} point(s) faible(s) maîtrisé(s) — retiré(s) de la liste",
     "reviewWeakSpots": "Réviser mes erreurs",
@@ -254,8 +245,6 @@
     "badge_skilled": "Badge Confirmé",
     "badge_learner": "Badge Apprenti",
     "badge_rookie": "Badge Débutant",
-    "copyLink": "Copier le lien du quiz",
-    "copyDuelLink": "Copier le lien du duel pour un ami",
     "linkCopied": "Lien copié !",
     "dailyStreak": "Série quotidienne : {{count}} jour(s)",
     "streakFreezeConsumed": "Gel utilisé — série préservée après un jour manqué",
@@ -339,7 +328,6 @@
     "goFurtherTitle": "Aller plus loin avec Pixfan",
     "improveFailedTitle": "Revenez sur votre point faible",
     "goFurtherFailedTitle": "Consolidez ce thème",
-    "exploreMore": "Articles liés",
     "newsletterTitle": "Puis la newsletter Pixfan",
     "newsletterDesc": "Conseils photo, guides et idées — sans spam, désinscription libre.",
     "newsletterCta": "S’inscrire à la newsletter",
@@ -561,9 +549,7 @@
   "common": {
     "loading": "Chargement…",
     "error": "Une erreur est survenue.",
-    "questions": "questions",
     "accessibilitySkipToContent": "Aller au contenu principal",
-    "accessibilitySkipToMain": "Aller au quiz principal",
     "darkMode": "Mode sombre",
     "lightMode": "Mode clair",
     "darkModeShort": "Nuit",

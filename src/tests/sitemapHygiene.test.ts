@@ -40,6 +40,28 @@ describe('sitemap / SEO hygiene', () => {
     expect(hub! >= LASTMOD_FLOOR).toBe(true);
     expect(fiche! >= LASTMOD_FLOOR).toBe(true);
 
+    // Guides index + topic pages (vague 1.35 armor).
+    const guidesIndex = lastmodForLoc('https://quiz.pixfan.fr/guides/');
+    expect(guidesIndex).toBeTruthy();
+    expect(guidesIndex! >= LASTMOD_FLOOR).toBe(true);
+    const guideTopics = [
+      'triangle-exposition',
+      'composition-photo',
+      'photo-smartphone',
+      'lumiere-photo',
+      'retouche-lightroom',
+      'genres-photo',
+      'materiel-photo',
+      'droits-ethique-photo',
+      'histoire-photo',
+    ];
+    for (const slug of guideTopics) {
+      const loc = `https://quiz.pixfan.fr/guides/${slug}`;
+      const mod = lastmodForLoc(loc);
+      expect(mod, loc).toBeTruthy();
+      expect(mod! >= LASTMOD_FLOOR, loc).toBe(true);
+    }
+
     // Pack / mode deep-links must not lag the catalog floor (vague 1.33).
     const packLocs = [...sitemap.matchAll(/<loc>(https:\/\/quiz\.pixfan\.fr\/s\/[^<]+)<\/loc>/g)].map(
       (m) => m[1]
