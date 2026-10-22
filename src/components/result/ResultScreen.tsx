@@ -60,6 +60,7 @@ export function ResultScreen({
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
+  const scolairesLang = i18n.language?.startsWith('en') ? '?lang=en' : '';
   const langCode = (lang.startsWith('fr') ? 'fr' : 'en') as 'en' | 'fr';
   const quizTitle = pickLocale(quiz.title, lang);
   const messageKey = getPerformanceMessageKey(result.percentage);
@@ -327,7 +328,7 @@ export function ResultScreen({
               </button>
               <a
                 className="btn btn--secondary result-continue-pack__scolaires"
-                href="/guides/scolaires/#c4-regard"
+                href={`/guides/scolaires/${scolairesLang}#c4-regard`}
                 data-testid="result-continue-scolaires"
               >
                 {t('result.continueScolairesCta')}
@@ -355,7 +356,7 @@ export function ResultScreen({
               </button>
               <a
                 className="btn btn--secondary result-continue-pack__scolaires"
-                href="/guides/scolaires/#c4-lumiere"
+                href={`/guides/scolaires/${scolairesLang}#c4-lumiere`}
                 data-testid="result-continue-scolaires-light"
               >
                 {t('result.continueScolairesLightCta')}

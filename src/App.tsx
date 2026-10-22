@@ -67,6 +67,9 @@ function prefetchQuizScreen(): void {
  */
 export default function App() {
   const { t, i18n } = useTranslation();
+  const scolairesHubHref = i18n.language?.startsWith('en')
+    ? '/guides/scolaires/?lang=en'
+    : '/guides/scolaires/';
   const [view, setView] = useState<AppView>(() => {
     if (isAdminHash(window.location.hash)) return 'admin';
     if (isScolairesHash(window.location.hash)) return 'scolaires';
@@ -360,7 +363,7 @@ export default function App() {
             {t('footer.guides')}
           </a>
           <a
-            href="/guides/scolaires/"
+            href={scolairesHubHref}
             className="guide-nav-link"
             data-testid="header-scolaires-link"
           >
@@ -457,7 +460,7 @@ export default function App() {
             {t('footer.guides')}
           </a>
           <a
-            href="/guides/scolaires/"
+            href={scolairesHubHref}
             className="app-footer__link"
             data-testid="footer-scolaires-link"
           >

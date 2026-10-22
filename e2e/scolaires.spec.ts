@@ -43,8 +43,14 @@ test.describe('Scolaires URL + chrome', () => {
     const footer = page.getByTestId('footer-scolaires-link');
     await expect(header).toBeVisible({ timeout: 8000 });
     await expect(footer).toBeVisible();
-    await expect(header).toHaveAttribute('href', '/guides/scolaires/');
-    await expect(footer).toHaveAttribute('href', '/guides/scolaires/');
+    await expect(header).toHaveAttribute(
+      'href',
+      /\/guides\/scolaires\/(\?lang=en)?$/
+    );
+    await expect(footer).toHaveAttribute(
+      'href',
+      /\/guides\/scolaires\/(\?lang=en)?$/
+    );
   });
 
   test('static hub /guides/scolaires/ is crawlable and linked from guides index', async ({

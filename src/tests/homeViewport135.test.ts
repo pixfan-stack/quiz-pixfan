@@ -50,7 +50,7 @@ describe('dead locales + scolaires openHub (vague 1.35)', () => {
       'cta-secondary" href="/guides/scolaires/#c3-decouvrir">Pour la classe → parcours Scolaires (cycle 3)'
     );
     expect(histoire).toContain(
-      'cta-secondary" href="/guides/scolaires/#c3-decouvrir">For the classroom → Schools paths (cycle 3)'
+      'cta-secondary" href="/guides/scolaires/?lang=en#c3-decouvrir">For the classroom → Schools paths (cycle 3)'
     );
     expect(histoire).not.toContain(
       'cta-secondary" href="/guides/scolaires/">Pour la classe'

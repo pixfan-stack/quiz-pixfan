@@ -28,7 +28,9 @@ const guidePages: Array<{ name: string; html: string }> = [
 
 describe('scolaires chrome URL + nav', () => {
   it('app chrome links to real /guides/scolaires/ (not hash-only)', () => {
-    expect(appSource).toContain('href="/guides/scolaires/"');
+    expect(appSource).toContain("'/guides/scolaires/'");
+    expect(appSource).toContain("'/guides/scolaires/?lang=en'");
+    expect(appSource).toContain('scolairesHubHref');
     expect(appSource).toContain('data-testid="footer-scolaires-link"');
     expect(appSource).toContain('data-testid="header-scolaires-link"');
     expect(appSource).not.toMatch(
@@ -59,23 +61,25 @@ describe('scolaires chrome URL + nav', () => {
 
   it('triangle / smartphone / matériel expose Pour la classe as secondary CTA (vague 1.27)', () => {
     expect(triangle).toContain('/guides/scolaires/#c4-lumiere');
+    expect(triangle).toContain('/guides/scolaires/?lang=en#c4-lumiere');
     expect(triangle).toMatch(
       /cta-secondary"[^>]*>Pour la classe|cta-secondary"[^>]*>For the classroom/
     );
     expect(smartphone).toContain('class="cta-secondary"');
     expect(smartphone).toContain('Pour la classe → parcours Scolaires');
     expect(materiel).toContain('/guides/scolaires/#lycee-pratique');
+    expect(materiel).toContain('/guides/scolaires/?lang=en#lycee-pratique');
     expect(materiel).toMatch(/class="cta-secondary"/);
   });
 
-  it('EN classroom links on lumière / droits / genres / retouche (vague 1.24/1.27)', () => {
-    expect(lumiere).toContain('/guides/scolaires/#c4-lumiere');
+  it('EN classroom links on lumière / droits / genres / retouche (vague 1.24/1.27/1.38)', () => {
+    expect(lumiere).toContain('/guides/scolaires/?lang=en#c4-lumiere');
     expect(lumiere).toMatch(/cta-secondary"[^>]*>For the classroom/);
-    expect(droits).toContain('/guides/scolaires/#c4-emi-droits');
+    expect(droits).toContain('/guides/scolaires/?lang=en#c4-emi-droits');
     expect(droits).toMatch(/cta-secondary"[^>]*>For the classroom/);
-    expect(genres).toContain('/guides/scolaires/#c3-decouvrir');
+    expect(genres).toContain('/guides/scolaires/?lang=en#c3-decouvrir');
     expect(genres).toMatch(/cta-secondary"[^>]*>For the classroom/);
-    expect(retouche).toContain('/guides/scolaires/#lycee-pratique');
+    expect(retouche).toContain('/guides/scolaires/?lang=en#lycee-pratique');
     expect(retouche).toMatch(/cta-secondary"[^>]*>For the classroom/);
   });
 });

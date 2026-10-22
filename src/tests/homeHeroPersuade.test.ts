@@ -7,7 +7,8 @@ describe('home hero Persuade polish (vague 1.24)', () => {
   it('exposes no-account reassure + teachers link to scolaires hub', () => {
     expect(homeHeroSource).toContain('data-testid="home-hero-no-account"');
     expect(homeHeroSource).toContain('data-testid="home-hero-scolaires"');
-    expect(homeHeroSource).toContain('href="/guides/scolaires/#c4-regard"');
+    expect(homeHeroSource).toContain("'/guides/scolaires/#c4-regard'");
+    expect(homeHeroSource).toContain("'/guides/scolaires/?lang=en#c4-regard'");
     expect(homeHeroSource).toContain('home.noAccountHint');
     expect(homeHeroSource).toContain('home.teachersCta');
   });

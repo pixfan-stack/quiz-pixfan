@@ -19,7 +19,8 @@ describe('photo-reading continue placement (vague 1.23)', () => {
     expect(resultScreenSource).toContain(
       'data-testid="result-continue-scolaires"'
     );
-    expect(resultScreenSource).toContain('/guides/scolaires/#c4-regard');
+    expect(resultScreenSource).toContain('#c4-regard');
+    expect(resultScreenSource).toContain('scolairesLang');
     expect(resultScreenSource).toContain('result.continueScolairesCta');
   });
 
@@ -43,7 +44,8 @@ describe('composition → light continue (vague 1.24)', () => {
     expect(resultScreenSource).toContain(
       'data-testid="result-continue-scolaires-light"'
     );
-    expect(resultScreenSource).toContain('/guides/scolaires/#c4-lumiere');
+    expect(resultScreenSource).toContain('#c4-lumiere');
+    expect(resultScreenSource).toContain('scolairesLang');
     expect(fr.result.continueLightCta).toMatch(/lumière|couleur/i);
     expect(en.result.continueLightCta).toMatch(/light|color/i);
     expect(fr.result.continueScolairesLightCta).toMatch(/lumière/i);

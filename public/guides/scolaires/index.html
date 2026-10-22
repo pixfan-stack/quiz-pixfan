@@ -16,6 +16,11 @@
   <meta property="fb:app_id" content="1845182679783128" />
   <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Scolaires — photo en classe | Quiz PixFan" />
+  <meta name="twitter:description" content="Parcours cycle 3–4 / lycée / EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Gratuit, sans compte, liens de séance partageables." />
+  <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <meta name="theme-color" content="#f3538c" />
   <meta name="color-scheme" content="light dark" />
@@ -160,38 +165,34 @@
       var ogTitle = document.querySelector('meta[property="og:title"]');
       var ogDesc = document.querySelector('meta[property="og:description"]');
       var ogLocale = document.querySelector('meta[property="og:locale"]');
+      var twTitle = document.querySelector('meta[name="twitter:title"]');
+      var twDesc = document.querySelector('meta[name="twitter:description"]');
       if (p === 'en') {
         document.title = 'Schools — photo in class | Quiz PixFan';
-        if (desc) {
-          desc.setAttribute(
-            'content',
-            'Free cycle 3–4, lycée and media-literacy paths: discover photography, read an image, light, image rights, still-image practice. Quiz PixFan quizzes + guides, no account, class mode without a public leaderboard.'
-          );
-        }
-        if (ogTitle) ogTitle.setAttribute('content', 'Schools — photo in class | Quiz PixFan');
-        if (ogDesc) {
-          ogDesc.setAttribute(
-            'content',
-            'Cycle 3–4 / lycée / media-literacy paths: discover photography, read an image, light, image rights, still-image practice. Free, no account, shareable lesson links.'
-          );
-        }
+        var enTitle = 'Schools — photo in class | Quiz PixFan';
+        var enDescMeta =
+          'Free cycle 3–4, lycée and media-literacy paths: discover photography, read an image, light, image rights, still-image practice. Quiz PixFan quizzes + guides, no account, class mode without a public leaderboard.';
+        var enOgDesc =
+          'Cycle 3–4 / lycée / media-literacy paths: discover photography, read an image, light, image rights, still-image practice. Free, no account, shareable lesson links.';
+        if (desc) desc.setAttribute('content', enDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', enTitle);
+        if (ogDesc) ogDesc.setAttribute('content', enOgDesc);
         if (ogLocale) ogLocale.setAttribute('content', 'en_US');
+        if (twTitle) twTitle.setAttribute('content', enTitle);
+        if (twDesc) twDesc.setAttribute('content', enOgDesc);
       } else if (p === 'fr') {
         document.title = 'Scolaires — photo en classe | Quiz PixFan';
-        if (desc) {
-          desc.setAttribute(
-            'content',
-            'Parcours pédagogiques gratuits cycle 3–4, lycée et EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Quiz + guides Quiz PixFan, sans compte, mode classe sans classement public.'
-          );
-        }
-        if (ogTitle) ogTitle.setAttribute('content', 'Scolaires — photo en classe | Quiz PixFan');
-        if (ogDesc) {
-          ogDesc.setAttribute(
-            'content',
-            'Parcours cycle 3–4 / lycée / EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Gratuit, sans compte, liens de séance partageables.'
-          );
-        }
+        var frTitle = 'Scolaires — photo en classe | Quiz PixFan';
+        var frDescMeta =
+          'Parcours pédagogiques gratuits cycle 3–4, lycée et EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Quiz + guides Quiz PixFan, sans compte, mode classe sans classement public.';
+        var frOgDesc =
+          'Parcours cycle 3–4 / lycée / EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Gratuit, sans compte, liens de séance partageables.';
+        if (desc) desc.setAttribute('content', frDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', frTitle);
+        if (ogDesc) ogDesc.setAttribute('content', frOgDesc);
         if (ogLocale) ogLocale.setAttribute('content', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', frTitle);
+        if (twDesc) twDesc.setAttribute('content', frOgDesc);
       }
     })();
   </script>
@@ -429,7 +430,7 @@
         <p>Recommended cycle&nbsp;4 start: frame, composition, point of view — then illustrated image analysis.</p>
         <p>
           <a class="cta" href="/s/photo-reading?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
-          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-reading?classe=1" data-copied="Link copied!">Copy lesson link</button>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-reading?classe=1&amp;lang=en" data-copied="Link copied!">Copy lesson link</button>
         </p>
         <ol>
           <li><a href="/guides/composition-photo?lang=en">Composition guide</a></li>
@@ -443,7 +444,7 @@
         <p>Exposure, direction and quality of light — technical levers for visual language.</p>
         <p>
           <a class="cta" href="/s/exposure-basics?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
-          <button type="button" class="cta-secondary copy-seance" data-seance="/s/exposure-basics?classe=1" data-copied="Link copied!">Copy lesson link</button>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/exposure-basics?classe=1&amp;lang=en" data-copied="Link copied!">Copy lesson link</button>
         </p>
         <ol>
           <li><a href="/guides/lumiere-photo?lang=en">Light guide</a></li>
@@ -458,7 +459,7 @@
         <p>Privacy, publishing, ethics of media images — typical EMI / library lesson.</p>
         <p>
           <a class="cta" href="/s/photo-rights?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
-          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-rights?classe=1" data-copied="Link copied!">Copy lesson link</button>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-rights?classe=1&amp;lang=en" data-copied="Link copied!">Copy lesson link</button>
         </p>
         <ol>
           <li><a href="/guides/droits-ethique-photo?lang=en">Rights &amp; ethics guide</a></li>
@@ -475,7 +476,7 @@
         <p>What is a photo genre? Then a few images to look at together — without technical jargon.</p>
         <p>
           <a class="cta" href="/s/genres?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
-          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1" data-copied="Link copied!">Copy lesson link</button>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1&amp;lang=en" data-copied="Link copied!">Copy lesson link</button>
         </p>
         <ol>
           <li><a href="/guides/genres-photo?lang=en">Genres guide (excerpt)</a></li>
@@ -492,7 +493,7 @@
         <p>Portrait &amp; light → flash / studio → retouching. Option: still-image lexicon (original vocabulary, no copyrighted works).</p>
         <p>
           <a class="cta" href="/s/portrait-light?classe=1&amp;lang=en" data-track-parcours>Start the lesson</a>
-          <button type="button" class="cta-secondary copy-seance" data-seance="/s/portrait-light?classe=1" data-copied="Link copied!">Copy lesson link</button>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/portrait-light?classe=1&amp;lang=en" data-copied="Link copied!">Copy lesson link</button>
         </p>
         <ol>
           <li><a href="/s/lexique-image-fixe?classe=1&amp;lang=en">Option: Still-image lexicon</a> (12&nbsp;Q, text only)</li>
