@@ -6,6 +6,7 @@ import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { QuizSelector } from './components/QuizSelector';
 import { InstallPrompt } from './components/InstallPrompt';
+import { withGuideLang } from './utils/lang';
 import { buildRandomQuiz, RANDOM_QUIZ_ID } from './utils/randomQuiz';
 import { buildDailyQuiz, getDailyQuizId, isDailyQuizId } from './utils/dailyChallenge';
 import {
@@ -67,9 +68,10 @@ function prefetchQuizScreen(): void {
  */
 export default function App() {
   const { t, i18n } = useTranslation();
-  const scolairesHubHref = i18n.language?.startsWith('en')
-    ? '/guides/scolaires/?lang=en'
-    : '/guides/scolaires/';
+  const scolairesHubHref = withGuideLang(
+    '/guides/scolaires/',
+    i18n.language
+  );
   const [view, setView] = useState<AppView>(() => {
     if (isAdminHash(window.location.hash)) return 'admin';
     if (isScolairesHash(window.location.hash)) return 'scolaires';

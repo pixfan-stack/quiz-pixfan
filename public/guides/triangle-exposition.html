@@ -55,7 +55,7 @@
   <script>
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
-      if (p === 'en' || p === 'fr') document.documentElement.lang = p;
+      if (p === 'en' || p === 'fr' || p === 'es' || p === 'de') document.documentElement.lang = p;
     })();
   </script>
   <script src="/guides/theme.js"></script>
@@ -75,6 +75,8 @@
       <nav class="lang-switcher" aria-label="Language">
         <a class="lang-switcher__btn" href="?lang=fr">FR</a>
         <a class="lang-switcher__btn" href="?lang=en">EN</a>
+        <a class="lang-switcher__btn" href="?lang=es">ES</a>
+        <a class="lang-switcher__btn" href="?lang=de">DE</a>
       </nav>
       <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Mode nuit" title="Mode nuit">Nuit</button>
     </div>

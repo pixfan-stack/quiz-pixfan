@@ -1,4 +1,5 @@
 import type { Question, Quiz } from '../types/quiz';
+import { toContentLang, type ContentLanguage } from './lang';
 import { hashSeed, seededRandom, seededShuffle } from './seededRandom';
 
 export const DAILY_QUESTION_COUNT = 10;
@@ -207,15 +208,19 @@ export function msUntilNextDaily(now = new Date()): number {
 }
 
 /** Compact countdown like `5h 12m` / `12m 05s`. */
-export function formatDailyCountdown(ms: number, lang: 'en' | 'fr' = 'en'): string {
+export function formatDailyCountdown(
+  ms: number,
+  lang: ContentLanguage | string = 'en'
+): string {
+  const content = toContentLang(lang);
   const totalSec = Math.floor(ms / 1000);
   const h = Math.floor(totalSec / 3600);
   const m = Math.floor((totalSec % 3600) / 60);
   const s = totalSec % 60;
   if (h > 0) {
-    return lang === 'fr' ? `${h} h ${m} min` : `${h}h ${m}m`;
+    return content === 'fr' ? `${h} h ${m} min` : `${h}h ${m}m`;
   }
-  return lang === 'fr'
+  return content === 'fr'
     ? `${m} min ${String(s).padStart(2, '0')} s`
     : `${m}m ${String(s).padStart(2, '0')}s`;
 }

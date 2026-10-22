@@ -1,3 +1,5 @@
+import { toContentLang } from './lang';
+
 const PLAYER_ID_KEY = 'quiz-pixfan-player-id';
 const DISPLAY_NAME_KEY = 'quiz-pixfan-player-display-name';
 const NAME_PROMPT_SEEN_KEY = 'quiz-pixfan-name-prompt-seen';
@@ -79,6 +81,6 @@ export function setPlayerDisplayName(name: string): void {
 export function resolveDisplayNameForSubmit(lang: string): string {
   const chosen = getPlayerDisplayName();
   if (chosen) return chosen;
-  const prefix = lang.startsWith('fr') ? 'Joueur-' : 'Player-';
+  const prefix = toContentLang(lang) === 'fr' ? 'Joueur-' : 'Player-';
   return prefix + getPlayerId().slice(0, 6);
 }

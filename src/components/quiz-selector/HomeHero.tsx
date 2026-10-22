@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { withGuideLang } from '../../utils/lang';
 
 interface HomeHeroProps {
   photoTeaserUrl?: string | null;
@@ -17,9 +18,10 @@ export function HomeHero({
   onPrefetchQuiz,
 }: HomeHeroProps) {
   const { t, i18n } = useTranslation();
-  const teachersHref = i18n.language?.startsWith('en')
-    ? '/guides/scolaires/?lang=en#c4-regard'
-    : '/guides/scolaires/#c4-regard';
+  const teachersHref = withGuideLang(
+    '/guides/scolaires/#c4-regard',
+    i18n.language
+  );
 
   return (
     <header

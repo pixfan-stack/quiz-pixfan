@@ -1,3 +1,5 @@
+import { toContentLang, type ContentLanguage } from './lang';
+
 /**
  * Wordle-style emoji grids for shareable quiz results.
  */
@@ -22,15 +24,16 @@ export function buildDailyResultShareBlock(opts: {
   percent: number;
   marks: boolean[];
   url: string;
-  lang: 'en' | 'fr';
+  lang: ContentLanguage | string;
 }): string {
+  const content = toContentLang(opts.lang);
   const grid = formatResultShareGrid(opts.marks);
   const headline =
-    opts.lang === 'fr'
+    content === 'fr'
       ? `Quiz PixFan — Défi du jour ${opts.dateLabel}`
       : `Quiz PixFan — Daily ${opts.dateLabel}`;
   const scoreLine =
-    opts.lang === 'fr'
+    content === 'fr'
       ? `${opts.percent} %`
       : `${opts.percent}%`;
   return [headline, scoreLine, grid, '', opts.url].filter(Boolean).join('\n');

@@ -5,6 +5,7 @@
 import { trackHabitEvent } from './analyticsApi';
 import { APP_SHARE_URL } from './share';
 import { getDailyQuizId } from './dailyChallenge';
+import type { ContentLanguage } from './lang';
 
 function pad(n: number): string {
   return String(n).padStart(2, '0');
@@ -34,7 +35,7 @@ export function buildDailyChallengeIcs(opts: {
   description: string;
   /** Hour in local time (0–23). Default 9. */
   hour?: number;
-  lang?: 'en' | 'fr';
+  lang?: ContentLanguage | string;
 }): string {
   const hour = opts.hour ?? 9;
   const start = new Date();
@@ -76,7 +77,7 @@ export function downloadDailyChallengeIcs(opts: {
   title: string;
   description: string;
   hour?: number;
-  lang?: 'en' | 'fr';
+  lang?: ContentLanguage | string;
 }): void {
   const ics = buildDailyChallengeIcs(opts);
   const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });

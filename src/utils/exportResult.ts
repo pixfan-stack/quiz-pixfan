@@ -5,6 +5,7 @@
 
 import type { Quiz, QuizResult } from '../types/quiz';
 import { getDailyTheme, isDailyQuizId, parseDailyQuizDate } from './dailyChallenge';
+import { toContentLang, type ContentLanguage } from './lang';
 import { APP_SHARE_URL } from './share';
 
 export type ExportImageFormat = 'square' | 'story';
@@ -47,7 +48,7 @@ function truncate(ctx: CanvasRenderingContext2D, text: string, maxWidth: number)
 export async function exportResultAsImage(
   result: QuizResult,
   quiz: Quiz,
-  lang: 'en' | 'fr' = 'en',
+  lang: ContentLanguage | string = 'en',
   format: ExportImageFormat = 'square'
 ): Promise<Blob> {
   const { width, height } = FORMAT_SIZE[format];
@@ -55,7 +56,7 @@ export async function exportResultAsImage(
   canvas.width = width;
   canvas.height = height;
   const ctx = canvas.getContext('2d')!;
-  const isFr = lang === 'fr';
+  const isFr = toContentLang(lang) === 'fr';
   const isStory = format === 'story';
   const isDaily = isDailyQuizId(result.quizId);
 

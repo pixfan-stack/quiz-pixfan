@@ -2,10 +2,14 @@
  * i18n initialization (react-i18next)
  *
  * HOW TO EXTEND UI STRINGS:
- * 1. Add a new key under the same path in BOTH:
+ * 1. Add a new key under the same path in ALL locale files:
  *    - public/locales/en/translation.json
  *    - public/locales/fr/translation.json
+ *    - public/locales/es/translation.json  (STUB = EN copy until translated)
+ *    - public/locales/de/translation.json  (STUB = EN copy until translated)
  * 2. Use it in components via: t('section.key') or t('section.key', { var: value })
+ *
+ * ES/DE files are EN scaffolds (see public/locales/STUBS.md) — not real translations.
  *
  * Language preference is detected and persisted via i18next-browser-languagedetector
  * (localStorage key: "i18nextLng").
@@ -16,9 +20,14 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from '../public/locales/en/translation.json';
 import fr from '../public/locales/fr/translation.json';
+import es from '../public/locales/es/translation.json';
+import de from '../public/locales/de/translation.json';
 
-export const SUPPORTED_LANGUAGES = ['en', 'fr'] as const;
-export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
+export {
+  SUPPORTED_LANGUAGES,
+  type SupportedLanguage,
+} from './utils/lang';
+import { SUPPORTED_LANGUAGES } from './utils/lang';
 
 void i18n
   .use(LanguageDetector)
@@ -27,6 +36,8 @@ void i18n
     resources: {
       en: { translation: en },
       fr: { translation: fr },
+      es: { translation: es },
+      de: { translation: de },
     },
     fallbackLng: 'fr',
     supportedLngs: [...SUPPORTED_LANGUAGES],
@@ -34,7 +45,7 @@ void i18n
       escapeValue: false,
     },
     detection: {
-      // `?lang=fr|en` supports hreflang / share links before localStorage.
+      // `?lang=fr|en|es|de` supports hreflang / share links before localStorage.
       order: ['querystring', 'localStorage', 'navigator'],
       caches: ['localStorage'],
       lookupQuerystring: 'lang',

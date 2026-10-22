@@ -160,7 +160,7 @@
   <script>
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
-      if (p === 'en' || p === 'fr') document.documentElement.lang = p;
+      if (p === 'en' || p === 'fr' || p === 'es' || p === 'de') document.documentElement.lang = p;
       var desc = document.querySelector('meta[name="description"]');
       var ogTitle = document.querySelector('meta[property="og:title"]');
       var ogDesc = document.querySelector('meta[property="og:description"]');
@@ -176,7 +176,7 @@
         if (!url || url.indexOf('lang=') !== -1) return url;
         return url + (url.indexOf('?') === -1 ? '?' : '&') + 'lang=' + lang;
       }
-      function applyJsonLdEn() {
+      function applyJsonLdEn(lang) {
         var scripts = document.querySelectorAll('script[type="application/ld+json"]');
         for (var i = 0; i < scripts.length; i++) {
           var raw = scripts[i].textContent;
@@ -188,7 +188,7 @@
                 var crumb = data.itemListElement[b];
                 if (crumb.name === 'Scolaires') {
                   crumb.name = 'Schools';
-                  crumb.item = withLang(crumb.item, 'en');
+                  crumb.item = withLang(crumb.item, lang);
                 }
               }
               scripts[i].textContent = JSON.stringify(data);
@@ -208,7 +208,7 @@
                   if (enNames[n]) data.itemListElement[n].name = enNames[n];
                   data.itemListElement[n].url = withLang(
                     data.itemListElement[n].url,
-                    'en'
+                    lang
                   );
                 }
               }
@@ -219,7 +219,7 @@
           }
         }
       }
-      if (p === 'en') {
+      if (p === 'en' || p === 'es' || p === 'de') {
         document.title = 'Schools — photo in class | Quiz PixFan';
         var enTitle = 'Schools — photo in class | Quiz PixFan';
         var enDescMeta =
@@ -232,7 +232,7 @@
         setLocales('en_US', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', enTitle);
         if (twDesc) twDesc.setAttribute('content', enOgDesc);
-        applyJsonLdEn();
+        applyJsonLdEn(p);
       } else if (p === 'fr') {
         document.title = 'Scolaires — photo en classe | Quiz PixFan';
         var frTitle = 'Scolaires — photo en classe | Quiz PixFan';
@@ -266,6 +266,8 @@
       <nav class="lang-switcher" aria-label="Language">
         <a class="lang-switcher__btn" href="?lang=fr">FR</a>
         <a class="lang-switcher__btn" href="?lang=en">EN</a>
+        <a class="lang-switcher__btn" href="?lang=es">ES</a>
+        <a class="lang-switcher__btn" href="?lang=de">DE</a>
       </nav>
       <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Mode nuit" title="Mode nuit">Nuit</button>
     </div>

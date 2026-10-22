@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next';
 import { SUPPORTED_LANGUAGES, type SupportedLanguage } from '../i18n';
 
 /**
- * FR | EN language switcher.
+ * EN | FR | ES | DE language switcher.
+ * ES/DE use EN UI stubs until translated (public/locales/STUBS.md).
  * Choice is persisted by i18next LanguageDetector (localStorage: i18nextLng).
  */
 export function LanguageSwitcher() {

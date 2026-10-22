@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toContentLang } from '../utils/lang';
 import { downloadDailyChallengeIcs } from '../utils/dailyChallengeCalendar';
 import {
   dismissDailyReminderPrompt,
@@ -14,9 +15,7 @@ import {
  */
 export function DailyReminderPrompt() {
   const { t, i18n } = useTranslation();
-  const langCode = (i18n.resolvedLanguage ?? i18n.language).startsWith('fr')
-    ? 'fr'
-    : 'en';
+  const langCode = toContentLang(i18n.resolvedLanguage ?? i18n.language);
   const [visible, setVisible] = useState(() => shouldShowDailyReminderPrompt());
   const canNotify = notificationsSupported();
 

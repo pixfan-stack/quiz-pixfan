@@ -5,10 +5,13 @@
  * 1. Edit share text templates in:
  *    - public/locales/en/translation.json → "share.*"
  *    - public/locales/fr/translation.json → "share.*"
+ *    - public/locales/es|de/translation.json (STUB = EN until translated)
  *    Placeholders: {{score}}, {{total}}, {{percent}}, {{quizTitle}}
  * 2. Change APP_SHARE_URL below (or set VITE_APP_URL in a .env file).
  * 3. Hashtags live under "share.hashtags" in the same translation files.
  */
+
+import type { SupportedLanguage } from './lang';
 
 /** Public URL used in share links. Replace for production. */
 export const APP_SHARE_URL =
@@ -27,7 +30,7 @@ export function quizShareUrl(
 export interface SocialShareOptions {
   /** Percent score 0–100 for OG preview. */
   score?: number;
-  lang?: 'en' | 'fr';
+  lang?: SupportedLanguage;
   /** School session — forwarded to `/s/:id?classe=1` → hash deep link. */
   classe?: boolean;
 }

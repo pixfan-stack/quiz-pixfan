@@ -11,10 +11,16 @@
  * 6. Answer "id" values must be unique within a question.
  */
 
-/** Localized string pair (extend with more locales if needed). */
+/**
+ * Localized string pair.
+ * `en` + `fr` are required in the catalogue.
+ * `es` / `de` are optional (vague 1.40+) — pickLocale falls back to en.
+ */
 export interface LocalizedString {
   en: string;
   fr: string;
+  es?: string;
+  de?: string;
 }
 
 export type QuestionType = 'single' | 'multiple';
