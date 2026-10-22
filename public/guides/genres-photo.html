@@ -16,6 +16,11 @@
   <meta property="fb:app_id" content="1845182679783128" />
   <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Genres photographiques — guide + quiz" />
+  <meta name="twitter:description" content="Portrait, street, paysage, macro… l’intention avant le boîtier, puis quiz interactif." />
+  <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <link rel="icon" href="/favicon.png" type="image/png" />
   <meta name="theme-color" content="#f3538c" />
   <meta name="color-scheme" content="light dark" />
@@ -56,6 +61,32 @@
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
       if (p === 'en' || p === 'fr' || p === 'es' || p === 'de') document.documentElement.lang = p;
+      var desc = document.querySelector('meta[name="description"]');
+      var ogTitle = document.querySelector('meta[property="og:title"]');
+      var ogDesc = document.querySelector('meta[property="og:description"]');
+      var ogLocale = document.querySelector('meta[property="og:locale"]');
+      var ogLocaleAlt = document.querySelector('meta[property="og:locale:alternate"]');
+      var twTitle = document.querySelector('meta[name="twitter:title"]');
+      var twDesc = document.querySelector('meta[name="twitter:description"]');
+      function setLocales(primary, alternate) {
+        if (ogLocale) ogLocale.setAttribute('content', primary);
+        if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
+      }
+      /* es/de: interim EN article via CSS; share meta stays FR until translated */
+      if (p === 'en' || p === 'es' || p === 'de') {
+        document.title = 'Photography genres: portrait, street, landscape… | Quiz PixFan';
+        var enTitle = 'Photography genres — guide + quiz';
+        var enDescMeta = 'Spot the intentions behind portrait, street, landscape, macro and more — then validate with the free Quiz PixFan genres quiz.';
+        var enOgDesc = 'Portrait, street, landscape, macro… intention before the camera body, then an interactive quiz.';
+        if (desc) desc.setAttribute('content', enDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', enTitle);
+        if (ogDesc) ogDesc.setAttribute('content', enOgDesc);
+        setLocales('en_US', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', enTitle);
+        if (twDesc) twDesc.setAttribute('content', enOgDesc);
+      } else if (p === 'fr') {
+        setLocales('fr_FR', 'en_US');
+      }
     })();
   </script>
   <script src="/guides/theme.js"></script>
