@@ -156,6 +156,11 @@
     (function () {
       var p = new URLSearchParams(location.search).get('lang');
       if (p === 'en' || p === 'fr') document.documentElement.lang = p;
+      if (p === 'en') {
+        document.title = 'Schools — photo in class | Quiz PixFan';
+      } else if (p === 'fr') {
+        document.title = 'Scolaires — photo en classe | Quiz PixFan';
+      }
     })();
   </script>
   <script src="/guides/theme.js"></script>

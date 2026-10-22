@@ -40,7 +40,7 @@ describe('dead locales + scolaires openHub (vague 1.35)', () => {
 
   it('EN scolaires openHub uses Schools wording', () => {
     expect(scolairesSource).toContain("t('scolaires.openHub')");
-    expect(en.scolaires.openHub).toBe('Schools guides page');
+    expect(en.scolaires.openHub).toBe('Schools guides hub');
     expect(en.scolaires.openHub).not.toMatch(/Scolaires/i);
     expect(fr.scolaires.openHub).toBe('Page guides Scolaires');
   });

@@ -4,7 +4,7 @@ import redirects from '../../public/_redirects?raw';
 import headers from '../../public/_headers?raw';
 
 /** Floor: home / hub scolaires must not lag behind the last catalog vague. */
-const LASTMOD_FLOOR = '2026-10-21';
+const LASTMOD_FLOOR = '2026-10-22';
 
 function lastmodForLoc(loc: string): string | null {
   const escaped = loc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

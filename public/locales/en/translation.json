@@ -16,8 +16,8 @@
     "minutes": "~{{count}} min",
     "startSeance": "Start the session",
     "moreLinks": "School links",
-    "openHub": "Schools guides page",
-    "printSheet": "Print session sheet",
+    "openHub": "Schools guides hub",
+    "printSheet": "Print the lesson sheet",
     "backHome": "Back to home",
     "parcours": {
       "c3-decouvrir": {
