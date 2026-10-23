@@ -37,11 +37,11 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.45 — docs v1.44.0 + photo-rights LocalizedString.es', () => {
-  it('docs headline cites v1.44.0; vague 1.44 listed; no-go through 1.45', () => {
-    expect(readme).toContain('v1.44.0');
-    expect(nextSteps).toContain('**v1.44.0**');
+  it('docs still mention vague 1.44; no-go line covers 1.45+', () => {
+    /* Docs headline moved to v1.45.0 in vague 1.46 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.44**');
     expect(nextSteps).toMatch(/no-go.*1\.45/);
+    expect(readme).toMatch(/v1\.4[45]\.0/);
   });
 
   it('photo-rights ships .es on all LocalizedString fields (180)', () => {
