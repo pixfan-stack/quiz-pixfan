@@ -19057,11 +19057,13 @@
       ],
       "title": {
         "en": "Flash & studio",
-        "fr": "Flash & studio"
+        "fr": "Flash & studio",
+        "es": "Flash y estudio"
       },
       "description": {
         "en": "Speedlights, strobes, sync, modifiers and three-point craft — Pixfan studio lighting path.",
-        "fr": "Speedlights, flashes studio, sync, modificateurs et trois points — parcours éclairage studio Pixfan."
+        "fr": "Speedlights, flashes studio, sync, modificateurs et trois points — parcours éclairage studio Pixfan.",
+        "es": "Speedlights, flashes de estudio, sincronización, modificadores y técnica de tres puntos — recorrido de iluminación de estudio Pixfan."
       },
       "difficulty": "medium",
       "questions": [
@@ -19070,35 +19072,40 @@
           "type": "single",
           "text": {
             "en": "What does TTL flash metering primarily automate?",
-            "fr": "Que automatise principalement la mesure flash TTL ?"
+            "fr": "Que automatise principalement la mesure flash TTL ?",
+            "es": "¿Qué automatiza principalmente la medición flash TTL?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Only the camera’s ISO permanently",
-                "fr": "Uniquement l’ISO du boîtier de façon permanente"
+                "fr": "Uniquement l’ISO du boîtier de façon permanente",
+                "es": "Solo el ISO de la cámara de forma permanente"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Flash output for a target exposure through-the-lens",
-                "fr": "La puissance du flash pour une exposition cible via la mesure TTL"
+                "fr": "La puissance du flash pour une exposition cible via la mesure TTL",
+                "es": "La potencia del flash para una exposición objetivo a través del objetivo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only the color of gels on continuous LEDs",
-                "fr": "Uniquement la couleur des gélatines sur LED continues"
+                "fr": "Uniquement la couleur des gélatines sur LED continues",
+                "es": "Solo el color de las gelatinas en LED continuos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only the shutter’s first curtain permanently open",
-                "fr": "Uniquement le premier rideau restant ouvert en permanence"
+                "fr": "Uniquement le premier rideau restant ouvert en permanence",
+                "es": "Solo que el primer obturador quede abierto permanentemente"
               }
             }
           ],
@@ -19107,17 +19114,20 @@
           ],
           "explanation": {
             "en": "TTL (Through-The-Lens) meters the scene and sets flash power for a target exposure; you still choose sync, modifiers, and creative overrides.",
-            "fr": "Le TTL mesure la scène et règle la puissance du flash pour une exposition cible ; sync, modificateurs et corrections restent de votre côté."
+            "fr": "Le TTL mesure la scène et règle la puissance du flash pour une exposition cible ; sync, modificateurs et corrections restent de votre côté.",
+            "es": "El TTL (Through-The-Lens) mide la escena y ajusta la potencia del flash para una exposición objetivo; tú sigues eligiendo sincronización, modificadores y correcciones creativas."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1471341971476-ae15ff5dd4ea.avif",
           "imageAlt": {
             "en": "Studio lights and camera gear",
-            "fr": "Éclairages studio et matériel photo"
+            "fr": "Éclairages studio et matériel photo",
+            "es": "Luces de estudio y equipo fotográfico"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19125,35 +19135,40 @@
           "type": "single",
           "text": {
             "en": "X-sync (classic flash sync) is mainly limited by which camera setting?",
-            "fr": "La synchro X (synchro flash classique) est surtout limitée par quel réglage ?"
+            "fr": "La synchro X (synchro flash classique) est surtout limitée par quel réglage ?",
+            "es": "La sincronización X (sincronización flash clásica) está limitada sobre todo por qué ajuste de cámara?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Only microphone gain",
-                "fr": "Uniquement le gain micro"
+                "fr": "Uniquement le gain micro",
+                "es": "Solo la ganancia del micrófono"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Maximum shutter speed before the curtains leave a moving slit",
-                "fr": "La vitesse d’obturation max avant que les rideaux ne laissent une fente mobile"
+                "fr": "La vitesse d’obturation max avant que les rideaux ne laissent une fente mobile",
+                "es": "La velocidad máxima de obturación antes de que las cortinillas dejen una ranura móvil"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only the lens focus motor speed",
-                "fr": "Uniquement la vitesse du moteur AF"
+                "fr": "Uniquement la vitesse du moteur AF",
+                "es": "Solo la velocidad del motor de enfoque del objetivo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only the LCD brightness",
-                "fr": "Uniquement la luminosité de l’écran"
+                "fr": "Uniquement la luminosité de l’écran",
+                "es": "Solo el brillo de la pantalla LCD"
               }
             }
           ],
@@ -19162,17 +19177,20 @@
           ],
           "explanation": {
             "en": "Above X-sync, focal-plane shutters expose via a moving slit — a normal flash pulse would only light a band unless you use HSS/hypersync techniques.",
-            "fr": "Au-delà de la synchro X, l’obturateur à rideaux expose via une fente mobile — un flash court n’éclairerait qu’une bande sans HSS / techniques adaptées."
+            "fr": "Au-delà de la synchro X, l’obturateur à rideaux expose via une fente mobile — un flash court n’éclairerait qu’une bande sans HSS / techniques adaptées.",
+            "es": "Por encima de la sincronización X, los obturadores de plano focal exponen mediante una ranura móvil: un pulso de flash normal solo iluminaría una banda, salvo que uses HSS u otras técnicas."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera body",
-            "fr": "Boîtier photo classique"
+            "fr": "Boîtier photo classique",
+            "es": "Cuerpo de cámara clásico"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19180,35 +19198,40 @@
           "type": "single",
           "text": {
             "en": "High-speed sync (HSS) is useful when you want to…",
-            "fr": "La synchro haute vitesse (HSS) est utile quand vous voulez…"
+            "fr": "La synchro haute vitesse (HSS) est utile quand vous voulez…",
+            "es": "La sincronización de alta velocidad (HSS) es útil cuando quieres…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Disable all ambient light forever",
-                "fr": "Désactiver toute lumière ambiante pour toujours"
+                "fr": "Désactiver toute lumière ambiante pour toujours",
+                "es": "Desactivar toda la luz ambiente para siempre"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only shoot film with no shutter",
-                "fr": "Uniquement tourner de l’argentique sans obturateur"
+                "fr": "Uniquement tourner de l’argentique sans obturateur",
+                "es": "Solo disparar película sin obturador"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Use flash with shutter speeds faster than X-sync (e.g. shallow DOF outdoors)",
-                "fr": "Utiliser le flash à des vitesses plus rapides que la synchro X (ex. faible PdC en extérieur)"
+                "fr": "Utiliser le flash à des vitesses plus rapides que la synchro X (ex. faible PdC en extérieur)",
+                "es": "Usar flash con velocidades más rápidas que la sincronización X (p. ej. poca profundidad de campo en exterior)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only charge batteries faster",
-                "fr": "Uniquement charger les batteries plus vite"
+                "fr": "Uniquement charger les batteries plus vite",
+                "es": "Solo cargar las baterías más rápido"
               }
             }
           ],
@@ -19217,17 +19240,20 @@
           ],
           "explanation": {
             "en": "HSS pulses flash across the slit so you can freeze ambient with fast shutters while still adding flash fill — at the cost of effective power.",
-            "fr": "Le HSS pulse le flash pendant le passage de la fente : vitesses rapides + flash (fill extérieur), au prix d’une puissance utile réduite."
+            "fr": "Le HSS pulse le flash pendant le passage de la fente : vitesses rapides + flash (fill extérieur), au prix d’une puissance utile réduite.",
+            "es": "El HSS pulsa el flash a lo largo de la ranura para congelar el ambiente con obturadores rápidos y seguir añadiendo relleno de flash — a costa de potencia efectiva."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1470252649378-9c29740c9fa8.avif",
           "imageAlt": {
             "en": "Soft outdoor light atmosphere",
-            "fr": "Ambiance de lumière douce en extérieur"
+            "fr": "Ambiance de lumière douce en extérieur",
+            "es": "Ambiente de luz suave en exterior"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19235,35 +19261,40 @@
           "type": "single",
           "text": {
             "en": "Rear-curtain (2nd curtain) sync typically makes moving lights look like they…",
-            "fr": "La synchro 2ᵉ rideau fait typiquement apparaître les lumières en mouvement comme si elles…"
+            "fr": "La synchro 2ᵉ rideau fait typiquement apparaître les lumières en mouvement comme si elles…",
+            "es": "La sincronización de segunda cortinilla suele hacer que las luces en movimiento parezcan…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Trail behind the subject’s motion",
-                "fr": "Laissaient une traînée derrière le mouvement du sujet"
+                "fr": "Laissaient une traînée derrière le mouvement du sujet",
+                "es": "Dejar una estela detrás del movimiento del sujeto"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Always appear only in front of the subject",
-                "fr": "N’apparaissent toujours que devant le sujet"
+                "fr": "N’apparaissent toujours que devant le sujet",
+                "es": "Aparecer siempre solo delante del sujeto"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Delete all motion blur automatically",
-                "fr": "Suppriment automatiquement tout flou de mouvement"
+                "fr": "Suppriment automatiquement tout flou de mouvement",
+                "es": "Eliminar automáticamente todo el desenfoque de movimiento"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Change Kelvin to 2000 K only",
-                "fr": "Passent uniquement le Kelvin à 2000 K"
+                "fr": "Passent uniquement le Kelvin à 2000 K",
+                "es": "Cambiar el Kelvin solo a 2000 K"
               }
             }
           ],
@@ -19272,7 +19303,8 @@
           ],
           "explanation": {
             "en": "With rear curtain, ambient trails build first and the flash freezes the subject at the end — trails read as following the motion.",
-            "fr": "En 2ᵉ rideau, les traînées ambiantes se construisent d’abord et le flash fige le sujet à la fin — les traînées suivent le mouvement."
+            "fr": "En 2ᵉ rideau, les traînées ambiantes se construisent d’abord et le flash fige le sujet à la fin — les traînées suivent le mouvement.",
+            "es": "Con segunda cortinilla, primero se construyen las estelas del ambiente y el flash congela al sujeto al final: las estelas se leen como siguiendo el movimiento."
           },
           "difficulty": "medium"
         },
@@ -19281,35 +19313,40 @@
           "type": "single",
           "text": {
             "en": "A guide number (GN) mainly helps you estimate…",
-            "fr": "Un nombre-guide (NG) sert surtout à estimer…"
+            "fr": "Un nombre-guide (NG) sert surtout à estimer…",
+            "es": "Un número guía (NG) sirve sobre todo para estimar…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Only the weight of a softbox",
-                "fr": "Uniquement le poids d’une softbox"
+                "fr": "Uniquement le poids d’une softbox",
+                "es": "Solo el peso de una softbox"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Flash reach / power vs distance (and aperture) for a given ISO",
-                "fr": "La portée / puissance du flash vs distance (et ouverture) pour un ISO donné"
+                "fr": "La portée / puissance du flash vs distance (et ouverture) pour un ISO donné",
+                "es": "El alcance / potencia del flash frente a la distancia (y apertura) para un ISO dado"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only autofocus points available",
-                "fr": "Uniquement le nombre de collimateurs AF"
+                "fr": "Uniquement le nombre de collimateurs AF",
+                "es": "Solo los puntos de autofoco disponibles"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only JPEG compression quality",
-                "fr": "Uniquement la qualité de compression JPEG"
+                "fr": "Uniquement la qualité de compression JPEG",
+                "es": "Solo la calidad de compresión JPEG"
               }
             }
           ],
@@ -19318,17 +19355,20 @@
           ],
           "explanation": {
             "en": "Guide numbers summarize flash output for exposure math (distance × aperture relationships at a reference ISO).",
-            "fr": "Le nombre-guide résume la puissance utile pour le calcul d’exposition (relations distance × ouverture à un ISO de référence)."
+            "fr": "Le nombre-guide résume la puissance utile pour le calcul d’exposition (relations distance × ouverture à un ISO de référence).",
+            "es": "Los números guía resumen la potencia del flash para el cálculo de exposición (relaciones distancia × apertura a un ISO de referencia)."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
           "imageAlt": {
             "en": "Camera ready for flash work",
-            "fr": "Appareil prêt pour le travail au flash"
+            "fr": "Appareil prêt pour le travail au flash",
+            "es": "Cámara lista para trabajar con flash"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19336,35 +19376,40 @@
           "type": "single",
           "text": {
             "en": "According to the inverse-square idea for a bare flash, doubling subject distance roughly…",
-            "fr": "Selon l’idée du carré inverse pour un flash nu, doubler la distance au sujet…"
+            "fr": "Selon l’idée du carré inverse pour un flash nu, doubler la distance au sujet…",
+            "es": "Según la idea del cuadrado inverso para un flash desnudo, duplicar la distancia al sujeto…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Doubles flash brightness",
-                "fr": "Double la luminosité du flash"
+                "fr": "Double la luminosité du flash",
+                "es": "Duplica el brillo del flash"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Cuts flash intensity to about one quarter (≈ −2 stops)",
-                "fr": "Réduit l’intensité à environ un quart (≈ −2 IL)"
+                "fr": "Réduit l’intensité à environ un quart (≈ −2 IL)",
+                "es": "Reduce la intensidad del flash a aproximadamente un cuarto (≈ −2 pasos)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Has no effect on flash exposure",
-                "fr": "N’a aucun effet sur l’exposition flash"
+                "fr": "N’a aucun effet sur l’exposition flash",
+                "es": "No tiene ningún efecto sobre la exposición del flash"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Always locks ISO to 100",
-                "fr": "Verrouille toujours l’ISO à 100"
+                "fr": "Verrouille toujours l’ISO à 100",
+                "es": "Bloquea siempre el ISO en 100"
               }
             }
           ],
@@ -19373,17 +19418,20 @@
           ],
           "explanation": {
             "en": "Intensity falls with distance squared — 2× distance ≈ ¼ light (about two stops). Modifiers and bounce change the real falloff.",
-            "fr": "L’intensité chute avec le carré de la distance — 2× distance ≈ ¼ de lumière (environ deux stops). Modificateurs et rebond changent le rendu réel."
+            "fr": "L’intensité chute avec le carré de la distance — 2× distance ≈ ¼ de lumière (environ deux stops). Modificateurs et rebond changent le rendu réel.",
+            "es": "La intensidad cae con el cuadrado de la distancia: 2× distancia ≈ ¼ de luz (unos dos pasos). Los modificadores y el rebote cambian la caída real."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1493863641943-9b68992a8d07.avif",
           "imageAlt": {
             "en": "Photo gear on set",
-            "fr": "Matériel photo sur le plateau"
+            "fr": "Matériel photo sur le plateau",
+            "es": "Equipo fotográfico en el set"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19391,35 +19439,40 @@
           "type": "single",
           "text": {
             "en": "Bounce flash off a white ceiling usually aims to…",
-            "fr": "Faire rebondir le flash sur un plafond blanc vise surtout à…"
+            "fr": "Faire rebondir le flash sur un plafond blanc vise surtout à…",
+            "es": "Rebotar el flash en un techo blanco suele buscar…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Increase red-eye on purpose",
-                "fr": "Augmenter volontairement les yeux rouges"
+                "fr": "Augmenter volontairement les yeux rouges",
+                "es": "Aumentar a propósito los ojos rojos"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Soften and enlarge the effective light source",
-                "fr": "Adoucir et agrandir la source effective"
+                "fr": "Adoucir et agrandir la source effective",
+                "es": "Suavizar y agrandar la fuente de luz efectiva"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Make light harder than a bare flash",
-                "fr": "Rendre la lumière plus dure qu’un flash nu"
+                "fr": "Rendre la lumière plus dure qu’un flash nu",
+                "es": "Hacer la luz más dura que un flash desnudo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only warm the scene to 2000 K",
-                "fr": "Uniquement réchauffer la scène à 2000 K"
+                "fr": "Uniquement réchauffer la scène à 2000 K",
+                "es": "Solo calentar la escena a 2000 K"
               }
             }
           ],
@@ -19428,17 +19481,20 @@
           ],
           "explanation": {
             "en": "A large bounced source softens shadows versus on-camera bare flash; colored ceilings/walls tint the bounce.",
-            "fr": "Une grande source rebondie adoucit les ombres vs flash nu sur boîtier ; plafonds/murs colorés teintent le rebond."
+            "fr": "Une grande source rebondie adoucit les ombres vs flash nu sur boîtier ; plafonds/murs colorés teintent le rebond.",
+            "es": "Una fuente grande rebotada suaviza las sombras frente al flash desnudo en cámara; techos o paredes de color tiñen el rebote."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
           "imageAlt": {
             "en": "Indoor desk scene",
-            "fr": "Scène intérieure de bureau"
+            "fr": "Scène intérieure de bureau",
+            "es": "Escena de escritorio en interior"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19446,35 +19502,40 @@
           "type": "single",
           "text": {
             "en": "Compared with a bare speedlight, a large softbox close to the subject typically…",
-            "fr": "Par rapport à un speedlight nu, une grande softbox proche du sujet…"
+            "fr": "Par rapport à un speedlight nu, une grande softbox proche du sujet…",
+            "es": "Comparada con un speedlight desnudo, una softbox grande cerca del sujeto suele…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Softens transitions and wraps light more gently",
-                "fr": "Adoucit les transitions et enveloppe plus doucement"
+                "fr": "Adoucit les transitions et enveloppe plus doucement",
+                "es": "Suavizar las transiciones y envolver la luz con más gentileza"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Always creates sharper, harder shadows",
-                "fr": "Crée toujours des ombres plus dures et nettes"
+                "fr": "Crée toujours des ombres plus dures et nettes",
+                "es": "Crear siempre sombras más nítidas y duras"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Removes the need for any exposure settings",
-                "fr": "Supprime le besoin de tout réglage d’exposition"
+                "fr": "Supprime le besoin de tout réglage d’exposition",
+                "es": "Eliminar la necesidad de cualquier ajuste de exposición"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only works with film cameras",
-                "fr": "Ne fonctionne qu’avec des appareils argentiques"
+                "fr": "Ne fonctionne qu’avec des appareils argentiques",
+                "es": "Funcionar solo con cámaras de película"
               }
             }
           ],
@@ -19483,17 +19544,20 @@
           ],
           "explanation": {
             "en": "Relative size of the source matters: large + close = softer wrap. Softboxes still cast shadows — they don’t erase darkness.",
-            "fr": "La taille relative de la source compte : grande + proche = enveloppement plus doux. Une softbox projette encore des ombres."
+            "fr": "La taille relative de la source compte : grande + proche = enveloppement plus doux. Une softbox projette encore des ombres.",
+            "es": "Importa el tamaño relativo de la fuente: grande + cerca = envoltura más suave. Las softboxes siguen proyectando sombras: no borran la oscuridad."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1487412720507-e7ab37603c6f.avif",
           "imageAlt": {
             "en": "Portrait with soft studio-like light",
-            "fr": "Portrait en lumière douce type studio"
+            "fr": "Portrait en lumière douce type studio",
+            "es": "Retrato con luz suave tipo estudio"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19501,35 +19565,40 @@
           "type": "single",
           "text": {
             "en": "An umbrella vs a softbox — a fair studio rule of thumb is…",
-            "fr": "Parapluie vs softbox — une règle de pouce studio raisonnable est…"
+            "fr": "Parapluie vs softbox — une règle de pouce studio raisonnable est…",
+            "es": "Paraguas frente a softbox — una regla de estudio razonable es…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Umbrellas only work underwater",
-                "fr": "Les parapluies ne marchent que sous l’eau"
+                "fr": "Les parapluies ne marchent que sous l’eau",
+                "es": "Los paraguas solo funcionan bajo el agua"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Umbrellas are quick and spill more; softboxes constrain spill with a face",
-                "fr": "Les parapluies sont rapides et « spillent » plus ; les softboxes limitent le spill avec une face"
+                "fr": "Les parapluies sont rapides et « spillent » plus ; les softboxes limitent le spill avec une face",
+                "es": "Los paraguas son rápidos y derraman más luz; las softboxes limitan el derrame con una cara"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Softboxes always freeze motion better than umbrellas",
-                "fr": "Les softboxes figent toujours mieux le mouvement que les parapluies"
+                "fr": "Les softboxes figent toujours mieux le mouvement que les parapluies",
+                "es": "Las softboxes siempre congelan el movimiento mejor que los paraguas"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Neither can be used with strobes",
-                "fr": "Aucun ne peut s’utiliser avec des flashes studio"
+                "fr": "Aucun ne peut s’utiliser avec des flashes studio",
+                "es": "Ninguno se puede usar con flashes de estudio"
               }
             }
           ],
@@ -19538,17 +19607,20 @@
           ],
           "explanation": {
             "en": "Umbrellas (esp. shoot-through) are fast and spill; softboxes give more directional control. Both can be soft if large enough.",
-            "fr": "Les parapluies (surtout shoot-through) sont rapides et spillent ; les softboxes contrôlent mieux la direction. Les deux adoucissent si assez grands."
+            "fr": "Les parapluies (surtout shoot-through) sont rapides et spillent ; les softboxes contrôlent mieux la direction. Les deux adoucissent si assez grands.",
+            "es": "Los paraguas (sobre todo shoot-through) son rápidos y derraman; las softboxes dan más control direccional. Ambos pueden ser suaves si son lo bastante grandes."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1471341971476-ae15ff5dd4ea.avif",
           "imageAlt": {
             "en": "Studio lighting kit",
-            "fr": "Kit d’éclairage studio"
+            "fr": "Kit d’éclairage studio",
+            "es": "Kit de iluminación de estudio"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19556,35 +19628,40 @@
           "type": "single",
           "text": {
             "en": "A grid on a softbox or reflector mainly…",
-            "fr": "Une grille sur softbox ou bol sert surtout à…"
+            "fr": "Une grille sur softbox ou bol sert surtout à…",
+            "es": "Una rejilla en una softbox o reflector sirve principalmente a…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Increase spill onto the background",
-                "fr": "Augmenter le spill sur le fond"
+                "fr": "Augmenter le spill sur le fond",
+                "es": "Aumentar el derrame sobre el fondo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Tighten the beam and reduce spill",
-                "fr": "Resserrer le faisceau et réduire le spill"
+                "fr": "Resserrer le faisceau et réduire le spill",
+                "es": "Estrechar el haz y reducir el derrame"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Convert flash to continuous tungsten only",
-                "fr": "Convertir le flash en tungstène continu uniquement"
+                "fr": "Convertir le flash en tungstène continu uniquement",
+                "es": "Convertir el flash solo en tungsteno continuo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Disable radio triggers",
-                "fr": "Désactiver les déclencheurs radio"
+                "fr": "Désactiver les déclencheurs radio",
+                "es": "Desactivar los disparadores de radio"
               }
             }
           ],
@@ -19593,7 +19670,8 @@
           ],
           "explanation": {
             "en": "Grids control spill and keep light more directional — useful for hair lights, accents, and cleaner backgrounds.",
-            "fr": "Les grilles contrôlent le spill et rendent la lumière plus directive — utiles en hair light, accents et fonds plus propres."
+            "fr": "Les grilles contrôlent le spill et rendent la lumière plus directive — utiles en hair light, accents et fonds plus propres.",
+            "es": "Las rejillas controlan el derrame y mantienen la luz más direccional: útiles para luces de pelo, acentos y fondos más limpios."
           },
           "difficulty": "medium"
         },
@@ -19602,35 +19680,40 @@
           "type": "single",
           "text": {
             "en": "In a classic three-point studio setup, the rim / hair light typically…",
-            "fr": "Dans un classique trois points studio, le rim / hair light sert typiquement à…"
+            "fr": "Dans un classique trois points studio, le rim / hair light sert typiquement à…",
+            "es": "En un clásico de tres puntos de estudio, la luz de borde / de pelo suele…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Separate the subject from the background with an edge highlight",
-                "fr": "Séparer le sujet du fond avec un liseré de lumière"
+                "fr": "Séparer le sujet du fond avec un liseré de lumière",
+                "es": "Separar al sujeto del fondo con un resalte en el borde"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Replace the key light entirely",
-                "fr": "Remplacer entièrement la clé"
+                "fr": "Remplacer entièrement la clé",
+                "es": "Sustituir por completo la luz clave"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only measure Kelvin of the wall paint",
-                "fr": "Uniquement mesurer le Kelvin de la peinture murale"
+                "fr": "Uniquement mesurer le Kelvin de la peinture murale",
+                "es": "Solo medir el Kelvin de la pintura de la pared"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only power the modeling lamp",
-                "fr": "Uniquement alimenter la lampe pilote"
+                "fr": "Uniquement alimenter la lampe pilote",
+                "es": "Solo alimentar la lámpara piloto"
               }
             }
           ],
@@ -19639,17 +19722,20 @@
           ],
           "explanation": {
             "en": "Key shapes, fill opens shadows, rim/hair separates edges — a readable three-point vocabulary for studio portraits.",
-            "fr": "La clé sculpte, le fill ouvre les ombres, le rim/hair sépare les contours — vocabulaire trois points du portrait studio."
+            "fr": "La clé sculpte, le fill ouvre les ombres, le rim/hair sépare les contours — vocabulaire trois points du portrait studio.",
+            "es": "La clave esculpe, el relleno abre sombras, el borde/pelo separa los contornos: vocabulario legible de tres puntos para retrato de estudio."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1500648767791-00dcc994a43e.avif",
           "imageAlt": {
             "en": "Studio-style portrait lighting",
-            "fr": "Portrait en éclairage style studio"
+            "fr": "Portrait en éclairage style studio",
+            "es": "Retrato con iluminación estilo estudio"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19657,35 +19743,40 @@
           "type": "multiple",
           "text": {
             "en": "Which statements about key vs fill in studio work are true?",
-            "fr": "Quelles affirmations sur clé vs fill en studio sont vraies ?"
+            "fr": "Quelles affirmations sur clé vs fill en studio sont vraies ?",
+            "es": "¿Cuáles afirmaciones sobre clave frente a relleno en estudio son ciertas?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Key is usually the stronger shaping light",
-                "fr": "La clé est en général la lumière principale qui sculpte"
+                "fr": "La clé est en général la lumière principale qui sculpte",
+                "es": "La clave suele ser la luz más fuerte que da forma"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Fill reduces shadow depth without becoming a second hard key",
-                "fr": "Le fill réduit la profondeur d’ombre sans devenir une 2ᵉ clé dure"
+                "fr": "Le fill réduit la profondeur d’ombre sans devenir une 2ᵉ clé dure",
+                "es": "El relleno reduce la profundidad de sombra sin convertirse en una segunda clave dura"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Fill must always be brighter than the key",
-                "fr": "Le fill doit toujours être plus fort que la clé"
+                "fr": "Le fill doit toujours être plus fort que la clé",
+                "es": "El relleno debe ser siempre más brillante que la clave"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Key lights only exist on smartphones",
-                "fr": "Les clés n’existent que sur smartphone"
+                "fr": "Les clés n’existent que sur smartphone",
+                "es": "Las luces clave solo existen en smartphones"
               }
             }
           ],
@@ -19695,17 +19786,20 @@
           ],
           "explanation": {
             "en": "Key defines direction and shape; fill is subordinate. If fill overpowers key, the lighting ratio collapses.",
-            "fr": "La clé définit direction et forme ; le fill reste subordonné. S’il dépasse la clé, le ratio s’effondre."
+            "fr": "La clé définit direction et forme ; le fill reste subordonné. S’il dépasse la clé, le ratio s’effondre.",
+            "es": "La clave define dirección y forma; el relleno es subordinado. Si el relleno supera a la clave, el ratio de iluminación se derrumba."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1438761681033-6461ffad8d80.avif",
           "imageAlt": {
             "en": "Portrait face with controlled light",
-            "fr": "Visage en lumière contrôlée"
+            "fr": "Visage en lumière contrôlée",
+            "es": "Rostro de retrato con luz controlada"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19713,35 +19807,40 @@
           "type": "single",
           "text": {
             "en": "Strobe modeling lights are mainly there to…",
-            "fr": "Les lampes pilotes (modeling lights) des flashes studio servent surtout à…"
+            "fr": "Les lampes pilotes (modeling lights) des flashes studio servent surtout à…",
+            "es": "Las lámparas piloto (modeling lights) de los flashes de estudio sirven sobre todo a…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Replace the need for any flash pulse",
-                "fr": "Remplacer tout besoin d’impulsion flash"
+                "fr": "Remplacer tout besoin d’impulsion flash",
+                "es": "Sustituir cualquier necesidad de pulso de flash"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Preview light direction and shadows before firing the flash",
-                "fr": "Prévisualiser direction et ombres avant de déclencher le flash"
+                "fr": "Prévisualiser direction et ombres avant de déclencher le flash",
+                "es": "Previsualizar la dirección de la luz y las sombras antes de disparar el flash"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only charge the capacitor faster",
-                "fr": "Uniquement charger le condensateur plus vite"
+                "fr": "Uniquement charger le condensateur plus vite",
+                "es": "Solo cargar el condensador más rápido"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only warm the flash tube chemically",
-                "fr": "Uniquement réchauffer chimiquement le tube flash"
+                "fr": "Uniquement réchauffer chimiquement le tube flash",
+                "es": "Solo calentar químicamente el tubo del flash"
               }
             }
           ],
@@ -19750,17 +19849,20 @@
           ],
           "explanation": {
             "en": "Modeling lamps help you see placement and ratios; final exposure still depends on the flash pulse (and camera settings).",
-            "fr": "Les lampes pilotes aident à voir placement et ratios ; l’exposition finale dépend encore de l’impulsion flash (et des réglages boîtier)."
+            "fr": "Les lampes pilotes aident à voir placement et ratios ; l’exposition finale dépend encore de l’impulsion flash (et des réglages boîtier).",
+            "es": "Las lámparas piloto ayudan a ver colocación y ratios; la exposición final sigue dependiendo del pulso de flash (y de los ajustes de cámara)."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1552374196-c4e7ffc6e126.avif",
           "imageAlt": {
             "en": "Subject lit for a portrait session",
-            "fr": "Sujet éclairé pour une séance portrait"
+            "fr": "Sujet éclairé pour une séance portrait",
+            "es": "Sujeto iluminado para una sesión de retrato"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19768,35 +19870,40 @@
           "type": "single",
           "text": {
             "en": "Radio triggers for off-camera flash are preferred over optical slaves when…",
-            "fr": "Les déclencheurs radio pour flash déporté sont préférables aux esclaves optiques quand…"
+            "fr": "Les déclencheurs radio pour flash déporté sont préférables aux esclaves optiques quand…",
+            "es": "Los disparadores de radio para flash fuera de cámara se prefieren a los esclavos ópticos cuando…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "You only shoot in pitch darkness with no walls",
-                "fr": "Vous ne photographiez que dans le noir absolu sans murs"
+                "fr": "Vous ne photographiez que dans le noir absolu sans murs",
+                "es": "Solo disparas en oscuridad total sin paredes"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "You need reliability around corners, bright ambient, or multi-group control",
-                "fr": "Vous avez besoin de fiabilité derrière les angles, en ambiance claire, ou en multi-groupes"
+                "fr": "Vous avez besoin de fiabilité derrière les angles, en ambiance claire, ou en multi-groupes",
+                "es": "Necesitas fiabilidad tras esquinas, con ambiente brillante o control multi-grupo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "You want slower recycle times on purpose",
-                "fr": "Vous voulez volontairement des recyclages plus lents"
+                "fr": "Vous voulez volontairement des recyclages plus lents",
+                "es": "Quieres a propósito tiempos de reciclaje más lentos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "You refuse to set any channel",
-                "fr": "Vous refusez de régler tout canal"
+                "fr": "Vous refusez de régler tout canal",
+                "es": "Te niegas a configurar cualquier canal"
               }
             }
           ],
@@ -19805,17 +19912,20 @@
           ],
           "explanation": {
             "en": "Optical slaves can miss in bright sun or around obstacles; radio packs are more robust for location and multi-light kits.",
-            "fr": "Les esclaves optiques ratent plus facilement au soleil ou derrière des obstacles ; la radio est plus robuste en extérieur et multi-flashs."
+            "fr": "Les esclaves optiques ratent plus facilement au soleil ou derrière des obstacles ; la radio est plus robuste en extérieur et multi-flashs.",
+            "es": "Los esclavos ópticos pueden fallar con sol fuerte o detrás de obstáculos; los packs de radio son más robustos en localización y kits multi-luz."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1606983340126-99ab4feaa64a.avif",
           "imageAlt": {
             "en": "Camera body for off-camera flash work",
-            "fr": "Boîtier pour flash déporté"
+            "fr": "Boîtier pour flash déporté",
+            "es": "Cuerpo de cámara para flash fuera de cámara"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19823,35 +19933,40 @@
           "type": "single",
           "text": {
             "en": "A CTO gel on a flash is commonly used to…",
-            "fr": "Une gélatine CTO sur un flash sert souvent à…"
+            "fr": "Une gélatine CTO sur un flash sert souvent à…",
+            "es": "Una gelatina CTO en un flash se usa habitualmente para…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Warm the flash to better match tungsten / warm ambient",
-                "fr": "Réchauffer le flash pour mieux coller au tungstène / ambiance chaude"
+                "fr": "Réchauffer le flash pour mieux coller au tungstène / ambiance chaude",
+                "es": "Calentar el flash para igualarlo mejor al tungsteno / ambiente cálido"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Cool the flash toward shade blue only",
-                "fr": "Refroidir le flash vers le bleu d’ombre uniquement"
+                "fr": "Refroidir le flash vers le bleu d’ombre uniquement",
+                "es": "Enfriar el flash solo hacia el azul de sombra"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Increase guide number by 10 stops",
-                "fr": "Augmenter le nombre-guide de 10 stops"
+                "fr": "Augmenter le nombre-guide de 10 stops",
+                "es": "Aumentar el número guía en 10 pasos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Disable TTL forever",
-                "fr": "Désactiver le TTL pour toujours"
+                "fr": "Désactiver le TTL pour toujours",
+                "es": "Desactivar el TTL para siempre"
               }
             }
           ],
@@ -19860,7 +19975,8 @@
           ],
           "explanation": {
             "en": "CTO (Color Temperature Orange) warms daylight-balanced flash to mix with warmer practicals; CTB goes the other way.",
-            "fr": "La CTO (orange) réchauffe un flash « daylight » pour se mêler aux sources chaudes ; la CTB fait l’inverse."
+            "fr": "La CTO (orange) réchauffe un flash « daylight » pour se mêler aux sources chaudes ; la CTB fait l’inverse.",
+            "es": "La CTO (Color Temperature Orange) calienta un flash equilibrado a luz de día para mezclarlo con prácticos más cálidos; la CTB va en la otra dirección."
           },
           "difficulty": "medium"
         },
@@ -19869,35 +19985,40 @@
           "type": "single",
           "text": {
             "en": "To keep flash exposure while darkening a bright background with a speedlight (no HSS), a classic control is…",
-            "fr": "Pour garder l’exposition flash tout en assombrissant un fond clair avec un speedlight (sans HSS), un classique est…"
+            "fr": "Pour garder l’exposition flash tout en assombrissant un fond clair avec un speedlight (sans HSS), un classique est…",
+            "es": "Para mantener la exposición del flash mientras oscureces un fondo brillante con un speedlight (sin HSS), un control clásico es…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Only raise ISO while opening the aperture wider forever",
-                "fr": "Uniquement monter l’ISO en ouvrant toujours plus le diaphragme"
+                "fr": "Uniquement monter l’ISO en ouvrant toujours plus le diaphragme",
+                "es": "Solo subir el ISO abriendo siempre más el diafragma"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Raise shutter speed toward X-sync (ambient drops; flash stays similar)",
-                "fr": "Monter la vitesse vers la synchro X (l’ambiance baisse ; le flash reste similaire)"
+                "fr": "Monter la vitesse vers la synchro X (l’ambiance baisse ; le flash reste similaire)",
+                "es": "Subir la velocidad de obturación hacia la sincronización X (baja el ambiente; el flash se mantiene similar)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only zoom the lens without changing exposure",
-                "fr": "Uniquement zoomer l’objectif sans changer l’exposition"
+                "fr": "Uniquement zoomer l’objectif sans changer l’exposition",
+                "es": "Solo hacer zoom en el objetivo sin cambiar la exposición"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Turn off the flash and hope",
-                "fr": "Éteindre le flash et espérer"
+                "fr": "Éteindre le flash et espérer",
+                "es": "Apagar el flash y esperar"
               }
             }
           ],
@@ -19906,17 +20027,20 @@
           ],
           "explanation": {
             "en": "Below X-sync, shutter mainly gates ambient; aperture/ISO/power gate flash. Faster shutter (still ≤ sync) darkens ambient without starving flash the same way.",
-            "fr": "Sous la synchro X, la vitesse gère surtout l’ambiance ; ouverture/ISO/puissance gèrent le flash. Une vitesse plus rapide (≤ sync) assombrit l’ambiance sans « affamer » le flash de la même façon."
+            "fr": "Sous la synchro X, la vitesse gère surtout l’ambiance ; ouverture/ISO/puissance gèrent le flash. Une vitesse plus rapide (≤ sync) assombrit l’ambiance sans « affamer » le flash de la même façon.",
+            "es": "Por debajo de la sincronización X, el obturador regula sobre todo el ambiente; apertura/ISO/potencia regulan el flash. Una velocidad más rápida (aún ≤ sync) oscurece el ambiente sin «matar» el flash de la misma forma."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
           "imageAlt": {
             "en": "Photographer working with camera outdoors",
-            "fr": "Photographe travaillant avec un appareil en extérieur"
+            "fr": "Photographe travaillant avec un appareil en extérieur",
+            "es": "Fotógrafo trabajando con cámara en exterior"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19924,35 +20048,40 @@
           "type": "single",
           "text": {
             "en": "Manual flash power (e.g. 1/1 → 1/2) typically changes output by about…",
-            "fr": "La puissance flash manuelle (ex. 1/1 → 1/2) change typiquement la sortie d’environ…"
+            "fr": "La puissance flash manuelle (ex. 1/1 → 1/2) change typiquement la sortie d’environ…",
+            "es": "La potencia manual del flash (p. ej. 1/1 → 1/2) suele cambiar la salida en unos…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Ten stops",
-                "fr": "Dix stops"
+                "fr": "Dix stops",
+                "es": "Diez pasos"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "One stop",
-                "fr": "Un stop"
+                "fr": "Un stop",
+                "es": "Un paso"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "No measurable difference",
-                "fr": "Aucune différence mesurable"
+                "fr": "Aucune différence mesurable",
+                "es": "Ninguna diferencia medible"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Exactly 0.1 EV only",
-                "fr": "Exactement 0,1 IL uniquement"
+                "fr": "Exactement 0,1 IL uniquement",
+                "es": "Exactamente 0,1 EV solo"
               }
             }
           ],
@@ -19961,17 +20090,20 @@
           ],
           "explanation": {
             "en": "Halving power is roughly −1 EV of flash exposure (all else equal). Fine control often uses 1/3-stop steps on modern units.",
-            "fr": "Diviser la puissance par deux ≈ −1 IL d’exposition flash (toutes choses égales). Les flashes modernes offrent souvent des 1/3 de stop."
+            "fr": "Diviser la puissance par deux ≈ −1 IL d’exposition flash (toutes choses égales). Les flashes modernes offrent souvent des 1/3 de stop.",
+            "es": "Reducir a la mitad la potencia es aproximadamente −1 EV de exposición de flash (si todo lo demás es igual). El control fino suele usar pasos de 1/3 en unidades modernas."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage camera and light culture",
-            "fr": "Culture appareil vintage et lumière"
+            "fr": "Culture appareil vintage et lumière",
+            "es": "Cultura de cámara vintage y luz"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19979,35 +20111,40 @@
           "type": "single",
           "text": {
             "en": "Freezing a splash or dancer with flash often relies on…",
-            "fr": "Figer une éclaboussure ou un danseur au flash repose souvent sur…"
+            "fr": "Figer une éclaboussure ou un danseur au flash repose souvent sur…",
+            "es": "Congelar una salpicadura o un bailarín con flash suele depender de…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Only a 30-second exposure",
-                "fr": "Uniquement une pose de 30 secondes"
+                "fr": "Uniquement une pose de 30 secondes",
+                "es": "Solo una exposición de 30 segundos"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A short flash duration (often at lower power) as the effective shutter",
-                "fr": "Une durée d’éclair courte (souvent à basse puissance) comme « obturateur » efficace"
+                "fr": "Une durée d’éclair courte (souvent à basse puissance) comme « obturateur » efficace",
+                "es": "Una duración de flash corta (a menudo a menor potencia) como obturador efectivo"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only continuous LED modeling lights",
-                "fr": "Uniquement des LED pilotes continues"
+                "fr": "Uniquement des LED pilotes continues",
+                "es": "Solo lámparas piloto LED continuas"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Disabling all light modifiers",
-                "fr": "Désactiver tous les modificateurs"
+                "fr": "Désactiver tous les modificateurs",
+                "es": "Desactivar todos los modificadores de luz"
               }
             }
           ],
@@ -20016,17 +20153,20 @@
           ],
           "explanation": {
             "en": "In dark ambient, flash duration — not the mechanical shutter — freezes action. Lower power often shortens duration on speedlights.",
-            "fr": "En ambiance sombre, c’est la durée d’éclair — pas l’obturateur mécanique — qui fige. Baisser la puissance raccourcit souvent la durée sur speedlight."
+            "fr": "En ambiance sombre, c’est la durée d’éclair — pas l’obturateur mécanique — qui fige. Baisser la puissance raccourcit souvent la durée sur speedlight.",
+            "es": "Con ambiente oscuro, la duración del flash — no el obturador mecánico — congela la acción. Menor potencia suele acortar la duración en speedlights."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1494790108377-be9c29b29330.avif",
           "imageAlt": {
             "en": "Portrait with crisp flash-like catchlights",
-            "fr": "Portrait avec catchlights nets type flash"
+            "fr": "Portrait avec catchlights nets type flash",
+            "es": "Retrato con catchlights nítidos tipo flash"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20034,35 +20174,40 @@
           "type": "single",
           "text": {
             "en": "Red-eye with on-camera flash is mainly caused by…",
-            "fr": "Les yeux rouges au flash sur boîtier sont surtout dus à…"
+            "fr": "Les yeux rouges au flash sur boîtier sont surtout dus à…",
+            "es": "Los ojos rojos con flash en cámara se deben principalmente a…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Flash near the lens axis lighting the retina",
-                "fr": "Un flash proche de l’axe optique éclairant la rétine"
+                "fr": "Un flash proche de l’axe optique éclairant la rétine",
+                "es": "Un flash cerca del eje del objetivo que ilumina la retina"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Too much bounce on a white ceiling only",
-                "fr": "Uniquement trop de rebond au plafond blanc"
+                "fr": "Uniquement trop de rebond au plafond blanc",
+                "es": "Solo demasiado rebote en un techo blanco"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Using radio triggers outdoors only",
-                "fr": "Uniquement l’usage de triggers radio en extérieur"
+                "fr": "Uniquement l’usage de triggers radio en extérieur",
+                "es": "Solo usar disparadores de radio en exterior"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Shooting exclusively in RAW",
-                "fr": "Photographier exclusivement en RAW"
+                "fr": "Photographier exclusivement en RAW",
+                "es": "Disparar exclusivamente en RAW"
               }
             }
           ],
@@ -20071,7 +20216,8 @@
           ],
           "explanation": {
             "en": "Axis-aligned flash reflects from the retina. Off-camera, bounce, or pre-flashes that close the pupil reduce red-eye.",
-            "fr": "Un flash dans l’axe se reflète sur la rétine. Flash déporté, rebond ou préflashs qui ferment la pupille réduisent l’effet."
+            "fr": "Un flash dans l’axe se reflète sur la rétine. Flash déporté, rebond ou préflashs qui ferment la pupille réduisent l’effet.",
+            "es": "El flash alineado con el eje se refleja en la retina. Fuera de cámara, rebote o preflashs que cierran la pupila reducen los ojos rojos."
           },
           "difficulty": "easy"
         },
@@ -20080,35 +20226,40 @@
           "type": "single",
           "text": {
             "en": "A snoot on a studio light typically…",
-            "fr": "Un snip / snoot sur une lumière studio…"
+            "fr": "Un snip / snoot sur une lumière studio…",
+            "es": "Un snoot en una luz de estudio suele…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Turns the strobe into a softbox automatically",
-                "fr": "Transforme automatiquement le flash en softbox"
+                "fr": "Transforme automatiquement le flash en softbox",
+                "es": "Convertir automáticamente el flash en softbox"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Creates a small, controlled pool of light (hair, accent, product hotspot)",
-                "fr": "Crée un petit faisceau contrôlé (cheveux, accent, hotspot produit)"
+                "fr": "Crée un petit faisceau contrôlé (cheveux, accent, hotspot produit)",
+                "es": "Crear un pequeño charco de luz controlado (pelo, acento, hotspot de producto)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Widens the beam like a bare umbrella",
-                "fr": "Élargit le faisceau comme un parapluie nu"
+                "fr": "Élargit le faisceau comme un parapluie nu",
+                "es": "Ensanchar el haz como un paraguas desnudo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only cools the flash tube",
-                "fr": "Uniquement refroidit le tube flash"
+                "fr": "Uniquement refroidit le tube flash",
+                "es": "Solo enfriar el tubo del flash"
               }
             }
           ],
@@ -20117,17 +20268,20 @@
           ],
           "explanation": {
             "en": "Snoots concentrate light into a tight circle — accents and product highlights, not broad soft key light.",
-            "fr": "Le snoot concentre la lumière en un cercle serré — accents et highlights produit, pas une clé large et douce."
+            "fr": "Le snoot concentre la lumière en un cercle serré — accents et highlights produit, pas une clé large et douce.",
+            "es": "Los snoots concentran la luz en un círculo cerrado: acentos y highlights de producto, no una clave amplia y suave."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
           "imageAlt": {
             "en": "Optical gear detail",
-            "fr": "Détail de matériel optique"
+            "fr": "Détail de matériel optique",
+            "es": "Detalle de equipo óptico"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20135,35 +20289,40 @@
           "type": "multiple",
           "text": {
             "en": "Which practices help consistent multi-light studio exposures?",
-            "fr": "Quelles pratiques aident des expositions multi-flashs cohérentes en studio ?"
+            "fr": "Quelles pratiques aident des expositions multi-flashs cohérentes en studio ?",
+            "es": "¿Qué prácticas ayudan a exposiciones multi-luz coherentes en estudio?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Meter or chimping ratios after placing key, then add fill/rim",
-                "fr": "Mesurer / chimper les ratios après la clé, puis ajouter fill/rim"
+                "fr": "Mesurer / chimper les ratios après la clé, puis ajouter fill/rim",
+                "es": "Medir o chimpár ratios tras colocar la clave, luego añadir relleno/borde"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Keep ISO and aperture intentional while adjusting light powers",
-                "fr": "Garder ISO et ouverture intentionnels tout en réglant les puissances"
+                "fr": "Garder ISO et ouverture intentionnels tout en réglant les puissances",
+                "es": "Mantener ISO y apertura intencionados mientras ajustas las potencias"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Change every light to TTL randomly each frame",
-                "fr": "Passer chaque lumière en TTL au hasard à chaque vue"
+                "fr": "Passer chaque lumière en TTL au hasard à chaque vue",
+                "es": "Cambiar cada luz a TTL al azar en cada fotograma"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Ignore recycle times and fire as fast as possible always",
-                "fr": "Ignorer les temps de recycle et déclencher toujours au plus vite"
+                "fr": "Ignorer les temps de recycle et déclencher toujours au plus vite",
+                "es": "Ignorar los tiempos de reciclaje y disparar siempre lo más rápido posible"
               }
             }
           ],
@@ -20173,17 +20332,20 @@
           ],
           "explanation": {
             "en": "Build from the key, control ratios deliberately, and watch recycle — random TTL on every head fights consistency.",
-            "fr": "Construire depuis la clé, contrôler les ratios, surveiller le recycle — du TTL aléatoire sur chaque tête nuit à la cohérence."
+            "fr": "Construire depuis la clé, contrôler les ratios, surveiller le recycle — du TTL aléatoire sur chaque tête nuit à la cohérence.",
+            "es": "Construye desde la clave, controla los ratios a propósito y vigila el reciclaje: TTL aleatorio en cada cabeza pelea contra la coherencia."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1507003211169-0a1dd7228f2d.avif",
           "imageAlt": {
             "en": "Portrait subject under controlled lights",
-            "fr": "Sujet portrait sous lumières contrôlées"
+            "fr": "Sujet portrait sous lumières contrôlées",
+            "es": "Sujeto de retrato bajo luces controladas"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20191,35 +20353,40 @@
           "type": "single",
           "text": {
             "en": "Continuous LED panels vs studio strobes — a fair comparison is…",
-            "fr": "Panneaux LED continus vs flashes studio — une comparaison juste est…"
+            "fr": "Panneaux LED continus vs flashes studio — une comparaison juste est…",
+            "es": "Paneles LED continuos frente a flashes de estudio — una comparación justa es…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "LEDs are easy to preview; strobes usually win for freezing and overpowering sun",
-                "fr": "Les LED se prévisualisent facilement ; les flashes gagnent souvent pour figer et dominer le soleil"
+                "fr": "Les LED se prévisualisent facilement ; les flashes gagnent souvent pour figer et dominer le soleil",
+                "es": "Los LED son fáciles de previsualizar; los flashes suelen ganar para congelar y dominar el sol"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Strobes cannot use modifiers",
-                "fr": "Les flashes ne peuvent pas utiliser de modificateurs"
+                "fr": "Les flashes ne peuvent pas utiliser de modificateurs",
+                "es": "Los flashes no pueden usar modificadores"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "LEDs always have shorter durations than speedlights at 1/128",
-                "fr": "Les LED ont toujours des durées plus courtes qu’un speedlight à 1/128"
+                "fr": "Les LED ont toujours des durées plus courtes qu’un speedlight à 1/128",
+                "es": "Los LED siempre tienen duraciones más cortas que un speedlight a 1/128"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only LEDs work with softboxes",
-                "fr": "Seules les LED fonctionnent avec des softboxes"
+                "fr": "Seules les LED fonctionnent avec des softboxes",
+                "es": "Solo los LED funcionan con softboxes"
               }
             }
           ],
@@ -20228,7 +20395,8 @@
           ],
           "explanation": {
             "en": "What-you-see-is-what-you-get favors continuous light; peak power and short pulse favor strobes for action and daylight overpower.",
-            "fr": "Le WYSIWYG favorise le continu ; puissance de crête et pulse court favorisent le flash pour l’action et dominer le jour."
+            "fr": "Le WYSIWYG favorise le continu ; puissance de crête et pulse court favorisent le flash pour l’action et dominer le jour.",
+            "es": "Lo que ves es lo que obtienes favorece la luz continua; la potencia de pico y el pulso corto favorecen los flashes para acción y dominar la luz de día."
           },
           "difficulty": "medium"
         },
@@ -20237,35 +20405,40 @@
           "type": "single",
           "text": {
             "en": "Cross-light / clamshell beauty setups usually place fill…",
-            "fr": "Les setups beauty cross-light / clamshell placent en général le fill…"
+            "fr": "Les setups beauty cross-light / clamshell placent en général le fill…",
+            "es": "Los setups beauty de luz cruzada / clamshell suelen colocar el relleno…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Only behind the background paper",
-                "fr": "Uniquement derrière le papier de fond"
+                "fr": "Uniquement derrière le papier de fond",
+                "es": "Solo detrás del papel de fondo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Under the chin / below the key to open eye sockets and lift shadows",
-                "fr": "Sous le menton / sous la clé pour ouvrir les orbites et relever les ombres"
+                "fr": "Sous le menton / sous la clé pour ouvrir les orbites et relever les ombres",
+                "es": "Bajo la barbilla / debajo de la clave para abrir las órbitas y levantar las sombras"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "As a bare sun outside only",
-                "fr": "Uniquement comme soleil nu à l’extérieur"
+                "fr": "Uniquement comme soleil nu à l’extérieur",
+                "es": "Solo como sol desnudo en exterior"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "On the floor pointing straight up at 1/1 always",
-                "fr": "Au sol pointé vers le haut à 1/1 toujours"
+                "fr": "Au sol pointé vers le haut à 1/1 toujours",
+                "es": "En el suelo apuntando siempre hacia arriba a 1/1"
               }
             }
           ],
@@ -20274,17 +20447,20 @@
           ],
           "explanation": {
             "en": "Clamshell pairs a key above with a lower fill (reflector or soft source) for bright, even beauty light — still not shadow-free.",
-            "fr": "Le clamshell associe une clé haute et un fill bas (réflecteur ou source douce) pour une beauty lumineuse — pas sans ombres pour autant."
+            "fr": "Le clamshell associe une clé haute et un fill bas (réflecteur ou source douce) pour une beauty lumineuse — pas sans ombres pour autant.",
+            "es": "El clamshell combina una clave arriba con un relleno bajo (reflector o fuente suave) para una beauty luminosa y pareja — aún no libre de sombras."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1487412720507-e7ab37603c6f.avif",
           "imageAlt": {
             "en": "Beauty-style portrait lighting",
-            "fr": "Éclairage portrait style beauty"
+            "fr": "Éclairage portrait style beauty",
+            "es": "Iluminación de retrato estilo beauty"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20292,35 +20468,40 @@
           "type": "single",
           "text": {
             "en": "Myth: “If I use flash indoors, the background always goes black.” Best nuance?",
-            "fr": "Mythe : « Au flash en intérieur, le fond devient forcément noir. » Meilleure nuance ?"
+            "fr": "Mythe : « Au flash en intérieur, le fond devient forcément noir. » Meilleure nuance ?",
+            "es": "Mito: «Si uso flash en interior, el fondo siempre se pone negro.» ¿Mejor matiz?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Flash always deletes ambient forever",
-                "fr": "Le flash efface toujours l’ambiance pour toujours"
+                "fr": "Le flash efface toujours l’ambiance pour toujours",
+                "es": "El flash siempre borra el ambiente para siempre"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "You can balance ambient with slower shutter / higher ISO / wider aperture while flash lights the subject",
-                "fr": "On peut équilibre l’ambiance (vitesse plus lente / ISO / ouverture) pendant que le flash éclaire le sujet"
+                "fr": "On peut équilibre l’ambiance (vitesse plus lente / ISO / ouverture) pendant que le flash éclaire le sujet",
+                "es": "Puedes equilibrar el ambiente con obturador más lento / ISO más alto / apertura más abierta mientras el flash ilumina al sujeto"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only gelled flash can show any ambient",
-                "fr": "Seul un flash gélatiné peut laisser voir de l’ambiance"
+                "fr": "Seul un flash gélatiné peut laisser voir de l’ambiance",
+                "es": "Solo un flash gelatinizado puede mostrar algo de ambiente"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Backgrounds are physically removed by photons",
-                "fr": "Les fonds sont physiquement retirés par les photons"
+                "fr": "Les fonds sont physiquement retirés par les photons",
+                "es": "Los fondos los eliminan físicamente los fotones"
               }
             }
           ],
@@ -20329,17 +20510,20 @@
           ],
           "explanation": {
             "en": "Black backgrounds happen when ambient is starved (fast shutter, low ISO, stopped-down). Dragging the shutter (within blur tolerance) keeps room light in the mix.",
-            "fr": "Un fond noir apparaît quand l’ambiance est « affamée » (vitesse rapide, bas ISO, diaphragmé). Trainer l’obturateur (sans trop de flou) garde la pièce dans le mix."
+            "fr": "Un fond noir apparaît quand l’ambiance est « affamée » (vitesse rapide, bas ISO, diaphragmé). Trainer l’obturateur (sans trop de flou) garde la pièce dans le mix.",
+            "es": "Los fondos negros aparecen cuando se «ahoga» el ambiente (obturador rápido, ISO bajo, diafragma cerrado). Arrastrar el obturador (dentro de la tolerancia al desenfoque) mantiene la luz de la habitación en la mezcla."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
           "imageAlt": {
             "en": "Indoor scene with available light",
-            "fr": "Scène intérieure en lumière disponible"
+            "fr": "Scène intérieure en lumière disponible",
+            "es": "Escena de interior con luz disponible"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         }
       ]
