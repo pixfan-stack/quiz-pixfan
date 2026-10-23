@@ -1,16 +1,34 @@
 import { describe, expect, it } from 'vitest';
 import readme from '../../README.md?raw';
 import nextSteps from '../../NEXT_STEPS.md?raw';
-import questions from '../../public/data/questions.json';
+import questionsData from '../../public/data/questions.json';
 import triangle from '../../public/guides/triangle-exposition.html?raw';
 import composition from '../../public/guides/composition-photo.html?raw';
 import { pickLocale } from '../utils/locale';
-import type { LocalizedString, Quiz } from '../types/quiz';
+import type { LocalizedString } from '../types/quiz';
 
-function collectLs(pack: Quiz): LocalizedString[] {
+type Ls = { en: string; fr: string; es?: string; de?: string };
+
+const data = questionsData as {
+  quizzes: Array<{
+    id: string;
+    title: Ls;
+    description: Ls;
+    questions: Array<{
+      text: Ls;
+      explanation?: Ls;
+      imageAlt?: Ls;
+      imageCredit?: Ls;
+      answers: Array<{ text: Ls }>;
+    }>;
+  }>;
+};
+
+function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
   const out: LocalizedString[] = [pack.title, pack.description];
   for (const q of pack.questions) {
-    out.push(q.text, q.explanation);
+    out.push(q.text);
+    if (q.explanation) out.push(q.explanation);
     if (q.imageAlt) out.push(q.imageAlt);
     if (q.imageCredit) out.push(q.imageCredit);
     for (const a of q.answers) out.push(a.text);
@@ -27,7 +45,7 @@ describe('vague 1.44 — docs v1.43.0 + lexique LocalizedString.es', () => {
   });
 
   it('lexique-image-fixe ships .es on all LocalizedString fields (74)', () => {
-    const pack = questions.quizzes.find((q) => q.id === 'lexique-image-fixe');
+    const pack = data.quizzes.find((q) => q.id === 'lexique-image-fixe');
     expect(pack).toBeTruthy();
     const ls = collectLs(pack!);
     expect(ls).toHaveLength(74);
@@ -38,7 +56,7 @@ describe('vague 1.44 — docs v1.43.0 + lexique LocalizedString.es', () => {
   });
 
   it('pickLocale returns Spanish for lexique title when lang=es', () => {
-    const pack = questions.quizzes.find((q) => q.id === 'lexique-image-fixe')!;
+    const pack = data.quizzes.find((q) => q.id === 'lexique-image-fixe')!;
     expect(pickLocale(pack.title, 'es')).toBe('Léxico de imagen fija');
     expect(pickLocale(pack.title, 'es')).not.toBe(pack.title.en);
     expect(pickLocale(pack.questions[0].text, 'es')).toContain('encuadre');

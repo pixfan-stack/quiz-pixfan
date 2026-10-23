@@ -28,10 +28,10 @@ function leafEntries(obj: unknown, prefix = ''): [string, unknown][] {
 
 describe('vague 1.42 — docs v1.41.0 + real DE UI', () => {
   it('docs still mention vague 1.41; no-go line covers 1.42+', () => {
-    /* Docs headline moved to v1.42.0 in vague 1.43 — keep historical Livré lock. */
+    /* Docs headline moved to v1.43.0 in vague 1.44 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.41**');
     expect(nextSteps).toMatch(/no-go.*1\.42/);
-    expect(readme).toMatch(/v1\.4[12]\.0/);
+    expect(readme).toMatch(/v1\.4[123]\.0/);
   });
 
   it('SUPPORTED_LANGUAGES still four langs; comments say ES + DE real', () => {
