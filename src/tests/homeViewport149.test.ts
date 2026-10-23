@@ -37,11 +37,11 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.49 — docs v1.48.0 + history-icons LocalizedString.es', () => {
-  it('docs headline cites v1.48.0; vague 1.48 listed; no-go through 1.49', () => {
-    expect(readme).toContain('v1.48.0');
-    expect(nextSteps).toContain('**v1.48.0**');
+  it('docs still mention vague 1.48; no-go line covers 1.49+', () => {
+    /* Docs headline moved to v1.49.0 in vague 1.50 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.48**');
     expect(nextSteps).toMatch(/no-go.*1\.49/);
+    expect(readme).toMatch(/v1\.4[89]\.0/);
   });
 
   it('history-icons ships .es on all LocalizedString fields (192)', () => {

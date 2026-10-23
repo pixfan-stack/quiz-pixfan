@@ -60,3 +60,40 @@ export function withGuideLang(
     ? `${base}&${q.slice(1)}${hash}`
     : `${base}${q}${hash}`;
 }
+
+/**
+ * Pure URL builder: set `?lang=` on the search string while preserving
+ * pathname, other query params, and hash (vague 1.50 SPA SEO foundation).
+ */
+export function buildUrlWithLangParam(
+  pathname: string,
+  search: string,
+  hash: string,
+  lang: string | null | undefined
+): string {
+  const ui = resolveUiLang(lang);
+  const params = new URLSearchParams(
+    search.startsWith('?') ? search.slice(1) : search
+  );
+  params.set('lang', ui);
+  const q = params.toString();
+  return pathname + (q ? `?${q}` : '') + hash;
+}
+
+/**
+ * Sync SPA location search `?lang=fr|en|es|de` via replaceState.
+ * Does not touch the hash route (`#/quiz/…`).
+ */
+export function syncLangSearchParam(lang: string | null | undefined): void {
+  if (typeof window === 'undefined') return;
+  const next = buildUrlWithLangParam(
+    window.location.pathname,
+    window.location.search,
+    window.location.hash,
+    lang
+  );
+  const current =
+    window.location.pathname + window.location.search + window.location.hash;
+  if (next === current) return;
+  window.history.replaceState(null, '', next);
+}

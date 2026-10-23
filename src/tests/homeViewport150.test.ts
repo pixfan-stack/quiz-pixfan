@@ -1,0 +1,56 @@
+import { describe, expect, it } from 'vitest';
+import readme from '../../README.md?raw';
+import nextSteps from '../../NEXT_STEPS.md?raw';
+import triangle from '../../public/guides/triangle-exposition.html?raw';
+import composition from '../../public/guides/composition-photo.html?raw';
+import switcherSource from '../components/LanguageSwitcher.tsx?raw';
+import langSource from '../utils/lang.ts?raw';
+import {
+  buildUrlWithLangParam,
+  SUPPORTED_LANGUAGES,
+} from '../utils/lang';
+
+describe('vague 1.50 — docs v1.49.0 + SPA ?lang= sync', () => {
+  it('docs headline cites v1.49.0; vague 1.49 listed; no-go through 1.50', () => {
+    expect(readme).toContain('v1.49.0');
+    expect(nextSteps).toContain('**v1.49.0**');
+    expect(nextSteps).toContain('Vague **1.49**');
+    expect(nextSteps).toMatch(/no-go.*1\.50/);
+  });
+
+  it('LanguageSwitcher syncs ?lang= via syncLangSearchParam', () => {
+    expect(switcherSource).toContain('syncLangSearchParam');
+    expect(switcherSource).toContain('syncLangSearchParam(lang)');
+    expect(langSource).toContain('buildUrlWithLangParam');
+    expect(langSource).toContain('replaceState');
+  });
+
+  it('buildUrlWithLangParam sets lang and preserves hash + other query', () => {
+    expect(buildUrlWithLangParam('/', '', '', 'es')).toBe('/?lang=es');
+    expect(buildUrlWithLangParam('/', '?classe=1', '#/quiz/history-icons', 'de')).toBe(
+      '/?classe=1&lang=de#/quiz/history-icons'
+    );
+    expect(buildUrlWithLangParam('/', '?lang=en', '#/daily', 'fr')).toBe(
+      '/?lang=fr#/daily'
+    );
+    expect(buildUrlWithLangParam('/guides/', '?lang=en', '', 'es')).toBe(
+      '/guides/?lang=es'
+    );
+  });
+
+  it('SUPPORTED_LANGUAGES still four UI langs', () => {
+    expect([...SUPPORTED_LANGUAGES]).toEqual(['en', 'fr', 'es', 'de']);
+  });
+
+  it('still no hreflang es/de on topic guides (content not translated)', () => {
+    for (const html of [triangle, composition]) {
+      expect(html).not.toContain('hreflang="es"');
+      expect(html).not.toContain('hreflang="de"');
+    }
+  });
+
+  it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
+    expect(switcherSource).not.toContain('/es/');
+    expect(switcherSource).not.toContain('/de/');
+  });
+});
