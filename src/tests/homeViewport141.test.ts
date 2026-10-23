@@ -31,7 +31,7 @@ describe('vague 1.41 — docs v1.40.0 + real ES UI + DE stub', () => {
     /* Docs headline moved to v1.41.0 in vague 1.42 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.40**');
     expect(nextSteps).toMatch(/no-go.*1\.41/);
-    expect(readme).toMatch(/v1\.4[012]\.0/);
+    expect(readme).toMatch(/v1\.4[0123]\.0/);
   });
 
   it('SUPPORTED_LANGUAGES still four langs; comments say ES real', () => {
