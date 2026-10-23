@@ -3282,11 +3282,13 @@
       ],
       "title": {
         "en": "Light & Color",
-        "fr": "Lumière & couleur"
+        "fr": "Lumière & couleur",
+        "es": "Luz y color"
       },
       "description": {
         "en": "Quality of light, white balance, golden hour and the mood of your images.",
-        "fr": "Qualité de lumière, balance des blancs, golden hour et ambiance de vos images."
+        "fr": "Qualité de lumière, balance des blancs, golden hour et ambiance de vos images.",
+        "es": "Calidad de la luz, balance de blancos, hora dorada y el ambiente de tus imágenes."
       },
       "questions": [
         {
@@ -3294,35 +3296,40 @@
           "type": "single",
           "text": {
             "en": "What is the “golden hour”?",
-            "fr": "Qu'est-ce que la « golden hour » ?"
+            "fr": "Qu'est-ce que la « golden hour » ?",
+            "es": "¿Qué es la « hora dorada » (golden hour)?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "The hour right after sunrise or before sunset, with soft warm light",
-                "fr": "L'heure juste après le lever ou avant le coucher du soleil, à la lumière douce et chaude"
+                "fr": "L'heure juste après le lever ou avant le coucher du soleil, à la lumière douce et chaude",
+                "es": "La hora justo después del amanecer o antes del atardecer, con luz suave y cálida"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Any time you use a gold reflector",
-                "fr": "Dès que l'on utilise un réflecteur doré"
+                "fr": "Dès que l'on utilise un réflecteur doré",
+                "es": "Cualquier momento en que uses un reflector dorado"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Midday when the sun is highest",
-                "fr": "Midi, quand le soleil est au zénith"
+                "fr": "Midi, quand le soleil est au zénith",
+                "es": "El mediodía, cuando el sol está más alto"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "The first hour after buying a camera",
-                "fr": "La première heure après l'achat d'un appareil"
+                "fr": "La première heure après l'achat d'un appareil",
+                "es": "La primera hora después de comprar una cámara"
               }
             }
           ],
@@ -3331,17 +3338,20 @@
           ],
           "explanation": {
             "en": "Near sunrise and sunset the sun is low: light is warmer, softer and more directional — flattering for portraits and landscapes.",
-            "fr": "Près du lever et du coucher, le soleil est bas : lumière plus chaude, plus douce et directionnelle — flatteuse pour portraits et paysages."
+            "fr": "Près du lever et du coucher, le soleil est bas : lumière plus chaude, plus douce et directionnelle — flatteuse pour portraits et paysages.",
+            "es": "Cerca del amanecer y del atardecer el sol está bajo: la luz es más cálida, suave y direccional — favorecedora para retratos y paisajes."
           },
           "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
           "imageAlt": {
             "en": "Golden hour light over a city skyline",
-            "fr": "Lumière dorée sur une skyline urbaine"
+            "fr": "Lumière dorée sur une skyline urbaine",
+            "es": "Luz de hora dorada sobre el horizonte de una ciudad"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3349,35 +3359,40 @@
           "type": "single",
           "text": {
             "en": "Hard light (e.g. midday sun, bare flash) typically creates…",
-            "fr": "Une lumière dure (ex. soleil de midi, flash nu) crée typiquement…"
+            "fr": "Une lumière dure (ex. soleil de midi, flash nu) crée typiquement…",
+            "es": "La luz dura (p. ej. sol del mediodía, flash directo) suele crear…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Automatic black-and-white conversion",
-                "fr": "Une conversion automatique en noir et blanc"
+                "fr": "Une conversion automatique en noir et blanc",
+                "es": "Conversión automática a blanco y negro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Almost no shadows at all",
-                "fr": "Presque aucune ombre"
+                "fr": "Presque aucune ombre",
+                "es": "Casi ninguna sombra"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only pastel colors",
-                "fr": "Uniquement des couleurs pastel"
+                "fr": "Uniquement des couleurs pastel",
+                "es": "Solo colores pastel"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Sharp, well-defined shadows and high contrast",
-                "fr": "Des ombres nettes, bien dessinées, et un fort contraste"
+                "fr": "Des ombres nettes, bien dessinées, et un fort contraste",
+                "es": "Sombras nítidas y bien definidas, y alto contraste"
               }
             }
           ],
@@ -3386,17 +3401,20 @@
           ],
           "explanation": {
             "en": "A small or distant light source relative to the subject produces hard light. Soft light (overcast sky, softbox) wraps around and softens shadows.",
-            "fr": "Une source petite ou lointaine par rapport au sujet produit une lumière dure. Une lumière douce (ciel couvert, softbox) enveloppe le sujet et adoucit les ombres."
+            "fr": "Une source petite ou lointaine par rapport au sujet produit une lumière dure. Une lumière douce (ciel couvert, softbox) enveloppe le sujet et adoucit les ombres.",
+            "es": "Una fuente pequeña o lejana respecto al sujeto produce luz dura. La luz suave (cielo nublado, softbox) envuelve y suaviza las sombras."
           },
           "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
           "imageAlt": {
             "en": "Sunlight through trees",
-            "fr": "Soleil à travers les arbres"
+            "fr": "Soleil à travers les arbres",
+            "es": "Luz solar a través de los árboles"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3404,35 +3422,40 @@
           "type": "multiple",
           "text": {
             "en": "Which lighting situations often call for adjusting white balance?",
-            "fr": "Quelles situations de lumière demandent souvent d'ajuster la balance des blancs ?"
+            "fr": "Quelles situations de lumière demandent souvent d'ajuster la balance des blancs ?",
+            "es": "¿En qué situaciones de iluminación suele hacer falta ajustar el balance de blancos?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Mixed light (daylight + artificial)",
-                "fr": "Lumière mixte (jour + artificielle)"
+                "fr": "Lumière mixte (jour + artificielle)",
+                "es": "Luz mixta (día + artificial)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Open shade under a blue sky",
-                "fr": "Ombre ouverte sous un ciel bleu"
+                "fr": "Ombre ouverte sous un ciel bleu",
+                "es": "Sombra abierta bajo un cielo azul"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only when the lens cap is on",
-                "fr": "Uniquement quand le bouchon d'objectif est en place"
+                "fr": "Uniquement quand le bouchon d'objectif est en place",
+                "es": "Solo cuando la tapa del objetivo está puesta"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Tungsten / warm indoor bulbs",
-                "fr": "Ampoules tungstène / intérieurs chauds"
+                "fr": "Ampoules tungstène / intérieurs chauds",
+                "es": "Tungsteno / bombillas cálidas de interior"
               }
             }
           ],
@@ -3443,17 +3466,20 @@
           ],
           "explanation": {
             "en": "Different light sources have different color temperatures. Correct white balance keeps neutrals neutral and skin tones natural.",
-            "fr": "Chaque source a sa température de couleur. Une bonne balance des blancs garde les neutres neutres et les teintes de peau naturelles."
+            "fr": "Chaque source a sa température de couleur. Une bonne balance des blancs garde les neutres neutres et les teintes de peau naturelles.",
+            "es": "Cada fuente de luz tiene una temperatura de color distinta. Un balance correcto mantiene los neutros neutros y los tonos de piel naturales."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
           "imageAlt": {
             "en": "Night sky with stars",
-            "fr": "Ciel étoilé"
+            "fr": "Ciel étoilé",
+            "es": "Cielo nocturno con estrellas"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3461,35 +3487,40 @@
           "type": "single",
           "text": {
             "en": "“Backlighting” means the main light is…",
-            "fr": "Le « contre-jour » signifie que la lumière principale est…"
+            "fr": "Le « contre-jour » signifie que la lumière principale est…",
+            "es": "« Contraluz » significa que la luz principal está…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Only from below the camera",
-                "fr": "Uniquement sous l'appareil"
+                "fr": "Uniquement sous l'appareil",
+                "es": "Solo desde debajo de la cámara"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Behind the subject, facing the camera",
-                "fr": "Derrière le sujet, face à l'appareil"
+                "fr": "Derrière le sujet, face à l'appareil",
+                "es": "Detrás del sujeto, hacia la cámara"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Turned off completely",
-                "fr": "Totalement éteinte"
+                "fr": "Totalement éteinte",
+                "es": "Completamente apagada"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Coming from the same direction as the lens always",
-                "fr": "Toujours dans l'axe de l'objectif"
+                "fr": "Toujours dans l'axe de l'objectif",
+                "es": "Siempre desde la misma dirección que el objetivo"
               }
             }
           ],
@@ -3498,17 +3529,20 @@
           ],
           "explanation": {
             "en": "Backlight can create silhouettes, rim light (glowing edges) or dreamy haze — powerful for mood and separation from the background.",
-            "fr": "Le contre-jour peut créer des silhouettes, un rim light (liseré lumineux) ou une brume douce — très utile pour l'ambiance et détacher le sujet du fond."
+            "fr": "Le contre-jour peut créer des silhouettes, un rim light (liseré lumineux) ou une brume douce — très utile pour l'ambiance et détacher le sujet du fond.",
+            "es": "El contraluz puede crear siluetas, luz de contorno (bordes luminosos) o una bruma soñadora — potente para el ambiente y la separación del fondo."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1493246507139-91e8fad9978e.avif",
           "imageAlt": {
             "en": "Misty morning light",
-            "fr": "Lumière de matin brumeux"
+            "fr": "Lumière de matin brumeux",
+            "es": "Luz de mañana brumosa"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3516,35 +3550,40 @@
           "type": "single",
           "text": {
             "en": "Color temperature is measured in…",
-            "fr": "La température de couleur se mesure en…"
+            "fr": "La température de couleur se mesure en…",
+            "es": "La temperatura de color se mide en…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Megapixels (MP)",
-                "fr": "Mégapixels (MP)"
+                "fr": "Mégapixels (MP)",
+                "es": "Megapíxeles (MP)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Decibels (dB)",
-                "fr": "Décibels (dB)"
+                "fr": "Décibels (dB)",
+                "es": "Decibelios (dB)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Kelvin (K)",
-                "fr": "Kelvin (K)"
+                "fr": "Kelvin (K)",
+                "es": "grados Kelvin (K)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "f-stops only",
-                "fr": "Uniquement en f-stops"
+                "fr": "Uniquement en f-stops",
+                "es": "Solo en pasos de diafragma (f-stops)"
               }
             }
           ],
@@ -3553,17 +3592,20 @@
           ],
           "explanation": {
             "en": "Color temperature uses the Kelvin scale (e.g. ~5600 K daylight, ~3200 K tungsten). Cameras and editing tools use these values for white balance.",
-            "fr": "La température de couleur utilise l'échelle Kelvin (ex. ~5600 K lumière du jour, ~3200 K tungstène). Appareils et logiciels s'en servent pour la balance des blancs."
+            "fr": "La température de couleur utilise l'échelle Kelvin (ex. ~5600 K lumière du jour, ~3200 K tungstène). Appareils et logiciels s'en servent pour la balance des blancs.",
+            "es": "La temperatura de color usa la escala Kelvin (p. ej. ~5600 K luz de día, ~3200 K tungsteno). Cámaras y editores usan estos valores para el balance de blancos."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1495616811223-4d98c6e9c869.avif",
           "imageAlt": {
             "en": "Warm sunset light over water",
-            "fr": "Lumière chaude de coucher de soleil sur l’eau"
+            "fr": "Lumière chaude de coucher de soleil sur l’eau",
+            "es": "Luz cálida de atardecer sobre el agua"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3571,35 +3613,40 @@
           "type": "single",
           "text": {
             "en": "What is 'diffused light'?",
-            "fr": "Qu'est-ce que la 'lumière diffusée' ?"
+            "fr": "Qu'est-ce que la 'lumière diffusée' ?",
+            "es": "¿Qué es la « luz difusa »?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Light that changes color constantly",
-                "fr": "Lumière qui change constamment de couleur"
+                "fr": "Lumière qui change constamment de couleur",
+                "es": "Luz que cambia de color constantemente"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Light that only comes from above",
-                "fr": "Lumière qui vient uniquement d'en haut"
+                "fr": "Lumière qui vient uniquement d'en haut",
+                "es": "Luz que solo llega desde arriba"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Light produced by LEDs only",
-                "fr": "Lumière produite uniquement par des LED"
+                "fr": "Lumière produite uniquement par des LED",
+                "es": "Luz producida solo por LEDs"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Light scattered in many directions, creating soft shadows",
-                "fr": "Lumière dispersée dans de nombreuses directions, créant des ombres douces"
+                "fr": "Lumière dispersée dans de nombreuses directions, créant des ombres douces",
+                "es": "Luz dispersada en muchas direcciones, que crea sombras suaves"
               }
             }
           ],
@@ -3608,17 +3655,20 @@
           ],
           "explanation": {
             "en": "Diffused light comes from a large source or is scattered (clouds, softboxes), minimizing harsh shadows and reducing contrast.",
-            "fr": "La lumière diffusée provient d'une grande source ou est dispersée (nuages, softboxes), minimisant les ombres dures et réduisant le contraste."
+            "fr": "La lumière diffusée provient d'une grande source ou est dispersée (nuages, softboxes), minimisant les ombres dures et réduisant le contraste.",
+            "es": "La luz difusa proviene de una fuente grande o está dispersada (nubes, softboxes), minimizando sombras duras y reduciendo el contraste."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1418065460487-3e41a6c84dc5.avif",
           "imageAlt": {
             "en": "Soft overcast light on a misty landscape",
-            "fr": "Lumière douce de ciel couvert sur un paysage brumeux"
+            "fr": "Lumière douce de ciel couvert sur un paysage brumeux",
+            "es": "Luz suave de cielo nublado en un paisaje brumoso"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3626,35 +3676,40 @@
           "type": "single",
           "text": {
             "en": "What is 'chromatic aberration'?",
-            "fr": "Qu'est-ce que l'aberration chromatique ?"
+            "fr": "Qu'est-ce que l'aberration chromatique ?",
+            "es": "¿Qué es la « aberración cromática »?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "When colors change over time in printing",
-                "fr": "Quand les couleurs changent avec le temps à l'impression"
+                "fr": "Quand les couleurs changent avec le temps à l'impression",
+                "es": "Cuando los colores cambian con el tiempo en la impresión"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Color fringes around high-contrast edges due to lens limitations",
-                "fr": "Franges colorées autour des contours à fort contraste dues aux limites de l'objectif"
+                "fr": "Franges colorées autour des contours à fort contraste dues aux limites de l'objectif",
+                "es": "Franjas de color alrededor de bordes de alto contraste por limitaciones del objetivo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A camera setting for vibrant colors",
-                "fr": "Un réglage d'appareil pour des couleurs vibrantes"
+                "fr": "Un réglage d'appareil pour des couleurs vibrantes",
+                "es": "Un ajuste de cámara para colores vivos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "The ability to see infrared light",
-                "fr": "La capacité de voir la lumière infrarouge"
+                "fr": "La capacité de voir la lumière infrarouge",
+                "es": "La capacidad de ver luz infrarroja"
               }
             }
           ],
@@ -3663,7 +3718,8 @@
           ],
           "explanation": {
             "en": "Different wavelengths focus at different points, causing purple/green fringes. Quality lenses and post-processing can reduce it.",
-            "fr": "Différentes longueurs d'onde se concentrent à des points différents, causant des franges violettes/vertes. Les objectifs de qualité et le post-traitement peuvent le réduire."
+            "fr": "Différentes longueurs d'onde se concentrent à des points différents, causant des franges violettes/vertes. Les objectifs de qualité et le post-traitement peuvent le réduire.",
+            "es": "Las distintas longitudes de onda enfocan en puntos diferentes, provocando franjas púrpura/verde. Objetivos de calidad y el postproceso pueden reducirlas."
           },
           "difficulty": "easy"
         },
@@ -3672,35 +3728,40 @@
           "type": "multiple",
           "text": {
             "en": "Which tools help control light direction?",
-            "fr": "Quels outils aident à contrôler la direction de la lumière ?"
+            "fr": "Quels outils aident à contrôler la direction de la lumière ?",
+            "es": "¿Qué herramientas ayudan a controlar la dirección de la luz?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Flags and barn doors",
-                "fr": "Flag et battants"
+                "fr": "Flag et battants",
+                "es": "Banderas (flags) y ventanas (barn doors)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Reflectors",
-                "fr": "Réflecteurs"
+                "fr": "Réflecteurs",
+                "es": "Reflectores"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Diffusers and softboxes",
-                "fr": "Diffuseurs et softboxes"
+                "fr": "Diffuseurs et softboxes",
+                "es": "Difusores y softboxes"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Memory cards",
-                "fr": "Cartes mémoire"
+                "fr": "Cartes mémoire",
+                "es": "Tarjetas de memoria"
               }
             }
           ],
@@ -3711,17 +3772,20 @@
           ],
           "explanation": {
             "en": "Reflectors bounce light, flags block it, diffusers/softboxes scatter it. Memory cards store data, not control light.",
-            "fr": "Les réflecteurs renvoient la lumière, les flags la bloquent, diffuseurs/softboxes la dispersent. Les cartes mémoire stockent des données, pas contrôler la lumière."
+            "fr": "Les réflecteurs renvoient la lumière, les flags la bloquent, diffuseurs/softboxes la dispersent. Les cartes mémoire stockent des données, pas contrôler la lumière.",
+            "es": "Los reflectores rebotan la luz, las banderas la bloquean, los difusores/softboxes la dispersan. Las tarjetas de memoria guardan datos, no controlan la luz."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
           "imageAlt": {
             "en": "Studio lighting gear and camera",
-            "fr": "Matériel d’éclairage studio et appareil photo"
+            "fr": "Matériel d’éclairage studio et appareil photo",
+            "es": "Equipo de iluminación de estudio y cámara"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3729,35 +3793,40 @@
           "type": "single",
           "text": {
             "en": "What is 'color grading' in post-production?",
-            "fr": "Qu'est-ce que le 'color grading' en post-production ?"
+            "fr": "Qu'est-ce que le 'color grading' en post-production ?",
+            "es": "¿Qué es el « color grading » en postproducción?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Changing the lens focal length",
-                "fr": "Modifier la focale de l'objectif"
+                "fr": "Modifier la focale de l'objectif",
+                "es": "Cambiar la distancia focal del objetivo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Adjusting the shutter speed",
-                "fr": "Ajuster la vitesse d'obturation"
+                "fr": "Ajuster la vitesse d'obturation",
+                "es": "Ajustar la velocidad de obturación"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Increasing the camera's megapixel count",
-                "fr": "Augmenter le nombre de mégapixels de l'appareil"
+                "fr": "Augmenter le nombre de mégapixels de l'appareil",
+                "es": "Aumentar los megapíxeles de la cámara"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Adjusting colors creatively to establish mood and style",
-                "fr": "Ajuster les couleurs créativement pour établir l'ambiance et le style"
+                "fr": "Ajuster les couleurs créativement pour établir l'ambiance et le style",
+                "es": "Ajustar los colores de forma creativa para fijar ambiente y estilo"
               }
             }
           ],
@@ -3766,17 +3835,20 @@
           ],
           "explanation": {
             "en": "Color grading shapes the visual tone and emotion of an image or film, going beyond simple white balance correction.",
-            "fr": "Le color grading façonne le ton visuel et l'émotion d'une image ou film, allant au-delà de la simple correction de balance des blancs."
+            "fr": "Le color grading façonne le ton visuel et l'émotion d'une image ou film, allant au-delà de la simple correction de balance des blancs.",
+            "es": "El color grading da forma al tono visual y a la emoción de una imagen o película, más allá de una simple corrección de balance de blancos."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1499750310107-5fef28a66643.avif",
           "imageAlt": {
             "en": "Laptop on a desk — color grading in post territory",
-            "fr": "Portable sur un bureau — terrain étalonnage / color grading en post"
+            "fr": "Portable sur un bureau — terrain étalonnage / color grading en post",
+            "es": "Portátil en un escritorio — territorio del color grading en post"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3784,35 +3856,40 @@
           "type": "single",
           "text": {
             "en": "What is 'flash freeze' in photography?",
-            "fr": "Qu'est-ce que le 'flash freeze' en photographie ?"
+            "fr": "Qu'est-ce que le 'flash freeze' en photographie ?",
+            "es": "¿Qué es el « flash freeze » en fotografía?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Using a fast flash duration to freeze motion even at slower shutter speeds",
-                "fr": "Utiliser une durée de flash rapide pour figer le mouvement même à des vitesses d'obturation plus lentes"
+                "fr": "Utiliser une durée de flash rapide pour figer le mouvement même à des vitesses d'obturation plus lentes",
+                "es": "Usar una duración de flash muy corta para congelar el movimiento aunque el obturador sea más lento"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Freezing objects with ice",
-                "fr": "Geler des objets avec de la glace"
+                "fr": "Geler des objets avec de la glace",
+                "es": "Congelar objetos con hielo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Taking photos in freezing temperatures",
-                "fr": "Prendre des photos par températures glaciales"
+                "fr": "Prendre des photos par températures glaciales",
+                "es": "Hacer fotos a temperaturas bajo cero"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A type of slow shutter technique",
-                "fr": "Un type de technique de longue exposition"
+                "fr": "Un type de technique de longue exposition",
+                "es": "Un tipo de técnica de obturador lento"
               }
             }
           ],
@@ -3821,7 +3898,8 @@
           ],
           "explanation": {
             "en": "Flash duration can be as short as 1/1000s or faster, freezing motion independently of the camera's shutter speed setting.",
-            "fr": "La durée du flash peut être aussi courte que 1/1000s ou plus, figeant le mouvement indépendamment du réglage de vitesse d'obturation de l'appareil."
+            "fr": "La durée du flash peut être aussi courte que 1/1000s ou plus, figeant le mouvement indépendamment du réglage de vitesse d'obturation de l'appareil.",
+            "es": "La duración del flash puede ser de 1/1000 s o más rápida, congelando el movimiento con independencia del obturador de la cámara."
           },
           "difficulty": "medium"
         },
@@ -3830,35 +3908,40 @@
           "type": "multiple",
           "text": {
             "en": "Which scenarios benefit from using a reflector?",
-            "fr": "Quels scénarios bénéficient de l'utilisation d'un réflecteur ?"
+            "fr": "Quels scénarios bénéficient de l'utilisation d'un réflecteur ?",
+            "es": "¿En qué escenarios ayuda usar un reflector?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Bouncing light to create softer illumination",
-                "fr": "Rebondir la lumière pour créer un éclairage plus doux"
+                "fr": "Rebondir la lumière pour créer un éclairage plus doux",
+                "es": "Rebotar luz para una iluminación más suave"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Filling shadows on a subject's face outdoors",
-                "fr": "Remplir les ombres sur le visage d'un sujet en extérieur"
+                "fr": "Remplir les ombres sur le visage d'un sujet en extérieur",
+                "es": "Rellenar sombras en el rostro de un sujeto al aire libre"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Adding catchlights to eyes in portraits",
-                "fr": "Ajouter des reflets aux yeux dans les portraits"
+                "fr": "Ajouter des reflets aux yeux dans les portraits",
+                "es": "Añadir brillos (catchlights) en los ojos en retratos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Increasing the camera's ISO",
-                "fr": "Augmenter l'ISO de l'appareil"
+                "fr": "Augmenter l'ISO de l'appareil",
+                "es": "Subir el ISO de la cámara"
               }
             }
           ],
@@ -3869,17 +3952,20 @@
           ],
           "explanation": {
             "en": "Reflectors redirect existing light to fill shadows, add eye sparkle, or soften harsh illumination without additional equipment.",
-            "fr": "Les réflecteurs redirigent la lumière existante pour remplir les ombres, ajouter des reflets aux yeux ou adoucir l'éclairage sans équipement supplémentaire."
+            "fr": "Les réflecteurs redirigent la lumière existante pour remplir les ombres, ajouter des reflets aux yeux ou adoucir l'éclairage sans équipement supplémentaire.",
+            "es": "Los reflectores redirigen la luz existente para rellenar sombras, añadir brillo en los ojos o suavizar una iluminación dura sin equipo extra."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
           "imageAlt": {
             "en": "Outdoor portrait in directional daylight",
-            "fr": "Portrait en extérieur sous lumière directionnelle"
+            "fr": "Portrait en extérieur sous lumière directionnelle",
+            "es": "Retrato al aire libre con luz diurna direccional"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -3887,35 +3973,40 @@
           "type": "single",
           "text": {
             "en": "What is 'magenta/green color cast' commonly associated with?",
-            "fr": "Qu'est-ce que la 'teinte magenta/verte' est communément associée à ?"
+            "fr": "Qu'est-ce que la 'teinte magenta/verte' est communément associée à ?",
+            "es": "¿Con qué se asocia a menudo un « dominante magenta/verde »?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Fluorescent lighting incorrect white balance",
-                "fr": "Éclairage fluorescent avec balance des blancs incorrecte"
+                "fr": "Éclairage fluorescent avec balance des blancs incorrecte",
+                "es": "Balance de blancos incorrecto bajo fluorescentes"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Black and white film",
-                "fr": "Film noir et blanc"
+                "fr": "Film noir et blanc",
+                "es": "Película en blanco y negro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Sunlight at golden hour",
-                "fr": "Lumière du soleil à la golden hour"
+                "fr": "Lumière du soleil à la golden hour",
+                "es": "Luz solar en la hora dorada"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Digital sensor overheating",
-                "fr": "Surchauffe du capteur numérique"
+                "fr": "Surchauffe du capteur numérique",
+                "es": "Sobrecalentamiento del sensor digital"
               }
             }
           ],
@@ -3924,7 +4015,8 @@
           ],
           "explanation": {
             "en": "Fluorescent lights often have uneven spectra causing green or magenta casts. Custom white balance or presets fix this.",
-            "fr": "Les lumières fluorescentes ont souvent des spectres inégaux causant des teintes vertes ou magenta. La balance des blancs personnalisée ou les préréglages corrigent cela."
+            "fr": "Les lumières fluorescentes ont souvent des spectres inégaux causant des teintes vertes ou magenta. La balance des blancs personnalisée ou les préréglages corrigent cela.",
+            "es": "Los fluorescentes suelen tener espectros irregulares que provocan dominantes verdes o magenta. Un balance personalizado o presets lo corrigen."
           },
           "difficulty": "medium"
         },
@@ -3933,35 +4025,40 @@
           "type": "single",
           "text": {
             "en": "What is 'light painting'?",
-            "fr": "Qu'est-ce que la 'peinture lumineuse' ?"
+            "fr": "Qu'est-ce que la 'peinture lumineuse' ?",
+            "es": "¿Qué es el « light painting »?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Painting walls with colored lights",
-                "fr": "Peindre des murs avec des lumières colorées"
+                "fr": "Peindre des murs avec des lumières colorées",
+                "es": "Pintar paredes con luces de colores"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Using paint to cover camera lenses",
-                "fr": "Utiliser de la peinture pour couvrir les objectifs"
+                "fr": "Utiliser de la peinture pour couvrir les objectifs",
+                "es": "Usar pintura para cubrir los objetivos"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Creating images by moving light sources during long exposures",
-                "fr": "Créer des images en déplaçant des sources lumineuses pendant de longues expositions"
+                "fr": "Créer des images en déplaçant des sources lumineuses pendant de longues expositions",
+                "es": "Crear imágenes moviendo fuentes de luz durante exposiciones largas"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A digital filter effect",
-                "fr": "Un effet de filtre numérique"
+                "fr": "Un effet de filtre numérique",
+                "es": "Un efecto de filtro digital"
               }
             }
           ],
@@ -3970,7 +4067,8 @@
           ],
           "explanation": {
             "en": "Light painting uses long exposures in darkness to 'draw' with light sources like flashlights, LEDs, or fire.",
-            "fr": "La peinture lumineuse utilise de longues expositions dans l'obscurité pour 'dessiner' avec des sources lumineuses comme lampes torches, LED ou feu."
+            "fr": "La peinture lumineuse utilise de longues expositions dans l'obscurité pour 'dessiner' avec des sources lumineuses comme lampes torches, LED ou feu.",
+            "es": "El light painting usa exposiciones largas en la oscuridad para « dibujar » con linternas, LEDs o fuego."
           },
           "difficulty": "medium"
         },
@@ -3979,35 +4077,40 @@
           "type": "multiple",
           "text": {
             "en": "What are the characteristics of 'blue hour' photography?",
-            "fr": "Quelles sont les caractéristiques de la photographie de 'l'heure bleue' ?"
+            "fr": "Quelles sont les caractéristiques de la photographie de 'l'heure bleue' ?",
+            "es": "¿Cuáles son las características de la fotografía en la « hora azul »?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Artificial lights become prominent against the blue backdrop",
-                "fr": "Les lumières artificielles deviennent proéminentes contre le fond bleu"
+                "fr": "Les lumières artificielles deviennent proéminentes contre le fond bleu",
+                "es": "Las luces artificiales destacan sobre el fondo azul"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Requires midday sunlight",
-                "fr": "Nécessite la lumière du soleil de midi"
+                "fr": "Nécessite la lumière du soleil de midi",
+                "es": "Requiere sol del mediodía"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Deep blue tones in the sky",
-                "fr": "Tonautés bleu profond dans le ciel"
+                "fr": "Tonautés bleu profond dans le ciel",
+                "es": "Tonos azul profundos en el cielo"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Occurs just before sunrise or after sunset",
-                "fr": "Se produit juste avant le lever ou après le coucher du soleil"
+                "fr": "Se produit juste avant le lever ou après le coucher du soleil",
+                "es": "Ocurre justo antes del amanecer o después del atardecer"
               }
             }
           ],
@@ -4018,17 +4121,20 @@
           ],
           "explanation": {
             "en": "Blue hour offers a magical, serene quality with cool tones and the contrast between natural blue and warm artificial lights.",
-            "fr": "L'heure bleue offre une qualité magique et sereine avec des tons froids et le contraste entre le bleu naturel et les lumières artificielles chaudes."
+            "fr": "L'heure bleue offre une qualité magique et sereine avec des tons froids et le contraste entre le bleu naturel et les lumières artificielles chaudes.",
+            "es": "La hora azul ofrece una calidad mágica y serena, con tonos fríos y el contraste entre el azul natural y las luces artificiales cálidas."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1501594907352-04cda38ebc29.avif",
           "imageAlt": {
             "en": "Twilight blue sky over mountains",
-            "fr": "Ciel bleu d’heure bleue au-dessus des montagnes"
+            "fr": "Ciel bleu d’heure bleue au-dessus des montagnes",
+            "es": "Cielo azul crepuscular sobre montañas"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -4036,35 +4142,40 @@
           "type": "single",
           "text": {
             "en": "What is 'HDR' in photography?",
-            "fr": "Qu'est-ce que le 'HDR' en photographie ?"
+            "fr": "Qu'est-ce que le 'HDR' en photographie ?",
+            "es": "¿Qué es el « HDR » en fotografía?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "High Definition Resolution: a camera sensor type",
-                "fr": "Résolution Haute Définition : un type de capteur d'appareil"
+                "fr": "Résolution Haute Définition : un type de capteur d'appareil",
+                "es": "High Definition Resolution: un tipo de sensor"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "High Dynamic Range: combining multiple exposures to capture detail in shadows and highlights",
-                "fr": "Gamme Dynamique Élevée : combiner plusieurs expositions pour capturer les détails dans les ombres et les hautes lumières"
+                "fr": "Gamme Dynamique Élevée : combiner plusieurs expositions pour capturer les détails dans les ombres et les hautes lumières",
+                "es": "High Dynamic Range: combinar varias exposiciones para detalle en sombras y altas luces"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Horizontal Directional Reflection: a lens property",
-                "fr": "Réflexion Directionnelle Horizontale : une propriété d'objectif"
+                "fr": "Réflexion Directionnelle Horizontale : une propriété d'objectif",
+                "es": "Horizontal Directional Reflection: una propiedad del objetivo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Hybrid Digital Recording: a video format",
-                "fr": "Enregistrement Numérique Hybride : un format vidéo"
+                "fr": "Enregistrement Numérique Hybride : un format vidéo",
+                "es": "Hybrid Digital Recording: un formato de vídeo"
               }
             }
           ],
@@ -4073,7 +4184,8 @@
           ],
           "explanation": {
             "en": "HDR merges bracketed exposures to retain detail across extreme light ranges beyond what a single shot can capture.",
-            "fr": "Le HDR fusionne des expositions bracketées pour conserver les détails à travers des gammes de lumière extrêmes au-delà de ce qu'une seule prise peut capturer."
+            "fr": "Le HDR fusionne des expositions bracketées pour conserver les détails à travers des gammes de lumière extrêmes au-delà de ce qu'une seule prise peut capturer.",
+            "es": "El HDR fusiona exposiciones en bracketing para conservar detalle en rangos de luz extremos que una sola toma no cubre."
           },
           "difficulty": "medium"
         },
@@ -4082,35 +4194,40 @@
           "type": "single",
           "text": {
             "en": "What does 'color temperature' below 3200K typically produce?",
-            "fr": "Qu'est-ce qu'une 'température de couleur' inférieure à 3200K produit typiquement ?"
+            "fr": "Qu'est-ce qu'une 'température de couleur' inférieure à 3200K produit typiquement ?",
+            "es": "¿Qué produce típicamente una temperatura de color por debajo de 3200 K?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Black and white only",
-                "fr": "Uniquement noir et blanc"
+                "fr": "Uniquement noir et blanc",
+                "es": "Solo blanco y negro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Cool blue tones",
-                "fr": "Tonautés bleues froides"
+                "fr": "Tonautés bleues froides",
+                "es": "Tonos azul fríos"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Pure white light",
-                "fr": "Lumière blanche pure"
+                "fr": "Lumière blanche pure",
+                "es": "Luz blanca pura"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Warm, orange-red tones (like candlelight)",
-                "fr": "Tonautés chaudes, orange-rouge (comme la lumière de bougie)"
+                "fr": "Tonautés chaudes, orange-rouge (comme la lumière de bougie)",
+                "es": "Tonos cálidos naranja-rojo (como la luz de vela)"
               }
             }
           ],
@@ -4119,7 +4236,8 @@
           ],
           "explanation": {
             "en": "Lower Kelvin values (<3200K) are warm/orange (candlelight, tungsten), while higher values (>5600K) are cool/blue (shade, overcast).",
-            "fr": "Les valeurs Kelvin basses (<3200K) sont chaudes/orange (bougie, tungstène), tandis que les valeurs élevées (>5600K) sont froides/bleues (ombre, couvert)."
+            "fr": "Les valeurs Kelvin basses (<3200K) sont chaudes/orange (bougie, tungstène), tandis que les valeurs élevées (>5600K) sont froides/bleues (ombre, couvert).",
+            "es": "Valores Kelvin bajos (<3200 K) son cálidos/naranja (vela, tungsteno); valores altos (>5600 K) son fríos/azul (sombra, nublado)."
           },
           "difficulty": "hard"
         },
@@ -4128,35 +4246,40 @@
           "type": "multiple",
           "text": {
             "en": "Which factors influence the mood created by light?",
-            "fr": "Quels facteurs influencent l'ambiance créée par la lumière ?"
+            "fr": "Quels facteurs influencent l'ambiance créée par la lumière ?",
+            "es": "¿Qué factores influyen en el ambiente creado por la luz?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Color temperature",
-                "fr": "Température de couleur"
+                "fr": "Température de couleur",
+                "es": "La temperatura de color"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Direction of light",
-                "fr": "Direction de la lumière"
+                "fr": "Direction de la lumière",
+                "es": "La dirección de la luz"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Camera brand",
-                "fr": "Marque d'appareil"
+                "fr": "Marque d'appareil",
+                "es": "La marca de la cámara"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Hardness or softness",
-                "fr": "Dureté ou douceur"
+                "fr": "Dureté ou douceur",
+                "es": "La dureza o suavidad"
               }
             }
           ],
@@ -4167,7 +4290,8 @@
           ],
           "explanation": {
             "en": "Light direction, temperature, and quality dramatically affect emotional impact. Camera brand has no direct effect on mood.",
-            "fr": "La direction, la température et la qualité de la lumière affectent dramatiquement l'impact émotionnel. La marque d'appareil n'a aucun effet direct sur l'ambiance."
+            "fr": "La direction, la température et la qualité de la lumière affectent dramatiquement l'impact émotionnel. La marque d'appareil n'a aucun effet direct sur l'ambiance.",
+            "es": "Dirección, temperatura y calidad de la luz afectan mucho el impacto emocional. La marca de la cámara no influye directamente en el ambiente."
           },
           "difficulty": "hard"
         },
@@ -4176,35 +4300,40 @@
           "type": "single",
           "text": {
             "en": "What is 'rembrandt lighting' in portraiture?",
-            "fr": "Qu'est-ce que l'éclairage 'Rembrandt' en portrait ?"
+            "fr": "Qu'est-ce que l'éclairage 'Rembrandt' en portrait ?",
+            "es": "¿Qué es la « iluminación Rembrandt » en el retrato?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Even lighting from the front",
-                "fr": "Éclairage uniforme venant de face"
+                "fr": "Éclairage uniforme venant de face",
+                "es": "Iluminación uniforme frontal"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Light coming only from below",
-                "fr": "Lumière venant uniquement d'en bas"
+                "fr": "Lumière venant uniquement d'en bas",
+                "es": "Luz que solo llega desde abajo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A pattern creating a small triangle of light on the shadowed cheek",
-                "fr": "Un motif créant un petit triangle de lumière sur la joue ombragée"
+                "fr": "Un motif créant un petit triangle de lumière sur la joue ombragée",
+                "es": "Un patrón que crea un pequeño triángulo de luz en la mejilla en sombra"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "No shadows on the face",
-                "fr": "Pas d'ombres sur le visage"
+                "fr": "Pas d'ombres sur le visage",
+                "es": "Ninguna sombra en el rostro"
               }
             }
           ],
@@ -4213,17 +4342,20 @@
           ],
           "explanation": {
             "en": "Named after Rembrandt's paintings, this classic portrait lighting creates dramatic, dimensional效果 with a characteristic light triangle.",
-            "fr": "Nommé d'après les peintures de Rembrandt, cet éclairage de portrait classique crée un effet dramatique et dimensionnel avec un triangle lumineux caractéristique."
+            "fr": "Nommé d'après les peintures de Rembrandt, cet éclairage de portrait classique crée un effet dramatique et dimensionnel avec un triangle lumineux caractéristique.",
+            "es": "Inspirada en los cuadros de Rembrandt, esta iluminación clásica de retrato crea un efecto dramático y dimensional con un triángulo de luz característico."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1502082553048-f009c37129b9.avif",
           "imageAlt": {
             "en": "Dramatic side-lit portrait silhouette",
-            "fr": "Portrait en silhouette à éclairage latéral dramatique"
+            "fr": "Portrait en silhouette à éclairage latéral dramatique",
+            "es": "Silueta de retrato con luz lateral dramática"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -4231,35 +4363,40 @@
           "type": "single",
           "text": {
             "en": "What is 'light falloff'?",
-            "fr": "Qu'est-ce que la 'chute de lumière' ?"
+            "fr": "Qu'est-ce que la 'chute de lumière' ?",
+            "es": "¿Qué es la « caída de la luz » (light falloff)?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "A camera feature for low light",
-                "fr": "Une fonctionnalité d'appareil pour basse lumière"
+                "fr": "Une fonctionnalité d'appareil pour basse lumière",
+                "es": "Una función de cámara para poca luz"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "The amount of light entering the lens",
-                "fr": "La quantité de lumière entrant dans l'objectif"
+                "fr": "La quantité de lumière entrant dans l'objectif",
+                "es": "La cantidad de luz que entra por el objetivo"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "When light changes color over time",
-                "fr": "Quand la lumière change de couleur avec le temps"
+                "fr": "Quand la lumière change de couleur avec le temps",
+                "es": "Cuando la luz cambia de color con el tiempo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "The decrease in light intensity as distance from the source increases",
-                "fr": "La diminution de l'intensité lumineuse à mesure que la distance par rapport à la source augmente"
+                "fr": "La diminution de l'intensité lumineuse à mesure que la distance par rapport à la source augmente",
+                "es": "La disminución de la intensidad de la luz al aumentar la distancia a la fuente"
               }
             }
           ],
@@ -4268,7 +4405,8 @@
           ],
           "explanation": {
             "en": "Light follows the inverse square law: doubling distance reduces intensity to 1/4. Understanding falloff is crucial for lighting design.",
-            "fr": "La lumière suit la loi du carré inverse : doubler la distance réduit l'intensité à 1/4. Comprendre la chute est crucial pour la conception d'éclairage."
+            "fr": "La lumière suit la loi du carré inverse : doubler la distance réduit l'intensité à 1/4. Comprendre la chute est crucial pour la conception d'éclairage.",
+            "es": "La luz sigue la ley del inverso del cuadrado: duplicar la distancia reduce la intensidad a 1/4. Entender la caída es clave para diseñar la iluminación."
           },
           "difficulty": "hard"
         },
@@ -4277,35 +4415,40 @@
           "type": "multiple",
           "text": {
             "en": "Which techniques help manage high-contrast scenes?",
-            "fr": "Quelles techniques aident à gérer les scènes à fort contraste ?"
+            "fr": "Quelles techniques aident à gérer les scènes à fort contraste ?",
+            "es": "¿Qué técnicas ayudan a gestionar escenas de alto contraste?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Using fill flash or reflectors",
-                "fr": "Utiliser un flash de remplissage ou des réflecteurs"
+                "fr": "Utiliser un flash de remplissage ou des réflecteurs",
+                "es": "Usar flash de relleno o reflectores"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Increasing ISO dramatically",
-                "fr": "Augmenter drastiquement l'ISO"
+                "fr": "Augmenter drastiquement l'ISO",
+                "es": "Subir el ISO de forma drástica"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "HDR blending",
-                "fr": "Fusion HDR"
+                "fr": "Fusion HDR",
+                "es": "Fusión HDR"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Graduated neutral density filters",
-                "fr": "Filtres ND gradués"
+                "fr": "Filtres ND gradués",
+                "es": "Filtros de densidad neutra graduados"
               }
             }
           ],
@@ -4316,17 +4459,20 @@
           ],
           "explanation": {
             "en": "These techniques balance extreme light differences. Increasing ISO would add noise without solving the contrast problem.",
-            "fr": "Ces techniques équilibrent les différences lumineuses extrêmes. Augmenter l'ISO ajouterait du bruit sans résoudre le problème de contraste."
+            "fr": "Ces techniques équilibrent les différences lumineuses extrêmes. Augmenter l'ISO ajouterait du bruit sans résoudre le problème de contraste.",
+            "es": "Estas técnicas equilibran diferencias extremas de luz. Subir el ISO añade ruido sin resolver el contraste."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1470252649378-9c29740c9fa8.avif",
           "imageAlt": {
             "en": "High-contrast sunrise through trees",
-            "fr": "Lever de soleil à fort contraste à travers les arbres"
+            "fr": "Lever de soleil à fort contraste à travers les arbres",
+            "es": "Amanecer de alto contraste a través de los árboles"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -4335,35 +4481,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Harsh noon sun, portrait outdoors. Best first rescue?",
-            "fr": "Soleil de midi cruel, portrait outdoor. Premier sauvetage ?"
+            "fr": "Soleil de midi cruel, portrait outdoor. Premier sauvetage ?",
+            "es": "Sol duro del mediodía, retrato al aire libre. ¿Mejor primer rescate?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Shoot into open shade or bounce/fill the face",
-                "fr": "Passer à l’ombre ouverte ou déboucher le visage"
+                "fr": "Passer à l’ombre ouverte ou déboucher le visage",
+                "es": "Disparar en sombra abierta o rebotar/rellenar el rostro"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Use a red gel on camera for “cinema”",
-                "fr": "Mettre un gélatine rouge « cinéma » sur l’appareil"
+                "fr": "Mettre un gélatine rouge « cinéma » sur l’appareil",
+                "es": "Poner un gel rojo en la cámara « para cine »"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Underexpose 3 stops and lift shadows later only",
-                "fr": "Sous-exposer de 3 IL et ne rattraper qu’en post"
+                "fr": "Sous-exposer de 3 IL et ne rattraper qu’en post",
+                "es": "Subexponer 3 pasos y levantar solo las sombras después"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Raise ISO to 12800 in bright sun",
-                "fr": "Monter à ISO 12800 en plein soleil"
+                "fr": "Monter à ISO 12800 en plein soleil",
+                "es": "Subir el ISO a 12800 a pleno sol"
               }
             }
           ],
@@ -4372,16 +4523,19 @@
           ],
           "explanation": {
             "en": "Open shade or fill light softens raccoon eyes. Fighting hard sun with ISO alone won’t fix contrast.",
-            "fr": "Ombre ouverte ou lumière d’appoint adoucit les ombres dures. Monter l’ISO ne règle pas le contraste."
+            "fr": "Ombre ouverte ou lumière d’appoint adoucit les ombres dures. Monter l’ISO ne règle pas le contraste.",
+            "es": "La sombra abierta o la luz de relleno suavizan las « ojos de mapache ». Luchar contra el sol duro solo con el ISO no arregla el contraste."
           },
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait in daylight",
-            "fr": "Portrait en lumière du jour"
+            "fr": "Portrait en lumière du jour",
+            "es": "Retrato a la luz del día"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -4390,35 +4544,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Indoor tungsten + daylight from a window in the same frame. What often looks “wrong”?",
-            "fr": "Tungstène indoor + fenêtre en lumière du jour dans le même cadre. Qu’est-ce qui cloche souvent ?"
+            "fr": "Tungstène indoor + fenêtre en lumière du jour dans le même cadre. Qu’est-ce qui cloche souvent ?",
+            "es": "Tungsteno de interior + luz de día por la ventana en el mismo encuadre. ¿Qué suele verse « mal »?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "ISO locks at 50 forever",
-                "fr": "L’ISO se bloque à 50 pour toujours"
+                "fr": "L’ISO se bloque à 50 pour toujours",
+                "es": "El ISO se bloquea en 50 para siempre"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "The lens automatically becomes a fisheye",
-                "fr": "L’objectif devient automatiquement un fisheye"
+                "fr": "L’objectif devient automatiquement un fisheye",
+                "es": "El objetivo se convierte automáticamente en ojo de pez"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Focus can only work on infinity",
-                "fr": "La MAP ne fonctionne qu’à l’infini"
+                "fr": "La MAP ne fonctionne qu’à l’infini",
+                "es": "El enfoque solo funciona en infinito"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Mixed white balance / color casts fighting each other",
-                "fr": "Balances des blancs mixtes / dominantes qui se battent"
+                "fr": "Balances des blancs mixtes / dominantes qui se battent",
+                "es": "Balances de blancos mezclados / dominantes de color en conflicto"
               }
             }
           ],
@@ -4427,16 +4586,19 @@
           ],
           "explanation": {
             "en": "Two color temperatures in one shot create orange/blue fights. Pick a hero light or gel/correct one source.",
-            "fr": "Deux températures de couleur = guerre orange/bleu. Choisis une lumière dominante ou corrige/gélatine une source."
+            "fr": "Deux températures de couleur = guerre orange/bleu. Choisis une lumière dominante ou corrige/gélatine une source.",
+            "es": "Dos temperaturas de color en una toma crean luchas naranja/azul. Elige una luz protagonista o gelifica/corrige una de las fuentes."
           },
           "imageUrl": "/images/packs/photo-1554118811-1e0d58224f24.avif",
           "imageAlt": {
             "en": "Warm indoor cafe light mixed with cooler ambience — mixed WB challenge",
-            "fr": "Lumière chaude de café mixée à une ambiance plus froide — défi balance des blancs"
+            "fr": "Lumière chaude de café mixée à une ambiance plus froide — défi balance des blancs",
+            "es": "Luz cálida de café interior mezclada con ambiente más frío — reto de WB mixto"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -4445,35 +4607,40 @@
           "difficulty": "medium",
           "text": {
             "en": "“Golden hour is the only good light.” What’s the fairest take?",
-            "fr": "« Seule la golden hour est une bonne lumière. » Quelle lecture est la plus juste ?"
+            "fr": "« Seule la golden hour est une bonne lumière. » Quelle lecture est la plus juste ?",
+            "es": "« La hora dorada es la única buena luz. » ¿Cuál es la lectura más justa?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "True only for smartphones",
-                "fr": "Vrai seulement pour les smartphones"
+                "fr": "Vrai seulement pour les smartphones",
+                "es": "Cierto solo para smartphones"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "True only in black and white",
-                "fr": "Vrai seulement en noir et blanc"
+                "fr": "Vrai seulement en noir et blanc",
+                "es": "Cierto solo en blanco y negro"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "True — avoid every other time of day",
-                "fr": "Vrai — éviter toutes les autres heures"
+                "fr": "Vrai — éviter toutes les autres heures",
+                "es": "Cierto — evita cualquier otra hora del día"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "False: blue hour, overcast, and controlled artificial light can be fantastic",
-                "fr": "Faux : blue hour, ciel couvert et lumière artificielle maîtrisée peuvent être superbes"
+                "fr": "Faux : blue hour, ciel couvert et lumière artificielle maîtrisée peuvent être superbes",
+                "es": "Falso: la hora azul, el nublado y la luz artificial controlada pueden ser fantásticos"
               }
             }
           ],
@@ -4482,7 +4649,8 @@
           ],
           "explanation": {
             "en": "Golden hour is lovely, not exclusive. Soft overcast is a portrait gift; night neon can sing.",
-            "fr": "La golden hour est délicieuse, pas exclusive. Le ciel couvert est un cadeau portrait ; le néon de nuit peut chanter."
+            "fr": "La golden hour est délicieuse, pas exclusive. Le ciel couvert est un cadeau portrait ; le néon de nuit peut chanter.",
+            "es": "La hora dorada es preciosa, no exclusiva. El nublado suave es un regalo para el retrato; el neón nocturno también puede brillar."
           }
         },
         {
@@ -4491,35 +4659,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Golden-hour backlight through trees: faces underexpose, leaves glow. Best light reading strategy?",
-            "fr": "Contre-jour golden hour dans les arbres : visages sous-exposés, feuilles qui brillent. Meilleure stratégie de mesure ?"
+            "fr": "Contre-jour golden hour dans les arbres : visages sous-exposés, feuilles qui brillent. Meilleure stratégie de mesure ?",
+            "es": "Contraluz de hora dorada entre árboles: rostros subexpuestos, hojas brillan. ¿Mejor estrategia de medición?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Set tungsten WB to fix exposure",
-                "fr": "Passer en WB tungstène pour corriger l’expo"
+                "fr": "Passer en WB tungstène pour corriger l’expo",
+                "es": "Poner WB tungsteno para arreglar la exposición"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Always expose for the brightest leaf only",
-                "fr": "Toujours exposer pour la feuille la plus claire seule"
+                "fr": "Toujours exposer pour la feuille la plus claire seule",
+                "es": "Exponer siempre solo por la hoja más brillante"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Meter / expose for faces (spot or compensation), accept brighter foliage or add fill",
-                "fr": "Mesurer / exposer pour les visages (spot ou compensation), accepter un feuillage plus clair ou ajouter du fill"
+                "fr": "Mesurer / exposer pour les visages (spot ou compensation), accepter un feuillage plus clair ou ajouter du fill",
+                "es": "Medir / exponer por los rostros (spot o compensación), aceptar follaje más claro o añadir relleno"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Lock EV −3 for ‘mood’ on every face",
-                "fr": "Verrouiller EV −3 pour l’ambiance sur chaque visage"
+                "fr": "Verrouiller EV −3 pour l’ambiance sur chaque visage",
+                "es": "Bloquear EV −3 « de ambiente » en cada rostro"
               }
             }
           ],
@@ -4528,16 +4701,19 @@
           ],
           "explanation": {
             "en": "Decide what must hold detail. Faces usually win; glow can be a rim, not the meter target.",
-            "fr": "Décide ce qui doit garder du détail. Les visages gagnent souvent ; le glow peut être un contour, pas la cible de mesure."
+            "fr": "Décide ce qui doit garder du détail. Les visages gagnent souvent ; le glow peut être un contour, pas la cible de mesure.",
+            "es": "Decide qué debe conservar detalle. Los rostros suelen ganar; el brillo puede ser un contorno, no el objetivo del fotómetro."
           },
           "imageUrl": "/images/packs/photo-1441974231531-c6227db76b6e.avif",
           "imageAlt": {
             "en": "Sunlight filtering through forest canopy",
-            "fr": "Soleil filtrant à travers la canopée"
+            "fr": "Soleil filtrant à travers la canopée",
+            "es": "Luz solar filtrándose por el dosel del bosque"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
-            "fr": "Photo: Unsplash"
+            "fr": "Photo: Unsplash",
+            "es": "Foto: Unsplash"
           }
         },
         {
@@ -4546,35 +4722,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Mixed lighting (sodium street + LED shop). Which tactics keep skin believable?",
-            "fr": "Lumières mixtes (sodium rue + LED magasin). Quelles tactiques gardent une peau crédible ?"
+            "fr": "Lumières mixtes (sodium rue + LED magasin). Quelles tactiques gardent une peau crédible ?",
+            "es": "Luz mixta (sodio de calle + LED de tienda). ¿Qué tácticas mantienen la piel creíble?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Pick a dominant source and white-balance for it",
-                "fr": "Choisir une source dominante et balancer pour elle"
+                "fr": "Choisir une source dominante et balancer pour elle",
+                "es": "Elegir una fuente dominante y hacer el balance de blancos para ella"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Gel flash to match ambient when adding light",
-                "fr": "Gélifier le flash pour matcher l’ambiance si on ajoute de la lumière"
+                "fr": "Gélifier le flash pour matcher l’ambiance si on ajoute de la lumière",
+                "es": "Gelificar el flash para igualar el ambiente al añadir luz"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Correct locally in raw for secondary casts",
-                "fr": "Corriger localement en raw les dominantes secondaires"
+                "fr": "Corriger localement en raw les dominantes secondaires",
+                "es": "Corregir en local en raw las dominantes secundarias"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Auto WB + heavy teal/orange grade as the only plan",
-                "fr": "AWB + grade teal/orange lourd comme seul plan"
+                "fr": "AWB + grade teal/orange lourd comme seul plan",
+                "es": "Auto WB + un grade teal/naranja fuerte como único plan"
               }
             }
           ],
@@ -4585,7 +4766,8 @@
           ],
           "explanation": {
             "en": "Choose a hero white point, match added light, then local fixes. Global fantasy grades rarely fix mixed casts.",
-            "fr": "Choisis un point blanc héros, aligne la lumière ajoutée, puis corrections locales. Un grade fantaisie global corrige rarement les mixtes."
+            "fr": "Choisis un point blanc héros, aligne la lumière ajoutée, puis corrections locales. Un grade fantaisie global corrige rarement les mixtes.",
+            "es": "Elige un punto blanco protagonista, iguala la luz añadida y luego corrige en local. Un grade fantasioso global rara vez arregla dominantes mixtas."
           }
         }
       ],
