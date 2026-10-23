@@ -24,11 +24,11 @@ const topics = [
 ] as const;
 
 describe('vague 1.43 — docs v1.42.0 + topics twitter×9', () => {
-  it('docs headline cites v1.42.0; vague 1.42 listed; no-go through 1.43', () => {
-    expect(readme).toContain('v1.42.0');
-    expect(nextSteps).toContain('**v1.42.0**');
+  it('docs still mention vague 1.42; no-go line covers 1.43+', () => {
+    /* Docs headline moved to v1.43.0 in vague 1.44 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.42**');
     expect(nextSteps).toMatch(/no-go.*1\.43/);
+    expect(readme).toMatch(/v1\.4[23]\.0/);
   });
 
   it('nine topic guides ship twitter + og:locale:alternate + EN sniff', () => {
