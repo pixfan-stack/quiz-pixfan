@@ -1,16 +1,19 @@
 import { useTranslation } from 'react-i18next';
-import { SUPPORTED_LANGUAGES, type SupportedLanguage } from '../i18n';
+import { SUPPORTED_LANGUAGES, syncLangSearchParam, type SupportedLanguage } from '../utils/lang';
 
 /**
  * EN | FR | ES | DE language switcher.
  * ES = real Spanish UI (vague 1.41). DE = real German UI (vague 1.42).
  * Choice is persisted by i18next LanguageDetector (localStorage: i18nextLng).
+ * Vague 1.50: also writes `?lang=` so share / hreflang URLs match UI state
+ * without touching the hash route.
  */
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
   const current = (i18n.resolvedLanguage ?? i18n.language).slice(0, 2);
 
   const setLang = (lang: SupportedLanguage) => {
+    syncLangSearchParam(lang);
     void i18n.changeLanguage(lang);
   };
 
