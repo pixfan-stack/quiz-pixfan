@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.49.0**).
+Document à jour avec l’état réel du dépôt (**v1.50.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.50** : SEO SPA `?lang=` sync LanguageSwitcher · docs v1.49.0 (bump **v1.50.0**)
 - Vague **1.49** : `history-icons` LocalizedString.es ×192 · docs v1.48.0 (bump **v1.49.0**)
 - Vague **1.48** : `retouching` LocalizedString.es ×190 · docs v1.47.0 (bump **v1.48.0**)
 - Vague **1.47** : `flash-studio` LocalizedString.es ×184 · docs v1.46.0 (bump **v1.47.0**)
@@ -52,9 +53,9 @@ Document à jour avec l’état réel du dépôt (**v1.49.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.49.0** + 15 quiz · 386 Q · 268 illus (vague 1.49 release + 1.50 P0)
+- [x] Docs headline → **v1.50.0** + 15 quiz · 386 Q · 268 illus (vague 1.50 release + 1.51 P0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51
 
 ### Ops Antony — checklist P0.4 (hors code)
 
@@ -80,6 +81,7 @@ Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Pu
 - [x] Pack **`flash-studio`** (vague 1.18 P4 — 14ᵉ quiz) — Flash & studio
 
 - [x] SEO SPA `?lang=` sync LanguageSwitcher (vague **1.50**) — plan store `seo-urls-i18n`
-- [ ] Guides `article.es` / hreflang es|de + sitemap locale (1.51+) — plan store `seo-urls-i18n`
+- [x] Pilote guide `article.es` composition (vague **1.51**) — **pas** hreflang es encore (contenu partiel)
+- [ ] +N guides `article.es` / hreflang es|de + sitemap locale (1.52+) — plan store `seo-urls-i18n`
 
 Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt.
