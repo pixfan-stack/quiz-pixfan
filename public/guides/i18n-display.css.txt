@@ -1,6 +1,7 @@
-/* ---------- FR / EN (+ ES/DE interim → EN article) ---------- */
+/* ---------- FR / EN (+ ES/DE: .es when present, else EN interim) ---------- */
 
-.en {
+.en,
+.es {
   display: none;
 }
 
@@ -16,9 +17,17 @@ html[lang="de"] .en {
   display: block;
 }
 
+/* Pilote article.es : prefer Spanish body when present; other guides keep EN interim */
+html[lang="es"]:has(article.es) .en {
+  display: none;
+}
+
+html[lang="es"] article.es {
+  display: block;
+}
+
 html[lang="en"] span.en,
 html[lang="es"] span.en,
 html[lang="de"] span.en {
   display: inline;
 }
-

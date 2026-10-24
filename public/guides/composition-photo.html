@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (pilote 1.51); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Composición fotográfica: regla de tercios, líneas, encuadre | Quiz PixFan';
+        var esTitle = 'Composición fotográfica — guía + quiz';
+        var esDescMeta = 'Aprende composición fotográfica (regla de tercios, líneas directrices, encuadre) y valida con el quiz gratuito de composición Quiz PixFan.';
+        var esOgDesc = 'Regla de tercios, líneas, encuadre: bases útiles, luego un quiz interactivo.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Photo composition: rule of thirds, lines, framing | Quiz PixFan';
         var enTitle = 'Photo composition — guide + quiz';
         var enDescMeta = 'Learn photo composition (rule of thirds, leading lines, framing) then validate with the free Quiz PixFan composition quiz.';
@@ -169,6 +180,31 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on the composition quiz, the results review also links back to this guide.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#c4-regard">For the classroom → Schools paths (cycle 4)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=en">Exposure triangle</a> · <a href="/guides/lumiere-photo?lang=en">Light</a> · <a href="/guides/photo-smartphone?lang=en">Smartphone</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Composición fotográfica: guiar la mirada</h1>
+      <p class="lead">Una exposición perfecta no salva un encuadre confuso. La composición decide qué nota primero el espectador.</p>
+      <h2>Regla de tercios</h2>
+      <p>Coloca los puntos fuertes en las intersecciones de una cuadrícula 3×3. Útil — no obligatoria.</p>
+      <h2>Líneas directrices</h2>
+      <p>Carreteras, raíles, bordes, gestos: líneas que llevan hacia el sujeto y añaden profundidad.</p>
+      <h2>Encuadre y espacio</h2>
+      <ul>
+        <li>Deja aire en la dirección de la mirada o del movimiento.</li>
+        <li>Simplifica el fondo para que el mensaje quede claro.</li>
+        <li>Usa marcos naturales (ventanas, arcos) para aislar.</li>
+      </ul>
+      <h2>Cuándo romper las reglas</h2>
+      <p>Sujetos centrados y bordes duros funcionan cuando la intención es obvia. El quiz de composición entrena ese reconocimiento.</p>
+      <div class="card">
+        <p><strong>Práctica</strong> — preguntas de encuadre, profundidad y lectura de imagen.</p>
+        <a class="cta" href="/s/composition?lang=es">Lanzar el quiz de composición</a>
+        
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz de composición, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c4-regard">Para la clase → recorridos Escolares (ciclo 4)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=es">Triángulo de exposición</a> · <a href="/guides/lumiere-photo?lang=es">Luz</a> · <a href="/guides/photo-smartphone?lang=es">Foto smartphone</a></p>
       </div>
     </article>
   </main>
