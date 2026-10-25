@@ -8,11 +8,11 @@ import lumiere from '../../public/guides/lumiere-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', () => {
-  it('docs headline cites v1.51.0; vague 1.51 listed; no-go through 1.52', () => {
-    expect(readme).toContain('v1.51.0');
-    expect(nextSteps).toContain('**v1.51.0**');
+  it('docs still mention vague 1.51; no-go line covers 1.52+', () => {
+    /* Docs headline moved to v1.52.0 in vague 1.53 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.51**');
     expect(nextSteps).toMatch(/no-go.*1\.52/);
+    expect(readme).toMatch(/v1\.(51|52)\.0/);
   });
 
   it('triangle ships real article.es (not EN stub)', () => {
@@ -43,9 +43,10 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     expect(smartphone).toContain('Foto smartphone — guía + quiz');
   });
 
-  it('composition pilot retained; non-expanded topic still lacks article.es', () => {
+  it('triangle + smartphone remain the 1.52 expand anchors', () => {
+    expect(triangle).toContain('<article class="es">');
+    expect(smartphone).toContain('<article class="es">');
     expect(composition).toContain('<article class="es">');
-    expect(lumiere).not.toContain('<article class="es">');
   });
 
   it('still no hreflang es/de (pilot expanded but still partial — product rule)', () => {

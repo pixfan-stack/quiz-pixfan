@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.53); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Luz foto: dirección, calidad, temperatura | Quiz PixFan';
+        var esTitle = 'Luz foto — guía + quiz';
+        var esDescMeta = 'Aprende a leer la luz (dirección, dureza, balance de blancos) y valida con el quiz luz y color gratuito Quiz PixFan.';
+        var esOgDesc = 'Dirección, calidad y temperatura de color: bases útiles, luego un quiz interactivo.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Photo light: direction, quality, temperature | Quiz PixFan';
         var enTitle = 'Photo light — guide + quiz';
         var enDescMeta = 'Learn to read light (direction, hardness, white balance) then validate with the free Quiz PixFan light & color quiz.';
@@ -169,6 +180,31 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on the light quiz, the results review also links back to this guide.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#c4-lumiere">For the classroom → Schools paths (cycle 4)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=en">Exposure triangle</a> · <a href="/guides/retouche-lightroom?lang=en">Retouching / Lightroom</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Luz foto: leer antes de ajustar</h1>
+      <p class="lead">La exposición fija la cantidad de luz. La calidad de la luz decide el contraste, las sombras y el ambiente.</p>
+      <h2>Dirección</h2>
+      <p>Frontal, 45°, lateral, a contraluz: cada ángulo esculpe el volumen de otra forma. En retrato, una fuente a 45° con un reflector en el lado de sombra sigue siendo un clásico fiable.</p>
+      <h2>Calidad: dura vs suave</h2>
+      <p>Luz dura (sol directo, flash desnudo) = sombras nítidas y contraste fuerte. Luz suave (nube, difusor, sombra abierta) = transiciones progresivas y pieles más favorecedoras.</p>
+      <h2>Temperatura y balance de blancos</h2>
+      <ul>
+        <li>Kelvin bajo (~2700–3200 K): tonos cálidos (tungsteno, puesta de sol).</li>
+        <li>Kelvin alto (~5500–7000 K): tonos fríos (cielo nublado, sombra).</li>
+        <li>El WB auto suele valer; en RAW corriges después sin pánico.</li>
+      </ul>
+      <h2>Color y ambiente</h2>
+      <p>Una dominante intencional (golden hour, neones) cuenta una historia. Una dominante accidental (fluoro verdoso) se corrige en WB o en retoque.</p>
+      <div class="card">
+        <p><strong>Entrenamiento</strong> — preguntas sobre dirección, dureza, WB y lectura de ambiente.</p>
+        <a class="cta" href="/s/light-color?lang=es">Lanzar el quiz luz y color</a>
+        <p style="margin-top:0.65rem"><a class="cta-secondary" href="/s/flash-studio?lang=es">Quiz flash y estudio</a></p>
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz de luz, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c4-lumiere">Para la clase → recorridos Escolares (ciclo 4)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=es">Triángulo de exposición</a> · <a href="/guides/retouche-lightroom?lang=es">Retoque / Lightroom</a></p>
       </div>
     </article>
   </main>
