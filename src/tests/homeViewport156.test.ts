@@ -10,11 +10,11 @@ import histoire from '../../public/guides/histoire-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => {
-  it('docs headline cites v1.55.0; vague 1.55 listed; no-go through 1.56', () => {
-    expect(readme).toContain('v1.55.0');
-    expect(nextSteps).toContain('**v1.55.0**');
+  it('docs still mention vague 1.55; no-go line covers 1.56+', () => {
+    /* Docs headline moved to v1.56.0 in vague 1.57 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.55**');
     expect(nextSteps).toMatch(/no-go.*1\.56/);
+    expect(readme).toMatch(/v1\.(55|56)\.0/);
   });
 
   it('guides hub ships real article.es (not EN stub)', () => {
@@ -56,9 +56,9 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     expect(fiche).not.toContain('<article class="es">');
   });
 
-  it('still no hreflang es/de (hubs ES but fiche EN — product rule)', () => {
+  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
     for (const html of [guidesIndex, scolairesHub, fiche, composition, droits, histoire]) {
-      expect(html).not.toContain('hreflang="es"');
+      /* hreflang es unlocked in vague 1.57 on article.es pages */
       expect(html).not.toContain('hreflang="de"');
     }
   });

@@ -41,7 +41,7 @@ describe('vague 1.45 — docs v1.44.0 + photo-rights LocalizedString.es', () => 
     /* Docs headline moved to v1.45.0 in vague 1.46 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.44**');
     expect(nextSteps).toMatch(/no-go.*1\.45/);
-    expect(readme).toMatch(/v1\.(4[456789]|5[012345])\.0/);
+    expect(readme).toMatch(/v1\.(4[456789]|5[0123456])\.0/);
   });
 
   it('photo-rights ships .es on all LocalizedString fields (180)', () => {
@@ -71,9 +71,9 @@ describe('vague 1.45 — docs v1.44.0 + photo-rights LocalizedString.es', () => 
     }
   });
 
-  it('still no hreflang es/de on topic guides (content not translated)', () => {
+  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
     for (const html of [triangle, composition]) {
-      expect(html).not.toContain('hreflang="es"');
+      /* hreflang es unlocked in vague 1.57 on article.es pages */
       expect(html).not.toContain('hreflang="de"');
     }
   });

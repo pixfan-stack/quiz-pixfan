@@ -14,7 +14,7 @@ describe('vague 1.53 — docs v1.52.0 + lumière/genres article.es expand', () =
     /* Docs headline moved to v1.53.0 in vague 1.54 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.52**');
     expect(nextSteps).toMatch(/no-go.*1\.53/);
-    expect(readme).toMatch(/v1\.(52|53|54|55)\.0/);
+    expect(readme).toMatch(/v1\.(52|53|54|55|56)\.0/);
   });
 
   it('lumière ships real article.es (not EN stub)', () => {
@@ -53,9 +53,9 @@ describe('vague 1.53 — docs v1.52.0 + lumière/genres article.es expand', () =
     }
   });
 
-  it('still no hreflang es/de (pilot expanded but still partial — product rule)', () => {
+  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
     for (const html of [lumiere, genres, composition, triangle, smartphone, retouche]) {
-      expect(html).not.toContain('hreflang="es"');
+      /* hreflang es unlocked in vague 1.57 on article.es pages */
       expect(html).not.toContain('hreflang="de"');
     }
   });

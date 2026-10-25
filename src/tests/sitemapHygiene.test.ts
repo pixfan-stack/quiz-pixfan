@@ -76,6 +76,34 @@ describe('sitemap / SEO hygiene', () => {
     // Guard against accidental rollback to pre-lexique dates.
     expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
     expect(sitemap).not.toMatch(/<lastmod>2026-09-\d{2}<\/lastmod>/);
+
+    // Vague 1.57: ?lang= twins for ES-ready guides only (not home / fiche / de).
+    const esReady = [
+      'https://quiz.pixfan.fr/guides/',
+      'https://quiz.pixfan.fr/guides/scolaires/',
+      'https://quiz.pixfan.fr/guides/composition-photo',
+      'https://quiz.pixfan.fr/guides/triangle-exposition',
+      'https://quiz.pixfan.fr/guides/photo-smartphone',
+      'https://quiz.pixfan.fr/guides/lumiere-photo',
+      'https://quiz.pixfan.fr/guides/retouche-lightroom',
+      'https://quiz.pixfan.fr/guides/genres-photo',
+      'https://quiz.pixfan.fr/guides/materiel-photo',
+      'https://quiz.pixfan.fr/guides/droits-ethique-photo',
+      'https://quiz.pixfan.fr/guides/histoire-photo',
+    ];
+    for (const base of esReady) {
+      expect(sitemap, base).toContain(`<loc>${base}?lang=en</loc>`);
+      expect(sitemap, base).toContain(`<loc>${base}?lang=es</loc>`);
+      const enMod = lastmodForLoc(`${base}?lang=en`);
+      const esMod = lastmodForLoc(`${base}?lang=es`);
+      expect(enMod, `${base}?lang=en`).toBeTruthy();
+      expect(esMod, `${base}?lang=es`).toBeTruthy();
+      expect(enMod! >= LASTMOD_FLOOR, `${base}?lang=en`).toBe(true);
+      expect(esMod! >= LASTMOD_FLOOR, `${base}?lang=es`).toBe(true);
+    }
+    expect(sitemap).not.toContain('?lang=de');
+    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=es');
+    expect(sitemap).not.toContain('fiche-seance.html?lang=es');
   });
 
   it('excludes sitemap and robots from bare SPA catch-all precedence', () => {

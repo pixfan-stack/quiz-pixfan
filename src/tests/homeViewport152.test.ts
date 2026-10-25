@@ -12,7 +12,7 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     /* Docs headline moved to v1.52.0 in vague 1.53 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.51**');
     expect(nextSteps).toMatch(/no-go.*1\.52/);
-    expect(readme).toMatch(/v1\.(51|52|53|54|55)\.0/);
+    expect(readme).toMatch(/v1\.(51|52|53|54|55|56)\.0/);
   });
 
   it('triangle ships real article.es (not EN stub)', () => {
@@ -49,9 +49,9 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     expect(composition).toContain('<article class="es">');
   });
 
-  it('still no hreflang es/de (pilot expanded but still partial — product rule)', () => {
+  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
     for (const html of [triangle, smartphone, composition, lumiere]) {
-      expect(html).not.toContain('hreflang="es"');
+      /* hreflang es unlocked in vague 1.57 on article.es pages */
       expect(html).not.toContain('hreflang="de"');
     }
   });
