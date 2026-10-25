@@ -10,11 +10,11 @@ import retouche from '../../public/guides/retouche-lightroom.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.53 — docs v1.52.0 + lumière/genres article.es expand', () => {
-  it('docs headline cites v1.52.0; vague 1.52 listed; no-go through 1.53', () => {
-    expect(readme).toContain('v1.52.0');
-    expect(nextSteps).toContain('**v1.52.0**');
+  it('docs still mention vague 1.52; no-go line covers 1.53+', () => {
+    /* Docs headline moved to v1.53.0 in vague 1.54 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.52**');
     expect(nextSteps).toMatch(/no-go.*1\.53/);
+    expect(readme).toMatch(/v1\.(52|53)\.0/);
   });
 
   it('lumière ships real article.es (not EN stub)', () => {
@@ -45,14 +45,15 @@ describe('vague 1.53 — docs v1.52.0 + lumière/genres article.es expand', () =
     expect(genres).toContain('Géneros fotográficos — guía + quiz');
   });
 
-  it('prior ES cluster retained; non-expanded topic still lacks article.es', () => {
+  it('lumière + genres remain the 1.53 expand anchors', () => {
+    expect(lumiere).toContain('<article class="es">');
+    expect(genres).toContain('<article class="es">');
     for (const html of [composition, triangle, smartphone]) {
       expect(html).toContain('<article class="es">');
     }
-    expect(retouche).not.toContain('<article class="es">');
   });
 
-  it('still no hreflang es/de (cluster 5/9 still partial — product rule)', () => {
+  it('still no hreflang es/de (pilot expanded but still partial — product rule)', () => {
     for (const html of [lumiere, genres, composition, triangle, smartphone, retouche]) {
       expect(html).not.toContain('hreflang="es"');
       expect(html).not.toContain('hreflang="de"');

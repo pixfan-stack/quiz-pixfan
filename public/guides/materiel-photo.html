@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.54); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Material foto: sensores, focales, estabilización | Quiz PixFan';
+        var esTitle = 'Material foto — guía + quiz';
+        var esDescMeta = 'Full-frame vs APS-C, objetivos, filtros y estabilización — guía de material y quiz gratuito Quiz PixFan.';
+        var esOgDesc = 'Sensores, focales, primes y filtros — luego un quiz interactivo de material.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Photo gear: sensors, focal lengths, stabilization | Quiz PixFan';
         var enTitle = 'Photo gear — guide + quiz';
         var enDescMeta = 'Full-frame vs APS-C, lenses, filters and stabilization — gear guide then free Quiz PixFan quiz.';
@@ -176,6 +187,32 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on gear questions, the results review also links back to this guide.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#lycee-pratique">For the classroom → Schools paths (lycée)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=en">Exposure</a> · <a href="/guides/photo-smartphone?lang=en">Smartphone</a> · <a href="https://www.pixfan.com/materiel-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=materiel-photo&amp;utm_content=pixfan">Pixfan gear tests</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Material foto: elegir por la intención, no por la ficha técnica</h1>
+      <p class="lead">Sensor, focal y accesorios cambian el resultado — pero el buen kit es el que sirve a tu sujeto, no el de más megapíxeles.</p>
+      <h2>Full-frame vs APS-C</h2>
+      <p>« Full-frame » designa un sensor ~24×36 mm (equivalente 35 mm). Un APS-C más pequeño « recorta » el campo: misma focal, ángulo más cerrado, y a menudo un factor ×1,5 / ×1,6. Menos superficie = más ruido a ISO alto en general, pero cuerpos más ligeros y ópticas a menudo más baratas.</p>
+      <h2>Focales y usos</h2>
+      <ul>
+        <li><strong>Gran angular</strong> (≈ ≤ 35 mm FF): paisaje, arquitectura, escenas amplias.</li>
+        <li><strong>Normal</strong> (~50 mm FF): perspectiva cercana al ojo, versátil.</li>
+        <li><strong>Retrato</strong> (85–135 mm): compresión favorecedora, sujeto aislado.</li>
+        <li><strong>Tele</strong>: fauna, deporte, detalles lejanos.</li>
+      </ul>
+      <p>Una focal fija (prime) suele ofrecer una apertura mejor y una óptica más simple que un zoom equivalente — a costa de la flexibilidad.</p>
+      <h2>Estabilización y filtros</h2>
+      <p>La estabilización (cuerpo u objetivo) ayuda a frenar el trepidado a pulso; no congela un sujeto en movimiento rápido. Un polarizador (CPL) corta reflejos en cristal / agua y satura un cielo azulado. Los ND alargan la exposición a plena luz.</p>
+      <h2>Megapíxeles y tilt-shift</h2>
+      <p>Los megapíxeles miden la resolución del archivo, no la « calidad » mágica: óptica, luz y técnica cuentan más. Un tilt-shift inclina / desplaza el plano de enfoque — útil en arquitectura para controlar la perspectiva, no un gadget cotidiano.</p>
+      <div class="card">
+        <p><strong>Entrenamiento</strong> — sensores, focales, primes, filtros y usos.</p>
+        <a class="cta" href="/s/gear-lenses?lang=es">Lanzar el quiz material y objetivos</a>
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo de material, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#lycee-pratique">Para la clase → recorridos Escolares (lycée)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=es">Exposición</a> · <a href="/guides/photo-smartphone?lang=es">Smartphone</a> · <a href="https://www.pixfan.com/materiel-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=materiel-photo&amp;utm_content=pixfan">Tests material Pixfan</a></p>
       </div>
     </article>
   </main>

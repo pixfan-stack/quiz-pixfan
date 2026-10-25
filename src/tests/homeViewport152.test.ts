@@ -12,7 +12,7 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     /* Docs headline moved to v1.52.0 in vague 1.53 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.51**');
     expect(nextSteps).toMatch(/no-go.*1\.52/);
-    expect(readme).toMatch(/v1\.(51|52)\.0/);
+    expect(readme).toMatch(/v1\.(51|52|53)\.0/);
   });
 
   it('triangle ships real article.es (not EN stub)', () => {

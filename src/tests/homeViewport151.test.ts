@@ -11,7 +11,7 @@ describe('vague 1.51 — docs v1.50.0 + composition article.es pilot', () => {
     /* Docs headline moved to v1.51.0 in vague 1.52 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.50**');
     expect(nextSteps).toMatch(/no-go.*1\.51/);
-    expect(readme).toMatch(/v1\.(50|51|52)\.0/);
+    expect(readme).toMatch(/v1\.(50|51|52|53)\.0/);
   });
 
   it('composition ships real article.es (not EN stub)', () => {
