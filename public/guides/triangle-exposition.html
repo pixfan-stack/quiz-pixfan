@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.52); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Triángulo de exposición: ISO, apertura, velocidad | Quiz PixFan';
+        var esTitle = 'Triángulo de exposición — guía + quiz';
+        var esDescMeta = 'Comprende el triángulo de exposición (ISO, apertura, velocidad de obturación) y ponte a prueba con el quiz foto gratuito Quiz PixFan.';
+        var esOgDesc = 'ISO, apertura, velocidad: las bases para exponer bien, luego un quiz interactivo.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Exposure triangle: ISO, aperture, shutter | Quiz PixFan';
         var enTitle = 'Exposure triangle — guide + quiz';
         var enDescMeta = 'Understand the exposure triangle (ISO, aperture, shutter speed) then test yourself with the free Quiz PixFan photo quiz.';
@@ -169,6 +180,31 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on the exposure quiz, the results review also links back to this guide.</p>
 <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#c4-lumiere">For the classroom → Schools paths (cycle 4)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=en">Next: composition</a> · <a href="/guides/lumiere-photo?lang=en">Light</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Triángulo de exposición: las 3 palancas de la luz</h1>
+      <p class="lead">ISO, apertura y velocidad de obturación trabajan juntos. Cambiar uno altera la exposición — y a menudo el look.</p>
+      <h2>ISO</h2>
+      <p>Sensibilidad del sensor. ISO bajo = imagen más limpia. ISO alto = más luz… y más ruido. En un smartphone moderno, súbelo solo si la escena lo exige.</p>
+      <h2>Apertura (f/)</h2>
+      <p>Tamaño relativo del diafragma. Número bajo (f/1.8) = más luz y desenfoque de fondo. Número alto (f/11) = menos luz y más nitidez en profundidad.</p>
+      <h2>Velocidad de obturación</h2>
+      <p>Duración de la exposición. 1/1000 congela el movimiento; 1/15 deja trepidación o desenfoque de sujeto. Estabilización y trípode cambian lo que puedes «sujetar» a pulso.</p>
+      <h2>Cómo equilibrarlos</h2>
+      <ul>
+        <li>Prioridad velocidad para deporte / acción.</li>
+        <li>Prioridad apertura para retrato / bokeh.</li>
+        <li>ISO auto con tope para mantener limpio en poca luz.</li>
+      </ul>
+      <div class="card">
+        <p><strong>¿Listo para comprobar?</strong> El pack Exposición de Quiz PixFan convierte estas ideas en preguntas concretas.</p>
+        <a class="cta" href="/s/exposure-basics?lang=es">Lanzar el quiz de exposición</a>
+        
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz de exposición, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c4-lumiere">Para la clase → recorridos Escolares (ciclo 4)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=es">Siguiente: composición</a> · <a href="/guides/lumiere-photo?lang=es">Luz</a></p>
       </div>
     </article>
   </main>
