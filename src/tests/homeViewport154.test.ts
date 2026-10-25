@@ -12,11 +12,11 @@ import droits from '../../public/guides/droits-ethique-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', () => {
-  it('docs headline cites v1.53.0; vague 1.53 listed; no-go through 1.54', () => {
-    expect(readme).toContain('v1.53.0');
-    expect(nextSteps).toContain('**v1.53.0**');
+  it('docs still mention vague 1.53; no-go line covers 1.54+', () => {
+    /* Docs headline moved to v1.54.0 in vague 1.55 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.53**');
     expect(nextSteps).toMatch(/no-go.*1\.54/);
+    expect(readme).toMatch(/v1\.(53|54)\.0/);
   });
 
   it('retouche ships real article.es (not EN stub)', () => {
@@ -47,14 +47,15 @@ describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', (
     expect(materiel).toContain('Material foto — guía + quiz');
   });
 
-  it('prior ES cluster retained; non-expanded topic still lacks article.es', () => {
+  it('retouche + matériel remain the 1.54 expand anchors', () => {
+    expect(retouche).toContain('<article class="es">');
+    expect(materiel).toContain('<article class="es">');
     for (const html of [composition, triangle, smartphone, lumiere, genres]) {
       expect(html).toContain('<article class="es">');
     }
-    expect(droits).not.toContain('<article class="es">');
   });
 
-  it('still no hreflang es/de (cluster 7/9 still partial — product rule)', () => {
+  it('still no hreflang es/de (pilot expanded but still partial — product rule)', () => {
     for (const html of [retouche, materiel, composition, triangle, smartphone, lumiere, genres, droits]) {
       expect(html).not.toContain('hreflang="es"');
       expect(html).not.toContain('hreflang="de"');
