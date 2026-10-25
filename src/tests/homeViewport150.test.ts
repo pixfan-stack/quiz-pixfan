@@ -11,11 +11,11 @@ import {
 } from '../utils/lang';
 
 describe('vague 1.50 — docs v1.49.0 + SPA ?lang= sync', () => {
-  it('docs headline cites v1.49.0; vague 1.49 listed; no-go through 1.50', () => {
-    expect(readme).toContain('v1.49.0');
-    expect(nextSteps).toContain('**v1.49.0**');
+  it('docs still mention vague 1.49; no-go line covers 1.50+', () => {
+    /* Docs headline moved to v1.50.0 in vague 1.51 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.49**');
     expect(nextSteps).toMatch(/no-go.*1\.50/);
+    expect(readme).toMatch(/v1\.(49|50)\.0/);
   });
 
   it('LanguageSwitcher syncs ?lang= via syncLangSearchParam', () => {
