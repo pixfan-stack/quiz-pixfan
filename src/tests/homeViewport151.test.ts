@@ -7,11 +7,11 @@ import composition from '../../public/guides/composition-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.51 — docs v1.50.0 + composition article.es pilot', () => {
-  it('docs headline cites v1.50.0; vague 1.50 listed; no-go through 1.51', () => {
-    expect(readme).toContain('v1.50.0');
-    expect(nextSteps).toContain('**v1.50.0**');
+  it('docs still mention vague 1.50; no-go line covers 1.51+', () => {
+    /* Docs headline moved to v1.51.0 in vague 1.52 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.50**');
     expect(nextSteps).toMatch(/no-go.*1\.51/);
+    expect(readme).toMatch(/v1\.(50|51)\.0/);
   });
 
   it('composition ships real article.es (not EN stub)', () => {
@@ -38,8 +38,9 @@ describe('vague 1.51 — docs v1.50.0 + composition article.es pilot', () => {
     expect(guidesCssMirror).toContain('html[lang="es"] .en');
   });
 
-  it('triangle (non-pilot) still has no article.es', () => {
-    expect(triangle).not.toContain('<article class="es">');
+  it('composition remains the 1.51 pilot article.es anchor', () => {
+    expect(composition).toContain('<article class="es">');
+    expect(composition).toContain('Composición fotográfica: guiar la mirada');
   });
 
   it('still no hreflang es/de (pilot partial — product rule)', () => {

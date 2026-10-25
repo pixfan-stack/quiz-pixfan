@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.52); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Foto con smartphone: luz, HDR, modo pro | Quiz PixFan';
+        var esTitle = 'Foto smartphone — guía + quiz';
+        var esDescMeta = 'Mejora tus fotos con el móvil (luz, HDR, modo pro, errores frecuentes) y ponte a prueba con el quiz smartphone gratuito Quiz PixFan.';
+        var esOgDesc = 'Luz, HDR, modo pro: bases útiles, luego un quiz interactivo.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Smartphone photography: light, HDR, pro mode | Quiz PixFan';
         var enTitle = 'Smartphone photography — guide + quiz';
         var enDescMeta = 'Improve your smartphone photos (light, HDR, pro mode, common mistakes) then test yourself with the free Quiz PixFan smartphone quiz.';
@@ -169,6 +180,31 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on the smartphone quiz, the results review also links back to this guide.</p>
 <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#c3-decouvrir">For the classroom → Schools paths (cycle 3)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=en">Composition</a> · <a href="/guides/lumiere-photo?lang=en">Light</a> · <a href="/guides/genres-photo?lang=en">Genres</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Foto con smartphone: mejores tomas, sin equipo</h1>
+      <p class="lead">El teléfono automatiza mucho. Entender luz, HDR y límites del sensor supera otro filtro.</p>
+      <h2>La luz primero</h2>
+      <p>Acércate a la ventana, evita el contraluz duro salvo intención, y limpia la lente. En un sensor pequeño, la buena luz gana al zoom digital.</p>
+      <h2>HDR: cuándo activarlo</h2>
+      <p>Útil en escenas de alto contraste (cielo + sombra). Menos útil con sujetos muy móviles (fantasmas). Mira el resultado, no solo el icono.</p>
+      <h2>Modo pro / manual</h2>
+      <ul>
+        <li>Expón para las altas luces si quieres conservar el cielo.</li>
+        <li>Bloquea el foco / exposición (AE/AF lock) para retratos estables.</li>
+        <li>Evita el zoom extremo: encuadra con los pies.</li>
+      </ul>
+      <h2>Errores clásicos</h2>
+      <p>Flash frontal en interior, HDR en un concierto oscuro, retoque agresivo que aplasta la piel. El quiz smartphone apunta a estas trampas.</p>
+      <div class="card">
+        <p><strong>Comprueba tus reflejos</strong> con el pack Smartphone de Quiz PixFan.</p>
+        <a class="cta" href="/s/smartphone?lang=es">Lanzar el quiz smartphone</a>
+        
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz smartphone, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c3-decouvrir">Para la clase → recorridos Escolares (ciclo 3)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=es">Composición</a> · <a href="/guides/lumiere-photo?lang=es">Luz</a> · <a href="/guides/genres-photo?lang=es">Géneros</a></p>
       </div>
     </article>
   </main>
