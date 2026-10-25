@@ -1,0 +1,70 @@
+import { describe, expect, it } from 'vitest';
+import readme from '../../README.md?raw';
+import nextSteps from '../../NEXT_STEPS.md?raw';
+import guidesIndex from '../../public/guides/index.html?raw';
+import scolairesHub from '../../public/guides/scolaires/index.html?raw';
+import fiche from '../../public/guides/scolaires/fiche-seance.html?raw';
+import composition from '../../public/guides/composition-photo.html?raw';
+import droits from '../../public/guides/droits-ethique-photo.html?raw';
+import histoire from '../../public/guides/histoire-photo.html?raw';
+import switcherSource from '../components/LanguageSwitcher.tsx?raw';
+
+describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => {
+  it('docs headline cites v1.55.0; vague 1.55 listed; no-go through 1.56', () => {
+    expect(readme).toContain('v1.55.0');
+    expect(nextSteps).toContain('**v1.55.0**');
+    expect(nextSteps).toContain('Vague **1.55**');
+    expect(nextSteps).toMatch(/no-go.*1\.56/);
+  });
+
+  it('guides hub ships real article.es (not EN stub)', () => {
+    expect(guidesIndex).toContain('<article class="es">');
+    expect(guidesIndex).toContain('Guías de fotografía para progresar rápido');
+    expect(guidesIndex).toContain('href="/guides/composition-photo?lang=es"');
+    expect(guidesIndex).toContain('href="/guides/scolaires/?lang=es"');
+    expect(guidesIndex).not.toMatch(
+      /<article class="es">[\s\S]*Photography guides that lead to practice/
+    );
+  });
+
+  it('scolaires hub ships real article.es (not EN stub)', () => {
+    expect(scolairesHub).toContain('<article class="es">');
+    expect(scolairesHub).toContain('Escolares — foto en clase');
+    expect(scolairesHub).toContain('Lanzar la sesión (recomendado)');
+    expect(scolairesHub).toContain('href="/s/photo-reading?classe=1&amp;lang=es"');
+    expect(scolairesHub).toContain('id="c4-regard-es"');
+    expect(scolairesHub).not.toMatch(
+      /<article class="es">[\s\S]*Schools — photo in class[\s\S]*Collège cycle&nbsp;4 first/
+    );
+  });
+
+  it('hub + scolaires sniff set Spanish share meta for ?lang=es', () => {
+    for (const html of [guidesIndex, scolairesHub]) {
+      expect(html).toContain("p === 'es'");
+      expect(html).toContain("setLocales('es_ES', 'fr_FR')");
+      expect(html).toMatch(/p === 'en' \|\| p === 'de'/);
+    }
+    expect(guidesIndex).toContain('Guías quiz foto | Quiz PixFan');
+    expect(scolairesHub).toContain('Escolares — foto en clase | Quiz PixFan');
+    expect(scolairesHub).toContain('applyJsonLdEs');
+  });
+
+  it('topics 9/9 retained; fiche séance still lacks article.es', () => {
+    expect(composition).toContain('<article class="es">');
+    expect(droits).toContain('<article class="es">');
+    expect(histoire).toContain('<article class="es">');
+    expect(fiche).not.toContain('<article class="es">');
+  });
+
+  it('still no hreflang es/de (hubs ES but fiche EN — product rule)', () => {
+    for (const html of [guidesIndex, scolairesHub, fiche, composition, droits, histoire]) {
+      expect(html).not.toContain('hreflang="es"');
+      expect(html).not.toContain('hreflang="de"');
+    }
+  });
+
+  it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
+    expect(switcherSource).not.toContain('/es/');
+    expect(switcherSource).not.toContain('/de/');
+  });
+});

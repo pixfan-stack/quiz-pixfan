@@ -42,7 +42,7 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     /* Docs headline moved to v1.40.0 in vague 1.41 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.39**');
     expect(nextSteps).toMatch(/no-go.*1\.40/);
-    expect(readme).toMatch(/v1\.(4[0123456789]|5[01234])\.0/);
+    expect(readme).toMatch(/v1\.(4[0123456789]|5[012345])\.0/);
   });
 
   it('SUPPORTED_LANGUAGES includes es and de; i18n imports stubs', () => {
@@ -93,13 +93,14 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     expect(localeSource).toContain('value.de');
   });
 
-  it('CSS + theme + hub/fiche: es/de show EN interim; switcher ES/DE', () => {
+  it('CSS + theme + hub/fiche: es/de switcher; de interim EN; fiche es interim', () => {
     expect(guidesI18nCss).toContain('html[lang="es"] .en');
     expect(guidesI18nCss).toContain('html[lang="de"] .en');
     expect(guidesI18nCss).toContain('html[lang="es"] .fr');
     expect(themeJs).toContain("document.documentElement.lang !== 'fr'");
-    expect(hub).toContain("p === 'es' || p === 'de'");
-    expect(hub).toContain("p === 'en' || p === 'es' || p === 'de'");
+    /* Hub gained article.es sniff in vague 1.56 — es branch separate; de stays with EN. */
+    expect(hub).toContain("p === 'es'");
+    expect(hub).toContain("p === 'en' || p === 'de'");
     expect(hub).toContain('href="?lang=es">ES</a>');
     expect(hub).toContain('href="?lang=de">DE</a>');
     expect(fiche).toContain('href="?lang=es">ES</a>');
