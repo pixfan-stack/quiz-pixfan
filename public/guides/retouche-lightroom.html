@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.54); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Retoque y Lightroom: flujo, tonalidad, exportación | Quiz PixFan';
+        var esTitle = 'Retoque y Lightroom — guía + quiz';
+        var esDescMeta = 'Estructura tu retoque (catálogo Lightroom, tonalidad, color, exportación) y valida con los quiz de retoque y Lightroom gratuitos Quiz PixFan.';
+        var esOgDesc = 'Flujo Lightroom, tonalidad, color y exportación: bases útiles, luego quiz interactivos.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Retouching & Lightroom: workflow, tone, export | Quiz PixFan';
         var enTitle = 'Retouching & Lightroom — guide + quiz';
         var enDescMeta = 'Structure your retouching (Lightroom catalog, tone, color, export) then validate with Quiz PixFan retouching and Lightroom quizzes.';
@@ -169,6 +180,31 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on retouching / Lightroom, the results review also links back to this guide.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#lycee-pratique">For the classroom → Schools paths (lycée)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/lumiere-photo?lang=en">Photo light</a> · <a href="https://www.pixfan.com/category/logiciels-retouche/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=retouche-lightroom&amp;utm_content=pixfan">Pixfan retouching offer</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Retoque y Lightroom: un flujo claro</h1>
+      <p class="lead">El retoque no es « subir todos los deslizadores al máximo ». Un orden estable (selección → tonalidad → color → detalle → exportación) evita idas y vueltas y archivos irrecuperables.</p>
+      <h2>Catálogo antes de Develop</h2>
+      <p>Importa, puntúa, rechaza. Desarrolla solo los keepers. Las colecciones y palabras clave sirven para encontrar una serie seis meses después — no solo para que « quede bonito » el día uno.</p>
+      <h2>Tonalidad primero</h2>
+      <ul>
+        <li>Exposición / luces / sombras para fijar el contraste global.</li>
+        <li>Blancos y negros para anclar los extremos sin quemar ni taponar.</li>
+        <li>Curva para ajustes finos cuando la base ya es estable.</li>
+      </ul>
+      <h2>Color y presencia</h2>
+      <p>Temperatura / tinte, luego HSL o Calibration. La vibrance suele proteger mejor las pieles que la saturación bruta. Claridad / textura / nitidez se dosifican según el soporte (web vs impresión).</p>
+      <h2>Exportación útil</h2>
+      <p>Elige espacio de color, tamaño y compresión según el destino. Un preset de exportación coherente vale más que reinventar ajustes cada vez.</p>
+      <div class="card">
+        <p><strong>Entrenamiento</strong> — quiz de retoque general + pack Lightroom (flujo real).</p>
+        <a class="cta" href="/s/retouching?lang=es">Lanzar el quiz de retoque</a>
+        <p style="margin-top:0.65rem"><a class="cta-secondary" href="/s/lightroom-workflow?lang=es">Quiz Lightroom workflow</a></p>
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo en retoque / Lightroom, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#lycee-pratique">Para la clase → recorridos Escolares (lycée)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/lumiere-photo?lang=es">Luz foto</a> · <a href="https://www.pixfan.com/category/logiciels-retouche/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=retouche-lightroom&amp;utm_content=pixfan">Oferta retoque Pixfan</a></p>
       </div>
     </article>
   </main>
