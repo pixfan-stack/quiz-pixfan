@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.55); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Historia de la foto: iconos, inventos, dominio público | Quiz PixFan';
+        var esTitle = 'Historia e iconos foto — guía + quiz';
+        var esDescMeta = 'Niépce, Daguerre, Magnum, HCB, Atget… hitos de historia foto luego quizzes de iconos y dominio público Quiz PixFan.';
+        var esOgDesc = 'Inventos, fotógrafos míticos e imágenes de dominio público — luego quizzes interactivos.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Photo history: icons, inventions, public domain | Quiz PixFan';
         var enTitle = 'Photo history & icons — guide + quiz';
         var enDescMeta = 'Niépce, Daguerre, Magnum, HCB, Atget… photo-history landmarks then Quiz PixFan icons and public-domain quizzes.';
@@ -182,6 +193,40 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on history / public-domain / brands, the results review also links back to this guide.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#c3-decouvrir">For the classroom → Schools paths (cycle 3)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/genres-photo?lang=en">Genres</a> · <a href="/guides/droits-ethique-photo?lang=en">Rights &amp; ethics</a> · <a href="https://www.pixfan.com/inspiration-culture/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=histoire-photo&amp;utm_content=pixfan">Pixfan inspiration</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Historia e iconos: leer una imagen en su tiempo</h1>
+      <p class="lead">Conocer algunos hitos (invención, reportaje, modernismo) ayuda a situar una foto — y a acertar los quizzes de cultura fotográfica.</p>
+
+      <h2>Inventos fundadores</h2>
+      <p>A Nicéphore Niépce se le atribuye a menudo la fotografía más antigua conservada (heliografía, años 1820). El daguerrotipo de Louis Daguerre populariza una imagen única sobre placa de plata. George Eastman democratiza la toma con el Kodak Brownie; lo digital llega mucho después (prototipos de los años 1970–80).</p>
+
+      <h2>Reportaje y el « instante decisivo »</h2>
+      <p>Henri Cartier-Bresson está ligado al instante decisivo: el momento en que forma y contenido se alinean. Cofunda Magnum Photos en 1947. Otros iconos: Annie Leibovitz (retratos de celebridades), Dorothea Lange / Walker Evans (Gran Depresión), la exposición <em>The Family of Man</em> (visión humanista del XX).</p>
+
+      <h2>Galería de dominio público</h2>
+      <ul>
+        <li><strong>Daguerre</strong> — Boulevard du Temple: exposición larga, la calle parece vacía salvo un limpiabotas inmóvil.</li>
+        <li><strong>Muybridge / Marey</strong> — cronofotografía: el galope del caballo, la marcha humana.</li>
+        <li><strong>Atget</strong> — escaparates y calles de París antes de la modernización.</li>
+        <li><strong>Stieglitz</strong> — <em>The Steerage</em>: composición geométrica y clases sociales.</li>
+        <li><strong>Hine</strong> — trabajo infantil, la foto como prueba social.</li>
+      </ul>
+
+      <h2>Por qué importa en el quiz</h2>
+      <p>Los packs <em>historia e iconos</em>, <em>dominio público</em> e <em>historia de marcas</em> cruzan nombres, inventos, cámaras míticas y lectura de imagen. Relacionar una obra o una marca con su contexto (técnica, intención, época) vale más que memorizar fechas sueltas.</p>
+      <p>Recorrido aconsejado: primero <strong>historia e iconos</strong> (fotógrafos), luego <strong>historia de marcas</strong> (cuerpos y sistemas) — misma guía, dos packs complementarios.</p>
+
+      <div class="card">
+        <p><strong>Entrenamiento</strong> — fotógrafos icónicos, imágenes de dominio público y hitos Canon / Nikon / Leica / Sony…</p>
+        <a class="cta" href="/s/history-icons?lang=es">Lanzar el quiz historia e iconos</a>
+        <p style="margin-top:0.65rem"><a class="cta-secondary" href="/s/public-domain?lang=es">Quiz galería dominio público</a></p>
+        <p style="margin-top:0.65rem"><a class="cta" href="/s/marques-photo?lang=es">Después: quiz historia de marcas</a></p>
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo en historia / dominio público / marcas, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c3-decouvrir">Para la clase → recorridos Escolares (ciclo 3)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/genres-photo?lang=es">Géneros</a> · <a href="/guides/droits-ethique-photo?lang=es">Derechos y ética</a> · <a href="https://www.pixfan.com/inspiration-culture/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=histoire-photo&amp;utm_content=pixfan">Inspiración Pixfan</a></p>
       </div>
     </article>
   </main>
