@@ -42,7 +42,7 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     /* Docs headline moved to v1.40.0 in vague 1.41 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.39**');
     expect(nextSteps).toMatch(/no-go.*1\.40/);
-    expect(readme).toMatch(/v1\.(4[0123456789]|5[01])\.0/);
+    expect(readme).toMatch(/v1\.(4[0123456789]|5[012])\.0/);
   });
 
   it('SUPPORTED_LANGUAGES includes es and de; i18n imports stubs', () => {

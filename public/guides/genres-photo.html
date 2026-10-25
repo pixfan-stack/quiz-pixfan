@@ -72,8 +72,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.53); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Géneros fotográficos: retrato, calle, paisaje… | Quiz PixFan';
+        var esTitle = 'Géneros fotográficos — guía + quiz';
+        var esDescMeta = 'Detecta las intenciones detrás de retrato, street, paisaje, macro y más — luego valida con el quiz géneros foto gratuito Quiz PixFan.';
+        var esOgDesc = 'Retrato, street, paisaje, macro… la intención antes del cuerpo, luego un quiz interactivo.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Photography genres: portrait, street, landscape… | Quiz PixFan';
         var enTitle = 'Photography genres — guide + quiz';
         var enDescMeta = 'Spot the intentions behind portrait, street, landscape, macro and more — then validate with the free Quiz PixFan genres quiz.';
@@ -180,6 +191,33 @@
         <p class="muted" style="margin-top:0.5rem">After a miss on the genres quiz, the results review also links back to this guide.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=en#c3-decouvrir">For the classroom → Schools paths (cycle 3)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=en">Composition</a> · <a href="/guides/lumiere-photo?lang=en">Light</a> · <a href="https://www.pixfan.com/apprendre-la-photo/genres-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=genres-photo&amp;utm_content=pixfan">Pixfan genres hub</a></p>
+      </div>
+    </article>
+
+    <article class="es">
+      <h1>Géneros fotográficos: la intención antes del cuerpo</h1>
+      <p class="lead">Un género no es una focal mágica. Es una intención (controlar u observar, posar o candid) que orienta luz, distancia y ritmo.</p>
+      <h2>Retrato</h2>
+      <p>El sujeto humano está en el centro: luz en el rostro (principal / fill / rim), expresión, fondo y profundidad de campo para aislar. La apertura es una elección creativa, no una regla fija.</p>
+      <h2>Foto de calle</h2>
+      <p>Escenas cándidas de la vida pública — gesto, ironía, geometría — a menudo con luz disponible y material discreto. No es «solo de noche con flash», ni un fondo de estudio de skyline.</p>
+      <h2>Paisaje</h2>
+      <p>Leer la luz (golden hour, meteorología), la profundidad y el estabilizador (trípode para exposiciones largas o precisión). El gran angular ayuda a menudo, pero la composición decide más que la focal.</p>
+      <h2>Macro, animal, deporte…</h2>
+      <ul>
+        <li><strong>Macro</strong>: detalles cercanos, profundidad de campo muy fina, estabilidad.</li>
+        <li><strong>Animal</strong>: paciencia, distancia, teleobjetivo, anticipación del comportamiento.</li>
+        <li><strong>Deporte</strong>: velocidad de obturación, seguimiento AF, anticipación del pico de acción.</li>
+        <li><strong>Culinario / lifestyle</strong>: styling, luz controlada, storytelling del producto.</li>
+      </ul>
+      <h2>Documental vs arte</h2>
+      <p>El documental busca un testimonio de lo real; la foto de arte asume una intención estética o conceptual. Ambos pueden cruzarse — el género habla del nivel de control y del relato, no solo del cuerpo.</p>
+      <div class="card">
+        <p><strong>Entrenamiento</strong> — preguntas sobre retrato, street, paisaje, macro e intenciones de género.</p>
+        <a class="cta" href="/s/genres?lang=es">Lanzar el quiz géneros foto</a>
+        <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz de géneros, la revisión de resultados también enlaza a esta guía.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c3-decouvrir">Para la clase → recorridos Escolares (ciclo 3)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=es">Composición</a> · <a href="/guides/lumiere-photo?lang=es">Luz</a> · <a href="https://www.pixfan.com/apprendre-la-photo/genres-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=genres-photo&amp;utm_content=pixfan">Hub géneros Pixfan</a></p>
       </div>
     </article>
   </main>

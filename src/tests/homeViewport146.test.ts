@@ -41,7 +41,7 @@ describe('vague 1.46 — docs v1.45.0 + light-color LocalizedString.es', () => {
     /* Docs headline moved to v1.46.0 in vague 1.47 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.45**');
     expect(nextSteps).toMatch(/no-go.*1\.46/);
-    expect(readme).toMatch(/v1\.(4[56789]|5[01])\.0/);
+    expect(readme).toMatch(/v1\.(4[56789]|5[012])\.0/);
   });
 
   it('light-color ships .es on all LocalizedString fields (182)', () => {
