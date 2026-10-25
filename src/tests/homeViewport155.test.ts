@@ -14,11 +14,11 @@ import guidesIndex from '../../public/guides/index.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)', () => {
-  it('docs headline cites v1.54.0; vague 1.54 listed; no-go through 1.55', () => {
-    expect(readme).toContain('v1.54.0');
-    expect(nextSteps).toContain('**v1.54.0**');
+  it('docs still mention vague 1.54; no-go line covers 1.55+', () => {
+    /* Docs headline moved to v1.55.0 in vague 1.56 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.54**');
     expect(nextSteps).toMatch(/no-go.*1\.55/);
+    expect(readme).toMatch(/v1\.(54|55)\.0/);
   });
 
   it('droits ships real article.es (not EN stub)', () => {
@@ -49,7 +49,7 @@ describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)'
     expect(histoire).toContain('Historia e iconos foto — guía + quiz');
   });
 
-  it('full topic cluster 9/9 has article.es; hub still lacks', () => {
+  it('full topic cluster 9/9 has article.es (1.55 expand anchor)', () => {
     for (const html of [
       composition,
       triangle,
@@ -63,10 +63,11 @@ describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)'
     ]) {
       expect(html).toContain('<article class="es">');
     }
-    expect(guidesIndex).not.toContain('<article class="es">');
+    /* Hub gained article.es in vague 1.56 — topics remain the 1.55 lock. */
+    expect(guidesIndex).toContain('<article class="es">');
   });
 
-  it('still no hreflang es/de (topics 9/9 but hub/scolaires EN — product rule)', () => {
+  it('still no hreflang es/de (1.55 product rule — hreflang deferred)', () => {
     for (const html of [
       droits,
       histoire,

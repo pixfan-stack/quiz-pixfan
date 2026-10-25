@@ -219,7 +219,65 @@
           }
         }
       }
-      if (p === 'en' || p === 'es' || p === 'de') {
+      function applyJsonLdEs() {
+        var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+        for (var i = 0; i < scripts.length; i++) {
+          var raw = scripts[i].textContent;
+          if (!raw) continue;
+          try {
+            var data = JSON.parse(raw);
+            if (data['@type'] === 'BreadcrumbList' && data.itemListElement) {
+              for (var b = 0; b < data.itemListElement.length; b++) {
+                var crumb = data.itemListElement[b];
+                if (crumb.name === 'Scolaires') {
+                  crumb.name = 'Escolares';
+                  crumb.item = withLang(crumb.item, 'es');
+                }
+              }
+              scripts[i].textContent = JSON.stringify(data);
+            } else if (data['@type'] === 'ItemList') {
+              data.name = 'Recorridos escolares Quiz PixFan';
+              data.description =
+                'Ciclo 4 (collège) primero, luego ciclo 3, alfabetización mediática y liceo — lectura de imagen, luz, derecho a la imagen.';
+              var esNames = [
+                'Leer una imagen (ciclo 4)',
+                'Luz y fotografía',
+                'Derecho a la imagen (EMI)',
+                'Descubrir la fotografía (ciclo 3)',
+                'Práctica de imagen fija (liceo)',
+              ];
+              if (data.itemListElement) {
+                for (var n = 0; n < data.itemListElement.length; n++) {
+                  if (esNames[n]) data.itemListElement[n].name = esNames[n];
+                  data.itemListElement[n].url = withLang(
+                    data.itemListElement[n].url,
+                    'es'
+                  );
+                }
+              }
+              scripts[i].textContent = JSON.stringify(data);
+            }
+          } catch (e) {
+            /* keep static FR JSON-LD */
+          }
+        }
+      }
+      /* es: real article.es + ES share meta (vague 1.56); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Escolares — foto en clase | Quiz PixFan';
+        var esTitle = 'Escolares — foto en clase | Quiz PixFan';
+        var esDescMeta =
+          'Recorridos pedagógicos gratuitos ciclo 3–4, liceo y alfabetización mediática: descubrir la foto, leer una imagen, luz, derecho a la imagen, práctica imagen fija. Quizzes + guías Quiz PixFan, sin cuenta, modo clase sin clasificación pública.';
+        var esOgDesc =
+          'Recorridos ciclo 3–4 / liceo / alfabetización mediática: descubrir la foto, leer una imagen, luz, derecho a la imagen, práctica imagen fija. Gratis, sin cuenta, enlaces de sesión compartibles.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+        applyJsonLdEs();
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Schools — photo in class | Quiz PixFan';
         var enTitle = 'Schools — photo in class | Quiz PixFan';
         var enDescMeta =
@@ -629,6 +687,182 @@
       <p class="muted">Hub aligned with programmes in force (BO 2020). <strong>Annual review</strong> planned if programmes change (team maintenance checklist).</p>
 
       <p><a class="cta-secondary" href="/guides/?lang=en">All guides</a> · <a class="cta-secondary" href="/?lang=en">Start a quiz</a></p>
+    </article>
+    <article class="es">
+      <h1>Escolares — foto en clase</h1>
+      <p class="lead"><strong>Prioridad collège ciclo&nbsp;4</strong>: lectura de imagen, luz, EMI — sin cuenta, modo clase.</p>
+      <p class="hub-hero-cta">
+        <a class="cta" href="/s/photo-reading?classe=1&amp;lang=es" data-track-parcours data-hub-hero-cta>Lanzar la sesión (recomendado)</a>
+      </p>
+      <details class="hub-more">
+        <summary>Ficha, recorridos y notas</summary>
+        <p class="muted">Complemento de sesión (15–30&nbsp;min), no un LMS. Imágenes de dominio público / originales. Sin afiliación al Ministerio de Educación francés.</p>
+        <p>
+          <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html?lang=es">Imprimir la ficha de sesión</a>
+        </p>
+        <nav aria-label="Ir a los recorridos">
+          <ul class="hub-jump">
+            <li><a href="#c4-regard-es">Leer una imagen (recomendado)</a></li>
+            <li><a href="#c4-lumiere-es">Luz</a></li>
+            <li><a href="#emi-es">Alfabetización mediática</a></li>
+            <li><a href="#cycle-3-es">Ciclo 3</a></li>
+            <li><a href="#lycee-es">Liceo</a></li>
+          </ul>
+        </nav>
+      </details>
+
+      <h2 id="cycle-4-es">Ciclo 4 — artes plásticas (collège)</h2>
+      <p>Núcleo collège — alineado con los programas vigentes (BOEN n.º&nbsp;31 del 30 de julio de 2020): representación, imágenes / realidad / ficción, prácticas de imagen fija (fotografía), digital.</p>
+
+      <div class="card card--recommended" id="c4-regard-es" data-parcours="c4-regard" data-event="scolaires_parcours_c4_regard">
+        <h3>Leer una imagen <span class="parcours-badge">Collège</span> <span class="muted">· ~20&nbsp;min</span></h3>
+        <p>Inicio recomendado en ciclo&nbsp;4: marco, composición, punto de vista — luego análisis de imágenes ilustradas.</p>
+        <p>
+          <a class="cta" href="/s/photo-reading?classe=1&amp;lang=es" data-track-parcours>Lanzar la sesión</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-reading?classe=1&amp;lang=es" data-copied="¡Enlace copiado!">Copiar el enlace de sesión</button>
+        </p>
+        <ol>
+          <li><a href="/guides/composition-photo?lang=es">Guía de composición</a></li>
+          <li><a href="/s/photo-reading?classe=1&amp;lang=es">Quiz Fotos para analizar</a> (modo clase)</li>
+          <li><a href="/s/composition?classe=1&amp;lang=es">Quiz Composición</a></li>
+        </ol>
+      </div>
+
+      <div class="card" id="c4-lumiere-es" data-parcours="c4-lumiere" data-event="scolaires_parcours_c4_lumiere">
+        <h3>Luz y fotografía <span class="parcours-badge">Collège</span> <span class="muted">· ~25&nbsp;min</span></h3>
+        <p>Exposición, dirección y calidad de la luz — palancas técnicas del lenguaje visual.</p>
+        <p>
+          <a class="cta" href="/s/exposure-basics?classe=1&amp;lang=es" data-track-parcours>Lanzar la sesión</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/exposure-basics?classe=1&amp;lang=es" data-copied="¡Enlace copiado!">Copiar el enlace de sesión</button>
+        </p>
+        <ol>
+          <li><a href="/guides/lumiere-photo?lang=es">Guía de luz</a></li>
+          <li><a href="/s/exposure-basics?classe=1&amp;lang=es">Quiz Fundamentos de exposición</a></li>
+          <li><a href="/s/light-color?classe=1&amp;lang=es">Quiz Luz y color</a></li>
+        </ol>
+      </div>
+
+      <h2 id="emi-es">Alfabetización mediática (EMI) — derecho a la imagen</h2>
+      <div class="card" id="c4-emi-droits-es" data-parcours="c4-emi-droits" data-event="scolaires_parcours_c4_emi_droits">
+        <h3>Derecho a la imagen <span class="muted">· ~20&nbsp;min</span></h3>
+        <p>Privacidad, publicación, ética de las imágenes mediáticas — sesión típica EMI / biblioteca.</p>
+        <p>
+          <a class="cta" href="/s/photo-rights?classe=1&amp;lang=es" data-track-parcours>Lanzar la sesión</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-rights?classe=1&amp;lang=es" data-copied="¡Enlace copiado!">Copiar el enlace de sesión</button>
+        </p>
+        <ol>
+          <li><a href="/guides/droits-ethique-photo?lang=es">Guía derechos y ética</a></li>
+          <li><a href="/s/photo-rights?classe=1&amp;lang=es">Quiz derechos foto</a> (modo clase)</li>
+          <li class="muted">Debate fuera de la app (opcional)</li>
+        </ol>
+      </div>
+
+      <h2 id="cycle-3-es">Ciclo 3 — descubrir la fotografía</h2>
+      <p>Lenguaje simple (CM1–CM2–6.º): categorías de imagen, imagen fotográfica, narración visual — alineado con BOEN n.º&nbsp;31 del 30 de julio de 2020.</p>
+
+      <div class="card" id="c3-decouvrir-es" data-parcours="c3-decouvrir" data-event="scolaires_parcours_c3_decouvrir">
+        <h3>Descubrir la fotografía <span class="muted">· ~15&nbsp;min</span></h3>
+        <p>¿Qué es un género foto? Luego algunas imágenes para mirar juntos — sin jerga técnica.</p>
+        <p>
+          <a class="cta" href="/s/genres?classe=1&amp;lang=es" data-track-parcours>Lanzar la sesión</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1&amp;lang=es" data-copied="¡Enlace copiado!">Copiar el enlace de sesión</button>
+        </p>
+        <ol>
+          <li><a href="/guides/genres-photo?lang=es">Guía de géneros (extracto)</a></li>
+          <li><a href="/s/genres?classe=1&amp;lang=es">Quiz Géneros</a> (fácil, modo clase)</li>
+          <li><a href="/s/photo-reading?classe=1&amp;lang=es">Opción: Fotos para analizar</a></li>
+        </ol>
+      </div>
+
+      <h2 id="lycee-es">Liceo — práctica de imagen fija</h2>
+      <p>Artes plásticas optativa / especialidad (BO 2019): prácticas de imagen fija (fotografía), luz, captura, transformación digital. Etiqueta clara <strong>liceo / más profundo</strong> — no el recorrido núcleo collège.</p>
+
+      <div class="card" id="lycee-pratique-es" data-parcours="lycee-pratique" data-event="scolaires_parcours_lycee_pratique">
+        <h3>Práctica de imagen fija <span class="muted">· ~30&nbsp;min · liceo</span></h3>
+        <p>Retrato y luz → flash / estudio → retoque. Opción: léxico de imagen fija (vocabulario original, sin obras protegidas).</p>
+        <p>
+          <a class="cta" href="/s/portrait-light?classe=1&amp;lang=es" data-track-parcours>Lanzar la sesión</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/portrait-light?classe=1&amp;lang=es" data-copied="¡Enlace copiado!">Copiar el enlace de sesión</button>
+        </p>
+        <ol>
+          <li><a href="/s/lexique-image-fixe?classe=1&amp;lang=es">Opción: Léxico imagen fija</a> (12&nbsp;P, solo texto)</li>
+          <li><a href="/s/portrait-light?classe=1&amp;lang=es">Quiz Retrato y luz</a> (modo clase)</li>
+          <li><a href="/s/flash-studio?classe=1&amp;lang=es">Quiz Flash y estudio</a></li>
+          <li><a href="/guides/retouche-lightroom?lang=es">Guía de retoque</a> → <a href="/s/retouching?classe=1&amp;lang=es">Quiz Retoque</a></li>
+        </ol>
+      </div>
+
+      <h2 id="corpus-bac-es">Corpus de bachillerato — solo enlaces externos</h2>
+      <div class="card">
+        <p>Quiz PixFan <strong>no examina</strong> obras de la lista limitada de bachillerato (sin reproducciones). Para listas y recursos oficiales:</p>
+        <ul>
+          <li><a href="https://eduscol.education.fr/" target="_blank" rel="noopener noreferrer">éduscol</a> — programas y recursos de artes plásticas</li>
+          <li><a href="https://www.education.gouv.fr/bo/20/Hebdo31/MENE2018714A.htm" target="_blank" rel="noopener noreferrer">BOEN no.&nbsp;31 of 30 July 2020</a> — ciclos 3 y 4 (vigentes)</li>
+          <li>Listas limitadas Terminale: consultar solo páginas oficiales MEN / éduscol (enlaces externos, nunca alojados aquí)</li>
+        </ul>
+      </div>
+
+      <h2 id="enseignants-es">Ficha del docente</h2>
+      <div class="card">
+        <h3>Objetivos</h3>
+        <ul>
+          <li>Ciclo&nbsp;3: nombrar géneros de imagen y describir lo que se ve (marco, sujeto).</li>
+          <li>Ciclo&nbsp;4: usar vocabulario de análisis de imagen (marco, luz, intención).</li>
+          <li>EMI: distinguir derecho de autor, derecho a la imagen y buenas prácticas de publicación.</li>
+          <li>Liceo: practicar luz de retrato / flash y un gesto de retoque ético; vocabulario de imagen fija.</li>
+        </ul>
+        <h3>Material</h3>
+        <p>Smartphone, tableta u ordenador con navegador. Wi‑Fi frágil: instalar la PWA (menú del navegador → “Instalar app”) tras cargar el pack una vez.</p>
+        <h3 id="grille-duree-es">Cuadrícula de tiempos (guía · quiz · debrief)</h3>
+        <table class="fiche-timing" aria-label="Cuadrícula de tiempos por recorrido">
+          <thead>
+            <tr>
+              <th>Recorrido</th>
+              <th>Total</th>
+              <th>Guía</th>
+              <th>Quiz</th>
+              <th>Debrief</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Descubrir la fotografía (C3)</td><td>~15&nbsp;min</td><td>2–3</td><td>8–10</td><td>2–3</td></tr>
+            <tr><td>Leer una imagen (C4)</td><td>~20&nbsp;min</td><td>3–4</td><td>12–14</td><td>3–4</td></tr>
+            <tr><td>Luz y foto</td><td>~25&nbsp;min</td><td>4–5</td><td>14–16</td><td>3–4</td></tr>
+            <tr><td>Derecho a la imagen (EMI)</td><td>~20&nbsp;min</td><td>3–4</td><td>10–12</td><td>4–5</td></tr>
+            <tr><td>Práctica imagen fija (liceo)</td><td>~30&nbsp;min</td><td>3–5</td><td>18–22</td><td>4–5</td></tr>
+          </tbody>
+        </table>
+        <h3>Preguntas de debrief (1 / recorrido)</h3>
+        <ul>
+          <li><strong>C3 descubrir:</strong> “Nombra un retrato, un paisaje y una foto de calle — ¿qué cambia en el marco?”</li>
+          <li><strong>C4 lectura:</strong> “En 2 imágenes: ¿dónde está el sujeto, desde dónde miramos, qué dice el encuadre?”</li>
+          <li><strong>C4 luz:</strong> “¿Qué intención (clima / contraste) al cambiar solo la luz?”</li>
+          <li><strong>EMI derechos:</strong> “¿Podemos publicar una foto de clase en una red? ¿Quién decide, y por qué?”</li>
+          <li><strong>Liceo práctica:</strong> “¿Dónde termina el retoque honesto? Un gesto que informa vs uno que engaña.”</li>
+        </ul>
+        <h3>Flujo de la sesión</h3>
+        <ol>
+          <li>Comparte el <strong>enlace de sesión</strong> (botón arriba) — abre el quiz en <em>modo clase</em> (<code>?classe=1</code>): sin clasificación pública, sin prompt de highscore.</li>
+          <li>Deja 2–3&nbsp;min para la guía (o proyecta los puntos clave).</li>
+          <li>Lanza el quiz (explicaciones tras cada pregunta).</li>
+          <li>Debrief en grupo con la pregunta del recorrido arriba.</li>
+        </ol>
+        <p><a class="cta-secondary" href="/guides/scolaires/fiche-seance.html?lang=es">Versión imprimible (1 página)</a></p>
+        <h3>Aviso curricular</h3>
+        <p class="muted">Quiz PixFan cita referencias de programas (BO / éduscol) como <strong>alineación pedagógica</strong>. No es un recurso oficial MEN ni una certificación. Contenido original PixFan — sin reproducciones de manuales ni del corpus limitado de bachillerato.</p>
+        <p class="muted">Si la sesión incluye toma real fuera de la app, recuerda el <a href="https://www.clemi.fr/" target="_blank" rel="noopener noreferrer">derecho a la imagen de los alumnos</a> (CLEMI / EMI).</p>
+      </div>
+
+      <h2>Referencias (enlaces externos)</h2>
+      <ul class="muted">
+        <li>Artes plásticas ciclos 3 y 4 — BOEN n.º&nbsp;31 del 30 de julio de 2020 (éduscol)</li>
+        <li>EMI — derecho a la imagen, imágenes mediáticas (éduscol / CLEMI)</li>
+        <li>Historia de las artes — transversal ciclos 3–4</li>
+        <li>Liceo — artes plásticas optativa / especialidad (BO especiales 2019)</li>
+      </ul>
+      <p class="muted">Hub alineado con los programas vigentes (BO 2020). <strong>Revisión anual</strong> prevista si los programas cambian (checklist de mantenimiento del equipo).</p>
+
+      <p><a class="cta-secondary" href="/guides/?lang=es">Todas las guías</a> · <a class="cta-secondary" href="/?lang=es">Lanzar un quiz</a></p>
     </article>
   </main>
   <footer class="app-footer">

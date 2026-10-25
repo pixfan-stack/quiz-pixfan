@@ -81,8 +81,21 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es/de: interim EN article via CSS; share meta stays FR until translated */
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.56); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Guías quiz foto — aprender luego practicar | Quiz PixFan';
+        var esTitle = 'Guías quiz foto | Quiz PixFan';
+        var esDescMeta =
+          'Guías gratuitas sobre exposición, composición, luz, retoque, géneros, smartphone, material, derechos e historia foto, con quizzes interactivos FR/EN en Quiz PixFan.';
+        var esOgDesc =
+          'Aprende exposición, composición, luz, géneros, retoque, smartphone, material, derechos e historia — luego ponte a prueba.';
+        if (desc) desc.setAttribute('content', esDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esOgDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Photo quiz guides — learn then practice | Quiz PixFan';
         var enTitle = 'Photo quiz guides | Quiz PixFan';
         var enDescMeta =
@@ -235,6 +248,62 @@
       </div>
       <p><a class="cta" href="/?lang=en">Start a quiz</a></p>
     </div>
+
+    <article class="es">
+      <h1>Guías de fotografía para progresar rápido</h1>
+      <p class="lead">Páginas legibles por Google, enlazadas a los quizzes interactivos de Quiz PixFan (386 preguntas, 268 ilustradas, FR/EN).</p>
+      <div class="card">
+        <h2>Escolares — foto en clase</h2>
+        <p>Recorridos ciclo 4 artes plásticas + alfabetización mediática: leer una imagen, luz, derecho a la imagen.</p>
+        <a class="cta-secondary" href="/guides/scolaires/?lang=es">Ver los recorridos →</a>
+      </div>
+      <div class="card">
+        <h2>Triángulo de exposición</h2>
+        <p>ISO, apertura, velocidad — los 3 palancas de la luz.</p>
+        <a class="cta-secondary" href="/guides/triangle-exposition?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Composición foto</h2>
+        <p>Regla de tercios, líneas, encuadre y profundidad.</p>
+        <a class="cta-secondary" href="/guides/composition-photo?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Luz foto</h2>
+        <p>Dirección, calidad, temperatura y balance de blancos.</p>
+        <a class="cta-secondary" href="/guides/lumiere-photo?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Retoque y Lightroom</h2>
+        <p>Flujo catálogo → tono → color → exportación.</p>
+        <a class="cta-secondary" href="/guides/retouche-lightroom?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Foto con smartphone</h2>
+        <p>Luz, HDR, modo pro y errores clásicos.</p>
+        <a class="cta-secondary" href="/guides/photo-smartphone?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Géneros fotográficos</h2>
+        <p>Retrato, street, paisaje, macro — la intención antes del cuerpo.</p>
+        <a class="cta-secondary" href="/guides/genres-photo?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Material foto</h2>
+        <p>Sensores, focales, estabilización y filtros útiles.</p>
+        <a class="cta-secondary" href="/guides/materiel-photo?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Derechos y ética</h2>
+        <p>Derecho de autor, licencias, model release y buenas prácticas.</p>
+        <a class="cta-secondary" href="/guides/droits-ethique-photo?lang=es">Leer la guía →</a>
+      </div>
+      <div class="card">
+        <h2>Historia e iconos</h2>
+        <p>Inventos, fotógrafos míticos e imágenes de dominio público.</p>
+        <a class="cta-secondary" href="/guides/histoire-photo?lang=es">Leer la guía →</a>
+      </div>
+      <p><a class="cta" href="/?lang=es">Lanzar un quiz</a></p>
+    </article>
   </main>
   <footer class="app-footer">
     <nav class="app-footer__guides" aria-label="Guides">
