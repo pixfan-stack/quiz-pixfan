@@ -451,10 +451,11 @@ ul {
   color: var(--color-primary);
 }
 
-/* ---------- FR / EN (+ ES/DE: .es when present, else EN interim) ---------- */
+/* ---------- FR / EN (+ ES/DE: .es/.de when present, else EN interim) ---------- */
 
 .en,
-.es {
+.es,
+.de {
   display: none;
 }
 
@@ -476,6 +477,15 @@ html[lang="es"]:has(article.es) .en {
 }
 
 html[lang="es"] article.es {
+  display: block;
+}
+
+/* Pilote article.de : prefer German body when present; other guides keep EN interim */
+html[lang="de"]:has(article.de) .en {
+  display: none;
+}
+
+html[lang="de"] article.de {
   display: block;
 }
 
