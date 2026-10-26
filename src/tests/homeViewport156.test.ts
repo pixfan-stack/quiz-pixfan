@@ -14,7 +14,7 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.55**');
     expect(nextSteps).toMatch(/no-go.*1\.56/);
-    expect(readme).toMatch(/v1\.(55|56|57)\.0/);
+    expect(readme).toMatch(/v1\.(55|56|57|58)\.0/);
   });
 
   it('guides hub ships real article.es (not EN stub)', () => {
@@ -49,11 +49,12 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     expect(scolairesHub).toContain('applyJsonLdEs');
   });
 
-  it('topics 9/9 retained; fiche séance still lacks article.es', () => {
+  it('topics 9/9 retained; fiche séance unlocked in 1.59 (historical)', () => {
     expect(composition).toContain('<article class="es">');
     expect(droits).toContain('<article class="es">');
     expect(histoire).toContain('<article class="es">');
-    expect(fiche).not.toContain('<article class="es">');
+    /* fiche gained article.es in vague 1.59 — keep no-de lock */
+    expect(fiche).not.toContain('hreflang="de"');
   });
 
   it('still no hreflang de (es unlocked in 1.57 — historical)', () => {

@@ -77,11 +77,12 @@ describe('sitemap / SEO hygiene', () => {
     expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
     expect(sitemap).not.toMatch(/<lastmod>2026-09-\d{2}<\/lastmod>/);
 
-    // Vague 1.57–1.58: ?lang= twins for ES-ready guides + home (not fiche / de).
+    // Vague 1.57–1.59: ?lang= twins for ES-ready guides + home + fiche (not de).
     const esReady = [
       'https://quiz.pixfan.fr/',
       'https://quiz.pixfan.fr/guides/',
       'https://quiz.pixfan.fr/guides/scolaires/',
+      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html',
       'https://quiz.pixfan.fr/guides/composition-photo',
       'https://quiz.pixfan.fr/guides/triangle-exposition',
       'https://quiz.pixfan.fr/guides/photo-smartphone',
@@ -103,7 +104,6 @@ describe('sitemap / SEO hygiene', () => {
       expect(esMod! >= LASTMOD_FLOOR, `${base}?lang=es`).toBe(true);
     }
     expect(sitemap).not.toContain('?lang=de');
-    expect(sitemap).not.toContain('fiche-seance.html?lang=es');
   });
 
   it('excludes sitemap and robots from bare SPA catch-all precedence', () => {

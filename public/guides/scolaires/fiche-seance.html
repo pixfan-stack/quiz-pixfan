@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />
   <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=fr" />
   <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es" />
   <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />
@@ -15,6 +16,7 @@
   <meta property="og:description" content="Fiche séance imprimable Quiz PixFan — parcours scolaires cycle 3–4 et EMI. Contenu original PixFan, alignement pédagogique BO 2020. FR/EN." />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
   <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fiche séance Scolaires | Quiz PixFan" />
@@ -131,7 +133,19 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      if (p === 'en' || p === 'es' || p === 'de') {
+      /* es: real article.es + ES share meta (vague 1.59); de: interim EN via CSS */
+      if (p === 'es') {
+        document.title = 'Ficha de sesión Escolares | Quiz PixFan';
+        var esTitle = 'Ficha de sesión Escolares | Quiz PixFan';
+        var esDesc =
+          'Ficha de sesión imprimible Quiz PixFan — recorridos escolares ciclo 3–4 y alfabetización mediática. Contenido original PixFan, alineación pedagógica BO 2020. FR/EN/ES.';
+        if (desc) desc.setAttribute('content', esDesc);
+        if (ogTitle) ogTitle.setAttribute('content', esTitle);
+        if (ogDesc) ogDesc.setAttribute('content', esDesc);
+        setLocales('es_ES', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', esTitle);
+        if (twDesc) twDesc.setAttribute('content', esDesc);
+      } else if (p === 'en' || p === 'de') {
         document.title = 'Lesson sheet — Schools | Quiz PixFan';
         var enTitle = 'Lesson sheet — Schools | Quiz PixFan';
         var enDesc =
@@ -374,6 +388,102 @@
       </div>
 
       <p class="muted" style="margin-top:1rem">Quiz PixFan — original content. No textbook or limited baccalaureate corpus reproductions. Hub: https://quiz.pixfan.fr/guides/scolaires/?lang=en</p>
+    </article>
+
+    <article class="es">
+      <h1>Ficha de sesión — Escolares Quiz PixFan</h1>
+      <p class="lead">Una página para preparar y proyectar una sesión (15–30&nbsp;min). Contenido original PixFan — alineación pedagógica con BOEN n.º&nbsp;31 del 30 de julio de 2020, sin afiliación MEN. Incluye el recorrido liceo.</p>
+      <div class="fiche-actions">
+        <button type="button" class="cta" onclick="window.print()">Imprimir / PDF</button>
+        <a class="cta-secondary" href="/guides/scolaires/?lang=es">Volver al hub</a>
+      </div>
+
+      <p class="fiche-meta"><strong>Material:</strong> smartphone, tableta u ordenador · navegador · Wi‑Fi (o PWA ya instalada). <strong>Modo clase:</strong> los enlaces de abajo abren el quiz sin clasificación pública (<code>?classe=1</code>).</p>
+
+      <table class="fiche-timing" id="grille-duree-es" aria-label="Cuadrícula de tiempos por recorrido">
+        <thead>
+          <tr>
+            <th>Recorrido</th>
+            <th>Duración</th>
+            <th>Guía</th>
+            <th>Quiz</th>
+            <th>Debrief</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Descubrir la fotografía (C3)</td><td>~15&nbsp;min</td><td>2–3</td><td>8–10</td><td>2–3</td></tr>
+          <tr><td>Leer una imagen (C4)</td><td>~20&nbsp;min</td><td>3–4</td><td>12–14</td><td>3–4</td></tr>
+          <tr><td>Luz y foto</td><td>~25&nbsp;min</td><td>4–5</td><td>14–16</td><td>3–4</td></tr>
+          <tr><td>Derecho a la imagen (EMI)</td><td>~20&nbsp;min</td><td>3–4</td><td>10–12</td><td>4–5</td></tr>
+          <tr><td>Práctica imagen fija (liceo)</td><td>~30&nbsp;min</td><td>3–5</td><td>18–22</td><td>4–5</td></tr>
+        </tbody>
+      </table>
+
+      <div class="fiche-grid">
+        <section class="fiche-block" id="c3-decouvrir-es">
+          <h3>1. Descubrir la fotografía (ciclo 3) · ~15&nbsp;min</h3>
+          <p class="fiche-meta">CM1–CM2–6.º — géneros de imagen, vocabulario simple.</p>
+          <ol>
+            <li>Leer / proyectar la guía de géneros (2–3&nbsp;min).</li>
+            <li>Lanzar el quiz Géneros en modo clase.</li>
+            <li>Opción: 5 minutos de Fotos para analizar.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> «Nombra un retrato, un paisaje y una foto de calle — ¿qué cambia en el marco?»</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/genres?classe=1&amp;lang=es</p>
+        </section>
+
+        <section class="fiche-block" id="c4-regard-es">
+          <h3>2. Leer una imagen (ciclo 4) · ~20&nbsp;min</h3>
+          <p class="fiche-meta">Marco, composición, punto de vista.</p>
+          <ol>
+            <li>Guía de composición (puntos clave en la pizarra).</li>
+            <li>Quiz Fotos para analizar (modo clase).</li>
+            <li>Quiz Composición si el tiempo lo permite.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> «En 2 imágenes que funcionan o fallan: ¿dónde está el sujeto, desde dónde miramos, qué dice el encuadre?»</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/photo-reading?classe=1&amp;lang=es</p>
+        </section>
+
+        <section class="fiche-block" id="c4-lumiere-es">
+          <h3>3. Luz y fotografía · ~25&nbsp;min</h3>
+          <p class="fiche-meta">Exposición, dirección y calidad de la luz.</p>
+          <ol>
+            <li>Guía de luz (o triángulo de exposición).</li>
+            <li>Quiz Fundamentos de exposición.</li>
+            <li>Quiz Luz y color.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> «¿Qué intención (clima / contraste) podrías buscar al cambiar solo la luz?»</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/exposure-basics?classe=1&amp;lang=es</p>
+        </section>
+
+        <section class="fiche-block" id="c4-emi-droits-es">
+          <h3>4. Derecho a la imagen (EMI) · ~20&nbsp;min</h3>
+          <p class="fiche-meta">Privacidad, publicación, imagen mediática.</p>
+          <ol>
+            <li>Guía derechos y ética.</li>
+            <li>Quiz derechos foto (modo clase).</li>
+            <li>Recordar el derecho a la imagen de los alumnos (CLEMI) si hay toma real.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> «¿Podemos publicar una foto de la clase en una red? ¿Quién decide, y por qué?»</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/photo-rights?classe=1&amp;lang=es</p>
+        </section>
+
+        <section class="fiche-block" id="lycee-pratique-es">
+          <h3>5. Práctica de imagen fija (liceo) · ~30&nbsp;min</h3>
+          <p class="fiche-meta">Etiqueta liceo / más profundo — retrato, flash, retoque.</p>
+          <ol>
+            <li>Opción: Léxico imagen fija (vocabulario, 12&nbsp;P texto).</li>
+            <li>Quiz Retrato y luz (modo clase).</li>
+            <li>Quiz Flash y estudio.</li>
+            <li>Guía de retoque → quiz Retoque.</li>
+          </ol>
+          <p class="fiche-debrief"><strong>Debrief:</strong> «¿Dónde termina el retoque honesto? Nombra un gesto que informa y uno que engaña.»</p>
+          <p class="fiche-url">https://quiz.pixfan.fr/s/portrait-light?classe=1&amp;lang=es</p>
+          <p class="fiche-url">Léxico: https://quiz.pixfan.fr/s/lexique-image-fixe?classe=1&amp;lang=es</p>
+        </section>
+      </div>
+
+      <p class="muted" style="margin-top:1rem">Quiz PixFan — contenido original. Sin reproducciones de manuales ni del corpus limitado de bachillerato. Hub: https://quiz.pixfan.fr/guides/scolaires/?lang=es</p>
     </article>
   </main>
   <footer class="app-footer no-print">
