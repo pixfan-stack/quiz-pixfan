@@ -74,7 +74,7 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es: real article.es + ES share meta (vague 1.52); de: interim EN via CSS */
+      /* es: article.es + ES meta; de: article.de + DE meta (vague 1.61); en: EN */
       if (p === 'es') {
         document.title = 'Foto con smartphone: luz, HDR, modo pro | Quiz PixFan';
         var esTitle = 'Foto smartphone — guía + quiz';
@@ -86,7 +86,18 @@
         setLocales('es_ES', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Smartphone-Fotografie: Licht, HDR, Pro-Modus | Quiz PixFan';
+        var deTitle = 'Smartphone-Fotografie — Leitfaden + Quiz';
+        var deDescMeta = 'Verbessern Sie Ihre Smartphone-Fotos (Licht, HDR, Pro-Modus, häufige Fehler) und prüfen Sie sich mit dem kostenlosen Smartphone-Quiz von Quiz PixFan.';
+        var deOgDesc = 'Licht, HDR, Pro-Modus: nützliche Grundlagen, dann ein interaktives Quiz.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+      } else if (p === 'en') {
         document.title = 'Smartphone photography: light, HDR, pro mode | Quiz PixFan';
         var enTitle = 'Smartphone photography — guide + quiz';
         var enDescMeta = 'Improve your smartphone photos (light, HDR, pro mode, common mistakes) then test yourself with the free Quiz PixFan smartphone quiz.';
@@ -207,6 +218,31 @@
         <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz smartphone, la revisión de resultados también enlaza a esta guía.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c3-decouvrir">Para la clase → recorridos Escolares (ciclo 3)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=es">Composición</a> · <a href="/guides/lumiere-photo?lang=es">Luz</a> · <a href="/guides/genres-photo?lang=es">Géneros</a></p>
+      </div>
+    </article>
+
+    <article class="de">
+      <h1>Smartphone-Fotografie: bessere Aufnahmen, ohne Ausrüstung</h1>
+      <p class="lead">Das Telefon automatisiert viel. Licht, HDR und Sensorgrenzen zu verstehen schlägt jeden weiteren Filter.</p>
+      <h2>Zuerst das Licht</h2>
+      <p>Ans Fenster gehen, hartes Gegenlicht nur bewusst nutzen, Linse putzen. Am kleinen Sensor schlägt gutes Licht den Digitalzoom.</p>
+      <h2>HDR: wann einschalten</h2>
+      <p>Nützlich bei starkem Kontrast (Himmel + Schatten). Weniger nützlich bei sehr bewegten Motiven (Geisterbilder). Das Ergebnis prüfen, nicht nur das Icon.</p>
+      <h2>Pro- / Manuellmodus</h2>
+      <ul>
+        <li>Auf Lichter belichten, wenn Sie den Himmel behalten wollen.</li>
+        <li>Fokus / Belichtung sperren (AE/AF-Lock) für stabile Porträts.</li>
+        <li>Extremen Zoom meiden: mit den Füßen näher gehen.</li>
+      </ul>
+      <h2>Klassische Fehler</h2>
+      <p>Frontblitz innen, HDR bei dunklem Konzert, aggressive Retusche, die Haut zerstört. Das Smartphone-Quiz zielt auf diese Fallen.</p>
+      <div class="card">
+        <p><strong>Prüfen Sie Ihre Reflexe</strong> mit dem Smartphone-Pack von Quiz PixFan.</p>
+        <a class="cta" href="/s/smartphone?lang=de">Smartphone-Quiz starten</a>
+        
+        <p class="muted" style="margin-top:0.5rem">Nach einem Fehler im Smartphone-Quiz verweist die Ergebnisübersicht auch auf diesen Leitfaden.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=de#c3-decouvrir">Für den Unterricht → Schulpfade (Zyklus 3)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=de">Komposition</a> · <a href="/guides/lumiere-photo?lang=de">Licht</a> · <a href="/guides/genres-photo?lang=de">Genres</a></p>
       </div>
     </article>
   </main>

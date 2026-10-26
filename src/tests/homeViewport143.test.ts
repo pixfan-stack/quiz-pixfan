@@ -28,7 +28,7 @@ describe('vague 1.43 — docs v1.42.0 + topics twitter×9', () => {
     /* Docs headline moved to v1.43.0 in vague 1.44 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.42**');
     expect(nextSteps).toMatch(/no-go.*1\.43/);
-    expect(readme).toMatch(/v1\.(4[23456789]|5[0123456789])\.0/);
+    expect(readme).toMatch(/v1\.(4[23456789]|5[0123456789]|60)\.0/);
   });
 
   it('nine topic guides ship twitter + og:locale:alternate + EN sniff', () => {

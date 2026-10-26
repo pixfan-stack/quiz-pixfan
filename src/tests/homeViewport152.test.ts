@@ -9,10 +9,10 @@ import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', () => {
   it('docs still mention vague 1.51; no-go line covers 1.52+', () => {
-    /* Docs headline moved to v1.52.0 in vague 1.53 — keep historical Livré lock. */
+    /* Docs headline moved forward in later waves — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.51**');
     expect(nextSteps).toMatch(/no-go.*1\.52/);
-    expect(readme).toMatch(/v1\.(51|52|53|54|55|56|57|58|59)\.0/);
+    expect(readme).toMatch(/v1\.(51|52|53|54|55|56|57|58|59|60)\.0/);
   });
 
   it('triangle ships real article.es (not EN stub)', () => {
@@ -37,7 +37,8 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     for (const html of [triangle, smartphone]) {
       expect(html).toContain("p === 'es'");
       expect(html).toContain("setLocales('es_ES', 'fr_FR')");
-      expect(html).toMatch(/p === 'en' \|\| p === 'de'/);
+      /* de got real meta in vague 1.61 on triangle/smartphone — EN stays its own branch */
+      expect(html).toContain("p === 'en'");
     }
     expect(triangle).toContain('Triángulo de exposición — guía + quiz');
     expect(smartphone).toContain('Foto smartphone — guía + quiz');
