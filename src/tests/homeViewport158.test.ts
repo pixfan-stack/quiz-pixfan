@@ -7,11 +7,11 @@ import fiche from '../../public/guides/scolaires/fiche-seance.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
-  it('docs headline cites v1.57.0; vague 1.57 listed; no-go through 1.58', () => {
-    expect(readme).toContain('v1.57.0');
-    expect(nextSteps).toContain('**v1.57.0**');
+  it('docs still mention vague 1.57; no-go line covers 1.58+', () => {
+    /* Docs headline moved to v1.58.0 in vague 1.59 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.57**');
     expect(nextSteps).toMatch(/no-go.*1\.58/);
+    expect(readme).toMatch(/v1\.(57|58)\.0/);
   });
 
   it('home sniff sets Spanish share meta for ?lang=es (real ES, not EN stub)', () => {
@@ -41,16 +41,16 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
     expect(indexHtml).toContain('<link rel="canonical" href="https://quiz.pixfan.fr/" />');
   });
 
-  it('sitemap lists home ?lang=en and ?lang=es; no de / no fiche es', () => {
+  it('sitemap lists home ?lang=en and ?lang=es; no de (fiche es unlocked in 1.59)', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=en');
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
     expect(sitemap).not.toContain('?lang=de');
-    expect(sitemap).not.toContain('fiche-seance.html?lang=es');
+    /* fiche ?lang=es twin unlocked in vague 1.59 */
   });
 
-  it('fiche still lacks article.es / hreflang es; no path-locale; ops no-gos through 1.58', () => {
-    expect(fiche).not.toContain('<article class="es">');
-    expect(fiche).not.toContain('hreflang="es"');
+  it('no path-locale; ops no-gos through 1.58+; fiche es unlocked in 1.59 (historical)', () => {
+    /* fiche gained article.es + hreflang es in vague 1.59 — keep no-de / path locks */
+    expect(fiche).not.toContain('hreflang="de"');
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);

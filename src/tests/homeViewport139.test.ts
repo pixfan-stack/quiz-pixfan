@@ -13,7 +13,7 @@ describe('vague 1.39 — JSON-LD EN + soft clipboard + docs', () => {
     /* Docs headline moved to v1.39.0 in vague 1.40 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.38**');
     expect(nextSteps).toMatch(/no-go.*1\.39/);
-    expect(readme).toMatch(/v1\.(3[89]|4[0123456789]|5[01234567])\.0/);
+    expect(readme).toMatch(/v1\.(3[89]|4[0123456789]|5[012345678])\.0/);
   });
 
   it('hub sniff swaps JSON-LD to EN names and flips og:locale:alternate', () => {

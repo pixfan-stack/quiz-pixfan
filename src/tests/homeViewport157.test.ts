@@ -36,7 +36,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.56**');
     expect(nextSteps).toMatch(/no-go.*1\.57/);
-    expect(readme).toMatch(/v1\.(56|57)\.0/);
+    expect(readme).toMatch(/v1\.(56|57|58)\.0/);
   });
 
   it('11 article.es pages expose hreflang="es" + og:locale:alternate es_ES', () => {
@@ -56,7 +56,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     }
   });
 
-  it('topic JSON-LD inLanguage includes es; fiche lacks hreflang es (home unlocked in 1.58)', () => {
+  it('topic JSON-LD inLanguage includes es; fiche/home unlocked later (historical)', () => {
     for (const html of [
       composition,
       triangle,
@@ -70,20 +70,18 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     ]) {
       expect(html).toContain('"inLanguage": ["fr", "en", "es"]');
     }
-    expect(fiche).not.toContain('hreflang="es"');
-    expect(fiche).not.toContain('<article class="es">');
-    /* home gained hreflang es in vague 1.58 — keep no-de lock */
+    /* fiche gained article.es + hreflang es in vague 1.59; home in 1.58 — keep no-de lock */
+    expect(fiche).not.toContain('hreflang="de"');
     expect(indexHtml).not.toContain('hreflang="de"');
   });
 
-  it('sitemap lists ?lang=en and ?lang=es twins for hubs + topics; no de / no fiche es', () => {
+  it('sitemap lists ?lang=en and ?lang=es twins for hubs + topics; no de', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=en');
     expect(sitemap).not.toContain('?lang=de');
-    /* home ?lang=es twin unlocked in vague 1.58 */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=es');
+    /* home ?lang=es twin unlocked in vague 1.58; fiche in 1.59 */
   });
 
   it('still no path-locale /es/|/de/; ops no-gos unchanged', () => {
