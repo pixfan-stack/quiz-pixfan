@@ -10,11 +10,11 @@ import lumiere from '../../public/guides/lumiere-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', () => {
-  it('docs headline cites v1.60.0; vague 1.60 listed; no-go through 1.61', () => {
-    expect(readme).toContain('v1.60.0');
-    expect(nextSteps).toContain('**v1.60.0**');
+  it('docs still mention vague 1.60; no-go line covers 1.61+', () => {
+    /* Docs headline moved to v1.61.0 in vague 1.62 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.60**');
     expect(nextSteps).toMatch(/no-go.*1\.61/);
+    expect(readme).toMatch(/v1\.(60|61)\.0/);
   });
 
   it('triangle ships real article.de (DE strings, not EN stub)', () => {
@@ -79,11 +79,11 @@ describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', 
     expect(smartphone).toContain('Foto con smartphone: mejores tomas, sin equipo');
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de; other topics lack article.de', () => {
+  it('still no hreflang="de"; no sitemap ?lang=de (lumière expand is 1.62)', () => {
+    /* Historical 1.61 lock: triangle/smartphone expand. Lumière/genres article.de landed in 1.62. */
     for (const html of [composition, triangle, smartphone, lumiere]) {
       expect(html).not.toContain('hreflang="de"');
     }
-    expect(lumiere).not.toContain('<article class="de">');
     expect(sitemap).not.toContain('?lang=de');
     expect(triangle).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/triangle-exposition" />'
