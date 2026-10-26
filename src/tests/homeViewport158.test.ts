@@ -11,7 +11,7 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
     /* Docs headline moved to v1.58.0 in vague 1.59 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.57**');
     expect(nextSteps).toMatch(/no-go.*1\.58/);
-    expect(readme).toMatch(/v1\.(57|58)\.0/);
+    expect(readme).toMatch(/v1\.(57|58|59)\.0/);
   });
 
   it('home sniff sets Spanish share meta for ?lang=es (real ES, not EN stub)', () => {

@@ -7,11 +7,11 @@ import fiche from '../../public/guides/scolaires/fiche-seance.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
-  it('docs headline cites v1.58.0; vague 1.58 listed; no-go through 1.59', () => {
-    expect(readme).toContain('v1.58.0');
-    expect(nextSteps).toContain('**v1.58.0**');
+  it('docs still mention vague 1.58; no-go line covers 1.59+', () => {
+    /* Docs headline moved to v1.59.0 in vague 1.60 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.58**');
     expect(nextSteps).toMatch(/no-go.*1\.59/);
+    expect(readme).toMatch(/v1\.(58|59)\.0/);
   });
 
   it('fiche ships real article.es (ES strings, not EN stub)', () => {
@@ -67,10 +67,11 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
     expect(sitemap).not.toContain('?lang=de');
   });
 
-  it('still no path-locale /es/|/de/; ops no-gos through 1.59', () => {
+  it('still no path-locale /es/|/de/; ops no-gos through 1.59+', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.59/);
   });
 });
+

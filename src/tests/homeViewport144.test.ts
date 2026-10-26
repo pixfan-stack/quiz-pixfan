@@ -41,7 +41,7 @@ describe('vague 1.44 — docs v1.43.0 + lexique LocalizedString.es', () => {
     /* Docs headline moved to v1.44.0 in vague 1.45 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.43**');
     expect(nextSteps).toMatch(/no-go.*1\.44/);
-    expect(readme).toMatch(/v1\.(4[3456789]|5[012345678])\.0/);
+    expect(readme).toMatch(/v1\.(4[3456789]|5[0123456789])\.0/);
   });
 
   it('lexique-image-fixe ships .es on all LocalizedString fields (74)', () => {
