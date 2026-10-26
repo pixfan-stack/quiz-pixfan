@@ -14,7 +14,7 @@ describe('vague 1.53 — docs v1.52.0 + lumière/genres article.es expand', () =
     /* Docs headline moved to v1.53.0 in vague 1.54 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.52**');
     expect(nextSteps).toMatch(/no-go.*1\.53/);
-    expect(readme).toMatch(/v1\.(52|53|54|55|56|57|58|59)\.0/);
+    expect(readme).toMatch(/v1\.(52|53|54|55|56|57|58|59|60)\.0/);
   });
 
   it('lumière ships real article.es (not EN stub)', () => {
