@@ -32,11 +32,11 @@ const articleEsPages: Array<[string, string, string]> = [
 ];
 
 describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)', () => {
-  it('docs headline cites v1.56.0; vague 1.56 listed; no-go through 1.57', () => {
-    expect(readme).toContain('v1.56.0');
-    expect(nextSteps).toContain('**v1.56.0**');
+  it('docs still mention vague 1.56; no-go line covers 1.57+', () => {
+    /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.56**');
     expect(nextSteps).toMatch(/no-go.*1\.57/);
+    expect(readme).toMatch(/v1\.(56|57)\.0/);
   });
 
   it('11 article.es pages expose hreflang="es" + og:locale:alternate es_ES', () => {
@@ -56,7 +56,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     }
   });
 
-  it('topic JSON-LD inLanguage includes es; fiche + home lack hreflang es', () => {
+  it('topic JSON-LD inLanguage includes es; fiche lacks hreflang es (home unlocked in 1.58)', () => {
     for (const html of [
       composition,
       triangle,
@@ -72,17 +72,17 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     }
     expect(fiche).not.toContain('hreflang="es"');
     expect(fiche).not.toContain('<article class="es">');
-    expect(indexHtml).not.toContain('hreflang="es"');
+    /* home gained hreflang es in vague 1.58 — keep no-de lock */
     expect(indexHtml).not.toContain('hreflang="de"');
   });
 
-  it('sitemap lists ?lang=en and ?lang=es twins for hubs + topics; no de / no home es / no fiche es', () => {
+  it('sitemap lists ?lang=en and ?lang=es twins for hubs + topics; no de / no fiche es', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=en');
     expect(sitemap).not.toContain('?lang=de');
-    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=es');
+    /* home ?lang=es twin unlocked in vague 1.58 */
     expect(sitemap).not.toContain('fiche-seance.html?lang=es');
   });
 
