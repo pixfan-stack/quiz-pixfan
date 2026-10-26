@@ -11,10 +11,10 @@ import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => {
   it('docs still mention vague 1.55; no-go line covers 1.56+', () => {
-    /* Docs headline moved to v1.56.0 in vague 1.57 — keep historical Livré lock. */
+    /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.55**');
     expect(nextSteps).toMatch(/no-go.*1\.56/);
-    expect(readme).toMatch(/v1\.(55|56)\.0/);
+    expect(readme).toMatch(/v1\.(55|56|57)\.0/);
   });
 
   it('guides hub ships real article.es (not EN stub)', () => {

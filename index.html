@@ -19,6 +19,7 @@
     <link rel="canonical" href="https://quiz.pixfan.fr/" />
     <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/?lang=fr" />
     <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/?lang=en" />
+    <link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />
     <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/" />
 
     <!-- Open Graph -->
@@ -31,6 +32,7 @@
     />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
     <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
     <meta property="og:image:secure_url" content="https://quiz.pixfan.fr/og-image.png?v=4" />
     <meta property="og:image:type" content="image/png" />
@@ -49,6 +51,54 @@
     />
     <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
     <meta name="twitter:image:alt" content="Quiz PixFan — 386 photography questions, 268 illustrated, photo-reading, FR/EN" />
+
+    <!-- Locale sniff (?lang=) — home meta ES unlock + EN parity (vague 1.58); de → interim EN -->
+    <script>
+      (function () {
+        var p = new URLSearchParams(location.search).get('lang');
+        if (p === 'en' || p === 'fr' || p === 'es' || p === 'de') document.documentElement.lang = p;
+        var desc = document.querySelector('meta[name="description"]');
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        var ogLocale = document.querySelector('meta[property="og:locale"]');
+        var ogLocaleAlt = document.querySelector('meta[property="og:locale:alternate"]');
+        var twTitle = document.querySelector('meta[name="twitter:title"]');
+        var twDesc = document.querySelector('meta[name="twitter:description"]');
+        function setLocales(primary, alternate) {
+          if (ogLocale) ogLocale.setAttribute('content', primary);
+          if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
+        }
+        if (p === 'es') {
+          document.title = 'Quiz de fotografía gratis — 386 preguntas | Quiz PixFan';
+          var esTitle = 'Quiz de fotografía gratis — 386 preguntas | Quiz PixFan';
+          var esDescMeta =
+            'Pon a prueba tus conocimientos de fotografía gratis: 386 preguntas (268 ilustradas), 15 categorías, modo photo-reading, reto del día, cuenta ligera y temporadas. Interfaz ES/FR/EN/DE.';
+          var esOgDesc =
+            '386 preguntas de fotografía (268 ilustradas), photo-reading, reto del día, cuenta ligera. Gratis. ¡Comparte tu puntuación!';
+          if (desc) desc.setAttribute('content', esDescMeta);
+          if (ogTitle) ogTitle.setAttribute('content', esTitle);
+          if (ogDesc) ogDesc.setAttribute('content', esOgDesc);
+          setLocales('es_ES', 'fr_FR');
+          if (twTitle) twTitle.setAttribute('content', esTitle);
+          if (twDesc) twDesc.setAttribute('content', esOgDesc);
+        } else if (p === 'en' || p === 'de') {
+          document.title = 'Free photography quiz — 386 questions FR/EN | Quiz PixFan';
+          var enTitle = 'Free photography quiz — 386 questions | Quiz PixFan';
+          var enDescMeta =
+            'Test your photography knowledge for free: 386 questions including 268 illustrated, 15 categories, photo-reading mode, daily challenge, light account and seasons. Bilingual FR/EN.';
+          var enOgDesc =
+            '386 photography questions (268 illustrated), photo-reading, daily challenge, light account. Free, FR/EN. Share your score!';
+          if (desc) desc.setAttribute('content', enDescMeta);
+          if (ogTitle) ogTitle.setAttribute('content', enTitle);
+          if (ogDesc) ogDesc.setAttribute('content', enOgDesc);
+          setLocales('en_US', 'fr_FR');
+          if (twTitle) twTitle.setAttribute('content', enTitle);
+          if (twDesc) twDesc.setAttribute('content', enOgDesc);
+        } else if (p === 'fr') {
+          setLocales('fr_FR', 'en_US');
+        }
+      })();
+    </script>
 
     <!-- PWA -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -73,7 +123,7 @@
           "applicationCategory": "EducationalApplication",
           "operatingSystem": "Web",
           "browserRequirements": "Requires JavaScript",
-          "inLanguage": ["fr", "en"],
+          "inLanguage": ["fr", "en", "es"],
           "isAccessibleForFree": true,
           "offers": {
             "@type": "Offer",
@@ -95,13 +145,13 @@
           "@id": "https://quiz.pixfan.fr/#website",
           "url": "https://quiz.pixfan.fr/",
           "name": "Quiz PixFan",
-          "inLanguage": ["fr", "en"],
+          "inLanguage": ["fr", "en", "es"],
           "publisher": { "@id": "https://www.pixfan.com/#organization" }
         },
         {
           "@type": "FAQPage",
           "@id": "https://quiz.pixfan.fr/#faq",
-          "inLanguage": ["fr", "en"],
+          "inLanguage": ["fr", "en", "es"],
           "mainEntity": [
             {
               "@type": "Question",
