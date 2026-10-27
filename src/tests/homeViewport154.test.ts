@@ -16,7 +16,7 @@ describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', (
     /* Docs headline moved to v1.54.0 in vague 1.55 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.53**');
     expect(nextSteps).toMatch(/no-go.*1\.54/);
-    expect(readme).toMatch(/v1\.(53|54|55|56|57|58|59|60|61)\.0/);
+    expect(readme).toMatch(/v1\.(53|54|55|56|57|58|59|60|61|62)\.0/);
   });
 
   it('retouche ships real article.es (not EN stub)', () => {
@@ -41,7 +41,8 @@ describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', (
     for (const html of [retouche, materiel]) {
       expect(html).toContain("p === 'es'");
       expect(html).toContain("setLocales('es_ES', 'fr_FR')");
-      expect(html).toMatch(/p === 'en' \|\| p === 'de'/);
+      /* de got real meta in vague 1.63 on retouche/matériel — EN stays its own branch */
+      expect(html).toContain("p === 'en'");
     }
     expect(retouche).toContain('Retoque y Lightroom — guía + quiz');
     expect(materiel).toContain('Material foto — guía + quiz');

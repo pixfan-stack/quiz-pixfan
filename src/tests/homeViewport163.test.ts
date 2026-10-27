@@ -1,0 +1,136 @@
+import { describe, expect, it } from 'vitest';
+import readme from '../../README.md?raw';
+import nextSteps from '../../NEXT_STEPS.md?raw';
+import sitemap from '../../public/sitemap.xml?raw';
+import guidesCssMirror from '../../public/guides/i18n-display.css.txt?raw';
+import composition from '../../public/guides/composition-photo.html?raw';
+import triangle from '../../public/guides/triangle-exposition.html?raw';
+import smartphone from '../../public/guides/photo-smartphone.html?raw';
+import lumiere from '../../public/guides/lumiere-photo.html?raw';
+import genres from '../../public/guides/genres-photo.html?raw';
+import retouche from '../../public/guides/retouche-lightroom.html?raw';
+import materiel from '../../public/guides/materiel-photo.html?raw';
+import droits from '../../public/guides/droits-ethique-photo.html?raw';
+import histoire from '../../public/guides/histoire-photo.html?raw';
+import switcherSource from '../components/LanguageSwitcher.tsx?raw';
+
+describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', () => {
+  it('docs headline cites v1.62.0; vague 1.62 listed; no-go through 1.63', () => {
+    expect(readme).toContain('v1.62.0');
+    expect(nextSteps).toContain('**v1.62.0**');
+    expect(nextSteps).toContain('Vague **1.62**');
+    expect(nextSteps).toMatch(/no-go.*1\.63/);
+  });
+
+  it('retouche ships real article.de (DE strings, not EN stub)', () => {
+    expect(retouche).toContain('<article class="de">');
+    expect(retouche).toContain('Retusche &amp; Lightroom: ein klarer Workflow');
+    expect(retouche).toContain('Tonalität zuerst');
+    expect(retouche).toContain('href="/s/retouching?lang=de"');
+    expect(retouche).toContain('href="/guides/scolaires/?lang=de#lycee-pratique"');
+    expect(retouche).toContain('href="/guides/lumiere-photo?lang=de"');
+    expect(retouche).not.toMatch(
+      /<article class="de">[\s\S]*Retouching & Lightroom: a clear workflow/
+    );
+  });
+
+  it('matériel ships real article.de (DE strings, not EN stub)', () => {
+    expect(materiel).toContain('<article class="de">');
+    expect(materiel).toContain(
+      'Fotoausrüstung: für die Absicht wählen, nicht für das Datenblatt'
+    );
+    expect(materiel).toContain('Vollformat vs APS-C');
+    expect(materiel).toContain('href="/s/gear-lenses?lang=de"');
+    expect(materiel).toContain('href="/guides/scolaires/?lang=de#lycee-pratique"');
+    expect(materiel).not.toMatch(
+      /<article class="de">[\s\S]*Photo gear: choose for intent, not the spec sheet/
+    );
+  });
+
+  it('retouche + matériel sniff set German share meta for ?lang=de', () => {
+    for (const html of [retouche, materiel]) {
+      expect(html).toContain("p === 'de'");
+      expect(html).toContain("setLocales('de_DE', 'fr_FR')");
+      expect(html).toContain("p === 'en'");
+      expect(html).toContain("p === 'es'");
+      expect(html).toContain("setLocales('es_ES', 'fr_FR')");
+      expect(html).not.toMatch(/p === 'en' \|\| p === 'de'/);
+    }
+    expect(retouche).toContain('Retusche & Lightroom — Leitfaden + Quiz');
+    expect(retouche).toContain(
+      'Strukturieren Sie Ihre Retusche (Lightroom-Katalog, Tonalität, Farbe, Export)'
+    );
+    expect(materiel).toContain('Fotoausrüstung — Leitfaden + Quiz');
+    expect(materiel).toContain(
+      'Vollformat vs APS-C, Objektive, Filter und Stabilisierung'
+    );
+  });
+
+  it('composition + triangle + smartphone + lumière + genres still ship article.de + sniff DE + CSS :has (regress)', () => {
+    for (const html of [composition, triangle, smartphone, lumiere, genres]) {
+      expect(html).toContain('<article class="de">');
+      expect(html).toContain("p === 'de'");
+      expect(html).toContain("setLocales('de_DE', 'fr_FR')");
+    }
+    expect(composition).toContain('Fotokomposition: den Blick führen');
+    expect(triangle).toContain('Belichtungsdreieck: die 3 Hebel des Lichts');
+    expect(smartphone).toContain(
+      'Smartphone-Fotografie: bessere Aufnahmen, ohne Ausrüstung'
+    );
+    expect(lumiere).toContain('Fotolicht: lesen, bevor man einstellt');
+    expect(genres).toContain('Fotografische Genres: die Absicht vor dem Gehäuse');
+    expect(guidesCssMirror).toContain('html[lang="de"]:has(article.de) .en');
+    expect(guidesCssMirror).toContain('html[lang="de"] article.de');
+  });
+
+  it('retouche/matériel + prior topics still ship article.es + hreflang="es" (ES regress)', () => {
+    for (const html of [
+      composition,
+      triangle,
+      smartphone,
+      lumiere,
+      genres,
+      retouche,
+      materiel,
+    ]) {
+      expect(html).toContain('<article class="es">');
+      expect(html).toContain('hreflang="es"');
+    }
+    expect(retouche).toContain('Retoque y Lightroom: un flujo claro');
+    expect(materiel).toContain(
+      'Material foto: elegir por la intención, no por la ficha técnica'
+    );
+  });
+
+  it('still no hreflang="de"; no sitemap ?lang=de; droits/histoire lack article.de', () => {
+    for (const html of [
+      composition,
+      triangle,
+      smartphone,
+      lumiere,
+      genres,
+      retouche,
+      materiel,
+      droits,
+      histoire,
+    ]) {
+      expect(html).not.toContain('hreflang="de"');
+    }
+    expect(droits).not.toContain('<article class="de">');
+    expect(histoire).not.toContain('<article class="de">');
+    expect(sitemap).not.toContain('?lang=de');
+    expect(retouche).toContain(
+      '<link rel="canonical" href="https://quiz.pixfan.fr/guides/retouche-lightroom" />'
+    );
+    expect(materiel).toContain(
+      '<link rel="canonical" href="https://quiz.pixfan.fr/guides/materiel-photo" />'
+    );
+  });
+
+  it('still no path-locale /es/|/de/; ops no-gos through 1.63', () => {
+    expect(switcherSource).not.toContain('/es/');
+    expect(switcherSource).not.toContain('/de/');
+    expect(nextSteps).toMatch(/Web Push.*salon.*16/);
+    expect(nextSteps).toMatch(/no-go.*1\.63/);
+  });
+});

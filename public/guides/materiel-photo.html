@@ -74,7 +74,7 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es: real article.es + ES share meta (vague 1.54); de: interim EN via CSS */
+      /* es: article.es + ES meta; de: article.de + DE meta (vague 1.63); en: EN */
       if (p === 'es') {
         document.title = 'Material foto: sensores, focales, estabilización | Quiz PixFan';
         var esTitle = 'Material foto — guía + quiz';
@@ -86,7 +86,18 @@
         setLocales('es_ES', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Fotoausrüstung: Sensoren, Brennweiten, Stabilisierung | Quiz PixFan';
+        var deTitle = 'Fotoausrüstung — Leitfaden + Quiz';
+        var deDescMeta = 'Vollformat vs APS-C, Objektive, Filter und Stabilisierung — Ausrüstungsleitfaden und kostenloses Quiz PixFan.';
+        var deOgDesc = 'Sensoren, Brennweiten, Festbrennweiten und Filter — dann ein interaktives Ausrüstungs-Quiz.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+      } else if (p === 'en') {
         document.title = 'Photo gear: sensors, focal lengths, stabilization | Quiz PixFan';
         var enTitle = 'Photo gear — guide + quiz';
         var enDescMeta = 'Full-frame vs APS-C, lenses, filters and stabilization — gear guide then free Quiz PixFan quiz.';
@@ -215,6 +226,32 @@
         <p class="muted" style="margin-top:0.5rem">Tras un fallo de material, la revisión de resultados también enlaza a esta guía.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#lycee-pratique">Para la clase → recorridos Escolares (lycée)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=es">Exposición</a> · <a href="/guides/photo-smartphone?lang=es">Smartphone</a> · <a href="https://www.pixfan.com/materiel-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=materiel-photo&amp;utm_content=pixfan">Tests material Pixfan</a></p>
+      </div>
+    </article>
+
+    <article class="de">
+      <h1>Fotoausrüstung: für die Absicht wählen, nicht für das Datenblatt</h1>
+      <p class="lead">Sensor, Brennweite und Zubehör verändern das Ergebnis — aber das richtige Kit dient Ihrem Motiv, nicht der höchsten Megapixelzahl.</p>
+      <h2>Vollformat vs APS-C</h2>
+      <p>„Vollformat“ bezeichnet einen Sensor ~24×36 mm (35-mm-Äquivalent). Ein kleinerer APS-C-Sensor „croppt“ das Feld: gleiche Brennweite, engerer Winkel, oft ein Faktor ×1,5 / ×1,6. Weniger Fläche bedeutet in der Regel mehr Rauschen bei hohem ISO, dafür leichtere Gehäuse und oft günstigere Optiken.</p>
+      <h2>Brennweiten &amp; Anwendungen</h2>
+      <ul>
+        <li><strong>Weitwinkel</strong> (≈ ≤ 35 mm FF): Landschaft, Architektur, breite Szenen.</li>
+        <li><strong>Normal</strong> (~50 mm FF): augennahe Perspektive, vielseitig.</li>
+        <li><strong>Porträt</strong> (85–135 mm): schmeichelnde Kompression, isoliertes Motiv.</li>
+        <li><strong>Tele</strong>: Tierfotografie, Sport, ferne Details.</li>
+      </ul>
+      <p>Eine Festbrennweite (Prime) bietet oft eine bessere Öffnung und einfachere Optik als ein vergleichbarer Zoom — auf Kosten der Flexibilität.</p>
+      <h2>Stabilisierung &amp; Filter</h2>
+      <p>Stabilisierung (Gehäuse oder Objektiv) hilft gegen Verwackeln aus der Hand; sie friert kein schnell bewegtes Motiv ein. Ein Polfilter (CPL) reduziert Reflexionen auf Glas / Wasser und sättigt einen blauen Himmel. ND-Filter verlängern die Belichtung bei Tageslicht.</p>
+      <h2>Megapixel &amp; Tilt-Shift</h2>
+      <p>Megapixel messen die Dateiauflösung, nicht magische „Qualität“: Optik, Licht und Technik zählen mehr. Ein Tilt-Shift neigt / verschiebt die Fokusebene — nützlich in der Architektur zur Perspektivenkontrolle, kein Alltags-Gadget.</p>
+      <div class="card">
+        <p><strong>Übung</strong> — Sensoren, Brennweiten, Festbrennweiten, Filter und Anwendungen.</p>
+        <a class="cta" href="/s/gear-lenses?lang=de">Ausrüstungs- &amp; Objektiv-Quiz starten</a>
+        <p class="muted" style="margin-top:0.5rem">Nach einem Fehler bei Ausrüstungsfragen verweist die Ergebnisübersicht auch auf diesen Leitfaden.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=de#lycee-pratique">Für den Unterricht → Schulpfade (lycée)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=de">Belichtung</a> · <a href="/guides/photo-smartphone?lang=de">Smartphone</a> · <a href="https://www.pixfan.com/materiel-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=materiel-photo&amp;utm_content=pixfan">Pixfan Materialtests</a></p>
       </div>
     </article>
   </main>
