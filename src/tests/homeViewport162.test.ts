@@ -12,11 +12,11 @@ import retouche from '../../public/guides/retouche-lightroom.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.62 — docs v1.61.0 + lumière/genres article.de expand', () => {
-  it('docs headline cites v1.61.0; vague 1.61 listed; no-go through 1.62', () => {
-    expect(readme).toContain('v1.61.0');
-    expect(nextSteps).toContain('**v1.61.0**');
+  it('docs still mention vague 1.61; no-go line covers 1.62+', () => {
+    /* Docs headline moved to v1.62.0 in vague 1.63 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.61**');
     expect(nextSteps).toMatch(/no-go.*1\.62/);
+    expect(readme).toMatch(/v1\.(61|62)\.0/);
   });
 
   it('lumière ships real article.de (DE strings, not EN stub)', () => {
@@ -84,11 +84,11 @@ describe('vague 1.62 — docs v1.61.0 + lumière/genres article.de expand', () =
     expect(genres).toContain('Géneros fotográficos: la intención antes del cuerpo');
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de; other topics lack article.de', () => {
+  it('still no hreflang="de"; no sitemap ?lang=de (retouche expand is 1.63)', () => {
+    /* Historical 1.62 lock: lumière/genres expand. Retouche/matériel article.de landed in 1.63. */
     for (const html of [composition, triangle, smartphone, lumiere, genres, retouche]) {
       expect(html).not.toContain('hreflang="de"');
     }
-    expect(retouche).not.toContain('<article class="de">');
     expect(sitemap).not.toContain('?lang=de');
     expect(lumiere).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/lumiere-photo" />'
