@@ -74,7 +74,7 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es: real article.es + ES share meta (vague 1.53); de: interim EN via CSS */
+      /* es: article.es + ES meta; de: article.de + DE meta (vague 1.62); en: EN */
       if (p === 'es') {
         document.title = 'Luz foto: dirección, calidad, temperatura | Quiz PixFan';
         var esTitle = 'Luz foto — guía + quiz';
@@ -86,7 +86,18 @@
         setLocales('es_ES', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Fotolicht: Richtung, Qualität, Temperatur | Quiz PixFan';
+        var deTitle = 'Fotolicht — Leitfaden + Quiz';
+        var deDescMeta = 'Lernen Sie Licht zu lesen (Richtung, Härte, Weißabgleich) und prüfen Sie sich mit dem kostenlosen Licht- & Farb-Quiz von Quiz PixFan.';
+        var deOgDesc = 'Richtung, Qualität und Farbtemperatur: nützliche Grundlagen, dann ein interaktives Quiz.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+      } else if (p === 'en') {
         document.title = 'Photo light: direction, quality, temperature | Quiz PixFan';
         var enTitle = 'Photo light — guide + quiz';
         var enDescMeta = 'Learn to read light (direction, hardness, white balance) then validate with the free Quiz PixFan light & color quiz.';
@@ -207,6 +218,31 @@
         <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz de luz, la revisión de resultados también enlaza a esta guía.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c4-lumiere">Para la clase → recorridos Escolares (ciclo 4)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=es">Triángulo de exposición</a> · <a href="/guides/retouche-lightroom?lang=es">Retoque / Lightroom</a></p>
+      </div>
+    </article>
+
+    <article class="de">
+      <h1>Fotolicht: lesen, bevor man einstellt</h1>
+      <p class="lead">Die Belichtung legt fest, wie viel Licht Sie aufnehmen. Die Lichtqualität entscheidet über Kontrast, Schatten und Stimmung.</p>
+      <h2>Richtung</h2>
+      <p>Frontal, 45°, seitlich, Gegenlicht: jeder Winkel formt das Volumen anders. Beim Porträt bleibt eine Quelle bei 45° mit einem Reflektor auf der Schattenseite ein zuverlässiger Klassiker.</p>
+      <h2>Qualität: hart vs weich</h2>
+      <p>Hartes Licht (direkte Sonne, nackter Blitz) = scharfe Schatten und starker Kontrast. Weiches Licht (Wolken, Diffusor, offener Schatten) = sanfte Übergänge und schmeichelndere Haut.</p>
+      <h2>Temperatur und Weißabgleich</h2>
+      <ul>
+        <li>Niedriges Kelvin (~2700–3200 K): warme Töne (Wolfram, Sonnenuntergang).</li>
+        <li>Hohes Kelvin (~5500–7000 K): kühle Töne (bewölkter Himmel, Schatten).</li>
+        <li>Auto-WB reicht oft; bei RAW korrigieren Sie später ohne Panik.</li>
+      </ul>
+      <h2>Farbe und Stimmung</h2>
+      <p>Ein bewusster Farbstich (Golden Hour, Neon) erzählt eine Geschichte. Ein versehentlicher Stich (krankes Fluoreszenzgrün) ist eine WB- oder Retusche-Korrektur.</p>
+      <div class="card">
+        <p><strong>Übung</strong> — Fragen zu Richtung, Härte, WB und Stimmungslesen.</p>
+        <a class="cta" href="/s/light-color?lang=de">Licht- &amp; Farb-Quiz starten</a>
+        <p style="margin-top:0.65rem"><a class="cta-secondary" href="/s/flash-studio?lang=de">Blitz- &amp; Studio-Quiz</a></p>
+        <p class="muted" style="margin-top:0.5rem">Nach einem Fehler im Licht-Quiz verweist die Ergebnisübersicht auch auf diesen Leitfaden.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=de#c4-lumiere">Für den Unterricht → Schulpfade (Zyklus 4)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/triangle-exposition?lang=de">Belichtungsdreieck</a> · <a href="/guides/retouche-lightroom?lang=de">Retusche / Lightroom</a></p>
       </div>
     </article>
   </main>

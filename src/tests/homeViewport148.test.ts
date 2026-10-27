@@ -41,7 +41,7 @@ describe('vague 1.48 — docs v1.47.0 + retouching LocalizedString.es', () => {
     /* Docs headline moved to v1.48.0 in vague 1.49 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.47**');
     expect(nextSteps).toMatch(/no-go.*1\.48/);
-    expect(readme).toMatch(/v1\.(4[789]|5[0123456789]|60)\.0/);
+    expect(readme).toMatch(/v1\.(4[789]|5[0123456789]|60|61)\.0/);
   });
 
   it('retouching ships .es on all LocalizedString fields (190)', () => {

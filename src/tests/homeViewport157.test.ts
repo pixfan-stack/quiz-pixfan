@@ -36,7 +36,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.56**');
     expect(nextSteps).toMatch(/no-go.*1\.57/);
-    expect(readme).toMatch(/v1\.(56|57|58|59|60)\.0/);
+    expect(readme).toMatch(/v1\.(56|57|58|59|60|61)\.0/);
   });
 
   it('11 article.es pages expose hreflang="es" + og:locale:alternate es_ES', () => {

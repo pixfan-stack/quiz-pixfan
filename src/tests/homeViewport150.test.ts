@@ -15,7 +15,7 @@ describe('vague 1.50 — docs v1.49.0 + SPA ?lang= sync', () => {
     /* Docs headline moved to v1.50.0 in vague 1.51 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.49**');
     expect(nextSteps).toMatch(/no-go.*1\.50/);
-    expect(readme).toMatch(/v1\.(49|5[0123456789]|60)\.0/);
+    expect(readme).toMatch(/v1\.(49|5[0123456789]|60|61)\.0/);
   });
 
   it('LanguageSwitcher syncs ?lang= via syncLangSearchParam', () => {

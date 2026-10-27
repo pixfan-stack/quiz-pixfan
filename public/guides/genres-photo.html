@@ -74,7 +74,7 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es: real article.es + ES share meta (vague 1.53); de: interim EN via CSS */
+      /* es: article.es + ES meta; de: article.de + DE meta (vague 1.62); en: EN */
       if (p === 'es') {
         document.title = 'Géneros fotográficos: retrato, calle, paisaje… | Quiz PixFan';
         var esTitle = 'Géneros fotográficos — guía + quiz';
@@ -86,7 +86,18 @@
         setLocales('es_ES', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Fotografische Genres: Porträt, Straße, Landschaft… | Quiz PixFan';
+        var deTitle = 'Fotografische Genres — Leitfaden + Quiz';
+        var deDescMeta = 'Erkennen Sie die Absichten hinter Porträt, Street, Landschaft, Makro und mehr — dann prüfen Sie sich mit dem kostenlosen Genres-Quiz von Quiz PixFan.';
+        var deOgDesc = 'Porträt, Street, Landschaft, Makro… die Absicht vor dem Gehäuse, dann ein interaktives Quiz.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+      } else if (p === 'en') {
         document.title = 'Photography genres: portrait, street, landscape… | Quiz PixFan';
         var enTitle = 'Photography genres — guide + quiz';
         var enDescMeta = 'Spot the intentions behind portrait, street, landscape, macro and more — then validate with the free Quiz PixFan genres quiz.';
@@ -220,6 +231,33 @@
         <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz de géneros, la revisión de resultados también enlaza a esta guía.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c3-decouvrir">Para la clase → recorridos Escolares (ciclo 3)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=es">Composición</a> · <a href="/guides/lumiere-photo?lang=es">Luz</a> · <a href="https://www.pixfan.com/apprendre-la-photo/genres-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=genres-photo&amp;utm_content=pixfan">Hub géneros Pixfan</a></p>
+      </div>
+    </article>
+
+    <article class="de">
+      <h1>Fotografische Genres: die Absicht vor dem Gehäuse</h1>
+      <p class="lead">Ein Genre ist keine magische Brennweite. Es ist eine Absicht (kontrollieren oder beobachten, posieren oder candid), die Licht, Distanz und Rhythmus steuert.</p>
+      <h2>Porträt</h2>
+      <p>Der Mensch steht im Mittelpunkt: Licht im Gesicht (Hauptlicht / Fill / Rim), Ausdruck, Hintergrund und Schärfentiefe zum Isolieren. Die Blende ist eine kreative Wahl, keine feste Regel.</p>
+      <h2>Straßenfotografie</h2>
+      <p>Ungestellte Szenen des öffentlichen Lebens — Geste, Ironie, Geometrie — oft mit vorhandenem Licht und diskretem Material. Weder «nur nachts mit Blitz» noch ein Studio-Skyline-Hintergrund.</p>
+      <h2>Landschaft</h2>
+      <p>Das Licht lesen (Golden Hour, Wetter), die Tiefe und die Stabilität (Stativ für lange Belichtungen oder Präzision). Weitwinkel hilft oft, aber die Komposition entscheidet mehr als die Brennweite.</p>
+      <h2>Makro, Tier, Sport…</h2>
+      <ul>
+        <li><strong>Makro</strong>: nahe Details, sehr geringe Schärfentiefe, Stabilität.</li>
+        <li><strong>Tier</strong>: Geduld, Distanz, Teleobjektiv, Vorwegnahme des Verhaltens.</li>
+        <li><strong>Sport</strong>: Verschlusszeit, AF-Tracking, Vorwegnahme des Aktionshöhepunkts.</li>
+        <li><strong>Food / Lifestyle</strong>: Styling, kontrolliertes Licht, Storytelling des Produkts.</li>
+      </ul>
+      <h2>Dokumentarisch vs Kunst</h2>
+      <p>Dokumentarisch zielt auf ein Zeugnis des Realen; Kunstfotografie übernimmt eine ästhetische oder konzeptuelle Absicht. Beide können sich überschneiden — das Genre betrifft Kontrollgrad und Erzählung, nicht nur das Gehäuse.</p>
+      <div class="card">
+        <p><strong>Übung</strong> — Fragen zu Porträt, Street, Landschaft, Makro und Genre-Absichten.</p>
+        <a class="cta" href="/s/genres?lang=de">Genres-Quiz starten</a>
+        <p class="muted" style="margin-top:0.5rem">Nach einem Fehler im Genres-Quiz verweist die Ergebnisübersicht auch auf diesen Leitfaden.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=de#c3-decouvrir">Für den Unterricht → Schulpfade (Zyklus 3)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/composition-photo?lang=de">Komposition</a> · <a href="/guides/lumiere-photo?lang=de">Licht</a> · <a href="https://www.pixfan.com/apprendre-la-photo/genres-photo/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=genres-photo&amp;utm_content=pixfan">Pixfan-Genres-Hub</a></p>
       </div>
     </article>
   </main>
