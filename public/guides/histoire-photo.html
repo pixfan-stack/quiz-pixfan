@@ -74,7 +74,7 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es: real article.es + ES share meta (vague 1.55); de: interim EN via CSS */
+      /* es: article.es + ES meta; de: article.de + DE meta (vague 1.64); en: EN */
       if (p === 'es') {
         document.title = 'Historia de la foto: iconos, inventos, dominio público | Quiz PixFan';
         var esTitle = 'Historia e iconos foto — guía + quiz';
@@ -86,7 +86,18 @@
         setLocales('es_ES', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Fotogeschichte: Ikonen, Erfindungen, gemeinfreie Werke | Quiz PixFan';
+        var deTitle = 'Fotogeschichte & Ikonen — Leitfaden + Quiz';
+        var deDescMeta = 'Niépce, Daguerre, Magnum, HCB, Atget… Meilensteine der Fotogeschichte, dann Quiz PixFan Ikonen- und Gemeinfreiheits-Quiz.';
+        var deOgDesc = 'Erfindungen, legendäre Fotografen und gemeinfreie Bilder — dann interaktive Quiz.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+      } else if (p === 'en') {
         document.title = 'Photo history: icons, inventions, public domain | Quiz PixFan';
         var enTitle = 'Photo history & icons — guide + quiz';
         var enDescMeta = 'Niépce, Daguerre, Magnum, HCB, Atget… photo-history landmarks then Quiz PixFan icons and public-domain quizzes.';
@@ -229,6 +240,40 @@
         <p class="muted" style="margin-top:0.5rem">Tras un fallo en historia / dominio público / marcas, la revisión de resultados también enlaza a esta guía.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c3-decouvrir">Para la clase → recorridos Escolares (ciclo 3)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/genres-photo?lang=es">Géneros</a> · <a href="/guides/droits-ethique-photo?lang=es">Derechos y ética</a> · <a href="https://www.pixfan.com/inspiration-culture/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=histoire-photo&amp;utm_content=pixfan">Inspiración Pixfan</a></p>
+      </div>
+    </article>
+
+    <article class="de">
+      <h1>Geschichte &amp; Ikonen: ein Bild in seiner Zeit lesen</h1>
+      <p class="lead">Einige Meilensteine (Erfindung, Reportage, Moderne) helfen, ein Foto einzuordnen — und Fotokultur-Quiz zu bestehen.</p>
+
+      <h2>Gründende Erfindungen</h2>
+      <p>Nicéphore Niépce wird oft die älteste erhaltene Fotografie zugeschrieben (Heliografie, 1820er). Louis Daguerres Daguerreotypie popularisiert ein einzigartiges Silberplattenbild. George Eastman demokratisiert die Aufnahme mit dem Kodak Brownie; Digital kommt viel später (Prototypen der 1970er–80er).</p>
+
+      <h2>Reportage &amp; der « entscheidende Moment »</h2>
+      <p>Henri Cartier-Bresson ist mit dem entscheidenden Moment verbunden: dem Augenblick, in dem Form und Inhalt sich ausrichten. Er gründet Magnum Photos 1947 mit. Weitere Ikonen: Annie Leibovitz (Prominentenporträts), Dorothea Lange / Walker Evans (Große Depression), die Ausstellung <em>The Family of Man</em> (humanistische Vision des 20. Jahrhunderts).</p>
+
+      <h2>Gemeinfreie Galerie</h2>
+      <ul>
+        <li><strong>Daguerre</strong> — Boulevard du Temple: lange Belichtung, die Straße wirkt leer außer einem unbeweglichen Schuhputzer.</li>
+        <li><strong>Muybridge / Marey</strong> — Chronofotografie: der Galopp des Pferdes, der menschliche Gang.</li>
+        <li><strong>Atget</strong> — Schaufenster und Straßen von Paris vor der Modernisierung.</li>
+        <li><strong>Stieglitz</strong> — <em>The Steerage</em>: geometrische Komposition und soziale Klassen.</li>
+        <li><strong>Hine</strong> — Kinderarbeit, Foto als sozialer Beweis.</li>
+      </ul>
+
+      <h2>Warum es im Quiz zählt</h2>
+      <p>Die Packs <em>Geschichte &amp; Ikonen</em>, <em>gemeinfreie Werke</em> und <em>Markengeschichte</em> kreuzen Namen, Erfindungen, legendäre Gehäuse und Bildlesen. Ein Werk oder eine Marke mit Kontext (Technik, Absicht, Epoche) zu verbinden schlägt isolierte Daten.</p>
+      <p>Empfohlener Pfad: zuerst <strong>Geschichte &amp; Ikonen</strong> (Fotografen), dann <strong>Markengeschichte</strong> (Gehäuse und Systeme) — ein Leitfaden, zwei ergänzende Packs.</p>
+
+      <div class="card">
+        <p><strong>Übung</strong> — ikonische Fotografen, gemeinfreie Bilder und Meilensteine Canon / Nikon / Leica / Sony…</p>
+        <a class="cta" href="/s/history-icons?lang=de">Geschichte- &amp; Ikonen-Quiz starten</a>
+        <p style="margin-top:0.65rem"><a class="cta-secondary" href="/s/public-domain?lang=de">Gemeinfreie-Galerie-Quiz</a></p>
+        <p style="margin-top:0.65rem"><a class="cta" href="/s/marques-photo?lang=de">Als Nächstes: Markengeschichte-Quiz</a></p>
+        <p class="muted" style="margin-top:0.5rem">Nach einem Fehler bei Geschichte / Gemeinfreiheit / Marken verweist die Ergebnisübersicht auch auf diesen Leitfaden.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=de#c3-decouvrir">Für den Unterricht → Schulpfade (Zyklus 3)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/genres-photo?lang=de">Genres</a> · <a href="/guides/droits-ethique-photo?lang=de">Rechte &amp; Ethik</a> · <a href="https://www.pixfan.com/inspiration-culture/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=histoire-photo&amp;utm_content=pixfan">Pixfan Inspiration</a></p>
       </div>
     </article>
   </main>
