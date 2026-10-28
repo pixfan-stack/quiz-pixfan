@@ -264,7 +264,50 @@
           }
         }
       }
-      /* es: real article.es + ES share meta (vague 1.56); de: interim EN via CSS */
+      function applyJsonLdDe() {
+        var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+        for (var i = 0; i < scripts.length; i++) {
+          var raw = scripts[i].textContent;
+          if (!raw) continue;
+          try {
+            var data = JSON.parse(raw);
+            if (data['@type'] === 'BreadcrumbList' && data.itemListElement) {
+              for (var b = 0; b < data.itemListElement.length; b++) {
+                var crumb = data.itemListElement[b];
+                if (crumb.name === 'Scolaires') {
+                  crumb.name = 'Schulpfade';
+                  crumb.item = withLang(crumb.item, 'de');
+                }
+              }
+              scripts[i].textContent = JSON.stringify(data);
+            } else if (data['@type'] === 'ItemList') {
+              data.name = 'Schulpfade Quiz PixFan';
+              data.description =
+                'Zyklus 4 (collège) zuerst, dann Zyklus 3, Medienkompetenz und lycée — Bildlesen, Licht, Bildrecht.';
+              var deNames = [
+                'Ein Bild lesen (Zyklus 4)',
+                'Licht & Fotografie',
+                'Bildrecht (EMI)',
+                'Fotografie entdecken (Zyklus 3)',
+                'Praxis Standbild (lycée)',
+              ];
+              if (data.itemListElement) {
+                for (var n = 0; n < data.itemListElement.length; n++) {
+                  if (deNames[n]) data.itemListElement[n].name = deNames[n];
+                  data.itemListElement[n].url = withLang(
+                    data.itemListElement[n].url,
+                    'de'
+                  );
+                }
+              }
+              scripts[i].textContent = JSON.stringify(data);
+            }
+          } catch (e) {
+            /* keep static FR JSON-LD */
+          }
+        }
+      }
+      /* es: real article.es (1.56); de: real article.de + DE share meta (vague 1.65) */
       if (p === 'es') {
         document.title = 'Escolares — foto en clase | Quiz PixFan';
         var esTitle = 'Escolares — foto en clase | Quiz PixFan';
@@ -279,7 +322,21 @@
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
         applyJsonLdEs();
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Schulpfade — Foto im Unterricht | Quiz PixFan';
+        var deTitle = 'Schulpfade — Foto im Unterricht | Quiz PixFan';
+        var deDescMeta =
+          'Kostenlose Schulpfade Zyklus 3–4, lycée und Medienkompetenz: Fotografie entdecken, ein Bild lesen, Licht, Bildrecht, Praxis Standbild. Quizzes + Leitfäden Quiz PixFan, ohne Konto, Klassenmodus ohne öffentliche Rangliste.';
+        var deOgDesc =
+          'Schulpfade Zyklus 3–4 / lycée / Medienkompetenz: Fotografie entdecken, ein Bild lesen, Licht, Bildrecht, Praxis Standbild. Kostenlos, ohne Konto, teilbare Sitzungslinks.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+        applyJsonLdDe();
+      } else if (p === 'en') {
         document.title = 'Schools — photo in class | Quiz PixFan';
         var enTitle = 'Schools — photo in class | Quiz PixFan';
         var enDescMeta =
@@ -865,6 +922,182 @@
       <p class="muted">Hub alineado con los programas vigentes (BO 2020). <strong>Revisión anual</strong> prevista si los programas cambian (checklist de mantenimiento del equipo).</p>
 
       <p><a class="cta-secondary" href="/guides/?lang=es">Todas las guías</a> · <a class="cta-secondary" href="/?lang=es">Lanzar un quiz</a></p>
+    </article>
+    <article class="de">
+      <h1>Schulpfade — Foto im Unterricht</h1>
+      <p class="lead"><strong>Priorität collège Zyklus&nbsp;4</strong>: Bildlesen, Licht, EMI — ohne Konto, Klassenmodus.</p>
+      <p class="hub-hero-cta">
+        <a class="cta" href="/s/photo-reading?classe=1&amp;lang=de" data-track-parcours data-hub-hero-cta>Sitzung starten (empfohlen)</a>
+      </p>
+      <details class="hub-more">
+        <summary>Sitzungsblatt, Pfade &amp; Hinweise</summary>
+        <p class="muted">Sitzungsergänzung (15–30&nbsp;min), kein LMS. Gemeinfreie / originale Bilder. Keine Zugehörigkeit zum französischen Bildungsministerium.</p>
+        <p>
+          <a class="cta-secondary" href="/guides/scolaires/fiche-seance.html?lang=de">Sitzungsblatt drucken</a>
+        </p>
+        <nav aria-label="Zu den Schulpfaden">
+          <ul class="hub-jump">
+            <li><a href="#c4-regard-de">Ein Bild lesen (empfohlen)</a></li>
+            <li><a href="#c4-lumiere-de">Licht</a></li>
+            <li><a href="#emi-de">Medienkompetenz</a></li>
+            <li><a href="#cycle-3-de">Zyklus 3</a></li>
+            <li><a href="#lycee-de">Lycée</a></li>
+          </ul>
+        </nav>
+      </details>
+
+      <h2 id="cycle-4-de">Zyklus 4 — Bildende Kunst (collège)</h2>
+      <p>Kern collège — ausgerichtet auf die geltenden Programme (BOEN Nr.&nbsp;31 vom 30. Juli 2020): Darstellung, Bilder / Realität / Fiktion, Praxis Standbild (Fotografie), digital.</p>
+
+      <div class="card card--recommended" id="c4-regard-de" data-parcours="c4-regard" data-event="scolaires_parcours_c4_regard">
+        <h3>Ein Bild lesen <span class="parcours-badge">Collège</span> <span class="muted">· ~20&nbsp;min</span></h3>
+        <p>Empfohlener Einstieg in Zyklus&nbsp;4: Rahmen, Komposition, Blickpunkt — dann Analyse bebilderter Bilder.</p>
+        <p>
+          <a class="cta" href="/s/photo-reading?classe=1&amp;lang=de" data-track-parcours>Sitzung starten</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-reading?classe=1&amp;lang=de" data-copied="Link kopiert!">Sitzungslink kopieren</button>
+        </p>
+        <ol>
+          <li><a href="/guides/composition-photo?lang=de">Kompositions-Leitfaden</a></li>
+          <li><a href="/s/photo-reading?classe=1&amp;lang=de">Quiz Fotos analysieren</a> (Klassenmodus)</li>
+          <li><a href="/s/composition?classe=1&amp;lang=de">Quiz Komposition</a></li>
+        </ol>
+      </div>
+
+      <div class="card" id="c4-lumiere-de" data-parcours="c4-lumiere" data-event="scolaires_parcours_c4_lumiere">
+        <h3>Licht &amp; Fotografie <span class="parcours-badge">Collège</span> <span class="muted">· ~25&nbsp;min</span></h3>
+        <p>Belichtung, Richtung und Qualität des Lichts — technische Hebel der Bildsprache.</p>
+        <p>
+          <a class="cta" href="/s/exposure-basics?classe=1&amp;lang=de" data-track-parcours>Sitzung starten</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/exposure-basics?classe=1&amp;lang=de" data-copied="Link kopiert!">Sitzungslink kopieren</button>
+        </p>
+        <ol>
+          <li><a href="/guides/lumiere-photo?lang=de">Licht-Leitfaden</a></li>
+          <li><a href="/s/exposure-basics?classe=1&amp;lang=de">Quiz Belichtungsgrundlagen</a></li>
+          <li><a href="/s/light-color?classe=1&amp;lang=de">Quiz Licht &amp; Farbe</a></li>
+        </ol>
+      </div>
+
+      <h2 id="emi-de">Medienkompetenz (EMI) — Bildrecht</h2>
+      <div class="card" id="c4-emi-droits-de" data-parcours="c4-emi-droits" data-event="scolaires_parcours_c4_emi_droits">
+        <h3>Bildrecht <span class="muted">· ~20&nbsp;min</span></h3>
+        <p>Privatsphäre, Veröffentlichung, Ethik medialer Bilder — typische EMI- / Bibliothekssitzung.</p>
+        <p>
+          <a class="cta" href="/s/photo-rights?classe=1&amp;lang=de" data-track-parcours>Sitzung starten</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/photo-rights?classe=1&amp;lang=de" data-copied="Link kopiert!">Sitzungslink kopieren</button>
+        </p>
+        <ol>
+          <li><a href="/guides/droits-ethique-photo?lang=de">Leitfaden Rechte &amp; Ethik</a></li>
+          <li><a href="/s/photo-rights?classe=1&amp;lang=de">Quiz Foto-Rechte</a> (Klassenmodus)</li>
+          <li class="muted">Debatte außerhalb der App (optional)</li>
+        </ol>
+      </div>
+
+      <h2 id="cycle-3-de">Zyklus 3 — Fotografie entdecken</h2>
+      <p>Einfache Sprache (CM1–CM2–6ᵉ): Bildkategorien, fotografisches Bild, visuelle Erzählung — ausgerichtet auf BOEN Nr.&nbsp;31 vom 30. Juli 2020.</p>
+
+      <div class="card" id="c3-decouvrir-de" data-parcours="c3-decouvrir" data-event="scolaires_parcours_c3_decouvrir">
+        <h3>Fotografie entdecken <span class="muted">· ~15&nbsp;min</span></h3>
+        <p>Was ist ein Foto-Genre? Dann einige Bilder gemeinsam betrachten — ohne Fachjargon.</p>
+        <p>
+          <a class="cta" href="/s/genres?classe=1&amp;lang=de" data-track-parcours>Sitzung starten</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/genres?classe=1&amp;lang=de" data-copied="Link kopiert!">Sitzungslink kopieren</button>
+        </p>
+        <ol>
+          <li><a href="/guides/genres-photo?lang=de">Genres-Leitfaden (Auszug)</a></li>
+          <li><a href="/s/genres?classe=1&amp;lang=de">Quiz Genres</a> (leicht, Klassenmodus)</li>
+          <li><a href="/s/photo-reading?classe=1&amp;lang=de">Option: Fotos analysieren</a></li>
+        </ol>
+      </div>
+
+      <h2 id="lycee-de">Lycée — Praxis Standbild</h2>
+      <p>Wahlpflicht / Spezialität Bildende Kunst (BO 2019): Praxis Standbild (Fotografie), Licht, Aufnahme, digitale Transformation. Klare Kennzeichnung <strong>lycée / vertieft</strong> — nicht der Kern-collège-Pfad.</p>
+
+      <div class="card" id="lycee-pratique-de" data-parcours="lycee-pratique" data-event="scolaires_parcours_lycee_pratique">
+        <h3>Praxis Standbild <span class="muted">· ~30&nbsp;min · lycée</span></h3>
+        <p>Porträt &amp; Licht → Blitz / Studio → Retusche. Option: Lexikon Standbild (originales Vokabular, keine urheberrechtlich geschützten Werke).</p>
+        <p>
+          <a class="cta" href="/s/portrait-light?classe=1&amp;lang=de" data-track-parcours>Sitzung starten</a>
+          <button type="button" class="cta-secondary copy-seance" data-seance="/s/portrait-light?classe=1&amp;lang=de" data-copied="Link kopiert!">Sitzungslink kopieren</button>
+        </p>
+        <ol>
+          <li><a href="/s/lexique-image-fixe?classe=1&amp;lang=de">Option: Lexikon Standbild</a> (12&nbsp;F, nur Text)</li>
+          <li><a href="/s/portrait-light?classe=1&amp;lang=de">Quiz Porträt &amp; Licht</a> (Klassenmodus)</li>
+          <li><a href="/s/flash-studio?classe=1&amp;lang=de">Quiz Blitz &amp; Studio</a></li>
+          <li><a href="/guides/retouche-lightroom?lang=de">Retusche-Leitfaden</a> → <a href="/s/retouching?classe=1&amp;lang=de">Quiz Retusche</a></li>
+        </ol>
+      </div>
+
+      <h2 id="corpus-bac-de">Abitur-Korpus — nur externe Links</h2>
+      <div class="card">
+        <p>Quiz PixFan <strong>prüft nicht</strong> Werke der begrenzten Abitur-Liste (keine Reproduktionen). Für offizielle Listen und Ressourcen:</p>
+        <ul>
+          <li><a href="https://eduscol.education.fr/" target="_blank" rel="noopener noreferrer">éduscol</a> — Programme und Ressourcen Bildende Kunst</li>
+          <li><a href="https://www.education.gouv.fr/bo/20/Hebdo31/MENE2018714A.htm" target="_blank" rel="noopener noreferrer">BOEN Nr.&nbsp;31 vom 30. Juli 2020</a> — Zyklen 3 &amp; 4 (geltend)</li>
+          <li>Begrenzte Terminale-Listen: nur offizielle MEN- / éduscol-Seiten (externe Links, nie hier gehostet)</li>
+        </ul>
+      </div>
+
+      <h2 id="enseignants-de">Lehrerblatt</h2>
+      <div class="card">
+        <h3>Ziele</h3>
+        <ul>
+          <li>Zyklus&nbsp;3: Bildgenres benennen und beschreiben, was man sieht (Rahmen, Motiv).</li>
+          <li>Zyklus&nbsp;4: Vokabular der Bildanalyse nutzen (Rahmen, Licht, Absicht).</li>
+          <li>EMI: Urheberrecht, Bildrecht und gute Veröffentlichungspraxis unterscheiden.</li>
+          <li>Lycée: Porträtlicht / Blitz und eine ethische Retusche-Geste üben; Standbild-Vokabular.</li>
+        </ul>
+        <h3>Ausstattung</h3>
+        <p>Smartphone, Tablet oder Computer mit Browser. Fragiles WLAN: PWA installieren (Browser-Menü → „App installieren“), nachdem das Pack einmal geladen wurde.</p>
+        <h3 id="grille-duree-de">Zeitgitter (Leitfaden · Quiz · Debrief)</h3>
+        <table class="fiche-timing" aria-label="Zeitgitter der Schulpfade">
+          <thead>
+            <tr>
+              <th>Pfad</th>
+              <th>Gesamt</th>
+              <th>Leitfaden</th>
+              <th>Quiz</th>
+              <th>Debrief</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Fotografie entdecken (C3)</td><td>~15&nbsp;min</td><td>2–3</td><td>8–10</td><td>2–3</td></tr>
+            <tr><td>Ein Bild lesen (C4)</td><td>~20&nbsp;min</td><td>3–4</td><td>12–14</td><td>3–4</td></tr>
+            <tr><td>Licht &amp; Foto</td><td>~25&nbsp;min</td><td>4–5</td><td>14–16</td><td>3–4</td></tr>
+            <tr><td>Bildrecht (EMI)</td><td>~20&nbsp;min</td><td>3–4</td><td>10–12</td><td>4–5</td></tr>
+            <tr><td>Praxis Standbild (lycée)</td><td>~30&nbsp;min</td><td>3–5</td><td>18–22</td><td>4–5</td></tr>
+          </tbody>
+        </table>
+        <h3>Debrief-Fragen (1 / Pfad)</h3>
+        <ul>
+          <li><strong>C3 entdecken:</strong> „Nenne ein Porträt, eine Landschaft und ein Street-Foto — was ändert sich im Rahmen?“</li>
+          <li><strong>C4 lesen:</strong> „Bei 2 Bildern: wo ist das Motiv, von wo schauen wir, was sagt der Ausschnitt?“</li>
+          <li><strong>C4 Licht:</strong> „Welche Absicht (Stimmung / Kontrast), wenn man nur das Licht ändert?“</li>
+          <li><strong>EMI Rechte:</strong> „Dürfen wir ein Klassenfoto im Netz veröffentlichen? Wer entscheidet, und warum?“</li>
+          <li><strong>Lycée Praxis:</strong> „Wo endet ehrliche Retusche? Eine Geste, die informiert, vs. eine, die täuscht.“</li>
+        </ul>
+        <h3>Sitzungsablauf</h3>
+        <ol>
+          <li>Teile den <strong>Sitzungslink</strong> (Button oben) — öffnet das Quiz im <em>Klassenmodus</em> (<code>?classe=1</code>): keine öffentliche Rangliste, kein Highscore-Prompt.</li>
+          <li>2–3&nbsp;min für den Leitfaden (oder die Kernpunkte projizieren).</li>
+          <li>Quiz starten (Erklärungen nach jeder Frage).</li>
+          <li>Gruppen-Debrief mit der Pfad-Frage oben.</li>
+        </ol>
+        <p><a class="cta-secondary" href="/guides/scolaires/fiche-seance.html?lang=de">Druckversion (1 Seite)</a></p>
+        <h3>Curriculum-Hinweis</h3>
+        <p class="muted">Quiz PixFan zitiert Programmreferenzen (BO / éduscol) als <strong>pädagogische Ausrichtung</strong>. Es ist keine offizielle MEN-Ressource und keine Zertifizierung. Originalinhalt PixFan — keine Reproduktionen von Lehrbüchern oder des begrenzten Abitur-Korpus.</p>
+        <p class="muted">Wenn die Sitzung reale Aufnahmen außerhalb der App umfasst, das <a href="https://www.clemi.fr/" target="_blank" rel="noopener noreferrer">Bildrecht der Schülerinnen und Schüler</a> erinnern (CLEMI / EMI).</p>
+      </div>
+
+      <h2>Referenzen (externe Links)</h2>
+      <ul class="muted">
+        <li>Bildende Kunst Zyklen 3 &amp; 4 — BOEN Nr.&nbsp;31 vom 30. Juli 2020 (éduscol)</li>
+        <li>EMI — Bildrecht, mediale Bilder (éduscol / CLEMI)</li>
+        <li>Kunstgeschichte — quer Zyklen 3–4</li>
+        <li>Lycée — Wahlpflicht / Spezialität Bildende Kunst (Sonder-BOs 2019)</li>
+      </ul>
+      <p class="muted">Hub ausgerichtet auf geltende Programme (BO 2020). <strong>Jährliche Prüfung</strong> vorgesehen, falls Programme sich ändern (Team-Wartungs-Checkliste).</p>
+
+      <p><a class="cta-secondary" href="/guides/?lang=de">Alle Leitfäden</a> · <a class="cta-secondary" href="/?lang=de">Quiz starten</a></p>
     </article>
   </main>
   <footer class="app-footer">

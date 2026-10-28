@@ -83,7 +83,7 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es: real article.es + ES share meta (vague 1.56); de: interim EN via CSS */
+      /* es: real article.es (1.56); de: real article.de + DE share meta (vague 1.65) */
       if (p === 'es') {
         document.title = 'Guías quiz foto — aprender luego practicar | Quiz PixFan';
         var esTitle = 'Guías quiz foto | Quiz PixFan';
@@ -97,7 +97,20 @@
         setLocales('es_ES', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Foto-Leitfäden — lernen, dann üben | Quiz PixFan';
+        var deTitle = 'Foto-Leitfäden | Quiz PixFan';
+        var deDescMeta =
+          'Kostenlose Fotoguides zu Belichtung, Komposition, Licht, Retusche, Genres, Smartphone, Ausrüstung, Rechte und Fotogeschichte, mit interaktiven FR/EN-Quizzes auf Quiz PixFan.';
+        var deOgDesc =
+          'Lernen Sie Belichtung, Komposition, Licht, Genres, Retusche, Smartphone, Ausrüstung, Rechte und Geschichte — und prüfen Sie sich dann.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+      } else if (p === 'en') {
         document.title = 'Photo quiz guides — learn then practice | Quiz PixFan';
         var enTitle = 'Photo quiz guides | Quiz PixFan';
         var enDescMeta =
@@ -305,6 +318,62 @@
         <a class="cta-secondary" href="/guides/histoire-photo?lang=es">Leer la guía →</a>
       </div>
       <p><a class="cta" href="/?lang=es">Lanzar un quiz</a></p>
+    </article>
+
+    <article class="de">
+      <h1>Fotoguides für schnelle Fortschritte</h1>
+      <p class="lead">Von Google lesbare Leitfäden, verknüpft mit den interaktiven Quizzes von Quiz PixFan (386 Fragen, 268 bebildert, FR/EN).</p>
+      <div class="card">
+        <h2>Schulpfade — Foto im Unterricht</h2>
+        <p>Parcours Zyklus 4 Bildende Kunst + Medienkompetenz: ein Bild lesen, Licht, Bildrecht.</p>
+        <a class="cta-secondary" href="/guides/scolaires/?lang=de">Schulpfade ansehen →</a>
+      </div>
+      <div class="card">
+        <h2>Belichtungsdreieck</h2>
+        <p>ISO, Blende, Verschlusszeit — die 3 Hebel des Lichts.</p>
+        <a class="cta-secondary" href="/guides/triangle-exposition?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Fotokomposition</h2>
+        <p>Drittelregel, Linien, Bildausschnitt und Tiefe.</p>
+        <a class="cta-secondary" href="/guides/composition-photo?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Fotolicht</h2>
+        <p>Richtung, Qualität, Temperatur und Weißabgleich.</p>
+        <a class="cta-secondary" href="/guides/lumiere-photo?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Retusche &amp; Lightroom</h2>
+        <p>Workflow Katalog → Tonalität → Farbe → Export.</p>
+        <a class="cta-secondary" href="/guides/retouche-lightroom?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Smartphone-Fotografie</h2>
+        <p>Licht, HDR, Pro-Modus und klassische Fehler.</p>
+        <a class="cta-secondary" href="/guides/photo-smartphone?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Fotografische Genres</h2>
+        <p>Porträt, Street, Landschaft, Makro — die Absicht vor dem Gehäuse.</p>
+        <a class="cta-secondary" href="/guides/genres-photo?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Fotoausrüstung</h2>
+        <p>Sensoren, Brennweiten, Stabilisierung und nützliche Filter.</p>
+        <a class="cta-secondary" href="/guides/materiel-photo?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Rechte &amp; Ethik</h2>
+        <p>Urheberrecht, Lizenzen, Model Release und gute Praxis.</p>
+        <a class="cta-secondary" href="/guides/droits-ethique-photo?lang=de">Leitfaden lesen →</a>
+      </div>
+      <div class="card">
+        <h2>Geschichte &amp; Ikonen</h2>
+        <p>Erfindungen, mythische Fotografen und gemeinfreie Bilder.</p>
+        <a class="cta-secondary" href="/guides/histoire-photo?lang=de">Leitfaden lesen →</a>
+      </div>
+      <p><a class="cta" href="/?lang=de">Quiz starten</a></p>
     </article>
   </main>
   <footer class="app-footer">

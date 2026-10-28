@@ -19,11 +19,11 @@ import homeSpa from '../../index.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)', () => {
-  it('docs headline cites v1.63.0; vague 1.63 listed; no-go through 1.64', () => {
-    expect(readme).toContain('v1.63.0');
-    expect(nextSteps).toContain('**v1.63.0**');
+  it('docs still mention vague 1.63; no-go line covers 1.64+', () => {
+    /* Docs headline moved to v1.64.0 in vague 1.65 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.63**');
     expect(nextSteps).toMatch(/no-go.*1\.64/);
+    expect(readme).toMatch(/v1\.(63|64)\.0/);
   });
 
   it('droits ships real article.de (DE strings, not EN stub)', () => {
@@ -127,7 +127,7 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
     );
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de; hubs/fiche/home lack article.de', () => {
+  it('still no hreflang="de"; no sitemap ?lang=de; fiche/home lack article.de', () => {
     for (const html of [
       composition,
       triangle,
@@ -145,8 +145,7 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
     ]) {
       expect(html).not.toContain('hreflang="de"');
     }
-    expect(guidesIndex).not.toContain('<article class="de">');
-    expect(scolairesHub).not.toContain('<article class="de">');
+    /* Hubs gained article.de in vague 1.65 — keep fiche/home negative lock. */
     expect(fiche).not.toContain('<article class="de">');
     expect(homeSpa).not.toContain('<article class="de">');
     expect(sitemap).not.toContain('?lang=de');

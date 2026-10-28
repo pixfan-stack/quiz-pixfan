@@ -14,7 +14,7 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.55**');
     expect(nextSteps).toMatch(/no-go.*1\.56/);
-    expect(readme).toMatch(/v1\.(55|56|57|58|59|60|61|62|63)\.0/);
+    expect(readme).toMatch(/v1\.(55|56|57|58|59|60|61|62|63|64)\.0/);
   });
 
   it('guides hub ships real article.es (not EN stub)', () => {
@@ -42,7 +42,8 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     for (const html of [guidesIndex, scolairesHub]) {
       expect(html).toContain("p === 'es'");
       expect(html).toContain("setLocales('es_ES', 'fr_FR')");
-      expect(html).toMatch(/p === 'en' \|\| p === 'de'/);
+      /* de got real hub meta in vague 1.65 — EN stays its own branch */
+      expect(html).toContain("p === 'en'");
     }
     expect(guidesIndex).toContain('Guías quiz foto | Quiz PixFan');
     expect(scolairesHub).toContain('Escolares — foto en clase | Quiz PixFan');
