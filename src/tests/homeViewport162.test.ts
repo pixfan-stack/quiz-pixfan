@@ -13,10 +13,10 @@ import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.62 — docs v1.61.0 + lumière/genres article.de expand', () => {
   it('docs still mention vague 1.61; no-go line covers 1.62+', () => {
-    /* Docs headline moved to v1.62.0 in vague 1.63 — keep historical Livré lock. */
+    /* Docs headline moved to v1.63.0 in vague 1.64 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.61**');
     expect(nextSteps).toMatch(/no-go.*1\.62/);
-    expect(readme).toMatch(/v1\.(61|62)\.0/);
+    expect(readme).toMatch(/v1\.(61|62|63)\.0/);
   });
 
   it('lumière ships real article.de (DE strings, not EN stub)', () => {

@@ -74,7 +74,7 @@
         if (ogLocale) ogLocale.setAttribute('content', primary);
         if (ogLocaleAlt) ogLocaleAlt.setAttribute('content', alternate);
       }
-      /* es: real article.es + ES share meta (vague 1.55); de: interim EN via CSS */
+      /* es: article.es + ES meta; de: article.de + DE meta (vague 1.64); en: EN */
       if (p === 'es') {
         document.title = 'Derechos y ética foto: autor, licencias, model release | Quiz PixFan';
         var esTitle = 'Derechos y ética foto — guía + quiz';
@@ -86,7 +86,18 @@
         setLocales('es_ES', 'fr_FR');
         if (twTitle) twTitle.setAttribute('content', esTitle);
         if (twDesc) twDesc.setAttribute('content', esOgDesc);
-      } else if (p === 'en' || p === 'de') {
+      } else if (p === 'de') {
+        document.title = 'Foto-Rechte & Ethik: Urheberrecht, Lizenzen, Model Release | Quiz PixFan';
+        var deTitle = 'Foto-Rechte & Ethik — Leitfaden + Quiz';
+        var deDescMeta = 'Urheberrecht, Creative Commons, Model Release und Ethik — kurzer Leitfaden, dann kostenloses Rechte-Quiz Quiz PixFan.';
+        var deOgDesc = 'Urheberschaft, Lizenzen, Bildrechte und gute Praxis — dann ein interaktives Quiz.';
+        if (desc) desc.setAttribute('content', deDescMeta);
+        if (ogTitle) ogTitle.setAttribute('content', deTitle);
+        if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+        setLocales('de_DE', 'fr_FR');
+        if (twTitle) twTitle.setAttribute('content', deTitle);
+        if (twDesc) twDesc.setAttribute('content', deOgDesc);
+      } else if (p === 'en') {
         document.title = 'Photo rights & ethics: copyright, licenses, model release | Quiz PixFan';
         var enTitle = 'Photo rights & ethics — guide + quiz';
         var enDescMeta = 'Copyright, Creative Commons, model release and ethics — short guide then free Quiz PixFan rights quiz.';
@@ -232,6 +243,41 @@
         <p class="muted" style="margin-top:0.5rem">Tras un fallo en el quiz derechos, la revisión de resultados también enlaza a esta guía.</p>
         <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=es#c4-emi-droits">Para la clase → recorridos Escolares (ciclo 4)</a></p>
         <p class="muted" style="margin-top:0.75rem"><a href="/guides/histoire-photo?lang=es">Historia e iconos</a> · <a href="/guides/materiel-photo?lang=es">Material</a> · <a href="https://www.pixfan.com/maitriser-la-cession-de-droits-dauteur-en-photographie-guide-pratique/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=droits-ethique-photo&amp;utm_content=pixfan">Guía cesión de derechos Pixfan</a></p>
+      </div>
+    </article>
+
+    <article class="de">
+      <h1>Foto-Rechte &amp; Ethik: wissen, was man veröffentlichen darf</h1>
+      <p class="lead">Das Urheberrecht schützt das Bild; das Recht am eigenen Bild schützt Personen. Lizenzen und Ethik entscheiden, was legal <em>und</em> respektvoll ist.</p>
+
+      <h2>Wem gehört das Urheberrecht?</h2>
+      <p>In den meisten Ländern ist der Autor des Fotos der Fotograf (außer Auftrags- / Arbeitsvertrag, der die Rechte abtritt). „Alle Rechte vorbehalten“ heißt: Weiterverwendung ist nicht frei — es braucht eine Erlaubnis oder eine klare Lizenz.</p>
+
+      <h2>Creative-Commons-Lizenzen</h2>
+      <ul>
+        <li><strong>BY</strong>: Namensnennung des Autors Pflicht.</li>
+        <li><strong>NC</strong>: nur nicht-kommerzielle Nutzung.</li>
+        <li><strong>ND / SA</strong>: keine Bearbeitung, oder Weitergabe unter gleichen Bedingungen.</li>
+      </ul>
+      <p>Eine CC-Lizenz löscht weder das Urheberpersönlichkeitsrecht noch das Recht am eigenen Bild sichtbarer Personen. Lizenzkurzfassung vor dem Republizieren lesen.</p>
+
+      <h2>Model Release &amp; Orte</h2>
+      <p>Vom öffentlichen Raum aus zu fotografieren ist oft erlaubt, aber ein erkennbares Gesicht kommerziell zu veröffentlichen kann eine Model-Freigabe verlangen. Geschützte Gebäude, Kunstwerke und Marken haben manchmal zusätzliche Regeln.</p>
+
+      <h2>Praktische Ethik</h2>
+      <ul>
+        <li>Einwilligung einholen, wenn die Szene intim oder sensibel ist.</li>
+        <li>Fremde Feeds nicht als die eigenen republizieren.</li>
+        <li>GPS-Vorsicht: Metadaten können eine Wohnadresse verraten.</li>
+        <li>Fair use / kurzes Zitat: enge Ausnahmen, kein Freibrief zum Alles-Kopieren.</li>
+      </ul>
+
+      <div class="card">
+        <p><strong>Übung</strong> — Urheberschaft, Lizenzen, Model Release, Ethik und Nutzungen.</p>
+        <a class="cta" href="/s/photo-rights?lang=de">Rechte-Quiz starten</a>
+        <p class="muted" style="margin-top:0.5rem">Nach einem Fehler im Rechte-Quiz verweist die Ergebnisübersicht auch auf diesen Leitfaden.</p>
+        <p style="margin-top:0.5rem"><a class="cta-secondary" href="/guides/scolaires/?lang=de#c4-emi-droits">Für den Unterricht → Schulpfade (Zyklus 4)</a></p>
+        <p class="muted" style="margin-top:0.75rem"><a href="/guides/histoire-photo?lang=de">Geschichte &amp; Ikonen</a> · <a href="/guides/materiel-photo?lang=de">Ausrüstung</a> · <a href="https://www.pixfan.com/maitriser-la-cession-de-droits-dauteur-en-photographie-guide-pratique/?utm_source=quiz&amp;utm_medium=guide&amp;utm_campaign=droits-ethique-photo&amp;utm_content=pixfan">Pixfan Leitfaden Rechteabtretung</a></p>
       </div>
     </article>
   </main>

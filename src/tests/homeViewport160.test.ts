@@ -12,7 +12,7 @@ describe('vague 1.60 — docs v1.59.0 + composition article.de pilot', () => {
     /* Docs headline moved to v1.60.0 in vague 1.61 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.59**');
     expect(nextSteps).toMatch(/no-go.*1\.60/);
-    expect(readme).toMatch(/v1\.(59|60|61|62)\.0/);
+    expect(readme).toMatch(/v1\.(59|60|61|62|63)\.0/);
   });
 
   it('composition ships real article.de (DE strings, not EN stub)', () => {

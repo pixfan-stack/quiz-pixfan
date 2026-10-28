@@ -15,11 +15,11 @@ import histoire from '../../public/guides/histoire-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', () => {
-  it('docs headline cites v1.62.0; vague 1.62 listed; no-go through 1.63', () => {
-    expect(readme).toContain('v1.62.0');
-    expect(nextSteps).toContain('**v1.62.0**');
+  it('docs still mention vague 1.62; no-go line covers 1.63+', () => {
+    /* Docs headline moved to v1.63.0 in vague 1.64 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.62**');
     expect(nextSteps).toMatch(/no-go.*1\.63/);
+    expect(readme).toMatch(/v1\.(62|63)\.0/);
   });
 
   it('retouche ships real article.de (DE strings, not EN stub)', () => {
@@ -102,7 +102,8 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
     );
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de; droits/histoire lack article.de', () => {
+  it('still no hreflang="de"; no sitemap ?lang=de (droits/histoire expand is 1.64)', () => {
+    /* Historical 1.63 lock: retouche/matériel expand. Droits/histoire article.de landed in 1.64. */
     for (const html of [
       composition,
       triangle,
@@ -116,8 +117,6 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
     ]) {
       expect(html).not.toContain('hreflang="de"');
     }
-    expect(droits).not.toContain('<article class="de">');
-    expect(histoire).not.toContain('<article class="de">');
     expect(sitemap).not.toContain('?lang=de');
     expect(retouche).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/retouche-lightroom" />'

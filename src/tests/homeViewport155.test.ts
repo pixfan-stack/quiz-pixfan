@@ -18,7 +18,7 @@ describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)'
     /* Docs headline moved to v1.55.0 in vague 1.56 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.54**');
     expect(nextSteps).toMatch(/no-go.*1\.55/);
-    expect(readme).toMatch(/v1\.(54|55|56|57|58|59|60|61|62)\.0/);
+    expect(readme).toMatch(/v1\.(54|55|56|57|58|59|60|61|62|63)\.0/);
   });
 
   it('droits ships real article.es (not EN stub)', () => {
@@ -43,7 +43,8 @@ describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)'
     for (const html of [droits, histoire]) {
       expect(html).toContain("p === 'es'");
       expect(html).toContain("setLocales('es_ES', 'fr_FR')");
-      expect(html).toMatch(/p === 'en' \|\| p === 'de'/);
+      /* de got real meta in vague 1.64 on droits/histoire — EN stays its own branch */
+      expect(html).toContain("p === 'en'");
     }
     expect(droits).toContain('Derechos y ética foto — guía + quiz');
     expect(histoire).toContain('Historia e iconos foto — guía + quiz');
