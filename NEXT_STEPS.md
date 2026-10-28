@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.63.0**).
+Document à jour avec l’état réel du dépôt (**v1.64.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.64** : expand `article.de` droits + histoire · sniff meta DE · docs v1.63.0 (bump **v1.64.0**) — topics **9/9** — **pas** hreflang de · **pas** twin sitemap `?lang=de`
 - Vague **1.63** : expand `article.de` retouche + matériel · sniff meta DE · docs v1.62.0 (bump **v1.63.0**) — **pas** hreflang de · **pas** twin sitemap `?lang=de`
 - Vague **1.62** : expand `article.de` lumière + genres · sniff meta DE · docs v1.61.0 (bump **v1.62.0**) — **pas** hreflang de · **pas** twin sitemap `?lang=de`
 - Vague **1.61** : expand `article.de` triangle + smartphone · sniff meta DE · docs v1.60.0 (bump **v1.61.0**) — **pas** hreflang de · **pas** twin sitemap `?lang=de`
@@ -66,9 +67,9 @@ Document à jour avec l’état réel du dépôt (**v1.63.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.63.0** + 15 quiz · 386 Q · 268 illus (vague 1.63 release + 1.64 P0)
+- [x] Docs headline → **v1.64.0** + 15 quiz · 386 Q · 268 illus (vague 1.64 release + 1.65 P0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65
 
 ### Ops Antony — checklist P0.4 (hors code)
 
@@ -107,6 +108,7 @@ Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Pu
 - [x] Expand `article.de` triangle + smartphone (+ sniff meta DE) (vague **1.61**) — **pas** hreflang de · **pas** twin sitemap `?lang=de` · **pas** path `/de/`
 - [x] Expand `article.de` lumière + genres (+ sniff meta DE) (vague **1.62**) — **pas** hreflang de · **pas** twin sitemap `?lang=de` · **pas** path `/de/`
 - [x] Expand `article.de` retouche + matériel (+ sniff meta DE) (vague **1.63**) — **pas** hreflang de · **pas** twin sitemap `?lang=de` · **pas** path `/de/`
-- [ ] Expand `article.de` droits + histoire (+ sniff meta DE) (vague **1.64**) — plan store `vague-1-64` · **pas** hreflang de · **pas** twin sitemap `?lang=de` · **pas** path `/de/` (topics **9/9** ; hubs encore EN)
+- [x] Expand `article.de` droits + histoire (+ sniff meta DE) (vague **1.64**) — topics **9/9** — **pas** hreflang de · **pas** twin sitemap `?lang=de` · **pas** path `/de/`
+- [ ] Hub guides + hub scolaires `article.de` (+ sniff meta DE · JSON-LD DE scolaires) (vague **1.65**) — plan store `vague-1-65` · **pas** hreflang de · **pas** twin sitemap `?lang=de` · **pas** path `/de/` (fiche/home encore EN)
 
 Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt.
