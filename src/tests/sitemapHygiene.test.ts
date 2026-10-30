@@ -77,7 +77,7 @@ describe('sitemap / SEO hygiene', () => {
     expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
     expect(sitemap).not.toMatch(/<lastmod>2026-09-\d{2}<\/lastmod>/);
 
-    // Vague 1.57–1.59: ?lang= twins for ES-ready guides + home + fiche (not de).
+    // Vague 1.57–1.59: ?lang= twins for ES-ready guides + home + fiche.
     const esReady = [
       'https://quiz.pixfan.fr/',
       'https://quiz.pixfan.fr/guides/',
@@ -103,7 +103,29 @@ describe('sitemap / SEO hygiene', () => {
       expect(enMod! >= LASTMOD_FLOOR, `${base}?lang=en`).toBe(true);
       expect(esMod! >= LASTMOD_FLOOR, `${base}?lang=es`).toBe(true);
     }
-    expect(sitemap).not.toContain('?lang=de');
+
+    // Vague 1.66: ?lang=de twins for DE-ready guides only (not home/fiche).
+    const deReady = [
+      'https://quiz.pixfan.fr/guides/',
+      'https://quiz.pixfan.fr/guides/scolaires/',
+      'https://quiz.pixfan.fr/guides/composition-photo',
+      'https://quiz.pixfan.fr/guides/triangle-exposition',
+      'https://quiz.pixfan.fr/guides/photo-smartphone',
+      'https://quiz.pixfan.fr/guides/lumiere-photo',
+      'https://quiz.pixfan.fr/guides/retouche-lightroom',
+      'https://quiz.pixfan.fr/guides/genres-photo',
+      'https://quiz.pixfan.fr/guides/materiel-photo',
+      'https://quiz.pixfan.fr/guides/droits-ethique-photo',
+      'https://quiz.pixfan.fr/guides/histoire-photo',
+    ];
+    for (const base of deReady) {
+      expect(sitemap, base).toContain(`<loc>${base}?lang=de</loc>`);
+      const deMod = lastmodForLoc(`${base}?lang=de`);
+      expect(deMod, `${base}?lang=de`).toBeTruthy();
+      expect(deMod! >= LASTMOD_FLOOR, `${base}?lang=de`).toBe(true);
+    }
+    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
   });
 
   it('excludes sitemap and robots from bare SPA catch-all precedence', () => {

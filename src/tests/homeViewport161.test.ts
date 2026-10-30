@@ -6,7 +6,6 @@ import guidesCssMirror from '../../public/guides/i18n-display.css.txt?raw';
 import composition from '../../public/guides/composition-photo.html?raw';
 import triangle from '../../public/guides/triangle-exposition.html?raw';
 import smartphone from '../../public/guides/photo-smartphone.html?raw';
-import lumiere from '../../public/guides/lumiere-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', () => {
@@ -14,7 +13,7 @@ describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', 
     /* Docs headline moved to v1.61.0 in vague 1.62 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.60**');
     expect(nextSteps).toMatch(/no-go.*1\.61/);
-    expect(readme).toMatch(/v1\.(60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(60|61|62|63|64|65)\.0/);
   });
 
   it('triangle ships real article.de (DE strings, not EN stub)', () => {
@@ -79,12 +78,10 @@ describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', 
     expect(smartphone).toContain('Foto con smartphone: mejores tomas, sin equipo');
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de (lumière expand is 1.62)', () => {
-    /* Historical 1.61 lock: triangle/smartphone expand. Lumière/genres article.de landed in 1.62. */
-    for (const html of [composition, triangle, smartphone, lumiere]) {
-      expect(html).not.toContain('hreflang="de"');
-    }
-    expect(sitemap).not.toContain('?lang=de');
+  it('canonical bare; hreflang de unlocked 1.66 (historical soften)', () => {
+    /* Historical 1.61 lock: triangle/smartphone expand. Hreflang de unlocked in 1.66. */
+    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
     expect(triangle).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/triangle-exposition" />'
     );

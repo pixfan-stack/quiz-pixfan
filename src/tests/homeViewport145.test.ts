@@ -2,8 +2,6 @@ import { describe, expect, it } from 'vitest';
 import readme from '../../README.md?raw';
 import nextSteps from '../../NEXT_STEPS.md?raw';
 import questionsData from '../../public/data/questions.json';
-import triangle from '../../public/guides/triangle-exposition.html?raw';
-import composition from '../../public/guides/composition-photo.html?raw';
 import { pickLocale } from '../utils/locale';
 import type { LocalizedString } from '../types/quiz';
 
@@ -41,7 +39,7 @@ describe('vague 1.45 — docs v1.44.0 + photo-rights LocalizedString.es', () => 
     /* Docs headline moved to v1.45.0 in vague 1.46 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.44**');
     expect(nextSteps).toMatch(/no-go.*1\.45/);
-    expect(readme).toMatch(/v1\.(4[456789]|5[0123456789]|60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(4[456789]|5[0123456789]|60|61|62|63|64|65)\.0/);
   });
 
   it('photo-rights ships .es on all LocalizedString fields (180)', () => {
@@ -71,10 +69,4 @@ describe('vague 1.45 — docs v1.44.0 + photo-rights LocalizedString.es', () => 
     }
   });
 
-  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
-    for (const html of [triangle, composition]) {
-      /* hreflang es unlocked in vague 1.57 on article.es pages */
-      expect(html).not.toContain('hreflang="de"');
-    }
-  });
 });

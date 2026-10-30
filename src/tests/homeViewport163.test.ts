@@ -10,8 +10,6 @@ import lumiere from '../../public/guides/lumiere-photo.html?raw';
 import genres from '../../public/guides/genres-photo.html?raw';
 import retouche from '../../public/guides/retouche-lightroom.html?raw';
 import materiel from '../../public/guides/materiel-photo.html?raw';
-import droits from '../../public/guides/droits-ethique-photo.html?raw';
-import histoire from '../../public/guides/histoire-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', () => {
@@ -19,7 +17,7 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
     /* Docs headline moved to v1.63.0 in vague 1.64 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.62**');
     expect(nextSteps).toMatch(/no-go.*1\.63/);
-    expect(readme).toMatch(/v1\.(62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(62|63|64|65)\.0/);
   });
 
   it('retouche ships real article.de (DE strings, not EN stub)', () => {
@@ -102,22 +100,10 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
     );
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de (droits/histoire expand is 1.64)', () => {
-    /* Historical 1.63 lock: retouche/matériel expand. Droits/histoire article.de landed in 1.64. */
-    for (const html of [
-      composition,
-      triangle,
-      smartphone,
-      lumiere,
-      genres,
-      retouche,
-      materiel,
-      droits,
-      histoire,
-    ]) {
-      expect(html).not.toContain('hreflang="de"');
-    }
-    expect(sitemap).not.toContain('?lang=de');
+  it('canonical bare; hreflang de unlocked 1.66 (historical soften)', () => {
+    /* Historical 1.63 lock: retouche/matériel expand. Hreflang de unlocked in 1.66. */
+    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
     expect(retouche).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/retouche-lightroom" />'
     );

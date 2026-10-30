@@ -4,7 +4,6 @@ import nextSteps from '../../NEXT_STEPS.md?raw';
 import sitemap from '../../public/sitemap.xml?raw';
 import guidesCssMirror from '../../public/guides/i18n-display.css.txt?raw';
 import composition from '../../public/guides/composition-photo.html?raw';
-import triangle from '../../public/guides/triangle-exposition.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.60 — docs v1.59.0 + composition article.de pilot', () => {
@@ -12,7 +11,7 @@ describe('vague 1.60 — docs v1.59.0 + composition article.de pilot', () => {
     /* Docs headline moved to v1.60.0 in vague 1.61 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.59**');
     expect(nextSteps).toMatch(/no-go.*1\.60/);
-    expect(readme).toMatch(/v1\.(59|60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(59|60|61|62|63|64|65)\.0/);
   });
 
   it('composition ships real article.de (DE strings, not EN stub)', () => {
@@ -56,11 +55,10 @@ describe('vague 1.60 — docs v1.59.0 + composition article.de pilot', () => {
     );
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de (triangle expand is 1.61)', () => {
-    /* Historical 1.60 lock: composition pilot only. Triangle/smartphone article.de landed in 1.61. */
-    expect(composition).not.toContain('hreflang="de"');
-    expect(triangle).not.toContain('hreflang="de"');
-    expect(sitemap).not.toContain('?lang=de');
+  it('canonical bare; hreflang de unlocked 1.66 (historical soften)', () => {
+    /* Historical 1.60 lock: composition pilot only. Hreflang de unlocked in 1.66. */
+    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
     expect(composition).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/composition-photo" />'
     );

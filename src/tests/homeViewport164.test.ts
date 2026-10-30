@@ -12,8 +12,6 @@ import retouche from '../../public/guides/retouche-lightroom.html?raw';
 import materiel from '../../public/guides/materiel-photo.html?raw';
 import droits from '../../public/guides/droits-ethique-photo.html?raw';
 import histoire from '../../public/guides/histoire-photo.html?raw';
-import guidesIndex from '../../public/guides/index.html?raw';
-import scolairesHub from '../../public/guides/scolaires/index.html?raw';
 import fiche from '../../public/guides/scolaires/fiche-seance.html?raw';
 import homeSpa from '../../index.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
@@ -23,7 +21,7 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
     /* Docs headline moved to v1.64.0 in vague 1.65 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.63**');
     expect(nextSteps).toMatch(/no-go.*1\.64/);
-    expect(readme).toMatch(/v1\.(63|64)\.0/);
+    expect(readme).toMatch(/v1\.(63|64|65)\.0/);
   });
 
   it('droits ships real article.de (DE strings, not EN stub)', () => {
@@ -127,28 +125,14 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
     );
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de; fiche/home lack article.de', () => {
-    for (const html of [
-      composition,
-      triangle,
-      smartphone,
-      lumiere,
-      genres,
-      retouche,
-      materiel,
-      droits,
-      histoire,
-      guidesIndex,
-      scolairesHub,
-      fiche,
-      homeSpa,
-    ]) {
-      expect(html).not.toContain('hreflang="de"');
-    }
-    /* Hubs gained article.de in vague 1.65 — keep fiche/home negative lock. */
+  it('fiche/home still lack hreflang de + article.de; guides de unlocked 1.66', () => {
+    /* Hreflang de unlocked in 1.66 on article.de pages — keep fiche/home negative. */
+    expect(fiche).not.toContain('hreflang="de"');
+    expect(homeSpa).not.toContain('hreflang="de"');
     expect(fiche).not.toContain('<article class="de">');
     expect(homeSpa).not.toContain('<article class="de">');
-    expect(sitemap).not.toContain('?lang=de');
+    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
     expect(droits).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/droits-ethique-photo" />'
     );

@@ -19,9 +19,10 @@ import homeSpa from '../../index.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.65 — docs v1.64.0 + hub/scolaires article.de expand', () => {
-  it('docs headline cites v1.64.0; vague 1.64 listed; no-go through 1.65', () => {
-    expect(readme).toContain('v1.64.0');
-    expect(nextSteps).toContain('**v1.64.0**');
+  it('docs still mention vague 1.64; no-go through 1.65; headline may be v1.65.0', () => {
+    /* Docs headline moved to v1.65.0 in vague 1.66 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(64|65)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(64|65)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.64**');
     expect(nextSteps).toMatch(/no-go.*1\.65/);
   });
@@ -95,27 +96,14 @@ describe('vague 1.65 — docs v1.64.0 + hub/scolaires article.de expand', () => 
     expect(scolairesHub).toContain('applyJsonLdEs');
   });
 
-  it('still no hreflang="de"; no sitemap ?lang=de; fiche/home lack article.de', () => {
-    for (const html of [
-      composition,
-      triangle,
-      smartphone,
-      lumiere,
-      genres,
-      retouche,
-      materiel,
-      droits,
-      histoire,
-      guidesIndex,
-      scolairesHub,
-      fiche,
-      homeSpa,
-    ]) {
-      expect(html).not.toContain('hreflang="de"');
-    }
+  it('fiche/home still lack hreflang de + article.de; guides de unlocked 1.66', () => {
+    /* Hreflang de unlocked in 1.66 on article.de pages — keep fiche/home negative. */
+    expect(fiche).not.toContain('hreflang="de"');
+    expect(homeSpa).not.toContain('hreflang="de"');
     expect(fiche).not.toContain('<article class="de">');
     expect(homeSpa).not.toContain('<article class="de">');
-    expect(sitemap).not.toContain('?lang=de');
+    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
     expect(guidesIndex).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/" />'
     );

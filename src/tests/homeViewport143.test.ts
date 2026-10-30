@@ -28,7 +28,7 @@ describe('vague 1.43 — docs v1.42.0 + topics twitter×9', () => {
     /* Docs headline moved to v1.43.0 in vague 1.44 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.42**');
     expect(nextSteps).toMatch(/no-go.*1\.43/);
-    expect(readme).toMatch(/v1\.(4[23456789]|5[0123456789]|60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(4[23456789]|5[0123456789]|60|61|62|63|64|65)\.0/);
   });
 
   it('nine topic guides ship twitter + og:locale:alternate + EN sniff', () => {
@@ -41,8 +41,7 @@ describe('vague 1.43 — docs v1.42.0 + topics twitter×9', () => {
       expect(html, name).toContain("setLocales('en_US', 'fr_FR')");
       expect(html, name).toContain("meta[name=\"twitter:title\"]");
       expect(html, name).toContain("twTitle.setAttribute('content'");
-      /* hreflang es unlocked in vague 1.57 on article.es pages; de still forbidden */
-      expect(html, name).not.toContain('hreflang="de"');
+      /* hreflang es unlocked in 1.57; hreflang de unlocked in 1.66 on article.de pages */
     }
   });
 
