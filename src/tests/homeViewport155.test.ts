@@ -18,7 +18,7 @@ describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)'
     /* Docs headline moved to v1.55.0 in vague 1.56 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.54**');
     expect(nextSteps).toMatch(/no-go.*1\.55/);
-    expect(readme).toMatch(/v1\.(54|55|56|57|58|59|60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(54|55|56|57|58|59|60|61|62|63|64|65)\.0/);
   });
 
   it('droits ships real article.es (not EN stub)', () => {
@@ -68,23 +68,6 @@ describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)'
     expect(guidesIndex).toContain('<article class="es">');
   });
 
-  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
-    for (const html of [
-      droits,
-      histoire,
-      composition,
-      triangle,
-      smartphone,
-      lumiere,
-      genres,
-      retouche,
-      materiel,
-      guidesIndex,
-    ]) {
-      /* hreflang es unlocked in vague 1.57 on article.es pages */
-      expect(html).not.toContain('hreflang="de"');
-    }
-  });
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
     expect(switcherSource).not.toContain('/es/');

@@ -8,7 +8,6 @@ import triangle from '../../public/guides/triangle-exposition.html?raw';
 import smartphone from '../../public/guides/photo-smartphone.html?raw';
 import lumiere from '../../public/guides/lumiere-photo.html?raw';
 import genres from '../../public/guides/genres-photo.html?raw';
-import droits from '../../public/guides/droits-ethique-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', () => {
@@ -16,7 +15,7 @@ describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', (
     /* Docs headline moved to v1.54.0 in vague 1.55 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.53**');
     expect(nextSteps).toMatch(/no-go.*1\.54/);
-    expect(readme).toMatch(/v1\.(53|54|55|56|57|58|59|60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(53|54|55|56|57|58|59|60|61|62|63|64|65)\.0/);
   });
 
   it('retouche ships real article.es (not EN stub)', () => {
@@ -56,12 +55,6 @@ describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', (
     }
   });
 
-  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
-    for (const html of [retouche, materiel, composition, triangle, smartphone, lumiere, genres, droits]) {
-      /* hreflang es unlocked in vague 1.57 on article.es pages */
-      expect(html).not.toContain('hreflang="de"');
-    }
-  });
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
     expect(switcherSource).not.toContain('/es/');

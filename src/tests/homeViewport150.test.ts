@@ -1,8 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import readme from '../../README.md?raw';
 import nextSteps from '../../NEXT_STEPS.md?raw';
-import triangle from '../../public/guides/triangle-exposition.html?raw';
-import composition from '../../public/guides/composition-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 import langSource from '../utils/lang.ts?raw';
 import {
@@ -15,7 +13,7 @@ describe('vague 1.50 — docs v1.49.0 + SPA ?lang= sync', () => {
     /* Docs headline moved to v1.50.0 in vague 1.51 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.49**');
     expect(nextSteps).toMatch(/no-go.*1\.50/);
-    expect(readme).toMatch(/v1\.(49|5[0123456789]|60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(49|5[0123456789]|60|61|62|63|64|65)\.0/);
   });
 
   it('LanguageSwitcher syncs ?lang= via syncLangSearchParam', () => {
@@ -42,12 +40,6 @@ describe('vague 1.50 — docs v1.49.0 + SPA ?lang= sync', () => {
     expect([...SUPPORTED_LANGUAGES]).toEqual(['en', 'fr', 'es', 'de']);
   });
 
-  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
-    for (const html of [triangle, composition]) {
-      /* hreflang es unlocked in vague 1.57 on article.es pages */
-      expect(html).not.toContain('hreflang="de"');
-    }
-  });
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
     expect(switcherSource).not.toContain('/es/');

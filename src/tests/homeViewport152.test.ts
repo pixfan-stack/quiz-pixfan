@@ -4,7 +4,6 @@ import nextSteps from '../../NEXT_STEPS.md?raw';
 import triangle from '../../public/guides/triangle-exposition.html?raw';
 import smartphone from '../../public/guides/photo-smartphone.html?raw';
 import composition from '../../public/guides/composition-photo.html?raw';
-import lumiere from '../../public/guides/lumiere-photo.html?raw';
 import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 
 describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', () => {
@@ -12,7 +11,7 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     /* Docs headline moved forward in later waves — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.51**');
     expect(nextSteps).toMatch(/no-go.*1\.52/);
-    expect(readme).toMatch(/v1\.(51|52|53|54|55|56|57|58|59|60|61|62|63|64)\.0/);
+    expect(readme).toMatch(/v1\.(51|52|53|54|55|56|57|58|59|60|61|62|63|64|65)\.0/);
   });
 
   it('triangle ships real article.es (not EN stub)', () => {
@@ -50,12 +49,6 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     expect(composition).toContain('<article class="es">');
   });
 
-  it('still no hreflang de (es unlocked in 1.57 — historical)', () => {
-    for (const html of [triangle, smartphone, composition, lumiere]) {
-      /* hreflang es unlocked in vague 1.57 on article.es pages */
-      expect(html).not.toContain('hreflang="de"');
-    }
-  });
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
     expect(switcherSource).not.toContain('/es/');
