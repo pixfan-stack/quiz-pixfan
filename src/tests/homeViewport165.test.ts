@@ -21,8 +21,8 @@ import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 describe('vague 1.65 — docs v1.64.0 + hub/scolaires article.de expand', () => {
   it('docs still mention vague 1.64; no-go through 1.65; headline may be v1.65.0', () => {
     /* Docs headline moved to v1.65.0 in vague 1.66 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(64|65|66)\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.(64|65|66)\.0\*\*/);
+    expect(readme).toMatch(/v1\.(64|65|66|67)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(64|65|66|67)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.64**');
     expect(nextSteps).toMatch(/no-go.*1\.65/);
   });
@@ -98,12 +98,12 @@ describe('vague 1.65 — docs v1.64.0 + hub/scolaires article.de expand', () => 
 
   it('fiche still lacks hreflang de (home unlocked 1.67) + article.de; guides de unlocked 1.66', () => {
     /* Hreflang de unlocked in 1.66 on article.de pages — keep fiche negative. */
-    expect(fiche).not.toContain('hreflang="de"');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
     /* home hreflang de unlocked in vague 1.67 — keep fiche negative */
-    expect(fiche).not.toContain('<article class="de">');
+    expect(fiche).toContain('<article class="de">'); /* unlocked vague 1.68 */
     expect(homeSpa).not.toContain('<article class="de">');
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
     expect(guidesIndex).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/" />'
     );

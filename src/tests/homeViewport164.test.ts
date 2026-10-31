@@ -21,7 +21,7 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
     /* Docs headline moved to v1.64.0 in vague 1.65 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.63**');
     expect(nextSteps).toMatch(/no-go.*1\.64/);
-    expect(readme).toMatch(/v1\.(63|64|65|66)\.0/);
+    expect(readme).toMatch(/v1\.(63|64|65|66|67)\.0/);
   });
 
   it('droits ships real article.de (DE strings, not EN stub)', () => {
@@ -127,12 +127,12 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
 
   it('fiche still lacks hreflang de (home unlocked 1.67) + article.de; guides de unlocked 1.66', () => {
     /* Hreflang de unlocked in 1.66 on article.de pages — keep fiche negative. */
-    expect(fiche).not.toContain('hreflang="de"');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
     /* home hreflang de unlocked in vague 1.67 — keep fiche negative */
-    expect(fiche).not.toContain('<article class="de">');
+    expect(fiche).toContain('<article class="de">'); /* unlocked vague 1.68 */
     expect(homeSpa).not.toContain('<article class="de">');
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
     expect(droits).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/droits-ethique-photo" />'
     );

@@ -33,8 +33,8 @@ const articleDePages: Array<[string, string, string]> = [
 describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)', () => {
   it('docs still mention vague 1.65/1.66; no-go through 1.66; headline may be v1.66.0', () => {
     /* Docs headline moved to v1.66.0 in vague 1.67 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(65|66)\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.(65|66)\.0\*\*/);
+    expect(readme).toMatch(/v1\.(65|66|67)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(65|66|67)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.65**');
     expect(nextSteps).toContain('Vague **1.66**');
     expect(nextSteps).toMatch(/no-go.*1\.66/);
@@ -72,8 +72,8 @@ describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)
       expect(html).toContain('"inLanguage": ["fr", "en", "es", "de"]');
     }
     /* Home gained hreflang de in vague 1.67 — keep fiche negative. */
-    expect(fiche).not.toContain('hreflang="de"');
-    expect(fiche).not.toContain('<article class="de">');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
+    expect(fiche).toContain('<article class="de">'); /* unlocked vague 1.68 */
   });
 
   it('regress ES: 11 pages keep hreflang="es" + article.es; sniff DE intact', () => {
@@ -91,7 +91,7 @@ describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=de');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=es');
     /* Home ?lang=de unlocked in vague 1.67 — keep fiche negative. */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.66', () => {

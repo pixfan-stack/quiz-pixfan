@@ -32,9 +32,10 @@ const articleDePages: Array<[string, string, string]> = [
 ];
 
 describe('vague 1.67 — docs v1.66.0 + home SPA DE SEO unlock', () => {
-  it('docs headline cites v1.66.0; vague 1.66 listed; no-go through 1.67', () => {
-    expect(readme).toContain('v1.66.0');
-    expect(nextSteps).toContain('**v1.66.0**');
+  it('docs still mention vague 1.66/1.67; no-go through 1.67; headline may be v1.67.0', () => {
+    /* Docs headline moved to v1.67.0 in vague 1.68 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(66|67)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(66|67)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.66**');
     expect(nextSteps).toContain('Vague **1.67**');
     expect(nextSteps).toMatch(/no-go.*1\.67/);
@@ -69,11 +70,11 @@ describe('vague 1.67 — docs v1.66.0 + home SPA DE SEO unlock', () => {
     expect(indexHtml).toContain('"inLanguage": ["fr", "en", "es", "de"]');
   });
 
-  it('sitemap lists home ?lang=de (+ en/es intact); no fiche de', () => {
+  it('sitemap lists home ?lang=de (+ en/es intact); fiche de unlocked 1.68', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=de');
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=en');
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
   });
 
   it('regress: 11 guides keep hreflang="de" + ?lang=de twins; ES home intact', () => {
@@ -91,10 +92,9 @@ describe('vague 1.67 — docs v1.66.0 + home SPA DE SEO unlock', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
   });
 
-  it('fiche still lacks article.de / hreflang de / twin de; no path-locale; ops through 1.67', () => {
-    expect(fiche).not.toContain('<article class="de">');
-    expect(fiche).not.toContain('hreflang="de"');
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+  it('no path-locale; ops through 1.67; fiche DE unlocked in 1.68 (historical)', () => {
+    expect(fiche).toContain('<article class="de">'); /* unlocked vague 1.68 */
+    expect(fiche).toContain('hreflang="de"');
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);

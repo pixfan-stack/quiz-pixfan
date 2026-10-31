@@ -11,7 +11,7 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
     /* Docs headline moved to v1.58.0 in vague 1.59 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.57**');
     expect(nextSteps).toMatch(/no-go.*1\.58/);
-    expect(readme).toMatch(/v1\.(57|58|59|60|61|62|63|64|65|66)\.0/);
+    expect(readme).toMatch(/v1\.(57|58|59|60|61|62|63|64|65|66|67)\.0/);
   });
 
   it('home sniff sets Spanish share meta for ?lang=es (real ES, not EN stub)', () => {
@@ -46,12 +46,12 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=en');
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
     /* guides ?lang=de unlocked in 1.66; home in 1.67 — fiche still forbidden */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
   });
 
   it('no path-locale; ops no-gos through 1.58+; fiche es unlocked in 1.59 (historical)', () => {
     /* fiche gained article.es + hreflang es in vague 1.59 — keep no-de / path locks */
-    expect(fiche).not.toContain('hreflang="de"');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);

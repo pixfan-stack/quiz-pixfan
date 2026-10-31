@@ -104,11 +104,12 @@ describe('sitemap / SEO hygiene', () => {
       expect(esMod! >= LASTMOD_FLOOR, `${base}?lang=es`).toBe(true);
     }
 
-    // Vague 1.66: ?lang=de twins for DE-ready guides; vague 1.67 adds home (not fiche).
+    // Vague 1.66–1.68: ?lang=de twins for DE-ready guides + home + fiche.
     const deReady = [
       'https://quiz.pixfan.fr/',
       'https://quiz.pixfan.fr/guides/',
       'https://quiz.pixfan.fr/guides/scolaires/',
+      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html',
       'https://quiz.pixfan.fr/guides/composition-photo',
       'https://quiz.pixfan.fr/guides/triangle-exposition',
       'https://quiz.pixfan.fr/guides/photo-smartphone',
@@ -125,7 +126,6 @@ describe('sitemap / SEO hygiene', () => {
       expect(deMod, `${base}?lang=de`).toBeTruthy();
       expect(deMod! >= LASTMOD_FLOOR, `${base}?lang=de`).toBe(true);
     }
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
   });
 
   it('excludes sitemap and robots from bare SPA catch-all precedence', () => {
