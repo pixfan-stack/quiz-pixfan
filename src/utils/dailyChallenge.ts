@@ -25,7 +25,7 @@ export interface DailyTheme {
   title: { en: string; fr: string };
   description: { en: string; fr: string };
   /** Short chip label for the home card. */
-  chip: { en: string; fr: string };
+  chip: { en: string; fr: string; es: string; de: string };
 }
 
 /**
@@ -44,7 +44,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions with a Lightroom / retouching bias — Pixfan editing path.',
       fr: '10 questions partagées avec un biais Lightroom / retouche — parcours Pixfan.',
     },
-    chip: { en: 'Lightroom week', fr: 'Semaine Lightroom' },
+    chip: { en: 'Lightroom week', fr: 'Semaine Lightroom', es: 'Semana Lightroom', de: 'Lightroom-Woche' },
   },
   {
     id: 'smartphone',
@@ -57,7 +57,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions biased toward phone photography habits.',
       fr: '10 questions partagées orientées photo au téléphone.',
     },
-    chip: { en: 'Smartphone week', fr: 'Semaine smartphone' },
+    chip: { en: 'Smartphone week', fr: 'Semaine smartphone', es: 'Semana smartphone', de: 'Smartphone-Woche' },
   },
   {
     id: 'light',
@@ -70,7 +70,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions biased toward light, color, flash, and exposure.',
       fr: '10 questions partagées orientées lumière, couleur, flash et exposition.',
     },
-    chip: { en: 'Light week', fr: 'Semaine lumière' },
+    chip: { en: 'Light week', fr: 'Semaine lumière', es: 'Semana luz', de: 'Licht-Woche' },
   },
   {
     id: 'composition',
@@ -83,7 +83,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions biased toward framing and visual balance.',
       fr: '10 questions partagées orientées cadrage et équilibre visuel.',
     },
-    chip: { en: 'Composition week', fr: 'Semaine composition' },
+    chip: { en: 'Composition week', fr: 'Semaine composition', es: 'Semana composición', de: 'Kompositions-Woche' },
   },
   {
     id: 'gear',
@@ -96,7 +96,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions biased toward cameras, lenses, and accessories.',
       fr: '10 questions partagées orientées boîtiers, optiques et accessoires.',
     },
-    chip: { en: 'Gear week', fr: 'Semaine matériel' },
+    chip: { en: 'Gear week', fr: 'Semaine matériel', es: 'Semana material', de: 'Ausrüstungs-Woche' },
   },
   {
     id: 'genres',
@@ -109,7 +109,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions biased toward photo genres and portrait light.',
       fr: '10 questions partagées orientées genres photo et portrait & lumière.',
     },
-    chip: { en: 'Genres week', fr: 'Semaine genres' },
+    chip: { en: 'Genres week', fr: 'Semaine genres', es: 'Semana géneros', de: 'Genres-Woche' },
   },
   {
     id: 'rights',
@@ -122,7 +122,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions biased toward photo rights and ethics.',
       fr: '10 questions partagées orientées droits et éthique photo.',
     },
-    chip: { en: 'Rights week', fr: 'Semaine droits' },
+    chip: { en: 'Rights week', fr: 'Semaine droits', es: 'Semana derechos', de: 'Rechte-Woche' },
   },
   {
     id: 'history',
@@ -135,7 +135,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions biased toward photo history and public-domain icons.',
       fr: '10 questions partagées orientées histoire photo et icônes domaine public.',
     },
-    chip: { en: 'History week', fr: 'Semaine histoire' },
+    chip: { en: 'History week', fr: 'Semaine histoire', es: 'Semana historia', de: 'Geschichte-Woche' },
   },
   {
     id: 'mixed',
@@ -148,7 +148,7 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
       en: '10 shared questions today, often with a photo to analyze.',
       fr: '10 questions partagées aujourd’hui, souvent avec une photo à analyser.',
     },
-    chip: { en: 'Mixed week', fr: 'Semaine mixte' },
+    chip: { en: 'Mixed week', fr: 'Semaine mixte', es: 'Semana mixta', de: 'Mix-Woche' },
   },
 ] as const;
 

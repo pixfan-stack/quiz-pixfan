@@ -3,63 +3,205 @@
 export const QUIZ_ID_RE =
   /^(?:[a-z0-9][a-z0-9-]{0,62}|daily-\d{4}-\d{2}-\d{2}|duel-[a-z0-9]{6,16}|random(?:-mix)?|weak-spots|photo-reading|mix-(?:easy|medium|hard))$/;
 
-const LABELS: Record<string, { en: string; fr: string }> = {
-  'exposure-basics': { en: 'Exposure basics', fr: 'Bases de l’exposition' },
-  composition: { en: 'Composition', fr: 'Composition' },
-  'light-color': { en: 'Light & color', fr: 'Lumière & couleur' },
-  'gear-lenses': { en: 'Gear & lenses', fr: 'Matériel & objectifs' },
-  'history-icons': { en: 'History & icons', fr: 'Histoire & icônes' },
+const LABELS: Record<string, { en: string; fr: string; es: string; de: string }> = {
+  'exposure-basics': {
+    en: 'Exposure basics',
+    fr: 'Bases de l’exposition',
+    es: 'Bases de exposición',
+    de: 'Belichtungsgrundlagen',
+  },
+  composition: {
+    en: 'Composition',
+    fr: 'Composition',
+    es: 'Composición',
+    de: 'Komposition',
+  },
+  'light-color': {
+    en: 'Light & color',
+    fr: 'Lumière & couleur',
+    es: 'Luz y color',
+    de: 'Licht & Farbe',
+  },
+  'gear-lenses': {
+    en: 'Gear & lenses',
+    fr: 'Matériel & objectifs',
+    es: 'Material y objetivos',
+    de: 'Ausrüstung & Objektive',
+  },
+  'history-icons': {
+    en: 'History & icons',
+    fr: 'Histoire & icônes',
+    es: 'Historia e iconos',
+    de: 'Geschichte & Ikonen',
+  },
   'public-domain': {
     en: 'Public domain gallery',
     fr: 'Galerie domaine public',
+    es: 'Galería de dominio público',
+    de: 'Gemeinfreie Galerie',
   },
-  genres: { en: 'Photo genres', fr: 'Genres photo' },
-  smartphone: { en: 'Smartphone', fr: 'Smartphone' },
-  'photo-rights': { en: 'Photo rights', fr: 'Droits photo' },
-  retouching: { en: 'Retouching', fr: 'Retouche' },
+  genres: {
+    en: 'Photo genres',
+    fr: 'Genres photo',
+    es: 'Géneros fotográficos',
+    de: 'Fotogenres',
+  },
+  smartphone: {
+    en: 'Smartphone',
+    fr: 'Smartphone',
+    es: 'Smartphone',
+    de: 'Smartphone',
+  },
+  'photo-rights': {
+    en: 'Photo rights',
+    fr: 'Droits photo',
+    es: 'Derechos foto',
+    de: 'Fotorechte',
+  },
+  retouching: {
+    en: 'Retouching',
+    fr: 'Retouche',
+    es: 'Retoque',
+    de: 'Retusche',
+  },
   'lightroom-workflow': {
     en: 'Lightroom workflow',
     fr: 'Workflow Lightroom',
+    es: 'Workflow Lightroom',
+    de: 'Lightroom-Workflow',
   },
   'portrait-light': {
     en: 'Portrait & light',
     fr: 'Portrait & lumière',
+    es: 'Retrato y luz',
+    de: 'Porträt & Licht',
   },
   'marques-photo': {
     en: 'Brand history',
     fr: 'Histoire des marques',
+    es: 'Historia de marcas',
+    de: 'Markengeschichte',
   },
   'flash-studio': {
     en: 'Flash & studio',
     fr: 'Flash & studio',
+    es: 'Flash y estudio',
+    de: 'Blitz & Studio',
   },
   'lexique-image-fixe': {
     en: 'Still-image lexicon',
     fr: 'Lexique image fixe',
+    es: 'Léxico de imagen fija',
+    de: 'Standbild-Lexikon',
   },
-  random: { en: 'Random mix', fr: 'Mix aléatoire' },
-  'random-mix': { en: 'Random mix', fr: 'Mix aléatoire' },
-  'weak-spots': { en: 'Weak spots', fr: 'Points faibles' },
-  'photo-reading': { en: 'Photos to analyze', fr: 'Photos à analyser' },
-  'mix-easy': { en: 'Easy mix', fr: 'Mix facile' },
-  'mix-medium': { en: 'Medium mix', fr: 'Mix intermédiaire' },
-  'mix-hard': { en: 'Hard mix', fr: 'Mix difficile' },
+  random: {
+    en: 'Random mix',
+    fr: 'Mix aléatoire',
+    es: 'Mix aleatorio',
+    de: 'Zufallsmix',
+  },
+  'random-mix': {
+    en: 'Random mix',
+    fr: 'Mix aléatoire',
+    es: 'Mix aleatorio',
+    de: 'Zufallsmix',
+  },
+  'weak-spots': {
+    en: 'Weak spots',
+    fr: 'Points faibles',
+    es: 'Puntos débiles',
+    de: 'Schwachstellen',
+  },
+  'photo-reading': {
+    en: 'Photos to analyze',
+    fr: 'Photos à analyser',
+    es: 'Fotos para analizar',
+    de: 'Fotos zum Analysieren',
+  },
+  'mix-easy': {
+    en: 'Easy mix',
+    fr: 'Mix facile',
+    es: 'Mix fácil',
+    de: 'Einfacher Mix',
+  },
+  'mix-medium': {
+    en: 'Medium mix',
+    fr: 'Mix intermédiaire',
+    es: 'Mix intermedio',
+    de: 'Mittlerer Mix',
+  },
+  'mix-hard': {
+    en: 'Hard mix',
+    fr: 'Mix difficile',
+    es: 'Mix difícil',
+    de: 'Schwerer Mix',
+  },
 };
 
 /**
  * Editorial week chips — order must match `DAILY_THEME_ROTATION`
  * in `src/utils/dailyChallenge.ts` (ISO week % length).
  */
-export const DAILY_THEME_CHIPS: readonly { en: string; fr: string }[] = [
-  { en: 'Lightroom week', fr: 'Semaine Lightroom' },
-  { en: 'Smartphone week', fr: 'Semaine smartphone' },
-  { en: 'Light week', fr: 'Semaine lumière' },
-  { en: 'Composition week', fr: 'Semaine composition' },
-  { en: 'Gear week', fr: 'Semaine matériel' },
-  { en: 'Genres week', fr: 'Semaine genres' },
-  { en: 'Rights week', fr: 'Semaine droits' },
-  { en: 'History week', fr: 'Semaine histoire' },
-  { en: 'Mixed week', fr: 'Semaine mixte' },
+export const DAILY_THEME_CHIPS: readonly {
+  en: string;
+  fr: string;
+  es: string;
+  de: string;
+}[] = [
+  {
+    en: 'Lightroom week',
+    fr: 'Semaine Lightroom',
+    es: 'Semana Lightroom',
+    de: 'Lightroom-Woche',
+  },
+  {
+    en: 'Smartphone week',
+    fr: 'Semaine smartphone',
+    es: 'Semana smartphone',
+    de: 'Smartphone-Woche',
+  },
+  {
+    en: 'Light week',
+    fr: 'Semaine lumière',
+    es: 'Semana luz',
+    de: 'Licht-Woche',
+  },
+  {
+    en: 'Composition week',
+    fr: 'Semaine composition',
+    es: 'Semana composición',
+    de: 'Kompositions-Woche',
+  },
+  {
+    en: 'Gear week',
+    fr: 'Semaine matériel',
+    es: 'Semana material',
+    de: 'Ausrüstungs-Woche',
+  },
+  {
+    en: 'Genres week',
+    fr: 'Semaine genres',
+    es: 'Semana géneros',
+    de: 'Genres-Woche',
+  },
+  {
+    en: 'Rights week',
+    fr: 'Semaine droits',
+    es: 'Semana derechos',
+    de: 'Rechte-Woche',
+  },
+  {
+    en: 'History week',
+    fr: 'Semaine histoire',
+    es: 'Semana historia',
+    de: 'Geschichte-Woche',
+  },
+  {
+    en: 'Mixed week',
+    fr: 'Semaine mixte',
+    es: 'Semana mixta',
+    de: 'Mix-Woche',
+  },
 ];
 
 /** ISO week number (UTC), 1–53 — mirrored from dailyChallenge for CF functions. */
@@ -75,13 +217,15 @@ export function getUtcIsoWeek(date: Date): number {
 /** UI langs accepted on share / OG URLs (vague 1.40). */
 export type ShareLang = 'en' | 'fr' | 'es' | 'de';
 
-/** Locales with dedicated label strings today. */
-export type ContentLang = 'en' | 'fr';
+/** Locales with dedicated share/OG label strings (vague 1.69). */
+export type ContentLang = 'en' | 'fr' | 'es' | 'de';
 
 export function toContentLang(lang: ShareLang | string): ContentLang {
-  return lang === 'fr' || String(lang).toLowerCase().startsWith('fr')
-    ? 'fr'
-    : 'en';
+  const s = String(lang).toLowerCase();
+  if (s === 'fr' || s.startsWith('fr')) return 'fr';
+  if (s === 'es' || s.startsWith('es')) return 'es';
+  if (s === 'de' || s.startsWith('de')) return 'de';
+  return 'en';
 }
 
 export function dailyThemeChipForDate(
@@ -133,20 +277,32 @@ export function parseLang(raw: string | null): ShareLang {
   return 'en';
 }
 
+const DAILY_PREFIX: Record<ContentLang, string> = {
+  fr: 'Défi du jour',
+  en: 'Daily challenge',
+  es: 'Reto del día',
+  de: 'Tageschallenge',
+};
+
+const DUEL_LABEL: Record<ContentLang, string> = {
+  fr: 'Duel entre amis',
+  en: 'Friend duel',
+  es: 'Duelo entre amigos',
+  de: 'Freundschaftsduell',
+};
+
 export function quizLabel(quizId: string, lang: ShareLang | ContentLang): string {
   const content = toContentLang(lang);
   if (quizId.startsWith('daily-')) {
     const date = parseDailyQuizDate(quizId);
     if (date) {
       const chip = dailyThemeChipForDate(date, content);
-      return content === 'fr'
-        ? `Défi du jour · ${chip}`
-        : `Daily challenge · ${chip}`;
+      return `${DAILY_PREFIX[content]} · ${chip}`;
     }
-    return content === 'fr' ? 'Défi du jour' : 'Daily challenge';
+    return DAILY_PREFIX[content];
   }
   if (quizId.startsWith('duel-')) {
-    return content === 'fr' ? 'Duel entre amis' : 'Friend duel';
+    return DUEL_LABEL[content];
   }
   return LABELS[quizId]?.[content] ?? quizId;
 }
@@ -228,14 +384,19 @@ export function buildOgSvg(opts: {
   const content = toContentLang(opts.lang);
   const title = escapeXml(quizLabel(opts.quizId, content));
   const brand = 'Quiz PixFan';
-  const hook =
-    score != null
-      ? content === 'fr'
-        ? 'Bats mon score →'
-        : 'Beat my score →'
-      : content === 'fr'
-        ? 'Teste tes connaissances photo'
-        : 'Test your photography knowledge';
+  const beatScore: Record<ContentLang, string> = {
+    fr: 'Bats mon score →',
+    en: 'Beat my score →',
+    es: 'Supera mi puntuación →',
+    de: 'Schlage meinen Score →',
+  };
+  const tryKnowledge: Record<ContentLang, string> = {
+    fr: 'Teste tes connaissances photo',
+    en: 'Test your photography knowledge',
+    es: 'Pon a prueba tus conocimientos de foto',
+    de: 'Teste dein Fotografie-Wissen',
+  };
+  const hook = score != null ? beatScore[content] : tryKnowledge[content];
   const font = 'font-family="system-ui,-apple-system,sans-serif"';
   const scoreBlock =
     score != null
@@ -289,37 +450,53 @@ export function buildShareHtml(opts: {
 }): string {
   const content = toContentLang(opts.lang);
   const label = quizLabel(opts.quizId, content);
+  const scoredTitle: Record<ContentLang, string> = {
+    fr: `${opts.score} % — ${label} · Quiz PixFan`,
+    en: `${opts.score}% — ${label} · Quiz PixFan`,
+    es: `${opts.score}% — ${label} · Quiz PixFan`,
+    de: `${opts.score}% — ${label} · Quiz PixFan`,
+  };
   const title =
-    opts.score != null
-      ? content === 'fr'
-        ? `${opts.score} % — ${label} · Quiz PixFan`
-        : `${opts.score}% — ${label} · Quiz PixFan`
-      : `${label} · Quiz PixFan`;
+    opts.score != null ? scoredTitle[content] : `${label} · Quiz PixFan`;
+  const scoredDesc: Record<ContentLang, string> = {
+    fr: `J’ai fait ${opts.score} % sur « ${label} ». Tu peux faire mieux ?`,
+    en: `I scored ${opts.score}% on “${label}”. Can you beat me?`,
+    es: `Saqué un ${opts.score}% en « ${label} ». ¿Puedes superarme?`,
+    de: `Ich habe ${opts.score}% bei „${label}“ geschafft. Kannst du das toppen?`,
+  };
+  const plainDesc: Record<ContentLang, string> = {
+    fr: `Rejoins le quiz « ${label} » sur Quiz PixFan.`,
+    en: `Join the “${label}” quiz on Quiz PixFan.`,
+    es: `Únete al quiz « ${label} » en Quiz PixFan.`,
+    de: `Mach beim Quiz „${label}“ auf Quiz PixFan mit.`,
+  };
   const description =
-    opts.score != null
-      ? content === 'fr'
-        ? `J’ai fait ${opts.score} % sur « ${label} ». Tu peux faire mieux ?`
-        : `I scored ${opts.score}% on “${label}”. Can you beat me?`
-      : content === 'fr'
-        ? `Rejoins le quiz « ${label} » sur Quiz PixFan.`
-        : `Join the “${label}” quiz on Quiz PixFan.`;
+    opts.score != null ? scoredDesc[content] : plainDesc[content];
 
   const deepLink = `${opts.appOrigin}/#/quiz/${encodeURIComponent(opts.quizId)}${deepLinkQuery(opts.score, opts.classe)}`;
   const safeTitle = escapeXml(title);
   const safeDesc = escapeXml(description);
   const isDuel = opts.quizId.startsWith('duel-');
-  const cta =
-    content === 'fr'
-      ? isDuel
-        ? 'Relever le duel'
-        : 'Ouvrir le quiz'
-      : isDuel
-        ? 'Accept the duel'
-        : 'Open the quiz';
-  const mobileHint =
-    content === 'fr'
-      ? 'Si le quiz ne s’ouvre pas, touchez le bouton ci-dessous.'
-      : 'If the quiz does not open, tap the button below.';
+  const ctaOpen: Record<ContentLang, string> = {
+    fr: 'Ouvrir le quiz',
+    en: 'Open the quiz',
+    es: 'Abrir el quiz',
+    de: 'Quiz öffnen',
+  };
+  const ctaDuel: Record<ContentLang, string> = {
+    fr: 'Relever le duel',
+    en: 'Accept the duel',
+    es: 'Aceptar el duelo',
+    de: 'Duell annehmen',
+  };
+  const cta = isDuel ? ctaDuel[content] : ctaOpen[content];
+  const mobileHintByLang: Record<ContentLang, string> = {
+    fr: 'Si le quiz ne s’ouvre pas, touchez le bouton ci-dessous.',
+    en: 'If the quiz does not open, tap the button below.',
+    es: 'Si el quiz no se abre, toca el botón de abajo.',
+    de: 'Wenn sich das Quiz nicht öffnet, tippe auf den Button unten.',
+  };
+  const mobileHint = mobileHintByLang[content];
 
   return `<!doctype html>
 <html lang="${opts.lang}">

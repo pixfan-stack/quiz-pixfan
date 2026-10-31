@@ -11,6 +11,7 @@ import {
   parseScore,
   quizLabel,
   themeOgImageUrl,
+  toContentLang,
 } from '../../functions/lib/sharePreview';
 import {
   DAILY_THEME_ROTATION,
@@ -34,6 +35,12 @@ describe('sharePreview', () => {
     expect(parseScore('x')).toBeNull();
     expect(parseLang('fr-FR')).toBe('fr');
     expect(parseLang('en')).toBe('en');
+    expect(parseLang('es')).toBe('es');
+    expect(parseLang('de-DE')).toBe('de');
+    expect(toContentLang('es')).toBe('es');
+    expect(toContentLang('de')).toBe('de');
+    expect(toContentLang('fr')).toBe('fr');
+    expect(toContentLang('en')).toBe('en');
   });
 
   it('keeps daily theme chips in sync with editorial rotation', () => {
@@ -41,11 +48,15 @@ describe('sharePreview', () => {
     for (let i = 0; i < DAILY_THEME_ROTATION.length; i++) {
       expect(DAILY_THEME_CHIPS[i]!.fr).toBe(DAILY_THEME_ROTATION[i]!.chip.fr);
       expect(DAILY_THEME_CHIPS[i]!.en).toBe(DAILY_THEME_ROTATION[i]!.chip.en);
+      expect(DAILY_THEME_CHIPS[i]!.es).toBe(DAILY_THEME_ROTATION[i]!.chip.es);
+      expect(DAILY_THEME_CHIPS[i]!.de).toBe(DAILY_THEME_ROTATION[i]!.chip.de);
     }
   });
 
   it('labels known quizzes', () => {
     expect(quizLabel('composition', 'fr')).toContain('Composition');
+    expect(quizLabel('composition', 'es')).toBe('Composición');
+    expect(quizLabel('composition', 'de')).toBe('Komposition');
     expect(quizLabel('lightroom-workflow', 'fr')).toBe('Workflow Lightroom');
     expect(quizLabel('lightroom-workflow', 'en')).toBe('Lightroom workflow');
     expect(normalizeQuizId('lightroom-workflow')).toBe('lightroom-workflow');
@@ -62,6 +73,8 @@ describe('sharePreview', () => {
     expect(quizLabel('lexique-image-fixe', 'en')).toBe('Still-image lexicon');
     expect(normalizeQuizId('lexique-image-fixe')).toBe('lexique-image-fixe');
     expect(quizLabel('duel-abcd2345', 'en')).toBe('Friend duel');
+    expect(quizLabel('duel-abcd2345', 'es')).toBe('Duelo entre amigos');
+    expect(quizLabel('duel-abcd2345', 'de')).toBe('Freundschaftsduell');
   });
 
   it('includes editorial week chip in daily OG labels', () => {
@@ -73,7 +86,15 @@ describe('sharePreview', () => {
     expect(quizLabel('daily-2026-09-21', 'en')).toBe(
       `Daily challenge · ${theme.chip.en}`
     );
+    expect(quizLabel('daily-2026-09-21', 'es')).toBe(
+      `Reto del día · ${theme.chip.es}`
+    );
+    expect(quizLabel('daily-2026-09-21', 'de')).toBe(
+      `Tageschallenge · ${theme.chip.de}`
+    );
     expect(dailyThemeChipForDate(date, 'fr')).toBe(theme.chip.fr);
+    expect(dailyThemeChipForDate(date, 'es')).toBe(theme.chip.es);
+    expect(dailyThemeChipForDate(date, 'de')).toBe(theme.chip.de);
   });
 
   it('maps quiz ids to OG theme slugs and score tiers (P4.D)', () => {

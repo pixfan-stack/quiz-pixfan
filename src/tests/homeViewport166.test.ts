@@ -33,8 +33,8 @@ const articleDePages: Array<[string, string, string]> = [
 describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)', () => {
   it('docs still mention vague 1.65/1.66; no-go through 1.66; headline may be v1.66.0', () => {
     /* Docs headline moved to v1.66.0 in vague 1.67 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(65|66|67)\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.(65|66|67)\.0\*\*/);
+    expect(readme).toMatch(/v1\.(65|66|67|68)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(65|66|67|68)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.65**');
     expect(nextSteps).toContain('Vague **1.66**');
     expect(nextSteps).toMatch(/no-go.*1\.66/);

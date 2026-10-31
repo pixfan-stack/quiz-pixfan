@@ -11,7 +11,7 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
     /* Docs headline moved to v1.59.0 in vague 1.60 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.58**');
     expect(nextSteps).toMatch(/no-go.*1\.59/);
-    expect(readme).toMatch(/v1\.(58|59|60|61|62|63|64|65|66|67)\.0/);
+    expect(readme).toMatch(/v1\.(58|59|60|61|62|63|64|65|66|67|68)\.0/);
   });
 
   it('fiche ships real article.es (ES strings, not EN stub)', () => {

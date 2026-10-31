@@ -2,7 +2,7 @@
 
 Quiz photo multilingue (FR / EN / ES / DE) — **React + TypeScript + Vite**, déployé sur **Cloudflare Pages** (frontend + Pages Functions + D1 + PWA).
 
-**Version courante : v1.67.0**
+**Version courante : v1.68.0**
 
 ## Contenu actuel
 
