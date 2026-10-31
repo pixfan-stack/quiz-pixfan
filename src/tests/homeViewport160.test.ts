@@ -11,7 +11,7 @@ describe('vague 1.60 — docs v1.59.0 + composition article.de pilot', () => {
     /* Docs headline moved to v1.60.0 in vague 1.61 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.59**');
     expect(nextSteps).toMatch(/no-go.*1\.60/);
-    expect(readme).toMatch(/v1\.(59|60|61|62|63|64|65|66)\.0/);
+    expect(readme).toMatch(/v1\.(59|60|61|62|63|64|65|66|67)\.0/);
   });
 
   it('composition ships real article.de (DE strings, not EN stub)', () => {
@@ -58,7 +58,7 @@ describe('vague 1.60 — docs v1.59.0 + composition article.de pilot', () => {
   it('canonical bare; hreflang de unlocked 1.66 (historical soften)', () => {
     /* Historical 1.60 lock: composition pilot only. Hreflang de unlocked in 1.66. */
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
     expect(composition).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/composition-photo" />'
     );

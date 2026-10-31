@@ -11,7 +11,7 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
     /* Docs headline moved to v1.59.0 in vague 1.60 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.58**');
     expect(nextSteps).toMatch(/no-go.*1\.59/);
-    expect(readme).toMatch(/v1\.(58|59|60|61|62|63|64|65|66)\.0/);
+    expect(readme).toMatch(/v1\.(58|59|60|61|62|63|64|65|66|67)\.0/);
   });
 
   it('fiche ships real article.es (ES strings, not EN stub)', () => {
@@ -26,14 +26,15 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
     );
   });
 
-  it('fiche sniff sets Spanish share meta for ?lang=es; en|de stay EN', () => {
+  it('fiche sniff sets Spanish share meta for ?lang=es; en separate (de unlocked 1.68)', () => {
     expect(fiche).toContain("p === 'es'");
     expect(fiche).toContain("setLocales('es_ES', 'fr_FR')");
     expect(fiche).toContain('Ficha de sesión Escolares | Quiz PixFan');
     expect(fiche).toContain(
       'Ficha de sesión imprimible Quiz PixFan — recorridos escolares ciclo 3–4'
     );
-    expect(fiche).toMatch(/p === 'en' \|\| p === 'de'/);
+    /* de own branch landed in vague 1.68 — historical en||de interim dropped. */
+    expect(fiche).toContain("} else if (p === 'en') {");
     expect(fiche).toContain('Lesson sheet — Schools | Quiz PixFan');
   });
 
@@ -47,13 +48,13 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
     expect(fiche).toContain(
       '<meta property="og:locale:alternate" content="es_ES" />'
     );
-    expect(fiche).not.toContain('hreflang="de"');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
     expect(fiche).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html" />'
     );
   });
 
-  it('sitemap lists fiche ?lang=es (+ en); home regress; no home/fiche de', () => {
+  it('sitemap lists fiche ?lang=es (+ en); home regress; fiche de unlocked 1.68', () => {
     expect(sitemap).toContain(
       'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es'
     );
@@ -64,9 +65,7 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
     expect(indexHtml).toContain(
       '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />'
     );
-    /* guides ?lang=de unlocked in 1.66 — home/fiche still forbidden */
-    /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.59+', () => {

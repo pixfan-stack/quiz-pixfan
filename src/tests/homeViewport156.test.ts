@@ -14,7 +14,7 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.55**');
     expect(nextSteps).toMatch(/no-go.*1\.56/);
-    expect(readme).toMatch(/v1\.(55|56|57|58|59|60|61|62|63|64|65|66)\.0/);
+    expect(readme).toMatch(/v1\.(55|56|57|58|59|60|61|62|63|64|65|66|67)\.0/);
   });
 
   it('guides hub ships real article.es (not EN stub)', () => {
@@ -55,12 +55,12 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     expect(droits).toContain('<article class="es">');
     expect(histoire).toContain('<article class="es">');
     /* fiche gained article.es in vague 1.59 — keep no-de lock */
-    expect(fiche).not.toContain('hreflang="de"');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
   });
 
   it('still no hreflang de on fiche/home (de unlocked 1.66 — historical)', () => {
     /* hreflang de unlocked in vague 1.66 on article.de pages — keep fiche/home negative */
-    expect(fiche).not.toContain('hreflang="de"');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
   });
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {

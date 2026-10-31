@@ -17,7 +17,7 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
     /* Docs headline moved to v1.63.0 in vague 1.64 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.62**');
     expect(nextSteps).toMatch(/no-go.*1\.63/);
-    expect(readme).toMatch(/v1\.(62|63|64|65|66)\.0/);
+    expect(readme).toMatch(/v1\.(62|63|64|65|66|67)\.0/);
   });
 
   it('retouche ships real article.de (DE strings, not EN stub)', () => {
@@ -103,7 +103,7 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
   it('canonical bare; hreflang de unlocked 1.66 (historical soften)', () => {
     /* Historical 1.63 lock: retouche/matériel expand. Hreflang de unlocked in 1.66. */
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
     expect(retouche).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/retouche-lightroom" />'
     );

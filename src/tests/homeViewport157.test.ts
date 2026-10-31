@@ -35,7 +35,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.56**');
     expect(nextSteps).toMatch(/no-go.*1\.57/);
-    expect(readme).toMatch(/v1\.(56|57|58|59|60|61|62|63|64|65|66)\.0/);
+    expect(readme).toMatch(/v1\.(56|57|58|59|60|61|62|63|64|65|66|67)\.0/);
   });
 
   it('11 article.es pages expose hreflang="es" + og:locale:alternate es_ES', () => {
@@ -70,7 +70,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
       expect(html).toContain('"inLanguage": ["fr", "en", "es", "de"]');
     }
     /* fiche gained article.es + hreflang es in vague 1.59; home in 1.58; home de in 1.67 — keep fiche no-de */
-    expect(fiche).not.toContain('hreflang="de"');
+    expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
   });
 
   it('sitemap lists ?lang=en and ?lang=es twins for hubs + topics; de unlocked 1.66', () => {
@@ -79,7 +79,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=en');
     /* ?lang=de twins unlocked in vague 1.66 for guides; home in 1.67 — fiche still absent */
-    expect(sitemap).not.toContain('fiche-seance.html?lang=de');
+    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
   });
 
   it('still no path-locale /es/|/de/; ops no-gos unchanged', () => {
