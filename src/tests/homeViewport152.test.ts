@@ -11,7 +11,7 @@ describe('vague 1.52 — docs v1.51.0 + triangle/smartphone article.es expand', 
     /* Docs headline moved forward in later waves — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.51**');
     expect(nextSteps).toMatch(/no-go.*1\.52/);
-    expect(readme).toMatch(/v1\.(51|52|53|54|55|56|57|58|59|60|61|62|63|64|65)\.0/);
+    expect(readme).toMatch(/v1\.(51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66)\.0/);
   });
 
   it('triangle ships real article.es (not EN stub)', () => {
