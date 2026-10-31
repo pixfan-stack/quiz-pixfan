@@ -42,7 +42,7 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     /* Docs headline moved to v1.40.0 in vague 1.41 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.39**');
     expect(nextSteps).toMatch(/no-go.*1\.40/);
-    expect(readme).toMatch(/v1\.(4[0123456789]|5[0123456789]|60|61|62|63|64|65|66|67)\.0/);
+    expect(readme).toMatch(/v1\.(4[0123456789]|5[0123456789]|60|61|62|63|64|65|66|67|68)\.0/);
   });
 
   it('SUPPORTED_LANGUAGES includes es and de; i18n imports stubs', () => {
@@ -66,8 +66,9 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     expect(parseLang('es-ES')).toBe('es');
     expect(parseLang('de-DE')).toBe('de');
     expect(parseLang('fr-FR')).toBe('fr');
-    expect(toContentLang('es')).toBe('en');
-    expect(toContentLang('de')).toBe('en');
+    /* sharePreview ContentLang expanded es/de in vague 1.69 (no longer collapse). */
+    expect(toContentLang('es')).toBe('es');
+    expect(toContentLang('de')).toBe('de');
     expect(toContentLang('fr')).toBe('fr');
     expect(resolveUiLang('de-AT')).toBe('de');
     expect(guideLangQuery('es')).toBe('?lang=es');

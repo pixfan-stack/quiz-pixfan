@@ -142,6 +142,8 @@ describe('dailyChallenge', () => {
     expect(theme.id).toBe(expected.id);
     expect(theme.chip.en).toBeTruthy();
     expect(theme.chip.fr).toBeTruthy();
+    expect(theme.chip.es).toBeTruthy();
+    expect(theme.chip.de).toBeTruthy();
   });
 
   it('biases daily picks toward the week theme packs', () => {

@@ -15,7 +15,7 @@ describe('vague 1.54 — docs v1.53.0 + retouche/matériel article.es expand', (
     /* Docs headline moved to v1.54.0 in vague 1.55 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.53**');
     expect(nextSteps).toMatch(/no-go.*1\.54/);
-    expect(readme).toMatch(/v1\.(53|54|55|56|57|58|59|60|61|62|63|64|65|66|67)\.0/);
+    expect(readme).toMatch(/v1\.(53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68)\.0/);
   });
 
   it('retouche ships real article.es (not EN stub)', () => {
