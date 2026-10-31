@@ -10,9 +10,10 @@ import questions from '../../public/data/questions.json';
 import { quizLabel, toContentLang } from '../../functions/lib/sharePreview';
 
 describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS', () => {
-  it('docs headline cites v1.68.0; vague 1.68/1.69 listed; no-go through 1.69', () => {
-    expect(readme).toContain('v1.68.0');
-    expect(nextSteps).toContain('**v1.68.0**');
+  it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.69.0', () => {
+    /* Docs headline moved to v1.69.0 in vague 1.70 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(68|69)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(68|69)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.68**');
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toMatch(/no-go.*1\.69/);
@@ -72,7 +73,7 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
     );
   });
 
-  it('still no path-locale /es/|/de/; no new pack .es wave; ops no-gos through 1.69', () => {
+  it('still no path-locale /es/|/de/; portrait-light .es unlocked in 1.70; ops no-gos through 1.69', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
@@ -81,6 +82,7 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
       .filter((q) => q.title.es == null || q.title.es === '')
       .map((q) => q.id)
       .sort();
+    /* portrait-light gained .es in vague 1.70 — drop from historical without-es lock. */
     expect(packsWithoutEs).toEqual(
       [
         'composition',
@@ -89,7 +91,6 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
         'genres',
         'lightroom-workflow',
         'marques-photo',
-        'portrait-light',
         'public-domain',
         'smartphone',
       ].sort()

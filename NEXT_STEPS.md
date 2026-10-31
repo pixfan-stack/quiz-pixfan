@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.68.0**).
+Document à jour avec l’état réel du dépôt (**v1.69.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.70** : `portrait-light` LocalizedString.es ×194 · docs v1.69.0 · armor 170 — **pas** path `/es/` `/de/` · **pas** `public-domain` `.es` · **pas** catalogue `.de`
 - Vague **1.69** : FAQ JSON-LD ES+DE (6 topics) · sharePreview LABELS/chips es+de · docs v1.68.0 · armor 169 — **pas** path `/es/` `/de/` · **pas** pack catalogue `.es`/`.de`
 - Vague **1.68** : fiche séance `article.de` · sniff meta DE · `hreflang="de"` · og `de_DE` · sitemap twin fiche · docs v1.67.0 (bump **v1.68.0**) — **pas** path `/de/`
 - Vague **1.67** : home SPA sniff meta DE · `hreflang="de"` · og `de_DE` · JSON-LD `inLanguage` +de · sitemap `/?lang=de` · docs v1.66.0 (bump **v1.67.0**) — **pas** fiche DE · **pas** path `/de/`
@@ -72,9 +73,9 @@ Document à jour avec l’état réel du dépôt (**v1.68.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.68.0** + 15 quiz · 386 Q · 268 illus (vague 1.68 release + 1.69 P0)
+- [x] Docs headline → **v1.69.0** + 15 quiz · 386 Q · 268 illus (vague 1.69 release + 1.70 P0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70
 
 ### Ops Antony — checklist P0.4 (hors code)
 
@@ -119,5 +120,6 @@ Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Pu
 - [x] Home SPA sniff meta DE · `hreflang="de"` · og `de_DE` · JSON-LD `inLanguage` +de · sitemap `/?lang=de` (vague **1.67**) — **pas** fiche DE · **pas** path `/de/`
 - [x] Fiche séance `article.de` (+ sniff + hreflang/sitemap page-scoped) (vague **1.68**) — **pas** path `/de/`
 - [x] FAQ JSON-LD ES+DE (6 topics) · sharePreview LABELS/chips es+de · armor 169 (vague **1.69**) — **pas** path `/es/` `/de/` · **pas** pack catalogue `.es` restants / `.de`
+- [x] `portrait-light` LocalizedString.es ×194 · docs v1.69.0 · armor 170 (vague **1.70**) — **pas** `public-domain` `.es` · **pas** path `/es/` `/de/` · **pas** catalogue `.de`
 
 Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt.
