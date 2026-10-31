@@ -39,7 +39,7 @@ describe('vague 1.45 — docs v1.44.0 + photo-rights LocalizedString.es', () => 
     /* Docs headline moved to v1.45.0 in vague 1.46 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.44**');
     expect(nextSteps).toMatch(/no-go.*1\.45/);
-    expect(readme).toMatch(/v1\.(4[456789]|5[0123456789]|60|61|62|63|64|65)\.0/);
+    expect(readme).toMatch(/v1\.(4[456789]|5[0123456789]|60|61|62|63|64|65|66)\.0/);
   });
 
   it('photo-rights ships .es on all LocalizedString fields (180)', () => {

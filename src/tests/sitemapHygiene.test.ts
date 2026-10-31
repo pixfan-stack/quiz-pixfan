@@ -104,8 +104,9 @@ describe('sitemap / SEO hygiene', () => {
       expect(esMod! >= LASTMOD_FLOOR, `${base}?lang=es`).toBe(true);
     }
 
-    // Vague 1.66: ?lang=de twins for DE-ready guides only (not home/fiche).
+    // Vague 1.66: ?lang=de twins for DE-ready guides; vague 1.67 adds home (not fiche).
     const deReady = [
+      'https://quiz.pixfan.fr/',
       'https://quiz.pixfan.fr/guides/',
       'https://quiz.pixfan.fr/guides/scolaires/',
       'https://quiz.pixfan.fr/guides/composition-photo',
@@ -124,7 +125,6 @@ describe('sitemap / SEO hygiene', () => {
       expect(deMod, `${base}?lang=de`).toBeTruthy();
       expect(deMod! >= LASTMOD_FLOOR, `${base}?lang=de`).toBe(true);
     }
-    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
     expect(sitemap).not.toContain('fiche-seance.html?lang=de');
   });
 

@@ -11,7 +11,7 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
     /* Docs headline moved to v1.58.0 in vague 1.59 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.57**');
     expect(nextSteps).toMatch(/no-go.*1\.58/);
-    expect(readme).toMatch(/v1\.(57|58|59|60|61|62|63|64|65)\.0/);
+    expect(readme).toMatch(/v1\.(57|58|59|60|61|62|63|64|65|66)\.0/);
   });
 
   it('home sniff sets Spanish share meta for ?lang=es (real ES, not EN stub)', () => {
@@ -21,7 +21,8 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
     expect(indexHtml).toContain(
       'Pon a prueba tus conocimientos de fotografía gratis: 386 preguntas (268 ilustradas), 15 categorías'
     );
-    expect(indexHtml).toMatch(/p === 'en' \|\| p === 'de'/);
+    /* DE sniff separated from EN in vague 1.67 — keep EN parity lock */
+    expect(indexHtml).toContain("} else if (p === 'en') {");
     expect(indexHtml).toContain('Free photography quiz — 386 questions | Quiz PixFan');
     expect(indexHtml).toContain("setLocales('fr_FR', 'en_US')");
   });
@@ -36,16 +37,15 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
     expect(indexHtml).toContain(
       '<meta property="og:locale:alternate" content="es_ES" />'
     );
-    expect(indexHtml).toContain('"inLanguage": ["fr", "en", "es"]');
-    expect(indexHtml).not.toContain('hreflang="de"');
+    /* inLanguage +de / hreflang de unlocked on home in vague 1.67 */
+    expect(indexHtml).toMatch(/"inLanguage": \["fr", "en", "es"(, "de")?\]/);
     expect(indexHtml).toContain('<link rel="canonical" href="https://quiz.pixfan.fr/" />');
   });
 
-  it('sitemap lists home ?lang=en and ?lang=es; no home/fiche de (guides de in 1.66)', () => {
+  it('sitemap lists home ?lang=en and ?lang=es; no fiche de (home de in 1.67)', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=en');
     expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
-    /* guides ?lang=de unlocked in 1.66 — home/fiche still forbidden */
-    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    /* guides ?lang=de unlocked in 1.66; home in 1.67 — fiche still forbidden */
     expect(sitemap).not.toContain('fiche-seance.html?lang=de');
   });
 

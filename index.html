@@ -20,6 +20,7 @@
     <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/?lang=fr" />
     <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/?lang=en" />
     <link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />
+    <link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/?lang=de" />
     <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/" />
 
     <!-- Open Graph -->
@@ -33,6 +34,7 @@
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="de_DE" />
     <meta property="og:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
     <meta property="og:image:secure_url" content="https://quiz.pixfan.fr/og-image.png?v=4" />
     <meta property="og:image:type" content="image/png" />
@@ -52,7 +54,7 @@
     <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
     <meta name="twitter:image:alt" content="Quiz PixFan — 386 photography questions, 268 illustrated, photo-reading, FR/EN" />
 
-    <!-- Locale sniff (?lang=) — home meta ES unlock + EN parity (vague 1.58); de → interim EN -->
+    <!-- Locale sniff (?lang=) — home meta ES (1.58) + DE unlock (vague 1.67); EN parity -->
     <script>
       (function () {
         var p = new URLSearchParams(location.search).get('lang');
@@ -81,7 +83,20 @@
           setLocales('es_ES', 'fr_FR');
           if (twTitle) twTitle.setAttribute('content', esTitle);
           if (twDesc) twDesc.setAttribute('content', esOgDesc);
-        } else if (p === 'en' || p === 'de') {
+        } else if (p === 'de') {
+          document.title = 'Kostenloses Fotografie-Quiz — 386 Fragen | Quiz PixFan';
+          var deTitle = 'Kostenloses Fotografie-Quiz — 386 Fragen | Quiz PixFan';
+          var deDescMeta =
+            'Teste dein Fotografie-Wissen kostenlos: 386 Fragen (268 illustriert), 15 Kategorien, Photo-Reading-Modus, Tageschallenge, leichtes Konto und Saisons. Oberfläche DE/FR/EN/ES.';
+          var deOgDesc =
+            '386 Fotografie-Fragen (268 illustriert), Photo-Reading, Tageschallenge, leichtes Konto. Kostenlos. Teile deinen Score!';
+          if (desc) desc.setAttribute('content', deDescMeta);
+          if (ogTitle) ogTitle.setAttribute('content', deTitle);
+          if (ogDesc) ogDesc.setAttribute('content', deOgDesc);
+          setLocales('de_DE', 'fr_FR');
+          if (twTitle) twTitle.setAttribute('content', deTitle);
+          if (twDesc) twDesc.setAttribute('content', deOgDesc);
+        } else if (p === 'en') {
           document.title = 'Free photography quiz — 386 questions FR/EN | Quiz PixFan';
           var enTitle = 'Free photography quiz — 386 questions | Quiz PixFan';
           var enDescMeta =
@@ -123,7 +138,7 @@
           "applicationCategory": "EducationalApplication",
           "operatingSystem": "Web",
           "browserRequirements": "Requires JavaScript",
-          "inLanguage": ["fr", "en", "es"],
+          "inLanguage": ["fr", "en", "es", "de"],
           "isAccessibleForFree": true,
           "offers": {
             "@type": "Offer",
@@ -145,13 +160,13 @@
           "@id": "https://quiz.pixfan.fr/#website",
           "url": "https://quiz.pixfan.fr/",
           "name": "Quiz PixFan",
-          "inLanguage": ["fr", "en", "es"],
+          "inLanguage": ["fr", "en", "es", "de"],
           "publisher": { "@id": "https://www.pixfan.com/#organization" }
         },
         {
           "@type": "FAQPage",
           "@id": "https://quiz.pixfan.fr/#faq",
-          "inLanguage": ["fr", "en", "es"],
+          "inLanguage": ["fr", "en", "es", "de"],
           "mainEntity": [
             {
               "@type": "Question",

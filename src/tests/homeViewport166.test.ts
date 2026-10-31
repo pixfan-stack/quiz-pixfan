@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest';
 import readme from '../../README.md?raw';
 import nextSteps from '../../NEXT_STEPS.md?raw';
 import sitemap from '../../public/sitemap.xml?raw';
-import indexHtml from '../../index.html?raw';
 import guidesIndex from '../../public/guides/index.html?raw';
 import scolairesHub from '../../public/guides/scolaires/index.html?raw';
 import fiche from '../../public/guides/scolaires/fiche-seance.html?raw';
@@ -32,9 +31,10 @@ const articleDePages: Array<[string, string, string]> = [
 ];
 
 describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)', () => {
-  it('docs headline cites v1.65.0; vague 1.65 listed; no-go through 1.66', () => {
-    expect(readme).toContain('v1.65.0');
-    expect(nextSteps).toContain('**v1.65.0**');
+  it('docs still mention vague 1.65/1.66; no-go through 1.66; headline may be v1.66.0', () => {
+    /* Docs headline moved to v1.66.0 in vague 1.67 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(65|66)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(65|66)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.65**');
     expect(nextSteps).toContain('Vague **1.66**');
     expect(nextSteps).toMatch(/no-go.*1\.66/);
@@ -57,7 +57,7 @@ describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)
     }
   });
 
-  it('topic JSON-LD inLanguage includes de; fiche/home stay without hreflang de', () => {
+  it('topic JSON-LD inLanguage includes de; fiche stays without hreflang de (home unlocked 1.67)', () => {
     for (const html of [
       composition,
       triangle,
@@ -71,8 +71,8 @@ describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)
     ]) {
       expect(html).toContain('"inLanguage": ["fr", "en", "es", "de"]');
     }
+    /* Home gained hreflang de in vague 1.67 — keep fiche negative. */
     expect(fiche).not.toContain('hreflang="de"');
-    expect(indexHtml).not.toContain('hreflang="de"');
     expect(fiche).not.toContain('<article class="de">');
   });
 
@@ -85,12 +85,12 @@ describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)
     }
   });
 
-  it('sitemap lists ?lang=de twins for hubs + topics; no home/fiche de', () => {
+  it('sitemap lists ?lang=de twins for hubs + topics; no fiche de (home unlocked 1.67)', () => {
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=de');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/?lang=de');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=de');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=es');
-    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    /* Home ?lang=de unlocked in vague 1.67 — keep fiche negative. */
     expect(sitemap).not.toContain('fiche-seance.html?lang=de');
   });
 

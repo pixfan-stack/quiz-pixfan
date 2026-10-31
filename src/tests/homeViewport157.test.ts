@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest';
 import readme from '../../README.md?raw';
 import nextSteps from '../../NEXT_STEPS.md?raw';
 import sitemap from '../../public/sitemap.xml?raw';
-import indexHtml from '../../index.html?raw';
 import guidesIndex from '../../public/guides/index.html?raw';
 import scolairesHub from '../../public/guides/scolaires/index.html?raw';
 import fiche from '../../public/guides/scolaires/fiche-seance.html?raw';
@@ -36,7 +35,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.56**');
     expect(nextSteps).toMatch(/no-go.*1\.57/);
-    expect(readme).toMatch(/v1\.(56|57|58|59|60|61|62|63|64|65)\.0/);
+    expect(readme).toMatch(/v1\.(56|57|58|59|60|61|62|63|64|65|66)\.0/);
   });
 
   it('11 article.es pages expose hreflang="es" + og:locale:alternate es_ES', () => {
@@ -70,9 +69,8 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     ]) {
       expect(html).toContain('"inLanguage": ["fr", "en", "es", "de"]');
     }
-    /* fiche gained article.es + hreflang es in vague 1.59; home in 1.58 — keep no-de lock */
+    /* fiche gained article.es + hreflang es in vague 1.59; home in 1.58; home de in 1.67 — keep fiche no-de */
     expect(fiche).not.toContain('hreflang="de"');
-    expect(indexHtml).not.toContain('hreflang="de"');
   });
 
   it('sitemap lists ?lang=en and ?lang=es twins for hubs + topics; de unlocked 1.66', () => {
@@ -80,8 +78,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=es');
     expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=en');
-    /* ?lang=de twins unlocked in vague 1.66 for guides; still absent home/fiche */
-    expect(sitemap).not.toContain('https://quiz.pixfan.fr/?lang=de');
+    /* ?lang=de twins unlocked in vague 1.66 for guides; home in 1.67 — fiche still absent */
     expect(sitemap).not.toContain('fiche-seance.html?lang=de');
   });
 
