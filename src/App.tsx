@@ -389,7 +389,42 @@ export default function App() {
             aria-label={isDark ? t('common.lightMode') : t('common.darkMode')}
             title={isDark ? t('common.lightMode') : t('common.darkMode')}
           >
-            {isDark ? t('common.lightModeShort') : t('common.darkModeShort')}
+            {isDark ? (
+              <svg
+                className="dark-mode-toggle__icon"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="12" r="4" fill="currentColor" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  d="M12 2.5v2.25M12 19.25V21.5M2.5 12h2.25M19.25 12H21.5M5.05 5.05l1.6 1.6M17.35 17.35l1.6 1.6M5.05 18.95l1.6-1.6M17.35 6.65l1.6-1.6"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="dark-mode-toggle__icon"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z"
+                />
+              </svg>
+            )}
+            <span className="visually-hidden">
+              {isDark ? t('common.lightModeShort') : t('common.darkModeShort')}
+            </span>
           </button>
         </div>
       </header>

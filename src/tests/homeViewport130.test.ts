@@ -56,12 +56,17 @@ describe('home / result quiet chrome (vague 1.30)', () => {
     expect(hub).toContain('data-hub-hero-cta');
   });
 
-  it('dark toggle uses short text, not emoji-only (SPA + guides)', () => {
+  it('dark toggle uses SVG icons + a11y label, not emoji (SPA + guides)', () => {
+    expect(appSource).toContain('dark-mode-toggle__icon');
+    expect(appSource).toContain('visually-hidden');
     expect(appSource).toContain('common.darkModeShort');
     expect(appSource).toContain('common.lightModeShort');
     expect(appSource).toContain('aria-pressed={isDark}');
     expect(appSource).not.toContain("'🌙'");
     expect(appSource).not.toContain("'☀️'");
+    expect(themeJs).toContain('ICON_MOON');
+    expect(themeJs).toContain('ICON_SUN');
+    expect(themeJs).toContain('dark-mode-toggle__icon');
     expect(themeJs).toContain('shortLabel');
     expect(themeJs).toContain("'Nuit'");
     expect(themeJs).toContain("'Dark'");

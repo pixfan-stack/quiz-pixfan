@@ -23,10 +23,12 @@ describe('guides index quiet chrome (vague 1.32)', () => {
     expect(hub).toContain('<h1>Scolaires — photo en classe</h1>');
   });
 
-  it('guide dark toggles ship short text, not emoji FOUC', () => {
+  it('guide dark toggles ship SVG icons, not emoji FOUC', () => {
     for (const html of [guidesIndex, composition, hub]) {
-      expect(html).toContain('>Nuit</button>');
+      expect(html).toContain('dark-mode-toggle__icon');
+      expect(html).toContain('visually-hidden">Nuit</span>');
       expect(html).not.toContain('>🌙</button>');
+      expect(html).not.toContain('>Nuit</button>');
     }
   });
 

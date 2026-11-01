@@ -6,6 +6,11 @@
 (function () {
   var STORAGE_KEY = 'quiz-pixfan-dark-mode';
 
+  var ICON_MOON =
+    '<svg class="dark-mode-toggle__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z"/></svg>';
+  var ICON_SUN =
+    '<svg class="dark-mode-toggle__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M12 2.5v2.25M12 19.25V21.5M2.5 12h2.25M19.25 12H21.5M5.05 5.05l1.6 1.6M17.35 17.35l1.6 1.6M5.05 18.95l1.6-1.6M17.35 6.65l1.6-1.6"/></svg>';
+
   function systemPrefersDark() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
@@ -43,7 +48,11 @@
     btn.setAttribute('aria-label', label);
     btn.setAttribute('title', label);
     btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    btn.textContent = shortLabel(isDark);
+    btn.innerHTML =
+      (isDark ? ICON_SUN : ICON_MOON) +
+      '<span class="visually-hidden">' +
+      shortLabel(isDark) +
+      '</span>';
   }
 
   function setDark(isDark) {

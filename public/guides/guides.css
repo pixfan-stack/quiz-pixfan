@@ -208,13 +208,17 @@ a:hover {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 1rem;
-  line-height: 1;
   cursor: pointer;
   background: var(--color-surface-alt);
   border: 1px solid var(--color-border);
   color: var(--color-text);
   transition: transform 0.2s var(--ease-out), background 0.2s;
+}
+
+.dark-mode-toggle__icon {
+  width: 1rem;
+  height: 1rem;
+  display: block;
 }
 
 .dark-mode-toggle:hover {
@@ -575,6 +579,18 @@ html[lang="de"] span.en {
   .app-header__logo-container {
     font-size: 1.2rem;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Reduce motion / fixed-bg jank on mobile */

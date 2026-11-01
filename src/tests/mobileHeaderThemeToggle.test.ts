@@ -19,12 +19,16 @@ describe('mobile header — theme toggle stays on-screen (CSS-first)', () => {
     expect(block).toContain('display: none');
   });
 
-  it('keeps quiet chrome text toggle (no sun/moon emoji)', () => {
+  it('uses SVG sun/moon icons (no emoji) with accessible short label', () => {
+    expect(appSource).toContain('className="dark-mode-toggle"');
+    expect(appSource).toContain('dark-mode-toggle__icon');
+    expect(appSource).toContain('visually-hidden');
     expect(appSource).toContain('common.darkModeShort');
     expect(appSource).toContain('common.lightModeShort');
-    expect(appSource).toContain('className="dark-mode-toggle"');
     expect(appSource).not.toContain("'🌙'");
     expect(appSource).not.toContain("'☀️'");
+    expect(globalCss).toContain('.dark-mode-toggle__icon');
+    expect(globalCss).toContain('@media (max-width: 720px)');
   });
 
   it('footer still carries Guides / Scolaires / pixfan links', () => {
