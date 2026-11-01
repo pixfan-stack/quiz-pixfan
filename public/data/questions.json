@@ -7730,11 +7730,13 @@
       ],
       "title": {
         "en": "Public domain gallery",
-        "fr": "Galerie domaine public"
+        "fr": "Galerie domaine public",
+        "es": "Galería de dominio público"
       },
       "description": {
         "en": "Read historic photographs that are free to reuse — pioneers, documentary icons, and FSA classics.",
-        "fr": "Lisez des photographies historiques libres de droits — pionniers, icônes documentaires et classiques de la FSA."
+        "fr": "Lisez des photographies historiques libres de droits — pionniers, icônes documentaires et classiques de la FSA.",
+        "es": "Lee fotografías históricas libres de derechos — pioneros, iconos documentales y clásicos de la FSA."
       },
       "difficulty": "medium",
       "questions": [
@@ -7744,35 +7746,40 @@
           "difficulty": "easy",
           "text": {
             "en": "This is often called the oldest surviving photograph. Who made it?",
-            "fr": "On la présente souvent comme la plus ancienne photo conservée. Qui l’a réalisée ?"
+            "fr": "On la présente souvent comme la plus ancienne photo conservée. Qui l’a réalisée ?",
+            "es": "A menudo se presenta como la fotografía más antigua conservada. ¿Quién la realizó?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Nicéphore Niépce",
-                "fr": "Nicéphore Niépce"
+                "fr": "Nicéphore Niépce",
+                "es": "Nicéphore Niépce (heliografía)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "William Henry Fox Talbot",
-                "fr": "William Henry Fox Talbot"
+                "fr": "William Henry Fox Talbot",
+                "es": "William Henry Fox Talbot (calotipo)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Eugène Atget",
-                "fr": "Eugène Atget"
+                "fr": "Eugène Atget",
+                "es": "Eugène Atget (viejos oficios de París)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Louis Daguerre",
-                "fr": "Louis Daguerre"
+                "fr": "Louis Daguerre",
+                "es": "Louis Daguerre (daguerrotipo)"
               }
             }
           ],
@@ -7781,16 +7788,19 @@
           ],
           "explanation": {
             "en": "Niépce’s View from the Window at Le Gras (c. 1826–27) is the oldest known surviving photograph.",
-            "fr": "Le Point de vue du Gras de Niépce (vers 1826–27) est la plus ancienne photographie conservée connue."
+            "fr": "Le Point de vue du Gras de Niépce (vers 1826–27) est la plus ancienne photographie conservée connue.",
+            "es": "El Point de vue du Gras de Niépce (hacia 1826–27) es la fotografía conservada más antigua conocida."
           },
           "imageUrl": "/images/public-domain/niepce-le-gras.avif",
           "imageAlt": {
             "en": "Grainy rooftop view from a window, very early photograph",
-            "fr": "Vue granuleuse de toits depuis une fenêtre, photo très ancienne"
+            "fr": "Vue granuleuse de toits depuis une fenêtre, photo très ancienne",
+            "es": "Vista granulada de tejados desde una ventana, foto muy antigua"
           },
           "imageCredit": {
             "en": "Nicéphore Niépce — public domain (Wikimedia Commons)",
-            "fr": "Nicéphore Niépce — domaine public (Wikimedia Commons)"
+            "fr": "Nicéphore Niépce — domaine public (Wikimedia Commons)",
+            "es": "Nicéphore Niépce — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -7799,35 +7809,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Daguerre’s Boulevard du Temple looks almost empty. Why do we still see a shoe-shine figure?",
-            "fr": "Le Boulevard du Temple de Daguerre paraît presque vide. Pourquoi voit-on encore un cireur ?"
+            "fr": "Le Boulevard du Temple de Daguerre paraît presque vide. Pourquoi voit-on encore un cireur ?",
+            "es": "El Boulevard du Temple de Daguerre parece casi vacío. ¿Por qué aún se ve a un limpiabotas?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Daguerre used flash to freeze everyone else",
-                "fr": "Daguerre a utilisé un flash pour figer les autres"
+                "fr": "Daguerre a utilisé un flash pour figer les autres",
+                "es": "Daguerre usó un flash para congelar a los demás"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "People were erased in the darkroom",
-                "fr": "Les passants ont été gommés au tirage"
+                "fr": "Les passants ont été gommés au tirage",
+                "es": "Los peatones se borraron en el revelado"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Paris was closed that day for a royal parade",
-                "fr": "Paris était fermé pour un défilé royal"
+                "fr": "Paris était fermé pour un défilé royal",
+                "es": "París estaba cerrado aquel día por un desfile real"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "The long exposure blurred moving crowds; only someone standing still registered",
-                "fr": "La pose longue a flouté la foule en mouvement ; seul quelqu’un d’immobile s’est inscrit"
+                "fr": "La pose longue a flouté la foule en mouvement ; seul quelqu’un d’immobile s’est inscrit",
+                "es": "La exposición larga difuminó a la muchedumbre en movimiento; solo alguien inmóvil quedó registrado"
               }
             }
           ],
@@ -7836,16 +7851,19 @@
           ],
           "explanation": {
             "en": "Early daguerreotypes needed minutes of light. Moving people vanished; a still customer remained.",
-            "fr": "Les premiers daguerréotypes demandaient plusieurs minutes. Les passants en mouvement disparaissaient ; un client immobile restait."
+            "fr": "Les premiers daguerréotypes demandaient plusieurs minutes. Les passants en mouvement disparaissaient ; un client immobile restait.",
+            "es": "Los primeros daguerrotipos pedían varios minutos de luz. Los peatones en movimiento desaparecían; un cliente quieto permanecía."
           },
           "imageUrl": "/images/public-domain/daguerre-boulevard.avif",
           "imageAlt": {
             "en": "Paris boulevard with a tiny figure getting shoes shined",
-            "fr": "Boulevard parisien avec une petite silhouette chez le cireur"
+            "fr": "Boulevard parisien avec une petite silhouette chez le cireur",
+            "es": "Boulevard parisino con una pequeña silueta en el limpiabotas"
           },
           "imageCredit": {
             "en": "Louis Daguerre — public domain (Wikimedia Commons)",
-            "fr": "Louis Daguerre — domaine public (Wikimedia Commons)"
+            "fr": "Louis Daguerre — domaine public (Wikimedia Commons)",
+            "es": "Louis Daguerre — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -7854,35 +7872,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Muybridge’s horse sequence famously settled which question?",
-            "fr": "La séquence du cheval de Muybridge a tranché quelle question célèbre ?"
+            "fr": "La séquence du cheval de Muybridge a tranché quelle question célèbre ?",
+            "es": "La secuencia del caballo de Muybridge resolvió qué pregunta célebre?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Whether film is faster than digital",
-                "fr": "Si l’argentique est plus rapide que le numérique"
+                "fr": "Si l’argentique est plus rapide que le numérique",
+                "es": "Si la película química es más rápida que lo digital"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Whether horses dream in color",
-                "fr": "Si les chevaux rêvent en couleurs"
+                "fr": "Si les chevaux rêvent en couleurs",
+                "es": "Si los caballos sueñan en color"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Whether all four hooves leave the ground at a gallop",
-                "fr": "Si les quatre sabots quittent le sol au galop"
+                "fr": "Si les quatre sabots quittent le sol au galop",
+                "es": "Si las cuatro pezuñas dejan el suelo al galope"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Whether horses prefer left turns",
-                "fr": "Si les chevaux préfèrent tourner à gauche"
+                "fr": "Si les chevaux préfèrent tourner à gauche",
+                "es": "Si los caballos prefieren girar a la izquierda"
               }
             }
           ],
@@ -7891,16 +7914,19 @@
           ],
           "explanation": {
             "en": "The Horse in Motion proved that a galloping horse is fully airborne for a moment.",
-            "fr": "The Horse in Motion a prouvé qu’un cheval au galop est un instant entièrement en l’air."
+            "fr": "The Horse in Motion a prouvé qu’un cheval au galop est un instant entièrement en l’air.",
+            "es": "The Horse in Motion demostró que un caballo al galope queda un instante enteramente en el aire."
           },
           "imageUrl": "/images/public-domain/muybridge-horse.avif",
           "imageAlt": {
             "en": "Sequence of a horse and rider galloping",
-            "fr": "Séquence d’un cheval et son cavalier au galop"
+            "fr": "Séquence d’un cheval et son cavalier au galop",
+            "es": "Secuencia de un caballo y su jinete al galope"
           },
           "imageCredit": {
             "en": "Eadweard Muybridge — public domain (Wikimedia Commons)",
-            "fr": "Eadweard Muybridge — domaine public (Wikimedia Commons)"
+            "fr": "Eadweard Muybridge — domaine public (Wikimedia Commons)",
+            "es": "Eadweard Muybridge — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -7909,35 +7935,40 @@
           "difficulty": "medium",
           "text": {
             "en": "What research tradition does Marey’s walking figure belong to?",
-            "fr": "À quelle tradition de recherche rattacher la figure marchante de Marey ?"
+            "fr": "À quelle tradition de recherche rattacher la figure marchante de Marey ?",
+            "es": "¿A qué tradición de investigación pertenece la figura caminante de Marey?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Infrared surveillance",
-                "fr": "La surveillance infrarouge"
+                "fr": "La surveillance infrarouge",
+                "es": "La vigilancia por infrarrojos"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Cubist collage",
-                "fr": "Le collage cubiste"
+                "fr": "Le collage cubiste",
+                "es": "El collage cubista"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Fashion editorial posing",
-                "fr": "La pose de mode éditoriale"
+                "fr": "La pose de mode éditoriale",
+                "es": "La pose de moda editorial"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Chronophotography — studying motion through timed exposures",
-                "fr": "La chronophotographie — étudier le mouvement par poses cadencées"
+                "fr": "La chronophotographie — étudier le mouvement par poses cadencées",
+                "es": "La cronofotografía — estudiar el movimiento con exposiciones cadenciadas"
               }
             }
           ],
@@ -7946,16 +7977,19 @@
           ],
           "explanation": {
             "en": "Marey’s chronophotography dissected movement for science — a cousin of cinema.",
-            "fr": "La chronophotographie de Marey découpe le mouvement pour la science — cousine du cinéma."
+            "fr": "La chronophotographie de Marey découpe le mouvement pour la science — cousine du cinéma.",
+            "es": "La cronofotografía de Marey disecciona el movimiento para la ciencia — prima hermana del cine."
           },
           "imageUrl": "/images/public-domain/marey-motion.avif",
           "imageAlt": {
             "en": "Multiple overlapping exposures of a man walking",
-            "fr": "Multiples poses superposées d’un homme qui marche"
+            "fr": "Multiples poses superposées d’un homme qui marche",
+            "es": "Múltiples exposiciones superpuestas de un hombre que camina"
           },
           "imageCredit": {
             "en": "Étienne-Jules Marey — public domain (Wikimedia Commons)",
-            "fr": "Étienne-Jules Marey — domaine public (Wikimedia Commons)"
+            "fr": "Étienne-Jules Marey — domaine public (Wikimedia Commons)",
+            "es": "Étienne-Jules Marey — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -7964,35 +7998,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Le Gray’s seascape looks impossibly detailed in both sky and water. A likely technique?",
-            "fr": "La marine de Le Gray paraît trop détaillée à la fois dans le ciel et l’eau. Technique probable ?"
+            "fr": "La marine de Le Gray paraît trop détaillée à la fois dans le ciel et l’eau. Technique probable ?",
+            "es": "La marina de Le Gray parece demasiado detallada a la vez en el cielo y en el agua. ¿Técnica probable?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Smartphone HDR from 1857",
-                "fr": "HDR smartphone dès 1857"
+                "fr": "HDR smartphone dès 1857",
+                "es": "HDR de smartphone ya en 1857"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Shooting underwater with a glass box",
-                "fr": "Shooter sous l’eau dans une boîte de verre"
+                "fr": "Shooter sous l’eau dans une boîte de verre",
+                "es": "Disparar bajo el agua en una caja de cristal"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Combining negatives (or carefully timed exposures) for sky and sea",
-                "fr": "Combiner des négatifs (ou des poses adaptées) pour ciel et mer"
+                "fr": "Combiner des négatifs (ou des poses adaptées) pour ciel et mer",
+                "es": "Combinar negativos (o exposiciones adaptadas) para cielo y mar"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Painting clouds directly on the print only",
-                "fr": "Peindre les nuages uniquement sur le tirage"
+                "fr": "Peindre les nuages uniquement sur le tirage",
+                "es": "Pintar las nubes únicamente sobre la copia"
               }
             }
           ],
@@ -8001,16 +8040,19 @@
           ],
           "explanation": {
             "en": "Le Gray was famous for matching a dramatic sky to a properly exposed sea — early compositing craft.",
-            "fr": "Le Gray était célèbre pour marier un ciel dramatique à une mer bien exposée — un assemblage précoce."
+            "fr": "Le Gray était célèbre pour marier un ciel dramatique à une mer bien exposée — un assemblage précoce.",
+            "es": "Le Gray era célebre por casar un cielo dramático con un mar bien expuesto — un ensamblaje precoz."
           },
           "imageUrl": "/images/public-domain/le-gray-sea.avif",
           "imageAlt": {
             "en": "Dramatic wave and cloudy sky seascape",
-            "fr": "Marine avec vague dramatique et ciel nuageux"
+            "fr": "Marine avec vague dramatique et ciel nuageux",
+            "es": "Marina con ola dramática y cielo nublado"
           },
           "imageCredit": {
             "en": "Gustave Le Gray — public domain (Wikimedia Commons)",
-            "fr": "Gustave Le Gray — domaine public (Wikimedia Commons)"
+            "fr": "Gustave Le Gray — domaine public (Wikimedia Commons)",
+            "es": "Gustave Le Gray — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8019,35 +8061,40 @@
           "difficulty": "easy",
           "text": {
             "en": "This studio portrait of Baudelaire is by which pioneering French photographer?",
-            "fr": "Ce portrait studio de Baudelaire est de quel photographe français pionnier ?"
+            "fr": "Ce portrait studio de Baudelaire est de quel photographe français pionnier ?",
+            "es": "Este retrato de estudio de Baudelaire es de qué fotógrafo francés pionero?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Nadar",
-                "fr": "Nadar"
+                "fr": "Nadar",
+                "es": "Nadar (retratos parisinos del XIX)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Brassaï",
-                "fr": "Brassaï"
+                "fr": "Brassaï",
+                "es": "Brassaï (París nocturno)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Henri Cartier-Bresson",
-                "fr": "Henri Cartier-Bresson"
+                "fr": "Henri Cartier-Bresson",
+                "es": "Henri Cartier-Bresson (momento decisivo)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Robert Doisneau",
-                "fr": "Robert Doisneau"
+                "fr": "Robert Doisneau",
+                "es": "Robert Doisneau (calle humanista)"
               }
             }
           ],
@@ -8056,16 +8103,19 @@
           ],
           "explanation": {
             "en": "Nadar photographed the literary and artistic elite of 19th-century Paris.",
-            "fr": "Nadar a photographié l’élite littéraire et artistique du Paris du XIXe siècle."
+            "fr": "Nadar a photographié l’élite littéraire et artistique du Paris du XIXe siècle.",
+            "es": "Nadar fotografió a la élite literaria y artística del París del siglo XIX."
           },
           "imageUrl": "/images/public-domain/nadar-portrait.avif",
           "imageAlt": {
             "en": "Portrait of Charles Baudelaire",
-            "fr": "Portrait de Charles Baudelaire"
+            "fr": "Portrait de Charles Baudelaire",
+            "es": "Retrato de Charles Baudelaire"
           },
           "imageCredit": {
             "en": "Nadar — public domain (Wikimedia Commons)",
-            "fr": "Nadar — domaine public (Wikimedia Commons)"
+            "fr": "Nadar — domaine public (Wikimedia Commons)",
+            "es": "Nadar — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8074,35 +8124,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Cameron’s soft, atmospheric portraits are closest to which aesthetic?",
-            "fr": "Les portraits doux et atmosphériques de Cameron se rapprochent de quelle esthétique ?"
+            "fr": "Les portraits doux et atmosphériques de Cameron se rapprochent de quelle esthétique ?",
+            "es": "Los retratos suaves y atmosféricos de Cameron se acercan a qué estética?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Hard news flash photography",
-                "fr": "La photo de presse au flash dur"
+                "fr": "La photo de presse au flash dur",
+                "es": "La foto de prensa con flash duro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Pictorialism — photography aspiring to painterly feeling",
-                "fr": "Le pictorialisme — la photo qui vise l’émotion picturale"
+                "fr": "Le pictorialisme — la photo qui vise l’émotion picturale",
+                "es": "El pictorialismo — la foto que busca la emoción pictórica"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Product packshot lighting",
-                "fr": "L’éclairage packshot produit"
+                "fr": "L’éclairage packshot produit",
+                "es": "La iluminación packshot de producto"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Satellite mapping",
-                "fr": "La cartographie satellite"
+                "fr": "La cartographie satellite",
+                "es": "La cartografía por satélite"
               }
             }
           ],
@@ -8111,16 +8166,19 @@
           ],
           "explanation": {
             "en": "Julia Margaret Cameron embraced soft focus and allegory — a bridge to pictorialism.",
-            "fr": "Julia Margaret Cameron assume le flou et l’allégorie — un pont vers le pictorialisme."
+            "fr": "Julia Margaret Cameron assume le flou et l’allégorie — un pont vers le pictorialisme.",
+            "es": "Julia Margaret Cameron asume el desenfoque y la alegoría — un puente hacia el pictorialismo."
           },
           "imageUrl": "/images/public-domain/cameron-portrait.avif",
           "imageAlt": {
             "en": "Soft-focus portrait by Julia Margaret Cameron",
-            "fr": "Portrait en flou doux par Julia Margaret Cameron"
+            "fr": "Portrait en flou doux par Julia Margaret Cameron",
+            "es": "Retrato con desenfoque suave de Julia Margaret Cameron"
           },
           "imageCredit": {
             "en": "Julia Margaret Cameron — public domain (Wikimedia Commons)",
-            "fr": "Julia Margaret Cameron — domaine public (Wikimedia Commons)"
+            "fr": "Julia Margaret Cameron — domaine public (Wikimedia Commons)",
+            "es": "Julia Margaret Cameron — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8129,35 +8187,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Atget’s shopfronts and streets mainly document what?",
-            "fr": "Les vitrines et rues d’Atget documentent surtout quoi ?"
+            "fr": "Les vitrines et rues d’Atget documentent surtout quoi ?",
+            "es": "Los escaparates y calles de Atget documentan sobre todo…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "A vanishing everyday Paris",
-                "fr": "Un Paris du quotidien en train de disparaître"
+                "fr": "Un Paris du quotidien en train de disparaître",
+                "es": "Un París cotidiano que está desapareciendo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Hollywood movie sets",
-                "fr": "Des décors de cinéma hollywoodiens"
+                "fr": "Des décors de cinéma hollywoodiens",
+                "es": "Decorados de cine hollywoodiense"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Royal coronations only",
-                "fr": "Uniquement des couronnements royaux"
+                "fr": "Uniquement des couronnements royaux",
+                "es": "Solo coronaciones reales"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Abstract color fields",
-                "fr": "Des champs de couleur abstraits"
+                "fr": "Des champs de couleur abstraits",
+                "es": "Campos de color abstractos"
               }
             }
           ],
@@ -8166,16 +8229,19 @@
           ],
           "explanation": {
             "en": "Atget catalogued old Paris — trades, façades, empty streets — before modernization erased them.",
-            "fr": "Atget a inventorié le vieux Paris — métiers, façades, rues vides — avant que la modernisation ne l’efface."
+            "fr": "Atget a inventorié le vieux Paris — métiers, façades, rues vides — avant que la modernisation ne l’efface.",
+            "es": "Atget inventarió el viejo París — oficios, fachadas, calles vacías — antes de que la modernización lo borrara."
           },
           "imageUrl": "/images/public-domain/atget-paris.avif",
           "imageAlt": {
             "en": "Paris shop windows on Avenue des Gobelins by Atget",
-            "fr": "Vitrines parisiennes avenue des Gobelins par Atget"
+            "fr": "Vitrines parisiennes avenue des Gobelins par Atget",
+            "es": "Escaparates parisinos en la avenida des Gobelins por Atget"
           },
           "imageCredit": {
             "en": "Eugène Atget — public domain (Wikimedia Commons)",
-            "fr": "Eugène Atget — domaine public (Wikimedia Commons)"
+            "fr": "Eugène Atget — domaine public (Wikimedia Commons)",
+            "es": "Eugène Atget — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8184,35 +8250,40 @@
           "difficulty": "medium",
           "text": {
             "en": "In Stieglitz’s The Steerage, what should you notice first as a reader of the frame?",
-            "fr": "Dans The Steerage de Stieglitz, que lire d’abord dans le cadre ?"
+            "fr": "Dans The Steerage de Stieglitz, que lire d’abord dans le cadre ?",
+            "es": "En The Steerage de Stieglitz, ¿qué leer primero en el encuadre?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "A neon logo in the corner",
-                "fr": "Un logo néon dans le coin"
+                "fr": "Un logo néon dans le coin",
+                "es": "Un logo de neón en la esquina"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Autofocus hunting squares",
-                "fr": "Les carrés d’autofocus"
+                "fr": "Les carrés d’autofocus",
+                "es": "Los cuadrados de autofoco"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Strong geometry separating decks / social spaces",
-                "fr": "Une géométrie forte qui sépare ponts / espaces sociaux"
+                "fr": "Une géométrie forte qui sépare ponts / espaces sociaux",
+                "es": "Una geometría fuerte que separa cubiertas / espacios sociales"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Only the brand of the ship funnel",
-                "fr": "Uniquement la marque de la cheminée"
+                "fr": "Uniquement la marque de la cheminée",
+                "es": "Solo la marca de la chimenea del barco"
               }
             }
           ],
@@ -8221,16 +8292,19 @@
           ],
           "explanation": {
             "en": "The photograph’s power is structural: diagonals, gangways, and class divided by the ship’s architecture.",
-            "fr": "La force de l’image est structurelle : diagonales, passerelles, et classes séparées par l’architecture du navire."
+            "fr": "La force de l’image est structurelle : diagonales, passerelles, et classes séparées par l’architecture du navire.",
+            "es": "La fuerza de la imagen es estructural: diagonales, pasarelas y clases separadas por la arquitectura del buque."
           },
           "imageUrl": "/images/public-domain/stieglitz-steerage.avif",
           "imageAlt": {
             "en": "Passengers on the lower and upper decks of a ship",
-            "fr": "Passagers sur les ponts inférieur et supérieur d’un navire"
+            "fr": "Passagers sur les ponts inférieur et supérieur d’un navire",
+            "es": "Pasajeros en las cubiertas inferior y superior de un barco"
           },
           "imageCredit": {
             "en": "Alfred Stieglitz — public domain (Wikimedia Commons)",
-            "fr": "Alfred Stieglitz — domaine public (Wikimedia Commons)"
+            "fr": "Alfred Stieglitz — domaine public (Wikimedia Commons)",
+            "es": "Alfred Stieglitz — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8239,35 +8313,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Lewis Hine photographed child mill workers mainly to…",
-            "fr": "Lewis Hine photographiait surtout les enfants des usines pour…"
+            "fr": "Lewis Hine photographiait surtout les enfants des usines pour…",
+            "es": "Lewis Hine fotografió sobre todo a los niños de las fábricas para…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Promote longer factory shifts",
-                "fr": "Promouvoir des journées d’usine plus longues"
+                "fr": "Promouvoir des journées d’usine plus longues",
+                "es": "Promover jornadas de fábrica más largas"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Document abuse and push social reform",
-                "fr": "Documenter les abus et pousser des réformes sociales"
+                "fr": "Documenter les abus et pousser des réformes sociales",
+                "es": "Documentar abusos e impulsar reformas sociales"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Train AI models",
-                "fr": "Entraîner des modèles d’IA"
+                "fr": "Entraîner des modèles d’IA",
+                "es": "Entrenar modelos de IA"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Sell fashion lookbooks",
-                "fr": "Vendre des lookbooks de mode"
+                "fr": "Vendre des lookbooks de mode",
+                "es": "Vender lookbooks de moda"
               }
             }
           ],
@@ -8276,16 +8355,19 @@
           ],
           "explanation": {
             "en": "Hine’s National Child Labor Committee work helped change public opinion and law.",
-            "fr": "Le travail de Hine pour le National Child Labor Committee a aidé à faire bouger l’opinion et la loi."
+            "fr": "Le travail de Hine pour le National Child Labor Committee a aidé à faire bouger l’opinion et la loi.",
+            "es": "El trabajo de Hine para el National Child Labor Committee ayudó a mover la opinión y la ley."
           },
           "imageUrl": "/images/public-domain/hine-spinner.avif",
           "imageAlt": {
             "en": "Young child laborer standing by mill machinery",
-            "fr": "Jeune enfant ouvrier près de machines d’usine"
+            "fr": "Jeune enfant ouvrier près de machines d’usine",
+            "es": "Niño obrero joven junto a maquinaria de fábrica"
           },
           "imageCredit": {
             "en": "Lewis Hine — public domain (Wikimedia Commons)",
-            "fr": "Lewis Hine — domaine public (Wikimedia Commons)"
+            "fr": "Lewis Hine — domaine public (Wikimedia Commons)",
+            "es": "Lewis Hine — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8294,35 +8376,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Lange’s Migrant Mother (1936) was made for which U.S. program?",
-            "fr": "Migrant Mother de Lange (1936) a été réalisée dans le cadre de quel programme américain ?"
+            "fr": "Migrant Mother de Lange (1936) a été réalisée dans le cadre de quel programme américain ?",
+            "es": "Migrant Mother de Lange (1936) se realizó en el marco de qué programa estadounidense?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "A private perfume campaign",
-                "fr": "Une campagne de parfum privée"
+                "fr": "Une campagne de parfum privée",
+                "es": "Una campaña privada de perfume"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Magnum Photos founding charter",
-                "fr": "La charte fondatrice de Magnum Photos"
+                "fr": "La charte fondatrice de Magnum Photos",
+                "es": "La carta fundacional de Magnum Photos"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Farm Security Administration (FSA) documentation",
-                "fr": "La documentation de la Farm Security Administration (FSA)"
+                "fr": "La documentation de la Farm Security Administration (FSA)",
+                "es": "La documentación de la Farm Security Administration (FSA)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "NASA Apollo publicity",
-                "fr": "La communication NASA Apollo"
+                "fr": "La communication NASA Apollo",
+                "es": "La comunicación de la NASA Apollo"
               }
             }
           ],
@@ -8331,16 +8418,19 @@
           ],
           "explanation": {
             "en": "FSA photographs are U.S. federal works — a cornerstone public-domain documentary corpus.",
-            "fr": "Les photos FSA sont des œuvres fédérales US — un corpus documentaire domaine public fondamental."
+            "fr": "Les photos FSA sont des œuvres fédérales US — un corpus documentaire domaine public fondamental.",
+            "es": "Las fotos FSA son obras federales estadounidenses — un corpus documental de dominio público fundamental."
           },
           "imageUrl": "/images/public-domain/lange-migrant-mother.avif",
           "imageAlt": {
             "en": "Destitute mother with children during the Great Depression",
-            "fr": "Mère démunie avec ses enfants pendant la Grande Dépression"
+            "fr": "Mère démunie avec ses enfants pendant la Grande Dépression",
+            "es": "Madre indigente con sus hijos durante la Gran Depresión"
           },
           "imageCredit": {
             "en": "Dorothea Lange / FSA — U.S. public domain (Wikimedia Commons)",
-            "fr": "Dorothea Lange / FSA — domaine public US (Wikimedia Commons)"
+            "fr": "Dorothea Lange / FSA — domaine public US (Wikimedia Commons)",
+            "es": "Dorothea Lange / FSA — dominio público US (Wikimedia Commons)"
           }
         },
         {
@@ -8349,35 +8439,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Walker Evans’s frontal sharecropper portraits (like Allie Mae Burroughs) emphasize…",
-            "fr": "Les portraits frontaux de métayers de Walker Evans (comme Allie Mae Burroughs) insistent sur…"
+            "fr": "Les portraits frontaux de métayers de Walker Evans (comme Allie Mae Burroughs) insistent sur…",
+            "es": "Los retratos frontales de aparceros de Walker Evans (como Allie Mae Burroughs) insisten en…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Direct, sober confrontation — dignity without sentimental posing",
-                "fr": "Une confrontation directe et sobre — dignité sans pose sentimentale"
+                "fr": "Une confrontation directe et sobre — dignité sans pose sentimentale",
+                "es": "Una confrontación directa y sobria — dignidad sin pose sentimental"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Heavy Instagram skin smoothing",
-                "fr": "Un lissage de peau type Instagram"
+                "fr": "Un lissage de peau type Instagram",
+                "es": "Un alisado de piel tipo Instagram"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Glamour softboxes and wind machines",
-                "fr": "Softbox glamour et machines à vent"
+                "fr": "Softbox glamour et machines à vent",
+                "es": "Softboxes de glamour y máquinas de viento"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Fish-eye humor",
-                "fr": "L’humour fisheye"
+                "fr": "L’humour fisheye",
+                "es": "El humor ojo de pez"
               }
             }
           ],
@@ -8386,16 +8481,19 @@
           ],
           "explanation": {
             "en": "Evans’s FSA/RA portraits feel almost typological: clear light, level gaze, minimal drama.",
-            "fr": "Les portraits FSA/RA d’Evans sont presque typologiques : lumière claire, regard à hauteur, drame minimal."
+            "fr": "Les portraits FSA/RA d’Evans sont presque typologiques : lumière claire, regard à hauteur, drame minimal.",
+            "es": "Los retratos FSA/RA de Evans son casi tipológicos: luz clara, mirada a la altura, drama mínimo."
           },
           "imageUrl": "/images/public-domain/evans-allie-mae.avif",
           "imageAlt": {
             "en": "Close frontal portrait of Allie Mae Burroughs",
-            "fr": "Portrait frontal serré d’Allie Mae Burroughs"
+            "fr": "Portrait frontal serré d’Allie Mae Burroughs",
+            "es": "Retrato frontal cerrado de Allie Mae Burroughs"
           },
           "imageCredit": {
             "en": "Walker Evans / FSA — U.S. public domain (Wikimedia Commons)",
-            "fr": "Walker Evans / FSA — domaine public US (Wikimedia Commons)"
+            "fr": "Walker Evans / FSA — domaine public US (Wikimedia Commons)",
+            "es": "Walker Evans / FSA — dominio público US (Wikimedia Commons)"
           }
         },
         {
@@ -8404,35 +8502,40 @@
           "difficulty": "easy",
           "text": {
             "en": "This Dust Bowl scene mainly communicates…",
-            "fr": "Cette scène du Dust Bowl communique surtout…"
+            "fr": "Cette scène du Dust Bowl communique surtout…",
+            "es": "Esta escena del Dust Bowl comunica sobre todo…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "A studio still-life of fruit",
-                "fr": "Une nature morte de fruits en studio"
+                "fr": "Une nature morte de fruits en studio",
+                "es": "Un bodegón de frutas en estudio"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A sports victory parade",
-                "fr": "Un défilé de victoire sportive"
+                "fr": "Un défilé de victoire sportive",
+                "es": "Un desfile de victoria deportiva"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Environmental and social crisis through weather and bodies in space",
-                "fr": "Une crise environnementale et sociale via le temps et les corps dans l’espace"
+                "fr": "Une crise environnementale et sociale via le temps et les corps dans l’espace",
+                "es": "Una crisis ambiental y social a través del clima y los cuerpos en el espacio"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A beach vacation postcard",
-                "fr": "Une carte postale de vacances à la plage"
+                "fr": "Une carte postale de vacances à la plage",
+                "es": "Una postal de vacaciones en la playa"
               }
             }
           ],
@@ -8441,16 +8544,19 @@
           ],
           "explanation": {
             "en": "FSA photographers turned dust, wind, and displacement into readable public evidence.",
-            "fr": "Les photographes FSA ont transformé poussière, vent et exode en preuves lisibles pour le public."
+            "fr": "Les photographes FSA ont transformé poussière, vent et exode en preuves lisibles pour le public.",
+            "es": "Los fotógrafos FSA convirtieron polvo, viento y éxodo en pruebas legibles para el público."
           },
           "imageUrl": "/images/public-domain/dust-bowl-1936.avif",
           "imageAlt": {
             "en": "Figures walking through a severe dust storm",
-            "fr": "Silhouettes marchant dans une tempête de poussière"
+            "fr": "Silhouettes marchant dans une tempête de poussière",
+            "es": "Siluetas caminando en una tormenta de polvo"
           },
           "imageCredit": {
             "en": "U.S. government / Dust Bowl documentation — public domain (Wikimedia Commons)",
-            "fr": "Gouvernement US / documentation Dust Bowl — domaine public (Wikimedia Commons)"
+            "fr": "Gouvernement US / documentation Dust Bowl — domaine public (Wikimedia Commons)",
+            "es": "Gobierno de EE. UU. / documentación Dust Bowl — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8459,35 +8565,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Gordon Parks’s American Gothic (1942) quotes Grant Wood’s painting. What is the critical twist?",
-            "fr": "American Gothic de Gordon Parks (1942) cite le tableau de Grant Wood. Quelle est la torsion critique ?"
+            "fr": "American Gothic de Gordon Parks (1942) cite le tableau de Grant Wood. Quelle est la torsion critique ?",
+            "es": "American Gothic de Gordon Parks (1942) cita el cuadro de Grant Wood. ¿Cuál es el giro crítico?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "It is a selfie on the Eiffel Tower",
-                "fr": "C’est un selfie sur la tour Eiffel"
+                "fr": "C’est un selfie sur la tour Eiffel",
+                "es": "Es un selfie en la torre Eiffel"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "It removes all tools from the frame",
-                "fr": "Cela retire tous les outils du cadre"
+                "fr": "Cela retire tous les outils du cadre",
+                "es": "Quita todas las herramientas del encuadre"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "It advertises farm equipment",
-                "fr": "Cela publicise du matériel agricole"
+                "fr": "Cela publicise du matériel agricole",
+                "es": "Publicita maquinaria agrícola"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "A Black cleaning woman with mop and broom stands in for the iconic farmer couple — race and labor in the capital",
-                "fr": "Une femme de ménage noire avec serpillière et balai remplace le couple de fermiers — race et travail dans la capitale"
+                "fr": "Une femme de ménage noire avec serpillière et balai remplace le couple de fermiers — race et travail dans la capitale",
+                "es": "Una mujer de limpieza negra con fregona y escoba sustituye a la pareja de granjeros — raza y trabajo en la capital"
               }
             }
           ],
@@ -8496,16 +8607,19 @@
           ],
           "explanation": {
             "en": "Parks’s FSA/OWI image retools an American icon to confront segregation and service labor in Washington, D.C.",
-            "fr": "L’image FSA/OWI de Parks recycle une icône américaine pour confronter ségrégation et travail de service à Washington."
+            "fr": "L’image FSA/OWI de Parks recycle une icône américaine pour confronter ségrégation et travail de service à Washington.",
+            "es": "La imagen FSA/OWI de Parks reutiliza un icono estadounidense para confrontar segregación y trabajo de servicio en Washington."
           },
           "imageUrl": "/images/public-domain/parks-american-gothic.avif",
           "imageAlt": {
             "en": "Woman with mop and broom before an American flag",
-            "fr": "Femme avec serpillière et balai devant un drapeau américain"
+            "fr": "Femme avec serpillière et balai devant un drapeau américain",
+            "es": "Mujer con fregona y escoba delante de una bandera estadounidense"
           },
           "imageCredit": {
             "en": "Gordon Parks / FSA-OWI — U.S. public domain (Wikimedia Commons)",
-            "fr": "Gordon Parks / FSA-OWI — domaine public US (Wikimedia Commons)"
+            "fr": "Gordon Parks / FSA-OWI — domaine public US (Wikimedia Commons)",
+            "es": "Gordon Parks / FSA-OWI — dominio público US (Wikimedia Commons)"
           }
         },
         {
@@ -8514,35 +8628,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Prokudin-Gorsky’s color portraits (like the Emir of Bukhara) were made how?",
-            "fr": "Les portraits couleur de Prokudin-Gorsky (comme l’émir de Boukhara) étaient faits comment ?"
+            "fr": "Les portraits couleur de Prokudin-Gorsky (comme l’émir de Boukhara) étaient faits comment ?",
+            "es": "Los retratos en color de Prokudin-Gorsky (como el emir de Bujará) se hacían cómo?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "With a modern CMOS phone sensor",
-                "fr": "Avec un capteur CMOS de téléphone moderne"
+                "fr": "Avec un capteur CMOS de téléphone moderne",
+                "es": "Con un sensor CMOS de teléfono moderno"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "By hand-painting every print only",
-                "fr": "En peignant à la main chaque tirage uniquement"
+                "fr": "En peignant à la main chaque tirage uniquement",
+                "es": "Pintando a mano cada copia únicamente"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "With Kodachrome mass-produced in 1911 shops",
-                "fr": "Avec du Kodachrome en vente libre dès 1911"
+                "fr": "Avec du Kodachrome en vente libre dès 1911",
+                "es": "Con Kodachrome a la venta libre ya en 1911"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Three black-and-white exposures through color filters, later combined",
-                "fr": "Trois poses noir et blanc à travers des filtres couleur, recombinées ensuite"
+                "fr": "Trois poses noir et blanc à travers des filtres couleur, recombinées ensuite",
+                "es": "Tres exposiciones en blanco y negro a través de filtros de color, recombinadas después"
               }
             }
           ],
@@ -8551,16 +8670,19 @@
           ],
           "explanation": {
             "en": "His three-color separation process yields startling early color of the Russian Empire — now widely public domain via LoC scans.",
-            "fr": "Son procédé trichrome donne des couleurs précoces saisissantes de l’Empire russe — largement en domaine public via les scans LoC."
+            "fr": "Son procédé trichrome donne des couleurs précoces saisissantes de l’Empire russe — largement en domaine public via les scans LoC.",
+            "es": "Su procedimiento tricromo da colores precoces impactantes del Imperio ruso — en gran parte dominio público vía escaneos LoC."
           },
           "imageUrl": "/images/public-domain/prokudin-color.avif",
           "imageAlt": {
             "en": "Color portrait of the Emir of Bukhara in ornate robes",
-            "fr": "Portrait en couleurs de l’émir de Boukhara en costume orné"
+            "fr": "Portrait en couleurs de l’émir de Boukhara en costume orné",
+            "es": "Retrato en color del emir de Bujará con traje ornamentado"
           },
           "imageCredit": {
             "en": "Sergey Prokudin-Gorsky — public domain (Library of Congress / Wikimedia Commons)",
-            "fr": "Sergueï Prokoudine-Gorski — domaine public (Library of Congress / Wikimedia Commons)"
+            "fr": "Sergueï Prokoudine-Gorski — domaine public (Library of Congress / Wikimedia Commons)",
+            "es": "Serguéi Prokudin-Gorski — dominio público (Library of Congress / Wikimedia Commons)"
           }
         },
         {
@@ -8569,35 +8691,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Talbot’s The Open Door (1844) helped prove what advantage of his process over the daguerreotype?",
-            "fr": "The Open Door de Talbot (1844) a aidé à montrer quel avantage de son procédé sur le daguerréotype ?"
+            "fr": "The Open Door de Talbot (1844) a aidé à montrer quel avantage de son procédé sur le daguerréotype ?",
+            "es": "The Open Door de Talbot (1844) ayudó a mostrar qué ventaja de su procedimiento sobre el daguerrotipo?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "No need for light at all",
-                "fr": "Plus besoin de lumière du tout"
+                "fr": "Plus besoin de lumière du tout",
+                "es": "Ya no hace falta luz en absoluto"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Built-in autofocus",
-                "fr": "L’autofocus intégré"
+                "fr": "L’autofocus intégré",
+                "es": "El autofoco integrado"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "A paper negative that could yield multiple positive prints",
-                "fr": "Un négatif papier permettant plusieurs tirages positifs"
+                "fr": "Un négatif papier permettant plusieurs tirages positifs",
+                "es": "Un negativo de papel que permitía varias copias positivas"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Instant color without filters",
-                "fr": "La couleur instantanée sans filtres"
+                "fr": "La couleur instantanée sans filtres",
+                "es": "El color instantáneo sin filtros"
               }
             }
           ],
@@ -8606,16 +8733,19 @@
           ],
           "explanation": {
             "en": "The calotype’s negative–positive workflow is the ancestor of classical silver printing.",
-            "fr": "Le flux négatif–positif du calotype est l’ancêtre du tirage argentique classique."
+            "fr": "Le flux négatif–positif du calotype est l’ancêtre du tirage argentique classique.",
+            "es": "El flujo negativo–positivo del calotipo es el antepasado de la copia en plata clásica."
           },
           "imageUrl": "/images/public-domain/talbot-open-door.avif",
           "imageAlt": {
             "en": "Open doorway with a broom, early calotype by Talbot",
-            "fr": "Porte ouverte avec un balai, calotype ancien de Talbot"
+            "fr": "Porte ouverte avec un balai, calotype ancien de Talbot",
+            "es": "Puerta abierta con una escoba, calotipo antiguo de Talbot"
           },
           "imageCredit": {
             "en": "William Henry Fox Talbot — public domain (Wikimedia Commons / Met)",
-            "fr": "William Henry Fox Talbot — domaine public (Wikimedia Commons / Met)"
+            "fr": "William Henry Fox Talbot — domaine public (Wikimedia Commons / Met)",
+            "es": "William Henry Fox Talbot — dominio público (Wikimedia Commons / Met)"
           }
         },
         {
@@ -8624,35 +8754,40 @@
           "difficulty": "easy",
           "text": {
             "en": "This famous 1860 portrait of Lincoln is associated with which American studio?",
-            "fr": "Ce célèbre portrait de Lincoln (1860) est associé à quel studio américain ?"
+            "fr": "Ce célèbre portrait de Lincoln (1860) est associé à quel studio américain ?",
+            "es": "Este célebre retrato de Lincoln (1860) se asocia a qué estudio estadounidense?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Mathew Brady’s studio",
-                "fr": "Le studio de Mathew Brady"
+                "fr": "Le studio de Mathew Brady",
+                "es": "El estudio de Mathew Brady"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Magnum Photos Paris",
-                "fr": "Magnum Photos Paris"
+                "fr": "Magnum Photos Paris",
+                "es": "Magnum Photos París (cooperativa)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Instagram Studios Chicago",
-                "fr": "Instagram Studios Chicago"
+                "fr": "Instagram Studios Chicago",
+                "es": "Instagram Studios Chicago (red social)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Ansel Adams’s Yosemite darkroom",
-                "fr": "La chambre noire d’Ansel Adams à Yosemite"
+                "fr": "La chambre noire d’Ansel Adams à Yosemite",
+                "es": "El cuarto oscuro de Ansel Adams en Yosemite"
               }
             }
           ],
@@ -8661,16 +8796,19 @@
           ],
           "explanation": {
             "en": "Brady’s studio (and operators) shaped Civil War–era political imagery — portraits as campaign tools.",
-            "fr": "Le studio Brady (et ses opérateurs) a façonné l’imagerie politique de la guerre de Sécession — le portrait comme outil de campagne."
+            "fr": "Le studio Brady (et ses opérateurs) a façonné l’imagerie politique de la guerre de Sécession — le portrait comme outil de campagne.",
+            "es": "El estudio Brady (y sus operadores) moldeó la imaginería política de la Guerra de Secesión — el retrato como herramienta de campaña."
           },
           "imageUrl": "/images/public-domain/brady-lincoln.avif",
           "imageAlt": {
             "en": "Studio portrait of Abraham Lincoln, 1860",
-            "fr": "Portrait studio d’Abraham Lincoln, 1860"
+            "fr": "Portrait studio d’Abraham Lincoln, 1860",
+            "es": "Retrato de estudio de Abraham Lincoln, 1860"
           },
           "imageCredit": {
             "en": "Mathew Brady studio — public domain (Wikimedia Commons)",
-            "fr": "Studio Mathew Brady — domaine public (Wikimedia Commons)"
+            "fr": "Studio Mathew Brady — domaine public (Wikimedia Commons)",
+            "es": "Estudio Mathew Brady — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8679,35 +8817,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Riis’s Bandit’s Roost mainly uses photography to…",
-            "fr": "Bandit’s Roost de Riis utilise surtout la photographie pour…"
+            "fr": "Bandit’s Roost de Riis utilise surtout la photographie pour…",
+            "es": "Bandit’s Roost de Riis usa sobre todo la fotografía para…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Teach ballet choreography",
-                "fr": "Enseigner la chorégraphie de ballet"
+                "fr": "Enseigner la chorégraphie de ballet",
+                "es": "Enseñar coreografía de ballet"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Expose tenement poverty and push urban reform",
-                "fr": "Exposer la misère des taudis et pousser des réformes urbaines"
+                "fr": "Exposer la misère des taudis et pousser des réformes urbaines",
+                "es": "Exponer la miseria de los conventillos e impulsar reformas urbanas"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Sell luxury real-estate brochures",
-                "fr": "Vendre des brochures immobilières de luxe"
+                "fr": "Vendre des brochures immobilières de luxe",
+                "es": "Vender folletos inmobiliarios de lujo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Advertise cigar brands only",
-                "fr": "Publiciser uniquement des marques de cigares"
+                "fr": "Publiciser uniquement des marques de cigares",
+                "es": "Publicitar solo marcas de cigarros"
               }
             }
           ],
@@ -8716,16 +8859,19 @@
           ],
           "explanation": {
             "en": "How the Other Half Lives mixed flash-lit alley scenes with advocacy — early social documentary shock.",
-            "fr": "How the Other Half Lives mêle ruelles au flash et plaidoyer — un choc documentaire social précoce."
+            "fr": "How the Other Half Lives mêle ruelles au flash et plaidoyer — un choc documentaire social précoce.",
+            "es": "How the Other Half Lives mezcla callejones con flash y alegato — un choque documental social precoz."
           },
           "imageUrl": "/images/public-domain/riis-bandits-roost.avif",
           "imageAlt": {
             "en": "Narrow New York alley crowded with people, Bandit’s Roost",
-            "fr": "Étroite ruelle new-yorkaise bondée, Bandit’s Roost"
+            "fr": "Étroite ruelle new-yorkaise bondée, Bandit’s Roost",
+            "es": "Estrecho callejón neoyorquino abarrotado, Bandit’s Roost"
           },
           "imageCredit": {
             "en": "Jacob Riis — public domain (Wikimedia Commons)",
-            "fr": "Jacob Riis — domaine public (Wikimedia Commons)"
+            "fr": "Jacob Riis — domaine public (Wikimedia Commons)",
+            "es": "Jacob Riis — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8734,35 +8880,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Käsebier’s Blessed Art Thou Among Women feels painterly. That places her closest to…",
-            "fr": "Blessed Art Thou Among Women de Käsebier a un air pictural. Cela la rapproche surtout de…"
+            "fr": "Blessed Art Thou Among Women de Käsebier a un air pictural. Cela la rapproche surtout de…",
+            "es": "Blessed Art Thou Among Women de Käsebier tiene un aire pictórico. Eso la acerca sobre todo a…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Sports freeze-frame strobes",
-                "fr": "Les stroboscopes de sport figé"
+                "fr": "Les stroboscopes de sport figé",
+                "es": "Los estrobos de deporte congelado"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Pictorialism — soft tone, allegory, and emotional atmosphere",
-                "fr": "Le pictorialisme — ton doux, allégorie et atmosphère émotionnelle"
+                "fr": "Le pictorialisme — ton doux, allégorie et atmosphère émotionnelle",
+                "es": "El pictorialismo — tono suave, alegoría y atmósfera emocional"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Hard-edged product catalog lighting",
-                "fr": "Un éclairage catalogue produit très dur"
+                "fr": "Un éclairage catalogue produit très dur",
+                "es": "Una iluminación de catálogo de producto muy dura"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Aerial mapping surveys",
-                "fr": "Les relevés de cartographie aérienne"
+                "fr": "Les relevés de cartographie aérienne",
+                "es": "Los relevamientos de cartografía aérea"
               }
             }
           ],
@@ -8771,16 +8922,19 @@
           ],
           "explanation": {
             "en": "Gertrude Käsebier was a leading pictorialist — photography aiming for poetic, painterly feeling.",
-            "fr": "Gertrude Käsebier fut une figure majeure du pictorialisme — une photo qui vise le sentiment poétique et pictural."
+            "fr": "Gertrude Käsebier fut une figure majeure du pictorialisme — une photo qui vise le sentiment poétique et pictural.",
+            "es": "Gertrude Käsebier fue una figura mayor del pictorialismo — una foto que busca el sentimiento poético y pictórico."
           },
           "imageUrl": "/images/public-domain/kasebier-blessed.avif",
           "imageAlt": {
             "en": "Mother and child in a soft pictorialist doorway scene",
-            "fr": "Mère et enfant dans une scène pictorialiste douce à l’entrée"
+            "fr": "Mère et enfant dans une scène pictorialiste douce à l’entrée",
+            "es": "Madre e hijo en una escena pictorialista suave en el umbral"
           },
           "imageCredit": {
             "en": "Gertrude Käsebier — public domain (Wikimedia Commons / NGA)",
-            "fr": "Gertrude Käsebier — domaine public (Wikimedia Commons / NGA)"
+            "fr": "Gertrude Käsebier — domaine public (Wikimedia Commons / NGA)",
+            "es": "Gertrude Käsebier — dominio público (Wikimedia Commons / NGA)"
           }
         },
         {
@@ -8789,35 +8943,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Blossfeldt’s plant close-ups invite you to see nature as…",
-            "fr": "Les gros plans de plantes de Blossfeldt invitent à voir la nature comme…"
+            "fr": "Les gros plans de plantes de Blossfeldt invitent à voir la nature comme…",
+            "es": "Los primeros planos de plantas de Blossfeldt invitan a ver la naturaleza como…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "A sports team logo sheet",
-                "fr": "Une planche de logos d’équipes sportives"
+                "fr": "Une planche de logos d’équipes sportives",
+                "es": "Una lámina de logos de equipos deportivos"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Architecture and design — form, rhythm, and structure",
-                "fr": "De l’architecture et du design — forme, rythme et structure"
+                "fr": "De l’architecture et du design — forme, rythme et structure",
+                "es": "Arquitectura y diseño — forma, ritmo y estructura"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Only a gardening price list",
-                "fr": "Une simple liste de prix de jardinerie"
+                "fr": "Une simple liste de prix de jardinerie",
+                "es": "Una simple lista de precios de jardinería"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A weather forecast icon set",
-                "fr": "Un jeu d’icônes météo"
+                "fr": "Un jeu d’icônes météo",
+                "es": "Un juego de iconos meteorológicos"
               }
             }
           ],
@@ -8826,16 +8985,19 @@
           ],
           "explanation": {
             "en": "Urformen der Kunst treats botanical details like modernist building blocks.",
-            "fr": "Urformen der Kunst traite les détails botaniques comme des modules modernistes."
+            "fr": "Urformen der Kunst traite les détails botaniques comme des modules modernistes.",
+            "es": "Urformen der Kunst trata los detalles botánicos como módulos modernistas."
           },
           "imageUrl": "/images/public-domain/blossfeldt-plant.avif",
           "imageAlt": {
             "en": "Enlarged botanical stem photograph by Karl Blossfeldt",
-            "fr": "Photographie botanique agrandie d’une tige par Karl Blossfeldt"
+            "fr": "Photographie botanique agrandie d’une tige par Karl Blossfeldt",
+            "es": "Fotografía botánica ampliada de un tallo por Karl Blossfeldt"
           },
           "imageCredit": {
             "en": "Karl Blossfeldt — public domain (Wikimedia Commons)",
-            "fr": "Karl Blossfeldt — domaine public (Wikimedia Commons)"
+            "fr": "Karl Blossfeldt — domaine public (Wikimedia Commons)",
+            "es": "Karl Blossfeldt — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -8844,35 +9006,40 @@
           "difficulty": "medium",
           "text": {
             "en": "In Johnston’s 1896 self-portrait as a “New Woman”, what should you read in the pose?",
-            "fr": "Dans l’autoportrait « New Woman » de Johnston (1896), que lire dans la pose ?"
+            "fr": "Dans l’autoportrait « New Woman » de Johnston (1896), que lire dans la pose ?",
+            "es": "En el autorretrato «New Woman» de Johnston (1896), ¿qué leer en la pose?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "A staged claim of independence — bicycle, beer, cigarette, and informal posture",
-                "fr": "Une affirmation mise en scène d’indépendance — vélo, bière, cigarette et posture décontractée"
+                "fr": "Une affirmation mise en scène d’indépendance — vélo, bière, cigarette et posture décontractée",
+                "es": "Una afirmación puesta en escena de independencia — bicicleta, cerveza, cigarrillo y postura informal"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A military drill manual page",
-                "fr": "Une page de manuel d’exercice militaire"
+                "fr": "Une page de manuel d’exercice militaire",
+                "es": "Una página de manual de ejercicio militar"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A silent-film title card",
-                "fr": "Une carte de titre de cinéma muet"
+                "fr": "Une carte de titre de cinéma muet",
+                "es": "Una tarjeta de título de cine mudo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Only a random wardrobe accident",
-                "fr": "Un simple accident de dressing"
+                "fr": "Un simple accident de dressing",
+                "es": "Un simple accidente de vestuario"
               }
             }
           ],
@@ -8881,16 +9048,19 @@
           ],
           "explanation": {
             "en": "Frances Benjamin Johnston plays with props and attitude to satirize / claim modern femininity.",
-            "fr": "Frances Benjamin Johnston joue des accessoires et de l’attitude pour caricaturer / revendiquer une féminité moderne."
+            "fr": "Frances Benjamin Johnston joue des accessoires et de l’attitude pour caricaturer / revendiquer une féminité moderne.",
+            "es": "Frances Benjamin Johnston juega con accesorios y actitud para caricaturizar / reivindicar una feminidad moderna."
           },
           "imageUrl": "/images/public-domain/johnston-new-woman.avif",
           "imageAlt": {
             "en": "Woman seated informally with bicycle and cigarette, 1896 self-portrait",
-            "fr": "Femme assise de façon informelle avec vélo et cigarette, autoportrait 1896"
+            "fr": "Femme assise de façon informelle avec vélo et cigarette, autoportrait 1896",
+            "es": "Mujer sentada de forma informal con bicicleta y cigarrillo, autorretrato 1896"
           },
           "imageCredit": {
             "en": "Frances Benjamin Johnston — public domain (Library of Congress / Wikimedia Commons)",
-            "fr": "Frances Benjamin Johnston — domaine public (Library of Congress / Wikimedia Commons)"
+            "fr": "Frances Benjamin Johnston — domaine public (Library of Congress / Wikimedia Commons)",
+            "es": "Frances Benjamin Johnston — dominio público (Library of Congress / Wikimedia Commons)"
           }
         },
         {
@@ -8899,35 +9069,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Many FSA / U.S. federal agency photographs are often reusable because…",
-            "fr": "Beaucoup de photos FSA / d’agences fédérales US sont souvent réutilisables parce que…"
+            "fr": "Beaucoup de photos FSA / d’agences fédérales US sont souvent réutilisables parce que…",
+            "es": "Muchas fotos FSA / de agencias federales de EE. UU. suelen ser reutilizables porque…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "U.S. federal government works are generally not protected by copyright",
-                "fr": "Les œuvres du gouvernement fédéral US ne sont en général pas protégées par le copyright"
+                "fr": "Les œuvres du gouvernement fédéral US ne sont en général pas protégées par le copyright",
+                "es": "Las obras del gobierno federal de EE. UU. en general no están protegidas por copyright"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Every black-and-white photo older than 10 years is free worldwide",
-                "fr": "Toute photo N&B de plus de 10 ans est libre partout dans le monde"
+                "fr": "Toute photo N&B de plus de 10 ans est libre partout dans le monde",
+                "es": "Toda foto en B/N de más de 10 años es libre en todo el mundo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Instagram always waives rights on historical images",
-                "fr": "Instagram renonce toujours aux droits sur les images historiques"
+                "fr": "Instagram renonce toujours aux droits sur les images historiques",
+                "es": "Instagram siempre renuncia a los derechos sobre imágenes históricas"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only museum gift shops can use them",
-                "fr": "Seules les boutiques de musées peuvent les utiliser"
+                "fr": "Seules les boutiques de musées peuvent les utiliser",
+                "es": "Solo las tiendas de museos pueden usarlas"
               }
             }
           ],
@@ -8936,16 +9111,19 @@
           ],
           "explanation": {
             "en": "U.S. federal works are a classic public-domain corpus — still verify the exact file and any later overlays.",
-            "fr": "Les œuvres fédérales US forment un corpus domaine public classique — vérifie quand même le fichier exact et d’éventuelles couches ultérieures."
+            "fr": "Les œuvres fédérales US forment un corpus domaine public classique — vérifie quand même le fichier exact et d’éventuelles couches ultérieures.",
+            "es": "Las obras federales de EE. UU. forman un corpus clásico de dominio público — verifica de todos modos el archivo exacto y posibles capas posteriores."
           },
           "imageUrl": "/images/public-domain/lange-migrant-mother.avif",
           "imageAlt": {
             "en": "Migrant Mother — FSA documentary photograph",
-            "fr": "Migrant Mother — photographie documentaire FSA"
+            "fr": "Migrant Mother — photographie documentaire FSA",
+            "es": "Migrant Mother — fotografía documental FSA"
           },
           "imageCredit": {
             "en": "Dorothea Lange — public domain (U.S. federal / Library of Congress)",
-            "fr": "Dorothea Lange — domaine public (fédéral US / Library of Congress)"
+            "fr": "Dorothea Lange — domaine public (fédéral US / Library of Congress)",
+            "es": "Dorothea Lange — dominio público (federal US / Library of Congress)"
           }
         },
         {
@@ -8954,35 +9132,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Niépce’s View from the Window at Le Gras (c. 1826–27) is usually treated as public domain because…",
-            "fr": "Le Point de vue du Gras de Niépce (v. 1826–27) est en général traité comme domaine public parce que…"
+            "fr": "Le Point de vue du Gras de Niépce (v. 1826–27) est en général traité comme domaine public parce que…",
+            "es": "El Point de vue du Gras de Niépce (hacia 1826–27) suele tratarse como dominio público porque…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Copyright terms for that era’s author have long expired",
-                "fr": "Les délais de protection pour l’auteur de cette époque sont largement expirés"
+                "fr": "Les délais de protection pour l’auteur de cette époque sont largement expirés",
+                "es": "Los plazos de protección del autor de aquella época han expirado hace mucho"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Any photo of a window is automatically free",
-                "fr": "Toute photo de fenêtre est automatiquement libre"
+                "fr": "Toute photo de fenêtre est automatiquement libre",
+                "es": "Toda foto de una ventana es automáticamente libre"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "UNESCO owns exclusive worldwide rights forever",
-                "fr": "L’UNESCO détient l’exclusivité mondiale à perpétuité"
+                "fr": "L’UNESCO détient l’exclusivité mondiale à perpétuité",
+                "es": "La UNESCO posee la exclusividad mundial a perpetuidad"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only RAW files can enter the public domain",
-                "fr": "Seuls les fichiers RAW entrent dans le domaine public"
+                "fr": "Seuls les fichiers RAW entrent dans le domaine public",
+                "es": "Solo los archivos RAW entran en el dominio público"
               }
             }
           ],
@@ -8991,16 +9174,19 @@
           ],
           "explanation": {
             "en": "Very old works typically sit in the public domain after long copyright terms — confirm the specific reproduction you use.",
-            "fr": "Les œuvres très anciennes tombent en domaine public après de longs délais — confirme la reproduction précise que tu utilises."
+            "fr": "Les œuvres très anciennes tombent en domaine public après de longs délais — confirme la reproduction précise que tu utilises.",
+            "es": "Las obras muy antiguas caen en dominio público tras largos plazos — confirma la reproducción concreta que usas."
           },
           "imageUrl": "/images/public-domain/niepce-le-gras.avif",
           "imageAlt": {
             "en": "Earliest surviving camera photograph — View from the Window at Le Gras",
-            "fr": "Plus ancienne photo d’appareil conservée — Point de vue du Gras"
+            "fr": "Plus ancienne photo d’appareil conservée — Point de vue du Gras",
+            "es": "Fotografía de cámara más antigua conservada — Point de vue du Gras"
           },
           "imageCredit": {
             "en": "Nicéphore Niépce — public domain (Wikimedia Commons)",
-            "fr": "Nicéphore Niépce — domaine public (Wikimedia Commons)"
+            "fr": "Nicéphore Niépce — domaine public (Wikimedia Commons)",
+            "es": "Nicéphore Niépce — dominio público (Wikimedia Commons)"
           }
         },
         {
@@ -9009,35 +9195,40 @@
           "difficulty": "hard",
           "text": {
             "en": "You want to print a public-domain Muybridge plate in a commercial book. Safest habit?",
-            "fr": "Tu veux imprimer une planche Muybridge domaine public dans un livre commercial. Réflexe le plus sûr ?"
+            "fr": "Tu veux imprimer une planche Muybridge domaine public dans un livre commercial. Réflexe le plus sûr ?",
+            "es": "Quieres imprimir una placa Muybridge de dominio público en un libro comercial. ¿El hábito más seguro?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Assume Google Images thumbnails prove zero rights forever",
-                "fr": "Croire que les miniatures Google Images prouvent zéro droit pour toujours"
+                "fr": "Croire que les miniatures Google Images prouvent zéro droit pour toujours",
+                "es": "Creer que las miniaturas de Google Images prueban cero derechos para siempre"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only publish if you recreate the horse with AI first",
-                "fr": "Ne publier que si tu recrées d’abord le cheval en IA"
+                "fr": "Ne publier que si tu recrées d’abord le cheval en IA",
+                "es": "Publicar solo si recreas primero el caballo con IA"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Confirm the scan/source is actually PD (not a modern museum photo with fresh rights)",
-                "fr": "Vérifier que le scan/source est bien DP (pas une photo musée moderne encore protégée)"
+                "fr": "Vérifier que le scan/source est bien DP (pas une photo musée moderne encore protégée)",
+                "es": "Comprobar que el escaneo/fuente es realmente DP (no una foto moderna de museo aún protegida)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Never credit historical authors once PD",
-                "fr": "Ne jamais créditer les auteurs historiques une fois en DP"
+                "fr": "Ne jamais créditer les auteurs historiques une fois en DP",
+                "es": "Nunca acreditar a los autores históricos una vez en DP"
               }
             }
           ],
@@ -9046,16 +9237,19 @@
           ],
           "explanation": {
             "en": "The underlying work can be PD while a particular photograph of a print still carries rights — check provenance.",
-            "fr": "L’œuvre sous-jacente peut être DP alors qu’une photo moderne du tirage reste protégée — vérifie la provenance."
+            "fr": "L’œuvre sous-jacente peut être DP alors qu’une photo moderne du tirage reste protégée — vérifie la provenance.",
+            "es": "La obra subyacente puede ser DP mientras una foto moderna de la copia sigue protegida — verifica la procedencia."
           },
           "imageUrl": "/images/public-domain/muybridge-horse.avif",
           "imageAlt": {
             "en": "Muybridge horse locomotion sequence plate",
-            "fr": "Planche de locomotion du cheval de Muybridge"
+            "fr": "Planche de locomotion du cheval de Muybridge",
+            "es": "Placa de locomoción del caballo de Muybridge"
           },
           "imageCredit": {
             "en": "Eadweard Muybridge — public domain (Wikimedia Commons)",
-            "fr": "Eadweard Muybridge — domaine public (Wikimedia Commons)"
+            "fr": "Eadweard Muybridge — domaine public (Wikimedia Commons)",
+            "es": "Eadweard Muybridge — dominio público (Wikimedia Commons)"
           }
         }
       ]
