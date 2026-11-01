@@ -39,7 +39,7 @@ describe('vague 1.47 — docs v1.46.0 + flash-studio LocalizedString.es', () => 
     /* Docs headline moved to v1.47.0 in vague 1.48 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.46**');
     expect(nextSteps).toMatch(/no-go.*1\.47/);
-    expect(readme).toMatch(/v1\.(4[6789]|5[0123456789]|60|61|62|63|64|65|66|67|68)\.0/);
+    expect(readme).toMatch(/v1\.(4[6789]|5[0123456789]|60|61|62|63|64|65|66|67|68|69)\.0/);
   });
 
   it('flash-studio ships .es on all LocalizedString fields (184)', () => {

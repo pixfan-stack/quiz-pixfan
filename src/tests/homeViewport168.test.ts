@@ -34,8 +34,8 @@ const articleDePages: Array<[string, string, string]> = [
 describe('vague 1.68 — docs v1.67.0 + fiche séance DE SEO unlock', () => {
   it('docs still mention vague 1.67/1.68; no-go through 1.68; headline may be v1.68.0', () => {
     /* Docs headline moved to v1.68.0 in vague 1.69 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(67|68)\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.(67|68)\.0\*\*/);
+    expect(readme).toMatch(/v1\.(67|68|69)\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(67|68|69)\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.67**');
     expect(nextSteps).toContain('Vague **1.68**');
     expect(nextSteps).toMatch(/no-go.*1\.68/);
