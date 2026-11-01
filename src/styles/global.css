@@ -3073,6 +3073,14 @@ a {
 
 /* ---------- Responsive ---------- */
 
+/* Phone: hide header nav pills (already in footer) so lang + Nuit/Jour stay on-screen. */
+@media (max-width: 720px) {
+  .app-header .guide-nav-link,
+  .app-header .app-header__pixfan-link {
+    display: none;
+  }
+}
+
 @media (min-width: 540px) {
   .app-header {
     padding: 0 1.75rem;
