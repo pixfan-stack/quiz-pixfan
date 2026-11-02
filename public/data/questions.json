@@ -8,11 +8,13 @@
       ],
       "title": {
         "en": "Exposure Triangle",
-        "fr": "Triangle d'exposition"
+        "fr": "Triangle d'exposition",
+        "es": "Triángulo de exposición"
       },
       "description": {
         "en": "Master aperture, shutter speed and ISO — the three pillars of every photo.",
-        "fr": "Maîtrisez ouverture, vitesse d'obturation et ISO — les trois piliers de chaque photo."
+        "fr": "Maîtrisez ouverture, vitesse d'obturation et ISO — les trois piliers de chaque photo.",
+        "es": "Domina apertura, velocidad de obturación e ISO — los tres pilares de cada foto."
       },
       "questions": [
         {
@@ -20,35 +22,40 @@
           "type": "single",
           "text": {
             "en": "What does a larger aperture (e.g. f/1.8 vs f/11) mainly do?",
-            "fr": "Que fait principalement une grande ouverture (ex. f/1.8 vs f/11) ?"
+            "fr": "Que fait principalement une grande ouverture (ex. f/1.8 vs f/11) ?",
+            "es": "¿Qué hace principalmente una apertura mayor (p. ej. f/1.8 frente a f/11)?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Slows down the shutter automatically",
-                "fr": "Ralentit automatiquement l'obturateur"
+                "fr": "Ralentit automatiquement l'obturateur",
+                "es": "Ralentiza automáticamente el obturador"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Removes digital noise",
-                "fr": "Supprime le bruit numérique"
+                "fr": "Supprime le bruit numérique",
+                "es": "Elimina el ruido digital"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Makes the image sharper everywhere",
-                "fr": "Rend l'image plus nette partout"
+                "fr": "Rend l'image plus nette partout",
+                "es": "Hace la imagen más nítida en todas partes"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Lets in more light and reduces depth of field",
-                "fr": "Laisse entrer plus de lumière et réduit la profondeur de champ"
+                "fr": "Laisse entrer plus de lumière et réduit la profondeur de champ",
+                "es": "Deja entrar más luz y reduce la profundidad de campo"
               }
             }
           ],
@@ -57,17 +64,20 @@
           ],
           "explanation": {
             "en": "A wider aperture (smaller f-number) admits more light and produces a shallower depth of field — classic for portraits with background blur.",
-            "fr": "Une grande ouverture (petit chiffre f) laisse entrer plus de lumière et réduit la profondeur de champ — idéal pour les portraits avec flou d'arrière-plan."
+            "fr": "Une grande ouverture (petit chiffre f) laisse entrer plus de lumière et réduit la profondeur de champ — idéal pour les portraits avec flou d'arrière-plan.",
+            "es": "Una apertura más abierta (número f más bajo) admite más luz y produce una profundidad de campo más superficial — clásico en retratos con fondo desenfocado."
           },
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Vintage camera on a wooden table",
-            "fr": "Appareil photo vintage sur une table en bois"
+            "fr": "Appareil photo vintage sur une table en bois",
+            "es": "Cámara vintage sobre una mesa de madera"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -75,35 +85,40 @@
           "type": "single",
           "text": {
             "en": "You want to freeze a sprinter mid-stride. Which shutter speed is most suitable?",
-            "fr": "Vous voulez figer un sprinteur en plein effort. Quelle vitesse d'obturation est la plus adaptée ?"
+            "fr": "Vous voulez figer un sprinteur en plein effort. Quelle vitesse d'obturation est la plus adaptée ?",
+            "es": "Quieres congelar a un sprinter a media zancada. ¿Qué velocidad de obturación conviene más?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "2 s",
-                "fr": "2 s"
+                "fr": "2 s",
+                "es": "2 segundos (muy lenta)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "1/30 s",
-                "fr": "1/30 s"
+                "fr": "1/30 s",
+                "es": "1/30 de segundo"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "1/60 s",
-                "fr": "1/60 s"
+                "fr": "1/60 s",
+                "es": "1/60 de segundo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "1/1000 s",
-                "fr": "1/1000 s"
+                "fr": "1/1000 s",
+                "es": "1/1000 de segundo (muy rápida)"
               }
             }
           ],
@@ -112,17 +127,20 @@
           ],
           "explanation": {
             "en": "Fast action needs a short exposure time (high shutter speed) like 1/1000 s or faster to freeze motion.",
-            "fr": "L'action rapide exige un temps d'exposition court (vitesse élevée), comme 1/1000 s ou plus, pour figer le mouvement."
+            "fr": "L'action rapide exige un temps d'exposition court (vitesse élevée), comme 1/1000 s ou plus, pour figer le mouvement.",
+            "es": "La acción rápida necesita un tiempo de exposición corto (velocidad alta), como 1/1000 s o más, para congelar el movimiento."
           },
           "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
           "imageAlt": {
             "en": "Camera dials and settings",
-            "fr": "Molettes et réglages d’appareil"
+            "fr": "Molettes et réglages d’appareil",
+            "es": "Ruedas y ajustes de una cámara"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -130,35 +148,40 @@
           "type": "multiple",
           "text": {
             "en": "Which settings are part of the classic exposure triangle?",
-            "fr": "Quels réglages font partie du triangle d'exposition classique ?"
+            "fr": "Quels réglages font partie du triangle d'exposition classique ?",
+            "es": "¿Qué ajustes forman parte del triángulo de exposición clásico?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Shutter speed",
-                "fr": "Vitesse d'obturation"
+                "fr": "Vitesse d'obturation",
+                "es": "Velocidad de obturación"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "White balance",
-                "fr": "Balance des blancs"
+                "fr": "Balance des blancs",
+                "es": "Balance de blancos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "ISO",
-                "fr": "ISO"
+                "fr": "ISO",
+                "es": "ISO (sensibilidad)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Aperture",
-                "fr": "Ouverture"
+                "fr": "Ouverture",
+                "es": "Apertura"
               }
             }
           ],
@@ -169,17 +192,20 @@
           ],
           "explanation": {
             "en": "The exposure triangle is aperture, shutter speed and ISO. White balance controls color temperature, not exposure.",
-            "fr": "Le triangle d'exposition regroupe ouverture, vitesse et ISO. La balance des blancs gère la température de couleur, pas l'exposition."
+            "fr": "Le triangle d'exposition regroupe ouverture, vitesse et ISO. La balance des blancs gère la température de couleur, pas l'exposition.",
+            "es": "El triángulo de exposición agrupa apertura, velocidad e ISO. El balance de blancos controla la temperatura de color, no la exposición."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
           "imageAlt": {
             "en": "Camera in hands outdoors",
-            "fr": "Appareil en main en extérieur"
+            "fr": "Appareil en main en extérieur",
+            "es": "Cámara en las manos al aire libre"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -187,35 +213,40 @@
           "type": "single",
           "text": {
             "en": "Raising ISO primarily helps you…",
-            "fr": "Augmenter l'ISO permet surtout de…"
+            "fr": "Augmenter l'ISO permet surtout de…",
+            "es": "Subir el ISO sirve sobre todo para…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Increase optical zoom",
-                "fr": "Augmenter le zoom optique"
+                "fr": "Augmenter le zoom optique",
+                "es": "Aumentar el zoom óptico"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Disable autofocus",
-                "fr": "Désactiver l'autofocus"
+                "fr": "Désactiver l'autofocus",
+                "es": "Desactivar el autofoco"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Shoot in lower light (at the cost of more noise)",
-                "fr": "Photographier en basse lumière (au prix de plus de bruit)"
+                "fr": "Photographier en basse lumière (au prix de plus de bruit)",
+                "es": "Fotografiar con poca luz (a costa de más ruido)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Always get a shallower depth of field",
-                "fr": "Obtenir toujours une plus faible profondeur de champ"
+                "fr": "Obtenir toujours une plus faible profondeur de champ",
+                "es": "Obtener siempre una profundidad de campo más superficial"
               }
             }
           ],
@@ -224,17 +255,20 @@
           ],
           "explanation": {
             "en": "Higher ISO amplifies the sensor signal so you can expose correctly in dim light, but it usually increases noise.",
-            "fr": "Un ISO élevé amplifie le signal du capteur pour exposer correctement en faible lumière, au prix souvent d'un bruit plus visible."
+            "fr": "Un ISO élevé amplifie le signal du capteur pour exposer correctement en faible lumière, au prix souvent d'un bruit plus visible.",
+            "es": "Un ISO alto amplifica la señal del sensor para exponer bien con poca luz, pero suele aumentar el ruido."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
           "imageAlt": {
             "en": "Photography equipment detail",
-            "fr": "Détail de matériel photo"
+            "fr": "Détail de matériel photo",
+            "es": "Detalle de equipo fotográfico"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -242,35 +276,40 @@
           "type": "single",
           "text": {
             "en": "What does “stopping down” from f/2.8 to f/5.6 mean?",
-            "fr": "Que signifie « fermer » de f/2.8 à f/5.6 ?"
+            "fr": "Que signifie « fermer » de f/2.8 à f/5.6 ?",
+            "es": "¿Qué significa «cerrar» de f/2.8 a f/5.6?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "The aperture gets larger; more light",
-                "fr": "L'ouverture s'agrandit ; plus de lumière"
+                "fr": "L'ouverture s'agrandit ; plus de lumière",
+                "es": "La apertura se agranda; más luz"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "The aperture gets smaller; about 2 stops less light",
-                "fr": "L'ouverture se réduit ; environ 2 stops de lumière en moins"
+                "fr": "L'ouverture se réduit ; environ 2 stops de lumière en moins",
+                "es": "La apertura se reduce; unos 2 pasos menos de luz"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "The lens zooms out",
-                "fr": "L'objectif dézoome"
+                "fr": "L'objectif dézoome",
+                "es": "El objetivo aleja el zoom"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "ISO doubles twice",
-                "fr": "L'ISO double deux fois"
+                "fr": "L'ISO double deux fois",
+                "es": "El ISO se duplica dos veces"
               }
             }
           ],
@@ -279,17 +318,20 @@
           ],
           "explanation": {
             "en": "Each full stop halves the light. From f/2.8 → f/4 → f/5.6 is two stops smaller (less light, more depth of field).",
-            "fr": "Chaque stop plein divise la lumière par deux. De f/2.8 → f/4 → f/5.6 : deux stops de moins de lumière, plus de profondeur de champ."
+            "fr": "Chaque stop plein divise la lumière par deux. De f/2.8 → f/4 → f/5.6 : deux stops de moins de lumière, plus de profondeur de champ.",
+            "es": "Cada paso completo divide la luz por dos. De f/2.8 → f/4 → f/5.6 son dos pasos menos de luz y más profundidad de campo."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
           "imageAlt": {
             "en": "Mountain ridges with deep focus — stopping down for more depth of field",
-            "fr": "Crêtes de montagne nettes — fermer le diaphragme pour plus de profondeur de champ"
+            "fr": "Crêtes de montagne nettes — fermer le diaphragme pour plus de profondeur de champ",
+            "es": "Crestas de montaña nítidas — cerrar el diafragma para más profundidad de campo"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -297,35 +339,40 @@
           "type": "single",
           "text": {
             "en": "For a silky waterfall effect, photographers often use…",
-            "fr": "Pour un effet de cascade soyeuse, les photographes utilisent souvent…"
+            "fr": "Pour un effet de cascade soyeuse, les photographes utilisent souvent…",
+            "es": "Para un efecto de cascada sedosa, los fotógrafos suelen usar…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "A long shutter speed (and often a tripod / ND filter)",
-                "fr": "Une longue exposition (et souvent un trépied / filtre ND)"
+                "fr": "Une longue exposition (et souvent un trépied / filtre ND)",
+                "es": "Una velocidad lenta (y a menudo trípode / filtro ND)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Flash at full power",
-                "fr": "Le flash à pleine puissance"
+                "fr": "Le flash à pleine puissance",
+                "es": "El flash a máxima potencia"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "f/1.2 on every shot",
-                "fr": "f/1.2 sur chaque photo"
+                "fr": "f/1.2 sur chaque photo",
+                "es": "f/1.2 en cada toma"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "The highest possible ISO only",
-                "fr": "Uniquement l'ISO le plus élevé possible"
+                "fr": "Uniquement l'ISO le plus élevé possible",
+                "es": "Solo el ISO más alto posible"
               }
             }
           ],
@@ -334,17 +381,20 @@
           ],
           "explanation": {
             "en": "Long exposures blur moving water into a smooth “silk” look. A tripod (and ND filters in daylight) keep the rest sharp.",
-            "fr": "Les poses longues floutent l'eau en mouvement pour un rendu soyeux. Un trépied (et des filtres ND en plein jour) gardent le reste net."
+            "fr": "Les poses longues floutent l'eau en mouvement pour un rendu soyeux. Un trépied (et des filtres ND en plein jour) gardent le reste net.",
+            "es": "Las exposiciones largas difuminan el agua en movimiento con un aspecto sedoso. Un trípode (y filtros ND a plena luz) mantienen el resto nítido."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1518182170546-07661fd94144.avif",
           "imageAlt": {
             "en": "Silky waterfall long exposure — slow shutter territory",
-            "fr": "Cascade soyeuse en pose longue — terrain de l’obturateur lent"
+            "fr": "Cascade soyeuse en pose longue — terrain de l’obturateur lent",
+            "es": "Cascada sedosa en exposición larga — terreno del obturador lento"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -352,35 +402,40 @@
           "type": "single",
           "text": {
             "en": "What happens when you underexpose an image significantly?",
-            "fr": "Que se passe-t-il lorsque vous sous-exposez fortement une image ?"
+            "fr": "Que se passe-t-il lorsque vous sous-exposez fortement une image ?",
+            "es": "¿Qué ocurre cuando subexpones mucho una imagen?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "The depth of field increases",
-                "fr": "La profondeur de champ augmente"
+                "fr": "La profondeur de champ augmente",
+                "es": "Aumenta la profundidad de campo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Dark areas lose detail and may become pure black",
-                "fr": "Les zones sombres perdent du détail et peuvent devenir purement noires"
+                "fr": "Les zones sombres perdent du détail et peuvent devenir purement noires",
+                "es": "Las zonas oscuras pierden detalle y pueden volverse negro puro"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Colors become more saturated",
-                "fr": "Les couleurs deviennent plus saturées"
+                "fr": "Les couleurs deviennent plus saturées",
+                "es": "Los colores se saturan más"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "The image becomes overexposed",
-                "fr": "L'image devient sur-exposée"
+                "fr": "L'image devient sur-exposée",
+                "es": "La imagen queda sobreexpuesta"
               }
             }
           ],
@@ -389,17 +444,20 @@
           ],
           "explanation": {
             "en": "Underexposure means insufficient light reaches the sensor, causing shadow detail loss and potential clipping to pure black.",
-            "fr": "La sous-exposition signifie qu'il y a insuffisance de lumière sur le capteur, causant une perte de détail dans les ombres et un écrêtage potentiel sur le noir pur."
+            "fr": "La sous-exposition signifie qu'il y a insuffisance de lumière sur le capteur, causant une perte de détail dans les ombres et un écrêtage potentiel sur le noir pur.",
+            "es": "La subexposición significa que llega poca luz al sensor: se pierde detalle en las sombras y puede haber recorte hacia el negro puro."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
           "imageAlt": {
             "en": "Moody dark landscape — underexposure crushed shadows",
-            "fr": "Paysage sombre d’ambiance — sous-exposition qui écrase les ombres"
+            "fr": "Paysage sombre d’ambiance — sous-exposition qui écrase les ombres",
+            "es": "Paisaje oscuro de ambiente — subexposición que aplasta las sombras"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -407,35 +465,40 @@
           "type": "single",
           "text": {
             "en": "What is the purpose of metering modes (matrix, spot, center-weighted)?",
-            "fr": "Quel est le but des modes de mesure d'exposition (matriciel, spot, pondéré centre) ?"
+            "fr": "Quel est le but des modes de mesure d'exposition (matriciel, spot, pondéré centre) ?",
+            "es": "¿Para qué sirven los modos de medición (matricial, puntual, ponderada al centro)?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "To change the white balance",
-                "fr": "Pour modifier la balance des blancs"
+                "fr": "Pour modifier la balance des blancs",
+                "es": "Para cambiar el balance de blancos"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "To adjust the autofocus points",
-                "fr": "Pour ajuster les points de autofocus"
+                "fr": "Pour ajuster les points de autofocus",
+                "es": "Para ajustar los puntos de autofoco"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "To determine how the camera measures light for exposure settings",
-                "fr": "Pour déterminer comment l'appareil mesure la lumière pour les paramètres d'exposition"
+                "fr": "Pour déterminer comment l'appareil mesure la lumière pour les paramètres d'exposition",
+                "es": "Para decidir cómo mide la cámara la luz de la exposición"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "To select the image resolution",
-                "fr": "Pour sélectionner la résolution d'image"
+                "fr": "Pour sélectionner la résolution d'image",
+                "es": "Para elegir la resolución de la imagen"
               }
             }
           ],
@@ -444,7 +507,8 @@
           ],
           "explanation": {
             "en": "Metering modes tell the camera how to evaluate light: matrix evaluates the whole frame, spot measures a tiny area, center-weighted prioritizes the center.",
-            "fr": "Les modes de mesure indiquent à l'appareil comment évaluer la lumière : matriel évalue tout le cadre, spot mesure une zone minuscule, pondéré centre privilégie le centre."
+            "fr": "Les modes de mesure indiquent à l'appareil comment évaluer la lumière : matriel évalue tout le cadre, spot mesure une zone minuscule, pondéré centre privilégie le centre.",
+            "es": "Los modos de medición indican cómo evaluar la luz: matricial mira todo el encuadre, puntual una zona mínima, ponderada al centro prioriza el centro."
           },
           "difficulty": "easy"
         },
@@ -453,35 +517,40 @@
           "type": "multiple",
           "text": {
             "en": "Which scenarios benefit from using manual exposure mode?",
-            "fr": "Quels scénarios bénéficient de l'utilisation du mode exposition manuelle ?"
+            "fr": "Quels scénarios bénéficient de l'utilisation du mode exposition manuelle ?",
+            "es": "¿Qué escenarios se benefician del modo de exposición manual?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Only in bright sunlight",
-                "fr": "Uniquement en plein soleil"
+                "fr": "Uniquement en plein soleil",
+                "es": "Solo a pleno sol"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Astrophotography and long exposures",
-                "fr": "Astrophotographie et longues expositions"
+                "fr": "Astrophotographie et longues expositions",
+                "es": "Astrofotografía y exposiciones largas"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Studio photography with controlled lighting",
-                "fr": "Photographie en studio avec éclairage contrôlé"
+                "fr": "Photographie en studio avec éclairage contrôlé",
+                "es": "Fotografía de estudio con luz controlada"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "When shooting consistent sequences (e.g., panoramas)",
-                "fr": "Lors de séquences cohérentes (ex. panoramas)"
+                "fr": "Lors de séquences cohérentes (ex. panoramas)",
+                "es": "Secuencias coherentes (p. ej. panorámicas)"
               }
             }
           ],
@@ -492,7 +561,8 @@
           ],
           "explanation": {
             "en": "Manual mode gives full control when lighting is consistent or predictable, preventing the camera from changing settings between shots.",
-            "fr": "Le mode manuel donne un contrôle total quand l'éclairage est cohérent ou prévisible, empêchant l'appareil de changer les paramètres entre les prises."
+            "fr": "Le mode manuel donne un contrôle total quand l'éclairage est cohérent ou prévisible, empêchant l'appareil de changer les paramètres entre les prises.",
+            "es": "El modo manual da control total cuando la luz es estable o previsible, evitando que la cámara cambie ajustes entre tomas."
           },
           "difficulty": "easy"
         },
@@ -501,35 +571,40 @@
           "type": "single",
           "text": {
             "en": "What does ETTR stand for in exposure technique?",
-            "fr": "Que signifie ETTR en technique d'exposition ?"
+            "fr": "Que signifie ETTR en technique d'exposition ?",
+            "es": "¿Qué significa ETTR en técnica de exposición?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Enhanced Triple Technical Resolution",
-                "fr": "Résolution Technique Triple Améliorée"
+                "fr": "Résolution Technique Triple Améliorée",
+                "es": "Resolución Técnica Triple Mejorada (falso acrónimo)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Expose To The Right",
-                "fr": "Exposer à Droite"
+                "fr": "Exposer à Droite",
+                "es": "Expose To The Right (exponer a la derecha)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Electronic Time Transfer Rate",
-                "fr": "Taux de Transfert Électronique du Temps"
+                "fr": "Taux de Transfert Électronique du Temps",
+                "es": "Tasa de Transferencia Electrónica de Tiempo (falso)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "External Trigger Timing Reference",
-                "fr": "Référence de Timing de Déclenchement Externe"
+                "fr": "Référence de Timing de Déclenchement Externe",
+                "es": "Referencia Externa de Temporización de Disparo (falso)"
               }
             }
           ],
@@ -538,7 +613,8 @@
           ],
           "explanation": {
             "en": "ETTR means exposing as brightly as possible without clipping highlights, maximizing shadow detail and reducing noise in post-processing.",
-            "fr": "ETTR signifie exposer aussi brillamment que possible sans écrêter les hautes lumières, maximisant les détails dans les ombres et réduisant le bruit en post-traitement."
+            "fr": "ETTR signifie exposer aussi brillamment que possible sans écrêter les hautes lumières, maximisant les détails dans les ombres et réduisant le bruit en post-traitement.",
+            "es": "ETTR significa exponer lo más claro posible sin recortar altas luces, maximizando detalle en sombras y reduciendo ruido en el revelado."
           },
           "difficulty": "easy"
         },
@@ -547,35 +623,40 @@
           "type": "single",
           "text": {
             "en": "How does a neutral density (ND) filter affect exposure?",
-            "fr": "Comment un filtre à densité neutre (ND) affecte-t-il l'exposition ?"
+            "fr": "Comment un filtre à densité neutre (ND) affecte-t-il l'exposition ?",
+            "es": "¿Cómo afecta un filtro de densidad neutra (ND) a la exposición?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "It increases the aperture size",
-                "fr": "Il augmente la taille de l'ouverture"
+                "fr": "Il augmente la taille de l'ouverture",
+                "es": "Aumenta el tamaño de la apertura"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "It boosts the ISO automatically",
-                "fr": "Il augmente l'ISO automatiquement"
+                "fr": "Il augmente l'ISO automatiquement",
+                "es": "Sube el ISO automáticamente"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "It changes the color temperature",
-                "fr": "Il modifie la température de couleur"
+                "fr": "Il modifie la température de couleur",
+                "es": "Cambia la temperatura de color"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "It reduces all wavelengths of light equally, allowing longer exposures",
-                "fr": "Il réduit toutes les longueurs d'onde également, permettant des expositions plus longues"
+                "fr": "Il réduit toutes les longueurs d'onde également, permettant des expositions plus longues",
+                "es": "Reduce por igual todas las longitudes de onda, permitiendo exposiciones más largas"
               }
             }
           ],
@@ -584,17 +665,20 @@
           ],
           "explanation": {
             "en": "ND filters act like sunglasses for your lens, reducing light intake uniformly across the spectrum, enabling slow shutter speeds even in bright conditions.",
-            "fr": "Les filtres ND agissent comme des lunettes de soleil pour votre objectif, réduisant uniformément l'entrée de lumière, permettant des vitesses d'obturation lentes même en conditions lumineuses."
+            "fr": "Les filtres ND agissent comme des lunettes de soleil pour votre objectif, réduisant uniformément l'entrée de lumière, permettant des vitesses d'obturation lentes même en conditions lumineuses.",
+            "es": "Los filtros ND actúan como gafas de sol del objetivo: reducen la luz de forma uniforme y permiten obturadores lentos incluso con mucha luz."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1493246507139-91e8fad9978e.avif",
           "imageAlt": {
             "en": "Bright daylight vista — ND filter territory for longer exposures",
-            "fr": "Vue en plein jour — terrain filtre ND pour allonger l’exposition"
+            "fr": "Vue en plein jour — terrain filtre ND pour allonger l’exposition",
+            "es": "Vista a plena luz del día — terreno del filtro ND para alargar la exposición"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -602,35 +686,40 @@
           "type": "single",
           "text": {
             "en": "What is the reciprocal rule in photography?",
-            "fr": "Quelle est la règle de réciprocité en photographie ?"
+            "fr": "Quelle est la règle de réciprocité en photographie ?",
+            "es": "¿Qué es la regla de reciprocidad en fotografía?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Shutter speed should be at least 1/focal length to avoid camera shake",
-                "fr": "La vitesse d'obturation doit être d'au moins 1/focale pour éviter le flou de bougé"
+                "fr": "La vitesse d'obturation doit être d'au moins 1/focale pour éviter le flou de bougé",
+                "es": "La velocidad debe ser al menos 1/distancia focal para evitar trepidación"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Sensor size determines the maximum resolution",
-                "fr": "La taille du capteur détermine la résolution maximale"
+                "fr": "La taille du capteur détermine la résolution maximale",
+                "es": "El tamaño del sensor determina la resolución máxima"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "ISO should double when aperture opens one stop",
-                "fr": "L'ISO doit doubler quand l'ouverture ouvre d'un stop"
+                "fr": "L'ISO doit doubler quand l'ouverture ouvre d'un stop",
+                "es": "El ISO debe duplicarse al abrir un paso de apertura"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Aperture and shutter speed are inversely proportional",
-                "fr": "L'ouverture et la vitesse d'obturation sont inversement proportionnelles"
+                "fr": "L'ouverture et la vitesse d'obturation sont inversement proportionnelles",
+                "es": "Apertura y velocidad de obturación son inversamente proporcionales"
               }
             }
           ],
@@ -639,7 +728,8 @@
           ],
           "explanation": {
             "en": "The reciprocal rule helps prevent camera shake: use a shutter speed ≥ 1/focal length (e.g., 1/50s for a 50mm lens on full-frame).",
-            "fr": "La règle de réciprocité aide à éviter le flou de bougé : utilisez une vitesse ≥ 1/focale (ex. 1/50s pour un 50mm en plein format)."
+            "fr": "La règle de réciprocité aide à éviter le flou de bougé : utilisez une vitesse ≥ 1/focale (ex. 1/50s pour un 50mm en plein format).",
+            "es": "La regla de reciprocidad ayuda a evitar la trepidación: usa una velocidad ≥ 1/focal (p. ej. 1/50 s para un 50 mm en formato completo)."
           },
           "difficulty": "easy"
         },
@@ -648,35 +738,40 @@
           "type": "multiple",
           "text": {
             "en": "Which factors affect the depth of field in a photograph?",
-            "fr": "Quels facteurs affectent la profondeur de champ sur une photo ?"
+            "fr": "Quels facteurs affectent la profondeur de champ sur une photo ?",
+            "es": "¿Qué factores afectan a la profundidad de campo en una foto?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "ISO setting",
-                "fr": "Réglage ISO"
+                "fr": "Réglage ISO",
+                "es": "El ajuste de ISO"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Focal length",
-                "fr": "Focale"
+                "fr": "Focale",
+                "es": "La distancia focal"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Distance to subject",
-                "fr": "Distance au sujet"
+                "fr": "Distance au sujet",
+                "es": "La distancia al sujeto"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Aperture size",
-                "fr": "Taille de l'ouverture"
+                "fr": "Taille de l'ouverture",
+                "es": "El tamaño de la apertura"
               }
             }
           ],
@@ -687,17 +782,20 @@
           ],
           "explanation": {
             "en": "Depth of field is controlled by aperture, subject distance, and focal length. ISO affects sensitivity and noise, not depth of field.",
-            "fr": "La profondeur de champ est contrôlée par l'ouverture, la distance au sujet et la focale. L'ISO affecte la sensibilité et le bruit, pas la profondeur de champ."
+            "fr": "La profondeur de champ est contrôlée par l'ouverture, la distance au sujet et la focale. L'ISO affecte la sensibilité et le bruit, pas la profondeur de champ.",
+            "es": "La profundidad de campo la controlan la apertura, la distancia al sujeto y la focal. El ISO afecta a la sensibilidad y al ruido, no a la profundidad de campo."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1493863641943-9b68992a8d07.avif",
           "imageAlt": {
             "en": "Photographer with shallow depth of field behind the subject",
-            "fr": "Photographe avec faible profondeur de champ derrière le sujet"
+            "fr": "Photographe avec faible profondeur de champ derrière le sujet",
+            "es": "Fotógrafo con poca profundidad de campo detrás del sujeto"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -705,35 +803,40 @@
           "type": "single",
           "text": {
             "en": "What is 'reciprocity failure' in film photography?",
-            "fr": "Qu'est-ce que l'échec de réciprocité en photographie argentique ?"
+            "fr": "Qu'est-ce que l'échec de réciprocité en photographie argentique ?",
+            "es": "¿Qué es el «fallo de reciprocidad» en fotografía analógica?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "When extremely long or short exposures require adjustment because film doesn't respond linearly",
-                "fr": "Quand des expositions extrêmement longues ou courtes nécessitent un ajustement car le film ne répond pas linéairement"
+                "fr": "Quand des expositions extrêmement longues ou courtes nécessitent un ajustement car le film ne répond pas linéairement",
+                "es": "Cuando exposiciones muy largas o muy cortas requieren ajuste porque la película no responde de forma lineal"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "When using multiple flashes simultaneously",
-                "fr": "Quand on utilise plusieurs flashes simultanément"
+                "fr": "Quand on utilise plusieurs flashes simultanément",
+                "es": "Cuando se usan varios flashes a la vez"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "When the reciprocity rule breaks down in digital cameras",
-                "fr": "Quand la règle de réciprocité ne fonctionne plus sur les appareils numériques"
+                "fr": "Quand la règle de réciprocité ne fonctionne plus sur les appareils numériques",
+                "es": "Cuando la regla de reciprocidad deja de valer en cámaras digitales"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "When ISO settings don't match the lighting conditions",
-                "fr": "Quand les réglages ISO ne correspondent pas aux conditions d'éclairage"
+                "fr": "Quand les réglages ISO ne correspondent pas aux conditions d'éclairage",
+                "es": "Cuando el ISO no coincide con la iluminación"
               }
             }
           ],
@@ -742,7 +845,8 @@
           ],
           "explanation": {
             "en": "Reciprocity failure occurs with very long or very short exposures where the film's response isn't proportional to light × time, requiring exposure compensation.",
-            "fr": "L'échec de réciprocité se produit avec des expositions très longues ou très courtes où la réponse du film n'est pas proportionnelle à lumière × temps, nécessitant une compensation d'exposition."
+            "fr": "L'échec de réciprocité se produit avec des expositions très longues ou très courtes où la réponse du film n'est pas proportionnelle à lumière × temps, nécessitant une compensation d'exposition.",
+            "es": "El fallo de reciprocidad aparece en exposiciones muy largas o muy cortas, donde la respuesta de la película no es proporcional a luz × tiempo y hace falta compensar."
           },
           "difficulty": "easy"
         },
@@ -751,35 +855,40 @@
           "type": "single",
           "text": {
             "en": "What does 'highlight metering' prioritize?",
-            "fr": "Que privilégie la 'mesure d'exposition des hautes lumières' ?"
+            "fr": "Que privilégie la 'mesure d'exposition des hautes lumières' ?",
+            "es": "¿Qué prioriza la «medición de altas luces»?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Focusing on the darkest parts of the scene",
-                "fr": "Se concentrer sur les parties les plus sombres de la scène"
+                "fr": "Se concentrer sur les parties les plus sombres de la scène",
+                "es": "Centrarse en las partes más oscuras de la escena"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Preserving detail in bright areas, even if shadows become darker",
-                "fr": "Préserver les détails dans les zones lumineuses, même si les ombres deviennent plus sombres"
+                "fr": "Préserver les détails dans les zones lumineuses, même si les ombres deviennent plus sombres",
+                "es": "Preservar detalle en zonas claras, aunque las sombras se oscurezcan"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Making the entire image evenly exposed",
-                "fr": "Exposer uniformément toute l'image"
+                "fr": "Exposer uniformément toute l'image",
+                "es": "Exponer de forma uniforme toda la imagen"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Balancing flash and ambient light equally",
-                "fr": "Équilibrer également flash et lumière ambiante"
+                "fr": "Équilibrer également flash et lumière ambiante",
+                "es": "Equilibrar por igual flash y luz ambiente"
               }
             }
           ],
@@ -788,7 +897,8 @@
           ],
           "explanation": {
             "en": "Highlight metering protects bright areas from clipping (burning out), which is often harder to recover in post than shadow detail.",
-            "fr": "La mesure des hautes lumières protège les zones lumineuses de l'écrêtage (grillon), souvent plus difficile à récupérer en post qu'un détail dans les ombres."
+            "fr": "La mesure des hautes lumières protège les zones lumineuses de l'écrêtage (grillon), souvent plus difficile à récupérer en post qu'un détail dans les ombres.",
+            "es": "La medición de altas luces protege las zonas claras del recorte (quemado), a menudo más difícil de recuperar en revelado que el detalle de sombras."
           },
           "difficulty": "medium"
         },
@@ -797,35 +907,40 @@
           "type": "single",
           "text": {
             "en": "Which exposure mode allows you to set aperture while the camera chooses shutter speed?",
-            "fr": "Quel mode d'exposition vous permet de définir l'ouverture pendant que l'appareil choisit la vitesse ?"
+            "fr": "Quel mode d'exposition vous permet de définir l'ouverture pendant que l'appareil choisit la vitesse ?",
+            "es": "¿Qué modo de exposición te deja fijar la apertura mientras la cámara elige la velocidad?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Full Manual (M)",
-                "fr": "Mode Manuel Complet (M)"
+                "fr": "Mode Manuel Complet (M)",
+                "es": "Manual completo (M)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Shutter Priority (S or Tv)",
-                "fr": "Priorité vitesse (S ou Tv)"
+                "fr": "Priorité vitesse (S ou Tv)",
+                "es": "Prioridad a la velocidad (S o Tv)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Program Mode (P)",
-                "fr": "Mode Programme (P)"
+                "fr": "Mode Programme (P)",
+                "es": "Modo programa (P)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Aperture Priority (A or Av)",
-                "fr": "Priorité ouverture (A ou Av)"
+                "fr": "Priorité ouverture (A ou Av)",
+                "es": "Prioridad a la apertura (A o Av)"
               }
             }
           ],
@@ -834,7 +949,8 @@
           ],
           "explanation": {
             "en": "Aperture Priority lets you control depth of field via aperture while the camera automatically calculates the correct shutter speed.",
-            "fr": "La priorité ouverture vous permet de contrôler la profondeur de champ via l'ouverture pendant que l'appareil calcule automatiquement la bonne vitesse d'obturation."
+            "fr": "La priorité ouverture vous permet de contrôler la profondeur de champ via l'ouverture pendant que l'appareil calcule automatiquement la bonne vitesse d'obturation.",
+            "es": "La prioridad a la apertura te deja controlar la profundidad de campo mientras la cámara calcula la velocidad correcta."
           },
           "difficulty": "medium"
         },
@@ -843,35 +959,40 @@
           "type": "multiple",
           "text": {
             "en": "What are the effects of increasing ISO on image quality?",
-            "fr": "Quels sont les effets de l'augmentation de l'ISO sur la qualité d'image ?"
+            "fr": "Quels sont les effets de l'augmentation de l'ISO sur la qualité d'image ?",
+            "es": "¿Qué efectos tiene subir el ISO sobre la calidad de imagen?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Reduced dynamic range",
-                "fr": "Réduction de la plage dynamique"
+                "fr": "Réduction de la plage dynamique",
+                "es": "Rango dinámico reducido"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Improved sharpness",
-                "fr": "Amélioration de la netteté"
+                "fr": "Amélioration de la netteté",
+                "es": "Mayor nitidez"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Potential loss of color detail",
-                "fr": "Perte potentielle de détail colorimétrique"
+                "fr": "Perte potentielle de détail colorimétrique",
+                "es": "Posible pérdida de detalle de color"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Increased noise/grain",
-                "fr": "Augmentation du bruit/granulation"
+                "fr": "Augmentation du bruit/granulation",
+                "es": "Más ruido / granulación"
               }
             }
           ],
@@ -882,17 +1003,20 @@
           ],
           "explanation": {
             "en": "Higher ISO amplifies signal but also noise, reduces dynamic range, and can cause color fidelity issues. Sharpness doesn't improve.",
-            "fr": "Un ISO plus élevé amplifie le signal mais aussi le bruit, réduit la plage dynamique et peut causer des problèmes de fidélité colorimétrique. La netteté ne s'améliore pas."
+            "fr": "Un ISO plus élevé amplifie le signal mais aussi le bruit, réduit la plage dynamique et peut causer des problèmes de fidélité colorimétrique. La netteté ne s'améliore pas.",
+            "es": "Un ISO más alto amplifica la señal y también el ruido, reduce el rango dinámico y puede afectar a la fidelidad del color. La nitidez no mejora."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
           "imageAlt": {
             "en": "City lights at night — high ISO trade-offs",
-            "fr": "Lumières de ville la nuit — compromis haut ISO"
+            "fr": "Lumières de ville la nuit — compromis haut ISO",
+            "es": "Luces de ciudad de noche — compromisos del ISO alto"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -900,35 +1024,40 @@
           "type": "single",
           "text": {
             "en": "What is 'exposure compensation' used for?",
-            "fr": "À quoi sert la 'compensation d'exposition' ?"
+            "fr": "À quoi sert la 'compensation d'exposition' ?",
+            "es": "¿Para qué sirve la «compensación de exposición»?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "To adjust the autofocus sensitivity",
-                "fr": "Pour ajuster la sensibilité de l'autofocus"
+                "fr": "Pour ajuster la sensibilité de l'autofocus",
+                "es": "Para ajustar la sensibilidad del autofoco"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "To change the color balance",
-                "fr": "Pour modifier l'équilibre des couleurs"
+                "fr": "Pour modifier l'équilibre des couleurs",
+                "es": "Para cambiar el equilibrio de color"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "To manually override the camera's automatic exposure calculation",
-                "fr": "Pour remplacer manuellement le calcul d'exposition automatique de l'appareil"
+                "fr": "Pour remplacer manuellement le calcul d'exposition automatique de l'appareil",
+                "es": "Para anular a mano el cálculo automático de exposición de la cámara"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "To modify the aspect ratio",
-                "fr": "Pour modifier le ratio d'aspect"
+                "fr": "Pour modifier le ratio d'aspect",
+                "es": "Para modificar la relación de aspecto"
               }
             }
           ],
@@ -937,17 +1066,20 @@
           ],
           "explanation": {
             "en": "Exposure compensation lets you bias the camera's metering toward brighter (+) or darker (-) exposures, useful for high-key or low-key scenes.",
-            "fr": "La compensation d'exposition vous permet d'orienter la mesure vers des expositions plus claires (+) ou plus sombres (-), utile pour les scènes haute clé ou basse clé."
+            "fr": "La compensation d'exposition vous permet d'orienter la mesure vers des expositions plus claires (+) ou plus sombres (-), utile pour les scènes haute clé ou basse clé.",
+            "es": "La compensación de exposición sesga la medición hacia exposiciones más claras (+) u oscuras (−), útil en escenas high-key o low-key."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1495616811223-4d98c6e9c869.avif",
           "imageAlt": {
             "en": "Bright reflective water at sunset — exposure compensation judgment",
-            "fr": "Eau réfléchissante au coucher de soleil — jugement de compensation d’exposition"
+            "fr": "Eau réfléchissante au coucher de soleil — jugement de compensation d’exposition",
+            "es": "Agua brillante al atardecer — criterio de compensación de exposición"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -955,35 +1087,40 @@
           "type": "single",
           "text": {
             "en": "Why might a photographer use bracketing?",
-            "fr": "Pourquoi un photographe utiliserait-il le bracketing ?"
+            "fr": "Pourquoi un photographe utiliserait-il le bracketing ?",
+            "es": "¿Por qué un fotógrafo usaría bracketing?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "To change the lens focal length",
-                "fr": "Pour modifier la focale de l'objectif"
+                "fr": "Pour modifier la focale de l'objectif",
+                "es": "Para cambiar la distancia focal del objetivo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "To automatically sharpen the image",
-                "fr": "Pour automatiquement affiner l'image"
+                "fr": "Pour automatiquement affiner l'image",
+                "es": "Para enfocar automáticamente la imagen"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "To increase the camera's frame rate",
-                "fr": "Pour augmenter la fréquence de trame de l'appareil"
+                "fr": "Pour augmenter la fréquence de trame de l'appareil",
+                "es": "Para aumentar la cadencia de disparo de la cámara"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "To capture multiple exposures at different levels for HDR or safety",
-                "fr": "Pour capturer plusieurs expositions à différents niveaux pour HDR ou sécurité"
+                "fr": "Pour capturer plusieurs expositions à différents niveaux pour HDR ou sécurité",
+                "es": "Para capturar varias exposiciones a distintos niveles (HDR o seguridad)"
               }
             }
           ],
@@ -992,17 +1129,20 @@
           ],
           "explanation": {
             "en": "Bracketing takes multiple shots at different exposures, ensuring at least one is optimal and enabling HDR blending or safety nets.",
-            "fr": "Le bracketing prend plusieurs photos à différentes expositions, garantissant qu'au moins une est optimale et permettant le fusion HDR ou des sauvegardes."
+            "fr": "Le bracketing prend plusieurs photos à différentes expositions, garantissant qu'au moins une est optimale et permettant le fusion HDR ou des sauvegardes.",
+            "es": "El bracketing hace varias tomas a distintas exposiciones: al menos una suele ser óptima y permite fusión HDR o red de seguridad."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1470252649378-9c29740c9fa8.avif",
           "imageAlt": {
             "en": "High-contrast sunrise through trees — classic bracketing scene",
-            "fr": "Lever de soleil à fort contraste à travers les arbres — scène de bracketing classique"
+            "fr": "Lever de soleil à fort contraste à travers les arbres — scène de bracketing classique",
+            "es": "Amanecer de alto contraste entre árboles — escena clásica de bracketing"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -1010,35 +1150,40 @@
           "type": "multiple",
           "text": {
             "en": "Which situations typically require overexposing slightly?",
-            "fr": "Quelles situations nécessitent typiquement une surexposition légère ?"
+            "fr": "Quelles situations nécessitent typiquement une surexposition légère ?",
+            "es": "¿Qué situaciones suelen pedir una ligera sobreexposición?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Shooting against a bright background (backlit subjects)",
-                "fr": "Photographier contre un arrière-plan lumineux (sujets en contre-jour)"
+                "fr": "Photographier contre un arrière-plan lumineux (sujets en contre-jour)",
+                "es": "Disparar contra un fondo brillante (sujetos a contraluz)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Snow scenes to prevent grayish snow",
-                "fr": "Scènes enneigées pour éviter une neige grisâtre"
+                "fr": "Scènes enneigées pour éviter une neige grisâtre",
+                "es": "Escenas de nieve para evitar una nieve grisácea"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "White flower photography",
-                "fr": "Photographie de fleurs blanches"
+                "fr": "Photographie de fleurs blanches",
+                "es": "Fotografía de flores blancas"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Night cityscapes with many lights",
-                "fr": "Paysages urbains nocturnes avec beaucoup de lumières"
+                "fr": "Paysages urbains nocturnes avec beaucoup de lumières",
+                "es": "Paisajes urbanos nocturnos con muchas luces"
               }
             }
           ],
@@ -1049,7 +1194,8 @@
           ],
           "explanation": {
             "en": "Cameras tend to underexpose bright scenes. Overexposing slightly ensures whites stay white and subjects aren't silhouetted unintentionally.",
-            "fr": "Les appareils ont tendance à sous-exposer les scènes lumineuses. Surexposer légèrement garantit que les blancs restent blancs et que les sujets ne deviennent pas des silhouettes involontaires."
+            "fr": "Les appareils ont tendance à sous-exposer les scènes lumineuses. Surexposer légèrement garantit que les blancs restent blancs et que les sujets ne deviennent pas des silhouettes involontaires.",
+            "es": "Las cámaras tienden a subexponer escenas muy claras. Sobreexponer un poco mantiene los blancos blancos y evita siluetas involuntarias."
           },
           "difficulty": "medium"
         },
@@ -1059,35 +1205,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Dark concert, dancers moving fast. What’s your first move?",
-            "fr": "Concert sombre, danseurs rapides. Quel est ton premier réflexe ?"
+            "fr": "Concert sombre, danseurs rapides. Quel est ton premier réflexe ?",
+            "es": "Concierto oscuro, bailarines rápidos. ¿Cuál es tu primer reflejo?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Drop shutter to 1/30 s for more light",
-                "fr": "Passer à 1/30 s pour gagner de la lumière"
+                "fr": "Passer à 1/30 s pour gagner de la lumière",
+                "es": "Bajar el obturador a 1/30 s para ganar luz"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Open the aperture and raise ISO as needed",
-                "fr": "Ouvrir le diaphragme et monter l’ISO au besoin"
+                "fr": "Ouvrir le diaphragme et monter l’ISO au besoin",
+                "es": "Abrir el diafragma y subir el ISO si hace falta"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Close to f/16 for sharpness",
-                "fr": "Fermer à f/16 pour la netteté"
+                "fr": "Fermer à f/16 pour la netteté",
+                "es": "Cerrar a f/16 por nitidez"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Enable long-exposure fireworks mode",
-                "fr": "Activer le mode feux d’artifice longue pose"
+                "fr": "Activer le mode feux d’artifice longue pose",
+                "es": "Activar el modo fuegos artificiales de exposición larga"
               }
             }
           ],
@@ -1096,16 +1247,19 @@
           ],
           "explanation": {
             "en": "You need light AND frozen motion. Open up, then lift ISO — don’t start by dragging shutter on dancers.",
-            "fr": "Il faut de la lumière ET figer le mouvement. Ouvre d’abord, puis monte l’ISO — ne commence pas par ralentir l’obturateur."
+            "fr": "Il faut de la lumière ET figer le mouvement. Ouvre d’abord, puis monte l’ISO — ne commence pas par ralentir l’obturateur.",
+            "es": "Necesitas luz Y congelar el movimiento. Abre primero, luego sube el ISO — no empieces arrastrando el obturador sobre los bailarines."
           },
           "imageUrl": "/images/packs/photo-1519501025264-65ba15a82390.avif",
           "imageAlt": {
             "en": "City lights at night",
-            "fr": "Lumières de ville la nuit"
+            "fr": "Lumières de ville la nuit",
+            "es": "Luces de ciudad de noche"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -1114,35 +1268,40 @@
           "difficulty": "easy",
           "text": {
             "en": "You want silky water on a waterfall. Which combo fits best?",
-            "fr": "Tu veux une cascade « soyeuse ». Quelle combinaison colle le mieux ?"
+            "fr": "Tu veux une cascade « soyeuse ». Quelle combinaison colle le mieux ?",
+            "es": "Quieres agua sedosa en una cascada. ¿Qué combinación encaja mejor?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "f/1.2 wide open in bright sun with no ND",
-                "fr": "f/1.2 grand ouvert en plein soleil sans ND"
+                "fr": "f/1.2 grand ouvert en plein soleil sans ND",
+                "es": "f/1.2 a plena apertura a pleno sol sin ND"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Flash only, no shutter change",
-                "fr": "Flash seul, sans toucher à l’obturateur"
+                "fr": "Flash seul, sans toucher à l’obturateur",
+                "es": "Solo flash, sin tocar el obturador"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "1/2000 s + ISO 6400",
-                "fr": "1/2000 s + ISO 6400"
+                "fr": "1/2000 s + ISO 6400",
+                "es": "1/2000 s + ISO 6400 (muy rápido / alto)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Slow shutter (e.g. 1/4–2 s), low ISO, smaller aperture or ND",
-                "fr": "Obturateur lent (ex. 1/4–2 s), ISO bas, diaphragme fermé ou filtre ND"
+                "fr": "Obturateur lent (ex. 1/4–2 s), ISO bas, diaphragme fermé ou filtre ND",
+                "es": "Obturador lento (p. ej. 1/4–2 s), ISO bajo, diafragma cerrado o ND"
               }
             }
           ],
@@ -1151,16 +1310,19 @@
           ],
           "explanation": {
             "en": "Motion blur needs time. Slow the shutter; control exposure with ISO, aperture, or an ND filter.",
-            "fr": "Le flou de mouvement demande du temps. Ralentis l’obturateur ; gère l’expo avec ISO, diaphragme ou ND."
+            "fr": "Le flou de mouvement demande du temps. Ralentis l’obturateur ; gère l’expo avec ISO, diaphragme ou ND.",
+            "es": "El desenfoque de movimiento necesita tiempo. Ralentiza el obturador; controla la exposición con ISO, apertura o un filtro ND."
           },
           "imageUrl": "/images/packs/photo-1518182170546-07661fd94144.avif",
           "imageAlt": {
             "en": "Waterfall in a forest",
-            "fr": "Cascade dans une forêt"
+            "fr": "Cascade dans une forêt",
+            "es": "Cascada en un bosque"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -1169,35 +1331,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Myth or nuance: “Always shoot at ISO 100 for best quality.”",
-            "fr": "Mythe ou nuance : « On doit toujours rester à ISO 100 pour la meilleure qualité. »"
+            "fr": "Mythe ou nuance : « On doit toujours rester à ISO 100 pour la meilleure qualité. »",
+            "es": "Mito o matiz: «Hay que disparar siempre a ISO 100 para la mejor calidad.»"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "ISO doesn’t affect noise at all",
-                "fr": "L’ISO n’influence jamais le bruit"
+                "fr": "L’ISO n’influence jamais le bruit",
+                "es": "El ISO no afecta en absoluto al ruido"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Mostly a myth: a sharp higher-ISO frame beats a blurry ISO 100 one",
-                "fr": "Surtout un mythe : une photo nette à ISO plus haut bat un flou à ISO 100"
+                "fr": "Surtout un mythe : une photo nette à ISO plus haut bat un flou à ISO 100",
+                "es": "Sobre todo un mito: un fotograma nítido a ISO más alto gana a uno borroso a ISO 100"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "True — any higher ISO ruins the file",
-                "fr": "Vrai — monter l’ISO détruit toujours le fichier"
+                "fr": "Vrai — monter l’ISO détruit toujours le fichier",
+                "es": "Cierto — cualquier ISO más alto arruina el archivo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "True only for smartphones",
-                "fr": "Vrai seulement pour les smartphones"
+                "fr": "Vrai seulement pour les smartphones",
+                "es": "Cierto solo en smartphones"
               }
             }
           ],
@@ -1206,7 +1373,8 @@
           ],
           "explanation": {
             "en": "Use the lowest ISO that still lets you freeze motion and expose correctly. Blur is worse than mild noise.",
-            "fr": "Prends l’ISO le plus bas qui te laisse encore figer et exposer correctement. Le flou est pire qu’un peu de bruit."
+            "fr": "Prends l’ISO le plus bas qui te laisse encore figer et exposer correctement. Le flou est pire qu’un peu de bruit.",
+            "es": "Usa el ISO más bajo que aún te permita congelar el movimiento y exponer bien. El desenfoque es peor que un poco de ruido."
           }
         },
         {
@@ -1215,35 +1383,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Window portrait: bright outdoors, dark room. How do you keep both readable?",
-            "fr": "Portrait à la fenêtre : extérieur très clair, pièce sombre. Comment garder les deux lisibles ?"
+            "fr": "Portrait à la fenêtre : extérieur très clair, pièce sombre. Comment garder les deux lisibles ?",
+            "es": "Retrato junto a la ventana: exterior muy claro, habitación oscura. ¿Cómo mantienes ambos legibles?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Expose for the room only and blow the window",
-                "fr": "Exposer pour la pièce et cramer la fenêtre"
+                "fr": "Exposer pour la pièce et cramer la fenêtre",
+                "es": "Exponer solo para la habitación y quemar la ventana"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Expose for the outdoor view and silhouette the subject",
-                "fr": "Exposer pour le dehors et silhouetter le sujet"
+                "fr": "Exposer pour le dehors et silhouetter le sujet",
+                "es": "Exponer para el exterior y siluetear al sujeto"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Expose for the subject’s face, then lift shadows / use fill if needed",
-                "fr": "Exposer pour le visage, puis remonter les ombres / fill si besoin"
+                "fr": "Exposer pour le visage, puis remonter les ombres / fill si besoin",
+                "es": "Exponer para el rostro, luego levantar sombras / relleno si hace falta"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Always shoot at f/22 and ISO 50",
-                "fr": "Toujours shooter à f/22 et ISO 50"
+                "fr": "Toujours shooter à f/22 et ISO 50",
+                "es": "Disparar siempre a f/22 e ISO 50"
               }
             }
           ],
@@ -1252,16 +1425,19 @@
           ],
           "explanation": {
             "en": "Protect the face first. Recover room shadows later; a blown window is often acceptable.",
-            "fr": "Protège d’abord le visage. Remonte les ombres ensuite ; une fenêtre cramée est souvent acceptable."
+            "fr": "Protège d’abord le visage. Remonte les ombres ensuite ; une fenêtre cramée est souvent acceptable.",
+            "es": "Protege primero el rostro. Recupera luego las sombras de la habitación; una ventana quemada suele ser aceptable."
           },
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait near a bright window",
-            "fr": "Portrait près d’une fenêtre lumineuse"
+            "fr": "Portrait près d’une fenêtre lumineuse",
+            "es": "Retrato cerca de una ventana luminosa"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -1270,35 +1446,40 @@
           "difficulty": "easy",
           "text": {
             "en": "Myth: “Higher ISO always means a worse photo.” What’s the nuance?",
-            "fr": "Mythe : « Plus d’ISO = forcément une moins bonne photo. » Quelle nuance ?"
+            "fr": "Mythe : « Plus d’ISO = forcément une moins bonne photo. » Quelle nuance ?",
+            "es": "Mito: «Más ISO = siempre peor foto.» ¿Cuál es el matiz?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "True — never go above ISO 400",
-                "fr": "Vrai — ne jamais dépasser ISO 400"
+                "fr": "Vrai — ne jamais dépasser ISO 400",
+                "es": "Cierto — nunca pases de ISO 400"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Noise is often better than blur or underexposure; modern sensors handle high ISO well",
-                "fr": "Le bruit vaut mieux que le flou ou la sous-exposition ; les capteurs modernes gèrent bien les hauts ISO"
+                "fr": "Le bruit vaut mieux que le flou ou la sous-exposition ; les capteurs modernes gèrent bien les hauts ISO",
+                "es": "El ruido suele ser mejor que el desenfoque o la subexposición; los sensores modernos aguantan bien ISO alto"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "ISO only affects white balance",
-                "fr": "L’ISO ne change que la balance des blancs"
+                "fr": "L’ISO ne change que la balance des blancs",
+                "es": "El ISO solo afecta al balance de blancos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "ISO is only for film cameras",
-                "fr": "L’ISO n’existe que pour l’argentique"
+                "fr": "L’ISO n’existe que pour l’argentique",
+                "es": "El ISO solo existe en cámaras de película"
               }
             }
           ],
@@ -1307,16 +1488,19 @@
           ],
           "explanation": {
             "en": "A sharp, well-exposed high-ISO frame beats a clean but blurry one.",
-            "fr": "Un cliché net et bien exposé à haut ISO bat un fichier « propre » mais flou."
+            "fr": "Un cliché net et bien exposé à haut ISO bat un fichier « propre » mais flou.",
+            "es": "Un fotograma nítido y bien expuesto a ISO alto gana a uno «limpio» pero borroso."
           },
           "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
           "imageAlt": {
             "en": "Night sky — noise vs blur when raising ISO",
-            "fr": "Ciel nocturne — bruit vs flou en montant l’ISO"
+            "fr": "Ciel nocturne — bruit vs flou en montant l’ISO",
+            "es": "Cielo nocturno — ruido frente a desenfoque al subir el ISO"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -1325,35 +1509,40 @@
           "difficulty": "hard",
           "text": {
             "en": "You’re at EV 0 on a reflective beach. Skin looks dark. Smartest next step?",
-            "fr": "Tu es à EV 0 sur une plage réfléchissante. Les peaux paraissent sombres. Meilleur réflexe ?"
+            "fr": "Tu es à EV 0 sur une plage réfléchissante. Les peaux paraissent sombres. Meilleur réflexe ?",
+            "es": "Estás en EV 0 en una playa reflectante. Las pieles se ven oscuras. ¿Cuál es el siguiente paso más inteligente?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Dial +1 to +2 exposure compensation",
-                "fr": "Passer à +1 / +2 IL de compensation"
+                "fr": "Passer à +1 / +2 IL de compensation",
+                "es": "Pasar a +1 / +2 EV de compensación de exposición"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Close the aperture two stops",
-                "fr": "Fermer le diaphragme de deux stops"
+                "fr": "Fermer le diaphragme de deux stops",
+                "es": "Cerrar el diafragma dos pasos"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Switch to tungsten white balance",
-                "fr": "Passer en balance tungstène"
+                "fr": "Passer en balance tungstène",
+                "es": "Cambiar al balance de blancos tungsteno"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Enable the self-timer only",
-                "fr": "Activer seulement le retardateur"
+                "fr": "Activer seulement le retardateur",
+                "es": "Activar solo el temporizador"
               }
             }
           ],
@@ -1362,16 +1551,19 @@
           ],
           "explanation": {
             "en": "Matrix metering underexposes bright scenes. Positive compensation restores midtones.",
-            "fr": "La mesure matricielle sous-expose les scènes claires. Une compensation positive restaure les tons moyens."
+            "fr": "La mesure matricielle sous-expose les scènes claires. Une compensation positive restaure les tons moyens.",
+            "es": "La medición matricial subexpone escenas claras. Una compensación positiva restaura los tonos medios."
           },
           "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Bright outdoor landscape",
-            "fr": "Paysage extérieur lumineux"
+            "fr": "Paysage extérieur lumineux",
+            "es": "Paisaje exterior luminoso"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -1380,35 +1572,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Flash + ambient: how do you keep the background from going black?",
-            "fr": "Flash + ambiance : comment éviter un fond noir ?"
+            "fr": "Flash + ambiance : comment éviter un fond noir ?",
+            "es": "Flash + ambiente: ¿cómo evitas que el fondo se vuelva negro?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Only raise flash power; ignore shutter",
-                "fr": "Monter seulement la puissance flash ; ignorer l’obturateur"
+                "fr": "Monter seulement la puissance flash ; ignorer l’obturateur",
+                "es": "Subir solo la potencia del flash; ignorar el obturador"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Slow the shutter (within sync) to gather ambient, set flash for the subject",
-                "fr": "Ralentir l’obturateur (dans la synchro) pour l’ambiance, régler le flash pour le sujet"
+                "fr": "Ralentir l’obturateur (dans la synchro) pour l’ambiance, régler le flash pour le sujet",
+                "es": "Ralentizar el obturador (dentro de la sincronización) para recoger ambiente; ajustar el flash para el sujeto"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Always use 1/8000 s with flash",
-                "fr": "Toujours shooter à 1/8000 s au flash"
+                "fr": "Toujours shooter à 1/8000 s au flash",
+                "es": "Disparar siempre a 1/8000 s con flash"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Disable all ambient light meters",
-                "fr": "Désactiver tous les posemètres ambiants"
+                "fr": "Désactiver tous les posemètres ambiants",
+                "es": "Desactivar todos los exposímetros de luz ambiente"
               }
             }
           ],
@@ -1417,7 +1614,8 @@
           ],
           "explanation": {
             "en": "Shutter mainly gates ambient; flash (and aperture/ISO) lights the subject.",
-            "fr": "L’obturateur gère surtout l’ambiance ; le flash (avec ouverture/ISO) éclaire le sujet."
+            "fr": "L’obturateur gère surtout l’ambiance ; le flash (avec ouverture/ISO) éclaire le sujet.",
+            "es": "El obturador regula sobre todo la ambiente; el flash (con apertura/ISO) ilumina al sujeto."
           }
         },
         {
@@ -1426,35 +1624,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Sports hallway: subject runs toward you. Best autofocus / shutter combo?",
-            "fr": "Couloir de sport : le sujet court vers toi. Meilleure combo AF / obturateur ?"
+            "fr": "Couloir de sport : le sujet court vers toi. Meilleure combo AF / obturateur ?",
+            "es": "Pasillo deportivo: el sujeto corre hacia ti. ¿Mejor combo AF / obturador?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Single AF + 1/60 s",
-                "fr": "AF simple + 1/60 s"
+                "fr": "AF simple + 1/60 s",
+                "es": "AF simple + 1/60 s"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Continuous AF + fast shutter (e.g. 1/500 s+)",
-                "fr": "AF continu + obturateur rapide (ex. 1/500 s+)"
+                "fr": "AF continu + obturateur rapide (ex. 1/500 s+)",
+                "es": "AF continuo + obturador rápido (p. ej. 1/500 s+)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Manual focus at infinity + bulb",
-                "fr": "Mise au point manuelle à l’infini + pose B"
+                "fr": "Mise au point manuelle à l’infini + pose B",
+                "es": "Enfoque manual a infinito + bulb"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Face detect only at 2 s exposure",
-                "fr": "Détection de visage seule en pose 2 s"
+                "fr": "Détection de visage seule en pose 2 s",
+                "es": "Solo detección de rostros con 2 s de exposición"
               }
             }
           ],
@@ -1463,16 +1666,19 @@
           ],
           "explanation": {
             "en": "Tracking AF plus a shutter fast enough to freeze motion.",
-            "fr": "Un AF qui suit, plus un temps assez court pour figer."
+            "fr": "Un AF qui suit, plus un temps assez court pour figer.",
+            "es": "Un AF que sigue, más un tiempo lo bastante corto para congelar el movimiento."
           },
           "imageUrl": "/images/packs/photo-1552674605-db6ffd4facb5.avif",
           "imageAlt": {
             "en": "Runner in motion",
-            "fr": "Coureur en mouvement"
+            "fr": "Coureur en mouvement",
+            "es": "Corredor en movimiento"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -1481,35 +1687,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Concert pit, subject moving, stage lights pumping. You need subject freeze AND readable blacks. Best priority?",
-            "fr": "Fosse de concert, sujet en mouvement, projecteurs. Tu veux figer ET garder des noirs lisibles. Priorité ?"
+            "fr": "Fosse de concert, sujet en mouvement, projecteurs. Tu veux figer ET garder des noirs lisibles. Priorité ?",
+            "es": "Foso de concierto, sujeto en movimiento, focos. Quieres congelar Y negros legibles. ¿Prioridad?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Shutter fast enough to freeze, open aperture, raise ISO only as needed",
-                "fr": "Vitesse assez rapide pour figer, ouvrir le diaphragme, monter l’ISO seulement si besoin"
+                "fr": "Vitesse assez rapide pour figer, ouvrir le diaphragme, monter l’ISO seulement si besoin",
+                "es": "Velocidad bastante rápida para congelar, abrir apertura, subir ISO solo si hace falta"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "f/16 for maximum depth every time",
-                "fr": "f/16 pour un max de profondeur à chaque fois"
+                "fr": "f/16 pour un max de profondeur à chaque fois",
+                "es": "f/16 para máxima profundidad siempre"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Lowest ISO, slow shutter, hope for the best",
-                "fr": "ISO mini, obturateur lent, et on espère"
+                "fr": "ISO mini, obturateur lent, et on espère",
+                "es": "ISO mínimo, obturador lento, y a ver qué pasa"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Flash only — ambient light never works on stage",
-                "fr": "Flash seul — la lumière scène ne marche jamais"
+                "fr": "Flash seul — la lumière scène ne marche jamais",
+                "es": "Solo flash — la luz de escenario nunca funciona"
               }
             }
           ],
@@ -1518,16 +1729,19 @@
           ],
           "explanation": {
             "en": "Freeze first (shutter), gather light (aperture), then ISO. Protecting blacks comes from exposure discipline, not underexposing blindly.",
-            "fr": "On fige d’abord (vitesse), on collecte la lumière (ouverture), puis l’ISO. Les noirs se protègent par une expo maîtrisée, pas une sous-expo aveugle."
+            "fr": "On fige d’abord (vitesse), on collecte la lumière (ouverture), puis l’ISO. Les noirs se protègent par une expo maîtrisée, pas une sous-expo aveugle.",
+            "es": "Congela primero (velocidad), recoge luz (apertura), luego ISO. Los negros se protegen con una exposición disciplinada, no con una subexposición a ciegas."
           },
           "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
           "imageAlt": {
             "en": "City lights at night suggesting low-light performance",
-            "fr": "Lumières de ville la nuit évoquant la photo en basse lumière"
+            "fr": "Lumières de ville la nuit évoquant la photo en basse lumière",
+            "es": "Luces de ciudad de noche que evocan la foto con poca luz"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
-            "fr": "Photo: Unsplash"
+            "fr": "Photo: Unsplash",
+            "es": "Foto: Unsplash"
           }
         },
         {
@@ -1536,35 +1750,40 @@
           "difficulty": "hard",
           "text": {
             "en": "You meter a backlit portrait at −1 EV ‘to keep drama’. Skin goes muddy and noisy when lifted. What went wrong?",
-            "fr": "Tu mesures un portrait à contre-jour à −1 IL « pour le drama ». La peau devient boueuse et bruitée en remontant. Erreur ?"
+            "fr": "Tu mesures un portrait à contre-jour à −1 IL « pour le drama ». La peau devient boueuse et bruitée en remontant. Erreur ?",
+            "es": "Mides un retrato a contraluz a −1 EV «por el drama». La piel queda fangosa y ruidosa al levantarla. ¿Error?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Only JPEG can handle backlight",
-                "fr": "Seul le JPEG gère le contre-jour"
+                "fr": "Seul le JPEG gère le contre-jour",
+                "es": "Solo el JPEG gestiona el contraluz"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "ISO was too low for drama",
-                "fr": "L’ISO était trop bas pour le drama"
+                "fr": "L’ISO était trop bas pour le drama",
+                "es": "El ISO era demasiado bajo para el drama"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "You underexposed the face; lift later amplifies noise — expose for skin, accept brighter background",
-                "fr": "Tu as sous-exposé le visage ; remonter amplifie le bruit — expose pour la peau, accepte un fond plus clair"
+                "fr": "Tu as sous-exposé le visage ; remonter amplifie le bruit — expose pour la peau, accepte un fond plus clair",
+                "es": "Subexposiste el rostro; levantarlo después amplifica el ruido — expón para la piel, acepta un fondo más claro"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "−1 EV always improves skin texture",
-                "fr": "−1 IL améliore toujours la texture de peau"
+                "fr": "−1 IL améliore toujours la texture de peau",
+                "es": "−1 EV siempre mejora la textura de la piel"
               }
             }
           ],
@@ -1573,7 +1792,8 @@
           ],
           "explanation": {
             "en": "Drama from a bright rim is fine; crushing facial midtones is not. Expose for the subject you care about.",
-            "fr": "Un contour lumineux, oui ; écraser les tons du visage, non. Expose pour le sujet qui compte."
+            "fr": "Un contour lumineux, oui ; écraser les tons du visage, non. Expose pour le sujet qui compte.",
+            "es": "Un borde luminoso está bien; aplastar los tonos del rostro, no. Expón para el sujeto que te importa."
           }
         },
         {
@@ -1582,35 +1802,40 @@
           "difficulty": "hard",
           "text": {
             "en": "Which pairs keep exposure roughly equivalent (same EV) if nothing else changes?",
-            "fr": "Quelles paires gardent à peu près la même exposition (même EV) si rien d’autre ne change ?"
+            "fr": "Quelles paires gardent à peu près la même exposition (même EV) si rien d’autre ne change ?",
+            "es": "¿Qué pares mantienen aproximadamente la misma exposición (mismo EV) si nada más cambia?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "1/250 s at f/2.8 ↔ 1/125 s at f/4",
-                "fr": "1/250 s à f/2.8 ↔ 1/125 s à f/4"
+                "fr": "1/250 s à f/2.8 ↔ 1/125 s à f/4",
+                "es": "1/250 s a f/2.8 ↔ 1/125 s a f/4"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "ISO 400 at 1/100 ↔ ISO 800 at 1/200",
-                "fr": "ISO 400 à 1/100 ↔ ISO 800 à 1/200"
+                "fr": "ISO 400 à 1/100 ↔ ISO 800 à 1/200",
+                "es": "ISO 400 a 1/100 ↔ ISO 800 a 1/200"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "f/8 at ISO 100 ↔ f/4 at ISO 100 (same shutter)",
-                "fr": "f/8 à ISO 100 ↔ f/4 à ISO 100 (même vitesse)"
+                "fr": "f/8 à ISO 100 ↔ f/4 à ISO 100 (même vitesse)",
+                "es": "f/8 a ISO 100 ↔ f/4 a ISO 100 (misma velocidad)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "1/60 s at f/5.6 ↔ 1/30 s at f/8",
-                "fr": "1/60 s à f/5.6 ↔ 1/30 s à f/8"
+                "fr": "1/60 s à f/5.6 ↔ 1/30 s à f/8",
+                "es": "1/60 s a f/5.6 ↔ 1/30 s a f/8"
               }
             }
           ],
@@ -1621,7 +1846,8 @@
           ],
           "explanation": {
             "en": "One stop open + one stop faster shutter (or +1 ISO / −1 shutter) balances. Opening two stops without changing shutter is +2 EV.",
-            "fr": "Un stop d’ouverture + un stop de vitesse (ou +1 ISO / −1 vitesse) s’équilibrent. Ouvrir de deux stops sans changer la vitesse = +2 IL."
+            "fr": "Un stop d’ouverture + un stop de vitesse (ou +1 ISO / −1 vitesse) s’équilibrent. Ouvrir de deux stops sans changer la vitesse = +2 IL.",
+            "es": "Un paso de apertura + un paso de velocidad (o +1 ISO / −1 velocidad) se equilibran. Abrir dos pasos sin cambiar la velocidad = +2 EV."
           }
         }
       ],
