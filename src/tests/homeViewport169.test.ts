@@ -10,10 +10,10 @@ import questions from '../../public/data/questions.json';
 import { quizLabel, toContentLang } from '../../functions/lib/sharePreview';
 
 describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS', () => {
-  it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.71.2', () => {
-    /* Docs headline moved to v1.71.2 in vague 1.72 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(68|69|70|71)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71)\.\d+\*\*/);
+  it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.72.0', () => {
+    /* Docs headline moved to v1.72.0 in vague 1.73 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(68|69|70|71|72)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.68**');
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toMatch(/no-go.*1\.69/);
@@ -82,12 +82,11 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
       .filter((q) => q.title.es == null || q.title.es === '')
       .map((q) => q.id)
       .sort();
-    /* portrait-light .es in 1.70; public-domain in 1.71; exposure-basics in 1.72 — drop from historical without-es lock. */
+    /* portrait-light .es 1.70; public-domain 1.71; exposure-basics 1.72; genres 1.73 — drop from historical without-es lock. */
     expect(packsWithoutEs).toEqual(
       [
         'composition',
         'gear-lenses',
-        'genres',
         'lightroom-workflow',
         'marques-photo',
         'smartphone',
