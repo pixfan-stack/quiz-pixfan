@@ -37,9 +37,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.74 — docs v1.73.0 + composition LocalizedString.es', () => {
-  it('docs headline cites v1.73.0; vague 1.73/1.74 listed; no-go through 1.74', () => {
-    expect(readme).toContain('v1.73.0');
-    expect(nextSteps).toContain('**v1.73.0**');
+  it('docs still mention vague 1.73/1.74; no-go through 1.74; headline may be v1.74.0', () => {
+    /* Docs headline moved to v1.74.0 in vague 1.75 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(73|74)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(73|74)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.73**');
     expect(nextSteps).toContain('Vague **1.74**');
     expect(nextSteps).toMatch(/no-go.*1\.74/);
@@ -90,12 +91,12 @@ describe('vague 1.74 — docs v1.73.0 + composition LocalizedString.es', () => {
     }
   });
 
-  it('remaining scolaires + non-scolaires still lack title.es', () => {
+  it('remaining non-scolaires still lack title.es', () => {
+    /* smartphone .es 1.75 — drop from historical without-es lock. */
     const withoutEs = [
       'gear-lenses',
       'lightroom-workflow',
       'marques-photo',
-      'smartphone',
     ];
     for (const id of withoutEs) {
       const pack = data.quizzes.find((q) => q.id === id)!;
