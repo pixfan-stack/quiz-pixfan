@@ -5233,11 +5233,13 @@
       "id": "gear-lenses",
       "title": {
         "en": "Gear & Lenses",
-        "fr": "Matériel & objectifs"
+        "fr": "Matériel & objectifs",
+        "es": "Material y objetivos"
       },
       "description": {
         "en": "Focal lengths, sensor formats and the tools that shape your look.",
-        "fr": "Focale, formats de capteur et outils qui façonnent votre rendu."
+        "fr": "Focale, formats de capteur et outils qui façonnent votre rendu.",
+        "es": "Focales, formatos de sensor y herramientas que dan forma a tu look."
       },
       "questions": [
         {
@@ -5245,35 +5247,40 @@
           "type": "single",
           "text": {
             "en": "On full-frame, a 50 mm lens is often called a “normal” lens because it…",
-            "fr": "En plein format, un 50 mm est souvent dit « normal » car il…"
+            "fr": "En plein format, un 50 mm est souvent dit « normal » car il…",
+            "es": "En full-frame, un objetivo de 50 mm suele llamarse «normal» porque…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Is only for macro insects",
-                "fr": "Sert uniquement à la macro insectes"
+                "fr": "Sert uniquement à la macro insectes",
+                "es": "Solo sirve para macro de insectos"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Can only shoot in black and white",
-                "fr": "Ne peut photographier qu'en noir et blanc"
+                "fr": "Ne peut photographier qu'en noir et blanc",
+                "es": "Solo puede disparar en blanco y negro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Always has the widest possible aperture",
-                "fr": "A toujours l'ouverture la plus grande possible"
+                "fr": "A toujours l'ouverture la plus grande possible",
+                "es": "Siempre tiene la apertura más abierta posible"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Approximates a natural field of view, close to human vision",
-                "fr": "Se rapproche d'un champ de vision naturel, proche de l'œil humain"
+                "fr": "Se rapproche d'un champ de vision naturel, proche de l'œil humain",
+                "es": "Aproxima un campo de visión natural, cercano a la visión humana"
               }
             }
           ],
@@ -5282,17 +5289,20 @@
           ],
           "explanation": {
             "en": "Around 40–58 mm on full-frame is considered “normal”: neither strongly wide nor telephoto. On APS-C, a ~35 mm often plays a similar role.",
-            "fr": "Environ 40–58 mm en plein format est considéré « normal » : ni grand-angle marqué ni téléobjectif. En APS-C, un ~35 mm joue souvent ce rôle."
+            "fr": "Environ 40–58 mm en plein format est considéré « normal » : ni grand-angle marqué ni téléobjectif. En APS-C, un ~35 mm joue souvent ce rôle.",
+            "es": "Alrededor de 40–58 mm en full-frame se considera «normal»: ni gran angular marcado ni teleobjetivo. En APS-C, un ~35 mm suele desempeñar un papel similar."
           },
           "imageUrl": "/images/packs/photo-1606983340126-99ab4feaa64a.avif",
           "imageAlt": {
             "en": "Camera lenses lined up on a desk",
-            "fr": "Objectifs photo alignés sur un bureau"
+            "fr": "Objectifs photo alignés sur un bureau",
+            "es": "Objetivos fotográficos alineados sobre un escritorio"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5300,35 +5310,40 @@
           "type": "multiple",
           "text": {
             "en": "Which lenses are typically wide-angle on full-frame?",
-            "fr": "Quels objectifs sont typiquement grand-angle en plein format ?"
+            "fr": "Quels objectifs sont typiquement grand-angle en plein format ?",
+            "es": "¿Qué objetivos son típicamente gran angular en full-frame?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "16 mm",
-                "fr": "16 mm"
+                "fr": "16 mm",
+                "es": "16 mm (gran angular)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "24 mm",
-                "fr": "24 mm"
+                "fr": "24 mm",
+                "es": "24 mm (gran angular)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "35 mm",
-                "fr": "35 mm"
+                "fr": "35 mm",
+                "es": "35 mm (angular estándar)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "200 mm",
-                "fr": "200 mm"
+                "fr": "200 mm",
+                "es": "200 mm (teleobjetivo)"
               }
             }
           ],
@@ -5339,17 +5354,20 @@
           ],
           "explanation": {
             "en": "Wide-angle is roughly under ~35–40 mm on full-frame. 200 mm is a telephoto, compressing perspective and narrowing the field of view.",
-            "fr": "Le grand-angle se situe grosso modo sous ~35–40 mm en plein format. Un 200 mm est un téléobjectif : perspective compressée, champ plus étroit."
+            "fr": "Le grand-angle se situe grosso modo sous ~35–40 mm en plein format. Un 200 mm est un téléobjectif : perspective compressée, champ plus étroit.",
+            "es": "El gran angular se sitúa más o menos por debajo de ~35–40 mm en full-frame. Un 200 mm es un teleobjetivo: comprime la perspectiva y estrecha el campo."
           },
           "imageUrl": "/images/packs/photo-1502920917128-1aa500764cbd.avif",
           "imageAlt": {
             "en": "Camera body and lens",
-            "fr": "Boîtier et objectif"
+            "fr": "Boîtier et objectif",
+            "es": "Cuerpo de cámara y objetivo"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5357,35 +5375,40 @@
           "type": "single",
           "text": {
             "en": "What is the main advantage of a prime lens (fixed focal length)?",
-            "fr": "Quel est le principal avantage d'une focale fixe (prime) ?"
+            "fr": "Quel est le principal avantage d'une focale fixe (prime) ?",
+            "es": "¿Cuál es la principal ventaja de un objetivo fijo (prime)?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Often brighter (larger max aperture), lighter and optically simpler",
-                "fr": "Souvent plus lumineuse (grande ouverture max), plus légère et optiquement plus simple"
+                "fr": "Souvent plus lumineuse (grande ouverture max), plus légère et optiquement plus simple",
+                "es": "Suele ser más luminoso (mayor apertura máxima), más ligero y ópticamente más simple"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "It can zoom from 10 mm to 600 mm",
-                "fr": "Elle zoome de 10 mm à 600 mm"
+                "fr": "Elle zoome de 10 mm à 600 mm",
+                "es": "Puede hacer zoom de 10 mm a 600 mm"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "It only works underwater",
-                "fr": "Elle ne fonctionne que sous l'eau"
+                "fr": "Elle ne fonctionne que sous l'eau",
+                "es": "Solo funciona bajo el agua"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "It never needs focusing",
-                "fr": "Elle n'a jamais besoin de mise au point"
+                "fr": "Elle n'a jamais besoin de mise au point",
+                "es": "Nunca necesita enfocar"
               }
             }
           ],
@@ -5394,17 +5417,20 @@
           ],
           "explanation": {
             "en": "Primes trade zoom flexibility for optical quality, size/weight and wide apertures (e.g. f/1.4–f/1.8) — great for low light and subject isolation.",
-            "fr": "Les focales fixes échangent la souplesse du zoom contre qualité optique, compacité et grandes ouvertures (ex. f/1.4–f/1.8) — idéales en basse lumière et pour isoler le sujet."
+            "fr": "Les focales fixes échangent la souplesse du zoom contre qualité optique, compacité et grandes ouvertures (ex. f/1.4–f/1.8) — idéales en basse lumière et pour isoler le sujet.",
+            "es": "Los primes cambian la flexibilidad del zoom por calidad óptica, tamaño/peso y grandes aperturas (p. ej. f/1.4–f/1.8): ideales con poca luz y para aislar al sujeto."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera close-up",
-            "fr": "Gros plan d’appareil classique"
+            "fr": "Gros plan d’appareil classique",
+            "es": "Primer plano de una cámara clásica"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5412,35 +5438,40 @@
           "type": "single",
           "text": {
             "en": "An APS-C sensor is smaller than full-frame. This usually means…",
-            "fr": "Un capteur APS-C est plus petit que le plein format. Cela implique en général…"
+            "fr": "Un capteur APS-C est plus petit que le plein format. Cela implique en général…",
+            "es": "Un sensor APS-C es más pequeño que el full-frame. Eso suele implicar…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "ISO no longer exists",
-                "fr": "L'ISO n'existe plus"
+                "fr": "L'ISO n'existe plus",
+                "es": "Que el ISO deja de existir"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A crop factor (~1.5× or 1.6×): effective field of view is narrower for the same focal length",
-                "fr": "Un facteur de crop (~1,5× ou 1,6×) : champ de vision plus étroit pour la même focale"
+                "fr": "Un facteur de crop (~1,5× ou 1,6×) : champ de vision plus étroit pour la même focale",
+                "es": "Un factor de recorte (~1,5× o 1,6×): el campo de visión efectivo es más estrecho con la misma focal"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Photos are always square",
-                "fr": "Les photos sont toujours carrées"
+                "fr": "Les photos sont toujours carrées",
+                "es": "Que las fotos son siempre cuadradas"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "The camera cannot use any lenses",
-                "fr": "L'appareil ne peut utiliser aucun objectif"
+                "fr": "L'appareil ne peut utiliser aucun objectif",
+                "es": "Que la cámara no puede usar ningún objetivo"
               }
             }
           ],
@@ -5449,17 +5480,20 @@
           ],
           "explanation": {
             "en": "A 50 mm on APS-C behaves roughly like a 75–80 mm field of view on full-frame. Depth of field and noise characteristics also differ.",
-            "fr": "Un 50 mm en APS-C donne un champ proche d'un 75–80 mm en plein format. Profondeur de champ et bruit diffèrent aussi."
+            "fr": "Un 50 mm en APS-C donne un champ proche d'un 75–80 mm en plein format. Profondeur de champ et bruit diffèrent aussi.",
+            "es": "Un 50 mm en APS-C se comporta más o menos como un campo de 75–80 mm en full-frame. La profundidad de campo y el ruido también cambian."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1502920917128-1aa500764cbd.avif",
           "imageAlt": {
             "en": "Photographer with camera",
-            "fr": "Photographe avec appareil"
+            "fr": "Photographe avec appareil",
+            "es": "Fotógrafo con cámara"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5467,35 +5501,40 @@
           "type": "single",
           "text": {
             "en": "What does a circular polarizing filter (CPL) help with?",
-            "fr": "À quoi sert un filtre polarisant circulaire (CPL) ?"
+            "fr": "À quoi sert un filtre polarisant circulaire (CPL) ?",
+            "es": "¿Para qué ayuda un filtro polarizador circular (CPL)?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Charging the camera battery",
-                "fr": "Charger la batterie de l'appareil"
+                "fr": "Charger la batterie de l'appareil",
+                "es": "A cargar la batería de la cámara"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Reducing reflections on glass/water and deepening blue skies",
-                "fr": "Réduire les reflets sur verre/eau et intensifier les ciels bleus"
+                "fr": "Réduire les reflets sur verre/eau et intensifier les ciels bleus",
+                "es": "A reducir reflejos en cristal/agua y a intensificar los cielos azules"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Adding artificial bokeh shapes only",
-                "fr": "Ajouter uniquement des formes de bokeh artificielles"
+                "fr": "Ajouter uniquement des formes de bokeh artificielles",
+                "es": "Solo a añadir formas de bokeh artificial"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Replacing the need for a lens",
-                "fr": "Remplacer l'objectif"
+                "fr": "Remplacer l'objectif",
+                "es": "A sustituir la necesidad de un objetivo"
               }
             }
           ],
@@ -5504,17 +5543,20 @@
           ],
           "explanation": {
             "en": "Polarizers cut polarized light: less glare on non-metallic surfaces, richer skies and foliage. Effect depends on angle to the sun.",
-            "fr": "Les polarisants coupent la lumière polarisée : moins d'éblouissement sur surfaces non métalliques, ciels et feuillages plus riches. L'effet dépend de l'angle avec le soleil."
+            "fr": "Les polarisants coupent la lumière polarisée : moins d'éblouissement sur surfaces non métalliques, ciels et feuillages plus riches. L'effet dépend de l'angle avec le soleil.",
+            "es": "Los polarizadores cortan la luz polarizada: menos brillos en superficies no metálicas, cielos y follaje más ricos. El efecto depende del ángulo respecto al sol."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
           "imageAlt": {
             "en": "Camera with filter thread — circular polarizer territory",
-            "fr": "Appareil avec pas de filtre — terrain du polarisant circulaire"
+            "fr": "Appareil avec pas de filtre — terrain du polarisant circulaire",
+            "es": "Cámara con rosca de filtro — terreno del polarizador circular"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5522,35 +5564,40 @@
           "type": "single",
           "text": {
             "en": "What is 'full-frame' sensor size equivalent to?",
-            "fr": "À quoi équivaut la taille de capteur 'plein format' ?"
+            "fr": "À quoi équivaut la taille de capteur 'plein format' ?",
+            "es": "¿A qué equivale el tamaño de sensor «full-frame»?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "35mm film frame (36×24mm)",
-                "fr": "Cadre de film 35mm (36×24mm)"
+                "fr": "Cadre de film 35mm (36×24mm)",
+                "es": "Al fotograma de película 35 mm (36×24 mm)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Medium format film",
-                "fr": "Film moyen format"
+                "fr": "Film moyen format",
+                "es": "A la película de formato medio"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Instant camera film",
-                "fr": "Film d'appareil instantané"
+                "fr": "Film d'appareil instantané",
+                "es": "A la película de cámara instantánea"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Smartphone sensor",
-                "fr": "Capteur de smartphone"
+                "fr": "Capteur de smartphone",
+                "es": "Al sensor de un smartphone"
               }
             }
           ],
@@ -5559,7 +5606,8 @@
           ],
           "explanation": {
             "en": "Full-frame refers to sensors matching the 35mm film dimensions (36×24mm), the traditional standard for professional photography.",
-            "fr": "Le plein format fait référence aux capteurs correspondant aux dimensions du film 35mm (36×24mm), la norme traditionnelle pour la photographie professionnelle."
+            "fr": "Le plein format fait référence aux capteurs correspondant aux dimensions du film 35mm (36×24mm), la norme traditionnelle pour la photographie professionnelle.",
+            "es": "Full-frame se refiere a sensores que coinciden con las dimensiones de la película 35 mm (36×24 mm), el estándar tradicional de la fotografía profesional."
           },
           "difficulty": "easy"
         },
@@ -5568,35 +5616,40 @@
           "type": "single",
           "text": {
             "en": "What does 'image stabilization' primarily help with?",
-            "fr": "À quoi aide principalement la 'stabilisation d'image' ?"
+            "fr": "À quoi aide principalement la 'stabilisation d'image' ?",
+            "es": "¿Para qué ayuda principalmente la «estabilización de imagen»?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Changing the focal length",
-                "fr": "Modifier la focale"
+                "fr": "Modifier la focale",
+                "es": "A cambiar la distancia focal"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Reducing blur from camera shake at slower shutter speeds",
-                "fr": "Réduire le flou dû au bougé de l'appareil à des vitesses d'obturation plus lentes"
+                "fr": "Réduire le flou dû au bougé de l'appareil à des vitesses d'obturation plus lentes",
+                "es": "A reducir el desenfoque por temblor de la cámara a velocidades de obturación más lentas"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Increasing sensor resolution",
-                "fr": "Augmenter la résolution du capteur"
+                "fr": "Augmenter la résolution du capteur",
+                "es": "A aumentar la resolución del sensor"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Improving autofocus speed",
-                "fr": "Améliorer la vitesse de autofocus"
+                "fr": "Améliorer la vitesse de autofocus",
+                "es": "A mejorar la velocidad del autofoco"
               }
             }
           ],
@@ -5605,17 +5658,20 @@
           ],
           "explanation": {
             "en": "IS/OSS/VRI compensates for small camera movements, allowing sharper images at shutter speeds 2-5 stops slower than normal.",
-            "fr": "L'IS/OSS/VRI compense les petits mouvements de l'appareil, permettant des images plus nettes à des vitesses d'obturation 2-5 stops plus lentes que la normale."
+            "fr": "L'IS/OSS/VRI compense les petits mouvements de l'appareil, permettant des images plus nettes à des vitesses d'obturation 2-5 stops plus lentes que la normale.",
+            "es": "IS/OSS/VR compensa pequeños movimientos de la cámara y permite imágenes más nítidas a velocidades 2–5 pasos más lentas de lo habitual."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
           "imageAlt": {
             "en": "Handheld camera outdoors — image stabilization vs shutter speed",
-            "fr": "Appareil tenu à main levée — stabilisation vs vitesse d’obturation"
+            "fr": "Appareil tenu à main levée — stabilisation vs vitesse d’obturation",
+            "es": "Cámara a pulso al aire libre — estabilización frente a obturación"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5623,35 +5679,40 @@
           "type": "multiple",
           "text": {
             "en": "Which lens types are best suited for portraits?",
-            "fr": "Quels types d'objectifs sont les mieux adaptés aux portraits ?"
+            "fr": "Quels types d'objectifs sont les mieux adaptés aux portraits ?",
+            "es": "¿Qué tipos de objetivos encajan mejor con el retrato?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "14mm",
-                "fr": "14mm"
+                "fr": "14mm",
+                "es": "14 mm (ultra gran angular)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "135mm",
-                "fr": "135mm"
+                "fr": "135mm",
+                "es": "135 mm (tele corto)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "85mm",
-                "fr": "85mm"
+                "fr": "85mm",
+                "es": "85 mm (retrato clásico)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "50mm",
-                "fr": "50mm"
+                "fr": "50mm",
+                "es": "50 mm (normal luminoso)"
               }
             }
           ],
@@ -5662,17 +5723,20 @@
           ],
           "explanation": {
             "en": "Short telephotos (50-135mm) compress features flattering and allow working distance. Ultra-wide (14mm) distorts faces.",
-            "fr": "Les courts téléobjectifs (50-135mm) compressent les traits de manière flatteuse et permettent une distance de travail. L'ultra-grand-angle (14mm) déforme les visages."
+            "fr": "Les courts téléobjectifs (50-135mm) compressent les traits de manière flatteuse et permettent une distance de travail. L'ultra-grand-angle (14mm) déforme les visages.",
+            "es": "Los teleobjetivos cortos (50–135 mm) comprimen los rasgos de forma favorecedora y dan distancia de trabajo. El ultra gran angular (14 mm) deforma las caras."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait subject — short-tele portrait lens territory",
-            "fr": "Sujet en portrait — courtes focales portrait"
+            "fr": "Sujet en portrait — courtes focales portrait",
+            "es": "Sujeto en retrato — territorio de tele corto para retrato"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5680,35 +5744,40 @@
           "type": "single",
           "text": {
             "en": "What is a 'tilt-shift' lens used for?",
-            "fr": "À quoi sert un objectif 'tilt-shift' ?"
+            "fr": "À quoi sert un objectif 'tilt-shift' ?",
+            "es": "¿Para qué se usa un objetivo «tilt-shift»?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Taking underwater photos",
-                "fr": "Prendre des photos sous-marines"
+                "fr": "Prendre des photos sous-marines",
+                "es": "Para hacer fotos bajo el agua"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Correcting perspective distortion and controlling plane of focus",
-                "fr": "Corriger la distorsion de perspective et contrôler le plan de mise au point"
+                "fr": "Corriger la distorsion de perspective et contrôler le plan de mise au point",
+                "es": "Para corregir la distorsión de perspectiva y controlar el plano de enfoque"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Zooming in on distant subjects",
-                "fr": "Zoomer sur des sujets distants"
+                "fr": "Zoomer sur des sujets distants",
+                "es": "Para acercar sujetos lejanos con zoom"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Automatically tracking moving subjects",
-                "fr": "Suivre automatiquement les sujets en mouvement"
+                "fr": "Suivre automatiquement les sujets en mouvement",
+                "es": "Para seguir automáticamente sujetos en movimiento"
               }
             }
           ],
@@ -5717,7 +5786,8 @@
           ],
           "explanation": {
             "en": "Tilt-shift lenses allow perspective correction (architecture) and creative focus control (miniature effect) through lens movements.",
-            "fr": "Les objectifs tilt-shift permettent la correction de perspective (architecture) et le contrôle créatif de la mise au point (effet miniature) grâce aux mouvements d'objectif."
+            "fr": "Les objectifs tilt-shift permettent la correction de perspective (architecture) et le contrôle créatif de la mise au point (effet miniature) grâce aux mouvements d'objectif.",
+            "es": "Los tilt-shift permiten corregir la perspectiva (arquitectura) y controlar el foco de forma creativa (efecto miniatura) mediante movimientos del objetivo."
           },
           "difficulty": "medium"
         },
@@ -5726,35 +5796,40 @@
           "type": "single",
           "text": {
             "en": "What is 'megapixel' a measure of?",
-            "fr": "Qu'est-ce que le 'mégapixel' mesure ?"
+            "fr": "Qu'est-ce que le 'mégapixel' mesure ?",
+            "es": "¿Qué mide un «megapíxel»?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Lens speed",
-                "fr": "Vitesse de l'objectif"
+                "fr": "Vitesse de l'objectif",
+                "es": "La luminosidad del objetivo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Camera weight",
-                "fr": "Poids de l'appareil"
+                "fr": "Poids de l'appareil",
+                "es": "El peso de la cámara"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Image resolution (one million pixels)",
-                "fr": "Résolution d'image (un million de pixels)"
+                "fr": "Résolution d'image (un million de pixels)",
+                "es": "La resolución de la imagen (un millón de píxeles)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Battery life",
-                "fr": "Autonomie de la batterie"
+                "fr": "Autonomie de la batterie",
+                "es": "La autonomía de la batería"
               }
             }
           ],
@@ -5763,17 +5838,20 @@
           ],
           "explanation": {
             "en": "One megapixel equals one million pixels. More megapixels mean higher resolution and larger prints, but not necessarily better image quality.",
-            "fr": "Un mégapixel équivaut à un million de pixels. Plus de mégapixels signifient une résolution plus élevée et des impressions plus grandes, mais pas nécessairement une meilleure qualité d'image."
+            "fr": "Un mégapixel équivaut à un million de pixels. Plus de mégapixels signifient une résolution plus élevée et des impressions plus grandes, mais pas nécessairement une meilleure qualité d'image.",
+            "es": "Un megapíxel equivale a un millón de píxeles. Más megapíxeles implican más resolución e impresiones más grandes, pero no necesariamente mejor calidad de imagen."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
           "imageAlt": {
             "en": "Camera body detail hinting at megapixels",
-            "fr": "Détail de boîtier évoquant les mégapixels"
+            "fr": "Détail de boîtier évoquant les mégapixels",
+            "es": "Detalle de cuerpo de cámara que evoca los megapíxeles"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5781,35 +5859,40 @@
           "type": "multiple",
           "text": {
             "en": "What are the advantages of mirrorless cameras over DSLRs?",
-            "fr": "Quels sont les avantages des appareils sans miroir par rapport aux reflex ?"
+            "fr": "Quels sont les avantages des appareils sans miroir par rapport aux reflex ?",
+            "es": "¿Cuáles son las ventajas de las cámaras mirrorless frente a las réflex?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Always longer battery life",
-                "fr": "Toujours une autonomie de batterie plus longue"
+                "fr": "Toujours une autonomie de batterie plus longue",
+                "es": "Siempre una autonomía de batería más larga"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Better electronic viewfinder experience",
-                "fr": "Meilleure expérience de viseur électronique"
+                "fr": "Meilleure expérience de viseur électronique",
+                "es": "Una mejor experiencia de visor electrónico"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Faster autofocus with eye-tracking",
-                "fr": "Autofocus plus rapide avec suivi des yeux"
+                "fr": "Autofocus plus rapide avec suivi des yeux",
+                "es": "Un autofoco más rápido con seguimiento ocular"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Generally more compact and lighter",
-                "fr": "Généralement plus compacts et légers"
+                "fr": "Généralement plus compacts et légers",
+                "es": "En general más compactas y ligeras"
               }
             }
           ],
@@ -5820,17 +5903,20 @@
           ],
           "explanation": {
             "en": "Mirrorless cameras excel in size, AF innovation, and EVF features. DSLRs often still lead in battery longevity.",
-            "fr": "Les appareils sans miroir excellent en taille, innovation AF et fonctionnalités VE. Les reflex mènent souvent encore en longévité de batterie."
+            "fr": "Les appareils sans miroir excellent en taille, innovation AF et fonctionnalités VE. Les reflex mènent souvent encore en longévité de batterie.",
+            "es": "Las mirrorless destacan por tamaño, innovación de AF y funciones del EVF. Las réflex suelen seguir liderando en autonomía."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Modern camera body close-up — mirrorless vs DSLR ergonomics",
-            "fr": "Boîtier moderne en gros plan — ergonomie mirrorless vs reflex"
+            "fr": "Boîtier moderne en gros plan — ergonomie mirrorless vs reflex",
+            "es": "Primer plano de cuerpo moderno — ergonomía mirrorless frente a réflex"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -5838,35 +5924,40 @@
           "type": "single",
           "text": {
             "en": "What is 'aperture priority' mode indicated by on most cameras?",
-            "fr": "Quel mode 'priorité ouverture' est indiqué sur la plupart des appareils ?"
+            "fr": "Quel mode 'priorité ouverture' est indiqué sur la plupart des appareils ?",
+            "es": "¿Cómo se indica el modo «prioridad a la apertura» en la mayoría de cámaras?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "P",
-                "fr": "P"
+                "fr": "P",
+                "es": "P (programa)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "M",
-                "fr": "M"
+                "fr": "M",
+                "es": "M (manual)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "S or Tv",
-                "fr": "S ou Tv"
+                "fr": "S ou Tv",
+                "es": "S o Tv (prioridad obturador)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A (Nikon, Sony) or Av (Canon)",
-                "fr": "A (Nikon, Sony) ou Av (Canon)"
+                "fr": "A (Nikon, Sony) ou Av (Canon)",
+                "es": "A (Nikon, Sony) o Av (Canon)"
               }
             }
           ],
@@ -5875,7 +5966,8 @@
           ],
           "explanation": {
             "en": "A/Av stands for Aperture/Avantité. M is Manual, P is Program, S/Tv is Shutter Priority.",
-            "fr": "A/Av signifie Avantité d'ouverture. M est Manuel, P est Programme, S/Tv est Priorité vitesse."
+            "fr": "A/Av signifie Avantité d'ouverture. M est Manuel, P est Programme, S/Tv est Priorité vitesse.",
+            "es": "A/Av significa prioridad a la apertura. M es Manual, P es Programa, S/Tv es prioridad a la obturación."
           },
           "difficulty": "medium"
         },
@@ -5884,35 +5976,40 @@
           "type": "single",
           "text": {
             "en": "What does 'weather sealing' on a camera protect against?",
-            "fr": "Qu'est-ce que l' 'étanchéité climatique' sur un appareil protège contre ?"
+            "fr": "Qu'est-ce que l' 'étanchéité climatique' sur un appareil protège contre ?",
+            "es": "¿Contra qué protege el «sellado climático» de una cámara?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Camera theft",
-                "fr": "Vol d'appareil"
+                "fr": "Vol d'appareil",
+                "es": "El robo de la cámara"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Dust and moisture ingress",
-                "fr": "Intrusion de poussière et d'humidité"
+                "fr": "Intrusion de poussière et d'humidité",
+                "es": "La entrada de polvo y humedad"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Extreme heat only",
-                "fr": "Uniquement la chaleur extrême"
+                "fr": "Uniquement la chaleur extrême",
+                "es": "Solo el calor extremo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Digital corruption",
-                "fr": "Corruption numérique"
+                "fr": "Corruption numérique",
+                "es": "La corrupción digital"
               }
             }
           ],
@@ -5921,7 +6018,8 @@
           ],
           "explanation": {
             "en": "Weather sealing uses gaskets and seals to protect against rain, dust, and splashes in challenging environments.",
-            "fr": "L'étanchéité climatique utilise des joints et des scellés pour protéger contre la pluie, la poussière et les éclaboussures dans des environnements difficiles."
+            "fr": "L'étanchéité climatique utilise des joints et des scellés pour protéger contre la pluie, la poussière et les éclaboussures dans des environnements difficiles.",
+            "es": "El sellado climático usa juntas y cierres para proteger frente a lluvia, polvo y salpicaduras en entornos difíciles."
           },
           "difficulty": "medium"
         },
@@ -5930,35 +6028,40 @@
           "type": "multiple",
           "text": {
             "en": "Which factors determine depth of field besides aperture?",
-            "fr": "Quels facteurs déterminent la profondeur de champ outre l'ouverture ?"
+            "fr": "Quels facteurs déterminent la profondeur de champ outre l'ouverture ?",
+            "es": "Además de la apertura, ¿qué factores determinan la profundidad de campo?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Memory card speed",
-                "fr": "Vitesse de la carte mémoire"
+                "fr": "Vitesse de la carte mémoire",
+                "es": "La velocidad de la tarjeta de memoria"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Sensor size",
-                "fr": "Taille du capteur"
+                "fr": "Taille du capteur",
+                "es": "El tamaño del sensor"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Focal length",
-                "fr": "Focale"
+                "fr": "Focale",
+                "es": "La distancia focal"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Subject distance",
-                "fr": "Distance au sujet"
+                "fr": "Distance au sujet",
+                "es": "La distancia al sujeto"
               }
             }
           ],
@@ -5969,7 +6072,8 @@
           ],
           "explanation": {
             "en": "DOF is controlled by aperture, focal length, subject distance, and sensor size. Card speed affects burst shooting, not optics.",
-            "fr": "La PdC est contrôlée par l'ouverture, la focale, la distance au sujet et la taille du capteur. La vitesse de carte affecte le burst, pas l'optique."
+            "fr": "La PdC est contrôlée par l'ouverture, la focale, la distance au sujet et la taille du capteur. La vitesse de carte affecte le burst, pas l'optique.",
+            "es": "La PdC la controlan la apertura, la focal, la distancia al sujeto y el tamaño del sensor. La velocidad de la tarjeta afecta al ráfaga, no a la óptica."
           },
           "difficulty": "medium"
         },
@@ -5978,35 +6082,40 @@
           "type": "single",
           "text": {
             "en": "What is a 'prime lens'?",
-            "fr": "Qu'est-ce qu'un 'objectif fixe' ?"
+            "fr": "Qu'est-ce qu'un 'objectif fixe' ?",
+            "es": "¿Qué es un «objetivo fijo» (prime)?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "A lens for underwater use",
-                "fr": "Un objectif pour usage sous-marin"
+                "fr": "Un objectif pour usage sous-marin",
+                "es": "Un objetivo para uso submarino"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A waterproof lens",
-                "fr": "Un objectif étanche"
+                "fr": "Un objectif étanche",
+                "es": "Un objetivo impermeable"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A lens with a fixed focal length that cannot zoom",
-                "fr": "Un objectif avec une focale fixe qui ne peut pas zoomer"
+                "fr": "Un objectif avec une focale fixe qui ne peut pas zoomer",
+                "es": "Un objetivo de focal fija que no puede hacer zoom"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "A lens with image stabilization",
-                "fr": "Un objectif avec stabilisation d'image"
+                "fr": "Un objectif avec stabilisation d'image",
+                "es": "Un objetivo con estabilización de imagen"
               }
             }
           ],
@@ -6015,17 +6124,20 @@
           ],
           "explanation": {
             "en": "Prime lenses have one focal length (e.g., 50mm), offering better optics, wider apertures, and smaller size than zooms.",
-            "fr": "Les objectifs fixes ont une seule focale (ex. 50mm), offrant une meilleure optique, des ouvertures plus grandes et une taille réduite par rapport aux zooms."
+            "fr": "Les objectifs fixes ont une seule focale (ex. 50mm), offrant une meilleure optique, des ouvertures plus grandes et une taille réduite par rapport aux zooms.",
+            "es": "Los primes tienen una sola focal (p. ej. 50 mm) y ofrecen mejor óptica, aperturas más abiertas y menor tamaño que los zooms."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1526170375885-4d8ecf77b99f.avif",
           "imageAlt": {
             "en": "Prime lens with shallow depth of field",
-            "fr": "Objectif fixe avec faible profondeur de champ"
+            "fr": "Objectif fixe avec faible profondeur de champ",
+            "es": "Objetivo fijo con poca profundidad de campo"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -6033,35 +6145,40 @@
           "type": "single",
           "text": {
             "en": "What is 'lens mount'?",
-            "fr": "Qu'est-ce que le 'monture d'objectif' ?"
+            "fr": "Qu'est-ce que le 'monture d'objectif' ?",
+            "es": "¿Qué es la «montura» de un objetivo?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "The lens cleaning system",
-                "fr": "Le système de nettoyage de l'objectif"
+                "fr": "Le système de nettoyage de l'objectif",
+                "es": "El sistema de limpieza del objetivo"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "The connection interface between lens and camera body",
-                "fr": "L'interface de connexion entre l'objectif et le corps de l'appareil"
+                "fr": "L'interface de connexion entre l'objectif et le corps de l'appareil",
+                "es": "La interfaz de conexión entre el objetivo y el cuerpo de la cámara"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A type of lens filter",
-                "fr": "Un type de filtre d'objectif"
+                "fr": "Un type de filtre d'objectif",
+                "es": "Un tipo de filtro para el objetivo"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "The camera strap attachment",
-                "fr": "L'attache de sangle de l'appareil"
+                "fr": "L'attache de sangle de l'appareil",
+                "es": "El anclaje de la correa de la cámara"
               }
             }
           ],
@@ -6070,7 +6187,8 @@
           ],
           "explanation": {
             "en": "Lens mounts (EF, F, E, L, etc.) define mechanical and electronic compatibility between lenses and camera bodies.",
-            "fr": "Les montures d'objectif (EF, F, E, L, etc.) définissent la compatibilité mécanique et électronique entre les objectifs et les corps d'appareil."
+            "fr": "Les montures d'objectif (EF, F, E, L, etc.) définissent la compatibilité mécanique et électronique entre les objectifs et les corps d'appareil.",
+            "es": "Las monturas (EF, F, E, L, etc.) definen la compatibilidad mecánica y electrónica entre objetivos y cuerpos."
           },
           "difficulty": "hard"
         },
@@ -6079,35 +6197,40 @@
           "type": "multiple",
           "text": {
             "en": "What are the benefits of using a tripod?",
-            "fr": "Quels sont les avantages d'utiliser un trépied ?"
+            "fr": "Quels sont les avantages d'utiliser un trépied ?",
+            "es": "¿Cuáles son los beneficios de usar un trípode?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Enabling long exposures",
-                "fr": "Permettre les longues expositions"
+                "fr": "Permettre les longues expositions",
+                "es": "Permitir exposiciones largas"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Eliminating camera shake for sharp images",
-                "fr": "Éliminer le flou de bougé pour des images nettes"
+                "fr": "Éliminer le flou de bougé pour des images nettes",
+                "es": "Eliminar el temblor de la cámara para imágenes nítidas"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Ensuring consistent framing for panoramas",
-                "fr": "Garantir un cadrage cohérent pour les panoramas"
+                "fr": "Garantir un cadrage cohérent pour les panoramas",
+                "es": "Garantizar un encuadre coherente en panorámicas"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Increasing autofocus speed",
-                "fr": "Augmenter la vitesse de autofocus"
+                "fr": "Augmenter la vitesse de autofocus",
+                "es": "Aumentar la velocidad del autofoco"
               }
             }
           ],
@@ -6118,17 +6241,20 @@
           ],
           "explanation": {
             "en": "Tripods provide stability for sharp images, long exposures, and precise composition. They don't affect autofocus performance.",
-            "fr": "Les trépieds fournissent une stabilité pour des images nettes, de longues expositions et une composition précise. Ils n'affectent pas les performances de autofocus."
+            "fr": "Les trépieds fournissent une stabilité pour des images nettes, de longues expositions et une composition précise. Ils n'affectent pas les performances de autofocus.",
+            "es": "Los trípodes dan estabilidad para nitidez, exposiciones largas y composición precisa. No afectan al rendimiento del autofoco."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Mountain vista — tripod-friendly landscape scene",
-            "fr": "Vue de montagne — scène paysage idéale au trépied"
+            "fr": "Vue de montagne — scène paysage idéale au trépied",
+            "es": "Vista de montaña — escena de paisaje ideal para trípode"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -6136,35 +6262,40 @@
           "type": "single",
           "text": {
             "en": "What is 'crop factor'?",
-            "fr": "Qu'est-ce que le 'facteur de crop' ?"
+            "fr": "Qu'est-ce que le 'facteur de crop' ?",
+            "es": "¿Qué es el «factor de recorte» (crop factor)?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "A lens cleaning technique",
-                "fr": "Une technique de nettoyage d'objectif"
+                "fr": "Une technique de nettoyage d'objectif",
+                "es": "Una técnica de limpieza de objetivos"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "The multiplier that converts full-frame focal length to equivalent field of view on smaller sensors",
-                "fr": "Le multiplicateur qui convertit la focale plein format en champ équivalent sur des capteurs plus petits"
+                "fr": "Le multiplicateur qui convertit la focale plein format en champ équivalent sur des capteurs plus petits",
+                "es": "El multiplicador que convierte la focal full-frame en un campo equivalente en sensores más pequeños"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "The amount of image cropped in post-processing",
-                "fr": "La quantité d'image recadrée en post-traitement"
+                "fr": "La quantité d'image recadrée en post-traitement",
+                "es": "La cantidad de imagen recortada en postproducción"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "The camera's resolution reduction",
-                "fr": "La réduction de résolution de l'appareil"
+                "fr": "La réduction de résolution de l'appareil",
+                "es": "La reducción de resolución de la cámara"
               }
             }
           ],
@@ -6173,7 +6304,8 @@
           ],
           "explanation": {
             "en": "APS-C sensors typically have 1.5× (Nikon/Sony) or 1.6× (Canon) crop factor, making a 50mm lens behave like 75-80mm.",
-            "fr": "Les capteurs APS-C ont typiquement un facteur de crop de 1,5× (Nikon/Sony) ou 1,6× (Canon), rendant un 50mm semblable à un 75-80mm."
+            "fr": "Les capteurs APS-C ont typiquement un facteur de crop de 1,5× (Nikon/Sony) ou 1,6× (Canon), rendant un 50mm semblable à un 75-80mm.",
+            "es": "Los sensores APS-C suelen tener un factor de ~1,5× (Nikon/Sony) o 1,6× (Canon), haciendo que un 50 mm se comporte como 75–80 mm."
           },
           "difficulty": "hard"
         },
@@ -6182,35 +6314,40 @@
           "type": "single",
           "text": {
             "en": "What is a 'fast lens'?",
-            "fr": "Qu'est-ce qu'un 'objectif lumineux' ?"
+            "fr": "Qu'est-ce qu'un 'objectif lumineux' ?",
+            "es": "¿Qué es un «objetivo luminoso» (fast lens)?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "A lens that focuses quickly",
-                "fr": "Un objectif qui met au point rapidement"
+                "fr": "Un objectif qui met au point rapidement",
+                "es": "Un objetivo que enfoca rápido"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A lightweight lens",
-                "fr": "Un objectif léger"
+                "fr": "Un objectif léger",
+                "es": "Un objetivo ligero"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A lens with fast autofocus motor",
-                "fr": "Un objectif avec moteur autofocus rapide"
+                "fr": "Un objectif avec moteur autofocus rapide",
+                "es": "Un objetivo con motor de autofoco rápido"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A lens with a wide maximum aperture (e.g., f/1.4, f/1.8)",
-                "fr": "Un objectif avec une ouverture maximale large (ex. f/1.4, f/1.8)"
+                "fr": "Un objectif avec une ouverture maximale large (ex. f/1.4, f/1.8)",
+                "es": "Un objetivo con una apertura máxima grande (p. ej. f/1.4, f/1.8)"
               }
             }
           ],
@@ -6219,17 +6356,20 @@
           ],
           "explanation": {
             "en": "'Fast' refers to wide apertures allowing more light, enabling faster shutter speeds and better low-light performance.",
-            "fr": "'Rapide' fait référence aux grandes ouvertures permettant plus de lumière, permettant des vitesses d'obturation plus rapides et une meilleure performance en basse lumière."
+            "fr": "'Rapide' fait référence aux grandes ouvertures permettant plus de lumière, permettant des vitesses d'obturation plus rapides et une meilleure performance en basse lumière.",
+            "es": "«Luminoso» se refiere a aperturas grandes que dejan entrar más luz, permiten obturaciones más rápidas y mejoran el rendimiento con poca luz."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Classic camera — fast lens / low-light shooting",
-            "fr": "Appareil classique — optique lumineuse / basse lumière"
+            "fr": "Appareil classique — optique lumineuse / basse lumière",
+            "es": "Cámara clásica — óptica luminosa / disparo con poca luz"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -6237,35 +6377,40 @@
           "type": "multiple",
           "text": {
             "en": "Which accessories are essential for landscape photography?",
-            "fr": "Quels accessoires sont essentiels pour la photographie de paysage ?"
+            "fr": "Quels accessoires sont essentiels pour la photographie de paysage ?",
+            "es": "¿Qué accesorios son esenciales para la fotografía de paisaje?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Macro lens",
-                "fr": "Objectif macro"
+                "fr": "Objectif macro",
+                "es": "Objetivo macro"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Polarizing filter",
-                "fr": "Filtre polarisant"
+                "fr": "Filtre polarisant",
+                "es": "Filtro polarizador"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Tripod",
-                "fr": "Trépied"
+                "fr": "Trépied",
+                "es": "Trípode"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "ND filters",
-                "fr": "Filtres ND"
+                "fr": "Filtres ND",
+                "es": "Filtros ND (densidad neutra)"
               }
             }
           ],
@@ -6276,7 +6421,8 @@
           ],
           "explanation": {
             "en": "Tripods enable sharp long exposures, CPL enhances skies/reflections, ND allows slow shutter in daylight. Macro is for close-ups.",
-            "fr": "Les trépieds permettent de longues expositions nettes, le CPL améliore ciels/reflets, les ND permettent des poses lentes en journée. Le macro est pour les gros plans."
+            "fr": "Les trépieds permettent de longues expositions nettes, le CPL améliore ciels/reflets, les ND permettent des poses lentes en journée. Le macro est pour les gros plans.",
+            "es": "El trípode permite exposiciones largas nítidas, el CPL mejora cielos/reflejos y los ND permiten obturaciones lentas de día. El macro es para primeros planos."
           },
           "difficulty": "hard"
         },
@@ -6286,35 +6432,40 @@
           "difficulty": "easy",
           "text": {
             "en": "You want a flattering casual portrait with creamy background. First lens instinct?",
-            "fr": "Portrait décontracté flatteur avec arrière-plan crémeux. Premier réflexe optique ?"
+            "fr": "Portrait décontracté flatteur avec arrière-plan crémeux. Premier réflexe optique ?",
+            "es": "Quieres un retrato informal favorecedor con fondo cremoso. ¿Primer instinto óptico?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Short tele / classic portrait range (≈85 mm full-frame equivalent) with a wider aperture",
-                "fr": "Petit télé / plage portrait (≈85 mm équiv. FF) avec une belle ouverture"
+                "fr": "Petit télé / plage portrait (≈85 mm équiv. FF) avec une belle ouverture",
+                "es": "Tele corto / rango clásico de retrato (≈85 mm equiv. full-frame) con una apertura más abierta"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Ultra-wide 16 mm glued to the nose",
-                "fr": "Ultra grand-angle 16 mm collé au nez"
+                "fr": "Ultra grand-angle 16 mm collé au nez",
+                "es": "Ultra gran angular 16 mm pegado a la nariz"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Kit lens at f/22 from across the street",
-                "fr": "Kit à f/22 depuis l’autre trottoir"
+                "fr": "Kit à f/22 depuis l’autre trottoir",
+                "es": "Kit a f/22 desde la acera de enfrente"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Fish-eye for maximum cheek distortion",
-                "fr": "Fisheye pour maximiser la déformation des joues"
+                "fr": "Fisheye pour maximiser la déformation des joues",
+                "es": "Ojo de pez para maximizar la deformación de las mejillas"
               }
             }
           ],
@@ -6323,16 +6474,19 @@
           ],
           "explanation": {
             "en": "Mild tele compression + wider aperture separates the subject without cartoon faces.",
-            "fr": "Une légère compression télé + grande ouverture détache le sujet sans déformer le visage."
+            "fr": "Une légère compression télé + grande ouverture détache le sujet sans déformer le visage.",
+            "es": "Una ligera compresión tele + apertura abierta separa al sujeto sin caras de dibujo animado."
           },
           "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
           "imageAlt": {
             "en": "Studio lights and camera — flattering portrait setup",
-            "fr": "Éclairages studio et appareil — setup portrait flatteur"
+            "fr": "Éclairages studio et appareil — setup portrait flatteur",
+            "es": "Luces de estudio y cámara — setup de retrato favorecedor"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -6341,35 +6495,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Myth: “A 50 mm lens sees exactly like the human eye.”",
-            "fr": "Mythe : « Un 50 mm voit exactement comme l’œil humain. »"
+            "fr": "Mythe : « Un 50 mm voit exactement comme l’œil humain. »",
+            "es": "Mito: «Un objetivo de 50 mm ve exactamente como el ojo humano.»"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Literally true on every camera format",
-                "fr": "Littéralement vrai sur tous les formats"
+                "fr": "Littéralement vrai sur tous les formats",
+                "es": "Literalmente cierto en todos los formatos de cámara"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "True only at night",
-                "fr": "Vrai seulement la nuit"
+                "fr": "Vrai seulement la nuit",
+                "es": "Cierto solo de noche"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "A useful slogan, not physics — FOV depends on sensor size and viewing context",
-                "fr": "Slogan utile, pas de la physique — le champ dépend du capteur et du contexte de visionnage"
+                "fr": "Slogan utile, pas de la physique — le champ dépend du capteur et du contexte de visionnage",
+                "es": "Un eslogan útil, no física: el campo depende del tamaño del sensor y del contexto de visionado"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "True only underwater",
-                "fr": "Vrai seulement sous l’eau"
+                "fr": "Vrai seulement sous l’eau",
+                "es": "Cierto solo bajo el agua"
               }
             }
           ],
@@ -6378,7 +6537,8 @@
           ],
           "explanation": {
             "en": "50 mm on full-frame feels “natural” to many, but eyes don’t crop a fixed rectangle like a camera.",
-            "fr": "Le 50 mm en plein format paraît « naturel » à beaucoup, mais l’œil ne cadre pas un rectangle fixe comme un appareil."
+            "fr": "Le 50 mm en plein format paraît « naturel » à beaucoup, mais l’œil ne cadre pas un rectangle fixe comme un appareil.",
+            "es": "El 50 mm en full-frame resulta «natural» para muchos, pero el ojo no recorta un rectángulo fijo como una cámara."
           }
         },
         {
@@ -6387,35 +6547,40 @@
           "difficulty": "easy",
           "text": {
             "en": "You’re packing light for travel landscapes. What’s actually useful?",
-            "fr": "Sac léger, paysages en voyage. Qu’est-ce qui sert vraiment ?"
+            "fr": "Sac léger, paysages en voyage. Qu’est-ce qui sert vraiment ?",
+            "es": "Equipaje ligero para paisajes de viaje. ¿Qué resulta realmente útil?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "A cloth to clean the front element",
-                "fr": "Un chiffon pour nettoyer la lentille frontale"
+                "fr": "Un chiffon pour nettoyer la lentille frontale",
+                "es": "Un paño para limpiar el elemento frontal"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Twelve unused flash triggers “just in case”",
-                "fr": "Douze déclencheurs flash inutilisés « au cas où »"
+                "fr": "Douze déclencheurs flash inutilisés « au cas où »",
+                "es": "Doce disparadores de flash sin usar «por si acaso»"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A polarizer or ND if you chase skies / long exposures",
-                "fr": "Un polarisant ou ND si tu chasses ciels / poses longues"
+                "fr": "Un polarisant ou ND si tu chasses ciels / poses longues",
+                "es": "Un polarizador o ND si persigues cielos / exposiciones largas"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A stable way to support the camera (tripod/mini/beanbag)",
-                "fr": "Un appui stable (trépied / mini / beanbag)"
+                "fr": "Un appui stable (trépied / mini / beanbag)",
+                "es": "Una forma estable de apoyar la cámara (trípode / mini / beanbag)"
               }
             }
           ],
@@ -6426,16 +6591,19 @@
           ],
           "explanation": {
             "en": "Stability, cleanliness, and one filter beat a suitcase of “maybe someday” gadgets.",
-            "fr": "Stabilité, propreté et un filtre battent une valise de gadgets « un jour peut-être »."
+            "fr": "Stabilité, propreté et un filtre battent une valise de gadgets « un jour peut-être ».",
+            "es": "Estabilidad, limpieza y un filtro ganan a una maleta de gadgets «algún día quizá»."
           },
           "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Mountain landscape",
-            "fr": "Paysage de montagne"
+            "fr": "Paysage de montagne",
+            "es": "Paisaje de montaña"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -6444,35 +6612,40 @@
           "difficulty": "medium",
           "text": {
             "en": "You need tack-sharp landscapes on a windy ridgeline. Best first gear instinct?",
-            "fr": "Paysages ultra nets sur une crête venteuse. Premier réflexe matériel ?"
+            "fr": "Paysages ultra nets sur une crête venteuse. Premier réflexe matériel ?",
+            "es": "Necesitas paisajes ultra nítidos en una cresta ventosa. ¿Mejor primer instinto de material?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Disable IBIS and walk while shooting long exposures",
-                "fr": "Désactiver l’IBIS et marcher pendant les poses longues"
+                "fr": "Désactiver l’IBIS et marcher pendant les poses longues",
+                "es": "Desactivar el IBIS y caminar mientras disparas exposiciones largas"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Stable support + shield the camera from gusts; don’t trust handheld miracles",
-                "fr": "Appui stable + abriter l’appareil du vent ; ne pas compter sur le miracle à main levée"
+                "fr": "Appui stable + abriter l’appareil du vent ; ne pas compter sur le miracle à main levée",
+                "es": "Apoyo estable + proteger la cámara de las rachas; no confíes en milagros a pulso"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only raise ISO to five digits and hope",
-                "fr": "Seulement monter l’ISO à cinq chiffres et espérer"
+                "fr": "Seulement monter l’ISO à cinq chiffres et espérer",
+                "es": "Solo subir el ISO a cinco cifras y esperar"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Always remove the lens hood in wind",
-                "fr": "Toujours retirer le pare-soleil par grand vent"
+                "fr": "Toujours retirer le pare-soleil par grand vent",
+                "es": "Quitar siempre el parasol con viento"
               }
             }
           ],
@@ -6481,16 +6654,19 @@
           ],
           "explanation": {
             "en": "Wind shake ruins sharpness faster than most people expect — brace, weight, and shelter the rig.",
-            "fr": "Le vent ruine la netteté plus vite qu’on croit — cale, leste et abrite le setup."
+            "fr": "Le vent ruine la netteté plus vite qu’on croit — cale, leste et abrite le setup.",
+            "es": "El temblor por viento arruina la nitidez antes de lo que cree la mayoría: asegúrate, lastra y abriga el equipo."
           },
           "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
           "imageAlt": {
             "en": "Mountain ridge landscape — wind and stability matter",
-            "fr": "Crête de montagne — le vent et la stabilité comptent"
+            "fr": "Crête de montagne — le vent et la stabilité comptent",
+            "es": "Paisaje de cresta montañosa — el viento y la estabilidad importan"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -6499,35 +6675,40 @@
           "difficulty": "easy",
           "text": {
             "en": "A “nifty fifty” (≈50 mm full-frame equivalent) is popular mainly because…",
-            "fr": "Le « nifty fifty » (≈50 mm équiv. plein format) est populaire surtout parce que…"
+            "fr": "Le « nifty fifty » (≈50 mm équiv. plein format) est populaire surtout parce que…",
+            "es": "Un «nifty fifty» (≈50 mm equiv. full-frame) es popular sobre todo porque…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "It always equals a telescope for wildlife",
-                "fr": "Il égale toujours une longue-vue pour l’animalier"
+                "fr": "Il égale toujours une longue-vue pour l’animalier",
+                "es": "Siempre equivale a un telescopio para fauna"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "It disables autofocus by design",
-                "fr": "Il désactive l’autofocus par conception"
+                "fr": "Il désactive l’autofocus par conception",
+                "es": "Desactiva el autofoco por diseño"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "It’s a versatile normal FOV, often bright and relatively affordable",
-                "fr": "C’est un champ « normal » polyvalent, souvent lumineux et assez abordable"
+                "fr": "C’est un champ « normal » polyvalent, souvent lumineux et assez abordable",
+                "es": "Es un campo normal versátil, a menudo luminoso y relativamente asequible"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "It only works underwater",
-                "fr": "Il ne fonctionne que sous l’eau"
+                "fr": "Il ne fonctionne que sous l’eau",
+                "es": "Solo funciona bajo el agua"
               }
             }
           ],
@@ -6536,16 +6717,19 @@
           ],
           "explanation": {
             "en": "A fast-ish normal prime teaches seeing without ultra-wide distortion or heavy tele reach.",
-            "fr": "Une focale fixe « normale » un peu lumineuse enseigne le regard sans déformation ultra grand-angle ni portée télé."
+            "fr": "Une focale fixe « normale » un peu lumineuse enseigne le regard sans déformation ultra grand-angle ni portée télé.",
+            "es": "Un prime normal algo luminoso enseña a mirar sin la distorsión del ultra gran angular ni el alcance de un tele pesado."
           },
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Camera with prime lens — classic normal focal length",
-            "fr": "Appareil avec focale fixe — focale normale classique"
+            "fr": "Appareil avec focale fixe — focale normale classique",
+            "es": "Cámara con objetivo fijo — focal normal clásica"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -6554,35 +6738,40 @@
           "difficulty": "medium",
           "text": {
             "en": "Before a paid event, sensible lens / body checks include…",
-            "fr": "Avant un événement payé, de bons checks optique / boîtier incluent…"
+            "fr": "Avant un événement payé, de bons checks optique / boîtier incluent…",
+            "es": "Antes de un evento de pago, unos chequeos sensatos de objetivo / cuerpo incluyen…"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Clean front elements and confirm cards/batteries",
-                "fr": "Nettoyer les lentilles frontales et vérifier cartes / batteries"
+                "fr": "Nettoyer les lentilles frontales et vérifier cartes / batteries",
+                "es": "Limpiar los elementos frontales y confirmar tarjetas / baterías"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Test AF and a quick exposure on the actual bodies you’ll use",
-                "fr": "Tester l’AF et une expo rapide sur les boîtiers réellement utilisés"
+                "fr": "Tester l’AF et une expo rapide sur les boîtiers réellement utilisés",
+                "es": "Probar el AF y una exposición rápida en los cuerpos que realmente usarás"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Arrive with zero spare glass and one nearly empty card",
-                "fr": "Arriver sans optique de secours et une carte presque pleine"
+                "fr": "Arriver sans optique de secours et une carte presque pleine",
+                "es": "Llegar sin óptica de repuesto y con una tarjeta casi vacía"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Pack a backup body or a known fallback phone workflow",
-                "fr": "Prévoir un boîtier de secours ou un plan B téléphone connu"
+                "fr": "Prévoir un boîtier de secours ou un plan B téléphone connu",
+                "es": "Llevar un cuerpo de respaldo o un flujo conocido de móvil de emergencia"
               }
             }
           ],
@@ -6593,16 +6782,19 @@
           ],
           "explanation": {
             "en": "Paid work fails on logistics more often than on exotic glass — clean, test, redundancies.",
-            "fr": "Le travail payé échoue plus souvent sur la logistique que sur l’optique exotique — propre, testé, redondant."
+            "fr": "Le travail payé échoue plus souvent sur la logistique que sur l’optique exotique — propre, testé, redondant.",
+            "es": "El trabajo de pago falla más por logística que por cristal exótico: limpio, probado, con redundancias."
           },
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Camera body close-up — pre-event gear checks",
-            "fr": "Gros plan de boîtier — checks matériel avant événement"
+            "fr": "Gros plan de boîtier — checks matériel avant événement",
+            "es": "Primer plano de cuerpo de cámara — chequeos de material antes del evento"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         }
       ],
