@@ -36,10 +36,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.71 — docs v1.70.0 + public-domain LocalizedString.es', () => {
-  it('docs still mention vague 1.70/1.71; no-go through 1.71; headline may be v1.72.0', () => {
-    /* Docs headline moved to v1.72.0 in vague 1.73 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(70|71|72)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(70|71|72)\.\d+\*\*/);
+  it('docs still mention vague 1.70/1.71; no-go through 1.71; headline may be v1.73.0', () => {
+    /* Docs headline moved to v1.73.0 in vague 1.74 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(70|71|72|73)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(70|71|72|73)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.70**');
     expect(nextSteps).toContain('Vague **1.71**');
     expect(nextSteps).toMatch(/no-go.*1\.71/);
@@ -82,9 +82,8 @@ describe('vague 1.71 — docs v1.70.0 + public-domain LocalizedString.es', () =>
   });
 
   it('remaining scolaires + non-scolaires still lack title.es', () => {
-    /* exposure-basics gained .es in vague 1.72; genres in 1.73 — drop from historical without-es lock. */
+    /* exposure-basics .es 1.72; genres 1.73; composition 1.74 — drop from historical without-es lock. */
     const withoutEs = [
-      'composition',
       'gear-lenses',
       'lightroom-workflow',
       'marques-photo',
