@@ -12,6 +12,7 @@ type Ls = { en: string; fr: string; es?: string; de?: string };
 const data = questionsData as {
   quizzes: Array<{
     id: string;
+    tags?: string[];
     title: Ls;
     description: Ls;
     questions: Array<{
@@ -37,10 +38,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.73 — docs v1.72.0 + genres LocalizedString.es', () => {
-  it('docs still mention vague 1.72/1.73; no-go through 1.73; headline may be v1.76.0', () => {
-    /* Docs headline moved to v1.76.0 in vague 1.77 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(72|73|74|75|76)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(72|73|74|75|76)\.\d+\*\*/);
+  it('docs still mention vague 1.72/1.73; no-go through 1.73; headline may be v1.77.0', () => {
+    /* Docs headline moved to v1.77.0 in vague 1.78 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(72|73|74|75|76|77)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(72|73|74|75|76|77)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.72**');
     expect(nextSteps).toContain('Vague **1.73**');
     expect(nextSteps).toMatch(/no-go.*1\.73/);
@@ -82,10 +83,13 @@ describe('vague 1.73 — docs v1.72.0 + genres LocalizedString.es', () => {
     }
   });
 
-  it('remaining non-scolaire still lacks title.es (marques-photo)', () => {
-    /* composition…lightroom-workflow .es through 1.77 — drop from historical without-es lock. */
-    const pack = data.quizzes.find((q) => q.id === 'marques-photo')!;
-    expect(pack.title.es == null || pack.title.es === '').toBe(true);
+  it('jalon: 0 non-scolaire remaining without title.es (série closed in 1.78)', () => {
+    /* marques-photo .es 1.78 — drop historical without-es lock. */
+    const withoutEs = data.quizzes
+      .filter((q) => !(q.tags ?? []).includes('scolaires'))
+      .filter((q) => q.title.es == null || q.title.es === '')
+      .map((q) => q.id);
+    expect(withoutEs).toEqual([]);
   });
 
   it('still no path-locale /es/|/de/; no catalogue .de; ops no-gos through 1.73; SVG theme toggle', () => {

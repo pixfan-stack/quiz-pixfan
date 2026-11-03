@@ -11,6 +11,7 @@ type Ls = { en: string; fr: string; es?: string; de?: string };
 const data = questionsData as {
   quizzes: Array<{
     id: string;
+    tags?: string[];
     title: Ls;
     description: Ls;
     questions: Array<{
@@ -36,10 +37,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.70 — docs v1.69.0 + portrait-light LocalizedString.es', () => {
-  it('docs still mention vague 1.69/1.70; no-go through 1.70; headline may be v1.76.0', () => {
-    /* Docs headline moved to v1.76.0 in vague 1.77 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(69|70|71|72|73|74|75|76)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(69|70|71|72|73|74|75|76)\.\d+\*\*/);
+  it('docs still mention vague 1.69/1.70; no-go through 1.70; headline may be v1.77.0', () => {
+    /* Docs headline moved to v1.77.0 in vague 1.78 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(69|70|71|72|73|74|75|76|77)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(69|70|71|72|73|74|75|76|77)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toContain('Vague **1.70**');
     expect(nextSteps).toMatch(/no-go.*1\.70/);
@@ -81,10 +82,13 @@ describe('vague 1.70 — docs v1.69.0 + portrait-light LocalizedString.es', () =
     }
   });
 
-  it('remaining non-scolaire still lacks title.es (marques-photo)', () => {
-    /* public-domain…smartphone…gear-lenses…lightroom-workflow .es through 1.77 — drop from historical without-es lock. */
-    const pack = data.quizzes.find((q) => q.id === 'marques-photo')!;
-    expect(pack.title.es == null || pack.title.es === '').toBe(true);
+  it('jalon: 0 non-scolaire remaining without title.es (série closed in 1.78)', () => {
+    /* marques-photo .es 1.78 — drop historical without-es lock. */
+    const withoutEs = data.quizzes
+      .filter((q) => !(q.tags ?? []).includes('scolaires'))
+      .filter((q) => q.title.es == null || q.title.es === '')
+      .map((q) => q.id);
+    expect(withoutEs).toEqual([]);
   });
 
   it('still no path-locale /es/|/de/; no catalogue .de; ops no-gos through 1.70', () => {

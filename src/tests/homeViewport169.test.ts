@@ -10,10 +10,10 @@ import questions from '../../public/data/questions.json';
 import { quizLabel, toContentLang } from '../../functions/lib/sharePreview';
 
 describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS', () => {
-  it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.76.0', () => {
-    /* Docs headline moved to v1.76.0 in vague 1.77 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76)\.\d+\*\*/);
+  it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.77.0', () => {
+    /* Docs headline moved to v1.77.0 in vague 1.78 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76|77)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76|77)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.68**');
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toMatch(/no-go.*1\.69/);
@@ -82,8 +82,8 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
       .filter((q) => q.title.es == null || q.title.es === '')
       .map((q) => q.id)
       .sort();
-    /* portrait-light…smartphone…gear-lenses…lightroom-workflow .es through 1.77 — drop from historical without-es lock. */
-    expect(packsWithoutEs).toEqual(['marques-photo']);
+    /* portrait-light…marques-photo .es through 1.78 — série ES catalogue fermée. */
+    expect(packsWithoutEs).toEqual([]); /* marques-photo .es 1.78 — série fermée */
     expect(
       questions.quizzes.every((q) => {
         const title = q.title as { de?: string };

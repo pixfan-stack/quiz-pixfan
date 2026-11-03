@@ -19786,11 +19786,13 @@
       "id": "marques-photo",
       "title": {
         "en": "Brand history",
-        "fr": "Histoire des marques"
+        "fr": "Histoire des marques",
+        "es": "Historia de las marcas"
       },
       "description": {
         "en": "Canon, Nikon, Leica, Sony and friends — founding stories and iconic systems, Pixfan culture style.",
-        "fr": "Canon, Nikon, Leica, Sony et consorts — fondations et systèmes iconiques, dans l’esprit culture Pixfan."
+        "fr": "Canon, Nikon, Leica, Sony et consorts — fondations et systèmes iconiques, dans l’esprit culture Pixfan.",
+        "es": "Canon, Nikon, Leica, Sony y compañía — orígenes y sistemas icónicos, al estilo cultura Pixfan."
       },
       "difficulty": "medium",
       "questions": [
@@ -19799,35 +19801,40 @@
           "type": "single",
           "text": {
             "en": "In which country was Canon founded in the 1930s?",
-            "fr": "Dans quel pays Canon a-t-il été fondé dans les années 1930 ?"
+            "fr": "Dans quel pays Canon a-t-il été fondé dans les années 1930 ?",
+            "es": "¿En qué país se fundó Canon en los años 1930?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Germany",
-                "fr": "Allemagne"
+                "fr": "Allemagne",
+                "es": "Alemania"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Japan",
-                "fr": "Japon"
+                "fr": "Japon",
+                "es": "Japón"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "United States",
-                "fr": "États-Unis"
+                "fr": "États-Unis",
+                "es": "Estados Unidos"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "France",
-                "fr": "France"
+                "fr": "France",
+                "es": "Francia"
               }
             }
           ],
@@ -19836,17 +19843,20 @@
           ],
           "explanation": {
             "en": "Canon began in Tokyo in 1934 as Precision Optical Instruments Laboratory (later Canon).",
-            "fr": "Canon naît à Tokyo en 1934 sous le nom de Precision Optical Instruments Laboratory (devenu Canon)."
+            "fr": "Canon naît à Tokyo en 1934 sous le nom de Precision Optical Instruments Laboratory (devenu Canon).",
+            "es": "Canon nació en Tokio en 1934 como Precision Optical Instruments Laboratory (luego Canon)."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera body",
-            "fr": "Boîtier photo classique"
+            "fr": "Boîtier photo classique",
+            "es": "Cuerpo de cámara clásico"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19854,35 +19864,40 @@
           "type": "single",
           "text": {
             "en": "Canon’s first production 35mm rangefinder (mid-1930s) is commonly known as which model?",
-            "fr": "Le premier télémétrique 35 mm de production Canon (milieu des années 1930) est souvent appelé quel modèle ?"
+            "fr": "Le premier télémétrique 35 mm de production Canon (milieu des années 1930) est souvent appelé quel modèle ?",
+            "es": "El primer telemetro 35 mm de producción de Canon (mediados de los años 1930) se conoce habitualmente como…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "EOS-1",
-                "fr": "EOS-1"
+                "fr": "EOS-1",
+                "es": "EOS-1 (réflex profesional)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "PowerShot G1",
-                "fr": "PowerShot G1"
+                "fr": "PowerShot G1",
+                "es": "PowerShot G1 (compacta)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Hansa Canon",
-                "fr": "Hansa Canon"
+                "fr": "Hansa Canon",
+                "es": "Hansa Canon (1936)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "IXUS 100",
-                "fr": "IXUS 100"
+                "fr": "IXUS 100",
+                "es": "IXUS 100 (compacta digital)"
               }
             }
           ],
@@ -19891,17 +19906,20 @@
           ],
           "explanation": {
             "en": "After the Kwanon prototype, the Hansa Canon (1936) was the first widely sold Canon 35mm camera.",
-            "fr": "Après le prototype Kwanon, le Hansa Canon (1936) est le premier appareil Canon 35 mm largement commercialisé."
+            "fr": "Après le prototype Kwanon, le Hansa Canon (1936) est le premier appareil Canon 35 mm largement commercialisé.",
+            "es": "Tras el prototipo Kwanon, la Hansa Canon (1936) fue la primera cámara Canon 35 mm vendida a gran escala."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage camera gear",
-            "fr": "Matériel photo vintage"
+            "fr": "Matériel photo vintage",
+            "es": "Equipo fotográfico vintage"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19909,35 +19927,40 @@
           "type": "single",
           "text": {
             "en": "What does Canon’s EOS system name stand for?",
-            "fr": "Que signifie le nom du système Canon EOS ?"
+            "fr": "Que signifie le nom du système Canon EOS ?",
+            "es": "¿Qué significan las siglas EOS del sistema Canon?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Electronic Optical Sensor",
-                "fr": "Electronic Optical Sensor"
+                "fr": "Electronic Optical Sensor",
+                "es": "Electronic Optical Sensor (sensor óptico electrónico)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Electro-Optical System",
-                "fr": "Electro-Optical System"
+                "fr": "Electro-Optical System",
+                "es": "Electro-Optical System (sistema electroóptico)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "European Order Specification",
-                "fr": "European Order Specification"
+                "fr": "European Order Specification",
+                "es": "European Order Specification (especificación de pedido europea)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Exposure Only Setting",
-                "fr": "Exposure Only Setting"
+                "fr": "Exposure Only Setting",
+                "es": "Exposure Only Setting (ajuste solo de exposición)"
               }
             }
           ],
@@ -19946,17 +19969,20 @@
           ],
           "explanation": {
             "en": "EOS = Electro-Optical System, launched in 1987 with autofocus EF lenses.",
-            "fr": "EOS = Electro-Optical System, lancé en 1987 avec les objectifs autofocus EF."
+            "fr": "EOS = Electro-Optical System, lancé en 1987 avec les objectifs autofocus EF.",
+            "es": "EOS = Electro-Optical System, lanzado en 1987 con objetivos EF de autofoco."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1502920917128-1aa500764cbd.avif",
           "imageAlt": {
             "en": "DSLR-style camera",
-            "fr": "Appareil type reflex"
+            "fr": "Appareil type reflex",
+            "es": "Cámara estilo réflex digital"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -19964,35 +19990,40 @@
           "type": "single",
           "text": {
             "en": "Canon’s EF lens mount (EOS era) is best known for introducing what at launch?",
-            "fr": "La baïonnette Canon EF (ère EOS) est surtout connue pour avoir introduit quoi à son lancement ?"
+            "fr": "La baïonnette Canon EF (ère EOS) est surtout connue pour avoir introduit quoi à son lancement ?",
+            "es": "La montura EF de Canon (era EOS) destaca en el lanzamiento por introducir…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Only screw-drive film advance",
-                "fr": "Uniquement l’avancée pellicule à vis"
+                "fr": "Uniquement l’avancée pellicule à vis",
+                "es": "Solo avance de película por tornillo"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Medium-format leaf shutters only",
-                "fr": "Uniquement des obturateurs centraux moyen format"
+                "fr": "Uniquement des obturateurs centraux moyen format",
+                "es": "Únicamente obturadores de láminas de formato medio"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Fully electronic lens–body communication (no mechanical aperture lever)",
-                "fr": "Communication objectif–boîtier entièrement électronique (sans levier mécanique d’ouverture)"
+                "fr": "Communication objectif–boîtier entièrement électronique (sans levier mécanique d’ouverture)",
+                "es": "Comunicación totalmente electrónica objetivo–cuerpo (sin palanca mecánica de diafragma)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Flash-only contacts with no focus motors",
-                "fr": "Contacts flash uniquement, sans moteurs de mise au point"
+                "fr": "Contacts flash uniquement, sans moteurs de mise au point",
+                "es": "Contactos solo de flash, sin motores de enfoque"
               }
             }
           ],
@@ -20001,17 +20032,20 @@
           ],
           "explanation": {
             "en": "EF dropped the mechanical aperture linkage; focusing motors live in the lens and talk to the body electronically.",
-            "fr": "EF abandonne la liaison mécanique d’ouverture ; les moteurs de MAP sont dans l’objectif et dialoguent électroniquement avec le boîtier."
+            "fr": "EF abandonne la liaison mécanique d’ouverture ; les moteurs de MAP sont dans l’objectif et dialoguent électroniquement avec le boîtier.",
+            "es": "EF eliminó el acoplamiento mecánico de diafragma; los motores de enfoque viven en el objetivo y hablan electrónicamente con el cuerpo."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
           "imageAlt": {
             "en": "Camera lens detail",
-            "fr": "Détail d’objectif photo"
+            "fr": "Détail d’objectif photo",
+            "es": "Detalle de un objetivo"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20019,35 +20053,40 @@
           "type": "single",
           "text": {
             "en": "Nikon’s optical company roots go back to which year (Nippon Kogaku Kogyo)?",
-            "fr": "Les racines optiques de Nikon remontent à quelle année (Nippon Kogaku Kogyo) ?"
+            "fr": "Les racines optiques de Nikon remontent à quelle année (Nippon Kogaku Kogyo) ?",
+            "es": "Las raíces ópticas de Nikon se remontan a qué año (Nippon Kogaku Kogyo)?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "1959",
-                "fr": "1959"
+                "fr": "1959",
+                "es": "año 1959"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "1987",
-                "fr": "1987"
+                "fr": "1987",
+                "es": "año 1987"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "2000",
-                "fr": "2000"
+                "fr": "2000",
+                "es": "año 2000"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "1917",
-                "fr": "1917"
+                "fr": "1917",
+                "es": "año 1917"
               }
             }
           ],
@@ -20056,17 +20095,20 @@
           ],
           "explanation": {
             "en": "Nippon Kogaku Kogyo was founded in 1917; the Nikon brand name came later for cameras and lenses.",
-            "fr": "Nippon Kogaku Kogyo est fondée en 1917 ; la marque Nikon s’impose ensuite pour appareils et objectifs."
+            "fr": "Nippon Kogaku Kogyo est fondée en 1917 ; la marque Nikon s’impose ensuite pour appareils et objectifs.",
+            "es": "Nippon Kogaku Kogyo se fundó en 1917; el nombre de marca Nikon llegó después para cámaras y objetivos."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1452421822248-d4c2b47f0c81.avif",
           "imageAlt": {
             "en": "Historical documents and books",
-            "fr": "Documents et livres anciens"
+            "fr": "Documents et livres anciens",
+            "es": "Documentos históricos y libros"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20074,35 +20116,40 @@
           "type": "single",
           "text": {
             "en": "Which 1959 Nikon camera helped define the modern professional 35mm SLR system?",
-            "fr": "Quel appareil Nikon de 1959 a contribué à définir le reflex 35 mm professionnel moderne ?"
+            "fr": "Quel appareil Nikon de 1959 a contribué à définir le reflex 35 mm professionnel moderne ?",
+            "es": "¿Qué cámara Nikon de 1959 ayudó a definir el sistema réflex 35 mm profesional moderno?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Nikon F",
-                "fr": "Nikon F"
+                "fr": "Nikon F",
+                "es": "Nikon F (sistema SLR 1959)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Nikon Coolpix P900",
-                "fr": "Nikon Coolpix P900"
+                "fr": "Nikon Coolpix P900",
+                "es": "Nikon Coolpix P900 (bridge)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Nikon 1 J1",
-                "fr": "Nikon 1 J1"
+                "fr": "Nikon 1 J1",
+                "es": "Nikon 1 J1 (mirrorless 1)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Nikon KeyMission 360",
-                "fr": "Nikon KeyMission 360"
+                "fr": "Nikon KeyMission 360",
+                "es": "Nikon KeyMission 360 (acción 360°)"
               }
             }
           ],
@@ -20111,17 +20158,20 @@
           ],
           "explanation": {
             "en": "The Nikon F (1959) offered a modular professional SLR system with interchangeable finders and a durable F-mount.",
-            "fr": "Le Nikon F (1959) propose un système reflex professionnel modulaire, viseurs interchangeables et baïonnette F durable."
+            "fr": "Le Nikon F (1959) propose un système reflex professionnel modulaire, viseurs interchangeables et baïonnette F durable.",
+            "es": "La Nikon F (1959) ofrecía un sistema SLR profesional modular, con visores intercambiables y una montura F durable."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1581591524425-c7e0978865fc.avif",
           "imageAlt": {
             "en": "Camera on a surface",
-            "fr": "Appareil photo sur une surface"
+            "fr": "Appareil photo sur une surface",
+            "es": "Cámara sobre una superficie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20129,35 +20179,40 @@
           "type": "single",
           "text": {
             "en": "Nikon’s F-mount is notable in industry history mainly because…",
-            "fr": "La baïonnette Nikon F est surtout remarquable dans l’histoire du matériel parce que…"
+            "fr": "La baïonnette Nikon F est surtout remarquable dans l’histoire du matériel parce que…",
+            "es": "La montura F de Nikon es notable en la historia de la industria sobre todo porque…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "It only works with medium-format backs",
-                "fr": "Elle ne fonctionne qu’avec des dos moyen format"
+                "fr": "Elle ne fonctionne qu’avec des dos moyen format",
+                "es": "Solo funciona con respaldos de formato medio"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "It stayed the core SLR/DSLR mount for decades with broad backward compatibility",
-                "fr": "Elle est restée la baïonnette reflex/DSLR centrale pendant des décennies, avec une large rétrocompatibilité"
+                "fr": "Elle est restée la baïonnette reflex/DSLR centrale pendant des décennies, avec une large rétrocompatibilité",
+                "es": "Siguió siendo el núcleo SLR/DSLR durante décadas, con amplia compatibilidad hacia atrás"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "It was abandoned after one year",
-                "fr": "Elle a été abandonnée après un an"
+                "fr": "Elle a été abandonnée après un an",
+                "es": "Se abandonó al cabo de un año"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "It was exclusive to point-and-shoot film cameras",
-                "fr": "Elle était réservée aux compacts argentiques"
+                "fr": "Elle était réservée aux compacts argentiques",
+                "es": "Era exclusiva de cámaras de carrete compactas"
               }
             }
           ],
@@ -20166,17 +20221,20 @@
           ],
           "explanation": {
             "en": "Introduced with the Nikon F, the F-mount spanned film SLRs and DSLRs for generations (with caveats on newer AF types).",
-            "fr": "Lancée avec le Nikon F, la baïonnette F a traversé des générations de reflex argentiques puis numériques (avec nuances selon les AF)."
+            "fr": "Lancée avec le Nikon F, la baïonnette F a traversé des générations de reflex argentiques puis numériques (avec nuances selon les AF).",
+            "es": "Introducida con la Nikon F, la montura F acompañó generaciones de SLR de película y DSLR (con matices en tipos AF más nuevos)."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
           "imageAlt": {
             "en": "Camera body close-up",
-            "fr": "Gros plan de boîtier"
+            "fr": "Gros plan de boîtier",
+            "es": "Primer plano de un cuerpo de cámara"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20184,35 +20242,40 @@
           "type": "single",
           "text": {
             "en": "Before “Nikon”, many early lenses from the company were branded…",
-            "fr": "Avant « Nikon », de nombreux objectifs anciens de la société étaient marqués…"
+            "fr": "Avant « Nikon », de nombreux objectifs anciens de la société étaient marqués…",
+            "es": "Antes de «Nikon», muchos objetivos tempranos de la compañía se comercializaban como…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Rollei",
-                "fr": "Rollei"
+                "fr": "Rollei",
+                "es": "Rollei (otra marca)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Hasselblad only",
-                "fr": "Hasselblad uniquement"
+                "fr": "Hasselblad uniquement",
+                "es": "Solo Hasselblad"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Nikkor",
-                "fr": "Nikkor"
+                "fr": "Nikkor",
+                "es": "Nikkor (marca de objetivos)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Contax G",
-                "fr": "Contax G"
+                "fr": "Contax G",
+                "es": "Contax G (sistema distinto)"
               }
             }
           ],
@@ -20221,17 +20284,20 @@
           ],
           "explanation": {
             "en": "Nikkor was (and remains) the lens brand; “Nikon” became the camera brand name widely used after WWII.",
-            "fr": "Nikkor était (et reste) la marque d’objectifs ; « Nikon » s’impose comme nom d’appareils après la Seconde Guerre mondiale."
+            "fr": "Nikkor était (et reste) la marque d’objectifs ; « Nikon » s’impose comme nom d’appareils après la Seconde Guerre mondiale.",
+            "es": "Nikkor era (y sigue siendo) la marca de objetivos; «Nikon» se consolidó como nombre de cámaras tras la Segunda Guerra Mundial."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
           "imageAlt": {
             "en": "Lens barrel",
-            "fr": "Fût d’objectif"
+            "fr": "Fût d’objectif",
+            "es": "Barril de un objetivo"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20239,35 +20305,40 @@
           "type": "single",
           "text": {
             "en": "Who is widely credited with inventing the compact 35mm Leica camera concept at Ernst Leitz?",
-            "fr": "À qui attribue-t-on généralement le concept du Leica compact 35 mm chez Ernst Leitz ?"
+            "fr": "À qui attribue-t-on généralement le concept du Leica compact 35 mm chez Ernst Leitz ?",
+            "es": "¿A quién se atribuye habitualmente el concepto de la Leica 35 mm compacta en Ernst Leitz?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "George Eastman",
-                "fr": "George Eastman"
+                "fr": "George Eastman",
+                "es": "George Eastman (Kodak)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Oskar Barnack",
-                "fr": "Oskar Barnack"
+                "fr": "Oskar Barnack",
+                "es": "Oskar Barnack (Leitz / Ur-Leica)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Edwin Land",
-                "fr": "Edwin Land"
+                "fr": "Edwin Land",
+                "es": "Edwin Land (Polaroid)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Steven Sasson",
-                "fr": "Steven Sasson"
+                "fr": "Steven Sasson",
+                "es": "Steven Sasson (Kodak digital)"
               }
             }
           ],
@@ -20276,17 +20347,20 @@
           ],
           "explanation": {
             "en": "Oskar Barnack’s Ur-Leica led to the Leica I (1925), popularizing 35mm still photography.",
-            "fr": "L’Ur-Leica d’Oskar Barnack mène au Leica I (1925), qui popularise la photo fixe en 35 mm."
+            "fr": "L’Ur-Leica d’Oskar Barnack mène au Leica I (1925), qui popularise la photo fixe en 35 mm.",
+            "es": "La Ur-Leica de Oskar Barnack desembocó en la Leica I (1925), popularizando la fotografía fija en 35 mm."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage photography equipment",
-            "fr": "Équipement photo vintage"
+            "fr": "Équipement photo vintage",
+            "es": "Equipo fotográfico vintage"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20294,35 +20368,40 @@
           "type": "single",
           "text": {
             "en": "The first commercially produced Leica (Leica I / model A) reached the market around which year?",
-            "fr": "Le premier Leica commercialisé (Leica I / modèle A) arrive sur le marché vers quelle année ?"
+            "fr": "Le premier Leica commercialisé (Leica I / modèle A) arrive sur le marché vers quelle année ?",
+            "es": "La primera Leica de producción comercial (Leica I / modelo A) llegó al mercado hacia…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "1969",
-                "fr": "1969"
+                "fr": "1969",
+                "es": "año 1969"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "1947",
-                "fr": "1947"
+                "fr": "1947",
+                "es": "año 1947"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "1987",
-                "fr": "1987"
+                "fr": "1987",
+                "es": "año 1987"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "1925",
-                "fr": "1925"
+                "fr": "1925",
+                "es": "año 1925"
               }
             }
           ],
@@ -20331,17 +20410,20 @@
           ],
           "explanation": {
             "en": "Leica I was introduced at the 1925 Leipzig Spring Fair — a landmark for portable 35mm cameras.",
-            "fr": "Le Leica I est présenté à la foire de Leipzig au printemps 1925 — jalon des appareils 35 mm portables."
+            "fr": "Le Leica I est présenté à la foire de Leipzig au printemps 1925 — jalon des appareils 35 mm portables.",
+            "es": "La Leica I se presentó en la Feria de Primavera de Leipzig de 1925 — un hito para las cámaras 35 mm portátiles."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera",
-            "fr": "Appareil classique"
+            "fr": "Appareil classique",
+            "es": "Cámara clásica"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20349,35 +20431,40 @@
           "type": "single",
           "text": {
             "en": "Leica’s M-mount rangefinder system was introduced in which decade?",
-            "fr": "Le système télémétrique à baïonnette M de Leica apparaît dans quelle décennie ?"
+            "fr": "Le système télémétrique à baïonnette M de Leica apparaît dans quelle décennie ?",
+            "es": "El sistema telemetro de montura M de Leica se introdujo en qué década?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "1950s (Leica M3, 1954)",
-                "fr": "Années 1950 (Leica M3, 1954)"
+                "fr": "Années 1950 (Leica M3, 1954)",
+                "es": "Años 1950 (Leica M3, 1954)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "1970s",
-                "fr": "Années 1970"
+                "fr": "Années 1970",
+                "es": "Años 1970"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "1990s",
-                "fr": "Années 1990"
+                "fr": "Années 1990",
+                "es": "Años 1990"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "2010s",
-                "fr": "Années 2010"
+                "fr": "Années 2010",
+                "es": "Años 2010"
               }
             }
           ],
@@ -20386,17 +20473,20 @@
           ],
           "explanation": {
             "en": "The Leica M3 (1954) launched the M bayonet still central to Leica rangefinders.",
-            "fr": "Le Leica M3 (1954) lance la baïonnette M, toujours au cœur des télémétriques Leica."
+            "fr": "Le Leica M3 (1954) lance la baïonnette M, toujours au cœur des télémétriques Leica.",
+            "es": "La Leica M3 (1954) lanzó la bayoneta M, aún central en los telemetros Leica."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "City street scene — rangefinder culture",
-            "fr": "Scène de rue — culture télémétrique"
+            "fr": "Scène de rue — culture télémétrique",
+            "es": "Escena urbana — cultura telemetro"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20404,35 +20494,40 @@
           "type": "single",
           "text": {
             "en": "Leica cameras historically have a strong association with which kind of photography?",
-            "fr": "Les appareils Leica sont historiquement fortement associés à quel type de photographie ?"
+            "fr": "Les appareils Leica sont historiquement fortement associés à quel type de photographie ?",
+            "es": "Las cámaras Leica se asocian históricamente sobre todo a qué tipo de fotografía?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Only underwater housings",
-                "fr": "Uniquement les caissons sous-marins"
+                "fr": "Uniquement les caissons sous-marins",
+                "es": "Solo carcasas subacuáticas"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only large-format studio view cameras",
-                "fr": "Uniquement les chambres grand format de studio"
+                "fr": "Uniquement les chambres grand format de studio",
+                "es": "Solo cámaras de estudio de gran formato"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Quiet rangefinder street / reportage photography",
-                "fr": "Photo de rue / reportage au télémétrique discret"
+                "fr": "Photo de rue / reportage au télémétrique discret",
+                "es": "Calle / reportaje silencioso con telemetro"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only smartphone computational HDR",
-                "fr": "Uniquement le HDR computationnel smartphone"
+                "fr": "Uniquement le HDR computationnel smartphone",
+                "es": "Solo HDR computacional de smartphone"
               }
             }
           ],
@@ -20441,17 +20536,20 @@
           ],
           "explanation": {
             "en": "Compact, quiet M rangefinders became icons of street and reportage work (e.g. many Magnum photographers).",
-            "fr": "Les télémétriques M, compacts et discrets, sont devenus des icônes de la rue et du reportage (ex. de nombreux photographes Magnum)."
+            "fr": "Les télémétriques M, compacts et discrets, sont devenus des icônes de la rue et du reportage (ex. de nombreux photographes Magnum).",
+            "es": "Los telemetros M compactos y silenciosos se convirtieron en iconos de la calle y el reportaje (p. ej. muchos fotógrafos Magnum)."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Urban street atmosphere",
-            "fr": "Atmosphère de rue urbaine"
+            "fr": "Atmosphère de rue urbaine",
+            "es": "Atmósfera de calle urbana"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20459,35 +20557,40 @@
           "type": "single",
           "text": {
             "en": "Sony’s company origins (Tokyo Tsushin Kogyo) date to which year?",
-            "fr": "Les origines de Sony (Tokyo Tsushin Kogyo) remontent à quelle année ?"
+            "fr": "Les origines de Sony (Tokyo Tsushin Kogyo) remontent à quelle année ?",
+            "es": "Los orígenes de Sony (Tokyo Tsushin Kogyo) datan de qué año?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "1917",
-                "fr": "1917"
+                "fr": "1917",
+                "es": "año 1917"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "1946",
-                "fr": "1946"
+                "fr": "1946",
+                "es": "año 1946"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "1934",
-                "fr": "1934"
+                "fr": "1934",
+                "es": "año 1934"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "1925",
-                "fr": "1925"
+                "fr": "1925",
+                "es": "año 1925"
               }
             }
           ],
@@ -20496,17 +20599,20 @@
           ],
           "explanation": {
             "en": "Tokyo Tsushin Kogyo was founded in 1946 and later renamed Sony — electronics first, cameras later.",
-            "fr": "Tokyo Tsushin Kogyo est fondée en 1946 puis renommée Sony — d’abord l’électronique, les appareils photo plus tard."
+            "fr": "Tokyo Tsushin Kogyo est fondée en 1946 puis renommée Sony — d’abord l’électronique, les appareils photo plus tard.",
+            "es": "Tokyo Tsushin Kogyo se fundó en 1946 y más tarde se renombró Sony — primero electrónica, después cámaras."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
           "imageAlt": {
             "en": "Electronics and workspace",
-            "fr": "Électronique et espace de travail"
+            "fr": "Électronique et espace de travail",
+            "es": "Electrónica y espacio de trabajo"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20514,35 +20620,40 @@
           "type": "single",
           "text": {
             "en": "Sony’s α (Alpha) interchangeable-lens cameras grew in part from which earlier camera lineage?",
-            "fr": "Les hybrides / reflex Sony α (Alpha) s’appuient en partie sur quelle lignée d’appareils antérieure ?"
+            "fr": "Les hybrides / reflex Sony α (Alpha) s’appuient en partie sur quelle lignée d’appareils antérieure ?",
+            "es": "Las cámaras intercambiables α (Alpha) de Sony crecieron en parte a partir de qué linaje?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Only Polaroid instant cameras",
-                "fr": "Uniquement les Polaroid instantanés"
+                "fr": "Uniquement les Polaroid instantanés",
+                "es": "Solo cámaras instantáneas Polaroid"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only GoPro action cams",
-                "fr": "Uniquement les caméras d’action GoPro"
+                "fr": "Uniquement les caméras d’action GoPro",
+                "es": "Solo cámaras de acción GoPro"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Minolta / Konica Minolta A-mount SLR heritage",
-                "fr": "L’héritage reflex baïonnette A Minolta / Konica Minolta"
+                "fr": "L’héritage reflex baïonnette A Minolta / Konica Minolta",
+                "es": "Herencia SLR de montura A de Minolta / Konica Minolta"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only Leica screw-mount film bodies",
-                "fr": "Uniquement les boîtiers Leica à monture à vis"
+                "fr": "Uniquement les boîtiers Leica à monture à vis",
+                "es": "Solo cuerpos de película con rosca Leica"
               }
             }
           ],
@@ -20551,17 +20662,20 @@
           ],
           "explanation": {
             "en": "Sony entered ILCs after taking over Konica Minolta’s camera business, continuing the A-mount line before E-mount mirrorless.",
-            "fr": "Sony entre sur les appareils à objectifs interchangeables après la reprise de l’activité photo Konica Minolta, poursuivant la baïonnette A avant les hybrides E."
+            "fr": "Sony entre sur les appareils à objectifs interchangeables après la reprise de l’activité photo Konica Minolta, poursuivant la baïonnette A avant les hybrides E.",
+            "es": "Sony entró en las ILC tras hacerse con el negocio de cámaras de Konica Minolta, continuando la línea de montura A antes del mirrorless E-mount."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1502920917128-1aa500764cbd.avif",
           "imageAlt": {
             "en": "Modern camera body",
-            "fr": "Boîtier moderne"
+            "fr": "Boîtier moderne",
+            "es": "Cuerpo de cámara moderno"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20569,35 +20683,40 @@
           "type": "single",
           "text": {
             "en": "Which 2013 Sony camera line is widely credited with popularizing full-frame mirrorless?",
-            "fr": "Quelle gamme Sony de 2013 est largement créditée d’avoir popularisé l’hybride plein format ?"
+            "fr": "Quelle gamme Sony de 2013 est largement créditée d’avoir popularisé l’hybride plein format ?",
+            "es": "¿Qué línea Sony de 2013 se acredita ampliamente por popularizar el mirrorless full-frame?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Sony Cyber-shot DSC-RX0 only",
-                "fr": "Sony Cyber-shot DSC-RX0 uniquement"
+                "fr": "Sony Cyber-shot DSC-RX0 uniquement",
+                "es": "Solo Sony Cyber-shot DSC-RX0"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Sony α7 (A7) series",
-                "fr": "Série Sony α7 (A7)"
+                "fr": "Série Sony α7 (A7)",
+                "es": "Serie Sony α7 (A7)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Sony Mavica floppy-disk cameras",
-                "fr": "Appareils Sony Mavica à disquette"
+                "fr": "Appareils Sony Mavica à disquette",
+                "es": "Cámaras Sony Mavica de disquete"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Sony Handycam Hi8 only",
-                "fr": "Sony Handycam Hi8 uniquement"
+                "fr": "Sony Handycam Hi8 uniquement",
+                "es": "Solo Sony Handycam Hi8"
               }
             }
           ],
@@ -20606,17 +20725,20 @@
           ],
           "explanation": {
             "en": "The 2013 α7 / α7R brought relatively compact full-frame mirrorless bodies to a wide audience.",
-            "fr": "Les α7 / α7R de 2013 ont démocratisé des boîtiers hybrides plein format relativement compacts."
+            "fr": "Les α7 / α7R de 2013 ont démocratisé des boîtiers hybrides plein format relativement compacts.",
+            "es": "Las α7 / α7R de 2013 llevaron cuerpos mirrorless full-frame relativamente compactos a un público amplio."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1581591524425-c7e0978865fc.avif",
           "imageAlt": {
             "en": "Compact camera in hand context",
-            "fr": "Appareil compact en contexte"
+            "fr": "Appareil compact en contexte",
+            "es": "Cámara compacta en contexto de mano"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20624,35 +20746,40 @@
           "type": "single",
           "text": {
             "en": "Sony’s mirrorless E-mount was first associated with which sensor format class?",
-            "fr": "La baïonnette hybride E de Sony a d’abord été associée à quelle classe de format de capteur ?"
+            "fr": "La baïonnette hybride E de Sony a d’abord été associée à quelle classe de format de capteur ?",
+            "es": "La montura E mirrorless de Sony se asoció primero a qué clase de formato de sensor?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Only 8×10 large format",
-                "fr": "Uniquement le grand format 8×10"
+                "fr": "Uniquement le grand format 8×10",
+                "es": "Solo gran formato 8×10"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only APS-H film",
-                "fr": "Uniquement le film APS-H"
+                "fr": "Uniquement le film APS-H",
+                "es": "Solo película APS-H"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "APS-C (NEX / α××00), later expanded to full-frame",
-                "fr": "APS-C (NEX / α××00), puis étendue au plein format"
+                "fr": "APS-C (NEX / α××00), puis étendue au plein format",
+                "es": "APS-C (NEX / α××00), luego ampliada a full-frame"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only Medium format 6×6",
-                "fr": "Uniquement le moyen format 6×6"
+                "fr": "Uniquement le moyen format 6×6",
+                "es": "Solo formato medio 6×6"
               }
             }
           ],
@@ -20661,17 +20788,20 @@
           ],
           "explanation": {
             "en": "E-mount launched on APS-C NEX cameras; full-frame α7 bodies later used the same mount family.",
-            "fr": "La baïonnette E naît sur les NEX APS-C ; les boîtiers plein format α7 reprennent ensuite la même famille de monture."
+            "fr": "La baïonnette E naît sur les NEX APS-C ; les boîtiers plein format α7 reprennent ensuite la même famille de monture.",
+            "es": "La montura E nació en cámaras NEX APS-C; los cuerpos full-frame α7 usaron después la misma familia de montura."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1526170375885-4d8ecf77b99f.avif",
           "imageAlt": {
             "en": "Interchangeable-lens camera",
-            "fr": "Appareil à objectifs interchangeables"
+            "fr": "Appareil à objectifs interchangeables",
+            "es": "Cámara de objetivos intercambiables"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20679,35 +20809,40 @@
           "type": "single",
           "text": {
             "en": "Fujifilm is historically best known first as a company for…",
-            "fr": "Fujifilm est d’abord historiquement connue comme une entreprise de…"
+            "fr": "Fujifilm est d’abord historiquement connue comme une entreprise de…",
+            "es": "Fujifilm es históricamente más conocida primero como empresa de…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Only smartphone chipsets",
-                "fr": "Uniquement des chipsets smartphone"
+                "fr": "Uniquement des chipsets smartphone",
+                "es": "Solo chipsets para smartphones"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Photographic film and imaging materials",
-                "fr": "Films photographiques et matériaux d’imagerie"
+                "fr": "Films photographiques et matériaux d’imagerie",
+                "es": "Película fotográfica y materiales de imagen"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only car engines",
-                "fr": "Uniquement des moteurs automobiles"
+                "fr": "Uniquement des moteurs automobiles",
+                "es": "Solo motores de coche"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only typewriters",
-                "fr": "Uniquement des machines à écrire"
+                "fr": "Uniquement des machines à écrire",
+                "es": "Solo máquinas de escribir"
               }
             }
           ],
@@ -20716,17 +20851,20 @@
           ],
           "explanation": {
             "en": "Fuji Photo Film Co. built its name on film and imaging chemistry before digital X-series cameras.",
-            "fr": "Fuji Photo Film Co. s’est d’abord imposée par le film et la chimie d’imagerie, avant les hybrides série X."
+            "fr": "Fuji Photo Film Co. s’est d’abord imposée par le film et la chimie d’imagerie, avant les hybrides série X.",
+            "es": "Fuji Photo Film Co. consolidó su nombre en película y química de imagen antes de las cámaras digitales serie X."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1452421822248-d4c2b47f0c81.avif",
           "imageAlt": {
             "en": "Archival / film-era atmosphere",
-            "fr": "Atmosphère d’époque film / archives"
+            "fr": "Atmosphère d’époque film / archives",
+            "es": "Atmósfera de archivo / era de la película"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20734,35 +20872,40 @@
           "type": "single",
           "text": {
             "en": "Fujifilm’s modern X-series interchangeable cameras are especially associated with…",
-            "fr": "Les hybrides modernes Fujifilm série X sont surtout associés à…"
+            "fr": "Les hybrides modernes Fujifilm série X sont surtout associés à…",
+            "es": "Las cámaras intercambiables modernas serie X de Fujifilm se asocian especialmente a…"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Only medium-format film backs for Hasselblad",
-                "fr": "Uniquement des dos film moyen format Hasselblad"
+                "fr": "Uniquement des dos film moyen format Hasselblad",
+                "es": "Solo respaldos de película de formato medio para Hasselblad"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only underwater Nikonos housings",
-                "fr": "Uniquement des caissons Nikonos"
+                "fr": "Uniquement des caissons Nikonos",
+                "es": "Solo carcasas subacuáticas Nikonos"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "APS-C mirrorless bodies and distinctive film-simulation looks",
-                "fr": "Boîtiers hybrides APS-C et rendus type simulations de films"
+                "fr": "Boîtiers hybrides APS-C et rendus type simulations de films",
+                "es": "Cuerpos mirrorless APS-C y looks distintivos de simulación de película"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only 4×5 sheet-film holders",
-                "fr": "Uniquement des châssis plan-film 4×5"
+                "fr": "Uniquement des châssis plan-film 4×5",
+                "es": "Solo portaplanos de película 4×5"
               }
             }
           ],
@@ -20771,17 +20914,20 @@
           ],
           "explanation": {
             "en": "The X-Pro / X-T lines popularized APS-C mirrorless with JPEG film simulations rooted in Fuji’s film heritage.",
-            "fr": "Les X-Pro / X-T ont popularisé l’hybride APS-C avec des simulations de film JPEG héritées du passé argentique Fuji."
+            "fr": "Les X-Pro / X-T ont popularisé l’hybride APS-C avec des simulations de film JPEG héritées du passé argentique Fuji.",
+            "es": "Las líneas X-Pro / X-T popularizaron el mirrorless APS-C con simulaciones JPEG ancladas en la herencia fílmica de Fuji."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1471341971476-ae15ff5dd4ea.avif",
           "imageAlt": {
             "en": "Camera ready to shoot",
-            "fr": "Appareil prêt à photographier"
+            "fr": "Appareil prêt à photographier",
+            "es": "Cámara lista para disparar"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20789,35 +20935,40 @@
           "type": "single",
           "text": {
             "en": "Olympus’s classic OM-1 (1970s) is famous for being…",
-            "fr": "Le classique Olympus OM-1 (années 1970) est célèbre pour être…"
+            "fr": "Le classique Olympus OM-1 (années 1970) est célèbre pour être…",
+            "es": "La clásica Olympus OM-1 (años 1970) es famosa por ser…"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "The first digital medium-format back",
-                "fr": "Le premier dos numérique moyen format"
+                "fr": "Le premier dos numérique moyen format",
+                "es": "El primer respaldo digital de formato medio"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "A compact, lightweight professional 35mm SLR system",
-                "fr": "Un système reflex 35 mm professionnel compact et léger"
+                "fr": "Un système reflex 35 mm professionnel compact et léger",
+                "es": "Un sistema SLR 35 mm profesional compacto y ligero"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "A disposable single-use camera only",
-                "fr": "Uniquement un appareil jetable"
+                "fr": "Uniquement un appareil jetable",
+                "es": "Solo una cámara desechable de un solo uso"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "A cinema IMAX camera",
-                "fr": "Une caméra cinéma IMAX"
+                "fr": "Une caméra cinéma IMAX",
+                "es": "Una cámara de cine IMAX"
               }
             }
           ],
@@ -20826,17 +20977,20 @@
           ],
           "explanation": {
             "en": "The OM system (OM-1, 1972) shrank the pro SLR while keeping interchangeable lenses and accessories.",
-            "fr": "Le système OM (OM-1, 1972) miniaturise le reflex pro tout en gardant objectifs et accessoires interchangeables."
+            "fr": "Le système OM (OM-1, 1972) miniaturise le reflex pro tout en gardant objectifs et accessoires interchangeables.",
+            "es": "El sistema OM (OM-1, 1972) redujo el tamaño de la SLR profesional sin renunciar a objetivos y accesorios intercambiables."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage camera system vibe",
-            "fr": "Ambiance système photo vintage"
+            "fr": "Ambiance système photo vintage",
+            "es": "Ambiente de sistema de cámara vintage"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20844,35 +20998,40 @@
           "type": "single",
           "text": {
             "en": "Micro Four Thirds (used by Olympus and Panasonic) is primarily a standard for…",
-            "fr": "Le Micro Four Thirds (utilisé par Olympus et Panasonic) est surtout une norme pour…"
+            "fr": "Le Micro Four Thirds (utilisé par Olympus et Panasonic) est surtout une norme pour…",
+            "es": "Micro Four Thirds (usado por Olympus y Panasonic) es sobre todo un estándar para…"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Only flash sync cables",
-                "fr": "Uniquement des câbles de synchro flash"
+                "fr": "Uniquement des câbles de synchro flash",
+                "es": "Solo cables de sincronización de flash"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only darkroom enlarger lenses",
-                "fr": "Uniquement des objectifs d’agrandisseur"
+                "fr": "Uniquement des objectifs d’agrandisseur",
+                "es": "Solo objetivos de ampliadora de cuarto oscuro"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Mirrorless cameras with a shared lens mount and Four Thirds-sized sensors",
-                "fr": "Hybrides à baïonnette partagée et capteurs taille Four Thirds"
+                "fr": "Hybrides à baïonnette partagée et capteurs taille Four Thirds",
+                "es": "Cámaras mirrorless con montura compartida y sensores tamaño Four Thirds"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only 35mm film cassettes",
-                "fr": "Uniquement des cartouches de film 35 mm"
+                "fr": "Uniquement des cartouches de film 35 mm",
+                "es": "Solo cartuchos de película 35 mm"
               }
             }
           ],
@@ -20881,17 +21040,20 @@
           ],
           "explanation": {
             "en": "m4/3 (announced 2008) lets Olympus and Panasonic share lenses on compact mirrorless bodies.",
-            "fr": "Le m4/3 (annoncé en 2008) permet à Olympus et Panasonic de partager des objectifs sur des hybrides compacts."
+            "fr": "Le m4/3 (annoncé en 2008) permet à Olympus et Panasonic de partager des objectifs sur des hybrides compacts.",
+            "es": "m4/3 (anunciado en 2008) permite a Olympus y Panasonic compartir objetivos en cuerpos mirrorless compactos."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1606983340126-99ab4feaa64a.avif",
           "imageAlt": {
             "en": "Compact interchangeable-lens camera",
-            "fr": "Hybride compact"
+            "fr": "Hybride compact",
+            "es": "Cámara compacta de objetivos intercambiables"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20899,35 +21061,40 @@
           "type": "single",
           "text": {
             "en": "Which pairing correctly matches brand → well-known historic milestone?",
-            "fr": "Quelle association marque → jalon historique est correcte ?"
+            "fr": "Quelle association marque → jalon historique est correcte ?",
+            "es": "¿Qué emparejamiento marca → hito histórico conocido es correcto?"
           },
           "answers": [
             {
               "id": "b",
               "text": {
                 "en": "Leica → first consumer CMOS smartphone (2007)",
-                "fr": "Leica → premier smartphone CMOS grand public (2007)"
+                "fr": "Leica → premier smartphone CMOS grand public (2007)",
+                "es": "Leica → primer smartphone CMOS de consumo (2007)"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Nikon F (1959) → modular pro 35mm SLR system",
-                "fr": "Nikon F (1959) → système reflex 35 mm pro modulaire"
+                "fr": "Nikon F (1959) → système reflex 35 mm pro modulaire",
+                "es": "Nikon F (1959) → sistema SLR 35 mm profesional modular"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Canon → invention of the daguerreotype (1839)",
-                "fr": "Canon → invention du daguerréotype (1839)"
+                "fr": "Canon → invention du daguerréotype (1839)",
+                "es": "Canon → invención del daguerrotipo (1839)"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Sony → Ur-Leica prototype (1913)",
-                "fr": "Sony → prototype Ur-Leica (1913)"
+                "fr": "Sony → prototype Ur-Leica (1913)",
+                "es": "Sony → prototipo Ur-Leica (1913)"
               }
             }
           ],
@@ -20936,17 +21103,20 @@
           ],
           "explanation": {
             "en": "Nikon F is the classic pro SLR system milestone; daguerreotype and Ur-Leica belong to earlier inventors, not those brands.",
-            "fr": "Le Nikon F est le jalon reflex pro classique ; daguerréotype et Ur-Leica appartiennent à d’autres inventeurs / époques."
+            "fr": "Le Nikon F est le jalon reflex pro classique ; daguerréotype et Ur-Leica appartiennent à d’autres inventeurs / époques.",
+            "es": "La Nikon F es el hito clásico del sistema SLR profesional; el daguerrotipo y la Ur-Leica pertenecen a inventores anteriores, no a esas marcas."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera silhouette",
-            "fr": "Silhouette d’appareil classique"
+            "fr": "Silhouette d’appareil classique",
+            "es": "Silueta de cámara clásica"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -20954,35 +21124,40 @@
           "type": "multiple",
           "text": {
             "en": "Which brands were early leaders in 35mm rangefinder culture (pre-DSLRs)?",
-            "fr": "Quelles marques furent des pionnières de la culture télémétrique 35 mm (avant les DSLR) ?"
+            "fr": "Quelles marques furent des pionnières de la culture télémétrique 35 mm (avant les DSLR) ?",
+            "es": "¿Qué marcas fueron líderes tempranos de la cultura telemetro 35 mm (antes de las DSLR)?"
           },
           "answers": [
             {
               "id": "a",
               "text": {
                 "en": "Leica",
-                "fr": "Leica"
+                "fr": "Leica",
+                "es": "Leica (telemetros 35 mm)"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Canon (early rangefinders)",
-                "fr": "Canon (premiers télémétriques)"
+                "fr": "Canon (premiers télémétriques)",
+                "es": "Canon (primeros telemetros)"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only GoPro",
-                "fr": "Uniquement GoPro"
+                "fr": "Uniquement GoPro",
+                "es": "Solo GoPro"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only DJI drones",
-                "fr": "Uniquement les drones DJI"
+                "fr": "Uniquement les drones DJI",
+                "es": "Solo drones DJI"
               }
             }
           ],
@@ -20992,17 +21167,20 @@
           ],
           "explanation": {
             "en": "Leica defined the 35mm rangefinder; early Canon cameras were also rangefinders before Canon’s SLR success.",
-            "fr": "Leica définit le télémétrique 35 mm ; les premiers Canon étaient aussi des télémétriques avant le succès des reflex Canon."
+            "fr": "Leica définit le télémétrique 35 mm ; les premiers Canon étaient aussi des télémétriques avant le succès des reflex Canon.",
+            "es": "Leica definió el telemetro 35 mm; las primeras cámaras Canon también fueron telemetros antes del éxito SLR de Canon."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage rangefinder-era gear",
-            "fr": "Matériel d’époque télémétrique"
+            "fr": "Matériel d’époque télémétrique",
+            "es": "Equipo de la era telemetro vintage"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -21010,35 +21188,40 @@
           "type": "single",
           "text": {
             "en": "In the 2010s mirrorless boom, which statement is historically accurate?",
-            "fr": "Dans le boom des hybrides des années 2010, quelle affirmation est historiquement exacte ?"
+            "fr": "Dans le boom des hybrides des années 2010, quelle affirmation est historiquement exacte ?",
+            "es": "En el auge mirrorless de los años 2010, ¿qué afirmación es históricamente exacta?"
           },
           "answers": [
             {
               "id": "d",
               "text": {
                 "en": "Film SLRs were invented after mirrorless full-frame",
-                "fr": "Les reflex argentiques ont été inventés après l’hybride plein format"
+                "fr": "Les reflex argentiques ont été inventés après l’hybride plein format",
+                "es": "Las SLR de película se inventaron después del mirrorless full-frame"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "No brand ever made APS-C mirrorless",
-                "fr": "Aucune marque n’a jamais fait d’hybride APS-C"
+                "fr": "Aucune marque n’a jamais fait d’hybride APS-C",
+                "es": "Ninguna marca fabricó nunca mirrorless APS-C"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Sony popularized full-frame mirrorless with the α7 line while Fuji grew APS-C X-series and Olympus pushed Micro Four Thirds",
-                "fr": "Sony popularise l’hybride plein format avec la série α7, Fuji développe les X APS-C et Olympus pousse le Micro Four Thirds"
+                "fr": "Sony popularise l’hybride plein format avec la série α7, Fuji développe les X APS-C et Olympus pousse le Micro Four Thirds",
+                "es": "Sony popularizó el mirrorless full-frame con la línea α7, mientras Fuji crecía en APS-C serie X y Olympus impulsaba Micro Four Thirds"
               }
             },
             {
               "id": "c",
               "text": {
                 "en": "Only Leica sold mirrorless cameras in that decade",
-                "fr": "Seul Leica vendait des hybrides dans cette décennie"
+                "fr": "Seul Leica vendait des hybrides dans cette décennie",
+                "es": "Solo Leica vendió cámaras mirrorless en esa década"
               }
             }
           ],
@@ -21047,17 +21230,20 @@
           ],
           "explanation": {
             "en": "Different brands bet on different formats: Sony FF E-mount, Fuji APS-C X, Olympus/Panasonic m4/3 — all part of the mirrorless shift.",
-            "fr": "Chaque marque mise sur un format : Sony FF monture E, Fuji X APS-C, Olympus/Panasonic m4/3 — autant de voies de la transition hybride."
+            "fr": "Chaque marque mise sur un format : Sony FF monture E, Fuji X APS-C, Olympus/Panasonic m4/3 — autant de voies de la transition hybride.",
+            "es": "Cada marca apostó por un formato distinto: Sony FF E-mount, Fuji APS-C X, Olympus/Panasonic m4/3 — todo parte del giro mirrorless."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1502920917128-1aa500764cbd.avif",
           "imageAlt": {
             "en": "Contemporary camera body",
-            "fr": "Boîtier contemporain"
+            "fr": "Boîtier contemporain",
+            "es": "Cuerpo de cámara contemporáneo"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         },
         {
@@ -21065,35 +21251,40 @@
           "type": "single",
           "text": {
             "en": "“EOS”, “F-mount”, and “M-mount” are examples of what in brand history?",
-            "fr": "« EOS », « baïonnette F » et « baïonnette M » sont des exemples de quoi dans l’histoire des marques ?"
+            "fr": "« EOS », « baïonnette F » et « baïonnette M » sont des exemples de quoi dans l’histoire des marques ?",
+            "es": "«EOS», «montura F» y «montura M» son ejemplos de qué en la historia de las marcas?"
           },
           "answers": [
             {
               "id": "c",
               "text": {
                 "en": "Only social-media filters",
-                "fr": "Uniquement des filtres de réseaux sociaux"
+                "fr": "Uniquement des filtres de réseaux sociaux",
+                "es": "Solo filtros de redes sociales"
               }
             },
             {
               "id": "a",
               "text": {
                 "en": "Core camera systems / lens mounts that defined each brand’s ecosystem",
-                "fr": "Systèmes / baïonnettes structurants qui définissent l’écosystème de chaque marque"
+                "fr": "Systèmes / baïonnettes structurants qui définissent l’écosystème de chaque marque",
+                "es": "Sistemas de cámara / monturas de objetivo centrales que definieron el ecosistema de cada marca"
               }
             },
             {
               "id": "b",
               "text": {
                 "en": "Only battery chemistries",
-                "fr": "Uniquement des chimies de batteries"
+                "fr": "Uniquement des chimies de batteries",
+                "es": "Solo químicas de batería"
               }
             },
             {
               "id": "d",
               "text": {
                 "en": "Only printer paper sizes",
-                "fr": "Uniquement des formats de papier imprimante"
+                "fr": "Uniquement des formats de papier imprimante",
+                "es": "Solo tamaños de papel de impresora"
               }
             }
           ],
@@ -21102,17 +21293,20 @@
           ],
           "explanation": {
             "en": "Mount and system names (Canon EOS/EF, Nikon F, Leica M) are the long-lived platforms photographers build kits around.",
-            "fr": "Les noms de systèmes et baïonnettes (Canon EOS/EF, Nikon F, Leica M) sont les plateformes durables autour desquelles se construisent les kits."
+            "fr": "Les noms de systèmes et baïonnettes (Canon EOS/EF, Nikon F, Leica M) sont les plateformes durables autour desquelles se construisent les kits.",
+            "es": "Los nombres de montura y sistema (Canon EOS/EF, Nikon F, Leica M) son las plataformas longevas sobre las que los fotógrafos construyen su equipo."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
           "imageAlt": {
             "en": "Lens mount / glass culture",
-            "fr": "Culture baïonnette / optique"
+            "fr": "Culture baïonnette / optique",
+            "es": "Cultura de montura / cristal óptico"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
-            "fr": "Unsplash — libre d'utilisation (licence Unsplash)"
+            "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
+            "es": "Unsplash — uso libre (licencia Unsplash)"
           }
         }
       ]
