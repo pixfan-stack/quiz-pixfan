@@ -38,12 +38,13 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.80 — docs v1.79.0 + photo-rights LocalizedString.de', () => {
-  it('docs headline cites v1.79.0; vague 1.79/1.80 listed; no-go through 1.80', () => {
-    expect(readme).toContain('v1.79.0');
-    expect(nextSteps).toContain('**v1.79.0**');
+  it('docs still mention vague 1.79/1.80; no-go through 1.80; headline may be v1.80.0', () => {
+    /* Docs headline moved to v1.80.0 in vague 1.81 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(79|80)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(79|80)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.79**');
     expect(nextSteps).toContain('Vague **1.80**');
-    expect(nextSteps).toMatch(/no-go.*1\.80/);
+    expect(nextSteps).toMatch(/no-go.*1\.(80|81)/);
   });
 
   it('photo-rights ships .de on all LocalizedString fields (180)', () => {
@@ -135,23 +136,23 @@ describe('vague 1.80 — docs v1.79.0 + photo-rights LocalizedString.de', () => 
     expect(withoutEs).toEqual([]);
   });
 
-  it('série DE: only lexique-image-fixe + photo-rights have title.de (13 others without)', () => {
+  it('série DE: only lexique + photo-rights + light-color have title.de (12 others without)', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
       .map((q) => q.id)
       .sort();
-    expect(withDe).toEqual(['lexique-image-fixe', 'photo-rights']);
-    expect(data.quizzes.length - withDe.length).toBe(13);
+    expect(withDe).toEqual(['lexique-image-fixe', 'light-color', 'photo-rights']);
+    expect(data.quizzes.length - withDe.length).toBe(12);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights; ops no-gos through 1.80; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color; ops no-gos through 1.80; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.80/);
+    expect(nextSteps).toMatch(/no-go.*1\.(80|81)/);
     expect(
       data.quizzes
-        .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights')
+        .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights' && q.id !== 'light-color')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';
