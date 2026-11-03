@@ -38,12 +38,13 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.82 — docs v1.81.0 + flash-studio LocalizedString.de', () => {
-  it('docs headline cites v1.81.0; vague 1.81/1.82 listed; no-go through 1.82', () => {
-    expect(readme).toContain('v1.81.0');
-    expect(nextSteps).toContain('**v1.81.0**');
+  it('docs still mention vague 1.81/1.82; no-go through 1.82; headline may be v1.82.0', () => {
+    /* Docs headline moved to v1.82.0 in vague 1.83 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(81|82)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(81|82)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.81**');
     expect(nextSteps).toContain('Vague **1.82**');
-    expect(nextSteps).toMatch(/no-go.*1\.82/);
+    expect(nextSteps).toMatch(/no-go.*1\.(82|83)/);
   });
 
   it('flash-studio ships .de on all LocalizedString fields (184)', () => {
@@ -155,25 +156,29 @@ describe('vague 1.82 — docs v1.81.0 + flash-studio LocalizedString.de', () => 
     expect(withoutEs).toEqual([]);
   });
 
-  it('série DE: only lexique + photo-rights + light-color + flash-studio have title.de (11 others without)', () => {
+  it('série DE: lexique + photo-rights + light-color + flash-studio (+ retouching after 1.83) have title.de', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
       .map((q) => q.id)
       .sort();
-    expect(withDe).toEqual([
-      'flash-studio',
-      'lexique-image-fixe',
-      'light-color',
-      'photo-rights',
-    ]);
-    expect(data.quizzes.length - withDe.length).toBe(11);
+    expect(withDe).toEqual(
+      expect.arrayContaining([
+        'flash-studio',
+        'lexique-image-fixe',
+        'light-color',
+        'photo-rights',
+      ])
+    );
+    expect(withDe.length).toBeGreaterThanOrEqual(4);
+    expect(withDe.length).toBeLessThanOrEqual(5);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(10);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio; ops no-gos through 1.82; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio(+retouching); ops no-gos through 1.82; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.82/);
+    expect(nextSteps).toMatch(/no-go.*1\.(82|83)/);
     expect(
       data.quizzes
         .filter(
@@ -181,7 +186,8 @@ describe('vague 1.82 — docs v1.81.0 + flash-studio LocalizedString.de', () => 
             q.id !== 'lexique-image-fixe' &&
             q.id !== 'photo-rights' &&
             q.id !== 'light-color' &&
-            q.id !== 'flash-studio'
+            q.id !== 'flash-studio' &&
+            q.id !== 'retouching'
         )
         .every((q) => {
           const title = q.title as { de?: string };

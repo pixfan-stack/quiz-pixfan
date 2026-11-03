@@ -15473,12 +15473,14 @@
       "title": {
         "en": "Editing & Retouching",
         "fr": "Retouche & développement",
-        "es": "Retoque y revelado"
+        "es": "Retoque y revelado",
+        "de": "Retusche & Entwicklung"
       },
       "description": {
         "en": "RAW, histograms, color, sharpening and ethical edits.",
         "fr": "RAW, histogrammes, couleur, accentuation et retouche éthique.",
-        "es": "RAW, histogramas, color, nitidez y ediciones éticas."
+        "es": "RAW, histogramas, color, nitidez y ediciones éticas.",
+        "de": "RAW, Histogramme, Tonalität, Schärfe und ethische Retusche — Pixfan-Retusche-Parcours."
       },
       "questions": [
         {
@@ -15488,7 +15490,8 @@
           "text": {
             "en": "A histogram clipped on the right usually means…",
             "fr": "Un histogramme coupé à droite signifie souvent…",
-            "es": "Un histograma recortado a la derecha suele significar…"
+            "es": "Un histograma recortado a la derecha suele significar…",
+            "de": "Ein nach rechts abgeschnittenes Histogramm bedeutet meist…"
           },
           "answers": [
             {
@@ -15496,7 +15499,8 @@
               "text": {
                 "en": "The lens is dirty",
                 "fr": "L’objectif est sale",
-                "es": "Que el objetivo está sucio"
+                "es": "Que el objetivo está sucio",
+                "de": "Dass das Objektiv schmutzig ist"
               }
             },
             {
@@ -15504,7 +15508,8 @@
               "text": {
                 "en": "Perfect midtones only",
                 "fr": "Uniquement des tons moyens parfaits",
-                "es": "Solo tonos medios perfectos"
+                "es": "Solo tonos medios perfectos",
+                "de": "Nur perfekte Mitteltöne"
               }
             },
             {
@@ -15512,7 +15517,8 @@
               "text": {
                 "en": "Blown / lost highlight detail",
                 "fr": "Hautes lumières brûlées / détail perdu",
-                "es": "Altas luces quemadas / detalle perdido"
+                "es": "Altas luces quemadas / detalle perdido",
+                "de": "Ausgebrannte Lichter / verlorenes Detail in den Highlights"
               }
             },
             {
@@ -15520,7 +15526,8 @@
               "text": {
                 "en": "ISO is always 100",
                 "fr": "L’ISO est toujours à 100",
-                "es": "Que el ISO está siempre en 100"
+                "es": "Que el ISO está siempre en 100",
+                "de": "Dass der ISO immer auf 100 steht"
               }
             }
           ],
@@ -15530,18 +15537,21 @@
           "explanation": {
             "en": "Right clipping indicates pure white with little recoverable detail.",
             "fr": "Une coupe à droite indique du blanc pur avec peu de détail récupérable.",
-            "es": "El recorte a la derecha indica blanco puro con poco detalle recuperable."
+            "es": "El recorte a la derecha indica blanco puro con poco detalle recuperable.",
+            "de": "Rechts-Clipping zeigt reines Weiß mit kaum noch rettbarem Detail — Belichtungskorrektur und Kurven helfen nur begrenzt."
           },
           "imageUrl": "/images/packs/photo-1618005182384-a83a8bd57fbe.avif",
           "imageAlt": {
             "en": "Abstract color gradients",
             "fr": "Dégradés de couleurs abstraits",
-            "es": "Degradados de color abstractos"
+            "es": "Degradados de color abstractos",
+            "de": "Abstrakte Farbverläufe"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15551,7 +15561,8 @@
           "text": {
             "en": "Editing RAW rather than JPEG mainly helps because…",
             "fr": "Développer un RAW plutôt qu’un JPEG aide surtout parce que…",
-            "es": "Revelar RAW en lugar de JPEG ayuda sobre todo porque…"
+            "es": "Revelar RAW en lugar de JPEG ayuda sobre todo porque…",
+            "de": "RAW statt JPEG zu entwickeln hilft vor allem, weil…"
           },
           "answers": [
             {
@@ -15559,7 +15570,8 @@
               "text": {
                 "en": "RAW files are always smaller",
                 "fr": "Les RAW sont toujours plus petits",
-                "es": "Los archivos RAW siempre son más pequeños"
+                "es": "Los archivos RAW siempre son más pequeños",
+                "de": "RAW-Dateien immer kleiner sind"
               }
             },
             {
@@ -15567,7 +15579,8 @@
               "text": {
                 "en": "More tonal/color data remain before heavy processing",
                 "fr": "Plus de données tonales/couleur restent avant traitement lourd",
-                "es": "Quedan más datos tonales/de color antes de un procesado fuerte"
+                "es": "Quedan más datos tonales/de color antes de un procesado fuerte",
+                "de": "Mehr Ton- und Farbdaten vor starker Bearbeitung erhalten bleiben"
               }
             },
             {
@@ -15575,7 +15588,8 @@
               "text": {
                 "en": "JPEG cannot show colors",
                 "fr": "Le JPEG ne peut pas montrer de couleurs",
-                "es": "El JPEG no puede mostrar colores"
+                "es": "El JPEG no puede mostrar colores",
+                "de": "JPEG keine Farben zeigen kann"
               }
             },
             {
@@ -15583,7 +15597,8 @@
               "text": {
                 "en": "RAW disables composition",
                 "fr": "Le RAW désactive la composition",
-                "es": "El RAW desactiva la composición"
+                "es": "El RAW desactiva la composición",
+                "de": "RAW die Bildkomposition deaktiviert"
               }
             }
           ],
@@ -15593,18 +15608,21 @@
           "explanation": {
             "en": "RAW keeps linear sensor data; JPEG bakes in contrast, sharpening and compression.",
             "fr": "Le RAW garde des données capteur ; le JPEG fige contraste, accentuation et compression.",
-            "es": "El RAW conserva datos del sensor; el JPEG fija contraste, nitidez y compresión."
+            "es": "El RAW conserva datos del sensor; el JPEG fija contraste, nitidez y compresión.",
+            "de": "RAW behält Sensordaten; JPEG bäckt Kontrast, Schärfe und Kompression fest — weniger Spielraum für Tonalität."
           },
           "imageUrl": "/images/packs/photo-1550745165-9bc0b252726f.avif",
           "imageAlt": {
             "en": "Editing workspace with screens",
             "fr": "Espace de retouche avec écrans",
-            "es": "Espacio de retoque con pantallas"
+            "es": "Espacio de retoque con pantallas",
+            "de": "Retusche-Arbeitsplatz mit Bildschirmen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15614,7 +15632,8 @@
           "text": {
             "en": "White balance correction primarily adjusts…",
             "fr": "La correction de balance des blancs ajuste surtout…",
-            "es": "La corrección de balance de blancos ajusta principalmente…"
+            "es": "La corrección de balance de blancos ajusta principalmente…",
+            "de": "Die Weißabgleich-Korrektur stellt vor allem… ein"
           },
           "answers": [
             {
@@ -15622,7 +15641,8 @@
               "text": {
                 "en": "Focal length",
                 "fr": "La focale",
-                "es": "La distancia focal"
+                "es": "La distancia focal",
+                "de": "Die Brennweite"
               }
             },
             {
@@ -15630,7 +15650,8 @@
               "text": {
                 "en": "Shutter actuation count",
                 "fr": "Le compteur d’obturations",
-                "es": "El contador de obturaciones"
+                "es": "El contador de obturaciones",
+                "de": "Den Auslöserzähler"
               }
             },
             {
@@ -15638,7 +15659,8 @@
               "text": {
                 "en": "Color temperature / tint of the scene",
                 "fr": "La température de couleur / la teinte de la scène",
-                "es": "La temperatura de color / el tinte de la escena"
+                "es": "La temperatura de color / el tinte de la escena",
+                "de": "Farbtemperatur / Farbstich der Szene"
               }
             },
             {
@@ -15646,7 +15668,8 @@
               "text": {
                 "en": "Autofocus points",
                 "fr": "Les collimateurs AF",
-                "es": "Los puntos de autofoco"
+                "es": "Los puntos de autofoco",
+                "de": "Die Autofokus-Punkte"
               }
             }
           ],
@@ -15656,18 +15679,21 @@
           "explanation": {
             "en": "WB removes unwanted color casts from light sources.",
             "fr": "La BB corrige les dominantes dues aux sources de lumière.",
-            "es": "El BB elimina dominantes de color no deseadas de las fuentes de luz."
+            "es": "El BB elimina dominantes de color no deseadas de las fuentes de luz.",
+            "de": "Der Weißabgleich entfernt unerwünschte Farbstiche der Lichtquellen — Basis vor Kurven und Masken."
           },
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Camera body — white balance starts at capture",
             "fr": "Boîtier photo — la balance des blancs commence à la prise de vue",
-            "es": "Cuerpo de cámara — el balance de blancos empieza en la captura"
+            "es": "Cuerpo de cámara — el balance de blancos empieza en la captura",
+            "de": "Kameragehäuse — Weißabgleich beginnt bei der Aufnahme"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15677,7 +15703,8 @@
           "text": {
             "en": "Common non-destructive editing practices include…",
             "fr": "Des pratiques de retouche non destructives incluent…",
-            "es": "Prácticas habituales de retoque no destructivo incluyen…"
+            "es": "Prácticas habituales de retoque no destructivo incluyen…",
+            "de": "Übliche nicht-destruktive Retusche-Praktiken umfassen…"
           },
           "answers": [
             {
@@ -15685,7 +15712,8 @@
               "text": {
                 "en": "Saving over the only original with a tiny JPEG",
                 "fr": "Écraser le seul original avec un petit JPEG",
-                "es": "Sobreescribir el único original con un JPEG diminuto"
+                "es": "Sobreescribir el único original con un JPEG diminuto",
+                "de": "Das einzige Original mit einem winzigen JPEG überschreiben"
               }
             },
             {
@@ -15693,7 +15721,8 @@
               "text": {
                 "en": "Using adjustment layers / sidecars",
                 "fr": "Utiliser calques de réglage / sidecars",
-                "es": "Usar capas de ajuste / sidecars"
+                "es": "Usar capas de ajuste / sidecars",
+                "de": "Einstellungsebenen / Sidecars nutzen"
               }
             },
             {
@@ -15701,7 +15730,8 @@
               "text": {
                 "en": "Exporting copies for web/print",
                 "fr": "Exporter des copies pour web/print",
-                "es": "Exportar copias para web/impresión"
+                "es": "Exportar copias para web/impresión",
+                "de": "Kopien für Web/Druck exportieren"
               }
             },
             {
@@ -15709,7 +15739,8 @@
               "text": {
                 "en": "Keeping the original RAW/master",
                 "fr": "Conserver le RAW/master original",
-                "es": "Conservar el RAW/máster original"
+                "es": "Conservar el RAW/máster original",
+                "de": "Das originale RAW/Master behalten"
               }
             }
           ],
@@ -15721,18 +15752,21 @@
           "explanation": {
             "en": "Never destroy the master; work with reversible edits and exports.",
             "fr": "Ne détruisez jamais le master ; travaillez avec des réglages réversibles et des exports.",
-            "es": "Nunca destruyas el máster; trabaja con ediciones reversibles y exportaciones."
+            "es": "Nunca destruyas el máster; trabaja con ediciones reversibles y exportaciones.",
+            "de": "Nie das Master zerstören; mit reversiblen Edits und Exporten arbeiten — das ist nicht-destruktives Arbeiten."
           },
           "imageUrl": "/images/packs/photo-1515378791036-0648a3ef77b2.avif",
           "imageAlt": {
             "en": "Typing on a laptop — non-destructive editing habits",
             "fr": "Frappe sur un portable — habitudes de retouche non destructive",
-            "es": "Escribir en un portátil — hábitos de retoque no destructivo"
+            "es": "Escribir en un portátil — hábitos de retoque no destructivo",
+            "de": "Tippen am Laptop — nicht-destruktive Retusche-Gewohnheiten"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15742,7 +15776,8 @@
           "text": {
             "en": "Clarity / structure sliders mainly affect…",
             "fr": "Les curseurs clarté / structure affectent surtout…",
-            "es": "Los deslizadores de claridad / estructura afectan sobre todo…"
+            "es": "Los deslizadores de claridad / estructura afectan sobre todo…",
+            "de": "Klarheit- / Struktur-Regler beeinflussen vor allem…"
           },
           "answers": [
             {
@@ -15750,7 +15785,8 @@
               "text": {
                 "en": "GPS altitude only",
                 "fr": "Uniquement l’altitude GPS",
-                "es": "Solo la altitud GPS"
+                "es": "Solo la altitud GPS",
+                "de": "Nur die GPS-Höhe"
               }
             },
             {
@@ -15758,7 +15794,8 @@
               "text": {
                 "en": "Battery charging speed",
                 "fr": "La vitesse de charge de la batterie",
-                "es": "La velocidad de carga de la batería"
+                "es": "La velocidad de carga de la batería",
+                "de": "Die Akkuladegeschwindigkeit"
               }
             },
             {
@@ -15766,7 +15803,8 @@
               "text": {
                 "en": "Local midtone contrast / texture punch",
                 "fr": "Le contraste local des tons moyens / le relief des textures",
-                "es": "El contraste local de tonos medios / el relieve de texturas"
+                "es": "El contraste local de tonos medios / el relieve de texturas",
+                "de": "Lokalen Mitteltonkontrast / Textur-Relief"
               }
             },
             {
@@ -15774,7 +15812,8 @@
               "text": {
                 "en": "Lens firmware",
                 "fr": "Le firmware de l’objectif",
-                "es": "El firmware del objetivo"
+                "es": "El firmware del objetivo",
+                "de": "Die Objektiv-Firmware"
               }
             }
           ],
@@ -15784,18 +15823,21 @@
           "explanation": {
             "en": "They emphasize mid-frequency contrast; overuse looks crunchy.",
             "fr": "Ils insistent sur le contraste de moyennes fréquences ; trop en mettre donne un rendu « croustillant ».",
-            "es": "Enfatizan el contraste de medias frecuencias; abusar da un aspecto crujiente."
+            "es": "Enfatizan el contraste de medias frecuencias; abusar da un aspecto crujiente.",
+            "de": "Sie betonen Mittelfrequenz-Kontrast; Überdosierung wirkt knusprig und unnatürlich."
           },
           "imageUrl": "/images/packs/photo-1470071459604-3b5ec3a7fe05.avif",
           "imageAlt": {
             "en": "Misty forest texture — clarity / structure slider territory",
             "fr": "Texture de forêt brumeuse — terrain clarté / structure",
-            "es": "Textura de bosque brumoso — terreno claridad / estructura"
+            "es": "Textura de bosque brumoso — terreno claridad / estructura",
+            "de": "Neblige Waldtextur — Terrain für Klarheit / Struktur"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15805,7 +15847,8 @@
           "text": {
             "en": "Cropping a photo…",
             "fr": "Recadrer une photo…",
-            "es": "Recortar una foto…"
+            "es": "Recortar una foto…",
+            "de": "Ein Foto zuzuschneiden…"
           },
           "answers": [
             {
@@ -15813,7 +15856,8 @@
               "text": {
                 "en": "Removes the need for exposure",
                 "fr": "Supprime le besoin d’exposition",
-                "es": "Elimina la necesidad de exposición"
+                "es": "Elimina la necesidad de exposición",
+                "de": "Macht Belichtung überflüssig"
               }
             },
             {
@@ -15821,7 +15865,8 @@
               "text": {
                 "en": "Increases optical zoom retrospectively",
                 "fr": "Augmente rétrospectivement le zoom optique",
-                "es": "Aumenta retrospectivamente el zoom óptico"
+                "es": "Aumenta retrospectivamente el zoom óptico",
+                "de": "Erhöht nachträglich den optischen Zoom"
               }
             },
             {
@@ -15829,7 +15874,8 @@
               "text": {
                 "en": "Changes framing and can improve composition",
                 "fr": "Change le cadrage et peut améliorer la composition",
-                "es": "Cambia el encuadre y puede mejorar la composición"
+                "es": "Cambia el encuadre y puede mejorar la composición",
+                "de": "Ändert den Bildausschnitt und kann die Komposition verbessern"
               }
             },
             {
@@ -15837,7 +15883,8 @@
               "text": {
                 "en": "Always adds megapixels",
                 "fr": "Ajoute toujours des mégapixels",
-                "es": "Siempre añade megapíxeles"
+                "es": "Siempre añade megapíxeles",
+                "de": "Fügt immer Megapixel hinzu"
               }
             }
           ],
@@ -15847,18 +15894,21 @@
           "explanation": {
             "en": "Crop is a composition tool; heavy crops reduce resolution.",
             "fr": "Le recadrage est un outil de composition ; un fort crop réduit la résolution.",
-            "es": "El recorte es una herramienta de composición; un recorte fuerte reduce la resolución."
+            "es": "El recorte es una herramienta de composición; un recorte fuerte reduce la resolución.",
+            "de": "Zuschneiden ist ein Kompositionswerkzeug; starke Crops senken die Auflösung für den Export."
           },
           "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Landscape scene ready for a thoughtful crop",
             "fr": "Paysage prêt pour un recadrage réfléchi",
-            "es": "Paisaje listo para un recorte reflexivo"
+            "es": "Paisaje listo para un recorte reflexivo",
+            "de": "Landschaftsszene bereit für einen durchdachten Crop"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15868,7 +15918,8 @@
           "text": {
             "en": "In color grading, a common risk of extreme HSL shifts is…",
             "fr": "En étalonnage, un risque fréquent de pousser trop les HSL est…",
-            "es": "En etalonaje, un riesgo frecuente de empujar demasiado los HSL es…"
+            "es": "En etalonaje, un riesgo frecuente de empujar demasiado los HSL es…",
+            "de": "Beim Color Grading ist ein häufiges Risiko extremer HSL-Verschiebungen…"
           },
           "answers": [
             {
@@ -15876,7 +15927,8 @@
               "text": {
                 "en": "Faster autofocus",
                 "fr": "Un AF plus rapide",
-                "es": "Un autofoco más rápido"
+                "es": "Un autofoco más rápido",
+                "de": "Schnellerer Autofokus"
               }
             },
             {
@@ -15884,7 +15936,8 @@
               "text": {
                 "en": "Larger sensors",
                 "fr": "Des capteurs plus grands",
-                "es": "Sensores más grandes"
+                "es": "Sensores más grandes",
+                "de": "Größere Sensoren"
               }
             },
             {
@@ -15892,7 +15945,8 @@
               "text": {
                 "en": "Unnatural skin tones and banding",
                 "fr": "Teints de peau artificiels et banding",
-                "es": "Tonos de piel artificiales y banding"
+                "es": "Tonos de piel artificiales y banding",
+                "de": "Unnatürliche Hauttöne und Banding"
               }
             },
             {
@@ -15900,7 +15954,8 @@
               "text": {
                 "en": "Mandatory RAW deletion",
                 "fr": "La suppression obligatoire du RAW",
-                "es": "Borrar el RAW de forma obligatoria"
+                "es": "Borrar el RAW de forma obligatoria",
+                "de": "Pflicht zum Löschen des RAW"
               }
             }
           ],
@@ -15910,18 +15965,21 @@
           "explanation": {
             "en": "Skin sits in subtle orange/yellow ranges—over-shifting looks fake.",
             "fr": "La peau vit dans des oranges/jaunes subtils — trop décaler devient faux.",
-            "es": "La piel vive en rangos sutiles naranja/amarillo: empujar demasiado se ve falso."
+            "es": "La piel vive en rangos sutiles naranja/amarillo: empujar demasiado se ve falso.",
+            "de": "Haut liegt in subtilen Orange-/Gelbbereichen — zu starkes Schieben wirkt künstlich."
           },
           "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
           "imageAlt": {
             "en": "Moody colored landscape — extreme HSL shift risk",
             "fr": "Paysage aux couleurs d’ambiance — risque de shifts HSL extrêmes",
-            "es": "Paisaje de colores intensos — riesgo de HSL extremo"
+            "es": "Paisaje de colores intensos — riesgo de HSL extremo",
+            "de": "Stimmungsvolle Farblandschaft — Risiko extremer HSL"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15931,7 +15989,8 @@
           "text": {
             "en": "Sharpening is best applied…",
             "fr": "L’accentuation se gère mieux…",
-            "es": "La nitidez se aplica mejor…"
+            "es": "La nitidez se aplica mejor…",
+            "de": "Schärfe sollte man am besten…"
           },
           "answers": [
             {
@@ -15939,7 +15998,8 @@
               "text": {
                 "en": "With output in mind (screen vs print)",
                 "fr": "En pensant à la sortie (écran vs print)",
-                "es": "Pensando en la salida (pantalla vs impresión)"
+                "es": "Pensando en la salida (pantalla vs impresión)",
+                "de": "Mit Blick auf die Ausgabe anwenden (Bildschirm vs. Druck)"
               }
             },
             {
@@ -15947,7 +16007,8 @@
               "text": {
                 "en": "After major noise reduction when needed",
                 "fr": "Après une réduction de bruit majeure si besoin",
-                "es": "Después de la reducción de ruido principal cuando haga falta"
+                "es": "Después de la reducción de ruido principal cuando haga falta",
+                "de": "Nach der Haupt-Rauschreduktion, wenn nötig"
               }
             },
             {
@@ -15955,7 +16016,8 @@
               "text": {
                 "en": "Checked at 100% zoom",
                 "fr": "Vérifiée à 100 % de zoom",
-                "es": "Comprobada al 100 % de zoom"
+                "es": "Comprobada al 100 % de zoom",
+                "de": "Bei 100 %-Zoom prüfen"
               }
             },
             {
@@ -15963,7 +16025,8 @@
               "text": {
                 "en": "At maximum on every layer forever",
                 "fr": "Au maximum sur chaque calque pour toujours",
-                "es": "Al máximo en todas las capas para siempre"
+                "es": "Al máximo en todas las capas para siempre",
+                "de": "Auf jeder Ebene dauerhaft auf Maximum setzen"
               }
             }
           ],
@@ -15975,18 +16038,21 @@
           "explanation": {
             "en": "Output sharpening differs by medium; inspect at 1:1 to avoid halos.",
             "fr": "L’accentuation dépend du support ; inspectez à 1:1 pour éviter les halos.",
-            "es": "La nitidez de salida cambia según el medio; revisa a 1:1 para evitar halos."
+            "es": "La nitidez de salida cambia según el medio; revisa a 1:1 para evitar halos.",
+            "de": "Ausgabe-Schärfe hängt vom Medium ab; bei 1:1 prüfen, um Halos zu vermeiden."
           },
           "imageUrl": "/images/packs/photo-1472214103451-9374bd1c798e.avif",
           "imageAlt": {
             "en": "Detailed landscape texture for output sharpening",
             "fr": "Texture de paysage détaillée pour la netteté de sortie",
-            "es": "Textura de paisaje detallada para nitidez de salida"
+            "es": "Textura de paisaje detallada para nitidez de salida",
+            "de": "Detaillierte Landschaftstextur für Ausgabe-Schärfe"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15996,7 +16062,8 @@
           "text": {
             "en": "Dodging and burning traditionally…",
             "fr": "Le dodge & burn consiste traditionnellement à…",
-            "es": "El dodge and burn tradicionalmente…"
+            "es": "El dodge and burn tradicionalmente…",
+            "de": "Dodge and Burn bedeutet traditionell…"
           },
           "answers": [
             {
@@ -16004,7 +16071,8 @@
               "text": {
                 "en": "Change camera brands",
                 "fr": "Changer de marque d’appareil",
-                "es": "Cambia de marca de cámara"
+                "es": "Cambia de marca de cámara",
+                "de": "Kameramarken zu wechseln"
               }
             },
             {
@@ -16012,7 +16080,8 @@
               "text": {
                 "en": "Disable histograms",
                 "fr": "Désactiver les histogrammes",
-                "es": "Desactiva los histogramas"
+                "es": "Desactiva los histogramas",
+                "de": "Histogramme zu deaktivieren"
               }
             },
             {
@@ -16020,7 +16089,8 @@
               "text": {
                 "en": "Convert to TIFF automatically",
                 "fr": "Convertir automatiquement en TIFF",
-                "es": "Convierte a TIFF automáticamente"
+                "es": "Convierte a TIFF automáticamente",
+                "de": "Automatisch nach TIFF zu konvertieren"
               }
             },
             {
@@ -16028,7 +16098,8 @@
               "text": {
                 "en": "Locally lighten / darken areas to guide the eye",
                 "fr": "Éclaircir / assombrir localement pour guider le regard",
-                "es": "Aclara / oscurece zonas locales para guiar la mirada"
+                "es": "Aclara / oscurece zonas locales para guiar la mirada",
+                "de": "Lokal aufzuhellen / abzudunkeln, um den Blick zu führen"
               }
             }
           ],
@@ -16038,18 +16109,21 @@
           "explanation": {
             "en": "Classic darkroom technique now done digitally with soft brushes/masks.",
             "fr": "Technique de labo classique, faite aujourd’hui avec brosses/masques numériques.",
-            "es": "Técnica clásica de laboratorio, ahora digital con pinceles/máscaras suaves."
+            "es": "Técnica clásica de laboratorio, ahora digital con pinceles/máscaras suaves.",
+            "de": "Klassische Labortechnik, digital mit weichen Pinseln und Masken — Tonalität lokal steuern."
           },
           "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
           "imageAlt": {
             "en": "Mountain light and shadow — dodge and burn metaphor",
             "fr": "Lumière et ombre en montagne — métaphore dodge & burn",
-            "es": "Luz y sombra en montaña — metáfora de dodge and burn"
+            "es": "Luz y sombra en montaña — metáfora de dodge and burn",
+            "de": "Berglicht und Schatten — Metapher für Dodge and Burn"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16059,7 +16133,8 @@
           "text": {
             "en": "Healing / content-aware remove tools are great for dust, but ethically sensitive when…",
             "fr": "Les outils de correction/contenu sont utiles pour la poussière, mais sensibles éthiquement quand…",
-            "es": "Las herramientas de sanar / content-aware son ideales para polvo, pero éticamente delicadas cuando…"
+            "es": "Las herramientas de sanar / content-aware son ideales para polvo, pero éticamente delicadas cuando…",
+            "de": "Reparatur- / inhaltssensitive Tools eignen sich für Staub, sind ethisch heikel wenn…"
           },
           "answers": [
             {
@@ -16067,7 +16142,8 @@
               "text": {
                 "en": "They remove a sensor spot in the sky",
                 "fr": "Ils retirent une poussière capteur dans le ciel",
-                "es": "Eliminan una mancha de sensor en el cielo"
+                "es": "Eliminan una mancha de sensor en el cielo",
+                "de": "Sie einen Sensorfleck am Himmel entfernen"
               }
             },
             {
@@ -16075,7 +16151,8 @@
               "text": {
                 "en": "They straighten a horizon slightly",
                 "fr": "Ils redressent légèrement un horizon",
-                "es": "Enderezan ligeramente el horizonte"
+                "es": "Enderezan ligeramente el horizonte",
+                "de": "Sie den Horizont leicht begradigen"
               }
             },
             {
@@ -16083,7 +16160,8 @@
               "text": {
                 "en": "They export sRGB",
                 "fr": "Ils exportent en sRGB",
-                "es": "Exportan sRGB"
+                "es": "Exportan sRGB",
+                "de": "Sie nach sRGB exportieren"
               }
             },
             {
@@ -16091,7 +16169,8 @@
               "text": {
                 "en": "They change a person’s body or a news scene’s facts",
                 "fr": "Ils modifient le corps d’une personne ou les faits d’une scène d’actualité",
-                "es": "Cambian el cuerpo de una persona o los hechos de una escena informativa"
+                "es": "Cambian el cuerpo de una persona o los hechos de una escena informativa",
+                "de": "Sie Körper verändern oder Fakten einer Nachrichten-Szene manipulieren"
               }
             }
           ],
@@ -16101,7 +16180,8 @@
           "explanation": {
             "en": "Documentary/news ethics limit manipulative retouching of subjects and events.",
             "fr": "L’éthique documentaire/news limite la manipulation des sujets et des faits.",
-            "es": "La ética documental/periodística limita el retoque manipulador de sujetos y hechos."
+            "es": "La ética documental/periodística limita el retoque manipulador de sujetos y hechos.",
+            "de": "Dokumentarische / journalistische Ethik begrenzt manipulative Retusche von Personen und Ereignissen."
           }
         },
         {
@@ -16111,7 +16191,8 @@
           "text": {
             "en": "sRGB is commonly used for…",
             "fr": "sRGB est couramment utilisé pour…",
-            "es": "sRGB se usa habitualmente para…"
+            "es": "sRGB se usa habitualmente para…",
+            "de": "sRGB wird üblicherweise genutzt für…"
           },
           "answers": [
             {
@@ -16119,7 +16200,8 @@
               "text": {
                 "en": "Web and general display sharing",
                 "fr": "Le web et le partage sur écrans grand public",
-                "es": "Web y compartición general en pantalla"
+                "es": "Web y compartición general en pantalla",
+                "de": "Web und allgemeine Bildschirm-Freigabe"
               }
             },
             {
@@ -16127,7 +16209,8 @@
               "text": {
                 "en": "Only cinema cameras",
                 "fr": "Uniquement les caméras de cinéma",
-                "es": "Solo cámaras de cine"
+                "es": "Solo cámaras de cine",
+                "de": "Nur Kinokameras"
               }
             },
             {
@@ -16135,7 +16218,8 @@
               "text": {
                 "en": "Measuring aperture blades",
                 "fr": "Mesurer les lamelles de diaphragme",
-                "es": "Medir las láminas del diafragma"
+                "es": "Medir las láminas del diafragma",
+                "de": "Das Messen von Blendenlamellen"
               }
             },
             {
@@ -16143,7 +16227,8 @@
               "text": {
                 "en": "Naming layers",
                 "fr": "Nommer des calques",
-                "es": "Nombrar capas"
+                "es": "Nombrar capas",
+                "de": "Das Benennen von Ebenen"
               }
             }
           ],
@@ -16153,18 +16238,21 @@
           "explanation": {
             "en": "sRGB is the safest default for online viewing; print may use wider spaces with profiles.",
             "fr": "sRGB est le défaut sûr pour le web ; l’impression peut utiliser des espaces plus larges avec profils.",
-            "es": "sRGB es el valor seguro por defecto para ver online; la impresión puede usar espacios más amplios con perfiles."
+            "es": "sRGB es el valor seguro por defecto para ver online; la impresión puede usar espacios más amplios con perfiles.",
+            "de": "sRGB ist der sichere Default für Online-Anzeige; Druck kann breitere Farbräume mit Profilen nutzen."
           },
           "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
           "imageAlt": {
             "en": "Smartphone screen — sRGB delivery for the web",
             "fr": "Écran de smartphone — livraison sRGB pour le web",
-            "es": "Pantalla de smartphone — entrega sRGB para la web"
+            "es": "Pantalla de smartphone — entrega sRGB para la web",
+            "de": "Smartphone-Bildschirm — sRGB-Ausgabe fürs Web"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16174,7 +16262,8 @@
           "text": {
             "en": "Useful first checks when opening a file to edit…",
             "fr": "Vérifications utiles à l’ouverture d’un fichier à retoucher…",
-            "es": "Primeras comprobaciones útiles al abrir un archivo para editar…"
+            "es": "Primeras comprobaciones útiles al abrir un archivo para editar…",
+            "de": "Sinnvolle erste Checks beim Öffnen einer Datei zur Retusche…"
           },
           "answers": [
             {
@@ -16182,7 +16271,8 @@
               "text": {
                 "en": "White balance",
                 "fr": "Balance des blancs",
-                "es": "Balance de blancos"
+                "es": "Balance de blancos",
+                "de": "Weißabgleich"
               }
             },
             {
@@ -16190,7 +16280,8 @@
               "text": {
                 "en": "Exposure / histogram",
                 "fr": "Exposition / histogramme",
-                "es": "Exposición / histograma"
+                "es": "Exposición / histograma",
+                "de": "Belichtung / Histogramm"
               }
             },
             {
@@ -16198,7 +16289,8 @@
               "text": {
                 "en": "Composition / crop needs",
                 "fr": "Composition / besoins de recadrage",
-                "es": "Necesidades de composición / recorte"
+                "es": "Necesidades de composición / recorte",
+                "de": "Kompositions- / Crop-Bedarf"
               }
             },
             {
@@ -16206,7 +16298,8 @@
               "text": {
                 "en": "Deleting all EXIF immediately always",
                 "fr": "Toujours supprimer tout EXIF immédiatement",
-                "es": "Borrar siempre todo el EXIF de inmediato"
+                "es": "Borrar siempre todo el EXIF de inmediato",
+                "de": "Sofort immer das gesamte EXIF löschen"
               }
             }
           ],
@@ -16218,18 +16311,21 @@
           "explanation": {
             "en": "Start with global exposure/WB and framing before micro-retouch.",
             "fr": "Commencez par exposition/BB et cadrage avant la micro-retouche.",
-            "es": "Empieza por exposición/BB globales y encuadre antes del micro-retoque."
+            "es": "Empieza por exposición/BB globales y encuadre antes del micro-retoque.",
+            "de": "Zuerst globale Belichtungskorrektur / Weißabgleich und Bildausschnitt — dann Mikro-Retusche."
           },
           "imageUrl": "/images/packs/photo-1460925895917-afdab827c52f.avif",
           "imageAlt": {
             "en": "Laptop dashboard — first checks when opening a file to edit",
             "fr": "Tableau de bord — premiers contrôles à l’ouverture d’un fichier",
-            "es": "Panel en portátil — primeras comprobaciones al abrir un archivo"
+            "es": "Panel en portátil — primeras comprobaciones al abrir un archivo",
+            "de": "Laptop-Dashboard — erste Checks beim Öffnen einer Datei"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16239,7 +16335,8 @@
           "text": {
             "en": "Posterization / banding in skies often appears when…",
             "fr": "La postérisation / le banding dans les ciels apparaît souvent quand…",
-            "es": "La posterización / banding en cielos suele aparecer cuando…"
+            "es": "La posterización / banding en cielos suele aparecer cuando…",
+            "de": "Posterisation / Banding in Himmeln entsteht oft wenn…"
           },
           "answers": [
             {
@@ -16247,7 +16344,8 @@
               "text": {
                 "en": "You enable grid lines",
                 "fr": "Vous activez la grille",
-                "es": "Activas las líneas de rejilla"
+                "es": "Activas las líneas de rejilla",
+                "de": "Du Gitterlinien aktivierst"
               }
             },
             {
@@ -16255,7 +16353,8 @@
               "text": {
                 "en": "You shoot at f/8 on a sunny day only",
                 "fr": "Vous photographiez uniquement à f/8 par grand soleil",
-                "es": "Disparas solo a f/8 en un día soleado"
+                "es": "Disparas solo a f/8 en un día soleado",
+                "de": "Du an einem sonnigen Tag nur bei f/8 fotografierst"
               }
             },
             {
@@ -16263,7 +16362,8 @@
               "text": {
                 "en": "You use a tripod outdoors",
                 "fr": "Vous utilisez un trépied en extérieur",
-                "es": "Usas trípode en exterior"
+                "es": "Usas trípode en exterior",
+                "de": "Du draußen ein Stativ nutzt"
               }
             },
             {
@@ -16271,7 +16371,8 @@
               "text": {
                 "en": "Heavy gradients meet 8-bit exports or strong noise reduction",
                 "fr": "De forts dégradés rencontrent un export 8 bits ou une forte réduction de bruit",
-                "es": "Gradientes fuertes chocan con exportaciones de 8 bits o reducción de ruido agresiva"
+                "es": "Gradientes fuertes chocan con exportaciones de 8 bits o reducción de ruido agresiva",
+                "de": "Starke Verläufe auf 8-Bit-Export oder aggressive Rauschreduktion treffen"
               }
             }
           ],
@@ -16281,7 +16382,8 @@
           "explanation": {
             "en": "Smooth tones need bit depth and careful processing; add subtle grain if needed.",
             "fr": "Les dégradés doux demandent de la profondeur de bits ; ajoutez un grain subtil si besoin.",
-            "es": "Los tonos suaves necesitan profundidad de bits y un procesado cuidadoso; añade grano sutil si hace falta."
+            "es": "Los tonos suaves necesitan profundidad de bits y un procesado cuidadoso; añade grano sutil si hace falta.",
+            "de": "Sanfte Töne brauchen Bit-Tiefe und behutsame Verarbeitung; subtiler Grain kann helfen."
           }
         },
         {
@@ -16291,7 +16393,8 @@
           "text": {
             "en": "A vignette effect…",
             "fr": "Un effet de vignettage…",
-            "es": "Un efecto de viñeta…"
+            "es": "Un efecto de viñeta…",
+            "de": "Ein Vignetten-Effekt…"
           },
           "answers": [
             {
@@ -16299,7 +16402,8 @@
               "text": {
                 "en": "Darkens (or lightens) edges to focus attention",
                 "fr": "Assombrit (ou éclaircit) les bords pour concentrer l’attention",
-                "es": "Oscurece (o aclara) los bordes para centrar la atención"
+                "es": "Oscurece (o aclara) los bordes para centrar la atención",
+                "de": "Dunkelt (oder hellt) die Ränder ab, um die Aufmerksamkeit zu bündeln"
               }
             },
             {
@@ -16307,7 +16411,8 @@
               "text": {
                 "en": "Converts to CMYK only",
                 "fr": "Convertit uniquement en CMJN",
-                "es": "Convierte solo a CMYK"
+                "es": "Convierte solo a CMYK",
+                "de": "Konvertiert nur nach CMYK"
               }
             },
             {
@@ -16315,7 +16420,8 @@
               "text": {
                 "en": "Changes autofocus motors",
                 "fr": "Change les moteurs AF",
-                "es": "Cambia los motores de autofoco"
+                "es": "Cambia los motores de autofoco",
+                "de": "Ändert Autofokus-Motoren"
               }
             },
             {
@@ -16323,7 +16429,8 @@
               "text": {
                 "en": "Removes copyright",
                 "fr": "Supprime le droit d’auteur",
-                "es": "Elimina el copyright"
+                "es": "Elimina el copyright",
+                "de": "Entfernt das Copyright"
               }
             }
           ],
@@ -16333,18 +16440,21 @@
           "explanation": {
             "en": "Subtle vignettes guide the eye; heavy ones look dated fast.",
             "fr": "Un vignettage subtil guide le regard ; trop fort, il vieillit vite.",
-            "es": "Las viñetas sutiles guían la mirada; las fuertes envejecen rápido."
+            "es": "Las viñetas sutiles guían la mirada; las fuertes envejecen rápido.",
+            "de": "Dezente Vignetten führen den Blick; starke wirken schnell veraltet."
           },
           "imageUrl": "/images/packs/photo-1506905925346-21bda4d32df4.avif",
           "imageAlt": {
             "en": "Mountain vista — classic vignette framing metaphor",
             "fr": "Vue de montagne — métaphore de vignettage classique",
-            "es": "Vista de montaña — metáfora clásica de viñeta"
+            "es": "Vista de montaña — metáfora clásica de viñeta",
+            "de": "Bergpanorama — klassische Vignetten-Metapher"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16354,7 +16464,8 @@
           "text": {
             "en": "When retouching portraits ethically for general clients…",
             "fr": "Pour une retouche portrait éthique chez un client lambda…",
-            "es": "Al retocar retratos de forma ética para clientes generales…"
+            "es": "Al retocar retratos de forma ética para clientes generales…",
+            "de": "Bei ethischer Porträt-Retusche für allgemeine Kunden…"
           },
           "answers": [
             {
@@ -16362,7 +16473,8 @@
               "text": {
                 "en": "Discuss expectations before delivery",
                 "fr": "Discuter des attentes avant livraison",
-                "es": "Hablar de expectativas antes de la entrega"
+                "es": "Hablar de expectativas antes de la entrega",
+                "de": "Erwartungen vor der Lieferung besprechen"
               }
             },
             {
@@ -16370,7 +16482,8 @@
               "text": {
                 "en": "Keep natural skin texture",
                 "fr": "Garder la texture naturelle de peau",
-                "es": "Mantener la textura natural de la piel"
+                "es": "Mantener la textura natural de la piel",
+                "de": "Natürliche Hauttextur erhalten"
               }
             },
             {
@@ -16378,7 +16491,8 @@
               "text": {
                 "en": "Extreme body reshape without consent",
                 "fr": "Resculpter le corps à l’extrême sans consentement",
-                "es": "Remodelar el cuerpo de forma extrema sin consentimiento"
+                "es": "Remodelar el cuerpo de forma extrema sin consentimiento",
+                "de": "Extreme Körperformung ohne Einwilligung"
               }
             },
             {
@@ -16386,7 +16500,8 @@
               "text": {
                 "en": "Clean temporary blemishes if agreed",
                 "fr": "Nettoyer des imperfections temporaires si convenu",
-                "es": "Limpiar imperfecciones temporales si está acordado"
+                "es": "Limpiar imperfecciones temporales si está acordado",
+                "de": "Temporäre Unebenheiten bereinigen, wenn vereinbart"
               }
             }
           ],
@@ -16398,18 +16513,21 @@
           "explanation": {
             "en": "Consent and naturalism beat heavy beauty filters unless requested.",
             "fr": "Consentement et naturel battent les filtres beauté lourds, sauf demande contraire.",
-            "es": "El consentimiento y el naturalismo vencen a los filtros beauty fuertes salvo petición."
+            "es": "El consentimiento y el naturalismo vencen a los filtros beauty fuertes salvo petición.",
+            "de": "Einwilligung und Natürlichkeit schlagen starke Beauty-Filter — außer explizit gewünscht."
           },
           "imageUrl": "/images/packs/photo-1492691527719-9d1e07e534b4.avif",
           "imageAlt": {
             "en": "Outdoor portrait for ethical skin retouch judgment",
             "fr": "Portrait en extérieur pour juger une retouche peau éthique",
-            "es": "Retrato outdoor para juzgar un retoque de piel ético"
+            "es": "Retrato outdoor para juzgar un retoque de piel ético",
+            "de": "Outdoor-Porträt zur Beurteilung ethischer Haut-Retusche"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16419,7 +16537,8 @@
           "text": {
             "en": "Exporting for Instagram usually means…",
             "fr": "Exporter pour Instagram signifie en général…",
-            "es": "Exportar para Instagram suele significar…"
+            "es": "Exportar para Instagram suele significar…",
+            "de": "Export für Instagram bedeutet meist…"
           },
           "answers": [
             {
@@ -16427,7 +16546,8 @@
               "text": {
                 "en": "A reasonable resolution JPEG/HEIC in sRGB",
                 "fr": "Un JPEG/HEIC en sRGB à résolution raisonnable",
-                "es": "Un JPEG/HEIC de resolución razonable en sRGB"
+                "es": "Un JPEG/HEIC de resolución razonable en sRGB",
+                "de": "Ein JPEG/HEIC mit vernünftiger Auflösung in sRGB"
               }
             },
             {
@@ -16435,7 +16555,8 @@
               "text": {
                 "en": "ProRes RAW",
                 "fr": "ProRes RAW",
-                "es": "Archivo ProRes RAW"
+                "es": "Archivo ProRes RAW",
+                "de": "ProRes-RAW-Datei"
               }
             },
             {
@@ -16443,7 +16564,8 @@
               "text": {
                 "en": "DNG only",
                 "fr": "Uniquement du DNG",
-                "es": "Solo DNG"
+                "es": "Solo DNG",
+                "de": "Nur DNG"
               }
             },
             {
@@ -16451,7 +16573,8 @@
               "text": {
                 "en": "A 2 GB 16-bit TIFF always",
                 "fr": "Toujours un TIFF 16 bits de 2 Go",
-                "es": "Siempre un TIFF de 16 bits de 2 GB"
+                "es": "Siempre un TIFF de 16 bits de 2 GB",
+                "de": "Immer ein 2-GB-16-Bit-TIFF"
               }
             }
           ],
@@ -16461,18 +16584,21 @@
           "explanation": {
             "en": "Social platforms recompress—oversized masters waste time.",
             "fr": "Les plateformes recompressent — les masters énormes font perdre du temps.",
-            "es": "Las redes recomprimen: másteres enormes pierden tiempo."
+            "es": "Las redes recomprimen: másteres enormes pierden tiempo.",
+            "de": "Soziale Plattformen komprimieren nach — übergroße Master verschwenden Zeit beim Export."
           },
           "imageUrl": "/images/packs/photo-1611162616305-c69b3fa7fbe0.avif",
           "imageAlt": {
             "en": "Social app icon — export sizing for Instagram",
             "fr": "Icône d’app sociale — export pour Instagram",
-            "es": "Icono de app social — tamaño de exportación para Instagram"
+            "es": "Icono de app social — tamaño de exportación para Instagram",
+            "de": "Social-App-Icon — Exportgröße für Instagram"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16482,7 +16608,8 @@
           "text": {
             "en": "Frequency separation is mainly used to…",
             "fr": "La séparation de fréquences sert surtout à…",
-            "es": "La separación de frecuencias se usa sobre todo para…"
+            "es": "La separación de frecuencias se usa sobre todo para…",
+            "de": "Frequenztrennung dient vor allem dazu…"
           },
           "answers": [
             {
@@ -16490,7 +16617,8 @@
               "text": {
                 "en": "Measure hyperfocal distance",
                 "fr": "Mesurer l’hyperfocale",
-                "es": "Medir la distancia hiperfocal"
+                "es": "Medir la distancia hiperfocal",
+                "de": "Die hyperfokale Distanz zu messen"
               }
             },
             {
@@ -16498,7 +16626,8 @@
               "text": {
                 "en": "Separate texture from color/tone for advanced skin work",
                 "fr": "Séparer texture et couleur/ton pour un travail de peau avancé",
-                "es": "Separar textura de color/tono para trabajo avanzado de piel"
+                "es": "Separar textura de color/tono para trabajo avanzado de piel",
+                "de": "Textur von Farbe/Ton für fortgeschrittene Hautarbeit zu trennen"
               }
             },
             {
@@ -16506,7 +16635,8 @@
               "text": {
                 "en": "Charge batteries faster",
                 "fr": "Charger les batteries plus vite",
-                "es": "Cargar las baterías más rápido"
+                "es": "Cargar las baterías más rápido",
+                "de": "Akkus schneller zu laden"
               }
             },
             {
@@ -16514,7 +16644,8 @@
               "text": {
                 "en": "Focus stack landscapes only",
                 "fr": "Faire uniquement du focus stacking paysage",
-                "es": "Solo apilar enfoques en paisajes"
+                "es": "Solo apilar enfoques en paisajes",
+                "de": "Nur Landschaften zu focus-stacken"
               }
             }
           ],
@@ -16524,18 +16655,21 @@
           "explanation": {
             "en": "Advanced technique—easy to overdo and plasticize skin.",
             "fr": "Technique avancée — facile d’en abuser et de plastifier la peau.",
-            "es": "Técnica avanzada: fácil pasarse y plastificar la piel."
+            "es": "Técnica avanzada: fácil pasarse y plastificar la piel.",
+            "de": "Fortgeschrittene Technik — leicht übertrieben und Haut wird plastisch."
           },
           "imageUrl": "/images/packs/photo-1531746020798-e6953c6e8e04.avif",
           "imageAlt": {
             "en": "Close portrait skin texture — frequency separation territory",
             "fr": "Texture de peau en portrait serré — terrain séparation de fréquences",
-            "es": "Textura de piel en primer plano — terreno de frequency separation"
+            "es": "Textura de piel en primer plano — terreno de frequency separation",
+            "de": "Hauttextur in Nahaufnahme — Terrain der Frequenztrennung"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16545,7 +16679,8 @@
           "text": {
             "en": "Signs of over-processing include…",
             "fr": "Des signes de sur-traitement incluent…",
-            "es": "Señales de sobreprocesado incluyen…"
+            "es": "Señales de sobreprocesado incluyen…",
+            "de": "Zeichen von Überbearbeitung sind…"
           },
           "answers": [
             {
@@ -16553,7 +16688,8 @@
               "text": {
                 "en": "Natural color transitions",
                 "fr": "Des transitions de couleur naturelles",
-                "es": "Transiciones de color naturales"
+                "es": "Transiciones de color naturales",
+                "de": "Natürliche Farbübergänge"
               }
             },
             {
@@ -16561,7 +16697,8 @@
               "text": {
                 "en": "Halos around edges",
                 "fr": "Des halos autour des contours",
-                "es": "Halos alrededor de los bordes"
+                "es": "Halos alrededor de los bordes",
+                "de": "Halos an Kanten"
               }
             },
             {
@@ -16569,7 +16706,8 @@
               "text": {
                 "en": "Crunchy noise / plastic skin",
                 "fr": "Bruit croustillant / peau plastique",
-                "es": "Ruido crujiente / piel plástica"
+                "es": "Ruido crujiente / piel plástica",
+                "de": "Knuspriges Rauschen / plastische Haut"
               }
             },
             {
@@ -16577,7 +16715,8 @@
               "text": {
                 "en": "HDR glow with gray flat midtones",
                 "fr": "Glow HDR avec tons moyens gris et plats",
-                "es": "Brillo HDR con tonos medios grises y planos"
+                "es": "Brillo HDR con tonos medios grises y planos",
+                "de": "HDR-Glow mit grauen, flachen Mitteltönen"
               }
             }
           ],
@@ -16589,18 +16728,21 @@
           "explanation": {
             "en": "If the edit is the subject, dial it back.",
             "fr": "Si la retouche devient le sujet, baissez d’un cran.",
-            "es": "Si la edición es el sujeto, bájala."
+            "es": "Si la edición es el sujeto, bájala.",
+            "de": "Wenn die Bearbeitung selbst zum Motiv wird, zurücknehmen."
           },
           "imageUrl": "/images/packs/photo-1561070791-2526d30994b5.avif",
           "imageAlt": {
             "en": "Bold graphic design — signs of over-processing",
             "fr": "Design graphique saturé — signes de sur-traitement",
-            "es": "Diseño gráfico intenso — signos de sobreprocesado"
+            "es": "Diseño gráfico intenso — signos de sobreprocesado",
+            "de": "Kühnes Grafikdesign — Zeichen von Überbearbeitung"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16610,7 +16752,8 @@
           "text": {
             "en": "A soft proof in editing software helps you…",
             "fr": "Une épreuve écran (soft proof) aide à…",
-            "es": "Una soft proof en el software de edición te ayuda a…"
+            "es": "Una soft proof en el software de edición te ayuda a…",
+            "de": "Eine Soft Proof im Retusche-Programm hilft dir…"
           },
           "answers": [
             {
@@ -16618,7 +16761,8 @@
               "text": {
                 "en": "Increase megapixels",
                 "fr": "Augmenter les mégapixels",
-                "es": "Aumentar los megapíxeles"
+                "es": "Aumentar los megapíxeles",
+                "de": "Megapixel zu erhöhen"
               }
             },
             {
@@ -16626,7 +16770,8 @@
               "text": {
                 "en": "Autofocus in darkness",
                 "fr": "Faire la mise au point dans le noir",
-                "es": "Hacer autofoco en la oscuridad"
+                "es": "Hacer autofoco en la oscuridad",
+                "de": "Im Dunkeln zu fokussieren"
               }
             },
             {
@@ -16634,7 +16779,8 @@
               "text": {
                 "en": "Preview how colors may look in a target print profile",
                 "fr": "Prévisualiser les couleurs dans un profil d’impression cible",
-                "es": "Previsualizar cómo se verán los colores en un perfil de impresión objetivo"
+                "es": "Previsualizar cómo se verán los colores en un perfil de impresión objetivo",
+                "de": "Vorausschauend zu sehen, wie Farben im Ziel-Druckprofil wirken"
               }
             },
             {
@@ -16642,7 +16788,8 @@
               "text": {
                 "en": "Remove lens caps automatically",
                 "fr": "Retirer automatiquement les bouchons d’objectif",
-                "es": "Quitar automáticamente los tapones del objetivo"
+                "es": "Quitar automáticamente los tapones del objetivo",
+                "de": "Automatisch Objektivdeckel zu entfernen"
               }
             }
           ],
@@ -16652,18 +16799,21 @@
           "explanation": {
             "en": "Soft proofing simulates print gamut/paper before wasting ink.",
             "fr": "Le soft proof simule le gamut/papier avant de gaspiller de l’encre.",
-            "es": "La soft proof simula el gamut/papel antes de malgastar tinta."
+            "es": "La soft proof simula el gamut/papel antes de malgastar tinta.",
+            "de": "Soft Proof simuliert Gamut/Papier vor dem Tintenverbrauch — vor dem finalen Export prüfen."
           },
           "imageUrl": "/images/packs/photo-1499750310107-5fef28a66643.avif",
           "imageAlt": {
             "en": "Laptop and coffee — soft-proof before print / client delivery",
             "fr": "Portable et café — soft proof avant print / livraison",
-            "es": "Portátil y café — soft proof antes de imprimir / entregar al cliente"
+            "es": "Portátil y café — soft proof antes de imprimir / entregar al cliente",
+            "de": "Laptop und Kaffee — Soft Proof vor Druck / Kundenlieferung"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16673,7 +16823,8 @@
           "text": {
             "en": "The best finishing step before client delivery is often…",
             "fr": "La meilleure étape finale avant livraison client est souvent…",
-            "es": "El mejor paso final antes de entregar a un cliente suele ser…"
+            "es": "El mejor paso final antes de entregar a un cliente suele ser…",
+            "de": "Der beste letzte Schritt vor der Kundenlieferung ist oft…"
           },
           "answers": [
             {
@@ -16681,7 +16832,8 @@
               "text": {
                 "en": "A fresh-eyed review on another display + consistent naming/export",
                 "fr": "Une relecture à froid sur un autre écran + nommage/export cohérents",
-                "es": "Una revisión en frío en otra pantalla + nombres/exportación coherentes"
+                "es": "Una revisión en frío en otra pantalla + nombres/exportación coherentes",
+                "de": "Ein frischer Blick auf einem anderen Display + konsistente Namen/Export"
               }
             },
             {
@@ -16689,7 +16841,8 @@
               "text": {
                 "en": "Adding random watermarks on faces",
                 "fr": "Ajouter des filigranes aléatoires sur les visages",
-                "es": "Añadir marcas de agua aleatorias en las caras"
+                "es": "Añadir marcas de agua aleatorias en las caras",
+                "de": "Zufällige Wasserzeichen auf Gesichtern"
               }
             },
             {
@@ -16697,7 +16850,8 @@
               "text": {
                 "en": "Deleting backups",
                 "fr": "Supprimer les sauvegardes",
-                "es": "Borrar las copias de seguridad"
+                "es": "Borrar las copias de seguridad",
+                "de": "Backups löschen"
               }
             },
             {
@@ -16705,7 +16859,8 @@
               "text": {
                 "en": "Maxing every slider",
                 "fr": "Mettre tous les curseurs à fond",
-                "es": "Poner todos los deslizadores al máximo"
+                "es": "Poner todos los deslizadores al máximo",
+                "de": "Jeden Regler auf Maximum"
               }
             }
           ],
@@ -16715,7 +16870,8 @@
           "explanation": {
             "en": "Distance and consistency catch mistakes better than more effects.",
             "fr": "Le recul et la cohérence attrapent plus d’erreurs que des effets supplémentaires.",
-            "es": "La distancia y la coherencia pillan más errores que más efectos."
+            "es": "La distancia y la coherencia pillan más errores que más efectos.",
+            "de": "Abstand und Konsistenz finden mehr Fehler als noch mehr Effekte."
           }
         },
         {
@@ -16725,7 +16881,8 @@
           "text": {
             "en": "Myth: “RAW means you can fix anything later.”",
             "fr": "Mythe : « En RAW, on peut tout rattraper après. »",
-            "es": "Mito: «En RAW se puede arreglar todo después.»"
+            "es": "Mito: «En RAW se puede arreglar todo después.»",
+            "de": "Mythos: „Im RAW lässt sich später alles retten.“"
           },
           "answers": [
             {
@@ -16733,7 +16890,8 @@
               "text": {
                 "en": "False — RAW helps exposure/color latitude, not miracles on blur or hard clipping",
                 "fr": "Faux — le RAW aide sur la latitude expo/couleur, pas sur le flou ou l’écrêtage dur",
-                "es": "Falso — el RAW ayuda en latitud de exposición/color, no hace milagros con desenfoque o recorte duro"
+                "es": "Falso — el RAW ayuda en latitud de exposición/color, no hace milagros con desenfoque o recorte duro",
+                "de": "Falsch — RAW hilft bei Belichtungs-/Farblatitüde, nicht bei Unschärfe oder hartem Clipping"
               }
             },
             {
@@ -16741,7 +16899,8 @@
               "text": {
                 "en": "True only for black-and-white",
                 "fr": "Vrai seulement en noir et blanc",
-                "es": "Verdadero solo en blanco y negro"
+                "es": "Verdadero solo en blanco y negro",
+                "de": "Nur bei Schwarzweiß wahr"
               }
             },
             {
@@ -16749,7 +16908,8 @@
               "text": {
                 "en": "True — focus, motion blur, and clipped spectra all come back perfectly",
                 "fr": "Vrai — MAP, flou de bougé et hautes lumières cramées reviennent parfaitement",
-                "es": "Verdadero — el enfoque, el motion blur y los espectros recortados vuelven perfectos"
+                "es": "Verdadero — el enfoque, el motion blur y los espectros recortados vuelven perfectos",
+                "de": "Wahr — Fokus, Bewegungsunschärfe und geclippte Spektren kommen perfekt zurück"
               }
             },
             {
@@ -16757,7 +16917,8 @@
               "text": {
                 "en": "RAW disables the lens until export",
                 "fr": "Le RAW désactive l’objectif jusqu’à l’export",
-                "es": "El RAW desactiva el objetivo hasta la exportación"
+                "es": "El RAW desactiva el objetivo hasta la exportación",
+                "de": "RAW deaktiviert das Objektiv bis zum Export"
               }
             }
           ],
@@ -16767,7 +16928,8 @@
           "explanation": {
             "en": "RAW is flexible, not magical. Get focus and shutter right in camera.",
             "fr": "Le RAW est souple, pas magique. La MAP et l’obturateur se gagnent à la prise de vue.",
-            "es": "El RAW es flexible, no mágico. Enfoque y obturador se ganan en cámara."
+            "es": "El RAW es flexible, no mágico. Enfoque y obturador se ganan en cámara.",
+            "de": "RAW ist flexibel, nicht magisch. Fokus und Verschlusszeit gewinnst du in der Kamera."
           }
         },
         {
@@ -16777,7 +16939,8 @@
           "text": {
             "en": "Skin looks plastic after retouching. Likely cause?",
             "fr": "Peau plastique après retouche. Cause probable ?",
-            "es": "La piel se ve plástica tras el retoque. ¿Causa probable?"
+            "es": "La piel se ve plástica tras el retoque. ¿Causa probable?",
+            "de": "Haut wirkt nach der Retusche plastisch. Wahrscheinliche Ursache?"
           },
           "answers": [
             {
@@ -16785,7 +16948,8 @@
               "text": {
                 "en": "Too much frequency separation / smoothing / clarity extremes",
                 "fr": "Trop de frequency separation / lissage / clarté extrême",
-                "es": "Demasiada frequency separation / suavizado / claridad extrema"
+                "es": "Demasiada frequency separation / suavizado / claridad extrema",
+                "de": "Zu viel Frequenztrennung / Glättung / extreme Klarheit"
               }
             },
             {
@@ -16793,7 +16957,8 @@
               "text": {
                 "en": "Shooting at f/8 outdoors",
                 "fr": "Avoir shooté à f/8 outdoor",
-                "es": "Disparar a f/8 en exterior"
+                "es": "Disparar a f/8 en exterior",
+                "de": "Bei f/8 im Freien fotografieren"
               }
             },
             {
@@ -16801,7 +16966,8 @@
               "text": {
                 "en": "Using a prime lens",
                 "fr": "Avoir utilisé une focale fixe",
-                "es": "Usar un objetivo fijo"
+                "es": "Usar un objetivo fijo",
+                "de": "Ein Festbrennweiten-Objektiv nutzen"
               }
             },
             {
@@ -16809,7 +16975,8 @@
               "text": {
                 "en": "Exporting sRGB for the web",
                 "fr": "Exporter en sRGB pour le web",
-                "es": "Exportar sRGB para la web"
+                "es": "Exportar sRGB para la web",
+                "de": "sRGB fürs Web exportieren"
               }
             }
           ],
@@ -16819,18 +16986,21 @@
           "explanation": {
             "en": "Over-smoothing kills pores and texture. Pull back until skin still looks like skin.",
             "fr": "Le sur-lissage tue les pores et la texture. Recule jusqu’à ce que la peau reste de la peau.",
-            "es": "El sobre-suavizado mata poros y textura. Baja hasta que la piel siga pareciendo piel."
+            "es": "El sobre-suavizado mata poros y textura. Baja hasta que la piel siga pareciendo piel.",
+            "de": "Überglättung tötet Poren und Textur. Zurücknehmen, bis Haut noch wie Haut aussieht."
           },
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait close-up",
             "fr": "Portrait en gros plan",
-            "es": "Retrato en primer plano"
+            "es": "Retrato en primer plano",
+            "de": "Porträt-Nahaufnahme"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16840,7 +17010,8 @@
           "text": {
             "en": "Before sending photos to a client, smart last checks include…",
             "fr": "Avant d’envoyer des photos à un client, de bons derniers checks incluent…",
-            "es": "Antes de enviar fotos a un cliente, buenas últimas comprobaciones incluyen…"
+            "es": "Antes de enviar fotos a un cliente, buenas últimas comprobaciones incluyen…",
+            "de": "Vor dem Senden an den Kunden gehören zu guten letzten Checks…"
           },
           "answers": [
             {
@@ -16848,7 +17019,8 @@
               "text": {
                 "en": "Spot dust / sensor spots on skies",
                 "fr": "Chercher poussières / taches capteur dans les ciels",
-                "es": "Buscar polvo / manchas de sensor en cielos"
+                "es": "Buscar polvo / manchas de sensor en cielos",
+                "de": "Staub / Sensorflecken am Himmel suchen"
               }
             },
             {
@@ -16856,7 +17028,8 @@
               "text": {
                 "en": "Export the right size/color profile for the use case",
                 "fr": "Exporter la bonne taille / profil colorimétrique selon l’usage",
-                "es": "Exportar el tamaño/perfil de color correcto para el uso"
+                "es": "Exportar el tamaño/perfil de color correcto para el uso",
+                "de": "Größe und Farbprofil passend zum Einsatz exportieren"
               }
             },
             {
@@ -16864,7 +17037,8 @@
               "text": {
                 "en": "Confirm crop orientation and spelling on any text overlays",
                 "fr": "Vérifier orientation du crop et orthographe des textes",
-                "es": "Confirmar orientación del recorte y ortografía de textos"
+                "es": "Confirmar orientación del recorte y ortografía de textos",
+                "de": "Crop-Ausrichtung und Schreibweise bei Text-Overlays prüfen"
               }
             },
             {
@@ -16872,7 +17046,8 @@
               "text": {
                 "en": "Leave temporary rejection stickers on final files",
                 "fr": "Laisser les stickers “reject” sur les fichiers finaux",
-                "es": "Dejar stickers temporales de rechazo en los archivos finales"
+                "es": "Dejar stickers temporales de rechazo en los archivos finales",
+                "de": "Temporäre Reject-Sticker auf Finaldateien lassen"
               }
             }
           ],
@@ -16884,18 +17059,21 @@
           "explanation": {
             "en": "Ship clean files matched to the destination — not your working rejects.",
             "fr": "Livre des fichiers propres adaptés à la destination — pas tes rejects de travail.",
-            "es": "Entrega archivos limpios adaptados al destino — no tus rejects de trabajo."
+            "es": "Entrega archivos limpios adaptados al destino — no tus rejects de trabajo.",
+            "de": "Saubere, zielpassende Dateien liefern — nicht deine Arbeits-Rejects."
           },
           "imageUrl": "/images/packs/photo-1454165804606-c3d57bc86b40.avif",
           "imageAlt": {
             "en": "Checklist documents — last checks before client send",
             "fr": "Documents checklist — dernières vérifs avant envoi client",
-            "es": "Documentos checklist — últimas comprobaciones antes del envío"
+            "es": "Documentos checklist — últimas comprobaciones antes del envío",
+            "de": "Checklisten-Dokumente — letzte Checks vor dem Kundenversand"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -16905,7 +17083,8 @@
           "text": {
             "en": "Client wants ‘cleaner skin’ but natural texture for a lifestyle brand. Risky pipeline?",
             "fr": "Le client veut une peau « plus propre » mais une texture naturelle pour une marque lifestyle. Pipeline risqué ?",
-            "es": "El cliente quiere piel «más limpia» pero textura natural para una marca lifestyle. ¿Pipeline arriesgado?"
+            "es": "El cliente quiere piel «más limpia» pero textura natural para una marca lifestyle. ¿Pipeline arriesgado?",
+            "de": "Kunde will „sauberere Haut“, aber natürliche Textur für eine Lifestyle-Marke. Riskanter Pipeline?"
           },
           "answers": [
             {
@@ -16913,7 +17092,8 @@
               "text": {
                 "en": "Global heavy blur / plastic skin smoothers on the whole face",
                 "fr": "Flou global / lisseurs plastiques sur tout le visage",
-                "es": "Desenfoque global / suavizadores plásticos en toda la cara"
+                "es": "Desenfoque global / suavizadores plásticos en toda la cara",
+                "de": "Globale starke Weichzeichner / plastische Glätter über das ganze Gesicht"
               }
             },
             {
@@ -16921,7 +17101,8 @@
               "text": {
                 "en": "Spot heal dust only, then gentle frequency or masked texture work",
                 "fr": "Corriger poussières au spot, puis travail texture doux / masqué",
-                "es": "Sanar solo polvo, luego trabajo de textura suave o enmascarado"
+                "es": "Sanar solo polvo, luego trabajo de textura suave o enmascarado",
+                "de": "Nur Staub heilen, dann sanfte Frequenztrennung oder maskierte Texturarbeit"
               }
             },
             {
@@ -16929,7 +17110,8 @@
               "text": {
                 "en": "Leave every temporary blemish forever — never touch skin",
                 "fr": "Laisser chaque imperfection temporaire — ne jamais toucher la peau",
-                "es": "Dejar cada imperfección temporal para siempre — no tocar la piel"
+                "es": "Dejar cada imperfección temporal para siempre — no tocar la piel",
+                "de": "Jede temporäre Unebenheit für immer lassen — Haut nie anfassen"
               }
             },
             {
@@ -16937,7 +17119,8 @@
               "text": {
                 "en": "Push Clarity +100 on pores to ‘enhance realism’",
                 "fr": "Clarity +100 sur les pores pour « plus de réalisme »",
-                "es": "Clarity +100 en los poros para «más realismo»"
+                "es": "Clarity +100 en los poros para «más realismo»",
+                "de": "Klarheit +100 auf Poren für „mehr Realismus“"
               }
             }
           ],
@@ -16947,7 +17130,8 @@
           "explanation": {
             "en": "Global smoothers kill pores and brand trust. Targeted cleanup keeps texture.",
             "fr": "Les lisseurs globaux tuent les pores et la confiance de marque. Un nettoyage ciblé garde la texture.",
-            "es": "Los suavizadores globales matan poros y la confianza de marca. Una limpieza local mantiene la textura."
+            "es": "Los suavizadores globales matan poros y la confianza de marca. Una limpieza local mantiene la textura.",
+            "de": "Globale Glätter töten Poren und Markenvertrauen. Gezielte Maske hält Textur."
           }
         },
         {
@@ -16957,7 +17141,8 @@
           "text": {
             "en": "You soft-proof for a matte paper profile and see duller reds. Correct interpretation?",
             "fr": "Tu fais un soft proof pour un profil papier mat et les rouges paraissent ternes. Bonne lecture ?",
-            "es": "Haces soft proof con un perfil de papel mate y los rojos se ven apagados. ¿Interpretación correcta?"
+            "es": "Haces soft proof con un perfil de papel mate y los rojos se ven apagados. ¿Interpretación correcta?",
+            "de": "Du machst Soft Proof mit einem Mattpapier-Profil und Rottöne wirken dumpf. Richtige Lesart?"
           },
           "answers": [
             {
@@ -16965,7 +17150,8 @@
               "text": {
                 "en": "Always convert to sRGB before print soft-proof",
                 "fr": "Toujours convertir en sRGB avant le soft proof print",
-                "es": "Siempre convertir a sRGB antes del soft proof de impresión"
+                "es": "Siempre convertir a sRGB antes del soft proof de impresión",
+                "de": "Immer vor dem Druck-Soft-Proof nach sRGB konvertieren"
               }
             },
             {
@@ -16973,7 +17159,8 @@
               "text": {
                 "en": "Out-of-gamut / paper limits — adjust with proofing on, don’t chase screen pop",
                 "fr": "Hors gamut / limites papier — ajuste avec le soft proof, ne chasse pas le pop écran",
-                "es": "Fuera de gamut / límites del papel — ajusta con la prueba activa, no persigas el pop de pantalla"
+                "es": "Fuera de gamut / límites del papel — ajusta con la prueba activa, no persigas el pop de pantalla",
+                "de": "Außerhalb des Gamuts / Papiergrenzen — mit aktiver Soft Proof korrigieren, nicht dem Screen-Pop hinterherjagen"
               }
             },
             {
@@ -16981,7 +17168,8 @@
               "text": {
                 "en": "Matte paper always needs +2 exposure on export",
                 "fr": "Le mat demande toujours +2 IL à l’export",
-                "es": "El papel mate siempre necesita +2 de exposición al exportar"
+                "es": "El papel mate siempre necesita +2 de exposición al exportar",
+                "de": "Mattpapier braucht beim Export immer +2 Belichtung"
               }
             },
             {
@@ -16989,7 +17177,8 @@
               "text": {
                 "en": "The monitor is broken — ignore paper profiles",
                 "fr": "L’écran est cassé — ignore les profils papier",
-                "es": "El monitor está roto — ignora los perfiles de papel"
+                "es": "El monitor está roto — ignora los perfiles de papel",
+                "de": "Der Monitor ist kaputt — Papierprofile ignorieren"
               }
             }
           ],
@@ -16999,7 +17188,8 @@
           "explanation": {
             "en": "Soft proof shows printable color. Fix while proofing instead of trusting an unproofed display.",
             "fr": "Le soft proof montre la couleur imprimable. Corrige en proof plutôt que de croire l’écran non prouvé.",
-            "es": "La soft proof muestra el color imprimible. Corrige con la prueba, no confíes en una pantalla sin probar."
+            "es": "La soft proof muestra el color imprimible. Corrige con la prueba, no confíes en una pantalla sin probar.",
+            "de": "Soft Proof zeigt druckbare Farbe. Mit aktiver Prüfung korrigieren, nicht einem ungeprüften Display vertrauen."
           }
         }
       ]
