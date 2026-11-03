@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.77.0**).
+Document à jour avec l’état réel du dépôt (**v1.78.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.79** : `lexique-image-fixe` LocalizedString.de ×74 · docs v1.78.0 · armor 179 — **toe-hold catalogue `.de`** (jalon ES catalogue fermé) — **pas** path `/es/` `/de/` · **pas** autre pack `.de`
 - Vague **1.78** : `marques-photo` LocalizedString.es ×194 · docs v1.77.0 · armor 178 — non-scolaires `.es` **complets (3/3)** — **pas** path `/es/` `/de/` · **pas** catalogue `.de`
 - Vague **1.77** : `lightroom-workflow` LocalizedString.es ×194 · docs v1.76.0 · armor 177 — 2ᵉ non-scolaire `.es` — **pas** path `/es/` `/de/` · **pas** marques-photo `.es` · **pas** catalogue `.de`
 - Vague **1.76** : `gear-lenses` LocalizedString.es ×192 · docs v1.75.0 · armor 176 — 1ʳᵉ non-scolaire `.es` — **pas** path `/es/` `/de/` · **pas** lightroom-workflow / marques-photo `.es` · **pas** catalogue `.de`
@@ -81,10 +82,11 @@ Document à jour avec l’état réel du dépôt (**v1.77.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
+- [x] Docs headline → **v1.78.0** + 15 quiz · 386 Q · 268 illus (vague 1.79 P0 ; baseline live post-1.78.0)
 - [x] Docs headline → **v1.77.0** + 15 quiz · 386 Q · 268 illus (vague 1.78 P0 ; baseline live post-1.77.0)
 - [x] Docs headline → **v1.76.0** + 15 quiz · 386 Q · 268 illus (vague 1.77 P0 ; baseline live post-1.76.0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79
 
 ### Ops Antony — checklist P0.4 (hors code)
 
@@ -138,5 +140,6 @@ Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Pu
 - [x] `gear-lenses` LocalizedString.es ×192 · docs v1.75.0 · armor 176 (vague **1.76**) — 1ʳᵉ non-scolaire `.es` — **pas** lightroom-workflow / marques-photo `.es` · **pas** path `/es/` `/de/` · **pas** catalogue `.de`
 - [x] `lightroom-workflow` LocalizedString.es ×194 · docs v1.76.0 · armor 177 (vague **1.77**) — 2ᵉ non-scolaire `.es` — **pas** marques-photo `.es` · **pas** path `/es/` `/de/` · **pas** catalogue `.de`
 - [x] `marques-photo` LocalizedString.es ×194 · docs v1.77.0 · armor 178 (vague **1.78**) — non-scolaires `.es` **complets (3/3)** — **pas** path `/es/` `/de/` · **pas** catalogue `.de`
+- [x] `lexique-image-fixe` LocalizedString.de ×74 · docs v1.78.0 · armor 179 (vague **1.79**) — **toe-hold catalogue `.de`** — **pas** path `/es/` `/de/` · **pas** autre pack `.de`
 
-Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt. · Scolaires `.es` complets · non-scolaires `.es` **complets (3/3)** · suite hors vague : toe-hold catalogue `.de` / path-locale si ROI Search Console.
+Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt. · Scolaires `.es` complets · non-scolaires `.es` **complets (3/3)** · **toe-hold `.de` lexique** livré · suite hors vague : packs scolaires `.de` suivants (ex. `photo-rights`) / path-locale si ROI Search Console.

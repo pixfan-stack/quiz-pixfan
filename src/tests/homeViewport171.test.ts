@@ -37,10 +37,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.71 — docs v1.70.0 + public-domain LocalizedString.es', () => {
-  it('docs still mention vague 1.70/1.71; no-go through 1.71; headline may be v1.77.0', () => {
-    /* Docs headline moved to v1.77.0 in vague 1.78 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(70|71|72|73|74|75|76|77)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(70|71|72|73|74|75|76|77)\.\d+\*\*/);
+  it('docs still mention vague 1.70/1.71; no-go through 1.71; headline may be v1.78.0', () => {
+    /* Docs headline moved to v1.78.0 in vague 1.79 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(70|71|72|73|74|75|76|77|78)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(70|71|72|73|74|75|76|77|78)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.70**');
     expect(nextSteps).toContain('Vague **1.71**');
     expect(nextSteps).toMatch(/no-go.*1\.71/);
@@ -91,16 +91,19 @@ describe('vague 1.71 — docs v1.70.0 + public-domain LocalizedString.es', () =>
     expect(withoutEs).toEqual([]);
   });
 
-  it('still no path-locale /es/|/de/; no catalogue .de; ops no-gos through 1.71', () => {
+  it('still no path-locale /es/|/de/; only lexique catalogue .de; ops no-gos through 1.71', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.71/);
+    /* Vague 1.79 toe-hold — lexique-image-fixe may ship title.de; others must not. */
     expect(
-      data.quizzes.every((q) => {
-        const title = q.title as { de?: string };
-        return title.de == null || title.de === '';
-      })
+      data.quizzes
+        .filter((q) => q.id !== 'lexique-image-fixe')
+        .every((q) => {
+          const title = q.title as { de?: string };
+          return title.de == null || title.de === '';
+        })
     ).toBe(true);
   });
 });

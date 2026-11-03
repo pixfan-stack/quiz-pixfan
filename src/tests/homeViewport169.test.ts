@@ -10,10 +10,10 @@ import questions from '../../public/data/questions.json';
 import { quizLabel, toContentLang } from '../../functions/lib/sharePreview';
 
 describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS', () => {
-  it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.77.0', () => {
-    /* Docs headline moved to v1.77.0 in vague 1.78 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76|77)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76|77)\.\d+\*\*/);
+  it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.78.0', () => {
+    /* Docs headline moved to v1.78.0 in vague 1.79 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76|77|78)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76|77|78)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.68**');
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toMatch(/no-go.*1\.69/);
@@ -84,11 +84,14 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
       .sort();
     /* portrait-light…marques-photo .es through 1.78 — série ES catalogue fermée. */
     expect(packsWithoutEs).toEqual([]); /* marques-photo .es 1.78 — série fermée */
+    /* Vague 1.79 toe-hold — lexique-image-fixe may ship title.de; others must not. */
     expect(
-      questions.quizzes.every((q) => {
-        const title = q.title as { de?: string };
-        return title.de == null || title.de === '';
-      })
+      questions.quizzes
+        .filter((q) => q.id !== 'lexique-image-fixe')
+        .every((q) => {
+          const title = q.title as { de?: string };
+          return title.de == null || title.de === '';
+        })
     ).toBe(true);
   });
 });
