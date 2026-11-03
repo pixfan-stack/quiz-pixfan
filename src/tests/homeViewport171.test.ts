@@ -36,10 +36,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.71 — docs v1.70.0 + public-domain LocalizedString.es', () => {
-  it('docs still mention vague 1.70/1.71; no-go through 1.71; headline may be v1.75.0', () => {
-    /* Docs headline moved to v1.75.0 in vague 1.76 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(70|71|72|73|74|75)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(70|71|72|73|74|75)\.\d+\*\*/);
+  it('docs still mention vague 1.70/1.71; no-go through 1.71; headline may be v1.76.0', () => {
+    /* Docs headline moved to v1.76.0 in vague 1.77 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(70|71|72|73|74|75|76)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(70|71|72|73|74|75|76)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.70**');
     expect(nextSteps).toContain('Vague **1.71**');
     expect(nextSteps).toMatch(/no-go.*1\.71/);
@@ -81,16 +81,10 @@ describe('vague 1.71 — docs v1.70.0 + public-domain LocalizedString.es', () =>
     }
   });
 
-  it('remaining scolaires + non-scolaires still lack title.es', () => {
-    /* exposure-basics .es 1.72; genres 1.73; composition 1.74; smartphone 1.75 — drop from historical without-es lock. */
-    const withoutEs = [
-      'lightroom-workflow',
-      'marques-photo',
-    ];
-    for (const id of withoutEs) {
-      const pack = data.quizzes.find((q) => q.id === id)!;
-      expect(pack.title.es == null || pack.title.es === '', id).toBe(true);
-    }
+  it('remaining non-scolaire still lacks title.es (marques-photo)', () => {
+    /* exposure-basics…lightroom-workflow .es through 1.77 — drop from historical without-es lock. */
+    const pack = data.quizzes.find((q) => q.id === 'marques-photo')!;
+    expect(pack.title.es == null || pack.title.es === '').toBe(true);
   });
 
   it('still no path-locale /es/|/de/; no catalogue .de; ops no-gos through 1.71', () => {
