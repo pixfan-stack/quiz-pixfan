@@ -38,9 +38,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.76 — docs v1.75.0 + gear-lenses LocalizedString.es', () => {
-  it('docs headline cites v1.75.0; vague 1.75/1.76 listed; no-go through 1.76', () => {
-    expect(readme).toContain('v1.75.0');
-    expect(nextSteps).toContain('**v1.75.0**');
+  it('docs still mention vague 1.75/1.76; no-go through 1.76; headline may be v1.76.0', () => {
+    /* Docs headline moved to v1.76.0 in vague 1.77 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(75|76)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(75|76)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.75**');
     expect(nextSteps).toContain('Vague **1.76**');
     expect(nextSteps).toMatch(/no-go.*1\.76/);
@@ -99,12 +100,10 @@ describe('vague 1.76 — docs v1.75.0 + gear-lenses LocalizedString.es', () => {
     expect(withoutEs).toEqual([]);
   });
 
-  it('2 non-scolaires still lack title.es', () => {
-    const withoutEs = ['lightroom-workflow', 'marques-photo'];
-    for (const id of withoutEs) {
-      const pack = data.quizzes.find((q) => q.id === id)!;
-      expect(pack.title.es == null || pack.title.es === '', id).toBe(true);
-    }
+  it('1 non-scolaire still lacks title.es (marques-photo)', () => {
+    /* lightroom-workflow .es 1.77 — drop from historical without-es lock. */
+    const pack = data.quizzes.find((q) => q.id === 'marques-photo')!;
+    expect(pack.title.es == null || pack.title.es === '').toBe(true);
   });
 
   it('still no path-locale /es/|/de/; no catalogue .de; ops no-gos through 1.76; SVG theme toggle', () => {
