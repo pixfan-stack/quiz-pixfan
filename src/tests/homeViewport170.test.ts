@@ -37,10 +37,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.70 — docs v1.69.0 + portrait-light LocalizedString.es', () => {
-  it('docs still mention vague 1.69/1.70; no-go through 1.70; headline may be v1.78.0', () => {
-    /* Docs headline moved to v1.78.0 in vague 1.79 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(69|70|71|72|73|74|75|76|77|78)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(69|70|71|72|73|74|75|76|77|78)\.\d+\*\*/);
+  it('docs still mention vague 1.69/1.70; no-go through 1.70; headline may be v1.79.0', () => {
+    /* Docs headline moved to v1.79.0 in vague 1.80 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(69|70|71|72|73|74|75|76|77|78|79)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(69|70|71|72|73|74|75|76|77|78|79)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toContain('Vague **1.70**');
     expect(nextSteps).toMatch(/no-go.*1\.70/);
@@ -96,10 +96,10 @@ describe('vague 1.70 — docs v1.69.0 + portrait-light LocalizedString.es', () =
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.70/);
-    /* Vague 1.79 toe-hold — lexique-image-fixe may ship title.de; others must not. */
+    /* Vague 1.79–1.80 — lexique-image-fixe + photo-rights may ship title.de; others must not. */
     expect(
       data.quizzes
-        .filter((q) => q.id !== 'lexique-image-fixe')
+        .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';
