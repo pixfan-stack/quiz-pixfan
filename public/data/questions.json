@@ -13647,12 +13647,14 @@
       "title": {
         "en": "Rights & Ethics",
         "fr": "Droits & éthique",
-        "es": "Derechos y ética"
+        "es": "Derechos y ética",
+        "de": "Foto-Rechte & Ethik"
       },
       "description": {
         "en": "Copyright, model releases, privacy and responsible sharing.",
         "fr": "Droit d’auteur, autorisations, vie privée et partage responsable.",
-        "es": "Derechos de autor, autorizaciones de modelo, privacidad y compartición responsable."
+        "es": "Derechos de autor, autorizaciones de modelo, privacidad y compartición responsable.",
+        "de": "Urheberrecht, Model Release, Privatsphäre und verantwortungsvolles Teilen."
       },
       "questions": [
         {
@@ -13662,7 +13664,8 @@
           "text": {
             "en": "In most countries, who owns the copyright of a photo by default?",
             "fr": "Dans la plupart des pays, qui détient par défaut le droit d’auteur d’une photo ?",
-            "es": "En la mayoría de los países, ¿quién posee por defecto el derecho de autor de una foto?"
+            "es": "En la mayoría de los países, ¿quién posee por defecto el derecho de autor de una foto?",
+            "de": "In den meisten Ländern wem gehört standardmäßig das Urheberrecht an einem Foto?"
           },
           "answers": [
             {
@@ -13670,7 +13673,8 @@
               "text": {
                 "en": "Anyone who likes it on social media",
                 "fr": "Toute personne qui la like sur les réseaux",
-                "es": "Cualquiera que la marque con «me gusta» en redes"
+                "es": "Cualquiera que la marque con «me gusta» en redes",
+                "de": "Jedem, der es in sozialen Medien liked"
               }
             },
             {
@@ -13678,7 +13682,8 @@
               "text": {
                 "en": "The photographer who created it",
                 "fr": "Le photographe qui l’a créée",
-                "es": "El fotógrafo que la creó"
+                "es": "El fotógrafo que la creó",
+                "de": "Dem Fotografen, der es geschaffen hat"
               }
             },
             {
@@ -13686,7 +13691,8 @@
               "text": {
                 "en": "The camera manufacturer",
                 "fr": "Le fabricant de l’appareil",
-                "es": "El fabricante de la cámara"
+                "es": "El fabricante de la cámara",
+                "de": "Dem Kamerahersteller"
               }
             },
             {
@@ -13694,7 +13700,8 @@
               "text": {
                 "en": "The subject automatically, always",
                 "fr": "Le sujet photographié, automatiquement et toujours",
-                "es": "El sujeto fotografiado, automática y siempre"
+                "es": "El sujeto fotografiado, automática y siempre",
+                "de": "Dem abgebildeten Motiv, automatisch und immer"
               }
             }
           ],
@@ -13704,18 +13711,21 @@
           "explanation": {
             "en": "Copyright usually vests in the author (the photographer), unless transferred by contract or created as work-for-hire.",
             "fr": "Le droit d’auteur appartient en principe à l’auteur (le photographe), sauf cession ou commande/salariat selon les cas.",
-            "es": "El derecho de autor suele corresponder al autor (el fotógrafo), salvo cesión por contrato o obra por encargo/salario."
+            "es": "El derecho de autor suele corresponder al autor (el fotógrafo), salvo cesión por contrato o obra por encargo/salario.",
+            "de": "Das Urheberrecht steht in der Regel dem Urheber (dem Fotografen) zu — außer bei Abtretung per Vertrag oder Werk im Auftrag/Arbeitsverhältnis."
           },
           "imageUrl": "/images/packs/photo-1450101499163-c8848c66ca85.avif",
           "imageAlt": {
             "en": "Contract and pen on desk",
             "fr": "Contrat et stylo sur un bureau",
-            "es": "Contrato y bolígrafo sobre un escritorio"
+            "es": "Contrato y bolígrafo sobre un escritorio",
+            "de": "Vertrag und Stift auf einem Schreibtisch"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13725,7 +13735,8 @@
           "text": {
             "en": "“All rights reserved” generally means…",
             "fr": "« Tous droits réservés » signifie en général…",
-            "es": "«Todos los derechos reservados» significa en general…"
+            "es": "«Todos los derechos reservados» significa en general…",
+            "de": "„Alle Rechte vorbehalten“ bedeutet in der Regel…"
           },
           "answers": [
             {
@@ -13733,7 +13744,8 @@
               "text": {
                 "en": "Reuse requires permission unless an exception applies",
                 "fr": "La réutilisation nécessite une autorisation, sauf exception",
-                "es": "La reutilización requiere autorización, salvo excepción"
+                "es": "La reutilización requiere autorización, salvo excepción",
+                "de": "Weiterverwendung braucht Erlaubnis, sofern keine Ausnahme greift"
               }
             },
             {
@@ -13741,7 +13753,8 @@
               "text": {
                 "en": "Anyone may sell the photo freely",
                 "fr": "Tout le monde peut vendre la photo librement",
-                "es": "Cualquiera puede vender la foto libremente"
+                "es": "Cualquiera puede vender la foto libremente",
+                "de": "Jeder darf das Foto frei verkaufen"
               }
             },
             {
@@ -13749,7 +13762,8 @@
               "text": {
                 "en": "Only print use is forbidden",
                 "fr": "Seul l’usage papier est interdit",
-                "es": "Solo está prohibido el uso en papel"
+                "es": "Solo está prohibido el uso en papel",
+                "de": "Nur die Nutzung auf Papier ist verboten"
               }
             },
             {
@@ -13757,7 +13771,8 @@
               "text": {
                 "en": "The photo is public domain",
                 "fr": "La photo est dans le domaine public",
-                "es": "La foto está en el dominio público"
+                "es": "La foto está en el dominio público",
+                "de": "Das Foto ist gemeinfrei"
               }
             }
           ],
@@ -13767,18 +13782,21 @@
           "explanation": {
             "en": "It signals the author retains control; check license or ask before commercial/republishing use.",
             "fr": "L’auteur garde le contrôle ; vérifiez la licence ou demandez avant usage commercial/republication.",
-            "es": "Indica que el autor conserva el control; comprueba la licencia o pide permiso antes de un uso comercial/republicación."
+            "es": "Indica que el autor conserva el control; comprueba la licencia o pide permiso antes de un uso comercial/republicación.",
+            "de": "Es zeigt, dass der Urheber die Kontrolle behält; Lizenz prüfen oder vor kommerzieller/neuveröffentlichender Nutzung fragen."
           },
           "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
           "imageAlt": {
             "en": "Handshake over agreement",
             "fr": "Poignée de main sur un accord",
-            "es": "Apretón de manos sobre un acuerdo"
+            "es": "Apretón de manos sobre un acuerdo",
+            "de": "Handschlag über einer Vereinbarung"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13788,7 +13806,8 @@
           "text": {
             "en": "A Creative Commons “BY-NC” license typically allows…",
             "fr": "Une licence Creative Commons « BY-NC » autorise typiquement…",
-            "es": "Una licencia Creative Commons «BY-NC» autoriza típicamente…"
+            "es": "Una licencia Creative Commons «BY-NC» autoriza típicamente…",
+            "de": "Eine Creative-Commons-Lizenz „BY-NC“ erlaubt typischerweise…"
           },
           "answers": [
             {
@@ -13796,7 +13815,8 @@
               "text": {
                 "en": "Removing the license notice always",
                 "fr": "Retirer toujours la mention de licence",
-                "es": "Quitar siempre la mención de licencia"
+                "es": "Quitar siempre la mención de licencia",
+                "de": "Den Lizenzhinweis immer zu entfernen"
               }
             },
             {
@@ -13804,7 +13824,8 @@
               "text": {
                 "en": "Non-commercial reuse with credit to the author",
                 "fr": "La réutilisation non commerciale avec crédit à l’auteur",
-                "es": "La reutilización no comercial con crédito al autor"
+                "es": "La reutilización no comercial con crédito al autor",
+                "de": "Nichtkommerzielle Weiterverwendung mit Namensnennung des Autors"
               }
             },
             {
@@ -13812,7 +13833,8 @@
               "text": {
                 "en": "Claiming you took the photo",
                 "fr": "Prétendre que vous avez pris la photo",
-                "es": "Pretender que tú tomaste la foto"
+                "es": "Pretender que tú tomaste la foto",
+                "de": "Zu behaupten, man habe das Foto selbst gemacht"
               }
             },
             {
@@ -13820,7 +13842,8 @@
               "text": {
                 "en": "Commercial ads with no attribution",
                 "fr": "La pub commerciale sans attribution",
-                "es": "Publicidad comercial sin atribución"
+                "es": "Publicidad comercial sin atribución",
+                "de": "Kommerzielle Werbung ohne Attribution"
               }
             }
           ],
@@ -13830,18 +13853,21 @@
           "explanation": {
             "en": "BY = attribution; NC = non-commercial. Always read the exact CC deed.",
             "fr": "BY = attribution ; NC = non commercial. Lisez toujours le texte exact de la licence.",
-            "es": "BY = atribución; NC = no comercial. Lee siempre el texto exacto de la licencia CC."
+            "es": "BY = atribución; NC = no comercial. Lee siempre el texto exacto de la licencia CC.",
+            "de": "BY = Namensnennung; NC = nichtkommerziell. Immer den genauen CC-Lizenztext lesen."
           },
           "imageUrl": "/images/packs/photo-1450101499163-c8848c66ca85.avif",
           "imageAlt": {
             "en": "License paperwork — Creative Commons choices matter",
             "fr": "Documents de licence — les choix Creative Commons comptent",
-            "es": "Documentos de licencia — las opciones Creative Commons importan"
+            "es": "Documentos de licencia — las opciones Creative Commons importan",
+            "de": "Lizenzunterlagen — Creative-Commons-Wahl zählt"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13851,7 +13877,8 @@
           "text": {
             "en": "When might you need a model release?",
             "fr": "Quand peut-il falloir une autorisation de modèle (model release) ?",
-            "es": "¿Cuándo puede hacer falta una autorización de modelo (model release)?"
+            "es": "¿Cuándo puede hacer falta una autorización de modelo (model release)?",
+            "de": "Wann kann eine Model Release (Model-Freigabe) nötig sein?"
           },
           "answers": [
             {
@@ -13859,7 +13886,8 @@
               "text": {
                 "en": "Using a portrait in a brand campaign",
                 "fr": "Utiliser un portrait dans une campagne de marque",
-                "es": "Usar un retrato en una campaña de marca"
+                "es": "Usar un retrato en una campaña de marca",
+                "de": "Ein Porträt in einer Markenkampagne zu verwenden"
               }
             },
             {
@@ -13867,7 +13895,8 @@
               "text": {
                 "en": "Selling prints of a street scene with no identifiable faces",
                 "fr": "Vendre des tirages d’une rue sans visage identifiable",
-                "es": "Vender copias de una calle sin rostros identificables"
+                "es": "Vender copias de una calle sin rostros identificables",
+                "de": "Straßenabzüge ohne erkennbare Gesichter zu verkaufen"
               }
             },
             {
@@ -13875,7 +13904,8 @@
               "text": {
                 "en": "Commercial advertising featuring a recognizable person",
                 "fr": "Publicité commerciale avec une personne reconnaissable",
-                "es": "Publicidad comercial con una persona reconocible"
+                "es": "Publicidad comercial con una persona reconocible",
+                "de": "Kommerzielle Werbung mit einer erkennbaren Person"
               }
             },
             {
@@ -13883,7 +13913,8 @@
               "text": {
                 "en": "Editorial news reporting in many jurisdictions (often different rules)",
                 "fr": "Reportage d’actualité dans beaucoup de juridictions (règles souvent différentes)",
-                "es": "Reportaje de actualidad en muchas jurisdicciones (reglas a menudo distintas)"
+                "es": "Reportaje de actualidad en muchas jurisdicciones (reglas a menudo distintas)",
+                "de": "Aktuelle Berichterstattung in vielen Rechtsordnungen (oft andere Regeln)"
               }
             }
           ],
@@ -13894,18 +13925,21 @@
           "explanation": {
             "en": "Commercial/promotional use of likeness often needs consent; editorial use follows different rules by country.",
             "fr": "L’usage commercial de l’image d’une personne exige souvent un consentement ; l’éditorial suit d’autres règles selon les pays.",
-            "es": "El uso comercial/promocional de la imagen de una persona suele exigir consentimiento; el editorial sigue otras reglas según el país."
+            "es": "El uso comercial/promocional de la imagen de una persona suele exigir consentimiento; el editorial sigue otras reglas según el país.",
+            "de": "Kommerzielle/werbliche Nutzung des Abbilds braucht oft Zustimmung; redaktionelle Nutzung folgt je nach Land anderen Regeln."
           },
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Recognizable face — model-release territory",
             "fr": "Visage reconnaissable — terrain du model release",
-            "es": "Rostro reconocible — terreno del model release"
+            "es": "Rostro reconocible — terreno del model release",
+            "de": "Erkennbares Gesicht — Terrain der Model Release"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13915,7 +13949,8 @@
           "text": {
             "en": "Saving someone’s Instagram photo and reposting it as your own is…",
             "fr": "Enregistrer la photo Instagram de quelqu’un et la republier comme la vôtre, c’est…",
-            "es": "Guardar la foto de Instagram de alguien y republicarla como propia es…"
+            "es": "Guardar la foto de Instagram de alguien y republicarla como propia es…",
+            "de": "Jemand anderes Instagram-Foto speichern und als eigenes neu posten ist…"
           },
           "answers": [
             {
@@ -13923,7 +13958,8 @@
               "text": {
                 "en": "Usually copyright infringement / dishonest",
                 "fr": "En général une atteinte au droit d’auteur / malhonnête",
-                "es": "En general una infracción de derechos de autor / deshonesto"
+                "es": "En general una infracción de derechos de autor / deshonesto",
+                "de": "In der Regel Urheberrechtsverletzung / unlauter"
               }
             },
             {
@@ -13931,7 +13967,8 @@
               "text": {
                 "en": "Always legal because it was online",
                 "fr": "Toujours légal car c’était en ligne",
-                "es": "Siempre legal porque estaba en línea"
+                "es": "Siempre legal porque estaba en línea",
+                "de": "Immer legal, weil es online war"
               }
             },
             {
@@ -13939,7 +13976,8 @@
               "text": {
                 "en": "Only wrong if the photo is in color",
                 "fr": "Incorrect seulement si la photo est en couleur",
-                "es": "Incorrecto solo si la foto es a color"
+                "es": "Incorrecto solo si la foto es a color",
+                "de": "Nur falsch, wenn das Foto farbig ist"
               }
             },
             {
@@ -13947,7 +13985,8 @@
               "text": {
                 "en": "Required for fair use everywhere",
                 "fr": "Obligatoire au titre du fair use partout",
-                "es": "Obligatorio por fair use en todas partes"
+                "es": "Obligatorio por fair use en todas partes",
+                "de": "Überall als Fair Use vorgeschrieben"
               }
             }
           ],
@@ -13957,18 +13996,21 @@
           "explanation": {
             "en": "Online publication does not waive copyright. Credit alone may not be enough without permission.",
             "fr": "Publier en ligne ne renonce pas au droit d’auteur. Un crédit seul ne suffit pas toujours sans autorisation.",
-            "es": "Publicar en línea no renuncia al derecho de autor. Un crédito solo no basta siempre sin autorización."
+            "es": "Publicar en línea no renuncia al derecho de autor. Un crédito solo no basta siempre sin autorización.",
+            "de": "Online-Veröffentlichung verzichtet nicht aufs Urheberrecht. Bloße Credit-Zeile reicht oft nicht ohne Erlaubnis."
           },
           "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
           "imageAlt": {
             "en": "Phone screen — don’t steal Instagram photos",
             "fr": "Écran de téléphone — ne volez pas les photos Instagram",
-            "es": "Pantalla de teléfono — no robes fotos de Instagram"
+            "es": "Pantalla de teléfono — no robes fotos de Instagram",
+            "de": "Handybildschirm — keine Instagram-Fotos stehlen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13978,7 +14020,8 @@
           "text": {
             "en": "Photographing a building from a public street is often allowed, but…",
             "fr": "Photographier un bâtiment depuis la voie publique est souvent possible, mais…",
-            "es": "Fotografiar un edificio desde la vía pública a menudo es posible, pero…"
+            "es": "Fotografiar un edificio desde la vía pública a menudo es posible, pero…",
+            "de": "Ein Gebäude von der öffentlichen Straße zu fotografieren ist oft möglich, aber…"
           },
           "answers": [
             {
@@ -13986,7 +14029,8 @@
               "text": {
                 "en": "Only drones are legal",
                 "fr": "Seuls les drones sont légaux",
-                "es": "Solo los drones son legales"
+                "es": "Solo los drones son legales",
+                "de": "Nur Drohnen sind legal"
               }
             },
             {
@@ -13994,7 +14038,8 @@
               "text": {
                 "en": "You must always pay the architect a fee",
                 "fr": "Vous devez toujours payer des droits à l’architecte",
-                "es": "Siempre debes pagar derechos al arquitecto"
+                "es": "Siempre debes pagar derechos al arquitecto",
+                "de": "Man muss dem Architekten immer Gebühren zahlen"
               }
             },
             {
@@ -14002,7 +14047,8 @@
               "text": {
                 "en": "Photos of buildings are never copyrightable anywhere",
                 "fr": "Les photos de bâtiments ne sont jamais protégées nulle part",
-                "es": "Las fotos de edificios nunca están protegidas en ningún sitio"
+                "es": "Las fotos de edificios nunca están protegidas en ningún sitio",
+                "de": "Gebäudefotos sind nirgendwo urheberrechtlich geschützt"
               }
             },
             {
@@ -14010,7 +14056,8 @@
               "text": {
                 "en": "Commercial use of distinctive architecture/trademarks can still be restricted",
                 "fr": "L’usage commercial d’une architecture / marque distinctive peut rester limité",
-                "es": "El uso comercial de una arquitectura / marca distintiva puede seguir limitado"
+                "es": "El uso comercial de una arquitectura / marca distintiva puede seguir limitado",
+                "de": "Kommerzielle Nutzung markanter Architektur / Marken kann weiter eingeschränkt sein"
               }
             }
           ],
@@ -14020,18 +14067,21 @@
           "explanation": {
             "en": "Freedom of panorama and trademark/property rules vary widely by country.",
             "fr": "La liberté de panorama et les règles de marque/propriété varient fortement selon les pays.",
-            "es": "La libertad de panorama y las reglas de marca/propiedad varían mucho según el país."
+            "es": "La libertad de panorama y las reglas de marca/propiedad varían mucho según el país.",
+            "de": "Panoramafreiheit und Marken-/Eigentumsregeln unterscheiden sich stark je nach Land."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Public street and buildings — freer to photograph, not always to sell",
             "fr": "Rue et bâtiments publics — plus libre à photographier, pas toujours à vendre",
-            "es": "Calle y edificios públicos — más libres de fotografiar, no siempre de vender"
+            "es": "Calle y edificios públicos — más libres de fotografiar, no siempre de vender",
+            "de": "Öffentliche Straße und Gebäude — freier zu fotografieren, nicht immer zu verkaufen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14041,7 +14091,8 @@
           "text": {
             "en": "Ethical practices when photographing people include…",
             "fr": "Des pratiques éthiques en photographiant des personnes incluent…",
-            "es": "Prácticas éticas al fotografiar personas incluyen…"
+            "es": "Prácticas éticas al fotografiar personas incluyen…",
+            "de": "Ethische Praktiken beim Fotografieren von Menschen umfassen…"
           },
           "answers": [
             {
@@ -14049,7 +14100,8 @@
               "text": {
                 "en": "Respecting dignity and context",
                 "fr": "Respecter la dignité et le contexte",
-                "es": "Respetar la dignidad y el contexto"
+                "es": "Respetar la dignidad y el contexto",
+                "de": "Würde und Kontext respektieren"
               }
             },
             {
@@ -14057,7 +14109,8 @@
               "text": {
                 "en": "Asking before intrusive close-ups when possible",
                 "fr": "Demander avant des gros plans intrusifs si possible",
-                "es": "Pedir antes de primeros planos intrusivos si es posible"
+                "es": "Pedir antes de primeros planos intrusivos si es posible",
+                "de": "Vor aufdringlichen Nahaufnahmen nach Möglichkeit fragen"
               }
             },
             {
@@ -14065,7 +14118,8 @@
               "text": {
                 "en": "Publishing humiliating images for clicks",
                 "fr": "Publier des images humiliantes pour le clic",
-                "es": "Publicar imágenes humillantes por el clic"
+                "es": "Publicar imágenes humillantes por el clic",
+                "de": "Demütigende Bilder für Klicks zu veröffentlichen"
               }
             },
             {
@@ -14073,7 +14127,8 @@
               "text": {
                 "en": "Being careful with minors’ images",
                 "fr": "Être prudent avec l’image des mineurs",
-                "es": "Ser prudente con la imagen de menores"
+                "es": "Ser prudente con la imagen de menores",
+                "de": "Vorsichtig mit Bildern von Minderjährigen umzugehen"
               }
             }
           ],
@@ -14085,18 +14140,21 @@
           "explanation": {
             "en": "Legality is not the only standard—respect and consent matter, especially with children.",
             "fr": "La légalité n’est pas le seul critère — respect et consentement comptent, surtout avec les enfants.",
-            "es": "La legalidad no es el único criterio: respeto y consentimiento importan, sobre todo con menores."
+            "es": "La legalidad no es el único criterio: respeto y consentimiento importan, sobre todo con menores.",
+            "de": "Rechtmäßigkeit ist nicht der einzige Maßstab: Respekt und Einwilligung zählen — besonders bei Kindern."
           },
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Recognizable person — dignity and consent habits",
             "fr": "Personne reconnaissable — dignité et réflexes de consentement",
-            "es": "Persona reconocible — dignidad y hábitos de consentimiento"
+            "es": "Persona reconocible — dignidad y hábitos de consentimiento",
+            "de": "Erkennbare Person — Würde und Einwilligungsgewohnheiten"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14106,7 +14164,8 @@
           "text": {
             "en": "“Work made for hire” / employee photography typically means…",
             "fr": "Une photo réalisée dans le cadre du travail / commande signifie souvent…",
-            "es": "Una foto hecha en el marco laboral / por encargo suele significar…"
+            "es": "Una foto hecha en el marco laboral / por encargo suele significar…",
+            "de": "Ein Foto im Arbeits-/Auftragsverhältnis bedeutet oft…"
           },
           "answers": [
             {
@@ -14114,7 +14173,8 @@
               "text": {
                 "en": "Only Creative Commons applies",
                 "fr": "Seule Creative Commons s’applique",
-                "es": "Solo aplica Creative Commons"
+                "es": "Solo aplica Creative Commons",
+                "de": "Es gilt nur Creative Commons"
               }
             },
             {
@@ -14122,7 +14182,8 @@
               "text": {
                 "en": "Rights may belong to the employer/client per contract and local law",
                 "fr": "Les droits peuvent appartenir à l’employeur/client selon contrat et droit local",
-                "es": "Los derechos pueden pertenecer al empleador/cliente según contrato y derecho local"
+                "es": "Los derechos pueden pertenecer al empleador/cliente según contrato y derecho local",
+                "de": "Rechte können laut Vertrag und lokalem Recht dem Arbeitgeber/Kunden gehören"
               }
             },
             {
@@ -14130,7 +14191,8 @@
               "text": {
                 "en": "The intern always keeps exclusive worldwide rights",
                 "fr": "Le stagiaire conserve toujours l’exclusivité mondiale",
-                "es": "El becario conserva siempre la exclusividad mundial"
+                "es": "El becario conserva siempre la exclusividad mundial",
+                "de": "Der Praktikant behält immer die weltweite Exklusivität"
               }
             },
             {
@@ -14138,7 +14200,8 @@
               "text": {
                 "en": "Copyright disappears",
                 "fr": "Le droit d’auteur disparaît",
-                "es": "El derecho de autor desaparece"
+                "es": "El derecho de autor desaparece",
+                "de": "Das Urheberrecht verschwindet"
               }
             }
           ],
@@ -14148,18 +14211,21 @@
           "explanation": {
             "en": "Employment and assignment contracts often transfer economic rights—read before assuming ownership.",
             "fr": "Contrats de travail ou de cession transfèrent souvent les droits patrimoniaux — lisez avant de présumer la propriété.",
-            "es": "Los contratos laborales o de cesión suelen transferir derechos patrimoniales: léelos antes de presumir la propiedad."
+            "es": "Los contratos laborales o de cesión suelen transferir derechos patrimoniales: léelos antes de presumir la propiedad.",
+            "de": "Arbeits- und Auftragsverträge übertragen oft die Verwertungsrechte — lesen, bevor man Eigentum unterstellt."
           },
           "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
           "imageAlt": {
             "en": "Handshake over papers — work-for-hire and client contracts",
             "fr": "Poignée de main sur des documents — commande et contrats client",
-            "es": "Apretón de manos sobre papeles — obra por encargo y contratos de cliente"
+            "es": "Apretón de manos sobre papeles — obra por encargo y contratos de cliente",
+            "de": "Handschlag über Papieren — Werk im Auftrag und Kundenverträge"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14169,7 +14235,8 @@
           "text": {
             "en": "Embedding GPS location in photo metadata can…",
             "fr": "Intégrer la localisation GPS dans les métadonnées peut…",
-            "es": "Integrar la localización GPS en los metadatos puede…"
+            "es": "Integrar la localización GPS en los metadatos puede…",
+            "de": "GPS-Standort in den Metadaten einzubetten kann…"
           },
           "answers": [
             {
@@ -14177,7 +14244,8 @@
               "text": {
                 "en": "Remove copyright",
                 "fr": "Supprimer le droit d’auteur",
-                "es": "Eliminar el derecho de autor"
+                "es": "Eliminar el derecho de autor",
+                "de": "Das Urheberrecht löschen"
               }
             },
             {
@@ -14185,7 +14253,8 @@
               "text": {
                 "en": "Reveal private places (home, children’s school, etc.)",
                 "fr": "Révéler des lieux privés (domicile, école des enfants, etc.)",
-                "es": "Revelar lugares privados (domicilio, colegio de los hijos, etc.)"
+                "es": "Revelar lugares privados (domicilio, colegio de los hijos, etc.)",
+                "de": "Private Orte preisgeben (Wohnung, Schule der Kinder usw.)"
               }
             },
             {
@@ -14193,7 +14262,8 @@
               "text": {
                 "en": "Guarantee viral reach",
                 "fr": "Garantir une viralité",
-                "es": "Garantizar viralidad"
+                "es": "Garantizar viralidad",
+                "de": "Virale Reichweite garantieren"
               }
             },
             {
@@ -14201,7 +14271,8 @@
               "text": {
                 "en": "Increase shutter speed automatically",
                 "fr": "Augmenter automatiquement la vitesse d’obturation",
-                "es": "Aumentar automáticamente la velocidad de obturación"
+                "es": "Aumentar automáticamente la velocidad de obturación",
+                "de": "Die Verschlusszeit automatisch erhöhen"
               }
             }
           ],
@@ -14211,7 +14282,8 @@
           "explanation": {
             "en": "Strip or review EXIF location before public sharing when privacy matters.",
             "fr": "Retirez ou vérifiez la localisation EXIF avant un partage public si la vie privée compte.",
-            "es": "Quita o revisa la localización EXIF antes de un compartido público si importa la privacidad."
+            "es": "Quita o revisa la localización EXIF antes de un compartido público si importa la privacidad.",
+            "de": "EXIF-Standort vor öffentlichem Teilen entfernen oder prüfen, wenn Privatsphäre zählt."
           }
         },
         {
@@ -14221,7 +14293,8 @@
           "text": {
             "en": "Fair use / short quotation exceptions…",
             "fr": "Le fair use / le droit de courte citation…",
-            "es": "El fair use / el derecho de cita breve…"
+            "es": "El fair use / el derecho de cita breve…",
+            "de": "Fair Use / kurze Zitatausnahmen…"
           },
           "answers": [
             {
@@ -14229,7 +14302,8 @@
               "text": {
                 "en": "Only apply to videos",
                 "fr": "Ne s’appliquent qu’aux vidéos",
-                "es": "Solo se aplican a vídeos"
+                "es": "Solo se aplican a vídeos",
+                "de": "Gelten nur für Videos"
               }
             },
             {
@@ -14237,7 +14311,8 @@
               "text": {
                 "en": "Are limited, context-specific, and not a free pass to take any photo",
                 "fr": "Sont limités, liés au contexte, et pas un laissez-passer pour n’importe quelle photo",
-                "es": "Son limitados, ligados al contexto, y no un pase libre para cualquier foto"
+                "es": "Son limitados, ligados al contexto, y no un pase libre para cualquier foto",
+                "de": "Sind begrenzt, kontextgebunden und kein Freifahrtschein für jedes Foto"
               }
             },
             {
@@ -14245,7 +14320,8 @@
               "text": {
                 "en": "Exist identically in every country",
                 "fr": "Existent à l’identique dans tous les pays",
-                "es": "Existen idénticos en todos los países"
+                "es": "Existen idénticos en todos los países",
+                "de": "Existieren in jedem Land identisch"
               }
             },
             {
@@ -14253,7 +14329,8 @@
               "text": {
                 "en": "Allow unlimited commercial reuse of any image",
                 "fr": "Autorisent la réutilisation commerciale illimitée de toute image",
-                "es": "Permiten la reutilización comercial ilimitada de cualquier imagen"
+                "es": "Permiten la reutilización comercial ilimitada de cualquier imagen",
+                "de": "Erlauben unbegrenzte kommerzielle Weiterverwendung jedes Bildes"
               }
             }
           ],
@@ -14263,7 +14340,8 @@
           "explanation": {
             "en": "Exceptions differ by jurisdiction and purpose (criticism, news, education…).",
             "fr": "Les exceptions varient selon le pays et le but (critique, info, éducation…).",
-            "es": "Las excepciones varían según el país y el fin (crítica, información, educación…)."
+            "es": "Las excepciones varían según el país y el fin (crítica, información, educación…).",
+            "de": "Ausnahmen unterscheiden sich je nach Rechtsordnung und Zweck (Kritik, Information, Bildung…)."
           }
         },
         {
@@ -14273,7 +14351,8 @@
           "text": {
             "en": "Before using a stock photo in a client project, check…",
             "fr": "Avant d’utiliser une photo stock pour un client, vérifiez…",
-            "es": "Antes de usar una foto de stock para un cliente, comprueba…"
+            "es": "Antes de usar una foto de stock para un cliente, comprueba…",
+            "de": "Bevor du ein Stockfoto für einen Kunden nutzt, prüfe…"
           },
           "answers": [
             {
@@ -14281,7 +14360,8 @@
               "text": {
                 "en": "License type (editorial vs commercial)",
                 "fr": "Le type de licence (éditorial vs commercial)",
-                "es": "El tipo de licencia (editorial vs comercial)"
+                "es": "El tipo de licencia (editorial vs comercial)",
+                "de": "Den Lizenztyp (redaktionell vs. kommerziell)"
               }
             },
             {
@@ -14289,7 +14369,8 @@
               "text": {
                 "en": "Seat/usage limits and attribution requirements",
                 "fr": "Les limites d’usage et les obligations d’attribution",
-                "es": "Los límites de uso y las obligaciones de atribución"
+                "es": "Los límites de uso y las obligaciones de atribución",
+                "de": "Nutzungsgrenzen und Attributionspflichten"
               }
             },
             {
@@ -14297,7 +14378,8 @@
               "text": {
                 "en": "Whether model/property releases cover your use",
                 "fr": "Si les releases modèle/propriété couvrent votre usage",
-                "es": "Si las releases de modelo/propiedad cubren tu uso"
+                "es": "Si las releases de modelo/propiedad cubren tu uso",
+                "de": "Ob Model-/Property-Releases deine Nutzung abdecken"
               }
             },
             {
@@ -14305,7 +14387,8 @@
               "text": {
                 "en": "That the file is exactly 300 DPI on screen",
                 "fr": "Que le fichier fasse exactement 300 DPI à l’écran",
-                "es": "Que el archivo tenga exactamente 300 DPI en pantalla"
+                "es": "Que el archivo tenga exactamente 300 DPI en pantalla",
+                "de": "Dass die Datei am Bildschirm genau 300 DPI hat"
               }
             }
           ],
@@ -14317,18 +14400,21 @@
           "explanation": {
             "en": "Stock licenses are contractual—editorial images often cannot be used in ads.",
             "fr": "Les licences stock sont contractuelles — l’éditorial ne va souvent pas en pub.",
-            "es": "Las licencias de stock son contractuales: lo editorial a menudo no vale para publicidad."
+            "es": "Las licencias de stock son contractuales: lo editorial a menudo no vale para publicidad.",
+            "de": "Stock-Lizenzen sind vertraglich: redaktionelle Bilder oft nicht für Werbung tauglich."
           },
           "imageUrl": "/images/packs/photo-1450101499163-c8848c66ca85.avif",
           "imageAlt": {
             "en": "Contract papers — check stock licenses before client work",
             "fr": "Documents contractuels — vérifier les licences stock",
-            "es": "Papeles contractuales — revisa las licencias de stock antes del trabajo"
+            "es": "Papeles contractuales — revisa las licencias de stock antes del trabajo",
+            "de": "Vertragsunterlagen — Stock-Lizenzen vor Kundenarbeit prüfen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14338,7 +14424,8 @@
           "text": {
             "en": "AI-trained models using scraped photos raise issues mainly about…",
             "fr": "Les modèles d’IA entraînés sur des photos scrapées soulèvent surtout des questions de…",
-            "es": "Los modelos de IA entrenados con fotos raspeadas plantean sobre todo cuestiones de…"
+            "es": "Los modelos de IA entrenados con fotos raspeadas plantean sobre todo cuestiones de…",
+            "de": "KI-Modelle, die auf gescrapten Fotos trainiert wurden, werfen vor allem Fragen zu…"
           },
           "answers": [
             {
@@ -14346,7 +14433,8 @@
               "text": {
                 "en": "ISO noise exclusively",
                 "fr": "Uniquement le bruit ISO",
-                "es": "Solo el ruido ISO"
+                "es": "Solo el ruido ISO",
+                "de": "Nur ISO-Rauschen"
               }
             },
             {
@@ -14354,7 +14442,8 @@
               "text": {
                 "en": "Consent, copyright, and transparency of training data",
                 "fr": "Consentement, droit d’auteur et transparence des données d’entraînement",
-                "es": "Consentimiento, derecho de autor y transparencia de los datos de entrenamiento"
+                "es": "Consentimiento, derecho de autor y transparencia de los datos de entrenamiento",
+                "de": "Einwilligung, Urheberrecht und Transparenz der Trainingsdaten"
               }
             },
             {
@@ -14362,7 +14451,8 @@
               "text": {
                 "en": "Only battery life",
                 "fr": "Uniquement l’autonomie de batterie",
-                "es": "Solo la autonomía de la batería"
+                "es": "Solo la autonomía de la batería",
+                "de": "Nur Akkulaufzeit"
               }
             },
             {
@@ -14370,7 +14460,8 @@
               "text": {
                 "en": "Tripod thread size",
                 "fr": "Le diamètre de pas de vis trépied",
-                "es": "El diámetro de la rosca del trípode"
+                "es": "El diámetro de la rosca del trípode",
+                "de": "Dem Durchmesser des Stativgewindes"
               }
             }
           ],
@@ -14380,18 +14471,21 @@
           "explanation": {
             "en": "Legal and ethical debates continue around training data, opt-outs and likeness.",
             "fr": "Les débats juridiques et éthiques continuent sur les données d’entraînement, opt-out et ressemblance.",
-            "es": "Los debates jurídicos y éticos continúan sobre datos de entrenamiento, opt-out y semejanza."
+            "es": "Los debates jurídicos y éticos continúan sobre datos de entrenamiento, opt-out y semejanza.",
+            "de": "Rechtliche und ethische Debatten zu Trainingsdaten, Opt-out und Ähnlichkeit dauern an."
           },
           "imageUrl": "/images/packs/photo-1677442136019-21780ecad995.avif",
           "imageAlt": {
             "en": "Abstract AI / neural imagery — scraped-training debates",
             "fr": "Imagerie abstraite IA — débats sur l’entraînement scrapé",
-            "es": "Imagen abstracta de IA — debates sobre el entrenamiento raspeado"
+            "es": "Imagen abstracta de IA — debates sobre el entrenamiento raspeado",
+            "de": "Abstrakte KI-Bildwelt — Debatten um gescraptes Training"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14401,7 +14495,8 @@
           "text": {
             "en": "Publishing a recognizable photo of a private person in an embarrassing context without consent is…",
             "fr": "Publier la photo reconnaissable d’une personne privée dans un contexte embarrassant sans consentement est…",
-            "es": "Publicar la foto reconocible de una persona privada en un contexto embarazoso sin consentimiento es…"
+            "es": "Publicar la foto reconocible de una persona privada en un contexto embarazoso sin consentimiento es…",
+            "de": "Ein erkennbares Foto einer Privatperson in peinlichem Kontext ohne Einwilligung zu veröffentlichen ist…"
           },
           "answers": [
             {
@@ -14409,7 +14504,8 @@
               "text": {
                 "en": "Often risky legally and ethically (privacy / personality rights)",
                 "fr": "Souvent risqué juridiquement et éthiquement (vie privée / droits de la personnalité)",
-                "es": "A menudo arriesgado jurídica y éticamente (privacidad / derechos de la personalidad)"
+                "es": "A menudo arriesgado jurídica y éticamente (privacidad / derechos de la personalidad)",
+                "de": "Oft rechtlich und ethisch riskant (Privatsphäre / Persönlichkeitsrechte)"
               }
             },
             {
@@ -14417,7 +14513,8 @@
               "text": {
                 "en": "Only a color-profile issue",
                 "fr": "Uniquement un problème de profil colorimétrique",
-                "es": "Solo un problema de perfil de color"
+                "es": "Solo un problema de perfil de color",
+                "de": "Nur ein Farbprofil-Problem"
               }
             },
             {
@@ -14425,7 +14522,8 @@
               "text": {
                 "en": "Mandatory for news",
                 "fr": "Obligatoire pour l’actualité",
-                "es": "Obligatorio para la actualidad"
+                "es": "Obligatorio para la actualidad",
+                "de": "Für Nachrichten Pflicht"
               }
             },
             {
@@ -14433,7 +14531,8 @@
               "text": {
                 "en": "Always fine if shot in public",
                 "fr": "Toujours OK si pris en public",
-                "es": "Siempre correcto si se tomó en público"
+                "es": "Siempre correcto si se tomó en público",
+                "de": "Immer in Ordnung, wenn öffentlich aufgenommen"
               }
             }
           ],
@@ -14443,18 +14542,21 @@
           "explanation": {
             "en": "Public place ≠ free to harm dignity; laws on privacy and image rights vary.",
             "fr": "Lieu public ≠ droit de nuire à la dignité ; droits à l’image/vie privée varient.",
-            "es": "Lugar público ≠ derecho a dañar la dignidad; los derechos de imagen/privacidad varían."
+            "es": "Lugar público ≠ derecho a dañar la dignidad; los derechos de imagen/privacidad varían.",
+            "de": "Öffentlicher Ort ≠ Recht, Würde zu verletzen; Bild- und Privatrechte variieren."
           },
           "imageUrl": "/images/packs/photo-1438761681033-6461ffad8d80.avif",
           "imageAlt": {
             "en": "Recognizable private person — dignity and consent before publish",
             "fr": "Personne privée reconnaissable — dignité et consentement avant publication",
-            "es": "Persona privada reconocible — dignidad y consentimiento antes de publicar"
+            "es": "Persona privada reconocible — dignidad y consentimiento antes de publicar",
+            "de": "Erkennbare Privatperson — Würde und Einwilligung vor Veröffentlichung"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14464,7 +14566,8 @@
           "text": {
             "en": "Watermarks…",
             "fr": "Les filigranes (watermarks)…",
-            "es": "Las marcas de agua (watermarks)…"
+            "es": "Las marcas de agua (watermarks)…",
+            "de": "Wasserzeichen (Watermarks)…"
           },
           "answers": [
             {
@@ -14472,7 +14575,8 @@
               "text": {
                 "en": "Are required for copyright to exist",
                 "fr": "Sont obligatoires pour que le droit d’auteur existe",
-                "es": "Son obligatorias para que exista el derecho de autor"
+                "es": "Son obligatorias para que exista el derecho de autor",
+                "de": "Sind nötig, damit Urheberrecht entsteht"
               }
             },
             {
@@ -14480,7 +14584,8 @@
               "text": {
                 "en": "Make RAW files smaller",
                 "fr": "Rendent les fichiers RAW plus petits",
-                "es": "Hacen más pequeños los archivos RAW"
+                "es": "Hacen más pequeños los archivos RAW",
+                "de": "Machen RAW-Dateien kleiner"
               }
             },
             {
@@ -14488,7 +14593,8 @@
               "text": {
                 "en": "Transfer ownership to Instagram",
                 "fr": "Transfèrent la propriété à Instagram",
-                "es": "Transfieren la propiedad a Instagram"
+                "es": "Transfieren la propiedad a Instagram",
+                "de": "Übertragen das Eigentum an Instagram"
               }
             },
             {
@@ -14496,7 +14602,8 @@
               "text": {
                 "en": "Can deter casual theft but do not replace legal rights",
                 "fr": "Peuvent dissuader le vol occasionnel mais ne remplacent pas les droits",
-                "es": "Pueden disuadir el robo ocasional pero no sustituyen los derechos"
+                "es": "Pueden disuadir el robo ocasional pero no sustituyen los derechos",
+                "de": "Können Gelegenheitsdiebstahl abschrecken, ersetzen aber keine Rechte"
               }
             }
           ],
@@ -14506,18 +14613,21 @@
           "explanation": {
             "en": "Copyright exists without a watermark; watermarks are a practical deterrent.",
             "fr": "Le droit d’auteur existe sans filigrane ; c’est surtout une protection pratique.",
-            "es": "El derecho de autor existe sin marca de agua; es sobre todo una protección práctica."
+            "es": "El derecho de autor existe sin marca de agua; es sobre todo una protección práctica.",
+            "de": "Urheberrecht besteht ohne Wasserzeichen; es ist vor allem ein praktischer Schutz."
           },
           "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
           "imageAlt": {
             "en": "Handshake — credit lines and professional agreements",
             "fr": "Poignée de main — crédits et accords professionnels",
-            "es": "Apretón de manos — créditos y acuerdos profesionales"
+            "es": "Apretón de manos — créditos y acuerdos profesionales",
+            "de": "Handschlag — Credits und professionelle Vereinbarungen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14527,7 +14637,8 @@
           "text": {
             "en": "Good habits before delivering photos to a client…",
             "fr": "Bonnes habitudes avant de livrer des photos à un client…",
-            "es": "Buenas costumbres antes de entregar fotos a un cliente…"
+            "es": "Buenas costumbres antes de entregar fotos a un cliente…",
+            "de": "Gute Gewohnheiten vor der Fotoübergabe an einen Kunden…"
           },
           "answers": [
             {
@@ -14535,7 +14646,8 @@
               "text": {
                 "en": "Clarify usage rights in writing",
                 "fr": "Clarifier les droits d’usage par écrit",
-                "es": "Aclarar los derechos de uso por escrito"
+                "es": "Aclarar los derechos de uso por escrito",
+                "de": "Nutzungsrechte schriftlich klären"
               }
             },
             {
@@ -14543,7 +14655,8 @@
               "text": {
                 "en": "Agree on exclusivity / duration / territories if needed",
                 "fr": "S’accorder sur exclusivité / durée / territoires si besoin",
-                "es": "Acordar exclusividad / duración / territorios si hace falta"
+                "es": "Acordar exclusividad / duración / territorios si hace falta",
+                "de": "Bei Bedarf Exklusivität / Dauer / Territorien vereinbaren"
               }
             },
             {
@@ -14551,7 +14664,8 @@
               "text": {
                 "en": "Keep an archive of delivered selects",
                 "fr": "Conserver une archive des sélections livrées",
-                "es": "Conservar un archivo de las selecciones entregadas"
+                "es": "Conservar un archivo de las selecciones entregadas",
+                "de": "Ein Archiv der gelieferten Auswahl behalten"
               }
             },
             {
@@ -14559,7 +14673,8 @@
               "text": {
                 "en": "Assume verbal chat equals worldwide perpetual transfer",
                 "fr": "Supposer qu’un échange oral vaut cession mondiale perpétuelle",
-                "es": "Suponer que un chat oral vale como cesión mundial perpetua"
+                "es": "Suponer que un chat oral vale como cesión mundial perpetua",
+                "de": "Annehmen, ein mündlicher Chat gelte als weltweite, unbefristete Abtretung"
               }
             }
           ],
@@ -14571,18 +14686,21 @@
           "explanation": {
             "en": "Clear contracts prevent disputes; keep records of what was delivered.",
             "fr": "Un contrat clair évite les litiges ; archivez ce qui a été livré.",
-            "es": "Un contrato claro evita litigios; archiva lo que se entregó."
+            "es": "Un contrato claro evita litigios; archiva lo que se entregó.",
+            "de": "Klarer Vertrag verhindert Streit; archivieren, was geliefert wurde."
           },
           "imageUrl": "/images/packs/photo-1521791136064-7986c2920216.avif",
           "imageAlt": {
             "en": "Handshake — clear delivery agreements with clients",
             "fr": "Poignée de main — accords de livraison clairs avec les clients",
-            "es": "Apretón de manos — acuerdos de entrega claros con los clientes"
+            "es": "Apretón de manos — acuerdos de entrega claros con los clientes",
+            "de": "Handschlag — klare Liefervereinbarungen mit Kunden"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14592,7 +14710,8 @@
           "text": {
             "en": "A museum forbidding flash/photos inside is primarily about…",
             "fr": "Un musée interdisant flash/photos à l’intérieur relève surtout…",
-            "es": "Un museo que prohíbe flash/fotos en el interior responde sobre todo a…"
+            "es": "Un museo que prohíbe flash/fotos en el interior responde sobre todo a…",
+            "de": "Ein Museum, das Flash/Fotos innen verbietet, betrifft vor allem…"
           },
           "answers": [
             {
@@ -14600,7 +14719,8 @@
               "text": {
                 "en": "Venue rules (contract/policy), conservation, and sometimes third-party rights",
                 "fr": "Du règlement du lieu, de la conservation, et parfois de droits de tiers",
-                "es": "El reglamento del lugar, la conservación y a veces derechos de terceros"
+                "es": "El reglamento del lugar, la conservación y a veces derechos de terceros",
+                "de": "Hausordnung, Konservierung und manchmal Rechte Dritter"
               }
             },
             {
@@ -14608,7 +14728,8 @@
               "text": {
                 "en": "International ISO standards for JPEG",
                 "fr": "Des normes ISO internationales du JPEG",
-                "es": "Normas ISO internacionales del JPEG"
+                "es": "Normas ISO internacionales del JPEG",
+                "de": "Internationale ISO-Standards für JPEG"
               }
             },
             {
@@ -14616,7 +14737,8 @@
               "text": {
                 "en": "Mandatory Creative Commons",
                 "fr": "De Creative Commons obligatoire",
-                "es": "Creative Commons obligatorio"
+                "es": "Creative Commons obligatorio",
+                "de": "Pflicht-Creative-Commons"
               }
             },
             {
@@ -14624,7 +14746,8 @@
               "text": {
                 "en": "Sensor size laws",
                 "fr": "De lois sur la taille de capteur",
-                "es": "Leyes sobre el tamaño del sensor"
+                "es": "Leyes sobre el tamaño del sensor",
+                "de": "Gesetze zur Sensorgröße"
               }
             }
           ],
@@ -14634,7 +14757,8 @@
           "explanation": {
             "en": "Property owners can set conditions of entry; artworks may also be under copyright.",
             "fr": "Le propriétaire peut fixer des conditions d’accès ; les œuvres peuvent aussi être protégées.",
-            "es": "El propietario puede fijar condiciones de acceso; las obras también pueden estar protegidas."
+            "es": "El propietario puede fijar condiciones de acceso; las obras también pueden estar protegidas.",
+            "de": "Eigentümer können Zugangsbedingungen setzen; Werke können zusätzlich geschützt sein."
           }
         },
         {
@@ -14644,7 +14768,8 @@
           "text": {
             "en": "Credit lines (“Photo: Jane Doe”)…",
             "fr": "Les crédits photo (« Photo : Jane Doe »)…",
-            "es": "Los créditos fotográficos («Foto: Jane Doe»)…"
+            "es": "Los créditos fotográficos («Foto: Jane Doe»)…",
+            "de": "Bildnachweise („Foto: Jane Doe“)…"
           },
           "answers": [
             {
@@ -14652,7 +14777,8 @@
               "text": {
                 "en": "Respect moral rights / attribution but may not grant reuse rights alone",
                 "fr": "Respectent le droit moral / l’attribution mais n’accordent pas seuls un droit de réutilisation",
-                "es": "Respetan el derecho moral / la atribución pero no conceden solos un derecho de reutilización"
+                "es": "Respetan el derecho moral / la atribución pero no conceden solos un derecho de reutilización",
+                "de": "Respektieren das Urheberpersönlichkeitsrecht / die Attribution, gewähren allein aber kein Weiterverwendungsrecht"
               }
             },
             {
@@ -14660,7 +14786,8 @@
               "text": {
                 "en": "Automatically sell exclusive rights to the magazine",
                 "fr": "Vendent automatiquement l’exclusivité au magazine",
-                "es": "Venden automáticamente la exclusividad a la revista"
+                "es": "Venden automáticamente la exclusividad a la revista",
+                "de": "Verkaufen automatisch die Exklusivität an das Magazin"
               }
             },
             {
@@ -14668,7 +14795,8 @@
               "text": {
                 "en": "Are illegal in the EU",
                 "fr": "Sont illégaux dans l’UE",
-                "es": "Son ilegales en la UE"
+                "es": "Son ilegales en la UE",
+                "de": "Sind in der EU illegal"
               }
             },
             {
@@ -14676,7 +14804,8 @@
               "text": {
                 "en": "Delete EXIF",
                 "fr": "Suppriment l’EXIF",
-                "es": "Eliminan el EXIF"
+                "es": "Eliminan el EXIF",
+                "de": "Löschen die EXIF-Daten"
               }
             }
           ],
@@ -14686,18 +14815,21 @@
           "explanation": {
             "en": "Attribution is good practice; licensing still controls reuse.",
             "fr": "L’attribution est une bonne pratique ; la licence contrôle la réutilisation.",
-            "es": "La atribución es buena práctica; la licencia controla la reutilización."
+            "es": "La atribución es buena práctica; la licencia controla la reutilización.",
+            "de": "Attribution ist gute Praxis; die Lizenz steuert die Weiterverwendung."
           },
           "imageUrl": "/images/packs/photo-1454165804606-c3d57bc86b40.avif",
           "imageAlt": {
             "en": "Documents on a desk — credit lines and usage notes",
             "fr": "Documents sur un bureau — crédits et mentions d’usage",
-            "es": "Documentos sobre un escritorio — créditos y menciones de uso"
+            "es": "Documentos sobre un escritorio — créditos y menciones de uso",
+            "de": "Dokumente auf einem Schreibtisch — Credits und Nutzungshinweise"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14707,7 +14839,8 @@
           "text": {
             "en": "If you hire a second shooter, you should…",
             "fr": "Si vous engagez un second photographe, vous devriez…",
-            "es": "Si contratas a un segundo fotógrafo, deberías…"
+            "es": "Si contratas a un segundo fotógrafo, deberías…",
+            "de": "Wenn du einen zweiten Fotografen engagierst, solltest du…"
           },
           "answers": [
             {
@@ -14715,7 +14848,8 @@
               "text": {
                 "en": "Define in a contract who owns / can use the images",
                 "fr": "Définir par contrat qui possède / peut utiliser les images",
-                "es": "Definir por contrato quién posee / puede usar las imágenes"
+                "es": "Definir por contrato quién posee / puede usar las imágenes",
+                "de": "Per Vertrag klären, wer die Bilder besitzt / nutzen darf"
               }
             },
             {
@@ -14723,7 +14857,8 @@
               "text": {
                 "en": "Never discuss rights",
                 "fr": "Ne jamais parler des droits",
-                "es": "Nunca hablar de derechos"
+                "es": "Nunca hablar de derechos",
+                "de": "Nie über Rechte sprechen"
               }
             },
             {
@@ -14731,7 +14866,8 @@
               "text": {
                 "en": "Only pay in likes",
                 "fr": "Ne payer qu’en likes",
-                "es": "Pagar solo con «me gusta»"
+                "es": "Pagar solo con «me gusta»",
+                "de": "Nur mit Likes bezahlen"
               }
             },
             {
@@ -14739,7 +14875,8 @@
               "text": {
                 "en": "Assume social media posts transfer ownership",
                 "fr": "Supposer que les posts réseaux transfèrent la propriété",
-                "es": "Suponer que las publicaciones en redes transfieren la propiedad"
+                "es": "Suponer que las publicaciones en redes transfieren la propiedad",
+                "de": "Annehmen, Social-Media-Posts übertrügen das Eigentum"
               }
             }
           ],
@@ -14749,7 +14886,8 @@
           "explanation": {
             "en": "Collaborations need clear IP terms up front.",
             "fr": "Les collabs nécessitent des termes PI clairs dès le départ.",
-            "es": "Las colaboraciones necesitan términos de PI claros desde el principio."
+            "es": "Las colaboraciones necesitan términos de PI claros desde el principio.",
+            "de": "Zusammenarbeit braucht von Anfang an klare IP-Bedingungen."
           }
         },
         {
@@ -14759,7 +14897,8 @@
           "text": {
             "en": "Risky uses of photos without clearance often include…",
             "fr": "Des usages risqués sans autorisation incluent souvent…",
-            "es": "Usos arriesgados sin autorización incluyen a menudo…"
+            "es": "Usos arriesgados sin autorización incluyen a menudo…",
+            "de": "Riskante Nutzungen ohne Freigabe umfassen oft…"
           },
           "answers": [
             {
@@ -14767,7 +14906,8 @@
               "text": {
                 "en": "Merchandise (t-shirts, posters for sale)",
                 "fr": "Merchandising (t-shirts, posters à la vente)",
-                "es": "Merchandising (camisetas, pósters a la venta)"
+                "es": "Merchandising (camisetas, pósters a la venta)",
+                "de": "Merchandising (T-Shirts, Poster zum Verkauf)"
               }
             },
             {
@@ -14775,7 +14915,8 @@
               "text": {
                 "en": "Implying a celebrity endorses a brand",
                 "fr": "Laisser croire qu’une célébrité cautionne une marque",
-                "es": "Dar a entender que una celebridad avala una marca"
+                "es": "Dar a entender que una celebridad avala una marca",
+                "de": "Den Eindruck zu erwecken, eine Celebrity endorse eine Marke"
               }
             },
             {
@@ -14783,7 +14924,8 @@
               "text": {
                 "en": "Product packaging and paid ads",
                 "fr": "Packaging produit et publicités payantes",
-                "es": "Envases de producto y anuncios de pago"
+                "es": "Envases de producto y anuncios de pago",
+                "de": "Produktverpackung und bezahlte Anzeigen"
               }
             },
             {
@@ -14791,7 +14933,8 @@
               "text": {
                 "en": "Private family album printed at home",
                 "fr": "Album de famille imprimé à la maison",
-                "es": "Álbum familiar impreso en casa"
+                "es": "Álbum familiar impreso en casa",
+                "de": "Privates Familienalbum zu Hause gedruckt"
               }
             }
           ],
@@ -14803,7 +14946,8 @@
           "explanation": {
             "en": "Commercial exploitation and endorsement implications need proper releases/licenses.",
             "fr": "L’exploitation commerciale et l’apparence d’endorsement exigent releases/licences.",
-            "es": "La explotación comercial y la apariencia de endorsement exigen releases/licencias."
+            "es": "La explotación comercial y la apariencia de endorsement exigen releases/licencias.",
+            "de": "Kommerzielle Verwertung und Endorsement-Anschein brauchen passende Releases/Lizenzen."
           }
         },
         {
@@ -14813,7 +14957,8 @@
           "text": {
             "en": "The safest short advice before reusing an image found online…",
             "fr": "Le conseil le plus sûr avant de réutiliser une image trouvée en ligne…",
-            "es": "El consejo más seguro antes de reutilizar una imagen encontrada en línea…"
+            "es": "El consejo más seguro antes de reutilizar una imagen encontrada en línea…",
+            "de": "Der sicherste Kurz-Tipp vor der Weiterverwendung eines online gefundenen Bildes…"
           },
           "answers": [
             {
@@ -14821,7 +14966,8 @@
               "text": {
                 "en": "If Google Images shows it, it’s free",
                 "fr": "Si Google Images l’affiche, c’est gratuit",
-                "es": "Si Google Imágenes la muestra, es gratis"
+                "es": "Si Google Imágenes la muestra, es gratis",
+                "de": "Wenn Google Bilder es zeigt, ist es gratis"
               }
             },
             {
@@ -14829,7 +14975,8 @@
               "text": {
                 "en": "Convert to black and white to bypass copyright",
                 "fr": "Passer en N&B contourne le droit d’auteur",
-                "es": "Pasarla a B/N anula el derecho de autor"
+                "es": "Pasarla a B/N anula el derecho de autor",
+                "de": "Schwarzweiß-Umwandlung hebt das Urheberrecht auf"
               }
             },
             {
@@ -14837,7 +14984,8 @@
               "text": {
                 "en": "Assume it’s protected, check the license, or create/commission your own",
                 "fr": "Supposez qu’elle est protégée, vérifiez la licence, ou créez/commandez la vôtre",
-                "es": "Asume que está protegida, comprueba la licencia, o crea/encarga la tuya"
+                "es": "Asume que está protegida, comprueba la licencia, o crea/encarga la tuya",
+                "de": "Gehe von Schutz aus, prüfe die Lizenz, oder erstelle/beauftrage dein eigenes"
               }
             },
             {
@@ -14845,7 +14993,8 @@
               "text": {
                 "en": "Crop 10% to make it legal",
                 "fr": "Recadrer de 10 % la rend légale",
-                "es": "Recortar un 10 % la hace legal"
+                "es": "Recortar un 10 % la hace legal",
+                "de": "10 % Zuschneiden macht es legal"
               }
             }
           ],
@@ -14855,7 +15004,8 @@
           "explanation": {
             "en": "There is no “10% crop” myth that voids copyright. License or create.",
             "fr": "Le mythe du « recadrage à 10 % » n’annule pas le droit d’auteur. Licence ou création.",
-            "es": "El mito del «recorte del 10 %» no anula el derecho de autor. Licencia o creación."
+            "es": "El mito del «recorte del 10 %» no anula el derecho de autor. Licencia o creación.",
+            "de": "Der Mythos „10 %-Zuschnitt“ hebt kein Urheberrecht auf. Lizenzieren oder selbst schaffen."
           }
         },
         {
@@ -14865,7 +15015,8 @@
           "text": {
             "en": "Busy café terrace in France/EU-ish public-private blur. Safest instinct before a commercial ad?",
             "fr": "Terrasse de café bondée (zone floue public/privé). Réflexe le plus sûr avant une pub commerciale ?",
-            "es": "Terraza de café llena (zona difusa público/privado). ¿Reflejo más seguro antes de un anuncio comercial?"
+            "es": "Terraza de café llena (zona difusa público/privado). ¿Reflejo más seguro antes de un anuncio comercial?",
+            "de": "Volle Café-Terrasse (unscharfe Zone öffentlich/privat). Sicherster Reflex vor einer kommerziellen Anzeige?"
           },
           "answers": [
             {
@@ -14873,7 +15024,8 @@
               "text": {
                 "en": "Commercial use is identical to a private family album",
                 "fr": "L’usage commercial = album de famille privé",
-                "es": "El uso comercial es idéntico a un álbum familiar privado"
+                "es": "El uso comercial es idéntico a un álbum familiar privado",
+                "de": "Kommerzielle Nutzung ist identisch mit einem privaten Familienalbum"
               }
             },
             {
@@ -14881,7 +15033,8 @@
               "text": {
                 "en": "Get releases / prefer unrecognizable crowds / ask counsel for commercial use",
                 "fr": "Obtenir des autorisations / préférer foules non reconnaissables / se renseigner pour l’usage commercial",
-                "es": "Obtener autorizaciones / preferir multitudes no reconocibles / consultar para uso comercial"
+                "es": "Obtener autorizaciones / preferir multitudes no reconocibles / consultar para uso comercial",
+                "de": "Freigaben holen / unkenntliche Mengen bevorzugen / bei kommerzieller Nutzung nachfragen"
               }
             },
             {
@@ -14889,7 +15042,8 @@
               "text": {
                 "en": "Publish anything — cafés are always free-for-all",
                 "fr": "Publier n’importe quoi — les cafés sont toujours libres de droits",
-                "es": "Publicar cualquier cosa — los cafés siempre son de libre uso"
+                "es": "Publicar cualquier cosa — los cafés siempre son de libre uso",
+                "de": "Alles veröffentlichen — Cafés sind immer frei nutzbar"
               }
             },
             {
@@ -14897,7 +15051,8 @@
               "text": {
                 "en": "Just add a sticker emoji over one face",
                 "fr": "Coller un emoji sur un seul visage suffit",
-                "es": "Bastar con un emoji sobre una sola cara"
+                "es": "Bastar con un emoji sobre una sola cara",
+                "de": "Ein Emoji über ein einziges Gesicht reicht"
               }
             }
           ],
@@ -14907,18 +15062,21 @@
           "explanation": {
             "en": "Editorial vs commercial and likeness rights vary — when money is involved, get permission or anonymize.",
             "fr": "Éditorial vs commercial et droit à l’image varient — dès qu’il y a de l’argent, autorise ou anonymise.",
-            "es": "Editorial vs comercial y derecho a la imagen varían: cuando hay dinero, autoriza o anonimiza."
+            "es": "Editorial vs comercial y derecho a la imagen varían: cuando hay dinero, autoriza o anonimiza.",
+            "de": "Redaktionell vs. kommerziell und Recht am eigenen Bild variieren: wenn Geld im Spiel ist, freigeben oder anonymisieren."
           },
           "imageUrl": "/images/packs/photo-1554118811-1e0d58224f24.avif",
           "imageAlt": {
             "en": "Café terrace",
             "fr": "Terrasse de café",
-            "es": "Terraza de café"
+            "es": "Terraza de café",
+            "de": "Café-Terrasse"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14928,7 +15086,8 @@
           "text": {
             "en": "A friend asks you to erase their ex from a wedding photo. What’s the ethical core?",
             "fr": "Un ami te demande d’effacer son/sa ex d’une photo de mariage. Quel est le fond éthique ?",
-            "es": "Un amigo te pide borrar a su ex de una foto de boda. ¿Cuál es el núcleo ético?"
+            "es": "Un amigo te pide borrar a su ex de una foto de boda. ¿Cuál es el núcleo ético?",
+            "de": "Ein Freund bittet dich, den/die Ex aus einem Hochzeitsfoto zu löschen. Was ist der ethische Kern?"
           },
           "answers": [
             {
@@ -14936,7 +15095,8 @@
               "text": {
                 "en": "Be transparent with stakeholders; editing history/people has social weight",
                 "fr": "Être transparent avec les concernés ; retoucher l’histoire/les gens a un poids social",
-                "es": "Ser transparente con los implicados; retocar la historia/las personas tiene peso social"
+                "es": "Ser transparente con los implicados; retocar la historia/las personas tiene peso social",
+                "de": "Transparent mit den Beteiligten sein; Geschichte/Personen zu retuschieren hat soziales Gewicht"
               }
             },
             {
@@ -14944,7 +15104,8 @@
               "text": {
                 "en": "Always do it secretly and never tell the couple",
                 "fr": "Toujours le faire en secret sans le dire aux mariés",
-                "es": "Hacerlo siempre en secreto sin decírselo a los novios"
+                "es": "Hacerlo siempre en secreto sin decírselo a los novios",
+                "de": "Immer heimlich tun und dem Brautpaar nichts sagen"
               }
             },
             {
@@ -14952,7 +15113,8 @@
               "text": {
                 "en": "Only AI may decide who stays in group photos",
                 "fr": "Seule l’IA décide qui reste sur les photos de groupe",
-                "es": "Solo la IA decide quién permanece en las fotos de grupo"
+                "es": "Solo la IA decide quién permanece en las fotos de grupo",
+                "de": "Nur die KI entscheidet, wer auf Gruppenfotos bleibt"
               }
             },
             {
@@ -14960,7 +15122,8 @@
               "text": {
                 "en": "Refuse all edits forever, including dust spots",
                 "fr": "Refuser toute retouche à vie, y compris les poussières",
-                "es": "Rechazar cualquier retoque para siempre, incluidas las motas de polvo"
+                "es": "Rechazar cualquier retoque para siempre, incluidas las motas de polvo",
+                "de": "Jede Retusche für immer ablehnen, auch Staubflecken"
               }
             }
           ],
@@ -14970,18 +15133,21 @@
           "explanation": {
             "en": "Technique is easy; consent and honesty with the people in (and owning) the story matter more.",
             "fr": "La technique est facile ; le consentement et l’honnêteté envers ceux qui vivent (et portent) l’histoire comptent plus.",
-            "es": "La técnica es fácil; el consentimiento y la honestidad con quienes viven (y portan) la historia importan más."
+            "es": "La técnica es fácil; el consentimiento y la honestidad con quienes viven (y portan) la historia importan más.",
+            "de": "Technik ist leicht; Einwilligung und Ehrlichkeit gegenüber denen, die die Geschichte leben (und tragen), zählen mehr."
           },
           "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
           "imageAlt": {
             "en": "Wedding celebration — editing people out has social weight",
             "fr": "Célébration de mariage — effacer des personnes a un poids social",
-            "es": "Celebración de boda — borrar personas tiene peso social"
+            "es": "Celebración de boda — borrar personas tiene peso social",
+            "de": "Hochzeitsfeier — Personen herauszuretschieren hat soziales Gewicht"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14991,7 +15157,8 @@
           "text": {
             "en": "Someone posts an AI image as a “photograph they took” with no disclosure. Main issue?",
             "fr": "Quelqu’un publie une image IA comme « une photo qu’il a prise », sans le dire. Problème principal ?",
-            "es": "Alguien publica una imagen IA como «una foto que tomó», sin decirlo. ¿Problema principal?"
+            "es": "Alguien publica una imagen IA como «una foto que tomó», sin decirlo. ¿Problema principal?",
+            "de": "Jemand postet ein KI-Bild als „ein Foto, das er gemacht hat“, ohne es zu sagen. Hauptproblem?"
           },
           "answers": [
             {
@@ -14999,7 +15166,8 @@
               "text": {
                 "en": "Misrepresentation — viewers lose trust about authorship and reality",
                 "fr": "Tromperie — le public perd confiance sur l’auteur et le réel",
-                "es": "Engaño — el público pierde confianza sobre el autor y lo real"
+                "es": "Engaño — el público pierde confianza sobre el autor y lo real",
+                "de": "Täuschung — das Publikum verliert Vertrauen in Autor und Realität"
               }
             },
             {
@@ -15007,7 +15175,8 @@
               "text": {
                 "en": "AI images cannot contain the color red",
                 "fr": "Les images IA ne peuvent pas contenir de rouge",
-                "es": "Las imágenes IA no pueden contener el color rojo"
+                "es": "Las imágenes IA no pueden contener el color rojo",
+                "de": "KI-Bilder können keine rote Farbe enthalten"
               }
             },
             {
@@ -15015,7 +15184,8 @@
               "text": {
                 "en": "There is no issue if the prompt was poetic",
                 "fr": "Aucun problème si le prompt était poétique",
-                "es": "Ningún problema si el prompt era poético"
+                "es": "Ningún problema si el prompt era poético",
+                "de": "Kein Problem, wenn der Prompt poetisch war"
               }
             },
             {
@@ -15023,7 +15193,8 @@
               "text": {
                 "en": "File size is usually too small",
                 "fr": "Le poids du fichier est trop petit",
-                "es": "El peso del archivo suele ser demasiado pequeño"
+                "es": "El peso del archivo suele ser demasiado pequeño",
+                "de": "Die Dateigröße ist meist zu klein"
               }
             }
           ],
@@ -15033,18 +15204,21 @@
           "explanation": {
             "en": "AI can be art. Passing it off as a captured photograph without saying so breaks trust.",
             "fr": "L’IA peut être de l’art. La faire passer pour une photo capturée sans le dire casse la confiance.",
-            "es": "La IA puede ser arte. Hacerla pasar por una foto capturada sin decirlo rompe la confianza."
+            "es": "La IA puede ser arte. Hacerla pasar por una foto capturada sin decirlo rompe la confianza.",
+            "de": "KI kann Kunst sein. Es als aufgenommenes Foto auszugeben, ohne es zu sagen, zerstört Vertrauen."
           },
           "imageUrl": "/images/packs/photo-1620712943543-bcc4688e7485.avif",
           "imageAlt": {
             "en": "Robot / AI metaphor — disclose synthetic images honestly",
             "fr": "Métaphore robot / IA — divulguer honnêtement les images synthétiques",
-            "es": "Metáfora robot / IA — divulga con honestidad las imágenes sintéticas"
+            "es": "Metáfora robot / IA — divulga con honestidad las imágenes sintéticas",
+            "de": "Roboter-/KI-Metapher — synthetische Bilder ehrlich kennzeichnen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -15054,7 +15228,8 @@
           "text": {
             "en": "You photograph a street musician in a French public place for an editorial blog. What’s the careful default?",
             "fr": "Tu photographies un musicien de rue dans un lieu public français pour un blog éditorial. Réflexe prudent ?",
-            "es": "Fotografías a un músico callejero en un lugar público francés para un blog editorial. ¿Reflejo prudente?"
+            "es": "Fotografías a un músico callejero en un lugar público francés para un blog editorial. ¿Reflejo prudente?",
+            "de": "Du fotografierst einen Straßenmusiker an einem öffentlichen französischen Ort für einen redaktionellen Blog. Vorsichtiger Reflex?"
           },
           "answers": [
             {
@@ -15062,7 +15237,8 @@
               "text": {
                 "en": "Cropping a logo out always erases every right",
                 "fr": "Rogner un logo efface toujours tous les droits",
-                "es": "Recortar un logo borra siempre todos los derechos"
+                "es": "Recortar un logo borra siempre todos los derechos",
+                "de": "Ein Logo wegzuschneiden löscht immer alle Rechte"
               }
             },
             {
@@ -15070,7 +15246,8 @@
               "text": {
                 "en": "Only celebrities need any care",
                 "fr": "Seules les célébrités demandent de la prudence",
-                "es": "Solo las celebridades exigen prudencia"
+                "es": "Solo las celebridades exigen prudencia",
+                "de": "Nur Celebrities brauchen Vorsicht"
               }
             },
             {
@@ -15078,7 +15255,8 @@
               "text": {
                 "en": "Public place = unlimited commercial use forever",
                 "fr": "Lieu public = usage commercial illimité pour toujours",
-                "es": "Lugar público = uso comercial ilimitado para siempre"
+                "es": "Lugar público = uso comercial ilimitado para siempre",
+                "de": "Öffentlicher Ort = unbegrenzte kommerzielle Nutzung für immer"
               }
             },
             {
@@ -15086,7 +15264,8 @@
               "text": {
                 "en": "Public place helps, but identifiable people + commercial/sensitive use may still need consent — when unsure, ask or don’t publish the face",
                 "fr": "Le lieu public aide, mais personnes identifiables + usage commercial/sensible peuvent encore exiger un accord — en doute, demande ou ne publie pas le visage",
-                "es": "El lugar público ayuda, pero personas identificables + uso comercial/sensible pueden exigir acuerdo — en duda, pregunta o no publiques el rostro"
+                "es": "El lugar público ayuda, pero personas identificables + uso comercial/sensible pueden exigir acuerdo — en duda, pregunta o no publiques el rostro",
+                "de": "Öffentlicher Ort hilft, aber erkennbare Personen + kommerzielle/sensible Nutzung können weiter Zustimmung brauchen — im Zweifel fragen oder Gesicht nicht veröffentlichen"
               }
             }
           ],
@@ -15096,7 +15275,8 @@
           "explanation": {
             "en": "Public space ≠ blank check. Context, purpose, and dignity matter — especially for monetized or sensitive publishing.",
             "fr": "Espace public ≠ chèque en blanc. Contexte, finalité et dignité comptent — surtout pour une publication monétisée ou sensible.",
-            "es": "Espacio público ≠ cheque en blanco. Contexto, finalidad y dignidad importan — sobre todo en una publicación monetizada o sensible."
+            "es": "Espacio público ≠ cheque en blanco. Contexto, finalidad y dignidad importan — sobre todo en una publicación monetizada o sensible.",
+            "de": "Öffentlicher Raum ≠ Blankoscheck. Kontext, Zweck und Würde zählen — besonders bei monetarisierter oder sensibler Veröffentlichung."
           }
         }
       ]

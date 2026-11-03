@@ -38,9 +38,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.79 — docs v1.78.0 + lexique-image-fixe LocalizedString.de', () => {
-  it('docs headline cites v1.78.0; vague 1.78/1.79 listed; no-go through 1.79', () => {
-    expect(readme).toContain('v1.78.0');
-    expect(nextSteps).toContain('**v1.78.0**');
+  it('docs still mention vague 1.78/1.79; no-go through 1.79; headline may be v1.79.0', () => {
+    /* Docs headline moved to v1.79.0 in vague 1.80 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(78|79)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(78|79)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.78**');
     expect(nextSteps).toContain('Vague **1.79**');
     expect(nextSteps).toMatch(/no-go.*1\.79/);
@@ -125,22 +126,23 @@ describe('vague 1.79 — docs v1.78.0 + lexique-image-fixe LocalizedString.de', 
     expect(withoutEs).toEqual([]);
   });
 
-  it('toe-hold: only lexique-image-fixe has title.de (14 others without)', () => {
+  it('série DE: only lexique-image-fixe + photo-rights have title.de (13 others without)', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
-      .map((q) => q.id);
-    expect(withDe).toEqual(['lexique-image-fixe']);
-    expect(data.quizzes.length - withDe.length).toBe(14);
+      .map((q) => q.id)
+      .sort();
+    expect(withDe).toEqual(['lexique-image-fixe', 'photo-rights']);
+    expect(data.quizzes.length - withDe.length).toBe(13);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside lexique; ops no-gos through 1.79; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights; ops no-gos through 1.79; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.79/);
     expect(
       data.quizzes
-        .filter((q) => q.id !== 'lexique-image-fixe')
+        .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';
