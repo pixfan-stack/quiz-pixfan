@@ -21,7 +21,7 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
     /* Docs headline moved to v1.64.0 in vague 1.65 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.63**');
     expect(nextSteps).toMatch(/no-go.*1\.64/);
-    expect(readme).toMatch(/v1\.(63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86)\.\d/);
+    expect(readme).toMatch(/v1\.(63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87)\.\d/);
   });
 
   it('droits ships real article.de (DE strings, not EN stub)', () => {
