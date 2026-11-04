@@ -10705,12 +10705,14 @@
       "title": {
         "en": "Photography Genres",
         "fr": "Genres photographiques",
-        "es": "Géneros fotográficos"
+        "es": "Géneros fotográficos",
+        "de": "Fotogenres"
       },
       "description": {
         "en": "Portrait, street, landscape, macro… recognize the craft behind each style.",
         "fr": "Portrait, street, paysage, macro… reconnaissez le savoir-faire derrière chaque style.",
-        "es": "Retrato, street, paisaje, macro… reconoce el oficio detrás de cada estilo."
+        "es": "Retrato, street, paisaje, macro… reconoce el oficio detrás de cada estilo.",
+        "de": "Porträt, Street, Landschaft, Makro… erkenne das Handwerk hinter jedem Stil."
       },
       "questions": [
         {
@@ -10719,7 +10721,8 @@
           "text": {
             "en": "Street photography is mainly characterized by…",
             "fr": "La photographie de rue se caractérise surtout par…",
-            "es": "La fotografía de calle se caracteriza sobre todo por…"
+            "es": "La fotografía de calle se caracteriza sobre todo por…",
+            "de": "Straßenfotografie zeichnet sich vor allem aus durch…"
           },
           "answers": [
             {
@@ -10727,7 +10730,8 @@
               "text": {
                 "en": "Photos taken exclusively at night with flash",
                 "fr": "Des photos exclusivement de nuit au flash",
-                "es": "Fotos tomadas exclusivamente de noche con flash"
+                "es": "Fotos tomadas exclusivamente de noche con flash",
+                "de": "Fotos ausschließlich nachts mit Blitz"
               }
             },
             {
@@ -10735,7 +10739,8 @@
               "text": {
                 "en": "Candid scenes of public life, often unposed",
                 "fr": "Des scènes candides de la vie publique, souvent non posées",
-                "es": "Escenas candidas de la vida pública, a menudo sin pose"
+                "es": "Escenas candidas de la vida pública, a menudo sin pose",
+                "de": "Ungestellte Szenen des öffentlichen Lebens, oft ohne Pose"
               }
             },
             {
@@ -10743,7 +10748,8 @@
               "text": {
                 "en": "Only studio backdrops of city skylines",
                 "fr": "Uniquement des fonds studio de skyline",
-                "es": "Solo fondos de estudio con skyline de ciudad"
+                "es": "Solo fondos de estudio con skyline de ciudad",
+                "de": "Nur Studiohintergründe mit Stadtskyline"
               }
             },
             {
@@ -10751,7 +10757,8 @@
               "text": {
                 "en": "Mandatory use of drones",
                 "fr": "L'usage obligatoire de drones",
-                "es": "Uso obligatorio de drones"
+                "es": "Uso obligatorio de drones",
+                "de": "Pflichtmäßigen Einsatz von Drohnen"
               }
             }
           ],
@@ -10761,19 +10768,22 @@
           "explanation": {
             "en": "Street photography captures unscripted public moments — gesture, irony, geometry — usually with available light and discrete gear.",
             "fr": "La photo de rue capture des moments publics non mis en scène — geste, ironie, géométrie — souvent en lumière disponible et avec un matériel discret.",
-            "es": "La foto de calle captura momentos públicos no ensayados — gesto, ironía, geometría — normalmente con luz disponible y equipo discreto."
+            "es": "La foto de calle captura momentos públicos no ensayados — gesto, ironía, geometría — normalmente con luz disponible y equipo discreto.",
+            "de": "Street-Fotografie fängt ungestellte öffentliche Momente ein — Geste, Ironie, Geometrie — meist mit vorhandenem Licht und diskreter Ausrüstung."
           },
           "imageUrl": "/images/packs/photo-1542038784456-1ea8e935640e.avif",
           "imageAlt": {
             "en": "Portrait photography session",
             "fr": "Séance portrait",
-            "es": "Sesión de fotografía de retrato"
+            "es": "Sesión de fotografía de retrato",
+            "de": "Porträtfotografie-Session"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -10782,7 +10792,8 @@
           "text": {
             "en": "Which practices are common in portrait photography?",
             "fr": "Quelles pratiques sont courantes en photographie de portrait ?",
-            "es": "¿Qué prácticas son habituales en la fotografía de retrato?"
+            "es": "¿Qué prácticas son habituales en la fotografía de retrato?",
+            "de": "Welche Praktiken sind in der Porträtfotografie üblich?"
           },
           "answers": [
             {
@@ -10790,7 +10801,8 @@
               "text": {
                 "en": "Controlling light on the face (key / fill / rim)",
                 "fr": "Contrôler la lumière sur le visage (principale / fill / rim)",
-                "es": "Controlar la luz en el rostro (principal / relleno / contraluz)"
+                "es": "Controlar la luz en el rostro (principal / relleno / contraluz)",
+                "de": "Licht im Gesicht steuern (Hauptlicht / Aufhellung / Gegenlicht)"
               }
             },
             {
@@ -10798,7 +10810,8 @@
               "text": {
                 "en": "Always using the smallest aperture possible with no intent",
                 "fr": "Toujours la plus petite ouverture possible sans intention",
-                "es": "Usar siempre la apertura más pequeña posible sin intención"
+                "es": "Usar siempre la apertura más pequeña posible sin intención",
+                "de": "Immer die kleinste Blende ohne Absicht nutzen"
               }
             },
             {
@@ -10806,7 +10819,8 @@
               "text": {
                 "en": "Attention to expression, pose and connection with the subject",
                 "fr": "Soigner expression, pose et lien avec le sujet",
-                "es": "Cuidar expresión, pose y vínculo con el sujeto"
+                "es": "Cuidar expresión, pose y vínculo con el sujeto",
+                "de": "Ausdruck, Pose und Verbindung zum Motiv beachten"
               }
             },
             {
@@ -10814,7 +10828,8 @@
               "text": {
                 "en": "Choosing background and depth of field to isolate the person",
                 "fr": "Choisir fond et profondeur de champ pour isoler la personne",
-                "es": "Elegir fondo y profundidad de campo para aislar a la persona"
+                "es": "Elegir fondo y profundidad de campo para aislar a la persona",
+                "de": "Hintergrund und Schärfentiefe wählen, um die Person freizustellen"
               }
             }
           ],
@@ -10826,19 +10841,22 @@
           "explanation": {
             "en": "Good portraits balance light, expression and background separation. Aperture is a creative choice, not a fixed rule.",
             "fr": "Un bon portrait équilibre lumière, expression et séparation du fond. L'ouverture est un choix créatif, pas une règle fixe.",
-            "es": "Un buen retrato equilibra luz, expresión y separación del fondo. La apertura es una elección creativa, no una regla fija."
+            "es": "Un buen retrato equilibra luz, expresión y separación del fondo. La apertura es una elección creativa, no una regla fija.",
+            "de": "Ein gutes Porträt balanciert Licht, Ausdruck und Freistellung vom Hintergrund. Die Blende ist eine kreative Wahl, keine feste Regel."
           },
           "imageUrl": "/images/packs/photo-1486312338219-ce68d2c6f44d.avif",
           "imageAlt": {
             "en": "Street photography scene",
             "fr": "Scène de photo de rue",
-            "es": "Escena de fotografía de calle"
+            "es": "Escena de fotografía de calle",
+            "de": "Straßenfotografie-Szene"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -10847,7 +10865,8 @@
           "text": {
             "en": "Macro photography is primarily about…",
             "fr": "La photographie macro porte surtout sur…",
-            "es": "La fotografía macro se centra principalmente en…"
+            "es": "La fotografía macro se centra principalmente en…",
+            "de": "Makrofotografie dreht sich vor allem um…"
           },
           "answers": [
             {
@@ -10855,7 +10874,8 @@
               "text": {
                 "en": "Video frame rates above 1000 fps",
                 "fr": "Des cadences vidéo au-dessus de 1000 i/s",
-                "es": "Cadencias de vídeo por encima de 1000 fps"
+                "es": "Cadencias de vídeo por encima de 1000 fps",
+                "de": "Videobildraten über 1000 fps"
               }
             },
             {
@@ -10863,7 +10883,8 @@
               "text": {
                 "en": "Only photographing entire cities from space",
                 "fr": "Uniquement photographier des villes entières depuis l'espace",
-                "es": "Fotografiar solo ciudades enteras desde el espacio"
+                "es": "Fotografiar solo ciudades enteras desde el espacio",
+                "de": "Nur ganze Städte aus dem Weltraum fotografieren"
               }
             },
             {
@@ -10871,7 +10892,8 @@
               "text": {
                 "en": "Shooting only with a 600 mm lens far away",
                 "fr": "Photographier uniquement au 600 mm de loin",
-                "es": "Disparar solo con un objetivo de 600 mm a distancia"
+                "es": "Disparar solo con un objetivo de 600 mm a distancia",
+                "de": "Nur mit einem 600-mm-Objektiv aus großer Distanz schießen"
               }
             },
             {
@@ -10879,7 +10901,8 @@
               "text": {
                 "en": "Extreme close-ups of small subjects at high magnification",
                 "fr": "Des gros plans extrêmes de petits sujets à fort grossissement",
-                "es": "Primeros planos extremos de sujetos pequeños a gran aumento"
+                "es": "Primeros planos extremos de sujetos pequeños a gran aumento",
+                "de": "Extreme Nahaufnahmen kleiner Motive bei starker Vergrößerung"
               }
             }
           ],
@@ -10889,19 +10912,22 @@
           "explanation": {
             "en": "True macro often reaches ~1:1 reproduction (subject life-size on the sensor): insects, textures, details. Focus stacking is common.",
             "fr": "La vraie macro atteint souvent ~1:1 (sujet grandeur nature sur le capteur) : insectes, textures, détails. Le focus stacking est fréquent.",
-            "es": "La macro verdadera suele alcanzar ~1:1 (sujeto a tamaño real en el sensor): insectos, texturas, detalles. El focus stacking es frecuente."
+            "es": "La macro verdadera suele alcanzar ~1:1 (sujeto a tamaño real en el sensor): insectos, texturas, detalles. El focus stacking es frecuente.",
+            "de": "Echte Makro erreicht oft ~1:1 (Motiv lebensgroß auf dem Sensor): Insekten, Texturen, Details. Focus Stacking ist häufig."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
           "imageAlt": {
             "en": "Sunlight through trees",
             "fr": "Soleil à travers les arbres",
-            "es": "Luz del sol entre los árboles"
+            "es": "Luz del sol entre los árboles",
+            "de": "Sonnenlicht zwischen den Bäumen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -10910,7 +10936,8 @@
           "text": {
             "en": "In landscape photography, a common reason to use a tripod is…",
             "fr": "En photo de paysage, une raison fréquente d'utiliser un trépied est…",
-            "es": "En fotografía de paisaje, una razón habitual para usar trípode es…"
+            "es": "En fotografía de paisaje, una razón habitual para usar trípode es…",
+            "de": "In der Landschaftsfotografie ist ein häufiger Grund für ein Stativ…"
           },
           "answers": [
             {
@@ -10918,7 +10945,8 @@
               "text": {
                 "en": "To keep the camera steady for long exposures or precise framing",
                 "fr": "Stabiliser l'appareil pour les poses longues ou un cadrage précis",
-                "es": "Mantener la cámara estable en exposiciones largas o un encuadre preciso"
+                "es": "Mantener la cámara estable en exposiciones largas o un encuadre preciso",
+                "de": "Die Kamera bei langen Belichtungen oder präzisem Bildausschnitt stabil zu halten"
               }
             },
             {
@@ -10926,7 +10954,8 @@
               "text": {
                 "en": "To increase megapixels of the sensor",
                 "fr": "Augmenter les mégapixels du capteur",
-                "es": "Aumentar los megapíxeles del sensor"
+                "es": "Aumentar los megapíxeles del sensor",
+                "de": "Die Megapixel des Sensors zu erhöhen"
               }
             },
             {
@@ -10934,7 +10963,8 @@
               "text": {
                 "en": "To replace the need for a lens",
                 "fr": "Remplacer l'objectif",
-                "es": "Sustituir la necesidad de un objetivo"
+                "es": "Sustituir la necesidad de un objetivo",
+                "de": "Den Bedarf an einem Objektiv zu ersetzen"
               }
             },
             {
@@ -10942,7 +10972,8 @@
               "text": {
                 "en": "To change the color of the sky automatically",
                 "fr": "Changer automatiquement la couleur du ciel",
-                "es": "Cambiar automáticamente el color del cielo"
+                "es": "Cambiar automáticamente el color del cielo",
+                "de": "Die Himmelsfarbe automatisch zu ändern"
               }
             }
           ],
@@ -10952,19 +10983,22 @@
           "explanation": {
             "en": "Tripods enable sharp long exposures (water, low light, ND filters) and careful multi-shot techniques (brackets, panoramas).",
             "fr": "Le trépied permet des poses longues nettes (eau, basse lumière, filtres ND) et des techniques multi-vues (brackets, panoramas).",
-            "es": "El trípode permite exposiciones largas nítidas (agua, poca luz, filtros ND) y técnicas multi-toma cuidadosas (brackets, panorámicas)."
+            "es": "El trípode permite exposiciones largas nítidas (agua, poca luz, filtros ND) y técnicas multi-toma cuidadosas (brackets, panorámicas).",
+            "de": "Ein Stativ ermöglicht scharfe Langzeitbelichtungen (Wasser, wenig Licht, ND-Filter) und sorgfältige Mehrfachaufnahmen (Bracketing, Panoramen)."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Desert landscape",
             "fr": "Paysage désertique",
-            "es": "Paisaje desértico"
+            "es": "Paisaje desértico",
+            "de": "Wüstenlandschaft"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -10973,7 +11007,8 @@
           "text": {
             "en": "Which challenges are typical of wildlife photography?",
             "fr": "Quels défis sont typiques de la photo animalière ?",
-            "es": "¿Qué retos son típicos de la fotografía de fauna?"
+            "es": "¿Qué retos son típicos de la fotografía de fauna?",
+            "de": "Welche Herausforderungen sind typisch für die Tierfotografie?"
           },
           "answers": [
             {
@@ -10981,7 +11016,8 @@
               "text": {
                 "en": "Respecting wildlife and habitats (ethics / distance)",
                 "fr": "Respecter la faune et les habitats (éthique / distance)",
-                "es": "Respetar la fauna y los hábitats (ética / distancia)"
+                "es": "Respetar la fauna y los hábitats (ética / distancia)",
+                "de": "Wildtiere und Lebensräume respektieren (Ethik / Distanz)"
               }
             },
             {
@@ -10989,7 +11025,8 @@
               "text": {
                 "en": "Long focal lengths and subject distance",
                 "fr": "Longues focales et distance au sujet",
-                "es": "Focales largas y distancia al sujeto"
+                "es": "Focales largas y distancia al sujeto",
+                "de": "Lange Brennweiten und Motivdistanz"
               }
             },
             {
@@ -10997,7 +11034,8 @@
               "text": {
                 "en": "Mandatory studio softboxes on every animal",
                 "fr": "Softboxes de studio obligatoires sur chaque animal",
-                "es": "Softboxes de estudio obligatorias en cada animal"
+                "es": "Softboxes de estudio obligatorias en cada animal",
+                "de": "Pflicht-Softboxen im Studio an jedem Tier"
               }
             },
             {
@@ -11005,7 +11043,8 @@
               "text": {
                 "en": "Fast shutter speeds for animal movement",
                 "fr": "Vitesses élevées pour le mouvement des animaux",
-                "es": "Velocidades rápidas para el movimiento animal"
+                "es": "Velocidades rápidas para el movimiento animal",
+                "de": "Schnelle Verschlusszeiten für Tierbewegung"
               }
             }
           ],
@@ -11017,19 +11056,22 @@
           "explanation": {
             "en": "Wildlife work mixes telephoto reach, timing, patience and ethics. Studio softboxes are not the field standard.",
             "fr": "La photo animalière mêle portée télé, timing, patience et éthique. Les softboxes de studio ne sont pas la norme sur le terrain.",
-            "es": "La fauna combina alcance tele, timing, paciencia y ética. Los softboxes de estudio no son el estándar de campo."
+            "es": "La fauna combina alcance tele, timing, paciencia y ética. Los softboxes de estudio no son el estándar de campo.",
+            "de": "Tierfotografie mischt Tele-Reichweite, Timing, Geduld und Ethik. Studio-Softboxen sind nicht der Feldstandard."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1564349683136-77e08dba1ef7.avif",
           "imageAlt": {
             "en": "Wildlife subject in natural habitat",
             "fr": "Sujet wildlife dans son habitat naturel",
-            "es": "Sujeto de fauna en hábitat natural"
+            "es": "Sujeto de fauna en hábitat natural",
+            "de": "Wildtier-Motiv im natürlichen Lebensraum"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11038,7 +11080,8 @@
           "text": {
             "en": "What defines 'fine art photography'?",
             "fr": "Qu'est-ce qui définit la 'photographie d'art' ?",
-            "es": "¿Qué define la «fotografía de arte» (fine art)?"
+            "es": "¿Qué define la «fotografía de arte» (fine art)?",
+            "de": "Was definiert „Fine-Art-Fotografie“?"
           },
           "answers": [
             {
@@ -11046,7 +11089,8 @@
               "text": {
                 "en": "Photos taken with expensive equipment",
                 "fr": "Photos prises avec du matériel cher",
-                "es": "Fotos hechas con equipo caro"
+                "es": "Fotos hechas con equipo caro",
+                "de": "Fotos mit teurer Ausrüstung"
               }
             },
             {
@@ -11054,7 +11098,8 @@
               "text": {
                 "en": "Only black and white photos",
                 "fr": "Uniquement des photos en noir et blanc",
-                "es": "Solo fotos en blanco y negro"
+                "es": "Solo fotos en blanco y negro",
+                "de": "Nur Schwarzweißfotos"
               }
             },
             {
@@ -11062,7 +11107,8 @@
               "text": {
                 "en": "Commercial advertising images",
                 "fr": "Images publicitaires commerciales",
-                "es": "Imágenes publicitarias comerciales"
+                "es": "Imágenes publicitarias comerciales",
+                "de": "Kommerzielle Werbebilder"
               }
             },
             {
@@ -11070,7 +11116,8 @@
               "text": {
                 "en": "Photography created to express the artist's vision or concept",
                 "fr": "Photographie créée pour exprimer la vision ou le concept de l'artiste",
-                "es": "Fotografía creada para expresar la visión o el concepto del artista"
+                "es": "Fotografía creada para expresar la visión o el concepto del artista",
+                "de": "Fotografie, die die Vision oder das Konzept des Künstlers ausdrückt"
               }
             }
           ],
@@ -11080,7 +11127,8 @@
           "explanation": {
             "en": "Fine art photography prioritizes creative expression over documentation, often exhibited in galleries and museums.",
             "fr": "La photographie d'art privilégie l'expression créative sur la documentation, souvent exposée dans des galeries et musées.",
-            "es": "La fotografía de arte prioriza la expresión creativa frente a la documentación, a menudo expuesta en galerías y museos."
+            "es": "La fotografía de arte prioriza la expresión creativa frente a la documentación, a menudo expuesta en galerías y museos.",
+            "de": "Fine-Art-Fotografie stellt kreativen Ausdruck über Dokumentation und wird oft in Galerien und Museen gezeigt."
           },
           "difficulty": "easy"
         },
@@ -11090,7 +11138,8 @@
           "text": {
             "en": "What are key challenges in sports photography?",
             "fr": "Quels sont les défis clés de la photographie sportive ?",
-            "es": "¿Cuáles son los retos clave de la fotografía deportiva?"
+            "es": "¿Cuáles son los retos clave de la fotografía deportiva?",
+            "de": "Was sind die Schlüsselherausforderungen der Sportfotografie?"
           },
           "answers": [
             {
@@ -11098,7 +11147,8 @@
               "text": {
                 "en": "Using only natural light",
                 "fr": "Utiliser uniquement la lumière naturelle",
-                "es": "Usar solo luz natural"
+                "es": "Usar solo luz natural",
+                "de": "Nur natürliches Licht nutzen"
               }
             },
             {
@@ -11106,7 +11156,8 @@
               "text": {
                 "en": "Predicting peak moments",
                 "fr": "Prédire les moments clés",
-                "es": "Anticipar los momentos cumbre"
+                "es": "Anticipar los momentos cumbre",
+                "de": "Höhepunkte vorausahnen"
               }
             },
             {
@@ -11114,7 +11165,8 @@
               "text": {
                 "en": "Fast shutter speeds to freeze action",
                 "fr": "Vitesses d'obturation rapides pour figer l'action",
-                "es": "Velocidades rápidas para congelar la acción"
+                "es": "Velocidades rápidas para congelar la acción",
+                "de": "Schnelle Verschlusszeiten, um Aktion einzufrieren"
               }
             },
             {
@@ -11122,7 +11174,8 @@
               "text": {
                 "en": "Working with variable lighting (indoors/outdoors)",
                 "fr": "Travailler avec éclairage variable (intérieur/extérieur)",
-                "es": "Trabajar con iluminación variable (interior/exterior)"
+                "es": "Trabajar con iluminación variable (interior/exterior)",
+                "de": "Mit wechselndem Licht arbeiten (innen/außen)"
               }
             }
           ],
@@ -11134,19 +11187,22 @@
           "explanation": {
             "en": "Sports photography demands technical skill, anticipation, and adaptability to changing conditions.",
             "fr": "La photographie sportive exige une compétence technique, une anticipation et une adaptabilité aux conditions changeantes.",
-            "es": "La foto deportiva exige destreza técnica, anticipación y adaptación a condiciones cambiantes."
+            "es": "La foto deportiva exige destreza técnica, anticipación y adaptación a condiciones cambiantes.",
+            "de": "Sportfotografie verlangt technisches Können, Antizipation und Anpassung an wechselnde Bedingungen."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1552674605-db6ffd4facb5.avif",
           "imageAlt": {
             "en": "Athlete in motion — sports photography timing and shutter craft",
             "fr": "Athlète en mouvement — timing et vitesse d’obturation en photo sport",
-            "es": "Atleta en movimiento — timing y obturador en fotografía deportiva"
+            "es": "Atleta en movimiento — timing y obturador en fotografía deportiva",
+            "de": "Athlet in Bewegung — Timing und Verschluss in der Sportfotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11155,7 +11211,8 @@
           "text": {
             "en": "What is 'food styling' in food photography?",
             "fr": "Qu'est-ce que le 'styling alimentaire' en photographie culinaire ?",
-            "es": "¿Qué es el «food styling» en la fotografía gastronómica?"
+            "es": "¿Qué es el «food styling» en la fotografía gastronómica?",
+            "de": "Was ist „Food Styling“ in der Food-Fotografie?"
           },
           "answers": [
             {
@@ -11163,7 +11220,8 @@
               "text": {
                 "en": "Cooking the food before shooting",
                 "fr": "Cuisiner la nourriture avant de photographier",
-                "es": "Cocinar la comida antes de fotografiar"
+                "es": "Cocinar la comida antes de fotografiar",
+                "de": "Das Essen vor dem Shooting kochen"
               }
             },
             {
@@ -11171,7 +11229,8 @@
               "text": {
                 "en": "Creating recipes",
                 "fr": "Créer des recettes",
-                "es": "Crear recetas"
+                "es": "Crear recetas",
+                "de": "Rezepte erstellen"
               }
             },
             {
@@ -11179,7 +11238,8 @@
               "text": {
                 "en": "Arranging and enhancing food appearance for the camera",
                 "fr": "Arranger et améliorer l'apparence de la nourriture pour la caméra",
-                "es": "Disponer y realzar el aspecto de la comida para la cámara"
+                "es": "Disponer y realzar el aspecto de la comida para la cámara",
+                "de": "Essen für die Kamera anrichten und optisch aufwerten"
               }
             },
             {
@@ -11187,7 +11247,8 @@
               "text": {
                 "en": "Reviewing restaurants",
                 "fr": "Évaluer des restaurants",
-                "es": "Criticar restaurantes"
+                "es": "Criticar restaurantes",
+                "de": "Restaurants kritisieren"
               }
             }
           ],
@@ -11197,19 +11258,22 @@
           "explanation": {
             "en": "Food stylists use techniques like glycerin for steam, toothpicks for structure, and lighting to make food look appetizing.",
             "fr": "Les stylistes alimentaires utilisent des techniques comme le glycérin pour la vapeur, des cure-dents pour la structure et l'éclairage pour rendre la nourriture appétissante.",
-            "es": "Los food stylists usan técnicas como glicerina para el vapor, palillos para la estructura e iluminación para que la comida resulte apetitosa."
+            "es": "Los food stylists usan técnicas como glicerina para el vapor, palillos para la estructura e iluminación para que la comida resulte apetitosa.",
+            "de": "Food Stylisten nutzen Techniken wie Glyzerin für Dampf, Zahnstocher für Struktur und Licht, damit Essen appetitlich wirkt."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1504674900247-0877df9cc836.avif",
           "imageAlt": {
             "en": "Styled food plate ready for a food-photography setup",
             "fr": "Assiette stylisée prête pour un setup food photo",
-            "es": "Plato estilizado listo para un set de foto gastronómica"
+            "es": "Plato estilizado listo para un set de foto gastronómica",
+            "de": "Gestylter Essteller bereit für ein Food-Foto-Setup"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11218,7 +11282,8 @@
           "text": {
             "en": "What makes 'documentary photography' different from other genres?",
             "fr": "Qu'est-ce qui rend la 'photographie documentaire' différente des autres genres ?",
-            "es": "¿Qué hace distinta a la «fotografía documental» de otros géneros?"
+            "es": "¿Qué hace distinta a la «fotografía documental» de otros géneros?",
+            "de": "Was macht „Dokumentarfotografie“ anders als andere Genres?"
           },
           "answers": [
             {
@@ -11226,7 +11291,8 @@
               "text": {
                 "en": "It always uses black and white",
                 "fr": "Elle utilise toujours le noir et blanc",
-                "es": "Siempre usa blanco y negro"
+                "es": "Siempre usa blanco y negro",
+                "de": "Sie nutzt immer Schwarzweiß"
               }
             },
             {
@@ -11234,7 +11300,8 @@
               "text": {
                 "en": "It aims to truthfully record events and social realities",
                 "fr": "Elle vise à enregistrer honnêtement les événements et réalités sociales",
-                "es": "Busca registrar con verdad acontecimientos y realidades sociales"
+                "es": "Busca registrar con verdad acontecimientos y realidades sociales",
+                "de": "Sie will Ereignisse und soziale Realitäten wahrheitsgetreu festhalten"
               }
             },
             {
@@ -11242,7 +11309,8 @@
               "text": {
                 "en": "It's exclusively studio-based",
                 "fr": "Elle est exclusivement basée en studio",
-                "es": "Es exclusivamente de estudio"
+                "es": "Es exclusivamente de estudio",
+                "de": "Sie ist ausschließlich studio-basiert"
               }
             },
             {
@@ -11250,7 +11318,8 @@
               "text": {
                 "en": "It focuses only on landscapes",
                 "fr": "Elle se concentre uniquement sur les paysages",
-                "es": "Se centra solo en paisajes"
+                "es": "Se centra solo en paisajes",
+                "de": "Sie fokussiert nur auf Landschaften"
               }
             }
           ],
@@ -11260,7 +11329,8 @@
           "explanation": {
             "en": "Documentary photography serves as visual journalism, telling真实 stories with ethical responsibility to subjects.",
             "fr": "La photographie documentaire sert de journalisme visuel, racontant des histoires vraies avec une responsabilité éthique envers les sujets.",
-            "es": "La fotografía documental actúa como periodismo visual, contando historias reales con responsabilidad ética hacia los sujetos."
+            "es": "La fotografía documental actúa como periodismo visual, contando historias reales con responsabilidad ética hacia los sujetos.",
+            "de": "Dokumentarfotografie wirkt als visueller Journalismus und erzählt reale Geschichten mit ethischer Verantwortung gegenüber den Motiven."
           },
           "difficulty": "easy"
         },
@@ -11270,7 +11340,8 @@
           "text": {
             "en": "What equipment is commonly used in astrophotography?",
             "fr": "Quel équipement est couramment utilisé en astrophotographie ?",
-            "es": "¿Qué equipo se usa habitualmente en astrofotografía?"
+            "es": "¿Qué equipo se usa habitualmente en astrofotografía?",
+            "de": "Welche Ausrüstung wird in der Astrofotografie häufig genutzt?"
           },
           "answers": [
             {
@@ -11278,7 +11349,8 @@
               "text": {
                 "en": "Star tracker",
                 "fr": "Trackeur d'étoiles",
-                "es": "Seguidor estelar (star tracker)"
+                "es": "Seguidor estelar (star tracker)",
+                "de": "Sternen-Tracker (Star Tracker)"
               }
             },
             {
@@ -11286,7 +11358,8 @@
               "text": {
                 "en": "Wide-angle or astro lenses",
                 "fr": "Objectifs grand-angle ou astro",
-                "es": "Objetivos gran angular o astro"
+                "es": "Objetivos gran angular o astro",
+                "de": "Weitwinkel- oder Astro-Objektive"
               }
             },
             {
@@ -11294,7 +11367,8 @@
               "text": {
                 "en": "Tripod",
                 "fr": "Trépied",
-                "es": "Trípode"
+                "es": "Trípode",
+                "de": "Stativ"
               }
             },
             {
@@ -11302,7 +11376,8 @@
               "text": {
                 "en": "Macro lens",
                 "fr": "Objectif macro",
-                "es": "Objetivo macro"
+                "es": "Objetivo macro",
+                "de": "Makroobjektiv"
               }
             }
           ],
@@ -11314,19 +11389,22 @@
           "explanation": {
             "en": "Astrophotography needs stability (tripod), tracking for long exposures, and fast wide lenses. Macro is for close-ups.",
             "fr": "L'astrophotographie nécessite stabilité (trépied), suivi pour longues expositions et objectifs larges lumineux. Le macro est pour les gros plans.",
-            "es": "La astrofotografía necesita estabilidad (trípode), seguimiento para exposiciones largas y gran angulares luminosos. La macro es para primeros planos."
+            "es": "La astrofotografía necesita estabilidad (trípode), seguimiento para exposiciones largas y gran angulares luminosos. La macro es para primeros planos.",
+            "de": "Astrofotografie braucht Stabilität (Stativ), Nachführung für lange Belichtungen und lichtstarke Weitwinkel. Makro ist für Nahaufnahmen."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
           "imageAlt": {
             "en": "Starry night sky for astrophotography",
             "fr": "Ciel étoilé pour l’astrophotographie",
-            "es": "Cielo estrellado para astrofotografía"
+            "es": "Cielo estrellado para astrofotografía",
+            "de": "Sternenhimmel für Astrofotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11335,7 +11413,8 @@
           "text": {
             "en": "What is 'fashion photography' primarily focused on?",
             "fr": "Sur quoi se concentre principalement la 'photographie de mode' ?",
-            "es": "¿En qué se centra principalmente la «fotografía de moda»?"
+            "es": "¿En qué se centra principalmente la «fotografía de moda»?",
+            "de": "Worauf konzentriert sich „Modefotografie“ vor allem?"
           },
           "answers": [
             {
@@ -11343,7 +11422,8 @@
               "text": {
                 "en": "Showcasing clothing, accessories, and style",
                 "fr": "Mettre en valeur vêtements, accessoires et style",
-                "es": "Mostrar ropa, accesorios y estilo"
+                "es": "Mostrar ropa, accesorios y estilo",
+                "de": "Kleidung, Accessoires und Stil zu zeigen"
               }
             },
             {
@@ -11351,7 +11431,8 @@
               "text": {
                 "en": "Recording runway shows",
                 "fr": "Enregistrer les défilés",
-                "es": "Registrar desfiles"
+                "es": "Registrar desfiles",
+                "de": "Modenschauen zu dokumentieren"
               }
             },
             {
@@ -11359,7 +11440,8 @@
               "text": {
                 "en": "Documenting fashion history",
                 "fr": "Documenter l'histoire de la mode",
-                "es": "Documentar la historia de la moda"
+                "es": "Documentar la historia de la moda",
+                "de": "Modegeschichte zu dokumentieren"
               }
             },
             {
@@ -11367,7 +11449,8 @@
               "text": {
                 "en": "Photographing fabric textures only",
                 "fr": "Photographier uniquement les textures de tissu",
-                "es": "Fotografiar solo texturas de tela"
+                "es": "Fotografiar solo texturas de tela",
+                "de": "Nur Stofftexturen zu fotografieren"
               }
             }
           ],
@@ -11377,19 +11460,22 @@
           "explanation": {
             "en": "Fashion photography sells lifestyle and aspiration, combining clothing presentation with artistic vision.",
             "fr": "La photographie de mode vend un style de vie et l'aspiration, combinant présentation de vêtements et vision artistique.",
-            "es": "La foto de moda vende estilo de vida y aspiración, combinando la presentación de la ropa con una visión artística."
+            "es": "La foto de moda vende estilo de vida y aspiración, combinando la presentación de la ropa con una visión artística.",
+            "de": "Modefotografie verkauft Lifestyle und Aspiration und verbindet Kleidungspräsentation mit künstlerischer Vision."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1515886657613-9f3515b0c78f.avif",
           "imageAlt": {
             "en": "Styled fashion pose — editorial fashion photography focus",
             "fr": "Pose mode stylisée — focus photo de mode éditoriale",
-            "es": "Pose de moda estilizada — foco de fotografía editorial de moda"
+            "es": "Pose de moda estilizada — foco de fotografía editorial de moda",
+            "de": "Gestylte Modepose — Fokus editorialer Modefotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11398,7 +11484,8 @@
           "text": {
             "en": "What are the characteristics of 'architectural photography'?",
             "fr": "Quelles sont les caractéristiques de la 'photographie architecturale' ?",
-            "es": "¿Cuáles son las características de la «fotografía arquitectónica»?"
+            "es": "¿Cuáles son las características de la «fotografía arquitectónica»?",
+            "de": "Was sind Merkmale der „Architekturfotografie“?"
           },
           "answers": [
             {
@@ -11406,7 +11493,8 @@
               "text": {
                 "en": "Focuses on symmetry and geometry",
                 "fr": "Se concentre sur la symétrie et la géométrie",
-                "es": "Se centra en la simetría y la geometría"
+                "es": "Se centra en la simetría y la geometría",
+                "de": "Fokus auf Symmetrie und Geometrie"
               }
             },
             {
@@ -11414,7 +11502,8 @@
               "text": {
                 "en": "Emphasis on lines, shapes, and forms",
                 "fr": "Accent sur les lignes, formes et structures",
-                "es": "Énfasis en líneas, formas y volúmenes"
+                "es": "Énfasis en líneas, formas y volúmenes",
+                "de": "Betonung von Linien, Formen und Volumen"
               }
             },
             {
@@ -11422,7 +11511,8 @@
               "text": {
                 "en": "Always taken at night",
                 "fr": "Toujours prise la nuit",
-                "es": "Siempre se toma de noche"
+                "es": "Siempre se toma de noche",
+                "de": "Immer nachts aufgenommen"
               }
             },
             {
@@ -11430,7 +11520,8 @@
               "text": {
                 "en": "Often uses tilt-shift for perspective control",
                 "fr": "Utilise souvent le tilt-shift pour le contrôle de perspective",
-                "es": "A menudo usa tilt-shift para controlar la perspectiva"
+                "es": "A menudo usa tilt-shift para controlar la perspectiva",
+                "de": "Oft Tilt-Shift zur Perspektivsteuerung"
               }
             }
           ],
@@ -11442,19 +11533,22 @@
           "explanation": {
             "en": "Architectural photography celebrates design through careful composition, perspective correction, and lighting.",
             "fr": "La photographie architecturale célèbre le design par une composition soignée, correction de perspective et éclairage.",
-            "es": "La fotografía arquitectónica celebra el diseño mediante composición cuidadosa, corrección de perspectiva e iluminación."
+            "es": "La fotografía arquitectónica celebra el diseño mediante composición cuidadosa, corrección de perspectiva e iluminación.",
+            "de": "Architekturfotografie feiert Design durch sorgfältige Komposition, Perspektivkorrektur und Beleuchtung."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1452421822248-d4c2b47f0c81.avif",
           "imageAlt": {
             "en": "Built environment lines — architectural photography geometry",
             "fr": "Lignes du bâti — géométrie de la photo d’architecture",
-            "es": "Líneas del entorno construido — geometría de foto arquitectónica"
+            "es": "Líneas del entorno construido — geometría de foto arquitectónica",
+            "de": "Linien der gebauten Umwelt — Geometrie der Architekturfotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11463,7 +11557,8 @@
           "text": {
             "en": "What is 'conceptual photography'?",
             "fr": "Qu'est-ce que la 'photographie conceptuelle' ?",
-            "es": "¿Qué es la «fotografía conceptual»?"
+            "es": "¿Qué es la «fotografía conceptual»?",
+            "de": "Was ist „konzeptuelle Fotografie“?"
           },
           "answers": [
             {
@@ -11471,7 +11566,8 @@
               "text": {
                 "en": "Photos taken with conceptual lenses",
                 "fr": "Photos prises avec des objectifs conceptuels",
-                "es": "Fotos hechas con objetivos conceptuales"
+                "es": "Fotos hechas con objetivos conceptuales",
+                "de": "Fotos mit konzeptuellen Objektiven"
               }
             },
             {
@@ -11479,7 +11575,8 @@
               "text": {
                 "en": "Abstract camera movements",
                 "fr": "Mouvements de caméra abstraits",
-                "es": "Movimientos abstractos de cámara"
+                "es": "Movimientos abstractos de cámara",
+                "de": "Abstrakte Kamerabewegungen"
               }
             },
             {
@@ -11487,7 +11584,8 @@
               "text": {
                 "en": "Photography that communicates an idea or message over aesthetic appeal",
                 "fr": "Photographie qui communique une idée ou un message plutôt qu'un attrait esthétique",
-                "es": "Fotografía que comunica una idea o mensaje por encima del atractivo estético"
+                "es": "Fotografía que comunica una idea o mensaje por encima del atractivo estético",
+                "de": "Fotografie, die eine Idee oder Botschaft über ästhetischen Reiz stellt"
               }
             },
             {
@@ -11495,7 +11593,8 @@
               "text": {
                 "en": "Photography without a camera",
                 "fr": "Photographie sans appareil photo",
-                "es": "Fotografía sin cámara"
+                "es": "Fotografía sin cámara",
+                "de": "Fotografie ohne Kamera"
               }
             }
           ],
@@ -11505,7 +11604,8 @@
           "explanation": {
             "en": "Conceptual photography prioritizes ideas, often using staged scenes, symbolism, or manipulation to convey messages.",
             "fr": "La photographie conceptuelle privilégie les idées, utilisant souvent des scènes mises en scène, symbolisme ou manipulation pour transmettre des messages.",
-            "es": "La fotografía conceptual prioriza las ideas, a menudo con escenas escenificadas, simbolismo o manipulación para transmitir mensajes."
+            "es": "La fotografía conceptual prioriza las ideas, a menudo con escenas escenificadas, simbolismo o manipulación para transmitir mensajes.",
+            "de": "Konzeptuelle Fotografie priorisiert Ideen — oft mit gestellten Szenen, Symbolik oder Manipulation, um Botschaften zu transportieren."
           },
           "difficulty": "easy"
         },
@@ -11515,7 +11615,8 @@
           "text": {
             "en": "What is 'street photography' ethics debate about?",
             "fr": "De quoi traite le débat éthique de la 'photographie de rue' ?",
-            "es": "¿De qué trata el debate ético de la «fotografía de calle»?"
+            "es": "¿De qué trata el debate ético de la «fotografía de calle»?",
+            "de": "Worum geht es in der Ethik-Debatte der „Straßenfotografie“?"
           },
           "answers": [
             {
@@ -11523,7 +11624,8 @@
               "text": {
                 "en": "Camera brand preferences",
                 "fr": "Préférences de marques d'appareils",
-                "es": "Preferencias de marca de cámara"
+                "es": "Preferencias de marca de cámara",
+                "de": "Kameramarken-Vorlieben"
               }
             },
             {
@@ -11531,7 +11633,8 @@
               "text": {
                 "en": "Photo editing techniques",
                 "fr": "Techniques de retouche photo",
-                "es": "Técnicas de revelado"
+                "es": "Técnicas de revelado",
+                "de": "Bildbearbeitungstechniken"
               }
             },
             {
@@ -11539,7 +11642,8 @@
               "text": {
                 "en": "Lens selection",
                 "fr": "Sélection d'objectifs",
-                "es": "Elección de objetivo"
+                "es": "Elección de objetivo",
+                "de": "Objektivwahl"
               }
             },
             {
@@ -11547,7 +11651,8 @@
               "text": {
                 "en": "Privacy rights vs. freedom of expression in public spaces",
                 "fr": "Droits à la vie privée vs liberté d'expression dans les espaces publics",
-                "es": "Derechos de privacidad vs. libertad de expresión en espacios públicos"
+                "es": "Derechos de privacidad vs. libertad de expresión en espacios públicos",
+                "de": "Privatsphäre vs. Meinungsfreiheit im öffentlichen Raum"
               }
             }
           ],
@@ -11557,7 +11662,8 @@
           "explanation": {
             "en": "Photographers balance documenting public life with respecting individuals' privacy and dignity.",
             "fr": "Les photographes équilibrent la documentation de la vie publique avec le respect de la vie privée et dignité des individus.",
-            "es": "Los fotógrafos equilibran documentar la vida pública con respetar la privacidad y la dignidad de las personas."
+            "es": "Los fotógrafos equilibran documentar la vida pública con respetar la privacidad y la dignidad de las personas.",
+            "de": "Fotografen balancieren das Dokumentieren des öffentlichen Lebens mit dem Respekt vor Privatsphäre und Würde der Menschen."
           },
           "difficulty": "easy"
         },
@@ -11567,7 +11673,8 @@
           "text": {
             "en": "What defines 'aviation photography'?",
             "fr": "Qu'est-ce qui définit la 'photographie aéronautique' ?",
-            "es": "¿Qué define la «fotografía aeronáutica»?"
+            "es": "¿Qué define la «fotografía aeronáutica»?",
+            "de": "Was definiert „Luftfahrtfotografie“?"
           },
           "answers": [
             {
@@ -11575,7 +11682,8 @@
               "text": {
                 "en": "Often needs telephoto lenses",
                 "fr": "A souvent besoin d'objectifs téléphoto",
-                "es": "A menudo necesita teleobjetivos"
+                "es": "A menudo necesita teleobjetivos",
+                "de": "Braucht oft Teleobjektive"
               }
             },
             {
@@ -11583,7 +11691,8 @@
               "text": {
                 "en": "Requires fast shutter speeds",
                 "fr": "Nécessite de rapides vitesses d'obturation",
-                "es": "Requiere velocidades rápidas"
+                "es": "Requiere velocidades rápidas",
+                "de": "Erfordert schnelle Verschlusszeiten"
               }
             },
             {
@@ -11591,7 +11700,8 @@
               "text": {
                 "en": "Photographing aircraft in flight or on ground",
                 "fr": "Photographier des aéronefs en vol ou au sol",
-                "es": "Fotografiar aeronaves en vuelo o en tierra"
+                "es": "Fotografiar aeronaves en vuelo o en tierra",
+                "de": "Flugzeuge im Flug oder am Boden fotografieren"
               }
             },
             {
@@ -11599,7 +11709,8 @@
               "text": {
                 "en": "Only taken from airplanes",
                 "fr": "Uniquement prise depuis des avions",
-                "es": "Solo se toma desde aviones"
+                "es": "Solo se toma desde aviones",
+                "de": "Nur aus Flugzeugen aufgenommen"
               }
             }
           ],
@@ -11611,7 +11722,8 @@
           "explanation": {
             "en": "Aviation photography captures aircraft requiring speed, reach, and often specialized locations like airfields.",
             "fr": "La photographie aéronautique capture des aéronefs nécessitant vitesse, portée et souvent des emplacements spécialisés comme les aérodromes.",
-            "es": "La foto aeronáutica captura aviones y exige velocidad, alcance y a menudo ubicaciones especializadas como aeródromos."
+            "es": "La foto aeronáutica captura aviones y exige velocidad, alcance y a menudo ubicaciones especializadas como aeródromos.",
+            "de": "Luftfahrtfotografie hält Flugzeuge fest und verlangt Tempo, Reichweite und oft spezialisierte Orte wie Flugplätze."
           },
           "difficulty": "medium"
         },
@@ -11621,7 +11733,8 @@
           "text": {
             "en": "What is 'product photography' main goal?",
             "fr": "Quel est l'objectif principal de la 'photographie de produit' ?",
-            "es": "¿Cuál es el objetivo principal de la «fotografía de producto»?"
+            "es": "¿Cuál es el objetivo principal de la «fotografía de producto»?",
+            "de": "Was ist das Hauptziel der „Produktfotografie“?"
           },
           "answers": [
             {
@@ -11629,7 +11742,8 @@
               "text": {
                 "en": "Creating abstract art",
                 "fr": "Créer de l'art abstrait",
-                "es": "Crear arte abstracto"
+                "es": "Crear arte abstracto",
+                "de": "Abstrakte Kunst schaffen"
               }
             },
             {
@@ -11637,7 +11751,8 @@
               "text": {
                 "en": "Documenting manufacturing processes",
                 "fr": "Documenter les processus de fabrication",
-                "es": "Documentar procesos de fabricación"
+                "es": "Documentar procesos de fabricación",
+                "de": "Fertigungsprozesse dokumentieren"
               }
             },
             {
@@ -11645,7 +11760,8 @@
               "text": {
                 "en": "Showcasing products attractively for commercial purposes",
                 "fr": "Mettre en valeur des produits de manière attrayante à des fins commerciales",
-                "es": "Mostrar productos de forma atractiva con fines comerciales"
+                "es": "Mostrar productos de forma atractiva con fines comerciales",
+                "de": "Produkte attraktiv für kommerzielle Zwecke zeigen"
               }
             },
             {
@@ -11653,7 +11769,8 @@
               "text": {
                 "en": "Photographing factory buildings",
                 "fr": "Photographier les bâtiments d'usine",
-                "es": "Fotografiar edificios de fábrica"
+                "es": "Fotografiar edificios de fábrica",
+                "de": "Fabrikgebäude fotografieren"
               }
             }
           ],
@@ -11663,7 +11780,8 @@
           "explanation": {
             "en": "Product photography drives sales by presenting items in the best light, emphasizing features and quality.",
             "fr": "La photographie de produit stimule les ventes en présentant les articles sous leur meilleur jour, en mettant en évidence les caractéristiques et la qualité.",
-            "es": "La foto de producto impulsa las ventas presentando los artículos bajo su mejor luz, destacando rasgos y calidad."
+            "es": "La foto de producto impulsa las ventas presentando los artículos bajo su mejor luz, destacando rasgos y calidad.",
+            "de": "Produktfotografie treibt Verkäufe an, indem Artikel im besten Licht präsentiert und Merkmale sowie Qualität betont werden."
           },
           "difficulty": "medium"
         },
@@ -11673,7 +11791,8 @@
           "text": {
             "en": "What is 'underwater photography' unique challenge?",
             "fr": "Quel est le défi unique de la 'photographie sous-marine' ?",
-            "es": "¿Cuál es el reto único de la «fotografía submarina»?"
+            "es": "¿Cuál es el reto único de la «fotografía submarina»?",
+            "de": "Was ist die besondere Herausforderung der „Unterwasserfotografie“?"
           },
           "answers": [
             {
@@ -11681,7 +11800,8 @@
               "text": {
                 "en": "Fish always swim away",
                 "fr": "Les poissons fuient toujours",
-                "es": "Los peces siempre se escapan"
+                "es": "Los peces siempre se escapan",
+                "de": "Fische schwimmen immer weg"
               }
             },
             {
@@ -11689,7 +11809,8 @@
               "text": {
                 "en": "Cameras sink automatically",
                 "fr": "Les appareils coulent automatiquement",
-                "es": "Las cámaras se hunden solas"
+                "es": "Las cámaras se hunden solas",
+                "de": "Kameras sinken von allein"
               }
             },
             {
@@ -11697,7 +11818,8 @@
               "text": {
                 "en": "Water absorbs light and causes color loss at depth",
                 "fr": "L'eau absorbe la lumière et cause une perte de couleur en profondeur",
-                "es": "El agua absorbe la luz y provoca pérdida de color con la profundidad"
+                "es": "El agua absorbe la luz y provoca pérdida de color con la profundidad",
+                "de": "Wasser absorbiert Licht und führt mit der Tiefe zu Farbverlust"
               }
             },
             {
@@ -11705,7 +11827,8 @@
               "text": {
                 "en": "Waterproof cases distort all images",
                 "fr": "Les étuis étanches déforment toutes les images",
-                "es": "Las carcasas estancas distorsionan todas las imágenes"
+                "es": "Las carcasas estancas distorsionan todas las imágenes",
+                "de": "Wasserdichte Gehäuse verzerren alle Bilder"
               }
             }
           ],
@@ -11715,7 +11838,8 @@
           "explanation": {
             "en": "Red wavelengths absorb first underwater, requiring flashes or white balance adjustments to restore natural colors.",
             "fr": "Les longueurs d'onde rouges absorbent en premier sous l'eau, nécessitant des flashes ou ajustements de balance des blancs pour restaurer les couleurs naturelles.",
-            "es": "Las longitudes de onda rojas se absorben primero bajo el agua; hacen falta flashes o ajustes de balance de blancos para recuperar colores naturales."
+            "es": "Las longitudes de onda rojas se absorben primero bajo el agua; hacen falta flashes o ajustes de balance de blancos para recuperar colores naturales.",
+            "de": "Rote Wellenlängen werden unter Wasser zuerst absorbiert; Blitze oder Weißabgleich helfen, natürliche Farben wiederherzustellen."
           },
           "difficulty": "medium"
         },
@@ -11725,7 +11849,8 @@
           "text": {
             "en": "What skills are important for event photography?",
             "fr": "Quelles compétences sont importantes pour la photographie d'événements ?",
-            "es": "¿Qué habilidades importan en la fotografía de eventos?"
+            "es": "¿Qué habilidades importan en la fotografía de eventos?",
+            "de": "Welche Fähigkeiten zählen in der Eventfotografie?"
           },
           "answers": [
             {
@@ -11733,7 +11858,8 @@
               "text": {
                 "en": "Only using flash",
                 "fr": "Utiliser uniquement le flash",
-                "es": "Usar solo flash"
+                "es": "Usar solo flash",
+                "de": "Nur Blitz nutzen"
               }
             },
             {
@@ -11741,7 +11867,8 @@
               "text": {
                 "en": "Discretion and professionalism",
                 "fr": "Discrétion et professionnalisme",
-                "es": "Discreción y profesionalidad"
+                "es": "Discreción y profesionalidad",
+                "de": "Diskretion und Professionalität"
               }
             },
             {
@@ -11749,7 +11876,8 @@
               "text": {
                 "en": "Anticipating key moments",
                 "fr": "Anticiper les moments clés",
-                "es": "Anticipar los momentos clave"
+                "es": "Anticipar los momentos clave",
+                "de": "Schlüsselmomente vorausahnen"
               }
             },
             {
@@ -11757,7 +11885,8 @@
               "text": {
                 "en": "Working in varied lighting conditions",
                 "fr": "Travailler dans diverses conditions d'éclairage",
-                "es": "Trabajar en condiciones de luz variadas"
+                "es": "Trabajar en condiciones de luz variadas",
+                "de": "In wechselnden Lichtbedingungen arbeiten"
               }
             }
           ],
@@ -11769,7 +11898,8 @@
           "explanation": {
             "en": "Event photographers must be adaptable, unobtrusive, and skilled at capturing spontaneous moments.",
             "fr": "Les photographes d'événements doivent être adaptables, discrets et habiles à capturer des moments spontanés.",
-            "es": "Los fotógrafos de eventos deben ser adaptables, discretos y hábiles capturando momentos espontáneos."
+            "es": "Los fotógrafos de eventos deben ser adaptables, discretos y hábiles capturando momentos espontáneos.",
+            "de": "Eventfotografen müssen anpassungsfähig, diskret und geübt darin sein, spontane Momente einzufangen."
           },
           "difficulty": "medium"
         },
@@ -11779,7 +11909,8 @@
           "text": {
             "en": "What is 'drone photography' revolutionizing?",
             "fr": "Qu'est-ce que la 'photographie par drone' révolutionne ?",
-            "es": "¿Qué está revolucionando la «fotografía con drone»?"
+            "es": "¿Qué está revolucionando la «fotografía con drone»?",
+            "de": "Was revolutioniert die „Drohnenfotografie“?"
           },
           "answers": [
             {
@@ -11787,7 +11918,8 @@
               "text": {
                 "en": "Studio portraiture",
                 "fr": "Le portrait en studio",
-                "es": "El retrato de estudio"
+                "es": "El retrato de estudio",
+                "de": "Studio-Porträts"
               }
             },
             {
@@ -11795,7 +11927,8 @@
               "text": {
                 "en": "Aerial perspectives previously requiring helicopters",
                 "fr": "Les perspectives aériennes nécessitant auparavant des hélicoptères",
-                "es": "Perspectivas aéreas que antes exigían helicópteros"
+                "es": "Perspectivas aéreas que antes exigían helicópteros",
+                "de": "Luftperspektiven, die früher Helikopter brauchten"
               }
             },
             {
@@ -11803,7 +11936,8 @@
               "text": {
                 "en": "Macro photography",
                 "fr": "La photographie macro",
-                "es": "La fotografía macro"
+                "es": "La fotografía macro",
+                "de": "Makrofotografie"
               }
             },
             {
@@ -11811,7 +11945,8 @@
               "text": {
                 "en": "Underwater photography",
                 "fr": "La photographie sous-marine",
-                "es": "La fotografía submarina"
+                "es": "La fotografía submarina",
+                "de": "Unterwasserfotografie"
               }
             }
           ],
@@ -11821,19 +11956,22 @@
           "explanation": {
             "en": "Drones democratized aerial photography, enabling unique perspectives for real estate, landscape, and event coverage.",
             "fr": "Les drones ont démocratisé la photographie aérienne, permettant des perspectives uniques pour l'immobilier, paysage et couverture d'événements.",
-            "es": "Los drones democratizaron la foto aérea, permitiendo perspectivas únicas para inmobiliaria, paisaje y cobertura de eventos."
+            "es": "Los drones democratizaron la foto aérea, permitiendo perspectivas únicas para inmobiliaria, paisaje y cobertura de eventos.",
+            "de": "Drohnen demokratisierten die Luftbildfotografie und ermöglichen einzigartige Perspektiven für Immobilien, Landschaft und Events."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Elevated landscape overlook — drone / aerial photography viewpoint",
             "fr": "Vue surélevée sur un paysage — point de vue drone / aérien",
-            "es": "Mirador elevado de paisaje — punto de vista drone / foto aérea"
+            "es": "Mirador elevado de paisaje — punto de vista drone / foto aérea",
+            "de": "Erhöhter Landschaftsausblick — Drohnen- / Luftbild-Blickwinkel"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11842,7 +11980,8 @@
           "text": {
             "en": "What distinguishes 'night photography' from daytime work?",
             "fr": "Qu'est-ce qui distingue la 'photographie nocturne' du travail diurne ?",
-            "es": "¿Qué distingue la «fotografía nocturna» del trabajo diurno?"
+            "es": "¿Qué distingue la «fotografía nocturna» del trabajo diurno?",
+            "de": "Was unterscheidet „Nachtfotografie“ von der Tagesarbeit?"
           },
           "answers": [
             {
@@ -11850,7 +11989,8 @@
               "text": {
                 "en": "Higher ISO settings often needed",
                 "fr": "Réglages ISO plus élevés souvent nécessaires",
-                "es": "A menudo hace falta un ISO más alto"
+                "es": "A menudo hace falta un ISO más alto",
+                "de": "Oft höheres ISO nötig"
               }
             },
             {
@@ -11858,7 +11998,8 @@
               "text": {
                 "en": "Only works in cities",
                 "fr": "Fonctionne uniquement en ville",
-                "es": "Solo funciona en ciudades"
+                "es": "Solo funciona en ciudades",
+                "de": "Funktioniert nur in Städten"
               }
             },
             {
@@ -11866,7 +12007,8 @@
               "text": {
                 "en": "Deals with artificial light sources",
                 "fr": "Traite les sources de lumière artificielle",
-                "es": "Trata con fuentes de luz artificial"
+                "es": "Trata con fuentes de luz artificial",
+                "de": "Arbeitet mit künstlichen Lichtquellen"
               }
             },
             {
@@ -11874,7 +12016,8 @@
               "text": {
                 "en": "Requires longer exposures and tripods",
                 "fr": "Nécessite de longues expositions et trépieds",
-                "es": "Requiere exposiciones más largas y trípodes"
+                "es": "Requiere exposiciones más largas y trípodes",
+                "de": "Braucht längere Belichtungen und Stative"
               }
             }
           ],
@@ -11886,19 +12029,22 @@
           "explanation": {
             "en": "Night photography demands different techniques: stability, light management, and noise control.",
             "fr": "La photographie nocturne exige différentes techniques : stabilité, gestion de la lumière et contrôle du bruit.",
-            "es": "La foto nocturna exige técnicas distintas: estabilidad, gestión de la luz y control del ruido."
+            "es": "La foto nocturna exige técnicas distintas: estabilidad, gestión de la luz y control del ruido.",
+            "de": "Nachtfotografie verlangt andere Techniken: Stabilität, Lichtmanagement und Rauschkontrolle."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1519501025264-65ba15a82390.avif",
           "imageAlt": {
             "en": "Night city skyline — night photography trade-offs",
             "fr": "Skyline urbain de nuit — compromis de la photo nocturne",
-            "es": "Skyline nocturno de ciudad — compromisos de la foto nocturna"
+            "es": "Skyline nocturno de ciudad — compromisos de la foto nocturna",
+            "de": "Nächtliche Stadtskyline — Kompromisse der Nachtfotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11908,7 +12054,8 @@
           "text": {
             "en": "Street photography at its best usually feels like…",
             "fr": "La photo de rue réussie donne surtout l’impression de…",
-            "es": "La foto de calle en su mejor momento suele sentirse como…"
+            "es": "La foto de calle en su mejor momento suele sentirse como…",
+            "de": "Gute Straßenfotografie fühlt sich meist an wie…"
           },
           "answers": [
             {
@@ -11916,7 +12063,8 @@
               "text": {
                 "en": "Only photographing your own reflection forever",
                 "fr": "Ne photographier que son reflet pour toujours",
-                "es": "Fotografiar solo tu propio reflejo para siempre"
+                "es": "Fotografiar solo tu propio reflejo para siempre",
+                "de": "Nur ewig das eigene Spiegelbild fotografieren"
               }
             },
             {
@@ -11924,7 +12072,8 @@
               "text": {
                 "en": "Macro of insects exclusively",
                 "fr": "Uniquement de la macro d’insectes",
-                "es": "Macro de insectos exclusivamente"
+                "es": "Macro de insectos exclusivamente",
+                "de": "Ausschließlich Makro von Insekten"
               }
             },
             {
@@ -11932,7 +12081,8 @@
               "text": {
                 "en": "A staged fashion set with three assistants",
                 "fr": "Un shooting mode avec trois assistants",
-                "es": "Un set de moda escenificado con tres asistentes"
+                "es": "Un set de moda escenificado con tres asistentes",
+                "de": "Ein gestelltes Mode-Set mit drei Assistenten"
               }
             },
             {
@@ -11940,7 +12090,8 @@
               "text": {
                 "en": "Catching a fleeting real-life geometry or gesture in public",
                 "fr": "Saisir une géométrie ou un geste fugace dans l’espace public",
-                "es": "Capturar una geometría o gesto fugaz de la vida real en público"
+                "es": "Capturar una geometría o gesto fugaz de la vida real en público",
+                "de": "Eine flüchtige echte Geometrie oder Geste im öffentlichen Raum einfangen"
               }
             }
           ],
@@ -11950,18 +12101,21 @@
           "explanation": {
             "en": "Street thrives on timing and public life — not on a full studio crew.",
             "fr": "La rue vit du timing et de la vie publique — pas d’une équipe studio complète.",
-            "es": "La street vive del timing y de la vida pública — no de un equipo completo de estudio."
+            "es": "La street vive del timing y de la vida pública — no de un equipo completo de estudio.",
+            "de": "Street lebt von Timing und öffentlichem Leben — nicht von einem vollen Studio-Team."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Urban street scene",
             "fr": "Scène de rue urbaine",
-            "es": "Escena urbana de calle"
+            "es": "Escena urbana de calle",
+            "de": "Urbane Straßenszene"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -11971,7 +12125,8 @@
           "text": {
             "en": "Night city photography without a tripod: what’s the honest trade-off?",
             "fr": "Photo de ville de nuit sans trépied : quel compromis honnête ?",
-            "es": "Foto de ciudad de noche sin trípode: ¿cuál es el compromiso honesto?"
+            "es": "Foto de ciudad de noche sin trípode: ¿cuál es el compromiso honesto?",
+            "de": "Stadt bei Nacht ohne Stativ: Was ist der ehrliche Kompromiss?"
           },
           "answers": [
             {
@@ -11979,7 +12134,8 @@
               "text": {
                 "en": "You must switch to a fish-eye",
                 "fr": "Obligation de passer en fisheye",
-                "es": "Debes pasar a un ojo de pez"
+                "es": "Debes pasar a un ojo de pez",
+                "de": "Du musst auf Fischauge wechseln"
               }
             },
             {
@@ -11987,7 +12143,8 @@
               "text": {
                 "en": "Only black-and-white is allowed after 10 p.m.",
                 "fr": "Seul le noir et blanc est autorisé après 22 h",
-                "es": "Solo se permite blanco y negro después de las 22 h"
+                "es": "Solo se permite blanco y negro después de las 22 h",
+                "de": "Nach 22 Uhr ist nur Schwarzweiß erlaubt"
               }
             },
             {
@@ -11995,7 +12152,8 @@
               "text": {
                 "en": "Higher ISO and/or wider aperture vs more noise or shallower focus",
                 "fr": "ISO plus haut et/ou plus grande ouverture vs plus de bruit ou PDC plus courte",
-                "es": "ISO más alto y/o apertura más abierta frente a más ruido o menos profundidad de campo"
+                "es": "ISO más alto y/o apertura más abierta frente a más ruido o menos profundidad de campo",
+                "de": "Höheres ISO und/oder offenere Blende gegen mehr Rauschen oder geringere Schärfentiefe"
               }
             },
             {
@@ -12003,7 +12161,8 @@
               "text": {
                 "en": "There is no trade-off; night is easy handheld at ISO 100",
                 "fr": "Aucun compromis ; la nuit est facile à main levée à ISO 100",
-                "es": "No hay compromiso; de noche es fácil a pulso a ISO 100"
+                "es": "No hay compromiso; de noche es fácil a pulso a ISO 100",
+                "de": "Es gibt keinen Kompromiss; nachts ist Freihändig bei ISO 100 leicht"
               }
             }
           ],
@@ -12013,18 +12172,21 @@
           "explanation": {
             "en": "No tripod means you buy shutter speed with ISO and aperture — and pay in noise or DOF.",
             "fr": "Sans trépied, tu achètes de la vitesse avec ISO et ouverture — et tu paies en bruit ou PDC.",
-            "es": "Sin trípode compras velocidad de obturación con ISO y apertura — y pagas en ruido o PDC."
+            "es": "Sin trípode compras velocidad de obturación con ISO y apertura — y pagas en ruido o PDC.",
+            "de": "Ohne Stativ kaufst du Verschlusszeit mit ISO und Blende — und zahlst mit Rauschen oder Schärfentiefe."
           },
           "imageUrl": "/images/packs/photo-1519501025264-65ba15a82390.avif",
           "imageAlt": {
             "en": "Night city skyline",
             "fr": "Skyline de ville la nuit",
-            "es": "Skyline nocturno de ciudad"
+            "es": "Skyline nocturno de ciudad",
+            "de": "Nächtliche Stadtskyline"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -12034,7 +12196,8 @@
           "text": {
             "en": "Which habits help in candid portrait / lifestyle work?",
             "fr": "Quelles habitudes aident en portrait candide / lifestyle ?",
-            "es": "¿Qué hábitos ayudan en el retrato candido / lifestyle?"
+            "es": "¿Qué hábitos ayudan en el retrato candido / lifestyle?",
+            "de": "Welche Gewohnheiten helfen bei candidem Porträt / Lifestyle?"
           },
           "answers": [
             {
@@ -12042,7 +12205,8 @@
               "text": {
                 "en": "Talk less, watch for real micro-gestures",
                 "fr": "Parler moins, guetter les micro-gestes vrais",
-                "es": "Hablar menos, observar microgestos reales"
+                "es": "Hablar menos, observar microgestos reales",
+                "de": "Weniger reden, echte Mikrogesten beobachten"
               }
             },
             {
@@ -12050,7 +12214,8 @@
               "text": {
                 "en": "Use available window light before blasting flash",
                 "fr": "Privilégier la fenêtre avant d’exploser le flash",
-                "es": "Usar la luz de ventana disponible antes de disparar flash a tope"
+                "es": "Usar la luz de ventana disponible antes de disparar flash a tope",
+                "de": "Vorhandenes Fensterlicht nutzen, bevor der Blitz knallt"
               }
             },
             {
@@ -12058,7 +12223,8 @@
               "text": {
                 "en": "Keep backgrounds simple when you can",
                 "fr": "Garder des fonds simples quand c’est possible",
-                "es": "Mantener fondos simples cuando puedas"
+                "es": "Mantener fondos simples cuando puedas",
+                "de": "Hintergründe möglichst einfach halten"
               }
             },
             {
@@ -12066,7 +12232,8 @@
               "text": {
                 "en": "Force a fake laugh for 40 frames straight",
                 "fr": "Forcer un faux rire pendant 40 vues d’affilée",
-                "es": "Forzar una risa fingida durante 40 fotogramas seguidos"
+                "es": "Forzar una risa fingida durante 40 fotogramas seguidos",
+                "de": "40 Bilder lang ein falsches Lachen erzwingen"
               }
             }
           ],
@@ -12078,7 +12245,8 @@
           "explanation": {
             "en": "Real moments beat directed grinning marathons — light and background do half the work.",
             "fr": "Les vrais moments battent le marathon de sourires forcés — lumière et fond font la moitié du travail.",
-            "es": "Los momentos reales ganan a las maratones de sonrisas dirigidas — la luz y el fondo hacen la mitad del trabajo."
+            "es": "Los momentos reales ganan a las maratones de sonrisas dirigidas — la luz y el fondo hacen la mitad del trabajo.",
+            "de": "Echte Momente schlagen dirigierte Grins-Marathons — Licht und Hintergrund machen die halbe Arbeit."
           }
         },
         {
@@ -12088,7 +12256,8 @@
           "text": {
             "en": "Client wants “documentary wedding” coverage. What does that imply?",
             "fr": "Le client veut une couverture mariage « documentaire ». Qu’est-ce que ça implique ?",
-            "es": "El cliente quiere cobertura de boda «documental». ¿Qué implica?"
+            "es": "El cliente quiere cobertura de boda «documental». ¿Qué implica?",
+            "de": "Der Kunde will „dokumentarische“ Hochzeitsabdeckung. Was bedeutet das?"
           },
           "answers": [
             {
@@ -12096,7 +12265,8 @@
               "text": {
                 "en": "Only posed studio lighting all day",
                 "fr": "Uniquement de la lumière studio posée toute la journée",
-                "es": "Solo iluminación de estudio posada todo el día"
+                "es": "Solo iluminación de estudio posada todo el día",
+                "de": "Nur gestelltes Studio-Licht den ganzen Tag"
               }
             },
             {
@@ -12104,7 +12274,8 @@
               "text": {
                 "en": "Observe and anticipate moments with minimal staging",
                 "fr": "Observer et anticiper les moments avec peu de mise en scène",
-                "es": "Observar y anticipar momentos con puesta en escena mínima"
+                "es": "Observar y anticipar momentos con puesta en escena mínima",
+                "de": "Beobachten und Momente mit minimaler Inszenierung vorausahnen"
               }
             },
             {
@@ -12112,7 +12283,8 @@
               "text": {
                 "en": "Only drone overheads of the venue",
                 "fr": "Uniquement des vues drone du lieu",
-                "es": "Solo planos cenitales con drone del lugar"
+                "es": "Solo planos cenitales con drone del lugar",
+                "de": "Nur Drohnen-Aufsichten vom Veranstaltungsort"
               }
             },
             {
@@ -12120,7 +12292,8 @@
               "text": {
                 "en": "Only black-and-white film forever",
                 "fr": "Uniquement du film N&B pour toujours",
-                "es": "Solo película en blanco y negro para siempre"
+                "es": "Solo película en blanco y negro para siempre",
+                "de": "Nur Schwarzweißfilm für immer"
               }
             }
           ],
@@ -12130,18 +12303,21 @@
           "explanation": {
             "en": "Documentary prioritizes real moments over heavy direction.",
             "fr": "Le documentaire privilégie les vrais moments plutôt que la direction lourde.",
-            "es": "Lo documental prioriza los momentos reales frente a una dirección intensa."
+            "es": "Lo documental prioriza los momentos reales frente a una dirección intensa.",
+            "de": "Dokumentarisch priorisiert echte Momente gegenüber starker Regie."
           },
           "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
           "imageAlt": {
             "en": "Candid wedding moment",
             "fr": "Moment de mariage spontané",
-            "es": "Momento candido de boda"
+            "es": "Momento candido de boda",
+            "de": "Candid-Hochzeitsmoment"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -12151,7 +12327,8 @@
           "text": {
             "en": "Myth: “Street photography must be confrontational.” Better framing?",
             "fr": "Mythe : « La street doit être conflictuelle. » Meilleure façon de voir ?",
-            "es": "Mito: «La street debe ser conflictiva.» ¿Mejor encuadre?"
+            "es": "Mito: «La street debe ser conflictiva.» ¿Mejor encuadre?",
+            "de": "Mythos: „Street muss konfrontativ sein.“ Bessere Einordnung?"
           },
           "answers": [
             {
@@ -12159,7 +12336,8 @@
               "text": {
                 "en": "True — always stop strangers aggressively",
                 "fr": "Vrai — toujours intercepter les inconnus agressivement",
-                "es": "Cierto — siempre hay que parar a desconocidos con agresividad"
+                "es": "Cierto — siempre hay que parar a desconocidos con agresividad",
+                "de": "Stimmt — Fremde immer aggressiv stoppen"
               }
             },
             {
@@ -12167,7 +12345,8 @@
               "text": {
                 "en": "Street can be quiet observation of public life, with ethics and local law in mind",
                 "fr": "La street peut être une observation discrète de la vie publique, dans le respect de l’éthique et du droit local",
-                "es": "La street puede ser observación tranquila de la vida pública, con ética y ley local en mente"
+                "es": "La street puede ser observación tranquila de la vida pública, con ética y ley local en mente",
+                "de": "Street kann ruhige Beobachtung des öffentlichen Lebens sein, mit Ethik und lokalem Recht im Blick"
               }
             },
             {
@@ -12175,7 +12354,8 @@
               "text": {
                 "en": "Street only exists with fisheye lenses",
                 "fr": "La street n’existe qu’au fisheye",
-                "es": "La street solo existe con ojos de pez"
+                "es": "La street solo existe con ojos de pez",
+                "de": "Street existiert nur mit Fischaugenobjektiven"
               }
             },
             {
@@ -12183,7 +12363,8 @@
               "text": {
                 "en": "Street means only photographing signs",
                 "fr": "La street = photographier uniquement des panneaux",
-                "es": "Street significa fotografiar solo señales"
+                "es": "Street significa fotografiar solo señales",
+                "de": "Street heißt nur Schilder fotografieren"
               }
             }
           ],
@@ -12193,18 +12374,21 @@
           "explanation": {
             "en": "Approaches vary; respect and legality matter more than aggression.",
             "fr": "Les approches varient ; le respect et la légalité comptent plus que l’agressivité.",
-            "es": "Los enfoques varían; el respeto y la legalidad importan más que la agresividad."
+            "es": "Los enfoques varían; el respeto y la legalidad importan más que la agresividad.",
+            "de": "Ansätze variieren; Respekt und Rechtmäßigkeit zählen mehr als Aggression."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Urban street scene",
             "fr": "Scène de rue urbaine",
-            "es": "Escena urbana de calle"
+            "es": "Escena urbana de calle",
+            "de": "Urbane Straßenszene"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -12214,7 +12398,8 @@
           "text": {
             "en": "Wildlife: animal half-hidden in brush. Priority for a usable frame?",
             "fr": "Animal à moitié caché dans les broussailles. Priorité pour une image utilisable ?",
-            "es": "Fauna: animal a medio ocultar en la maleza. ¿Prioridad para un fotograma usable?"
+            "es": "Fauna: animal a medio ocultar en la maleza. ¿Prioridad para un fotograma usable?",
+            "de": "Tierfotografie: Tier halb versteckt im Gestrüpp. Priorität für ein brauchbares Bild?"
           },
           "answers": [
             {
@@ -12222,7 +12407,8 @@
               "text": {
                 "en": "Blow highlights on the sky behind",
                 "fr": "Cramer les hautes lumières du ciel derrière",
-                "es": "Quemar las luces del cielo de fondo"
+                "es": "Quemar las luces del cielo de fondo",
+                "de": "Himmelshighlights im Hintergrund ausbrennen"
               }
             },
             {
@@ -12230,7 +12416,8 @@
               "text": {
                 "en": "Clear eye contact / catchlight and enough shutter to freeze micro-motion",
                 "fr": "Un regard / catchlight net et un obturateur assez rapide pour figer les micro-mouvements",
-                "es": "Contacto visual / catchlight claro y obturador suficiente para congelar el micromovimiento"
+                "es": "Contacto visual / catchlight claro y obturador suficiente para congelar el micromovimiento",
+                "de": "Klarer Blickkontakt / Catchlight und genug Verschluss, um Mikrobewegung einzufrieren"
               }
             },
             {
@@ -12238,7 +12425,8 @@
               "text": {
                 "en": "Always crop out the habitat",
                 "fr": "Toujours rogner l’habitat",
-                "es": "Recortar siempre el hábitat"
+                "es": "Recortar siempre el hábitat",
+                "de": "Den Lebensraum immer wegschneiden"
               }
             },
             {
@@ -12246,7 +12434,8 @@
               "text": {
                 "en": "Use flash on nestlings at night without care",
                 "fr": "Flasher les oisillons la nuit sans précaution",
-                "es": "Usar flash en polluelos de noche sin cuidado"
+                "es": "Usar flash en polluelos de noche sin cuidado",
+                "de": "Nachts Blitz auf Nestlinge ohne Rücksicht"
               }
             }
           ],
@@ -12256,7 +12445,8 @@
           "explanation": {
             "en": "Readable eyes and sharp moments beat a busy but soft frame.",
             "fr": "Des yeux lisibles et un instant net battent un cadre chargé mais flou.",
-            "es": "Ojos legibles y momentos nítidos ganan a un encuadre ajetreado pero blando."
+            "es": "Ojos legibles y momentos nítidos ganan a un encuadre ajetreado pero blando.",
+            "de": "Lesbare Augen und scharfe Momente schlagen einen belebten, aber weichen Rahmen."
           }
         },
         {
@@ -12266,7 +12456,8 @@
           "text": {
             "en": "Product shot on white: edges look gray. Likely cause?",
             "fr": "Packshot sur fond blanc : les bords paraissent gris. Cause probable ?",
-            "es": "Packshot sobre blanco: los bordes parecen grises. ¿Causa probable?"
+            "es": "Packshot sobre blanco: los bordes parecen grises. ¿Causa probable?",
+            "de": "Packshot auf Weiß: Kanten wirken grau. Wahrscheinliche Ursache?"
           },
           "answers": [
             {
@@ -12274,7 +12465,8 @@
               "text": {
                 "en": "Too much separation light on the background",
                 "fr": "Trop de lumière de séparation sur le fond",
-                "es": "Demasiada luz de separación en el fondo"
+                "es": "Demasiada luz de separación en el fondo",
+                "de": "Zu viel Trennlicht auf dem Hintergrund"
               }
             },
             {
@@ -12282,7 +12474,8 @@
               "text": {
                 "en": "Background underexposed relative to the product — raise background lights",
                 "fr": "Fond sous-exposé par rapport au produit — remonter les lumières de fond",
-                "es": "Fondo subexpuesto respecto al producto — sube las luces del fondo"
+                "es": "Fondo subexpuesto respecto al producto — sube las luces del fondo",
+                "de": "Hintergrund unterbelichtet relativ zum Produkt — Hintergrundlichter anheben"
               }
             },
             {
@@ -12290,7 +12483,8 @@
               "text": {
                 "en": "Using RAW instead of JPEG",
                 "fr": "Utiliser le RAW au lieu du JPEG",
-                "es": "Usar RAW en vez de JPEG"
+                "es": "Usar RAW en vez de JPEG",
+                "de": "RAW statt JPEG nutzen"
               }
             },
             {
@@ -12298,7 +12492,8 @@
               "text": {
                 "en": "Lens too sharp",
                 "fr": "Objectif trop piqué",
-                "es": "Objetivo demasiado nítido"
+                "es": "Objetivo demasiado nítido",
+                "de": "Objektiv zu scharf"
               }
             }
           ],
@@ -12308,7 +12503,8 @@
           "explanation": {
             "en": "True seamless white needs the backdrop brighter than the subject edges.",
             "fr": "Un vrai blanc seamless demande un fond plus clair que les bords du sujet.",
-            "es": "Un blanco continuo verdadero necesita el fondo más brillante que los bordes del sujeto."
+            "es": "Un blanco continuo verdadero necesita el fondo más brillante que los bordes del sujeto.",
+            "de": "Echtes nahtloses Weiß braucht den Hintergrund heller als die Motivkanten."
           }
         },
         {
@@ -12318,7 +12514,8 @@
           "text": {
             "en": "Architecture interior: verticals lean. Fastest in-camera fix?",
             "fr": "Intérieur d’architecture : les verticales penchent. Correction la plus rapide à la prise ?",
-            "es": "Interior de arquitectura: las verticales se inclinan. ¿Corrección más rápida en cámara?"
+            "es": "Interior de arquitectura: las verticales se inclinan. ¿Corrección más rápida en cámara?",
+            "de": "Architektur-Innenraum: Vertikalen kippen. Schnellste Korrektur an der Kamera?"
           },
           "answers": [
             {
@@ -12326,7 +12523,8 @@
               "text": {
                 "en": "Tilt the camera more aggressively",
                 "fr": "Pencher encore plus l’appareil",
-                "es": "Inclinar la cámara con más agresividad"
+                "es": "Inclinar la cámara con más agresividad",
+                "de": "Die Kamera aggressiver neigen"
               }
             },
             {
@@ -12334,7 +12532,8 @@
               "text": {
                 "en": "Keep the sensor parallel to walls / use a shift lens or level carefully",
                 "fr": "Garder le capteur parallèle aux murs / shift ou niveau soigneux",
-                "es": "Mantener el sensor paralelo a las paredes / usar un objetivo shift o nivelar con cuidado"
+                "es": "Mantener el sensor paralelo a las paredes / usar un objetivo shift o nivelar con cuidado",
+                "de": "Sensor parallel zu den Wänden halten / Shift-Objektiv nutzen oder sorgfältig ausrichten"
               }
             },
             {
@@ -12342,7 +12541,8 @@
               "text": {
                 "en": "Always shoot from the floor looking up",
                 "fr": "Toujours shooter du sol en contre-plongée",
-                "es": "Disparar siempre desde el suelo mirando hacia arriba"
+                "es": "Disparar siempre desde el suelo mirando hacia arriba",
+                "de": "Immer vom Boden nach oben schießen"
               }
             },
             {
@@ -12350,7 +12550,8 @@
               "text": {
                 "en": "Use the smallest JPEG setting",
                 "fr": "Utiliser le plus petit JPEG",
-                "es": "Usar el ajuste JPEG más pequeño"
+                "es": "Usar el ajuste JPEG más pequeño",
+                "de": "Die kleinste JPEG-Einstellung nutzen"
               }
             }
           ],
@@ -12360,18 +12561,21 @@
           "explanation": {
             "en": "Parallel planes prevent keystoning; shift lenses help when you can’t back up.",
             "fr": "Des plans parallèles évitent le keystone ; le shift aide quand on ne peut pas reculer.",
-            "es": "Los planos paralelos evitan el keystoning; los objetivos shift ayudan cuando no puedes retroceder."
+            "es": "Los planos paralelos evitan el keystoning; los objetivos shift ayudan cuando no puedes retroceder.",
+            "de": "Parallele Ebenen verhindern Keystoning; Shift-Objektive helfen, wenn man nicht zurücktreten kann."
           },
           "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
           "imageAlt": {
             "en": "Tall city verticals at night — architecture interior/exterior lean control",
             "fr": "Verticales urbaines la nuit — contrôle des fuyantes en architecture",
-            "es": "Verticales altas de ciudad de noche — control de inclinación arquitectura int/ext"
+            "es": "Verticales altas de ciudad de noche — control de inclinación arquitectura int/ext",
+            "de": "Hohe Stadtvertikalen bei Nacht — Neigungskontrolle Architektur innen/außen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -12381,7 +12585,8 @@
           "text": {
             "en": "Documentary street in France: you want candid gesture without staging. Strongest ethical + craft approach?",
             "fr": "Street documentaire en France : geste candide, sans mise en scène. Meilleure approche éthique + technique ?",
-            "es": "Street documental en Francia: quieres un gesto candido sin puesta en escena. ¿Mejor enfoque ético + técnico?"
+            "es": "Street documental en Francia: quieres un gesto candido sin puesta en escena. ¿Mejor enfoque ético + técnico?",
+            "de": "Dokumentarische Street in Frankreich: candid Geste ohne Inszenierung. Beste ethische + handwerkliche Haltung?"
           },
           "answers": [
             {
@@ -12389,7 +12594,8 @@
               "text": {
                 "en": "Always confront and pose strangers for ‘truth’",
                 "fr": "Toujours confronter et poser les inconnus pour la « vérité »",
-                "es": "Siempre confrontar y posar a desconocidos por la «verdad»"
+                "es": "Siempre confrontar y posar a desconocidos por la «verdad»",
+                "de": "Fremde immer konfrontieren und für die „Wahrheit“ posieren lassen"
               }
             },
             {
@@ -12397,7 +12603,8 @@
               "text": {
                 "en": "Anticipate, blend in, respect dignity; know when not to publish identifiable private moments",
                 "fr": "Anticiper, se fondre, respecter la dignité ; savoir quand ne pas publier un moment privé identifiable",
-                "es": "Anticipar, mimetizarse, respetar la dignidad; saber cuándo no publicar momentos privados identificables"
+                "es": "Anticipar, mimetizarse, respetar la dignidad; saber cuándo no publicar momentos privados identificables",
+                "de": "Vorausahnen, untertauchen, Würde achten; wissen, wann identifizierbare private Momente nicht veröffentlicht werden"
               }
             },
             {
@@ -12405,7 +12612,8 @@
               "text": {
                 "en": "Only shoot from a rooftop with a 600 mm — never engage the scene",
                 "fr": "Ne shooter qu’au 600 mm depuis un toit — jamais s’engager dans la scène",
-                "es": "Disparar solo desde un tejado con un 600 mm — nunca entrar en la escena"
+                "es": "Disparar solo desde un tejado con un 600 mm — nunca entrar en la escena",
+                "de": "Nur vom Dach mit 600 mm schießen — nie in die Szene gehen"
               }
             },
             {
@@ -12413,7 +12621,8 @@
               "text": {
                 "en": "Publish every face regardless of context",
                 "fr": "Publier chaque visage quel que soit le contexte",
-                "es": "Publicar cada cara sin importar el contexto"
+                "es": "Publicar cada cara sin importar el contexto",
+                "de": "Jedes Gesicht unabhängig vom Kontext veröffentlichen"
               }
             }
           ],
@@ -12423,18 +12632,21 @@
           "explanation": {
             "en": "Street craft is anticipation and presence; ethics is dignity and context — especially when publishing.",
             "fr": "Le craft street = anticipation et présence ; l’éthique = dignité et contexte — surtout à la publication.",
-            "es": "El oficio de street es anticipación y presencia; la ética es dignidad y contexto — sobre todo al publicar."
+            "es": "El oficio de street es anticipación y presencia; la ética es dignidad y contexto — sobre todo al publicar.",
+            "de": "Street-Handwerk ist Antizipation und Präsenz; Ethik ist Würde und Kontext — besonders beim Veröffentlichen."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Busy urban street scene for candid photography",
             "fr": "Scène de rue animée pour la photo candide",
-            "es": "Calle urbana concurrida para fotografía candida"
+            "es": "Calle urbana concurrida para fotografía candida",
+            "de": "Belebte urbane Straßenszene für Candid-Fotografie"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Foto: Unsplash"
           }
         },
         {
@@ -12444,7 +12656,8 @@
           "text": {
             "en": "Natural-light portrait outdoors at noon. Harsh overhead sun. Best genre-aware fix?",
             "fr": "Portrait en lumière naturelle à midi. Soleil zénithal dur. Meilleure correction « genre » ?",
-            "es": "Retrato a luz natural al aire libre a mediodía. Sol cenital duro. ¿Mejor corrección «de género»?"
+            "es": "Retrato a luz natural al aire libre a mediodía. Sol cenital duro. ¿Mejor corrección «de género»?",
+            "de": "Porträt bei natürlichem Licht draußen mittags. Hartes Zenit-Sonnenlicht. Beste genre-bewusste Korrektur?"
           },
           "answers": [
             {
@@ -12452,7 +12665,8 @@
               "text": {
                 "en": "Open shade / diffuser / bounce fill; keep catchlights without raccoon eyes",
                 "fr": "Ombre ouverte / diffuseur / fill en rebond ; garder des catchlights sans yeux de raton",
-                "es": "Sombra abierta / difusor / relleno; mantener catchlights sin ojos de mapache"
+                "es": "Sombra abierta / difusor / relleno; mantener catchlights sin ojos de mapache",
+                "de": "Offener Schatten / Diffusor / Aufhellung; Catchlights ohne Waschbären-Augen"
               }
             },
             {
@@ -12460,7 +12674,8 @@
               "text": {
                 "en": "Underexpose three stops and crush skin",
                 "fr": "Sous-exposer de trois stops et écraser la peau",
-                "es": "Subexponer tres pasos y aplastar la piel"
+                "es": "Subexponer tres pasos y aplastar la piel",
+                "de": "Drei Stufen unterbelichten und Haut platt machen"
               }
             },
             {
@@ -12468,7 +12683,8 @@
               "text": {
                 "en": "Force on-camera flash pointed straight up only",
                 "fr": "Flash cobasse uniquement vers le haut",
-                "es": "Forzar flash de cámara apuntando solo hacia arriba"
+                "es": "Forzar flash de cámara apuntando solo hacia arriba",
+                "de": "Nur Kamera-Blitz steil nach oben erzwingen"
               }
             },
             {
@@ -12476,7 +12692,8 @@
               "text": {
                 "en": "Always wait for blue hour — noon is unusable forever",
                 "fr": "Toujours attendre l’heure bleue — midi est inutilisable à jamais",
-                "es": "Esperar siempre la hora azul — el mediodía es inutilizable para siempre"
+                "es": "Esperar siempre la hora azul — el mediodía es inutilizable para siempre",
+                "de": "Immer auf die Blaue Stunde warten — Mittag ist für immer unbrauchbar"
               }
             }
           ],
@@ -12486,18 +12703,21 @@
           "explanation": {
             "en": "Portrait genre prioritizes flattering face light. Soften or fill noon sun; don’t just suffer it.",
             "fr": "Le genre portrait priorise une lumière flatteuse sur le visage. Adoucis ou fill le midi ; ne le subis pas.",
-            "es": "El género retrato prioriza una luz de rostro favorecedora. Suaviza o rellena el sol de mediodía; no te limites a sufrirlo."
+            "es": "El género retrato prioriza una luz de rostro favorecedora. Suaviza o rellena el sol de mediodía; no te limites a sufrirlo.",
+            "de": "Das Genre Porträt priorisiert schmeichelhaftes Gesichtslight. Mittagssonne weichzeichnen oder aufhellen — nicht nur ertragen."
           },
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Soft natural-light portrait",
             "fr": "Portrait en lumière naturelle douce",
-            "es": "Retrato suave a luz natural"
+            "es": "Retrato suave a luz natural",
+            "de": "Weiches Porträt bei natürlichem Licht"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Foto: Unsplash"
           }
         },
         {
@@ -12507,7 +12727,8 @@
           "text": {
             "en": "Which clues help you tell editorial fashion from documentary portrait?",
             "fr": "Quels indices aident à distinguer mode éditoriale et portrait documentaire ?",
-            "es": "¿Qué indicios ayudan a distinguir moda editorial de retrato documental?"
+            "es": "¿Qué indicios ayudan a distinguir moda editorial de retrato documental?",
+            "de": "Welche Hinweise helfen, editoriale Mode von dokumentarischem Porträt zu unterscheiden?"
           },
           "answers": [
             {
@@ -12515,7 +12736,8 @@
               "text": {
                 "en": "Styling, art direction, and controlled locations in fashion",
                 "fr": "Stylisme, direction artistique et lieux contrôlés en mode",
-                "es": "Estilismo, dirección artística y localizaciones controladas en moda"
+                "es": "Estilismo, dirección artística y localizaciones controladas en moda",
+                "de": "Styling, Art Direction und kontrollierte Orte in der Mode"
               }
             },
             {
@@ -12523,7 +12745,8 @@
               "text": {
                 "en": "Observational lighting and less staged gesture in documentary",
                 "fr": "Lumière d’observation et gestes moins mis en scène en documentaire",
-                "es": "Iluminación observacional y gestos menos escenificados en documental"
+                "es": "Iluminación observacional y gestos menos escenificados en documental",
+                "de": "Beobachtendes Licht und weniger gestellte Gesten im Dokumentarischen"
               }
             },
             {
@@ -12531,7 +12754,8 @@
               "text": {
                 "en": "Both genres always use identical flash setups",
                 "fr": "Les deux genres utilisent toujours les mêmes setups flash",
-                "es": "Ambos géneros usan siempre los mismos sets de flash"
+                "es": "Ambos géneros usan siempre los mismos sets de flash",
+                "de": "Beide Genres nutzen immer dieselben Blitz-Setups"
               }
             },
             {
@@ -12539,7 +12763,8 @@
               "text": {
                 "en": "Intent: sell a look vs. describe a life/situation",
                 "fr": "Intention : vendre un look vs décrire une vie/situation",
-                "es": "Intención: vender un look vs. describir una vida/situación"
+                "es": "Intención: vender un look vs. describir una vida/situación",
+                "de": "Absicht: einen Look verkaufen vs. ein Leben/eine Situation beschreiben"
               }
             }
           ],
@@ -12551,7 +12776,8 @@
           "explanation": {
             "en": "Genres are about intent and control level, not just cameras.",
             "fr": "Les genres portent sur l’intention et le niveau de contrôle, pas seulement les boîtiers.",
-            "es": "Los géneros tratan de intención y nivel de control, no solo de cámaras."
+            "es": "Los géneros tratan de intención y nivel de control, no solo de cámaras.",
+            "de": "Genres handeln von Absicht und Kontrollgrad, nicht nur von Kameras."
           }
         }
       ],

@@ -40,8 +40,8 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 describe('vague 1.79 — docs v1.78.0 + lexique-image-fixe LocalizedString.de', () => {
   it('docs still mention vague 1.78/1.79; no-go through 1.79; headline may be v1.81.0', () => {
     /* Docs headline moved to v1.83.0 in vague 1.84 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(78|79|80|81|82|83|84|85|86)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(78|79|80|81|82|83|84|85|86)\.\d+\*\*/);
+    expect(readme).toMatch(/v1\.(78|79|80|81|82|83|84|85|86|87)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(78|79|80|81|82|83|84|85|86|87)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.78**');
     expect(nextSteps).toContain('Vague **1.79**');
     expect(nextSteps).toMatch(/no-go.*1\.79/);
@@ -140,8 +140,8 @@ describe('vague 1.79 — docs v1.78.0 + lexique-image-fixe LocalizedString.de', 
       ])
     );
     expect(withDe.length).toBeGreaterThanOrEqual(4);
-    expect(withDe.length).toBeLessThanOrEqual(9);
-    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(6);
+    expect(withDe.length).toBeLessThanOrEqual(10);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(5);
   });
 
   it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio; ops no-gos through 1.79; SVG theme toggle', () => {
@@ -161,7 +161,8 @@ describe('vague 1.79 — docs v1.78.0 + lexique-image-fixe LocalizedString.de', 
             q.id !== 'history-icons' &&
             q.id !== 'portrait-light' &&
             q.id !== 'public-domain' &&
-            q.id !== 'exposure-basics'
+            q.id !== 'exposure-basics' &&
+            q.id !== 'genres'
         )
         .every((q) => {
           const title = q.title as { de?: string };

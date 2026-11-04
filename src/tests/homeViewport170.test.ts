@@ -39,8 +39,8 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 describe('vague 1.70 — docs v1.69.0 + portrait-light LocalizedString.es', () => {
   it('docs still mention vague 1.69/1.70; no-go through 1.70; headline may be v1.80.0', () => {
     /* Docs headline moved to v1.80.0 in vague 1.81 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86)\.\d+\*\*/);
+    expect(readme).toMatch(/v1\.(69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toContain('Vague **1.70**');
     expect(nextSteps).toMatch(/no-go.*1\.70/);
@@ -101,7 +101,8 @@ describe('vague 1.70 — docs v1.69.0 + portrait-light LocalizedString.es', () =
       data.quizzes
         .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights' && q.id !== 'light-color' && q.id !== 'flash-studio' && q.id !== 'retouching' && q.id !== 'history-icons' &&
             q.id !== 'portrait-light' &&
-            q.id !== 'public-domain' && q.id !== 'exposure-basics')
+            q.id !== 'public-domain' && q.id !== 'exposure-basics' &&
+            q.id !== 'genres')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';
