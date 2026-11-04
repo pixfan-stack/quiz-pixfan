@@ -40,8 +40,8 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 describe('vague 1.78 — docs v1.77.0 + marques-photo LocalizedString.es', () => {
   it('docs still mention vague 1.77/1.78; no-go through 1.78; headline may be v1.80.0', () => {
     /* Docs headline moved to v1.80.0 in vague 1.81 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(77|78|79|80|81|82|83)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(77|78|79|80|81|82|83)\.\d+\*\*/);
+    expect(readme).toMatch(/v1\.(77|78|79|80|81|82|83|84)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(77|78|79|80|81|82|83|84)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.77**');
     expect(nextSteps).toContain('Vague **1.78**');
     expect(nextSteps).toMatch(/no-go.*1\.78/);
@@ -122,10 +122,11 @@ describe('vague 1.78 — docs v1.77.0 + marques-photo LocalizedString.es', () =>
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.78/);
-    /* Vague 1.79–1.84 — lexique-image-fixe + photo-rights + light-color + flash-studio + retouching + history-icons may ship title.de; others must not. */
+    /* Vague 1.79–1.85 — lexique-image-fixe + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light may ship title.de; others must not. */
     expect(
       data.quizzes
-        .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights' && q.id !== 'light-color' && q.id !== 'flash-studio' && q.id !== 'retouching' && q.id !== 'history-icons')
+        .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights' && q.id !== 'light-color' && q.id !== 'flash-studio' && q.id !== 'retouching' && q.id !== 'history-icons' &&
+            q.id !== 'portrait-light')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';

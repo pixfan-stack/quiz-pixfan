@@ -37,13 +37,14 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
   return out;
 }
 
-describe('vague 1.84 — docs v1.83.0 + history-icons LocalizedString.de', () => {
-  it('docs headline cites v1.83.0; vague 1.83/1.84 listed; no-go through 1.84', () => {
-    expect(readme).toContain('v1.83.0');
-    expect(nextSteps).toContain('**v1.83.0**');
+describe('vague 1.84 — docs v1.83.0/v1.84.0 + history-icons LocalizedString.de', () => {
+  it('docs still mention vague 1.83/1.84; no-go through 1.84; headline may be v1.84.0', () => {
+    /* Docs headline moved to v1.84.0 in vague 1.85 — keep historical Livré lock. */
+    expect(readme).toMatch(/v1\.(83|84)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(83|84)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.83**');
     expect(nextSteps).toContain('Vague **1.84**');
-    expect(nextSteps).toMatch(/no-go.*1\.84/);
+    expect(nextSteps).toMatch(/no-go.*1\.(84|85)/);
   });
 
   it('history-icons ships .de on all LocalizedString fields (192)', () => {
@@ -193,27 +194,31 @@ describe('vague 1.84 — docs v1.83.0 + history-icons LocalizedString.de', () =>
     expect(withoutEs).toEqual([]);
   });
 
-  it('série DE: only lexique + photo-rights + light-color + flash-studio + retouching + history-icons have title.de (9 others without)', () => {
+  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons (+ portrait-light after 1.85) have title.de', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
       .map((q) => q.id)
       .sort();
-    expect(withDe).toEqual([
-      'flash-studio',
-      'history-icons',
-      'lexique-image-fixe',
-      'light-color',
-      'photo-rights',
-      'retouching',
-    ]);
-    expect(data.quizzes.length - withDe.length).toBe(9);
+    expect(withDe).toEqual(
+      expect.arrayContaining([
+        'flash-studio',
+        'history-icons',
+        'lexique-image-fixe',
+        'light-color',
+        'photo-rights',
+        'retouching',
+      ])
+    );
+    expect(withDe.length).toBeGreaterThanOrEqual(6);
+    expect(withDe.length).toBeLessThanOrEqual(7);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(8);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons; ops no-gos through 1.84; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons(+portrait-light); ops no-gos through 1.84; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.84/);
+    expect(nextSteps).toMatch(/no-go.*1\.(84|85)/);
     expect(
       data.quizzes
         .filter(
@@ -223,7 +228,8 @@ describe('vague 1.84 — docs v1.83.0 + history-icons LocalizedString.de', () =>
             q.id !== 'light-color' &&
             q.id !== 'flash-studio' &&
             q.id !== 'retouching' &&
-            q.id !== 'history-icons'
+            q.id !== 'history-icons' &&
+            q.id !== 'portrait-light'
         )
         .every((q) => {
           const title = q.title as { de?: string };
