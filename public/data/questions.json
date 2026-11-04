@@ -6991,12 +6991,14 @@
       "title": {
         "en": "History & Iconic Photographers",
         "fr": "Histoire & photographes iconiques",
-        "es": "Historia y fotógrafos icónicos"
+        "es": "Historia y fotógrafos icónicos",
+        "de": "Geschichte & Ikonen"
       },
       "description": {
         "en": "From the first photographs to legends who shaped how we see the world.",
         "fr": "Des premières photographies aux légendes qui ont façonné notre regard.",
-        "es": "Desde las primeras fotografías hasta las leyendas que moldearon nuestra mirada."
+        "es": "Desde las primeras fotografías hasta las leyendas que moldearon nuestra mirada.",
+        "de": "Von den ersten Fotografien bis zu den Legenden, die unseren Blick geformt haben."
       },
       "questions": [
         {
@@ -7005,7 +7007,8 @@
           "text": {
             "en": "Who is widely credited with creating the earliest surviving photograph (heliograph, 1820s)?",
             "fr": "À qui attribue-t-on généralement la plus ancienne photographie conservée (héliographie, années 1820) ?",
-            "es": "¿A quién se atribuye generalmente la fotografía más antigua conservada (heliografía, años 1820)?"
+            "es": "¿A quién se atribuye generalmente la fotografía más antigua conservada (heliografía, años 1820)?",
+            "de": "Wem wird allgemein die älteste erhaltene Fotografie zugeschrieben (Heliographie, 1820er)?"
           },
           "answers": [
             {
@@ -7013,7 +7016,8 @@
               "text": {
                 "en": "Ansel Adams",
                 "fr": "Ansel Adams",
-                "es": "Ansel Adams (paisajista)"
+                "es": "Ansel Adams (paisajista)",
+                "de": "Ansel Adams (Landschaft)"
               }
             },
             {
@@ -7021,7 +7025,8 @@
               "text": {
                 "en": "Steve Jobs",
                 "fr": "Steve Jobs",
-                "es": "Steve Jobs (informático)"
+                "es": "Steve Jobs (informático)",
+                "de": "Steve Jobs (Informatiker)"
               }
             },
             {
@@ -7029,7 +7034,8 @@
               "text": {
                 "en": "Nicéphore Niépce",
                 "fr": "Nicéphore Niépce",
-                "es": "Nicéphore Niépce (heliografía)"
+                "es": "Nicéphore Niépce (heliografía)",
+                "de": "Nicéphore Niépce (Heliographie)"
               }
             },
             {
@@ -7037,7 +7043,8 @@
               "text": {
                 "en": "Henri Cartier-Bresson only",
                 "fr": "Henri Cartier-Bresson uniquement",
-                "es": "Solo Henri Cartier-Bresson"
+                "es": "Solo Henri Cartier-Bresson",
+                "de": "Nur Henri Cartier-Bresson"
               }
             }
           ],
@@ -7047,19 +7054,22 @@
           "explanation": {
             "en": "Nicéphore Niépce’s View from the Window at Le Gras (c. 1826–27) is the earliest known surviving photograph. Daguerre later popularized the daguerreotype.",
             "fr": "La Vue de la fenêtre du Gras de Nicéphore Niépce (vers 1826–27) est la plus ancienne photo conservée connue. Daguerre popularisera ensuite le daguerréotype.",
-            "es": "La Vista desde la ventana en Le Gras de Nicéphore Niépce (c. 1826–27) es la fotografía conservada más antigua conocida. Daguerre popularizó después el daguerrotipo."
+            "es": "La Vista desde la ventana en Le Gras de Nicéphore Niépce (c. 1826–27) es la fotografía conservada más antigua conocida. Daguerre popularizó después el daguerrotipo.",
+            "de": "Niépces Blick aus dem Fenster in Le Gras (ca. 1826–27) ist die älteste bekannte erhaltene Fotografie. Daguerre popularisierte danach die Daguerreotypie."
           },
           "imageUrl": "/images/packs/photo-1516035069371-29a1b244cc32.avif",
           "imageAlt": {
             "en": "Classic camera",
             "fr": "Appareil classique",
-            "es": "Cámara clásica"
+            "es": "Cámara clásica",
+            "de": "Klassische Kamera"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7068,7 +7078,8 @@
           "text": {
             "en": "Henri Cartier-Bresson is most associated with which idea?",
             "fr": "Henri Cartier-Bresson est surtout associé à quelle idée ?",
-            "es": "¿Henri Cartier-Bresson se asocia sobre todo a qué idea?"
+            "es": "¿Henri Cartier-Bresson se asocia sobre todo a qué idea?",
+            "de": "Henri Cartier-Bresson wird vor allem mit welcher Idee verbunden?"
           },
           "answers": [
             {
@@ -7076,7 +7087,8 @@
               "text": {
                 "en": "Only studio fashion lighting",
                 "fr": "Uniquement l'éclairage mode en studio",
-                "es": "Solo la iluminación de moda en estudio"
+                "es": "Solo la iluminación de moda en estudio",
+                "de": "Nur Studio-Modelicht"
               }
             },
             {
@@ -7084,7 +7096,8 @@
               "text": {
                 "en": "Inventing digital sensors",
                 "fr": "L'invention des capteurs numériques",
-                "es": "La invención de los sensores digitales"
+                "es": "La invención de los sensores digitales",
+                "de": "Der Erfindung digitaler Sensoren"
               }
             },
             {
@@ -7092,7 +7105,8 @@
               "text": {
                 "en": "The “decisive moment” in street / reportage photography",
                 "fr": "Le « moment décisif » en photo de rue / reportage",
-                "es": "El «momento decisivo» en foto de calle / reportaje"
+                "es": "El «momento decisivo» en foto de calle / reportaje",
+                "de": "Dem „entscheidenden Moment“ in Straßen- / Reportagefotografie"
               }
             },
             {
@@ -7100,7 +7114,8 @@
               "text": {
                 "en": "Underwater wildlife exclusively",
                 "fr": "Uniquement la faune sous-marine",
-                "es": "Solo la fauna submarina"
+                "es": "Solo la fauna submarina",
+                "de": "Ausschließlich Unterwasserfauna"
               }
             }
           ],
@@ -7110,19 +7125,22 @@
           "explanation": {
             "en": "Cartier-Bresson coined the decisive moment: catching the peak of action and geometry in a single, perfectly timed frame.",
             "fr": "Cartier-Bresson a formalisé le moment décisif : saisir le sommet de l'action et de la géométrie dans un seul cadre parfaitement cadencé.",
-            "es": "Cartier-Bresson formalizó el momento decisivo: captar el pico de la acción y la geometría en un solo fotograma perfectamente cronometrado."
+            "es": "Cartier-Bresson formalizó el momento decisivo: captar el pico de la acción y la geometría en un solo fotograma perfectamente cronometrado.",
+            "de": "Cartier-Bresson formulierte den entscheidenden Moment: den Höhepunkt von Aktion und Geometrie in einem einzigen, perfekt getimten Bild festzuhalten."
           },
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage photography gear",
             "fr": "Matériel photo vintage",
-            "es": "Equipo fotográfico vintage"
+            "es": "Equipo fotográfico vintage",
+            "de": "Vintage-Fotografieausrüstung"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7131,7 +7149,8 @@
           "text": {
             "en": "Which photographers are famous for black-and-white landscape or documentary work?",
             "fr": "Quels photographes sont célèbres pour des paysages ou documentaires en noir et blanc ?",
-            "es": "¿Qué fotógrafos son famosos por paisajes o documentales en blanco y negro?"
+            "es": "¿Qué fotógrafos son famosos por paisajes o documentales en blanco y negro?",
+            "de": "Welche Fotografen sind für Schwarzweiß-Landschaft oder Dokumentararbeit berühmt?"
           },
           "answers": [
             {
@@ -7139,7 +7158,8 @@
               "text": {
                 "en": "Sebastião Salgado",
                 "fr": "Sebastião Salgado",
-                "es": "Sebastião Salgado (reportaje)"
+                "es": "Sebastião Salgado (reportaje)",
+                "de": "Sebastião Salgado (Reportage)"
               }
             },
             {
@@ -7147,7 +7167,8 @@
               "text": {
                 "en": "Dorothea Lange",
                 "fr": "Dorothea Lange",
-                "es": "Dorothea Lange (documental)"
+                "es": "Dorothea Lange (documental)",
+                "de": "Dorothea Lange (Dokumentar)"
               }
             },
             {
@@ -7155,7 +7176,8 @@
               "text": {
                 "en": "Ansel Adams",
                 "fr": "Ansel Adams",
-                "es": "Ansel Adams (paisajes)"
+                "es": "Ansel Adams (paisajes)",
+                "de": "Ansel Adams (Landschaften)"
               }
             },
             {
@@ -7163,7 +7185,8 @@
               "text": {
                 "en": "Only smartphone UI designers",
                 "fr": "Uniquement des designers d'interfaces smartphone",
-                "es": "Solo diseñadores de interfaces de smartphone"
+                "es": "Solo diseñadores de interfaces de smartphone",
+                "de": "Nur Smartphone-UI-Designer"
               }
             }
           ],
@@ -7175,19 +7198,22 @@
           "explanation": {
             "en": "Adams (Zone System landscapes), Lange (Depression-era documentary) and Salgado (epic B&W reportage) are pillars of the medium.",
             "fr": "Adams (paysages, Zone System), Lange (documentaire de la Grande Dépression) et Salgado (reportage N&B épique) sont des piliers du médium.",
-            "es": "Adams (paisajes, Sistema de Zonas), Lange (documental de la Gran Depresión) y Salgado (reportaje B/N épico) son pilares del medio."
+            "es": "Adams (paisajes, Sistema de Zonas), Lange (documental de la Gran Depresión) y Salgado (reportaje B/N épico) son pilares del medio.",
+            "de": "Adams (Landschaften, Zone System), Lange (Dokumentar der Großen Depression) und Salgado (epische SW-Reportage) sind Pfeiler des Mediums."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1452421822248-d4c2b47f0c81.avif",
           "imageAlt": {
             "en": "Old books and papers",
             "fr": "Vieux livres et papiers",
-            "es": "Libros y papeles antiguos"
+            "es": "Libros y papeles antiguos",
+            "de": "Alte Bücher und Papiere"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7196,7 +7222,8 @@
           "text": {
             "en": "What agency did Cartier-Bresson co-found in 1947 with other legendary photographers?",
             "fr": "Quelle agence Cartier-Bresson a-t-il cofondée en 1947 avec d'autres photographes légendaires ?",
-            "es": "¿Qué agencia cofundó Cartier-Bresson en 1947 con otros fotógrafos legendarios?"
+            "es": "¿Qué agencia cofundó Cartier-Bresson en 1947 con otros fotógrafos legendarios?",
+            "de": "Welche Agentur gründete Cartier-Bresson 1947 mit anderen legendären Fotografen mit?"
           },
           "answers": [
             {
@@ -7204,7 +7231,8 @@
               "text": {
                 "en": "Leica only as a camera brand store",
                 "fr": "Uniquement une boutique Leica",
-                "es": "Solo una tienda de la marca Leica"
+                "es": "Solo una tienda de la marca Leica",
+                "de": "Nur einen Leica-Markenladen"
               }
             },
             {
@@ -7212,7 +7240,8 @@
               "text": {
                 "en": "NASA",
                 "fr": "NASA",
-                "es": "la NASA"
+                "es": "la NASA",
+                "de": "die NASA"
               }
             },
             {
@@ -7220,7 +7249,8 @@
               "text": {
                 "en": "Magnum Photos",
                 "fr": "Magnum Photos",
-                "es": "Magnum Photos (cooperativa)"
+                "es": "Magnum Photos (cooperativa)",
+                "de": "Magnum Photos (Kooperative)"
               }
             },
             {
@@ -7228,7 +7258,8 @@
               "text": {
                 "en": "Instagram",
                 "fr": "Instagram",
-                "es": "Instagram (red social)"
+                "es": "Instagram (red social)",
+                "de": "Instagram (soziales Netzwerk)"
               }
             }
           ],
@@ -7238,19 +7269,22 @@
           "explanation": {
             "en": "Magnum Photos (1947) was co-founded by Cartier-Bresson, Robert Capa, George Rodger and David “Chim” Seymour — a cooperative owned by photographers.",
             "fr": "Magnum Photos (1947) a été cofondée par Cartier-Bresson, Robert Capa, George Rodger et David « Chim » Seymour — une coopérative détenue par les photographes.",
-            "es": "Magnum Photos (1947) fue cofundada por Cartier-Bresson, Robert Capa, George Rodger y David «Chim» Seymour — una cooperativa propiedad de los fotógrafos."
+            "es": "Magnum Photos (1947) fue cofundada por Cartier-Bresson, Robert Capa, George Rodger y David «Chim» Seymour — una cooperativa propiedad de los fotógrafos.",
+            "de": "Magnum Photos (1947) wurde von Cartier-Bresson, Robert Capa, George Rodger und David „Chim“ Seymour mitgegründet — eine Kooperative im Besitz der Fotografen."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1470071459604-3b5ec3a7fe05.avif",
           "imageAlt": {
             "en": "Vintage photo albums",
             "fr": "Albums photo vintage",
-            "es": "Álbumes fotográficos vintage"
+            "es": "Álbumes fotográficos vintage",
+            "de": "Vintage-Fotoalben"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7259,7 +7293,8 @@
           "text": {
             "en": "Annie Leibovitz is best known for…",
             "fr": "Annie Leibovitz est surtout connue pour…",
-            "es": "Annie Leibovitz es conocida sobre todo por…"
+            "es": "Annie Leibovitz es conocida sobre todo por…",
+            "de": "Annie Leibovitz ist vor allem bekannt für…"
           },
           "answers": [
             {
@@ -7267,7 +7302,8 @@
               "text": {
                 "en": "Only architectural blueprints",
                 "fr": "Uniquement des plans d'architecture",
-                "es": "Solo planos de arquitectura"
+                "es": "Solo planos de arquitectura",
+                "de": "Nur Architekturpläne"
               }
             },
             {
@@ -7275,7 +7311,8 @@
               "text": {
                 "en": "Sports photo finish timing systems",
                 "fr": "Les systèmes de photo-finish sportifs",
-                "es": "Sistemas de foto-finish deportivos"
+                "es": "Sistemas de foto-finish deportivos",
+                "de": "Sport-Foto-Finish-Systeme"
               }
             },
             {
@@ -7283,7 +7320,8 @@
               "text": {
                 "en": "Iconic celebrity and cultural portraits",
                 "fr": "Des portraits iconiques de célébrités et de figures culturelles",
-                "es": "Retratos icónicos de celebridades y figuras culturales"
+                "es": "Retratos icónicos de celebridades y figuras culturales",
+                "de": "Ikonische Celebrity- und Kulturporträts"
               }
             },
             {
@@ -7291,7 +7329,8 @@
               "text": {
                 "en": "Inventing the first digital camera sensor",
                 "fr": "L'invention du premier capteur d'appareil numérique",
-                "es": "Inventar el primer sensor de cámara digital"
+                "es": "Inventar el primer sensor de cámara digital",
+                "de": "Die Erfindung des ersten digitalen Kamerasensors"
               }
             }
           ],
@@ -7301,19 +7340,22 @@
           "explanation": {
             "en": "Leibovitz’s work for Rolling Stone, Vanity Fair and beyond defined modern celebrity portraiture with cinematic staging.",
             "fr": "Le travail de Leibovitz pour Rolling Stone, Vanity Fair et au-delà a défini le portrait de célébrités moderne, très mis en scène.",
-            "es": "El trabajo de Leibovitz para Rolling Stone, Vanity Fair y más allá definió el retrato moderno de celebridades, muy escenificado."
+            "es": "El trabajo de Leibovitz para Rolling Stone, Vanity Fair y más allá definió el retrato moderno de celebridades, muy escenificado.",
+            "de": "Leibovitz’ Arbeit für Rolling Stone, Vanity Fair und darüber hinaus prägte das moderne Celebrity-Porträt — stark inszeniert und filmisch."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage camera — icons of photographic history",
             "fr": "Appareil vintage — icônes de l’histoire photo",
-            "es": "Cámara vintage — iconos de la historia fotográfica"
+            "es": "Cámara vintage — iconos de la historia fotográfica",
+            "de": "Vintage-Kamera — Ikonen der Fotogeschichte"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7322,7 +7364,8 @@
           "text": {
             "en": "The daguerreotype (popularized by Louis Daguerre) was…",
             "fr": "Le daguerréotype (popularisé par Louis Daguerre) était…",
-            "es": "El daguerrotipo (popularizado por Louis Daguerre) era…"
+            "es": "El daguerrotipo (popularizado por Louis Daguerre) era…",
+            "de": "Die Daguerreotypie (popularisiert durch Louis Daguerre) war…"
           },
           "answers": [
             {
@@ -7330,7 +7373,8 @@
               "text": {
                 "en": "A RAW file format from 2010",
                 "fr": "Un format de fichier RAW de 2010",
-                "es": "Un formato de archivo RAW de 2010"
+                "es": "Un formato de archivo RAW de 2010",
+                "de": "Ein RAW-Dateiformat von 2010"
               }
             },
             {
@@ -7338,7 +7382,8 @@
               "text": {
                 "en": "An early photographic process producing a unique image on a silvered plate",
                 "fr": "Un procédé photographique précoce produisant une image unique sur plaque argentée",
-                "es": "Un proceso fotográfico temprano que producía una imagen única sobre placa plateada"
+                "es": "Un proceso fotográfico temprano que producía una imagen única sobre placa plateada",
+                "de": "Ein frühes fotografisches Verfahren mit einem Unikat auf versilberter Platte"
               }
             },
             {
@@ -7346,7 +7391,8 @@
               "text": {
                 "en": "A type of modern zoom lens",
                 "fr": "Un type de zoom moderne",
-                "es": "Un tipo de zoom moderno"
+                "es": "Un tipo de zoom moderno",
+                "de": "Eine Art moderner Zoom"
               }
             },
             {
@@ -7354,7 +7400,8 @@
               "text": {
                 "en": "A social network for photographers",
                 "fr": "Un réseau social pour photographes",
-                "es": "Una red social para fotógrafos"
+                "es": "Una red social para fotógrafos",
+                "de": "Ein soziales Netzwerk für Fotografen"
               }
             }
           ],
@@ -7364,19 +7411,22 @@
           "explanation": {
             "en": "Announced publicly in 1839, the daguerreotype created a detailed unique positive on a polished silver-coated copper plate — a milestone for popular photography.",
             "fr": "Annoncé publiquement en 1839, le daguerréotype créait un positif unique et détaillé sur plaque de cuivre argentée — un jalon pour la photo grand public.",
-            "es": "Anunciado públicamente en 1839, el daguerrotipo creaba un positivo único y detallado sobre placa de cobre plateada — un hito para la fotografía popular."
+            "es": "Anunciado públicamente en 1839, el daguerrotipo creaba un positivo único y detallado sobre placa de cobre plateada — un hito para la fotografía popular.",
+            "de": "Öffentlich angekündigt 1839, erzeugte die Daguerreotypie ein detailliertes Unikatpositiv auf versilberter Kupferplatte — Meilenstein der populären Fotografie."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage camera suggesting early photographic processes",
             "fr": "Appareil vintage évoquant les premiers procédés photo",
-            "es": "Cámara vintage que evoca los primeros procesos fotográficos"
+            "es": "Cámara vintage que evoca los primeros procesos fotográficos",
+            "de": "Vintage-Kamera, die frühe fotografische Verfahren evoziert"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7385,7 +7435,8 @@
           "text": {
             "en": "Who invented the Kodak Brownie camera?",
             "fr": "Qui a inventé l'appareil Kodak Brownie ?",
-            "es": "¿Quién inventó la cámara Kodak Brownie?"
+            "es": "¿Quién inventó la cámara Kodak Brownie?",
+            "de": "Wer erfand die Kodak Brownie-Kamera?"
           },
           "answers": [
             {
@@ -7393,7 +7444,8 @@
               "text": {
                 "en": "George Eastman/Kodak company",
                 "fr": "George Eastman/L'entreprise Kodak",
-                "es": "George Eastman / la empresa Kodak"
+                "es": "George Eastman / la empresa Kodak",
+                "de": "George Eastman / die Firma Kodak"
               }
             },
             {
@@ -7401,7 +7453,8 @@
               "text": {
                 "en": "Louis Daguerre",
                 "fr": "Louis Daguerre",
-                "es": "Louis Daguerre (daguerrotipo)"
+                "es": "Louis Daguerre (daguerrotipo)",
+                "de": "Louis Daguerre (Daguerreotypie)"
               }
             },
             {
@@ -7409,7 +7462,8 @@
               "text": {
                 "en": "Ansel Adams",
                 "fr": "Ansel Adams",
-                "es": "Ansel Adams (paisajista)"
+                "es": "Ansel Adams (paisajista)",
+                "de": "Ansel Adams (Landschaft)"
               }
             },
             {
@@ -7417,7 +7471,8 @@
               "text": {
                 "en": "Henri Cartier-Bresson",
                 "fr": "Henri Cartier-Bresson",
-                "es": "Henri Cartier-Bresson (reportaje)"
+                "es": "Henri Cartier-Bresson (reportaje)",
+                "de": "Henri Cartier-Bresson (Reportage)"
               }
             }
           ],
@@ -7427,19 +7482,22 @@
           "explanation": {
             "en": "Released in 1900, the Brownie made photography accessible to children and amateurs with its $1 price tag.",
             "fr": "Lancé en 1900, le Brownie a rendu la photographie accessible aux enfants et amateurs avec son prix de 1$.",
-            "es": "Lanzado en 1900, el Brownie hizo la fotografía accesible a niños y aficionados con su precio de 1$."
+            "es": "Lanzado en 1900, el Brownie hizo la fotografía accesible a niños y aficionados con su precio de 1$.",
+            "de": "1900 eingeführt, machte die Brownie Fotografie für Kinder und Amateure zugänglich — zum Preis von 1 Dollar."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1452587925148-ce544e77e70d.avif",
           "imageAlt": {
             "en": "Classic camera body — democratized snapshot culture",
             "fr": "Boîtier classique — culture du cliché démocratisé",
-            "es": "Cuerpo de cámara clásico — cultura del snapshot democratizado"
+            "es": "Cuerpo de cámara clásico — cultura del snapshot democratizado",
+            "de": "Klassisches Kameragehäuse — demokratisierte Snapshot-Kultur"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7448,7 +7506,8 @@
           "text": {
             "en": "What was the first digital camera invented by?",
             "fr": "Qui a inventé le premier appareil photo numérique ?",
-            "es": "¿Quién inventó la primera cámara digital?"
+            "es": "¿Quién inventó la primera cámara digital?",
+            "de": "Wer erfand die erste Digitalkamera?"
           },
           "answers": [
             {
@@ -7456,7 +7515,8 @@
               "text": {
                 "en": "Steven Sasson at Kodak in 1975",
                 "fr": "Steven Sasson chez Kodak en 1975",
-                "es": "Steven Sasson en Kodak en 1975"
+                "es": "Steven Sasson en Kodak en 1975",
+                "de": "Steven Sasson bei Kodak 1975"
               }
             },
             {
@@ -7464,7 +7524,8 @@
               "text": {
                 "en": "Steve Jobs at Apple",
                 "fr": "Steve Jobs chez Apple",
-                "es": "Steve Jobs en Apple"
+                "es": "Steve Jobs en Apple",
+                "de": "Steve Jobs bei Apple"
               }
             },
             {
@@ -7472,7 +7533,8 @@
               "text": {
                 "en": "NASA for space photography",
                 "fr": "La NASA pour la photographie spatiale",
-                "es": "la NASA para fotografía espacial"
+                "es": "la NASA para fotografía espacial",
+                "de": "die NASA für Weltraumfotografie"
               }
             },
             {
@@ -7480,7 +7542,8 @@
               "text": {
                 "en": "Canon in Japan",
                 "fr": "Canon au Japon",
-                "es": "Canon en Japón"
+                "es": "Canon en Japón",
+                "de": "Canon in Japan (Kamerahersteller)"
               }
             }
           ],
@@ -7490,7 +7553,8 @@
           "explanation": {
             "en": "Steven Sasson's Kodak prototype weighed 8 pounds, took 23 seconds to capture an image, and recorded to cassette tape.",
             "fr": "Le prototype Kodak de Steven Sasson pesait 3,6 kg, prenait 23 secondes pour capturer une image et enregistrait sur cassette.",
-            "es": "El prototipo Kodak de Steven Sasson pesaba unos 3,6 kg, tardaba 23 segundos en capturar una imagen y grababa en cassette."
+            "es": "El prototipo Kodak de Steven Sasson pesaba unos 3,6 kg, tardaba 23 segundos en capturar una imagen y grababa en cassette.",
+            "de": "Steven Sassons Kodak-Prototyp wog etwa 3,6 kg, brauchte 23 Sekunden für ein Bild und speicherte auf Kassette."
           },
           "difficulty": "medium"
         },
@@ -7500,7 +7564,8 @@
           "text": {
             "en": "Which photographers documented the Great Depression?",
             "fr": "Quels photographes ont documenté la Grande Dépression ?",
-            "es": "¿Qué fotógrafos documentaron la Gran Depresión?"
+            "es": "¿Qué fotógrafos documentaron la Gran Depresión?",
+            "de": "Welche Fotografen dokumentierten die Große Depression?"
           },
           "answers": [
             {
@@ -7508,7 +7573,8 @@
               "text": {
                 "en": "Richard Avedon",
                 "fr": "Richard Avedon",
-                "es": "Richard Avedon (moda/retrato)"
+                "es": "Richard Avedon (moda/retrato)",
+                "de": "Richard Avedon (Mode/Porträt)"
               }
             },
             {
@@ -7516,7 +7582,8 @@
               "text": {
                 "en": "Walker Evans",
                 "fr": "Walker Evans",
-                "es": "Walker Evans (documental)"
+                "es": "Walker Evans (documental)",
+                "de": "Walker Evans (Dokumentar)"
               }
             },
             {
@@ -7524,7 +7591,8 @@
               "text": {
                 "en": "Arthur Rothstein",
                 "fr": "Arthur Rothstein",
-                "es": "Arthur Rothstein (FSA)"
+                "es": "Arthur Rothstein (FSA)",
+                "de": "Arthur Rothstein (FSA)"
               }
             },
             {
@@ -7532,7 +7600,8 @@
               "text": {
                 "en": "Dorothea Lange",
                 "fr": "Dorothea Lange",
-                "es": "Dorothea Lange (FSA)"
+                "es": "Dorothea Lange (FSA)",
+                "de": "Dorothea Lange (FSA)"
               }
             }
           ],
@@ -7544,19 +7613,22 @@
           "explanation": {
             "en": "Lange ('Migrant Mother'), Evans, and Rothstein photographed Depression-era poverty for the Farm Security Administration.",
             "fr": "Lange ('Mère migrante'), Evans et Rothstein ont photographié la pauvreté de l'ère Dépression pour la Farm Security Administration.",
-            "es": "Lange («Madre migrante»), Evans y Rothstein fotografaron la pobreza de la era de la Depresión para la Farm Security Administration."
+            "es": "Lange («Madre migrante»), Evans y Rothstein fotografaron la pobreza de la era de la Depresión para la Farm Security Administration.",
+            "de": "Lange („Migrant Mother“), Evans und Rothstein fotografierten Armut der Depressionszeit für die Farm Security Administration."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Documentary landscape mood — Depression-era photo tradition",
             "fr": "Paysage documentaire — tradition photo des années de crise",
-            "es": "Ambiente de paisaje documental — tradición fotográfica de la crisis"
+            "es": "Ambiente de paisaje documental — tradición fotográfica de la crisis",
+            "de": "Dokumentarische Landschaftsstimmung — Tradition der Krisenfotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7565,7 +7637,8 @@
           "text": {
             "en": "What is the significance of 'The Family of Man' exhibition?",
             "fr": "Quelle est l'importance de l'exposition 'The Family of Man' ?",
-            "es": "¿Cuál es la importancia de la exposición «The Family of Man»?"
+            "es": "¿Cuál es la importancia de la exposición «The Family of Man»?",
+            "de": "Welche Bedeutung hat die Ausstellung „The Family of Man“?"
           },
           "answers": [
             {
@@ -7573,7 +7646,8 @@
               "text": {
                 "en": "It introduced digital photography",
                 "fr": "Elle a introduit la photographie numérique",
-                "es": "Introdujo la fotografía digital"
+                "es": "Introdujo la fotografía digital",
+                "de": "Sie führte die Digitalfotografie ein"
               }
             },
             {
@@ -7581,7 +7655,8 @@
               "text": {
                 "en": "It was the first fashion show",
                 "fr": "C'était le premier défilé de mode",
-                "es": "Fue el primer desfile de moda"
+                "es": "Fue el primer desfile de moda",
+                "de": "Sie war die erste Modenschau"
               }
             },
             {
@@ -7589,7 +7664,8 @@
               "text": {
                 "en": "It was the most visited photographic exhibition in history",
                 "fr": "C'était l'exposition photographique la plus visitée de l'histoire",
-                "es": "Fue la exposición fotográfica más visitada de la historia"
+                "es": "Fue la exposición fotográfica más visitada de la historia",
+                "de": "Sie war die meistbesuchte Fotoausstellung der Geschichte"
               }
             },
             {
@@ -7597,7 +7673,8 @@
               "text": {
                 "en": "It showcased only landscape photography",
                 "fr": "Elle présentait uniquement de la photographie de paysage",
-                "es": "Mostraba solo fotografía de paisaje"
+                "es": "Mostraba solo fotografía de paisaje",
+                "de": "Sie zeigte nur Landschaftsfotografie"
               }
             }
           ],
@@ -7607,7 +7684,8 @@
           "explanation": {
             "en": "Curated by Edward Steichen in 1955, it traveled worldwide reaching 9 million visitors, celebrating universal human experiences.",
             "fr": "Curatée par Edward Steichen en 1955, elle a voyagé dans le monde entier touchant 9 millions de visiteurs, célébrant les expériences humaines universelles.",
-            "es": "Comisariada por Edward Steichen en 1955, viajó por el mundo alcanzando 9 millones de visitantes, celebrando experiencias humanas universales."
+            "es": "Comisariada por Edward Steichen en 1955, viajó por el mundo alcanzando 9 millones de visitantes, celebrando experiencias humanas universales.",
+            "de": "Kuratiert von Edward Steichen 1955, reiste sie weltweit und erreichte 9 Millionen Besucher — Feier universeller menschlicher Erfahrungen."
           },
           "difficulty": "medium"
         },
@@ -7617,7 +7695,8 @@
           "text": {
             "en": "Who pioneered photojournalism with the Photo-Secession group?",
             "fr": "Qui a initié le photojournalisme avec le groupe Photo-Secession ?",
-            "es": "¿Quién impulsó la fotografía como arte con el grupo Photo-Secession?"
+            "es": "¿Quién impulsó la fotografía como arte con el grupo Photo-Secession?",
+            "de": "Wer förderte Fotografie als Kunst mit der Gruppe Photo-Secession?"
           },
           "answers": [
             {
@@ -7625,7 +7704,8 @@
               "text": {
                 "en": "Pablo Picasso",
                 "fr": "Pablo Picasso",
-                "es": "Pablo Picasso (pintor)"
+                "es": "Pablo Picasso (pintor)",
+                "de": "Pablo Picasso (Maler)"
               }
             },
             {
@@ -7633,7 +7713,8 @@
               "text": {
                 "en": "Alfred Stieglitz",
                 "fr": "Alfred Stieglitz",
-                "es": "Alfred Stieglitz (Photo-Secession)"
+                "es": "Alfred Stieglitz (Photo-Secession)",
+                "de": "Alfred Stieglitz (Photo-Secession)"
               }
             },
             {
@@ -7641,7 +7722,8 @@
               "text": {
                 "en": "Thomas Edison",
                 "fr": "Thomas Edison",
-                "es": "Thomas Edison (inventor)"
+                "es": "Thomas Edison (inventor)",
+                "de": "Thomas Edison (Erfinder)"
               }
             },
             {
@@ -7649,7 +7731,8 @@
               "text": {
                 "en": "Walt Disney",
                 "fr": "Walt Disney",
-                "es": "Walt Disney (animación)"
+                "es": "Walt Disney (animación)",
+                "de": "Walt Disney (Animation)"
               }
             }
           ],
@@ -7659,7 +7742,8 @@
           "explanation": {
             "en": "Stieglitz promoted photography as fine art through his gallery '291' and publications like Camera Work.",
             "fr": "Stieglitz a promu la photographie comme beaux-arts à travers sa galerie '291' et des publications comme Camera Work.",
-            "es": "Stieglitz promovió la fotografía como bellas artes a través de su galería «291» y publicaciones como Camera Work."
+            "es": "Stieglitz promovió la fotografía como bellas artes a través de su galería «291» y publicaciones como Camera Work.",
+            "de": "Stieglitz förderte Fotografie als Bildende Kunst über seine Galerie „291“ und Publikationen wie Camera Work."
           },
           "difficulty": "hard"
         },
@@ -7669,7 +7753,8 @@
           "text": {
             "en": "Which iconic war photographs shaped public opinion?",
             "fr": "Quelles photographies de guerre iconiques ont façonné l'opinion publique ?",
-            "es": "¿Qué fotografías de guerra icónicas moldearon la opinión pública?"
+            "es": "¿Qué fotografías de guerra icónicas moldearon la opinión pública?",
+            "de": "Welche ikonischen Kriegsfotos prägten die öffentliche Meinung?"
           },
           "answers": [
             {
@@ -7677,7 +7762,8 @@
               "text": {
                 "en": "Migrant Mother (Dorothea Lange)",
                 "fr": "Mère migrante (Dorothea Lange)",
-                "es": "Madre migrante (Dorothea Lange)"
+                "es": "Madre migrante (Dorothea Lange)",
+                "de": "Migrant Mother — Dorothea Lange"
               }
             },
             {
@@ -7685,7 +7771,8 @@
               "text": {
                 "en": "Earthrise (William Anders, Apollo 8)",
                 "fr": "Levée de Terre (William Anders, Apollo 8)",
-                "es": "Salida de la Tierra (William Anders, Apolo 8)"
+                "es": "Salida de la Tierra (William Anders, Apolo 8)",
+                "de": "Earthrise — William Anders (Apollo 8)"
               }
             },
             {
@@ -7693,7 +7780,8 @@
               "text": {
                 "en": "Tank Man (unknown photographer, Tiananmen)",
                 "fr": "Homme au char (photographe inconnu, Tiananmen)",
-                "es": "Hombre del tanque (fotógrafo desconocido, Tiananmén)"
+                "es": "Hombre del tanque (fotógrafo desconocido, Tiananmén)",
+                "de": "Tank Man — unbekannter Fotograf (Tiananmen)"
               }
             },
             {
@@ -7701,7 +7789,8 @@
               "text": {
                 "en": "Napalm Girl (Nick Ut, Vietnam War)",
                 "fr": "Fille au napalm (Nick Ut, Guerre du Vietnam)",
-                "es": "Niña del napalm (Nick Ut, guerra de Vietnam)"
+                "es": "Niña del napalm (Nick Ut, guerra de Vietnam)",
+                "de": "Napalm Girl — Nick Ut (Vietnamkrieg)"
               }
             }
           ],
@@ -7712,7 +7801,8 @@
           "explanation": {
             "en": "Napalm Girl and Tank Man had direct impacts on war perception and policy. Migrant Mother affected Depression response, Earthrise environmental awareness.",
             "fr": "Fille au napalm et Homme au char ont eu un impact direct sur la perception de la guerre et les politiques. Mère migrante a affecté la réponse à la Dépression, Levée de Terre la sensibilisation environnementale.",
-            "es": "Niña del napalm y Hombre del tanque tuvieron impacto directo en la percepción de la guerra y las políticas. Madre migrante afectó la respuesta a la Depresión; Salida de la Tierra, la conciencia ambiental."
+            "es": "Niña del napalm y Hombre del tanque tuvieron impacto directo en la percepción de la guerra y las políticas. Madre migrante afectó la respuesta a la Depresión; Salida de la Tierra, la conciencia ambiental.",
+            "de": "Napalm Girl und Tank Man wirkten direkt auf Kriegswahrnehmung und Politik. Migrant Mother beeinflusste die Depressionshilfe; Earthrise das Umweltbewusstsein."
           },
           "difficulty": "medium"
         },
@@ -7722,7 +7812,8 @@
           "text": {
             "en": "What is the Zone System developed by?",
             "fr": "Quel est le Système de Zones développé par ?",
-            "es": "¿Quién desarrolló el Sistema de Zonas?"
+            "es": "¿Quién desarrolló el Sistema de Zonas?",
+            "de": "Wer entwickelte das Zone System?"
           },
           "answers": [
             {
@@ -7730,7 +7821,8 @@
               "text": {
                 "en": "Steve Jobs and Steve Wozniak",
                 "fr": "Steve Jobs et Steve Wozniak",
-                "es": "Steve Jobs y Steve Wozniak"
+                "es": "Steve Jobs y Steve Wozniak",
+                "de": "Steve Jobs und Steve Wozniak"
               }
             },
             {
@@ -7738,7 +7830,8 @@
               "text": {
                 "en": "Henry Leibovitz and Annie Adams",
                 "fr": "Henry Leibovitz et Annie Adams",
-                "es": "Henry Leibovitz y Annie Adams"
+                "es": "Henry Leibovitz y Annie Adams",
+                "de": "Henry Leibovitz und Annie Adams"
               }
             },
             {
@@ -7746,7 +7839,8 @@
               "text": {
                 "en": "Cartier-Bresson and Capa",
                 "fr": "Cartier-Bresson et Capa",
-                "es": "Cartier-Bresson y Capa (reportaje)"
+                "es": "Cartier-Bresson y Capa (reportaje)",
+                "de": "Cartier-Bresson und Capa (Reportage)"
               }
             },
             {
@@ -7754,7 +7848,8 @@
               "text": {
                 "en": "Ansel Adams and Fred Archer",
                 "fr": "Ansel Adams et Fred Archer",
-                "es": "Ansel Adams y Fred Archer (Sistema de Zonas)"
+                "es": "Ansel Adams y Fred Archer (Sistema de Zonas)",
+                "de": "Ansel Adams und Fred Archer (Zone System)"
               }
             }
           ],
@@ -7764,19 +7859,22 @@
           "explanation": {
             "en": "The Zone System divides tonal values into 11 zones (0-black to X-white), giving photographers precise control over exposure and development.",
             "fr": "Le Système de Zones divise les valeurs tonales en 11 zones (0-noir à X-blanc), donnant aux photographes un contrôle précis sur l'exposition et le développement.",
-            "es": "El Sistema de Zonas divide los valores tonales en 11 zonas (0-negro a X-blanco), dando a los fotógrafos un control preciso de la exposición y el revelado."
+            "es": "El Sistema de Zonas divide los valores tonales en 11 zonas (0-negro a X-blanco), dando a los fotógrafos un control preciso de la exposición y el revelado.",
+            "de": "Das Zone System teilt Tonwerte in 11 Zonen (0-Schwarz bis X-Weiß) und gibt präzise Kontrolle über Belichtung und Entwicklung."
           },
           "difficulty": "hard",
           "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
           "imageAlt": {
             "en": "Dramatic tonal landscape — Zone System territory",
             "fr": "Paysage aux tons dramatiques — terrain du Zone System",
-            "es": "Paisaje de tonos dramáticos — territorio del Sistema de Zonas"
+            "es": "Paisaje de tonos dramáticos — territorio del Sistema de Zonas",
+            "de": "Dramatische Tonlandschaft — Terrain des Zone Systems"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7785,7 +7883,8 @@
           "text": {
             "en": "Who is considered the father of modern photography?",
             "fr": "Qui est considéré comme le père de la photographie moderne ?",
-            "es": "¿Quién se considera el padre de la fotografía moderna?"
+            "es": "¿Quién se considera el padre de la fotografía moderna?",
+            "de": "Wer gilt als Vater der modernen Fotografie?"
           },
           "answers": [
             {
@@ -7793,7 +7892,8 @@
               "text": {
                 "en": "Leonardo da Vinci",
                 "fr": "Léonard de Vinci",
-                "es": "Leonardo da Vinci (artista)"
+                "es": "Leonardo da Vinci (artista)",
+                "de": "Leonardo da Vinci (Künstler)"
               }
             },
             {
@@ -7801,7 +7901,8 @@
               "text": {
                 "en": "Albert Einstein",
                 "fr": "Albert Einstein",
-                "es": "Albert Einstein (físico)"
+                "es": "Albert Einstein (físico)",
+                "de": "Albert Einstein (Physiker)"
               }
             },
             {
@@ -7809,7 +7910,8 @@
               "text": {
                 "en": "Thomas Edison",
                 "fr": "Thomas Edison",
-                "es": "Thomas Edison (inventor)"
+                "es": "Thomas Edison (inventor)",
+                "de": "Thomas Edison (Erfinder)"
               }
             },
             {
@@ -7817,7 +7919,8 @@
               "text": {
                 "en": "Alfred Stieglitz or Eugène Atget (debated)",
                 "fr": "Alfred Stieglitz ou Eugène Atget (débat)",
-                "es": "Alfred Stieglitz o Eugène Atget (en debate)"
+                "es": "Alfred Stieglitz o Eugène Atget (en debate)",
+                "de": "Alfred Stieglitz oder Eugène Atget (umstritten)"
               }
             }
           ],
@@ -7827,7 +7930,8 @@
           "explanation": {
             "en": "Stieglitz elevated photography to art; Atget documented Paris. Both influenced modern photography's evolution significantly.",
             "fr": "Stieglitz a élevé la photographie au rang d'art ; Atget a documenté Paris. Tous deux ont significativement influencé l'évolution de la photographie moderne.",
-            "es": "Stieglitz elevó la fotografía al rango de arte; Atget documentó París. Ambos influyeron mucho en la evolución de la fotografía moderna."
+            "es": "Stieglitz elevó la fotografía al rango de arte; Atget documentó París. Ambos influyeron mucho en la evolución de la fotografía moderna.",
+            "de": "Stieglitz erhob Fotografie zur Kunst; Atget dokumentierte Paris. Beide prägten die Entwicklung der modernen Fotografie stark."
           },
           "difficulty": "medium"
         },
@@ -7837,7 +7941,8 @@
           "text": {
             "en": "What impact did Instagram have on photography?",
             "fr": "Quel impact Instagram a-t-il eu sur la photographie ?",
-            "es": "¿Qué impacto tuvo Instagram en la fotografía?"
+            "es": "¿Qué impacto tuvo Instagram en la fotografía?",
+            "de": "Welchen Einfluss hatte Instagram auf die Fotografie?"
           },
           "answers": [
             {
@@ -7845,7 +7950,8 @@
               "text": {
                 "en": "Eliminated the need for cameras",
                 "fr": "Éliminé le besoin d'appareils photo",
-                "es": "Eliminó la necesidad de cámaras"
+                "es": "Eliminó la necesidad de cámaras",
+                "de": "Es machte Kameras überflüssig"
               }
             },
             {
@@ -7853,7 +7959,8 @@
               "text": {
                 "en": "Popularized square-format images",
                 "fr": "Popularisé les images au format carré",
-                "es": "Popularizó las imágenes en formato cuadrado"
+                "es": "Popularizó las imágenes en formato cuadrado",
+                "de": "Es popularisierte quadratische Formate"
               }
             },
             {
@@ -7861,7 +7968,8 @@
               "text": {
                 "en": "Made filters and aesthetics mainstream",
                 "fr": "Rendu les filtres et l'esthétique grand public",
-                "es": "Hizo mainstream los filtros y la estética"
+                "es": "Hizo mainstream los filtros y la estética",
+                "de": "Es machte Filter und Ästhetik mainstream"
               }
             },
             {
@@ -7869,7 +7977,8 @@
               "text": {
                 "en": "Democratized photography and sharing",
                 "fr": "Démocratisé la photographie et le partage",
-                "es": "Democratizó la fotografía y el compartir"
+                "es": "Democratizó la fotografía y el compartir",
+                "de": "Es demokratisierte Fotografie und Teilen"
               }
             }
           ],
@@ -7881,19 +7990,22 @@
           "explanation": {
             "en": "Instagram transformed photography into a social, visual language. Smartphones replaced dedicated cameras for casual users.",
             "fr": "Instagram a transformé la photographie en un langage visuel et social. Les smartphones ont remplacé les appareils dédiés pour les utilisateurs occasionnels.",
-            "es": "Instagram transformó la fotografía en un lenguaje visual y social. Los smartphones sustituyeron las cámaras dedicadas para usuarios ocasionales."
+            "es": "Instagram transformó la fotografía en un lenguaje visual y social. Los smartphones sustituyeron las cámaras dedicadas para usuarios ocasionales.",
+            "de": "Instagram verwandelte Fotografie in eine soziale Bildsprache. Smartphones ersetzten Dedicated Cameras für Gelegenheitsnutzer."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1611162616305-c69b3fa7fbe0.avif",
           "imageAlt": {
             "en": "Social media icon — Instagram’s impact on photography",
             "fr": "Icône de réseau social — impact d’Instagram sur la photo",
-            "es": "Icono de red social — impacto de Instagram en la fotografía"
+            "es": "Icono de red social — impacto de Instagram en la fotografía",
+            "de": "Social-Media-Ikone — Einfluss von Instagram auf die Fotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7902,7 +8014,8 @@
           "text": {
             "en": "Who captured the 'V-J Day in Times Square' kiss?",
             "fr": "Qui a capturé le baiser du 'Jour de la Victoire sur le Japon à Times Square' ?",
-            "es": "¿Quién capturó el beso del «Día de la Victoria sobre Japón en Times Square»?"
+            "es": "¿Quién capturó el beso del «Día de la Victoria sobre Japón en Times Square»?",
+            "de": "Wer fotografierte den Kuss am „V-J Day in Times Square“?"
           },
           "answers": [
             {
@@ -7910,7 +8023,8 @@
               "text": {
                 "en": "Alfred Eisenstaedt",
                 "fr": "Alfred Eisenstaedt",
-                "es": "Alfred Eisenstaedt (Life)"
+                "es": "Alfred Eisenstaedt (Life)",
+                "de": "Alfred Eisenstaedt (Life)"
               }
             },
             {
@@ -7918,7 +8032,8 @@
               "text": {
                 "en": "Henri Cartier-Bresson",
                 "fr": "Henri Cartier-Bresson",
-                "es": "Henri Cartier-Bresson (Magnum)"
+                "es": "Henri Cartier-Bresson (Magnum)",
+                "de": "Henri Cartier-Bresson (Magnum)"
               }
             },
             {
@@ -7926,7 +8041,8 @@
               "text": {
                 "en": "Annie Leibovitz",
                 "fr": "Annie Leibovitz",
-                "es": "Annie Leibovitz (retrato)"
+                "es": "Annie Leibovitz (retrato)",
+                "de": "Annie Leibovitz (Porträt)"
               }
             },
             {
@@ -7934,7 +8050,8 @@
               "text": {
                 "en": "Robert Capa",
                 "fr": "Robert Capa",
-                "es": "Robert Capa (guerra)"
+                "es": "Robert Capa (guerra)",
+                "de": "Robert Capa (Krieg)"
               }
             }
           ],
@@ -7944,19 +8061,22 @@
           "explanation": {
             "en": "Published in Life magazine in 1945, this iconic image symbolized relief and joy at WWII's end, though the subjects' identities remain unknown.",
             "fr": "Publié dans Life magazine en 1945, cette image iconique symbolise le soulagement et la joie à la fin de la Seconde Guerre mondiale, bien que les identités des sujets restent inconnues.",
-            "es": "Publicada en Life en 1945, esta imagen icónica simboliza el alivio y la alegría al final de la Segunda Guerra Mundial, aunque las identidades de los sujetos siguen desconocidas."
+            "es": "Publicada en Life en 1945, esta imagen icónica simboliza el alivio y la alegría al final de la Segunda Guerra Mundial, aunque las identidades de los sujetos siguen desconocidas.",
+            "de": "1945 in Life veröffentlicht, symbolisiert dieses ikonische Bild Erleichterung und Freude am Ende des Zweiten Weltkriegs — die Identitäten der Personen bleiben unbekannt."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Crowded urban square — iconic photojournalism moments",
             "fr": "Place urbaine bondée — moments iconiques du photojournalisme",
-            "es": "Plaza urbana abarrotada — momentos icónicos del fotoperiodismo"
+            "es": "Plaza urbana abarrotada — momentos icónicos del fotoperiodismo",
+            "de": "Belebter Stadtplatz — ikonische Momente des Fotojournalismus"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -7965,7 +8085,8 @@
           "text": {
             "en": "What was the first photograph of a human face?",
             "fr": "Quelle était la première photographie d'un visage humain ?",
-            "es": "¿Cuál fue la primera fotografía de un rostro humano?"
+            "es": "¿Cuál fue la primera fotografía de un rostro humano?",
+            "de": "Was war die erste Fotografie eines menschlichen Gesichts?"
           },
           "answers": [
             {
@@ -7973,7 +8094,8 @@
               "text": {
                 "en": "Niépce's window view",
                 "fr": "La vue de fenêtre de Niépce",
-                "es": "La vista de la ventana de Niépce"
+                "es": "La vista de la ventana de Niépce",
+                "de": "Niépces Fensterblick"
               }
             },
             {
@@ -7981,7 +8103,8 @@
               "text": {
                 "en": "Ansel Adams' self-portrait",
                 "fr": "L'autoportrait d'Ansel Adams",
-                "es": "El autorretrato de Ansel Adams"
+                "es": "El autorretrato de Ansel Adams",
+                "de": "Ansel Adams’ Selbstporträt"
               }
             },
             {
@@ -7989,7 +8112,8 @@
               "text": {
                 "en": "Self-portrait by Robert Cornelius (1839)",
                 "fr": "Autoportrait par Robert Cornelius (1839)",
-                "es": "Autorretrato de Robert Cornelius (1839)"
+                "es": "Autorretrato de Robert Cornelius (1839)",
+                "de": "Selbstporträt von Robert Cornelius (1839)"
               }
             },
             {
@@ -7997,7 +8121,8 @@
               "text": {
                 "en": "Portrait of Louis Daguerre",
                 "fr": "Portrait de Louis Daguerre",
-                "es": "Retrato de Louis Daguerre"
+                "es": "Retrato de Louis Daguerre",
+                "de": "Porträt von Louis Daguerre"
               }
             }
           ],
@@ -8007,7 +8132,8 @@
           "explanation": {
             "en": "Robert Cornelius' daguerreotype from 1839 is considered the first American self-portrait and first photograph of a person.",
             "fr": "Le daguerréotype de Robert Cornelius de 1839 est considéré comme le premier autoportrait américain et la première photographie d'une personne.",
-            "es": "El daguerrotipo de Robert Cornelius de 1839 se considera el primer autorretrato estadounidense y la primera fotografía de una persona."
+            "es": "El daguerrotipo de Robert Cornelius de 1839 se considera el primer autorretrato estadounidense y la primera fotografía de una persona.",
+            "de": "Robert Cornelius’ Daguerreotypie von 1839 gilt als erstes amerikanisches Selbstporträt und erste Fotografie einer Person."
           },
           "difficulty": "medium"
         },
@@ -8017,7 +8143,8 @@
           "text": {
             "en": "Which photographers are associated with the Color Revival in the 1970s-80s?",
             "fr": "Quels photographes sont associés à la Renaissance de la Couleur dans les années 1970-80 ?",
-            "es": "¿Qué fotógrafos se asocian al Renacimiento del color en los años 1970-80?"
+            "es": "¿Qué fotógrafos se asocian al Renacimiento del color en los años 1970-80?",
+            "de": "Welche Fotografen werden mit dem Color Revival der 1970er–80er verbunden?"
           },
           "answers": [
             {
@@ -8025,7 +8152,8 @@
               "text": {
                 "en": "William Eggleston",
                 "fr": "William Eggleston",
-                "es": "William Eggleston (color)"
+                "es": "William Eggleston (color)",
+                "de": "William Eggleston (Farbe)"
               }
             },
             {
@@ -8033,7 +8161,8 @@
               "text": {
                 "en": "Ansel Adams",
                 "fr": "Ansel Adams",
-                "es": "Ansel Adams (B/N paisajes)"
+                "es": "Ansel Adams (B/N paisajes)",
+                "de": "Ansel Adams (SW-Landschaften)"
               }
             },
             {
@@ -8041,7 +8170,8 @@
               "text": {
                 "en": "Stephen Shore",
                 "fr": "Stephen Shore",
-                "es": "Stephen Shore (color)"
+                "es": "Stephen Shore (color)",
+                "de": "Stephen Shore (Farbe)"
               }
             },
             {
@@ -8049,7 +8179,8 @@
               "text": {
                 "en": "Saul Leiter",
                 "fr": "Saul Leiter",
-                "es": "Saul Leiter (color)"
+                "es": "Saul Leiter (color)",
+                "de": "Saul Leiter (Farbe)"
               }
             }
           ],
@@ -8061,7 +8192,8 @@
           "explanation": {
             "en": "These artists elevated color photography from commercial to fine art. Eggleston's 1976 MoMA exhibition was pivotal.",
             "fr": "Ces artistes ont élevé la photographie couleur du commercial aux beaux-arts. L'exposition MoMA d'Eggleston en 1976 fut pivotale.",
-            "es": "Estos artistas elevaron la fotografía en color de lo comercial a las bellas artes. La exposición de Eggleston en el MoMA en 1976 fue pivotal."
+            "es": "Estos artistas elevaron la fotografía en color de lo comercial a las bellas artes. La exposición de Eggleston en el MoMA en 1976 fue pivotal.",
+            "de": "Diese Künstler erhoben Farbfotografie vom Kommerz zur Bildenden Kunst. Egglestons MoMA-Ausstellung 1976 war wegweisend."
           },
           "difficulty": "hard"
         },
@@ -8071,7 +8203,8 @@
           "text": {
             "en": "What is the significance of 'Photographic History Collection' at Smithsonian?",
             "fr": "Quelle est l'importance de la 'Collection d'Histoire Photographique' au Smithsonian ?",
-            "es": "¿Cuál es la importancia de la «Photographic History Collection» del Smithsonian?"
+            "es": "¿Cuál es la importancia de la «Photographic History Collection» del Smithsonian?",
+            "de": "Welche Bedeutung hat die „Photographic History Collection“ des Smithsonian?"
           },
           "answers": [
             {
@@ -8079,7 +8212,8 @@
               "text": {
                 "en": "Focused on fashion photography",
                 "fr": "Axée sur la photographie de mode",
-                "es": "Centrada en fotografía de moda"
+                "es": "Centrada en fotografía de moda",
+                "de": "Fokus auf Modefotografie"
               }
             },
             {
@@ -8087,7 +8221,8 @@
               "text": {
                 "en": "The first digital archive",
                 "fr": "Le premier archive numérique",
-                "es": "El primer archivo digital"
+                "es": "El primer archivo digital",
+                "de": "Das erste Digitalarchiv"
               }
             },
             {
@@ -8095,7 +8230,8 @@
               "text": {
                 "en": "A collection of only portrait photos",
                 "fr": "Une collection d'uniquement des photos de portraits",
-                "es": "Una colección solo de retratos"
+                "es": "Una colección solo de retratos",
+                "de": "Eine reine Porträtsammlung"
               }
             },
             {
@@ -8103,7 +8239,8 @@
               "text": {
                 "en": "One of the world's largest collections preserving photographic heritage",
                 "fr": "L'une des plus grandes collections au monde préservant le patrimoine photographique",
-                "es": "Una de las mayores colecciones del mundo que preserva el patrimonio fotográfico"
+                "es": "Una de las mayores colecciones del mundo que preserva el patrimonio fotográfico",
+                "de": "Eine der größten Sammlungen der Welt zur Bewahrung fotografischen Erbes"
               }
             }
           ],
@@ -8113,7 +8250,8 @@
           "explanation": {
             "en": "The Smithsonian holds over 1.4 million photographs spanning the medium's entire history, from daguerreotypes to digital.",
             "fr": "Le Smithsonian conserve plus de 1,4 million de photographies couvrant toute l'histoire du médium, des daguerréotypes au numérique.",
-            "es": "El Smithsonian conserva más de 1,4 millones de fotografías que cubren toda la historia del medio, desde daguerrotipos hasta digital."
+            "es": "El Smithsonian conserva más de 1,4 millones de fotografías que cubren toda la historia del medio, desde daguerrotipos hasta digital.",
+            "de": "Das Smithsonian bewahrt über 1,4 Millionen Fotografien der gesamten Mediengeschichte — von Daguerreotypien bis Digital."
           },
           "difficulty": "hard"
         },
@@ -8123,7 +8261,8 @@
           "text": {
             "en": "What technological advancements drove photography's evolution?",
             "fr": "Quelles avancées technologiques ont conduit l'évolution de la photographie ?",
-            "es": "¿Qué avances tecnológicos impulsaron la evolución de la fotografía?"
+            "es": "¿Qué avances tecnológicos impulsaron la evolución de la fotografía?",
+            "de": "Welche technischen Fortschritte trieben die Evolution der Fotografie voran?"
           },
           "answers": [
             {
@@ -8131,7 +8270,8 @@
               "text": {
                 "en": "Steam-powered shutters in the 1700s",
                 "fr": "Obturateurs à vapeur au XVIIIe siècle",
-                "es": "Obturadores a vapor en el siglo XVIII"
+                "es": "Obturadores a vapor en el siglo XVIII",
+                "de": "Dampfbetriebene Verschlüsse im 18. Jahrhundert"
               }
             },
             {
@@ -8139,7 +8279,8 @@
               "text": {
                 "en": "Image processing software",
                 "fr": "Logiciels de traitement d'image",
-                "es": "Software de procesamiento de imagen"
+                "es": "Software de procesamiento de imagen",
+                "de": "Bildverarbeitungssoftware"
               }
             },
             {
@@ -8147,7 +8288,8 @@
               "text": {
                 "en": "Digital sensors",
                 "fr": "Capteurs numériques",
-                "es": "Sensores digitales"
+                "es": "Sensores digitales",
+                "de": "Digitale Sensoren"
               }
             },
             {
@@ -8155,7 +8297,8 @@
               "text": {
                 "en": "Autofocus systems",
                 "fr": "Systèmes autofocus",
-                "es": "Sistemas de autofoco"
+                "es": "Sistemas de autofoco",
+                "de": "Autofokussysteme"
               }
             }
           ],
@@ -8167,7 +8310,8 @@
           "explanation": {
             "en": "Sensors, autofocus, and software transformed capture and workflow. Steam shutters in the 1700s are fiction — photography begins in the 19th century.",
             "fr": "Capteurs, autofocus et logiciels ont transformé la prise de vue et le workflow. Les obturateurs à vapeur au XVIIIe siècle sont fictifs — la photo naît au XIXe.",
-            "es": "Sensores, autofoco y software transformaron la captura y el flujo de trabajo. Los obturadores a vapor en el XVIII son ficción — la foto nace en el siglo XIX."
+            "es": "Sensores, autofoco y software transformaron la captura y el flujo de trabajo. Los obturadores a vapor en el XVIII son ficción — la foto nace en el siglo XIX.",
+            "de": "Sensoren, Autofokus und Software verwandelten Aufnahme und Workflow. Dampfverschlüsse im 18. Jh. sind Fiktion — Fotografie beginnt im 19. Jahrhundert."
           },
           "difficulty": "hard"
         },
@@ -8178,7 +8322,8 @@
           "text": {
             "en": "“The decisive moment” is most closely tied to which idea?",
             "fr": "« L’instant décisif » renvoie surtout à quelle idée ?",
-            "es": "¿«El momento decisivo» se vincula sobre todo a qué idea?"
+            "es": "¿«El momento decisivo» se vincula sobre todo a qué idea?",
+            "de": "Der „entscheidende Moment“ ist vor allem mit welcher Idee verbunden?"
           },
           "answers": [
             {
@@ -8186,7 +8331,8 @@
               "text": {
                 "en": "Waiting for peak gesture/geometry, then clicking once with intent",
                 "fr": "Attendre le pic de geste/géométrie, puis déclencher avec intention",
-                "es": "Esperar el pico de gesto/geometría y disparar una vez con intención"
+                "es": "Esperar el pico de gesto/geometría y disparar una vez con intención",
+                "de": "Auf den Höhepunkt von Geste/Geometrie warten und einmal bewusst auslösen"
               }
             },
             {
@@ -8194,7 +8340,8 @@
               "text": {
                 "en": "Shooting 2,000 frames and picking later in Lightroom only",
                 "fr": "Shooter 2 000 vues et choisir seulement plus tard dans Lightroom",
-                "es": "Disparar 2000 fotogramas y elegir después solo en Lightroom"
+                "es": "Disparar 2000 fotogramas y elegir después solo en Lightroom",
+                "de": "2000 Frames schießen und später nur in Lightroom wählen"
               }
             },
             {
@@ -8202,7 +8349,8 @@
               "text": {
                 "en": "Never looking through the viewfinder",
                 "fr": "Ne jamais regarder dans le viseur",
-                "es": "Nunca mirar por el visor"
+                "es": "Nunca mirar por el visor",
+                "de": "Niemals durch den Sucher schauen"
               }
             },
             {
@@ -8210,7 +8358,8 @@
               "text": {
                 "en": "Always using flash outdoors at noon",
                 "fr": "Toujours utiliser le flash outdoor à midi",
-                "es": "Usar siempre el flash al aire libre al mediodía"
+                "es": "Usar siempre el flash al aire libre al mediodía",
+                "de": "Immer Blitz mittags im Freien nutzen"
               }
             }
           ],
@@ -8220,18 +8369,21 @@
           "explanation": {
             "en": "Cartier-Bresson’s phrase is about timing and seeing — not spray-and-pray.",
             "fr": "La formule de Cartier-Bresson parle de timing et de regard — pas de rafale aveugle.",
-            "es": "La frase de Cartier-Bresson habla de timing y de mirada — no de ráfaga a ciegas."
+            "es": "La frase de Cartier-Bresson habla de timing y de mirada — no de ráfaga a ciegas.",
+            "de": "Cartier-Bressons Phrase meint Timing und Sehen — nicht blindes Dauerfeuer."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Street scene — decisive-moment street photography",
             "fr": "Scène de rue — photo street du moment décisif",
-            "es": "Escena de calle — fotografía street del momento decisivo"
+            "es": "Escena de calle — fotografía street del momento decisivo",
+            "de": "Straßenszene — Streetfotografie des entscheidenden Moments"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -8241,7 +8393,8 @@
           "text": {
             "en": "Why do people still argue about Doisneau’s famous kiss photo?",
             "fr": "Pourquoi discute-t-on encore de la célèbre photo du baiser de Doisneau ?",
-            "es": "¿Por qué se discute aún la famosa foto del beso de Doisneau?"
+            "es": "¿Por qué se discute aún la famosa foto del beso de Doisneau?",
+            "de": "Warum streitet man noch über Doisneaus berühmtes Kussfoto?"
           },
           "answers": [
             {
@@ -8249,7 +8402,8 @@
               "text": {
                 "en": "Because staging vs candid authenticity raises ethics and legend questions",
                 "fr": "Parce que mise en scène vs spontanéité pose des questions d’éthique et de légende",
-                "es": "Porque puesta en escena vs espontaneidad plantea ética y leyenda"
+                "es": "Porque puesta en escena vs espontaneidad plantea ética y leyenda",
+                "de": "Weil Inszenierung vs. Spontanität Ethik- und Legendenfragen aufwirft"
               }
             },
             {
@@ -8257,7 +8411,8 @@
               "text": {
                 "en": "Because it has no horizon line",
                 "fr": "Parce qu’elle n’a pas de ligne d’horizon",
-                "es": "Porque no tiene línea de horizonte"
+                "es": "Porque no tiene línea de horizonte",
+                "de": "Weil es keine Horizontlinie hat"
               }
             },
             {
@@ -8265,7 +8420,8 @@
               "text": {
                 "en": "Because it was shot on a smartphone",
                 "fr": "Parce qu’elle a été prise au smartphone",
-                "es": "Porque se tomó con un smartphone"
+                "es": "Porque se tomó con un smartphone",
+                "de": "Weil es mit einem Smartphone aufgenommen wurde"
               }
             },
             {
@@ -8273,7 +8429,8 @@
               "text": {
                 "en": "Because ISO 100 was illegal in France then",
                 "fr": "Parce que l’ISO 100 était illégal en France à l’époque",
-                "es": "Porque el ISO 100 era ilegal en Francia entonces"
+                "es": "Porque el ISO 100 era ilegal en Francia entonces",
+                "de": "Weil ISO 100 damals in Frankreich illegal war"
               }
             }
           ],
@@ -8283,18 +8440,21 @@
           "explanation": {
             "en": "The image is iconic — and a reminder that “documentary” photos can be directed.",
             "fr": "L’image est iconique — et rappelle qu’une photo « documentaire » peut être dirigée.",
-            "es": "La imagen es icónica — y recuerda que una foto «documental» puede estar dirigida."
+            "es": "La imagen es icónica — y recuerda que una foto «documental» puede estar dirigida.",
+            "de": "Das Bild ist ikonisch — und erinnert daran, dass ein „dokumentarisches“ Foto auch geführt sein kann."
           },
           "imageUrl": "/images/packs/photo-1495616811223-4d98c6e9c869.avif",
           "imageAlt": {
             "en": "Parisian street atmosphere — staged vs candid debates",
             "fr": "Atmosphère de rue parisienne — débats mise en scène vs candide",
-            "es": "Ambiente de calle parisina — debates puesta en escena vs candid"
+            "es": "Ambiente de calle parisina — debates puesta en escena vs candid",
+            "de": "Pariser Straßenatmosphäre — Debatten Inszenierung vs. Candid"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -8304,7 +8464,8 @@
           "text": {
             "en": "Ansel Adams is especially associated with…",
             "fr": "Ansel Adams est surtout associé à…",
-            "es": "Ansel Adams se asocia especialmente a…"
+            "es": "Ansel Adams se asocia especialmente a…",
+            "de": "Ansel Adams wird besonders verbunden mit…"
           },
           "answers": [
             {
@@ -8312,7 +8473,8 @@
               "text": {
                 "en": "Meticulous landscape craft, tonal control, and print mastery",
                 "fr": "Un artisanat paysage méticuleux, le contrôle des tons et la maîtrise du tirage",
-                "es": "Artesanía paisajística meticulosa, control tonal y dominio de la copia"
+                "es": "Artesanía paisajística meticulosa, control tonal y dominio de la copia",
+                "de": "Sorgfältigem Landschaftshandwerk, Tonkontrolle und Print-Meisterschaft"
               }
             },
             {
@@ -8320,7 +8482,8 @@
               "text": {
                 "en": "Party selfies with disposable cameras",
                 "fr": "Selfies de soirée en jetable",
-                "es": "Selfies de fiesta con cámaras desechables"
+                "es": "Selfies de fiesta con cámaras desechables",
+                "de": "Party-Selfies mit Einwegkameras"
               }
             },
             {
@@ -8328,7 +8491,8 @@
               "text": {
                 "en": "Inventing autofocus",
                 "fr": "L’invention de l’autofocus",
-                "es": "Inventar el autofoco"
+                "es": "Inventar el autofoco",
+                "de": "Der Erfindung des Autofokus"
               }
             },
             {
@@ -8336,7 +8500,8 @@
               "text": {
                 "en": "Only shooting in automatic green mode",
                 "fr": "Ne shooter qu’en mode vert automatique",
-                "es": "Disparar solo en modo verde automático"
+                "es": "Disparar solo en modo verde automático",
+                "de": "Nur im grünen Automatikmodus zu fotografieren"
               }
             }
           ],
@@ -8346,18 +8511,21 @@
           "explanation": {
             "en": "Adams = patient landscape seeing + obsessive control of tones from capture to print.",
             "fr": "Adams = regard paysage patient + contrôle obsessionnel des tons, de la prise de vue au tirage.",
-            "es": "Adams = mirada paisajística paciente + control obsesivo de los tonos, de la captura a la copia."
+            "es": "Adams = mirada paisajística paciente + control obsesivo de los tonos, de la captura a la copia.",
+            "de": "Adams = geduldiges Landschaftssehen + obsessives Tonwert-Handwerk von der Aufnahme bis zum Print."
           },
           "imageUrl": "/images/packs/photo-1469474968028-56623f02e42e.avif",
           "imageAlt": {
             "en": "Dramatic landscape — Adams-style tonal drama",
             "fr": "Paysage dramatique — contraste tonal façon Adams",
-            "es": "Paisaje dramático — contraste tonal al estilo Adams"
+            "es": "Paisaje dramático — contraste tonal al estilo Adams",
+            "de": "Dramatische Landschaft — Adams-artiger Tonkontrast"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -8367,7 +8535,8 @@
           "text": {
             "en": "Kodak’s Brownie (1900) mattered culturally mainly because it…",
             "fr": "Le Brownie Kodak (1900) a compté culturellement surtout parce qu’il…",
-            "es": "El Brownie Kodak (1900) importó culturalmente sobre todo porque…"
+            "es": "El Brownie Kodak (1900) importó culturalmente sobre todo porque…",
+            "de": "Kodaks Brownie (1900) war kulturell vor allem wichtig, weil sie…"
           },
           "answers": [
             {
@@ -8375,7 +8544,8 @@
               "text": {
                 "en": "Invented digital sensors overnight",
                 "fr": "A inventé les capteurs numériques du jour au lendemain",
-                "es": "Inventó los sensores digitales de la noche a la mañana"
+                "es": "Inventó los sensores digitales de la noche a la mañana",
+                "de": "Über Nacht Digitalsensoren erfand"
               }
             },
             {
@@ -8383,7 +8553,8 @@
               "text": {
                 "en": "Only printed cyanotypes forever",
                 "fr": "N’a imprimé que des cyanotypes pour toujours",
-                "es": "Solo imprimió cianotipos para siempre"
+                "es": "Solo imprimió cianotipos para siempre",
+                "de": "Für immer nur Cyanotypien druckte"
               }
             },
             {
@@ -8391,7 +8562,8 @@
               "text": {
                 "en": "Banned all professional studios",
                 "fr": "A interdit tous les studios professionnels",
-                "es": "Prohibió todos los estudios profesionales"
+                "es": "Prohibió todos los estudios profesionales",
+                "de": "Alle professionellen Studios verbot"
               }
             },
             {
@@ -8399,7 +8571,8 @@
               "text": {
                 "en": "Made snapshot photography cheap and accessible to amateurs",
                 "fr": "A rendu la photo « snapshot » bon marché et accessible aux amateurs",
-                "es": "Hizo la foto «snapshot» barata y accesible a aficionados"
+                "es": "Hizo la foto «snapshot» barata y accesible a aficionados",
+                "de": "Snapshot-Fotografie billig und für Amateure zugänglich machte"
               }
             }
           ],
@@ -8409,18 +8582,21 @@
           "explanation": {
             "en": "The Brownie wave democratized everyday picture-making — a social shift as much as a tech one.",
             "fr": "La vague Brownie a démocratisé la photo du quotidien — un basculement social autant que technique.",
-            "es": "La ola Brownie democratizó la foto cotidiana — un cambio social tanto como técnico."
+            "es": "La ola Brownie democratizó la foto cotidiana — un cambio social tanto como técnico.",
+            "de": "Die Brownie-Welle demokratisierte Alltagfotografie — ein sozialer ebenso wie technischer Wandel."
           },
           "imageUrl": "/images/packs/photo-1554048612-b6a482bc67e5.avif",
           "imageAlt": {
             "en": "Vintage camera — democratization of amateur photography",
             "fr": "Appareil vintage — démocratisation de la photo amateur",
-            "es": "Cámara vintage — democratización de la fotografía amateur"
+            "es": "Cámara vintage — democratización de la fotografía amateur",
+            "de": "Vintage-Kamera — Demokratisierung der Amateurfotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -8430,7 +8606,8 @@
           "text": {
             "en": "Magnum Photos (founded 1947) is best remembered as…",
             "fr": "Magnum Photos (fondée en 1947) est surtout retenue comme…",
-            "es": "Magnum Photos (fundada en 1947) se recuerda sobre todo como…"
+            "es": "Magnum Photos (fundada en 1947) se recuerda sobre todo como…",
+            "de": "Magnum Photos (gegründet 1947) wird vor allem erinnert als…"
           },
           "answers": [
             {
@@ -8438,7 +8615,8 @@
               "text": {
                 "en": "A cooperative agency where photographers kept rights and editorial voice",
                 "fr": "Une coopérative où les photographes gardaient droits et voix éditoriale",
-                "es": "Una cooperativa donde los fotógrafos conservaban derechos y voz editorial"
+                "es": "Una cooperativa donde los fotógrafos conservaban derechos y voz editorial",
+                "de": "Eine Kooperative, in der Fotografen Rechte und redaktionelle Stimme behielten"
               }
             },
             {
@@ -8446,7 +8624,8 @@
               "text": {
                 "en": "A film emulsion factory in Rochester only",
                 "fr": "Une usine d’émulsion uniquement à Rochester",
-                "es": "Una fábrica de emulsión solo en Rochester"
+                "es": "Una fábrica de emulsión solo en Rochester",
+                "de": "Eine Emulsionsfabrik nur in Rochester"
               }
             },
             {
@@ -8454,7 +8633,8 @@
               "text": {
                 "en": "A smartphone filter pack from 2015",
                 "fr": "Un pack de filtres smartphone de 2015",
-                "es": "Un pack de filtros para smartphone de 2015"
+                "es": "Un pack de filtros para smartphone de 2015",
+                "de": "Ein Smartphone-Filterpaket von 2015"
               }
             },
             {
@@ -8462,7 +8642,8 @@
               "text": {
                 "en": "A camera brand that only sold disposable flash cubes",
                 "fr": "Une marque d’appareils qui ne vendait que des cubes flash jetables",
-                "es": "Una marca de cámaras que solo vendía cubos flash desechables"
+                "es": "Una marca de cámaras que solo vendía cubos flash desechables",
+                "de": "Eine Kameramarke, die nur Einweg-Blitzwürfel verkaufte"
               }
             }
           ],
@@ -8472,18 +8653,21 @@
           "explanation": {
             "en": "Magnum’s model centered photographer authorship and ownership — landmark for reportage culture.",
             "fr": "Le modèle Magnum place l’auteur et la propriété côté photographe — jalon de la culture reportage.",
-            "es": "El modelo Magnum centra la autoría y la propiedad en el fotógrafo — hito de la cultura del reportaje."
+            "es": "El modelo Magnum centra la autoría y la propiedad en el fotógrafo — hito de la cultura del reportaje.",
+            "de": "Das Magnum-Modell stellt Autorschaft und Eigentum des Fotografen in den Mittelpunkt — Meilenstein der Reportagekultur."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Street scene — reportage and agency culture",
             "fr": "Scène de rue — culture reportage et agences",
-            "es": "Escena de calle — cultura del reportaje y las agencias"
+            "es": "Escena de calle — cultura del reportaje y las agencias",
+            "de": "Straßenszene — Reportage- und Agenturkultur"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -8493,7 +8677,8 @@
           "text": {
             "en": "When people say digital “killed” film overnight in the 2000s, the fairest nuance is…",
             "fr": "Quand on dit que le numérique a « tué » l’argentique du jour au lendemain dans les années 2000, la nuance juste est…",
-            "es": "Cuando se dice que lo digital «mató» el analógico de la noche a la mañana en los 2000, el matiz justo es…"
+            "es": "Cuando se dice que lo digital «mató» el analógico de la noche a la mañana en los 2000, el matiz justo es…",
+            "de": "Wenn man sagt, Digital habe Analog in den 2000ern „über Nacht getötet“, lautet die faire Nuance…"
           },
           "answers": [
             {
@@ -8501,7 +8686,8 @@
               "text": {
                 "en": "Only disposable cameras survived after JPEG was invented",
                 "fr": "Seuls les appareils jetables ont survécu après l’invention du JPEG",
-                "es": "Solo sobrevivieron las cámaras desechables tras inventarse el JPEG"
+                "es": "Solo sobrevivieron las cámaras desechables tras inventarse el JPEG",
+                "de": "Nur Einwegkameras überlebten nach Erfindung des JPEG"
               }
             },
             {
@@ -8509,7 +8695,8 @@
               "text": {
                 "en": "Adoption was gradual — workflows, cost, and culture shifted over years, not one week",
                 "fr": "L’adoption a été progressive — workflows, coûts et culture ont basculé sur des années, pas en une semaine",
-                "es": "La adopción fue gradual — flujos, costes y cultura cambiaron en años, no en una semana"
+                "es": "La adopción fue gradual — flujos, costes y cultura cambiaron en años, no en una semana",
+                "de": "Die Übernahme war schrittweise — Workflows, Kosten und Kultur änderten sich über Jahre, nicht in einer Woche"
               }
             },
             {
@@ -8517,7 +8704,8 @@
               "text": {
                 "en": "Film ceased to exist physically in 2001 worldwide",
                 "fr": "L’argentique a cessé d’exister physiquement en 2001 dans le monde entier",
-                "es": "El analógico dejó de existir físicamente en 2001 en todo el mundo"
+                "es": "El analógico dejó de existir físicamente en 2001 en todo el mundo",
+                "de": "Analog existierte physisch ab 2001 weltweit nicht mehr"
               }
             },
             {
@@ -8525,7 +8713,8 @@
               "text": {
                 "en": "Digital never reached professional newsrooms",
                 "fr": "Le numérique n’a jamais atteint les rédactions pro",
-                "es": "Lo digital nunca llegó a las redacciones profesionales"
+                "es": "Lo digital nunca llegó a las redacciones profesionales",
+                "de": "Digital erreichte nie professionelle Redaktionen"
               }
             }
           ],
@@ -8535,18 +8724,21 @@
           "explanation": {
             "en": "Digital disrupted film markets, but the transition was staggered across genres and budgets.",
             "fr": "Le numérique a bouleversé les marchés argentiques, mais la transition a été échelonnée selon genres et budgets.",
-            "es": "Lo digital trastocó los mercados analógicos, pero la transición fue escalonada según géneros y presupuestos."
+            "es": "Lo digital trastocó los mercados analógicos, pero la transición fue escalonada según géneros y presupuestos.",
+            "de": "Digital erschütterte Analogmärkte, aber der Übergang verlief gestaffelt nach Genres und Budgets."
           },
           "imageUrl": "/images/packs/photo-1510127034890-ba27508e9f1c.avif",
           "imageAlt": {
             "en": "Handheld camera outdoors — film-to-digital transition era",
             "fr": "Appareil à main levée outdoor — ère de transition argentique → numérique",
-            "es": "Cámara en mano al aire libre — era de transición analógico → digital"
+            "es": "Cámara en mano al aire libre — era de transición analógico → digital",
+            "de": "Handheld-Kamera im Freien — Übergangsepoche Analog → Digital"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         }
       ],
