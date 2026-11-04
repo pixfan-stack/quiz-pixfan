@@ -18963,12 +18963,14 @@
       "title": {
         "en": "Portrait & light (Pixfan path)",
         "fr": "Portrait & lumière (parcours Pixfan)",
-        "es": "Retrato y luz (recorrido Pixfan)"
+        "es": "Retrato y luz (recorrido Pixfan)",
+        "de": "Porträt & Licht (Pixfan-Pfad)"
       },
       "description": {
         "en": "Key, fill, window light, and flattering face light — the portrait craft Pixfan teaches before heavy retouching.",
         "fr": "Clé, fill, lumière de fenêtre et lumière flatteuse sur le visage — le craft portrait que Pixfan enseigne avant la grosse retouche.",
-        "es": "Clave, relleno, luz de ventana y luz favorecedora en el rostro — el oficio del retrato que Pixfan enseña antes del retoque pesado."
+        "es": "Clave, relleno, luz de ventana y luz favorecedora en el rostro — el oficio del retrato que Pixfan enseña antes del retoque pesado.",
+        "de": "Schlüssel, Fill, Fensterlicht und schmeichelndes Gesichtslich — das Porträt-Handwerk, das Pixfan vor der schweren Retusche lehrt."
       },
       "difficulty": "medium",
       "questions": [
@@ -18979,7 +18981,8 @@
           "text": {
             "en": "In a classic one-light portrait, the main light shaping the face is called the…",
             "fr": "Dans un portrait classique à une lumière, la lumière principale qui sculpte le visage s’appelle…",
-            "es": "En un retrato clásico con una sola luz, la luz principal que modela el rostro se llama…"
+            "es": "En un retrato clásico con una sola luz, la luz principal que modela el rostro se llama…",
+            "de": "Bei einem klassischen Ein-Licht-Porträt heißt das Hauptlicht, das das Gesicht formt…"
           },
           "answers": [
             {
@@ -18987,7 +18990,8 @@
               "text": {
                 "en": "Key light",
                 "fr": "La lumière clé (key)",
-                "es": "Luz clave (key light)"
+                "es": "Luz clave (key light)",
+                "de": "Schlüssellicht (Key light)"
               }
             },
             {
@@ -18995,7 +18999,8 @@
               "text": {
                 "en": "Hair light only",
                 "fr": "Seulement le hair light",
-                "es": "Solo luz de pelo (hair light)"
+                "es": "Solo luz de pelo (hair light)",
+                "de": "Nur Haarlicht (Hair light)"
               }
             },
             {
@@ -19003,7 +19008,8 @@
               "text": {
                 "en": "Background gel",
                 "fr": "Le gélatiné de fond",
-                "es": "Gelatina de fondo"
+                "es": "Gelatina de fondo",
+                "de": "Hintergrund-Gel"
               }
             },
             {
@@ -19011,7 +19017,8 @@
               "text": {
                 "en": "Catchlight gel",
                 "fr": "Le gélatiné catchlight",
-                "es": "Gelatina catchlight"
+                "es": "Gelatina catchlight",
+                "de": "Catchlight-Gel"
               }
             }
           ],
@@ -19021,18 +19028,21 @@
           "explanation": {
             "en": "The key sets direction and contrast on the face; fill and accents come after.",
             "fr": "La clé pose la direction et le contraste sur le visage ; fill et accents viennent ensuite.",
-            "es": "La clave fija la dirección y el contraste en el rostro; el relleno y los acentos vienen después."
+            "es": "La clave fija la dirección y el contraste en el rostro; el relleno y los acentos vienen después.",
+            "de": "Das Schlüssel setzt Richtung und Kontrast im Gesicht; Fill und Akzente kommen danach."
           },
           "imageUrl": "/images/packs/photo-1531746020798-e6953c6e8e04.avif",
           "imageAlt": {
             "en": "Close portrait with soft directional light on the face",
             "fr": "Portrait serré avec lumière directionnelle douce sur le visage",
-            "es": "Retrato cerrado con luz direccional suave en el rostro"
+            "es": "Retrato cerrado con luz direccional suave en el rostro",
+            "de": "Enge Porträtaufnahme mit weichem gerichteten Licht im Gesicht"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19042,7 +19052,8 @@
           "text": {
             "en": "Rembrandt lighting is recognized by…",
             "fr": "La lumière Rembrandt se reconnaît à…",
-            "es": "La luz Rembrandt se reconoce por…"
+            "es": "La luz Rembrandt se reconoce por…",
+            "de": "Rembrandt-Licht erkennt man an…"
           },
           "answers": [
             {
@@ -19050,7 +19061,8 @@
               "text": {
                 "en": "A triangle of light on the shadowed cheek under the eye",
                 "fr": "Un triangle de lumière sur la joue ombrée sous l’œil",
-                "es": "Un triángulo de luz en la mejilla en sombra bajo el ojo"
+                "es": "Un triángulo de luz en la mejilla en sombra bajo el ojo",
+                "de": "Einem Lichttriangle auf der Schattenwange unter dem Auge"
               }
             },
             {
@@ -19058,7 +19070,8 @@
               "text": {
                 "en": "Even flat light with zero nose shadow",
                 "fr": "Une lumière plate sans aucune ombre de nez",
-                "es": "Luz plana uniforme sin ninguna sombra de nariz"
+                "es": "Luz plana uniforme sin ninguna sombra de nariz",
+                "de": "Absolut flachem Licht ohne Nasenschatten"
               }
             },
             {
@@ -19066,7 +19079,8 @@
               "text": {
                 "en": "Only rim light from behind",
                 "fr": "Seulement un rim light de derrière",
-                "es": "Solo un rim light desde detrás"
+                "es": "Solo un rim light desde detrás",
+                "de": "Nur einem Rim light von hinten"
               }
             },
             {
@@ -19074,7 +19088,8 @@
               "text": {
                 "en": "Red/cyan split gel on both cheeks",
                 "fr": "Un split gel rouge/cyan sur les deux joues",
-                "es": "Un split gel rojo/cian en ambas mejillas"
+                "es": "Un split gel rojo/cian en ambas mejillas",
+                "de": "Rot/Cyan-Split-Gel auf beiden Wangen"
               }
             }
           ],
@@ -19084,18 +19099,21 @@
           "explanation": {
             "en": "Key ≈45° up and to the side creates the classic cheek triangle.",
             "fr": "Une clé ≈45° en hauteur et de côté crée le triangle classique sur la joue.",
-            "es": "Una clave ≈45° arriba y de lado crea el triángulo clásico en la mejilla."
+            "es": "Una clave ≈45° arriba y de lado crea el triángulo clásico en la mejilla.",
+            "de": "Ein Schlüssel ≈45° oben und seitlich erzeugt das klassische Dreieck auf der Wange."
           },
           "imageUrl": "/images/packs/photo-1544005313-94ddf0286df2.avif",
           "imageAlt": {
             "en": "Face lit from the side — Rembrandt / loop lighting territory",
             "fr": "Visage éclairé de côté — terrain Rembrandt / loop",
-            "es": "Rostro iluminado de lado — terreno Rembrandt / loop"
+            "es": "Rostro iluminado de lado — terreno Rembrandt / loop",
+            "de": "Seitlich beleuchtetes Gesicht — Rembrandt- / Loop-Terrain"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19105,7 +19123,8 @@
           "text": {
             "en": "Harsh noon sun outdoors for a flattering headshot — best first rescue?",
             "fr": "Soleil de midi cruel pour un portrait flatteur — premier sauvetage ?",
-            "es": "Sol de mediodía duro para un retrato favorecedor — ¿primer rescate?"
+            "es": "Sol de mediodía duro para un retrato favorecedor — ¿primer rescate?",
+            "de": "Hartes Mittagssonnenlicht für ein schmeichelndes Porträt — erste Rettung?"
           },
           "answers": [
             {
@@ -19113,7 +19132,8 @@
               "text": {
                 "en": "Open shade, diffuser, or bounce fill — soften the overhead punch",
                 "fr": "Ombre ouverte, diffuseur ou fill en bounce — adoucir le coup d’en haut",
-                "es": "Sombra abierta, difusor o relleno en bounce — suavizar el golpe desde arriba"
+                "es": "Sombra abierta, difusor o relleno en bounce — suavizar el golpe desde arriba",
+                "de": "Offener Schatten, Diffusor oder Bounce-Fill — den Schlag von oben weichzeichnen"
               }
             },
             {
@@ -19121,7 +19141,8 @@
               "text": {
                 "en": "Always underexpose two stops and crush skin",
                 "fr": "Toujours sous-exposer de 2 IL et écraser la peau",
-                "es": "Subexponer siempre dos pasos y aplastar la piel"
+                "es": "Subexponer siempre dos pasos y aplastar la piel",
+                "de": "Immer zwei Blenden unterbelichten und Haut plattquetschen"
               }
             },
             {
@@ -19129,7 +19150,8 @@
               "text": {
                 "en": "Shoot only at f/22 facing the sun",
                 "fr": "Shooter seulement à f/22 face au soleil",
-                "es": "Disparar solo a f/22 de frente al sol"
+                "es": "Disparar solo a f/22 de frente al sol",
+                "de": "Nur bei f/22 frontal gegen die Sonne schießen"
               }
             },
             {
@@ -19137,7 +19159,8 @@
               "text": {
                 "en": "Disable white balance forever",
                 "fr": "Désactiver la balance des blancs pour toujours",
-                "es": "Desactivar el balance de blancos para siempre"
+                "es": "Desactivar el balance de blancos para siempre",
+                "de": "Weißabgleich für immer deaktivieren"
               }
             }
           ],
@@ -19147,18 +19170,21 @@
           "explanation": {
             "en": "Portrait craft prioritizes flattering face light; don’t fight hard overhead sun bare.",
             "fr": "Le craft portrait priorise une lumière flatteuse sur le visage ; ne subis pas le soleil zénithal nu.",
-            "es": "El oficio del retrato prioriza una luz favorecedora en el rostro; no luches a pecho descubierto contra el sol cenital duro."
+            "es": "El oficio del retrato prioriza una luz favorecedora en el rostro; no luches a pecho descubierto contra el sol cenital duro.",
+            "de": "Porträt-Handwerk priorisiert schmeichelndes Gesichtslich; kämpfe nicht ungeschützt gegen hartes Zenitlicht."
           },
           "imageUrl": "/images/packs/photo-1438761681033-6461ffad8d80.avif",
           "imageAlt": {
             "en": "Warm outdoor portrait in flattering open shade",
             "fr": "Portrait outdoor chaud à l’ombre ouverte flatteuse",
-            "es": "Retrato exterior cálido en sombra abierta favorecedora"
+            "es": "Retrato exterior cálido en sombra abierta favorecedora",
+            "de": "Warmes Außenporträt im schmeichelnden offenen Schatten"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19168,7 +19194,8 @@
           "text": {
             "en": "What does fill light mainly do in a portrait?",
             "fr": "Que fait surtout le fill light en portrait ?",
-            "es": "¿Qué hace sobre todo la luz de relleno (fill) en un retrato?"
+            "es": "¿Qué hace sobre todo la luz de relleno (fill) en un retrato?",
+            "de": "Was macht Fill-Licht in einem Porträt vor allem?"
           },
           "answers": [
             {
@@ -19176,7 +19203,8 @@
               "text": {
                 "en": "Lift shadow side contrast without becoming a second hard key",
                 "fr": "Remonter le contraste du côté ombre sans devenir une seconde clé dure",
-                "es": "Subir el contraste del lado en sombra sin convertirse en una segunda clave dura"
+                "es": "Subir el contraste del lado en sombra sin convertirse en una segunda clave dura",
+                "de": "Den Kontrast der Schattenseite anheben, ohne zu einem zweiten harten Schlüssel zu werden"
               }
             },
             {
@@ -19184,7 +19212,8 @@
               "text": {
                 "en": "Replace the need for a key light",
                 "fr": "Remplacer le besoin d’une lumière clé",
-                "es": "Sustituir la necesidad de una luz clave"
+                "es": "Sustituir la necesidad de una luz clave",
+                "de": "Die Notwendigkeit eines Schlüssellichts ersetzen"
               }
             },
             {
@@ -19192,7 +19221,8 @@
               "text": {
                 "en": "Only light the background seamless",
                 "fr": "Éclairer seulement le fond cyclorama",
-                "es": "Iluminar solo el fondo ciclorama"
+                "es": "Iluminar solo el fondo ciclorama",
+                "de": "Nur den Hintergrund-Zyklorama beleuchten"
               }
             },
             {
@@ -19200,7 +19230,8 @@
               "text": {
                 "en": "Freeze motion like a high-speed flash",
                 "fr": "Figer le mouvement comme un flash ultra-rapide",
-                "es": "Congelar el movimiento como un flash ultrarrápido"
+                "es": "Congelar el movimiento como un flash ultrarrápido",
+                "de": "Bewegung wie ein Ultrakurzzeit-Blitz einfrieren"
               }
             }
           ],
@@ -19210,18 +19241,21 @@
           "explanation": {
             "en": "Fill controls how deep shadows feel; key still owns direction.",
             "fr": "Le fill contrôle la profondeur des ombres ; la clé garde la direction.",
-            "es": "El relleno controla la profundidad de las sombras; la clave conserva la dirección."
+            "es": "El relleno controla la profundidad de las sombras; la clave conserva la dirección.",
+            "de": "Fill steuert die Schattentiefe; das Schlüssel behält die Richtung."
           },
           "imageUrl": "/images/packs/photo-1507003211169-0a1dd7228f2d.avif",
           "imageAlt": {
             "en": "Male portrait with gentle fill lifting the shadow side",
             "fr": "Portrait masculin avec fill doux remontant le côté ombre",
-            "es": "Retrato masculino con relleno suave que levanta el lado en sombra"
+            "es": "Retrato masculino con relleno suave que levanta el lado en sombra",
+            "de": "Männliches Porträt mit weichem Fill, das die Schattenseite anhebt"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19231,7 +19265,8 @@
           "text": {
             "en": "A classic flattering full-frame portrait focal-length instinct is often…",
             "fr": "Un réflexe de focale flatteuse en portrait plein format est souvent…",
-            "es": "Un reflejo habitual de focal favorecedora en retrato full-frame suele ser…"
+            "es": "Un reflejo habitual de focal favorecedora en retrato full-frame suele ser…",
+            "de": "Ein klassischer Reflex für schmeichelnde Vollformat-Porträtbrennweiten ist oft…"
           },
           "answers": [
             {
@@ -19239,7 +19274,8 @@
               "text": {
                 "en": "Short tele (~70–105 mm) with a moderate working distance",
                 "fr": "Petit télé (~70–105 mm) avec une distance de travail raisonnable",
-                "es": "Tele corto (~70–105 mm) con una distancia de trabajo moderada"
+                "es": "Tele corto (~70–105 mm) con una distancia de trabajo moderada",
+                "de": "Kurzes Tele (~70–105 mm) mit moderater Arbeitsdistanz"
               }
             },
             {
@@ -19247,7 +19283,8 @@
               "text": {
                 "en": "Ultra-wide at arm’s length for every headshot",
                 "fr": "Ultra grand-angle à bout de bras pour chaque tête",
-                "es": "Ultra gran angular a brazo tendido para cada cabeza"
+                "es": "Ultra gran angular a brazo tendido para cada cabeza",
+                "de": "Ultraweitwinkel auf Armlänge für jeden Kopf"
               }
             },
             {
@@ -19255,7 +19292,8 @@
               "text": {
                 "en": "Fish-eye for corporate headshots",
                 "fr": "Fish-eye pour les portraits corporate",
-                "es": "Ojo de pez para retratos corporativos"
+                "es": "Ojo de pez para retratos corporativos",
+                "de": "Fisheye für Business-Headshots"
               }
             },
             {
@@ -19263,7 +19301,8 @@
               "text": {
                 "en": "Only 14 mm for beauty work",
                 "fr": "Seulement 14 mm pour la beauté",
-                "es": "Solo 14 mm para trabajo de belleza"
+                "es": "Solo 14 mm para trabajo de belleza",
+                "de": "Nur 14 mm für Beauty-Arbeit"
               }
             }
           ],
@@ -19273,18 +19312,21 @@
           "explanation": {
             "en": "Short teles compress gently and keep facial proportions natural at a polite distance.",
             "fr": "Les petits télés compressent doucement et gardent des proportions naturelles à bonne distance.",
-            "es": "Los teles cortos comprimen con suavidad y mantienen proporciones faciales naturales a una distancia educada."
+            "es": "Los teles cortos comprimen con suavidad y mantienen proporciones faciales naturales a una distancia educada.",
+            "de": "Kurze Teles komprimieren sanft und halten Gesichtsproportionen bei höflicher Distanz natürlich."
           },
           "imageUrl": "/images/packs/photo-1500648767791-00dcc994a43e.avif",
           "imageAlt": {
             "en": "Short-tele portrait look with compressed background",
             "fr": "Look portrait petit télé avec arrière-plan compressé",
-            "es": "Look de retrato con tele corto y fondo comprimido"
+            "es": "Look de retrato con tele corto y fondo comprimido",
+            "de": "Porträt-Look mit kurzem Tele und komprimiertem Hintergrund"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19294,7 +19336,8 @@
           "text": {
             "en": "Butterfly (Paramount) lighting places the key…",
             "fr": "La lumière papillon (Paramount) place la clé…",
-            "es": "La luz mariposa (Paramount) coloca la clave…"
+            "es": "La luz mariposa (Paramount) coloca la clave…",
+            "de": "Schmetterlingslicht (Paramount) setzt das Schlüssel…"
           },
           "answers": [
             {
@@ -19302,7 +19345,8 @@
               "text": {
                 "en": "High and centered, casting a small nose shadow under the nose",
                 "fr": "Haute et centrée, avec une petite ombre sous le nez",
-                "es": "Alta y centrada, proyectando una pequeña sombra bajo la nariz"
+                "es": "Alta y centrada, proyectando una pequeña sombra bajo la nariz",
+                "de": "Hoch und zentriert, mit kleinem Schatten unter der Nase"
               }
             },
             {
@@ -19310,7 +19354,8 @@
               "text": {
                 "en": "Low from the floor for horror shadows",
                 "fr": "Basse depuis le sol pour des ombres d’horreur",
-                "es": "Baja desde el suelo para sombras de terror"
+                "es": "Baja desde el suelo para sombras de terror",
+                "de": "Tief vom Boden für Horror-Schatten"
               }
             },
             {
@@ -19318,7 +19363,8 @@
               "text": {
                 "en": "Directly behind the subject only",
                 "fr": "Directement derrière le sujet seulement",
-                "es": "Directamente detrás del sujeto solamente"
+                "es": "Directamente detrás del sujeto solamente",
+                "de": "Direkt nur hinter dem Motiv"
               }
             },
             {
@@ -19326,7 +19372,8 @@
               "text": {
                 "en": "As two opposing hard rim lights with no front light",
                 "fr": "Comme deux rim durs opposés sans lumière frontale",
-                "es": "Como dos rim duros opuestos sin luz frontal"
+                "es": "Como dos rim duros opuestos sin luz frontal",
+                "de": "Als zwei harte, gegenüberliegende Rim lights ohne Frontlicht"
               }
             }
           ],
@@ -19336,18 +19383,21 @@
           "explanation": {
             "en": "Classic beauty/old-Hollywood key sits high on axis for a butterfly nose shadow.",
             "fr": "La clé beauté / vieux Hollywood est haute sur l’axe pour l’ombre papillon sous le nez.",
-            "es": "La clave belleza / viejo Hollywood se sitúa alta en el eje para la sombra mariposa bajo la nariz."
+            "es": "La clave belleza / viejo Hollywood se sitúa alta en el eje para la sombra mariposa bajo la nariz.",
+            "de": "Das Beauty- / Old-Hollywood-Schlüssel sitzt hoch auf der Achse für den Schmetterlingsschatten unter der Nase."
           },
           "imageUrl": "/images/packs/photo-1487412720507-e7ab37603c6f.avif",
           "imageAlt": {
             "en": "Beauty light high on axis — butterfly / Paramount vibe",
             "fr": "Lumière beauté haute sur l’axe — vibe papillon / Paramount",
-            "es": "Luz belleza alta en el eje — vibe mariposa / Paramount"
+            "es": "Luz belleza alta en el eje — vibe mariposa / Paramount",
+            "de": "Hohes Beauty-Licht auf Achse — Schmetterling- / Paramount-Vibe"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19357,7 +19407,8 @@
           "text": {
             "en": "Catchlights in the eyes usually tell you…",
             "fr": "Les catchlights dans les yeux indiquent surtout…",
-            "es": "Los catchlights en los ojos indican sobre todo…"
+            "es": "Los catchlights en los ojos indican sobre todo…",
+            "de": "Catchlights in den Augen zeigen vor allem…"
           },
           "answers": [
             {
@@ -19365,7 +19416,8 @@
               "text": {
                 "en": "Where the key (and fill) sat relative to the subject",
                 "fr": "Où étaient la clé (et le fill) par rapport au sujet",
-                "es": "Dónde estaban la clave (y el relleno) respecto al sujeto"
+                "es": "Dónde estaban la clave (y el relleno) respecto al sujeto",
+                "de": "Wo Schlüssel (und Fill) relativ zum Motiv standen"
               }
             },
             {
@@ -19373,7 +19425,8 @@
               "text": {
                 "en": "The exact ISO the camera used",
                 "fr": "L’ISO exact utilisé par l’appareil",
-                "es": "El ISO exacto que usó la cámara"
+                "es": "El ISO exacto que usó la cámara",
+                "de": "Den exakten ISO der Kamera"
               }
             },
             {
@@ -19381,7 +19434,8 @@
               "text": {
                 "en": "Whether the lens is prime or zoom",
                 "fr": "Si l’objectif est une focale fixe ou un zoom",
-                "es": "Si el objetivo es fijo o zoom"
+                "es": "Si el objetivo es fijo o zoom",
+                "de": "Ob das Objektiv Festbrennweite oder Zoom ist"
               }
             },
             {
@@ -19389,7 +19443,8 @@
               "text": {
                 "en": "That the photo is always AI-generated",
                 "fr": "Que la photo est toujours générée par IA",
-                "es": "Que la foto siempre está generada por IA"
+                "es": "Que la foto siempre está generada por IA",
+                "de": "Dass das Foto immer KI-generiert ist"
               }
             }
           ],
@@ -19399,18 +19454,21 @@
           "explanation": {
             "en": "Read the eye reflections to reverse-engineer light position and modifier size.",
             "fr": "Lis les reflets dans l’œil pour retrouver position et taille de la source.",
-            "es": "Lee los reflejos en el ojo para reconstruir la posición y el tamaño de la fuente."
+            "es": "Lee los reflejos en el ojo para reconstruir la posición y el tamaño de la fuente.",
+            "de": "Lies die Spiegelungen im Auge, um Position und Größe der Quelle zu rekonstruieren."
           },
           "imageUrl": "/images/packs/photo-1494790108377-be9c29b29330.avif",
           "imageAlt": {
             "en": "Catchlights visible in the eyes under soft key light",
             "fr": "Catchlights visibles dans les yeux sous une clé douce",
-            "es": "Catchlights visibles en los ojos bajo una clave suave"
+            "es": "Catchlights visibles en los ojos bajo una clave suave",
+            "de": "Sichtbare Catchlights in den Augen unter weichem Schlüssel"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19420,7 +19478,8 @@
           "text": {
             "en": "Window light portrait: subject faces the window. Softest look usually comes from…",
             "fr": "Portrait à la fenêtre : le sujet face à la fenêtre. Le look le plus doux vient souvent de…",
-            "es": "Retrato a la ventana: el sujeto de cara a la ventana. El look más suave suele venir de…"
+            "es": "Retrato a la ventana: el sujeto de cara a la ventana. El look más suave suele venir de…",
+            "de": "Fensterlicht-Porträt: Motiv zur Fensterseite. Der weichste Look kommt meist von…"
           },
           "answers": [
             {
@@ -19428,7 +19487,8 @@
               "text": {
                 "en": "A large north-facing / overcast window acting like a softbox",
                 "fr": "Une grande fenêtre nord / ciel couvert qui agit comme une softbox",
-                "es": "Una ventana grande al norte / cielo cubierto que actúa como softbox"
+                "es": "Una ventana grande al norte / cielo cubierto que actúa como softbox",
+                "de": "Einem großen Nordfenster / bedecktem Himmel als Softbox"
               }
             },
             {
@@ -19436,7 +19496,8 @@
               "text": {
                 "en": "Hard direct sun speckles through venetian blinds only",
                 "fr": "Seulement des taches de soleil dur à travers des stores",
-                "es": "Solo manchas de sol duro a través de persianas"
+                "es": "Solo manchas de sol duro a través de persianas",
+                "de": "Nur harten Sonnenflecken durch Jalousien"
               }
             },
             {
@@ -19444,7 +19505,8 @@
               "text": {
                 "en": "A tiny spotlight from across the room",
                 "fr": "Un tout petit spot de l’autre bout de la pièce",
-                "es": "Un spot diminuto desde el otro extremo de la habitación"
+                "es": "Un spot diminuto desde el otro extremo de la habitación",
+                "de": "Einem winzigen Spot vom anderen Raumende"
               }
             },
             {
@@ -19452,7 +19514,8 @@
               "text": {
                 "en": "Turning the subject’s back fully to the window always",
                 "fr": "Toujours tourner le dos complètement à la fenêtre",
-                "es": "Girar siempre la espalda por completo a la ventana"
+                "es": "Girar siempre la espalda por completo a la ventana",
+                "de": "Immer komplett mit dem Rücken zum Fenster"
               }
             }
           ],
@@ -19462,18 +19525,21 @@
           "explanation": {
             "en": "Large, soft, diffused sources wrap the face; harsh sun through glass is another tool.",
             "fr": "Une grande source proche et diffusée enveloppe le visage ; le soleil dur à travers la vitre est un autre outil.",
-            "es": "Una fuente grande, suave y difusa envuelve el rostro; el sol duro a través del cristal es otra herramienta."
+            "es": "Una fuente grande, suave y difusa envuelve el rostro; el sol duro a través del cristal es otra herramienta.",
+            "de": "Eine große, weiche, diffuse Quelle umhüllt das Gesicht; hartes Sonnenlicht durch Glas ist ein anderes Werkzeug."
           },
           "imageUrl": "/images/packs/photo-1438761681033-6461ffad8d80.avif",
           "imageAlt": {
             "en": "Soft window-light portrait facing the window",
             "fr": "Portrait douce lumière de fenêtre face à la fenêtre",
-            "es": "Retrato suave con luz de ventana de cara a la ventana"
+            "es": "Retrato suave con luz de ventana de cara a la ventana",
+            "de": "Weiches Fensterlicht-Porträt mit Blick zum Fenster"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19483,7 +19549,8 @@
           "text": {
             "en": "Golden-hour outdoor portraits often work because…",
             "fr": "Les portraits golden hour marchent souvent parce que…",
-            "es": "Los retratos en golden hour suelen funcionar porque…"
+            "es": "Los retratos en golden hour suelen funcionar porque…",
+            "de": "Golden-Hour-Außenporträts funktionieren oft, weil…"
           },
           "answers": [
             {
@@ -19491,7 +19558,8 @@
               "text": {
                 "en": "Low warm light is softer and more directional than harsh midday sun",
                 "fr": "La lumière basse et chaude est plus douce et directionnelle que le midi cruel",
-                "es": "La luz baja y cálida es más suave y direccional que el sol duro del mediodía"
+                "es": "La luz baja y cálida es más suave y direccional que el sol duro del mediodía",
+                "de": "Tiefes warmes Licht weicher und gerichteter ist als hartes Mittagslicht"
               }
             },
             {
@@ -19499,7 +19567,8 @@
               "text": {
                 "en": "ISO must be locked at 50 forever",
                 "fr": "L’ISO doit rester bloqué à 50 pour toujours",
-                "es": "El ISO debe quedar bloqueado en 50 para siempre"
+                "es": "El ISO debe quedar bloqueado en 50 para siempre",
+                "de": "ISO für immer auf 50 gesperrt sein muss"
               }
             },
             {
@@ -19507,7 +19576,8 @@
               "text": {
                 "en": "White balance disappears as a concept",
                 "fr": "La balance des blancs disparaît comme concept",
-                "es": "El balance de blancos desaparece como concepto"
+                "es": "El balance de blancos desaparece como concepto",
+                "de": "Weißabgleich als Konzept verschwindet"
               }
             },
             {
@@ -19515,7 +19585,8 @@
               "text": {
                 "en": "You can only shoot silhouettes then",
                 "fr": "Tu ne peux shooter que des silhouettes à ce moment-là",
-                "es": "Solo se pueden disparar siluetas en ese momento"
+                "es": "Solo se pueden disparar siluetas en ese momento",
+                "de": "Dann nur Silhouetten möglich sind"
               }
             }
           ],
@@ -19525,18 +19596,21 @@
           "explanation": {
             "en": "Angle + warmth + longer shadows give flattering shape without fighting overhead sun.",
             "fr": "L’angle + la chaleur + les ombres longues sculptent sans combattre le soleil zénithal.",
-            "es": "El ángulo + el calor + las sombras largas modelan sin combatir el sol cenital."
+            "es": "El ángulo + el calor + las sombras largas modelan sin combatir el sol cenital.",
+            "de": "Winkel + Wärme + lange Schatten modellieren, ohne gegen Zenitlicht zu kämpfen."
           },
           "imageUrl": "/images/packs/photo-1517841905240-472988babdf9.avif",
           "imageAlt": {
             "en": "Outdoor portrait with golden-hour rim light",
             "fr": "Portrait outdoor avec lumière d’accent golden hour",
-            "es": "Retrato exterior con luz de acento golden hour"
+            "es": "Retrato exterior con luz de acento golden hour",
+            "de": "Außenporträt mit Golden-Hour-Akzentlicht"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19546,7 +19620,8 @@
           "text": {
             "en": "Which choices usually soften a hard key on a face?",
             "fr": "Quels choix adoucissent généralement une clé dure sur un visage ?",
-            "es": "¿Qué elecciones suelen suavizar una clave dura sobre un rostro?"
+            "es": "¿Qué elecciones suelen suavizar una clave dura sobre un rostro?",
+            "de": "Welche Entscheidungen weichen ein hartes Schlüssel auf dem Gesicht typischerweise auf?"
           },
           "answers": [
             {
@@ -19554,7 +19629,8 @@
               "text": {
                 "en": "Larger modifier / diffuser closer to the subject",
                 "fr": "Modificateur plus grand / diffuseur plus proche du sujet",
-                "es": "Modificador más grande / difusor más cerca del sujeto"
+                "es": "Modificador más grande / difusor más cerca del sujeto",
+                "de": "Größerer Modifier / Diffusor näher am Motiv"
               }
             },
             {
@@ -19562,7 +19638,8 @@
               "text": {
                 "en": "Moving a bare bulb farther and smaller in the frame",
                 "fr": "Éloigner une ampoule nue pour la rendre plus petite",
-                "es": "Alejar una bombilla desnuda para hacerla más pequeña en el encuadre"
+                "es": "Alejar una bombilla desnuda para hacerla más pequeña en el encuadre",
+                "de": "Eine nackte Birne weiter weg und kleiner im Bild"
               }
             },
             {
@@ -19570,7 +19647,8 @@
               "text": {
                 "en": "Adding bounce or a reflector as gentle fill",
                 "fr": "Ajouter un bounce ou un réflecteur en fill doux",
-                "es": "Añadir bounce o un reflector como relleno suave"
+                "es": "Añadir bounce o un reflector como relleno suave",
+                "de": "Bounce oder Reflektor als sanftes Fill hinzufügen"
               }
             },
             {
@@ -19578,7 +19656,8 @@
               "text": {
                 "en": "Always raising Clarity to +100 in-camera",
                 "fr": "Toujours monter Clarity à +100 dans l’appareil",
-                "es": "Subir siempre Clarity a +100 en la cámara"
+                "es": "Subir siempre Clarity a +100 en la cámara",
+                "de": "Immer Clarity auf +100 in der Kamera"
               }
             }
           ],
@@ -19589,7 +19668,8 @@
           "explanation": {
             "en": "Bigger/closer sources wrap; fill lifts shadows. Tiny distant bare bulbs get harder.",
             "fr": "Sources plus grandes/proches = plus d’enveloppe ; le fill remonte les ombres. Une ampoule nue lointaine durcit.",
-            "es": "Fuentes más grandes/cercanas envuelven; el relleno levanta las sombras. Una bombilla desnuda lejana endurece."
+            "es": "Fuentes más grandes/cercanas envuelven; el relleno levanta las sombras. Una bombilla desnuda lejana endurece.",
+            "de": "Größere/nähere Quellen umhüllen; Fill hebt Schatten. Eine ferne nackte Birne härtet."
           }
         },
         {
@@ -19599,7 +19679,8 @@
           "text": {
             "en": "Clamshell beauty lighting typically combines…",
             "fr": "La lumière beauté « clamshell » combine typiquement…",
-            "es": "La luz belleza «clamshell» combina típicamente…"
+            "es": "La luz belleza «clamshell» combina típicamente…",
+            "de": "Beauty-Licht „Clamshell“ kombiniert typischerweise…"
           },
           "answers": [
             {
@@ -19607,7 +19688,8 @@
               "text": {
                 "en": "A key from above and a fill/reflector from below under the chin",
                 "fr": "Une clé du dessus et un fill/réflecteur sous le menton",
-                "es": "Una clave desde arriba y un relleno/reflector bajo la barbilla"
+                "es": "Una clave desde arriba y un relleno/reflector bajo la barbilla",
+                "de": "Ein Schlüssel von oben und ein Fill/Reflektor unter dem Kinn"
               }
             },
             {
@@ -19615,7 +19697,8 @@
               "text": {
                 "en": "Only two rim lights and a black flag on the face",
                 "fr": "Seulement deux rim lights et un drapeau noir sur le visage",
-                "es": "Solo dos rim lights y una bandera negra sobre el rostro"
+                "es": "Solo dos rim lights y una bandera negra sobre el rostro",
+                "de": "Nur zwei Rim lights und eine schwarze Flagge über dem Gesicht"
               }
             },
             {
@@ -19623,7 +19706,8 @@
               "text": {
                 "en": "A single candle at floor level",
                 "fr": "Une seule bougie au niveau du sol",
-                "es": "Una sola vela a ras de suelo"
+                "es": "Una sola vela a ras de suelo",
+                "de": "Eine einzelne Kerze auf Bodenhöhe"
               }
             },
             {
@@ -19631,7 +19715,8 @@
               "text": {
                 "en": "Cross-polarized flash through a microscope",
                 "fr": "Un flash polarisé croisé à travers un microscope",
-                "es": "Un flash polarizado cruzado a través de un microscopio"
+                "es": "Un flash polarizado cruzado a través de un microscopio",
+                "de": "Kreuzpolarisierten Blitz durch ein Mikroskop"
               }
             }
           ],
@@ -19641,18 +19726,21 @@
           "explanation": {
             "en": "Top key + under-fill opens eye sockets and softens under-chin shadows.",
             "fr": "Clé du dessus + fill dessous ouvre les orbites et adoucit sous le menton.",
-            "es": "Clave de arriba + relleno de abajo abre las órbitas y suaviza bajo la barbilla."
+            "es": "Clave de arriba + relleno de abajo abre las órbitas y suaviza bajo la barbilla.",
+            "de": "Schlüssel oben + Fill unten öffnet die Augenhöhlen und weicht unter dem Kinn ab."
           },
           "imageUrl": "/images/packs/photo-1487412720507-e7ab37603c6f.avif",
           "imageAlt": {
             "en": "Soft beauty light wrapping the face evenly",
             "fr": "Lumière beauté douce enveloppant le visage",
-            "es": "Luz belleza suave envolviendo el rostro de forma uniforme"
+            "es": "Luz belleza suave envolviendo el rostro de forma uniforme",
+            "de": "Weiches Beauty-Licht, das das Gesicht gleichmäßig umhüllt"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19662,7 +19750,8 @@
           "text": {
             "en": "Split lighting on a face means…",
             "fr": "La lumière split sur un visage signifie…",
-            "es": "La luz split en un rostro significa…"
+            "es": "La luz split en un rostro significa…",
+            "de": "Split-Licht im Gesicht bedeutet…"
           },
           "answers": [
             {
@@ -19670,7 +19759,8 @@
               "text": {
                 "en": "Half the face in key, half essentially in shadow",
                 "fr": "Une moitié de visage en clé, l’autre essentiellement à l’ombre",
-                "es": "Mitad del rostro en clave, la otra esencialmente en sombra"
+                "es": "Mitad del rostro en clave, la otra esencialmente en sombra",
+                "de": "Eine Gesichtshälfte im Schlüssel, die andere im Wesentlichen im Schatten"
               }
             },
             {
@@ -19678,7 +19768,8 @@
               "text": {
                 "en": "Even loop shadows on both cheeks identically",
                 "fr": "Des ombres loop identiques sur les deux joues",
-                "es": "Sombras loop idénticas en ambas mejillas"
+                "es": "Sombras loop idénticas en ambas mejillas",
+                "de": "Identische Loop-Schatten auf beiden Wangen"
               }
             },
             {
@@ -19686,7 +19777,8 @@
               "text": {
                 "en": "Only hair light with no front exposure",
                 "fr": "Seulement un hair light sans expo frontale",
-                "es": "Solo luz de pelo sin exposición frontal"
+                "es": "Solo luz de pelo sin exposición frontal",
+                "de": "Nur Haarlicht ohne Frontbelichtung"
               }
             },
             {
@@ -19694,7 +19786,8 @@
               "text": {
                 "en": "RGB continuous lights cycling every second",
                 "fr": "Des LED RGB qui cyclent chaque seconde",
-                "es": "LED RGB que ciclan cada segundo"
+                "es": "LED RGB que ciclan cada segundo",
+                "de": "RGB-Dauerlicht, das jede Sekunde wechselt"
               }
             }
           ],
@@ -19704,18 +19797,21 @@
           "explanation": {
             "en": "Key at ~90° creates a dramatic half-and-half face — useful, not default flattering.",
             "fr": "Une clé à ~90° crée un demi-visage dramatique — utile, pas le flatteur par défaut.",
-            "es": "Una clave a ~90° crea un medio rostro dramático — útil, no el favorecedor por defecto."
+            "es": "Una clave a ~90° crea un medio rostro dramático — útil, no el favorecedor por defecto.",
+            "de": "Ein Schlüssel bei ~90° erzeugt ein dramatisches Halbgesicht — nützlich, nicht der Standard-Schmeichler."
           },
           "imageUrl": "/images/packs/photo-1552374196-c4e7ffc6e126.avif",
           "imageAlt": {
             "en": "Dramatic split light carving half the face",
             "fr": "Lumière split dramatique sculptant une moitié du visage",
-            "es": "Luz split dramática que esculpe la mitad del rostro"
+            "es": "Luz split dramática que esculpe la mitad del rostro",
+            "de": "Dramatisches Split-Licht, das eine Gesichtshälfte formt"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19725,7 +19821,8 @@
           "text": {
             "en": "You want creamy background separation on a portrait without moving outdoors. First instinct?",
             "fr": "Tu veux un fond crémeux en portrait sans sortir. Premier réflexe ?",
-            "es": "Quieres un fondo cremoso en retrato sin salir. ¿Primer reflejo?"
+            "es": "Quieres un fondo cremoso en retrato sin salir. ¿Primer reflejo?",
+            "de": "Du willst cremige Hintergrundtrennung im Porträt ohne nach draußen zu gehen. Erster Reflex?"
           },
           "answers": [
             {
@@ -19733,7 +19830,8 @@
               "text": {
                 "en": "Wider aperture + more subject-to-background distance + longer focal length",
                 "fr": "Ouverture plus ouverte + plus de distance sujet–fond + focale plus longue",
-                "es": "Apertura más abierta + más distancia sujeto–fondo + focal más larga"
+                "es": "Apertura más abierta + más distancia sujeto–fondo + focal más larga",
+                "de": "Offenere Blende + mehr Motiv-Hintergrund-Abstand + längere Brennweite"
               }
             },
             {
@@ -19741,7 +19839,8 @@
               "text": {
                 "en": "f/16 and put the subject against the seamless at 10 cm",
                 "fr": "f/16 et coller le sujet à 10 cm du fond",
-                "es": "f/16 y pegar el sujeto a 10 cm del fondo"
+                "es": "f/16 y pegar el sujeto a 10 cm del fondo",
+                "de": "f/16 und Motiv 10 cm am Hintergrund"
               }
             },
             {
@@ -19749,7 +19848,8 @@
               "text": {
                 "en": "Raise ISO until noise blurs the background",
                 "fr": "Monter l’ISO jusqu’à ce que le bruit floute le fond",
-                "es": "Subir el ISO hasta que el ruido difumine el fondo"
+                "es": "Subir el ISO hasta que el ruido difumine el fondo",
+                "de": "ISO hochdrehen, bis Rauschen den Hintergrund verwischt"
               }
             },
             {
@@ -19757,7 +19857,8 @@
               "text": {
                 "en": "Always use the built-in popup flash bounced off nothing",
                 "fr": "Toujours le flash pop-up sans bounce",
-                "es": "Usar siempre el flash pop-up sin bounce"
+                "es": "Usar siempre el flash pop-up sin bounce",
+                "de": "Immer den Pop-up-Blitz ohne Bounce nutzen"
               }
             }
           ],
@@ -19767,18 +19868,21 @@
           "explanation": {
             "en": "DOF is optics + geometry — aperture, distance, and focal length work together.",
             "fr": "La PdC = optique + géométrie — ouverture, distances et focale travaillent ensemble.",
-            "es": "La profundidad de campo = óptica + geometría — apertura, distancias y focal trabajan juntas."
+            "es": "La profundidad de campo = óptica + geometría — apertura, distancias y focal trabajan juntas.",
+            "de": "Schärfentiefe = Optik + Geometrie — Blende, Distanzen und Brennweite arbeiten zusammen."
           },
           "imageUrl": "/images/packs/photo-1529626455594-4ff0802cfb7e.avif",
           "imageAlt": {
             "en": "Fashion-leaning portrait with controlled contrast",
             "fr": "Portrait mode avec contraste maîtrisé",
-            "es": "Retrato fashion con contraste controlado"
+            "es": "Retrato fashion con contraste controlado",
+            "de": "Fashion-Porträt mit kontrolliertem Kontrast"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19788,7 +19892,8 @@
           "text": {
             "en": "Lighting ratio ~4:1 (key vs fill) on a face generally feels…",
             "fr": "Un ratio d’éclairage ~4:1 (clé vs fill) sur un visage paraît généralement…",
-            "es": "Un ratio de iluminación ~4:1 (clave vs relleno) en un rostro suele sentirse…"
+            "es": "Un ratio de iluminación ~4:1 (clave vs relleno) en un rostro suele sentirse…",
+            "de": "Ein Lichtverhältnis ~4:1 (Schlüssel vs Fill) im Gesicht wirkt meist…"
           },
           "answers": [
             {
@@ -19796,7 +19901,8 @@
               "text": {
                 "en": "Fairly contrasty / dramatic compared with 2:1",
                 "fr": "Assez contrasté / dramatique par rapport à 2:1",
-                "es": "Bastante contrastado / dramático frente a 2:1"
+                "es": "Bastante contrastado / dramático frente a 2:1",
+                "de": "Ziemlich kontrastreich / dramatisch gegenüber 2:1"
               }
             },
             {
@@ -19804,7 +19910,8 @@
               "text": {
                 "en": "Completely flat like overcast noon fill",
                 "fr": "Totalement plat comme un fill de midi couvert",
-                "es": "Totalmente plano como un relleno de mediodía nublado"
+                "es": "Totalmente plano como un relleno de mediodía nublado",
+                "de": "Völlig flach wie bewölktes Mittags-Fill"
               }
             },
             {
@@ -19812,7 +19919,8 @@
               "text": {
                 "en": "Identical to butterfly with no shadows",
                 "fr": "Identique au papillon sans aucune ombre",
-                "es": "Idéntico a la mariposa sin ninguna sombra"
+                "es": "Idéntico a la mariposa sin ninguna sombra",
+                "de": "Identisch mit Schmetterling ohne Schatten"
               }
             },
             {
@@ -19820,7 +19928,8 @@
               "text": {
                 "en": "A white-balance setting, not a contrast idea",
                 "fr": "Un réglage de balance des blancs, pas une idée de contraste",
-                "es": "Un ajuste de balance de blancos, no una idea de contraste"
+                "es": "Un ajuste de balance de blancos, no una idea de contraste",
+                "de": "Eine Weißabgleich-Einstellung, keine Kontrastidee"
               }
             }
           ],
@@ -19830,7 +19939,8 @@
           "explanation": {
             "en": "Higher key-to-fill ratios deepen the shadow side; 2:1 is gentler, 8:1 more dramatic.",
             "fr": "Plus le ratio clé/fill monte, plus le côté ombre s’assombrit ; 2:1 est plus doux, 8:1 plus dramatique.",
-            "es": "Cuanto más sube el ratio clave/relleno, más se oscurece el lado en sombra; 2:1 es más suave, 8:1 más dramático."
+            "es": "Cuanto más sube el ratio clave/relleno, más se oscurece el lado en sombra; 2:1 es más suave, 8:1 más dramático.",
+            "de": "Je höher das Schlüssel/Fill-Verhältnis, desto dunkler die Schattenseite; 2:1 ist weicher, 8:1 dramatischer."
           }
         },
         {
@@ -19840,7 +19950,8 @@
           "text": {
             "en": "Broad vs short lighting: short lighting typically…",
             "fr": "Broad vs short lighting : le short lighting typiquement…",
-            "es": "Broad vs short lighting: el short lighting típicamente…"
+            "es": "Broad vs short lighting: el short lighting típicamente…",
+            "de": "Broad vs Short Lighting: Short Lighting…"
           },
           "answers": [
             {
@@ -19848,7 +19959,8 @@
               "text": {
                 "en": "Lights the side of the face turned away from camera — often slimming",
                 "fr": "Éclaire le côté du visage tourné loin de la caméra — souvent amincissant",
-                "es": "Ilumina el lado del rostro girado lejos de la cámara — a menudo adelgaza"
+                "es": "Ilumina el lado del rostro girado lejos de la cámara — a menudo adelgaza",
+                "de": "Beleuchtet die vom Kameraweg gedrehte Gesichtshälfte — oft schlanker wirkend"
               }
             },
             {
@@ -19856,7 +19968,8 @@
               "text": {
                 "en": "Always lights only the ears from behind",
                 "fr": "N’éclaire toujours que les oreilles depuis derrière",
-                "es": "Solo ilumina siempre las orejas desde detrás"
+                "es": "Solo ilumina siempre las orejas desde detrás",
+                "de": "Beleuchtet immer nur die Ohren von hinten"
               }
             },
             {
@@ -19864,7 +19977,8 @@
               "text": {
                 "en": "Means using only wide-angle lenses",
                 "fr": "Signifie n’utiliser que des grands-angles",
-                "es": "Significa usar solo objetivos gran angular"
+                "es": "Significa usar solo objetivos gran angular",
+                "de": "Bedeutet nur Weitwinkelobjektive"
               }
             },
             {
@@ -19872,7 +19986,8 @@
               "text": {
                 "en": "Is identical to flat on-camera flash",
                 "fr": "Est identique au flash cobra plat sur l’appareil",
-                "es": "Es idéntico al flash cobra plano sobre la cámara"
+                "es": "Es idéntico al flash cobra plano sobre la cámara",
+                "de": "Ist identisch mit flachem Blitz auf der Kamera"
               }
             }
           ],
@@ -19882,18 +19997,21 @@
           "explanation": {
             "en": "Short lighting puts more shadow toward camera — classic flattering pattern for many faces.",
             "fr": "Le short lighting met plus d’ombre vers la caméra — schéma classique flatteur pour beaucoup de visages.",
-            "es": "El short lighting pone más sombra hacia la cámara — esquema clásico favorecedor para muchos rostros."
+            "es": "El short lighting pone más sombra hacia la cámara — esquema clásico favorecedor para muchos rostros.",
+            "de": "Short Lighting legt mehr Schatten zur Kamera — klassisches schmeichelndes Schema für viele Gesichter."
           },
           "imageUrl": "/images/packs/photo-1507003211169-0a1dd7228f2d.avif",
           "imageAlt": {
             "en": "Male portrait with clean key and gentle fill",
             "fr": "Portrait masculin avec clé nette et fill doux",
-            "es": "Retrato masculino con clave limpia y relleno suave"
+            "es": "Retrato masculino con clave limpia y relleno suave",
+            "de": "Männliches Porträt mit klarem Schlüssel und weichem Fill"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19903,7 +20021,8 @@
           "text": {
             "en": "Backlit portrait: you want face detail AND a glowing rim. Sensible exposure approach?",
             "fr": "Portrait à contre-jour : tu veux le visage lisible ET un rim lumineux. Approche d’expo sensée ?",
-            "es": "Retrato a contraluz: quieres el rostro legible Y un rim brillante. ¿Enfoque de exposición sensato?"
+            "es": "Retrato a contraluz: quieres el rostro legible Y un rim brillante. ¿Enfoque de exposición sensato?",
+            "de": "Gegenlicht-Porträt: Gesicht lesbar UND heller Rim. Sinnvoller Belichtungsansatz?"
           },
           "answers": [
             {
@@ -19911,7 +20030,8 @@
               "text": {
                 "en": "Expose for the face (or add fill/flash), accept or shape the bright rim",
                 "fr": "Exposer pour le visage (ou ajouter fill/flash), accepter ou sculpter le rim clair",
-                "es": "Exponer para el rostro (o añadir relleno/flash), aceptar o esculpir el rim claro"
+                "es": "Exponer para el rostro (o añadir relleno/flash), aceptar o esculpir el rim claro",
+                "de": "Für das Gesicht belichten (oder Fill/Blitz hinzufügen), den hellen Rim akzeptieren oder formen"
               }
             },
             {
@@ -19919,7 +20039,8 @@
               "text": {
                 "en": "Meter only the sky and crush the face to black always",
                 "fr": "Mesurer seulement le ciel et écraser le visage au noir toujours",
-                "es": "Medir solo el cielo y aplastar siempre el rostro a negro"
+                "es": "Medir solo el cielo y aplastar siempre el rostro a negro",
+                "de": "Nur den Himmel messen und das Gesicht immer schwarz quetschen"
               }
             },
             {
@@ -19927,7 +20048,8 @@
               "text": {
                 "en": "Disable all metering and guess ISO 25600",
                 "fr": "Désactiver toute mesure et miser sur ISO 25600",
-                "es": "Desactivar toda medición y apostar por ISO 25600"
+                "es": "Desactivar toda medición y apostar por ISO 25600",
+                "de": "Jede Messung ausschalten und auf ISO 25600 tippen"
               }
             },
             {
@@ -19935,7 +20057,8 @@
               "text": {
                 "en": "Use the smallest aperture and slowest shutter possible indoors",
                 "fr": "Utiliser la plus petite ouverture et le plus lent obturateur en intérieur",
-                "es": "Usar la apertura más pequeña y el obturador más lento en interior"
+                "es": "Usar la apertura más pequeña y el obturador más lento en interior",
+                "de": "Kleinste Blende und langsamsten Verschluss indoor"
               }
             }
           ],
@@ -19945,7 +20068,8 @@
           "explanation": {
             "en": "Protect the face first; rim is a bonus you can fill against or embrace as highlight.",
             "fr": "Protège d’abord le visage ; le rim est un bonus que tu combles ou que tu assumes en haute lumière.",
-            "es": "Protege primero el rostro; el rim es un bonus que puedes rellenar o asumir como alta luz."
+            "es": "Protege primero el rostro; el rim es un bonus que puedes rellenar o asumir como alta luz.",
+            "de": "Schütze zuerst das Gesicht; der Rim ist Bonus, den du füllen oder als Highlight annehmen kannst."
           }
         },
         {
@@ -19955,7 +20079,8 @@
           "text": {
             "en": "Hard beauty dish vs large softbox close to the face — typical difference?",
             "fr": "Beauty dish dure vs grande softbox proche du visage — différence typique ?",
-            "es": "Beauty dish dura vs gran softbox cerca del rostro — ¿diferencia típica?"
+            "es": "Beauty dish dura vs gran softbox cerca del rostro — ¿diferencia típica?",
+            "de": "Harte Beauty Dish vs große Softbox nah am Gesicht — typischer Unterschied?"
           },
           "answers": [
             {
@@ -19963,7 +20088,8 @@
               "text": {
                 "en": "Beauty dish = punchier contrast/specular; big softbox = softer wrap",
                 "fr": "Beauty dish = contraste/spéculaire plus punchy ; grande softbox = enveloppe plus douce",
-                "es": "Beauty dish = contraste/especular más punchy; gran softbox = envoltura más suave"
+                "es": "Beauty dish = contraste/especular más punchy; gran softbox = envoltura más suave",
+                "de": "Beauty Dish = punchiger Kontrast/Spekular; große Softbox = weichere Umhüllung"
               }
             },
             {
@@ -19971,7 +20097,8 @@
               "text": {
                 "en": "They are optically identical at any distance",
                 "fr": "Elles sont optiquement identiques à toute distance",
-                "es": "Son ópticamente idénticas a cualquier distancia"
+                "es": "Son ópticamente idénticas a cualquier distancia",
+                "de": "Optisch identisch bei jeder Distanz"
               }
             },
             {
@@ -19979,7 +20106,8 @@
               "text": {
                 "en": "Softboxes always create harsher nose shadows",
                 "fr": "Les softbox créent toujours des ombres de nez plus dures",
-                "es": "Las softbox siempre crean sombras de nariz más duras"
+                "es": "Las softbox siempre crean sombras de nariz más duras",
+                "de": "Softboxen erzeugen immer härtere Nasenschatten"
               }
             },
             {
@@ -19987,7 +20115,8 @@
               "text": {
                 "en": "Beauty dishes only work underwater",
                 "fr": "Les beauty dishes ne marchent que sous l’eau",
-                "es": "Las beauty dishes solo funcionan bajo el agua"
+                "es": "Las beauty dishes solo funcionan bajo el agua",
+                "de": "Beauty Dishes funktionieren nur unter Wasser"
               }
             }
           ],
@@ -19997,18 +20126,21 @@
           "explanation": {
             "en": "Modifier size/distance and design change specular quality — not just “bright vs dark”.",
             "fr": "Taille/distance et design du modificateur changent le spéculaire — pas seulement « clair vs sombre ».",
-            "es": "Tamaño/distancia y diseño del modificador cambian lo especular — no solo «claro vs oscuro»."
+            "es": "Tamaño/distancia y diseño del modificador cambian lo especular — no solo «claro vs oscuro».",
+            "de": "Größe/Distanz und Modifier-Design ändern das Spekulare — nicht nur „hell vs dunkel“."
           },
           "imageUrl": "/images/packs/photo-1515886657613-9f3515b0c78f.avif",
           "imageAlt": {
             "en": "Full-length fashion portrait — light shape on the figure",
             "fr": "Portrait mode en pied — dessin de lumière sur la silhouette",
-            "es": "Retrato fashion de cuerpo entero — dibujo de luz en la silueta"
+            "es": "Retrato fashion de cuerpo entero — dibujo de luz en la silueta",
+            "de": "Ganzkörper-Fashion-Porträt — Lichtzeichnung der Silhouette"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -20018,7 +20150,8 @@
           "text": {
             "en": "Which habits help keep skin tones believable under mixed portrait light?",
             "fr": "Quelles habitudes aident à garder des tons chair crédibles sous lumière portrait mixte ?",
-            "es": "¿Qué hábitos ayudan a mantener tonos de piel creíbles bajo luz de retrato mixta?"
+            "es": "¿Qué hábitos ayudan a mantener tonos de piel creíbles bajo luz de retrato mixta?",
+            "de": "Welche Gewohnheiten halten Hauttöne unter gemischtem Porträtlicht glaubwürdig?"
           },
           "answers": [
             {
@@ -20026,7 +20159,8 @@
               "text": {
                 "en": "Set / gel lights toward a consistent white balance plan",
                 "fr": "Régler / gélatiner les lumières vers un plan de balance cohérent",
-                "es": "Ajustar / gelatinar las luces hacia un plan de balance coherente"
+                "es": "Ajustar / gelatinar las luces hacia un plan de balance coherente",
+                "de": "Lichter gelieren / auf einen kohärenten WB-Plan setzen"
               }
             },
             {
@@ -20034,7 +20168,8 @@
               "text": {
                 "en": "Check a grey card or known neutral when casts fight",
                 "fr": "Vérifier une charte grise ou un neutre connu quand les dominantes se battent",
-                "es": "Comprobar una carta gris o un neutro conocido cuando las dominantes se pelean"
+                "es": "Comprobar una carta gris o un neutro conocido cuando las dominantes se pelean",
+                "de": "Graukarte oder bekanntes Neutral prüfen, wenn Dominanten streiten"
               }
             },
             {
@@ -20042,7 +20177,8 @@
               "text": {
                 "en": "Always max magenta and yellow “for warmth” blindly",
                 "fr": "Toujours max magenta et jaune « pour la chaleur » à l’aveugle",
-                "es": "Siempre max magenta y amarillo «para el calor» a ciegas"
+                "es": "Siempre max magenta y amarillo «para el calor» a ciegas",
+                "de": "Immer Max Magenta und Gelb „für Wärme“ blind"
               }
             },
             {
@@ -20050,7 +20186,8 @@
               "text": {
                 "en": "Ignore the histogram because portraits don’t clip",
                 "fr": "Ignorer l’histogramme car les portraits ne crament jamais",
-                "es": "Ignorar el histograma porque los retratos nunca se queman"
+                "es": "Ignorar el histograma porque los retratos nunca se queman",
+                "de": "Histogramm ignorieren, weil Porträts nie ausbrennen"
               }
             }
           ],
@@ -20061,7 +20198,8 @@
           "explanation": {
             "en": "Mixed sources need a WB plan; references beat guessing saturation.",
             "fr": "Les sources mixtes demandent un plan WB ; les références battent la saturation au feeling.",
-            "es": "Las fuentes mixtas exigen un plan de WB; las referencias ganan a la saturación a ojo."
+            "es": "Las fuentes mixtas exigen un plan de WB; las referencias ganan a la saturación a ojo.",
+            "de": "Gemischte Quellen brauchen einen WB-Plan; Referenzen schlagen Sättigung nach Gefühl."
           }
         },
         {
@@ -20071,7 +20209,8 @@
           "text": {
             "en": "Environmental portrait usually means…",
             "fr": "Un portrait environnemental signifie surtout…",
-            "es": "Un retrato ambiental significa sobre todo…"
+            "es": "Un retrato ambiental significa sobre todo…",
+            "de": "Ein environmentales Porträt bedeutet vor allem…"
           },
           "answers": [
             {
@@ -20079,7 +20218,8 @@
               "text": {
                 "en": "Showing the person in a context that tells something about them",
                 "fr": "Montrer la personne dans un contexte qui en dit quelque chose",
-                "es": "Mostrar a la persona en un contexto que diga algo de ella"
+                "es": "Mostrar a la persona en un contexto que diga algo de ella",
+                "de": "Die Person in einem Kontext zeigen, der etwas über sie sagt"
               }
             },
             {
@@ -20087,7 +20227,8 @@
               "text": {
                 "en": "Only studio seamless with zero background props",
                 "fr": "Seulement un fond studio sans aucun accessoire",
-                "es": "Solo un fondo de estudio sin ningún accesorio"
+                "es": "Solo un fondo de estudio sin ningún accesorio",
+                "de": "Nur Studio-Hintergrund ohne Requisiten"
               }
             },
             {
@@ -20095,7 +20236,8 @@
               "text": {
                 "en": "Macro of an eye and nothing else",
                 "fr": "Une macro d’œil et rien d’autre",
-                "es": "Una macro de ojo y nada más"
+                "es": "Una macro de ojo y nada más",
+                "de": "Eine Makro vom Auge und sonst nichts"
               }
             },
             {
@@ -20103,7 +20245,8 @@
               "text": {
                 "en": "Aerial landscapes without people",
                 "fr": "Des paysages aériens sans personnes",
-                "es": "Paisajes aéreos sin personas"
+                "es": "Paisajes aéreos sin personas",
+                "de": "Luftlandschaften ohne Menschen"
               }
             }
           ],
@@ -20113,18 +20256,21 @@
           "explanation": {
             "en": "Environment supports the story — workplace, home, street — not just a headshot crop.",
             "fr": "L’environnement porte l’histoire — travail, maison, rue — pas seulement un crop tête.",
-            "es": "El entorno sostiene la historia — trabajo, casa, calle — no solo un recorte de cabeza."
+            "es": "El entorno sostiene la historia — trabajo, casa, calle — no solo un recorte de cabeza.",
+            "de": "Die Umgebung trägt die Geschichte — Arbeit, Zuhause, Straße — nicht nur ein Kopfzuschnitt."
           },
           "imageUrl": "/images/packs/photo-1524504388940-b1c1722653e1.avif",
           "imageAlt": {
             "en": "Environmental portrait with window light from camera-left",
             "fr": "Portrait environnemental avec lumière de fenêtre à gauche",
-            "es": "Retrato ambiental con luz de ventana desde la izquierda de cámara"
+            "es": "Retrato ambiental con luz de ventana desde la izquierda de cámara",
+            "de": "Environmentales Porträt mit Fensterlicht von kameraseitig links"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -20134,7 +20280,8 @@
           "text": {
             "en": "Myth: “More lights always make a better portrait.” Better framing?",
             "fr": "Mythe : « Plus de lumières = forcément un meilleur portrait. » Meilleure nuance ?",
-            "es": "Mito: «Más luces = siempre un mejor retrato.» ¿Mejor matiz?"
+            "es": "Mito: «Más luces = siempre un mejor retrato.» ¿Mejor matiz?",
+            "de": "Mythos: „Mehr Lichter = immer ein besseres Porträt.“ Bessere Nuance?"
           },
           "answers": [
             {
@@ -20142,7 +20289,8 @@
               "text": {
                 "en": "One well-placed key (plus optional fill) beats cluttered conflicting sources",
                 "fr": "Une clé bien placée (plus fill optionnel) bat des sources multiples qui se battent",
-                "es": "Una clave bien colocada (más relleno opcional) gana a fuentes múltiples que se pelean"
+                "es": "Una clave bien colocada (más relleno opcional) gana a fuentes múltiples que se pelean",
+                "de": "Ein gut gesetztes Schlüssel (plus optionales Fill) schlägt viele streitende Quellen"
               }
             },
             {
@@ -20150,7 +20298,8 @@
               "text": {
                 "en": "You must use at least five strobes for every headshot",
                 "fr": "Il faut au moins cinq flashs pour chaque portrait",
-                "es": "Hay que usar al menos cinco flashes para cada retrato"
+                "es": "Hay que usar al menos cinco flashes para cada retrato",
+                "de": "Mindestens fünf Blitze für jedes Porträt"
               }
             },
             {
@@ -20158,7 +20307,8 @@
               "text": {
                 "en": "Natural light is illegal in studios",
                 "fr": "La lumière naturelle est illégale en studio",
-                "es": "La luz natural es ilegal en estudio"
+                "es": "La luz natural es ilegal en estudio",
+                "de": "Tageslicht ist im Studio illegal"
               }
             },
             {
@@ -20166,7 +20316,8 @@
               "text": {
                 "en": "Portrait light only exists inside Lightroom masks",
                 "fr": "La lumière portrait n’existe que dans les masques Lightroom",
-                "es": "La luz de retrato solo existe dentro de las máscaras de Lightroom"
+                "es": "La luz de retrato solo existe dentro de las máscaras de Lightroom",
+                "de": "Porträtlicht existiert nur in Lightroom-Masken"
               }
             }
           ],
@@ -20176,18 +20327,21 @@
           "explanation": {
             "en": "Intentional simple light reads; extra lights need a job or they muddy the face.",
             "fr": "Une lumière simple et intentionnelle se lit ; chaque lumière en plus doit avoir un rôle.",
-            "es": "Una luz simple e intencional se lee; cada luz de más necesita un rol o ensucia el rostro."
+            "es": "Una luz simple e intencional se lee; cada luz de más necesita un rol o ensucia el rostro.",
+            "de": "Einfaches, absichtliches Licht liest sich; jedes Extra-Licht braucht eine Rolle oder verschmutzt das Gesicht."
           },
           "imageUrl": "/images/packs/photo-1552374196-c4e7ffc6e126.avif",
           "imageAlt": {
             "en": "Dramatic portrait with harder side light and deep shadows",
             "fr": "Portrait dramatique avec lumière latérale plus dure et ombres profondes",
-            "es": "Retrato dramático con luz lateral más dura y sombras profundas"
+            "es": "Retrato dramático con luz lateral más dura y sombras profundas",
+            "de": "Dramatisches Porträt mit härterem Seitenlicht und tiefen Schatten"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -20197,7 +20351,8 @@
           "text": {
             "en": "A hair / rim light behind the subject is mainly there to…",
             "fr": "Un hair / rim light derrière le sujet sert surtout à…",
-            "es": "Una luz de pelo / rim detrás del sujeto sirve sobre todo a…"
+            "es": "Una luz de pelo / rim detrás del sujeto sirve sobre todo a…",
+            "de": "Ein Haar- / Rim-Licht hinter dem Motiv dient vor allem dazu…"
           },
           "answers": [
             {
@@ -20205,7 +20360,8 @@
               "text": {
                 "en": "Replace the key light entirely",
                 "fr": "Remplacer entièrement la lumière clé",
-                "es": "Sustituir por completo la luz clave"
+                "es": "Sustituir por completo la luz clave",
+                "de": "Das Schlüssellicht komplett zu ersetzen"
               }
             },
             {
@@ -20213,7 +20369,8 @@
               "text": {
                 "en": "Force every portrait into flat beauty light",
                 "fr": "Forcer chaque portrait en lumière beauté plate",
-                "es": "Forzar cada retrato a luz belleza plana"
+                "es": "Forzar cada retrato a luz belleza plana",
+                "de": "Jedes Porträt in flaches Beauty-Licht zu zwingen"
               }
             },
             {
@@ -20221,7 +20378,8 @@
               "text": {
                 "en": "Only change white balance in the shadows",
                 "fr": "Changer seulement la balance des blancs dans les ombres",
-                "es": "Cambiar solo el balance de blancos en las sombras"
+                "es": "Cambiar solo el balance de blancos en las sombras",
+                "de": "Nur den Weißabgleich in den Schatten zu ändern"
               }
             },
             {
@@ -20229,7 +20387,8 @@
               "text": {
                 "en": "Separate hair/shoulders from a dark background and add polish",
                 "fr": "Détacher cheveux/épaules d’un fond sombre et ajouter du polish",
-                "es": "Separar pelo/hombros de un fondo oscuro y añadir polish"
+                "es": "Separar pelo/hombros de un fondo oscuro y añadir polish",
+                "de": "Haare/Schultern von dunklem Hintergrund zu trennen und Polish zu geben"
               }
             }
           ],
@@ -20239,18 +20398,21 @@
           "explanation": {
             "en": "Rim/hair lights carve separation; they rarely replace a proper key.",
             "fr": "Rim/hair sculptent la séparation ; ils remplacent rarement une vraie clé.",
-            "es": "Rim/pelo esculpen la separación; rara vez sustituyen una clave de verdad."
+            "es": "Rim/pelo esculpen la separación; rara vez sustituyen una clave de verdad.",
+            "de": "Rim/Haar formen die Trennung; sie ersetzen selten ein echtes Schlüssel."
           },
           "imageUrl": "/images/packs/photo-1517841905240-472988babdf9.avif",
           "imageAlt": {
             "en": "Golden-hour rim light wrapping a portrait subject",
             "fr": "Rim light golden hour enveloppant un sujet portrait",
-            "es": "Rim light golden hour envolviendo a un sujeto de retrato"
+            "es": "Rim light golden hour envolviendo a un sujeto de retrato",
+            "de": "Golden-Hour-Rim light umhüllt ein Porträtmotiv"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -20260,7 +20422,8 @@
           "text": {
             "en": "Clamshell beauty lighting typically pairs…",
             "fr": "La lumière beauté « clamshell » associe typiquement…",
-            "es": "La luz belleza «clamshell» asocia típicamente…"
+            "es": "La luz belleza «clamshell» asocia típicamente…",
+            "de": "Beauty-Licht „Clamshell“ verbindet typischerweise…"
           },
           "answers": [
             {
@@ -20268,7 +20431,8 @@
               "text": {
                 "en": "Two hard rim lights with zero front light",
                 "fr": "Deux rim durs sans aucune lumière frontale",
-                "es": "Dos rim duros sin ninguna luz frontal"
+                "es": "Dos rim duros sin ninguna luz frontal",
+                "de": "Zwei harte Rim lights ohne Frontlicht"
               }
             },
             {
@@ -20276,7 +20440,8 @@
               "text": {
                 "en": "Only a bare speedlight on-camera pointed at the ceiling forever",
                 "fr": "Seulement un speedlight nu sur l’appareil pointé plafond pour toujours",
-                "es": "Solo un speedlight desnudo en cámara apuntando al techo para siempre"
+                "es": "Solo un speedlight desnudo en cámara apuntando al techo para siempre",
+                "de": "Nur einen nackten Speedlight auf Kamera für immer zur Decke"
               }
             },
             {
@@ -20284,7 +20449,8 @@
               "text": {
                 "en": "A single red gel behind the subject as the only source",
                 "fr": "Un seul gélatiné rouge derrière le sujet comme unique source",
-                "es": "Una sola gelatina roja detrás del sujeto como única fuente"
+                "es": "Una sola gelatina roja detrás del sujeto como única fuente",
+                "de": "Ein einzelnes rotes Gel hinter dem Motiv als einzige Quelle"
               }
             },
             {
@@ -20292,7 +20458,8 @@
               "text": {
                 "en": "A soft key above + a weaker fill/reflector below the chin line",
                 "fr": "Une clé douce au-dessus + un fill/réflecteur plus faible sous le menton",
-                "es": "Una clave suave arriba + un relleno/reflector más débil bajo la línea de la barbilla"
+                "es": "Una clave suave arriba + un relleno/reflector más débil bajo la línea de la barbilla",
+                "de": "Ein weiches Schlüssel oben + schwächeres Fill/Reflektor unter der Kinnlinie"
               }
             }
           ],
@@ -20302,7 +20469,8 @@
           "explanation": {
             "en": "Clamshell wraps soft light for beauty/clean commercial faces.",
             "fr": "Le clamshell enveloppe une lumière douce pour visages beauté / commercial clean.",
-            "es": "El clamshell envuelve luz suave para rostros belleza / comercial limpio."
+            "es": "El clamshell envuelve luz suave para rostros belleza / comercial limpio.",
+            "de": "Clamshell umhüllt weiches Licht für saubere Beauty-/Commercial-Gesichter."
           }
         },
         {
@@ -20312,7 +20480,8 @@
           "text": {
             "en": "Subject has deep-set eyes under a hat brim. First light fix?",
             "fr": "Sujet aux yeux enfoncés sous un bord de chapeau. Premier correctif lumière ?",
-            "es": "Sujeto con ojos hundidos bajo el ala de un sombrero. ¿Primer correctivo de luz?"
+            "es": "Sujeto con ojos hundidos bajo el ala de un sombrero. ¿Primer correctivo de luz?",
+            "de": "Motiv mit tiefliegenden Augen unter Hutkrempe. Erste Lichtkorrektur?"
           },
           "answers": [
             {
@@ -20320,7 +20489,8 @@
               "text": {
                 "en": "Only crush blacks harder so eye sockets disappear",
                 "fr": "Seulement écraser encore plus les noirs pour faire disparaître les orbites",
-                "es": "Solo aplastar más los negros para que desaparezcan las órbitas"
+                "es": "Solo aplastar más los negros para que desaparezcan las órbitas",
+                "de": "Nur Schwarze härter quetschen, bis Augenhöhlen verschwinden"
               }
             },
             {
@@ -20328,7 +20498,8 @@
               "text": {
                 "en": "Always shoot at f/22 facing noon sun",
                 "fr": "Toujours shooter à f/22 face au soleil de midi",
-                "es": "Disparar siempre a f/22 de frente al sol de mediodía"
+                "es": "Disparar siempre a f/22 de frente al sol de mediodía",
+                "de": "Immer bei f/22 frontal gegen Mittagssonne"
               }
             },
             {
@@ -20336,7 +20507,8 @@
               "text": {
                 "en": "Disable autofocus and hope for catchlights",
                 "fr": "Désactiver l’AF et espérer des catchlights",
-                "es": "Desactivar el AF y esperar catchlights"
+                "es": "Desactivar el AF y esperar catchlights",
+                "de": "AF ausschalten und auf Catchlights hoffen"
               }
             },
             {
@@ -20344,7 +20516,8 @@
               "text": {
                 "en": "Raise fill / bounce / lower the key angle so eyes catch light",
                 "fr": "Monter le fill / bounce / baisser l’angle de clé pour éclairer les yeux",
-                "es": "Subir el relleno / bounce / bajar el ángulo de clave para que los ojos capten luz"
+                "es": "Subir el relleno / bounce / bajar el ángulo de clave para que los ojos capten luz",
+                "de": "Fill / Bounce anheben / Schlüsselwinkel senken, damit Augen Licht fangen"
               }
             }
           ],
@@ -20354,7 +20527,8 @@
           "explanation": {
             "en": "Portrait craft prioritizes readable eyes — lift the sockets before styling drama.",
             "fr": "Le craft portrait priorise des yeux lisibles — remonte les orbites avant le drama stylé.",
-            "es": "El oficio del retrato prioriza ojos legibles — levanta las órbitas antes del drama estilizado."
+            "es": "El oficio del retrato prioriza ojos legibles — levanta las órbitas antes del drama estilizado.",
+            "de": "Porträt-Handwerk priorisiert lesbare Augen — hebe die Augenhöhlen vor stilisiertem Drama."
           }
         },
         {
@@ -20364,7 +20538,8 @@
           "text": {
             "en": "Short lighting (vs broad) generally means…",
             "fr": "Le short lighting (vs broad) signifie généralement…",
-            "es": "El short lighting (vs broad) significa generalmente…"
+            "es": "El short lighting (vs broad) significa generalmente…",
+            "de": "Short Lighting (vs Broad) bedeutet in der Regel…"
           },
           "answers": [
             {
@@ -20372,7 +20547,8 @@
               "text": {
                 "en": "Key lights only the background seamless",
                 "fr": "La clé n’éclaire que le fond cyclorama",
-                "es": "La clave solo ilumina el fondo ciclorama"
+                "es": "La clave solo ilumina el fondo ciclorama",
+                "de": "Das Schlüssel beleuchtet nur den Hintergrund-Zyklorama"
               }
             },
             {
@@ -20380,7 +20556,8 @@
               "text": {
                 "en": "No key light is used at all",
                 "fr": "Aucune lumière clé n’est utilisée",
-                "es": "No se usa ninguna luz clave"
+                "es": "No se usa ninguna luz clave",
+                "de": "Es wird gar kein Schlüssel verwendet"
               }
             },
             {
@@ -20388,7 +20565,8 @@
               "text": {
                 "en": "The lens is always wider than 24 mm",
                 "fr": "L’objectif est toujours plus grand-angle que 24 mm",
-                "es": "El objetivo es siempre más gran angular que 24 mm"
+                "es": "El objetivo es siempre más gran angular que 24 mm",
+                "de": "Das Objektiv ist immer weiter als 24 mm"
               }
             },
             {
@@ -20396,7 +20574,8 @@
               "text": {
                 "en": "Key lights the side of the face turned away from camera — often slimming",
                 "fr": "La clé éclaire le côté du visage tourné loin de la caméra — souvent amincissant",
-                "es": "La clave ilumina el lado del rostro girado lejos de la cámara — a menudo adelgaza"
+                "es": "La clave ilumina el lado del rostro girado lejos de la cámara — a menudo adelgaza",
+                "de": "Das Schlüssel beleuchtet die vom Kameraweg gedrehte Gesichtshälfte — oft schlanker wirkend"
               }
             }
           ],
@@ -20406,7 +20585,8 @@
           "explanation": {
             "en": "Short lighting emphasizes the shadow side toward camera — a classic flattering pattern.",
             "fr": "Le short lighting met l’ombre vers la caméra — un schéma classique flatteur.",
-            "es": "El short lighting pone la sombra hacia la cámara — un esquema clásico favorecedor."
+            "es": "El short lighting pone la sombra hacia la cámara — un esquema clásico favorecedor.",
+            "de": "Short Lighting legt den Schatten zur Kamera — klassisches schmeichelndes Schema."
           }
         },
         {
@@ -20416,7 +20596,8 @@
           "text": {
             "en": "Mixed window + tungsten practicals muddy skin. Best on-set habit?",
             "fr": "Fenêtre + practicals tungstène mélangés salissent la peau. Meilleure habitude plateau ?",
-            "es": "Ventana + practicals de tungsteno mezclados ensucian la piel. ¿Mejor hábito en set?"
+            "es": "Ventana + practicals de tungsteno mezclados ensucian la piel. ¿Mejor hábito en set?",
+            "de": "Fenster + Wolfram-Practicals gemischt verschmutzen die Haut. Bessere Set-Gewohnheit?"
           },
           "answers": [
             {
@@ -20424,7 +20605,8 @@
               "text": {
                 "en": "Always auto white-balance every frame and ignore the room lights",
                 "fr": "Toujours en balance auto et ignorer les lumières de la pièce",
-                "es": "Siempre balance automático e ignorar las luces de la habitación"
+                "es": "Siempre balance automático e ignorar las luces de la habitación",
+                "de": "Immer Auto-WB und Raumlichter ignorieren"
               }
             },
             {
@@ -20432,7 +20614,8 @@
               "text": {
                 "en": "Push Clarity to +100 to “fix” color casts",
                 "fr": "Monter la Clarté à +100 pour « réparer » les dominantes",
-                "es": "Subir Claridad a +100 para «arreglar» las dominantes"
+                "es": "Subir Claridad a +100 para «arreglar» las dominantes",
+                "de": "Clarity auf +100, um Dominanten zu „fixen“"
               }
             },
             {
@@ -20440,7 +20623,8 @@
               "text": {
                 "en": "Convert to neon green so casts become a style forever",
                 "fr": "Passer en vert néon pour transformer les dominantes en style",
-                "es": "Pasar a verde neón para convertir las dominantes en estilo"
+                "es": "Pasar a verde neón para convertir las dominantes en estilo",
+                "de": "Auf Neongrün umschalten, damit Dominanten Stil werden"
               }
             },
             {
@@ -20448,7 +20632,8 @@
               "text": {
                 "en": "Commit to one dominant color temp (gel/practicals) or separate the sources",
                 "fr": "Choisir une température dominante (gélatine/practicals) ou séparer les sources",
-                "es": "Elegir una temperatura dominante (gelatina/practicals) o separar las fuentes"
+                "es": "Elegir una temperatura dominante (gelatina/practicals) o separar las fuentes",
+                "de": "Eine dominante Temperatur wählen (Gel/Practicals) oder Quellen trennen"
               }
             }
           ],
@@ -20458,18 +20643,21 @@
           "explanation": {
             "en": "Mixed CCT fights skin; decide a dominant and support it.",
             "fr": "Les CCT mélangés se battent sur la peau ; choisis une dominante et tiens-la.",
-            "es": "Los CCT mezclados pelean en la piel; elige una dominante y manténla."
+            "es": "Los CCT mezclados pelean en la piel; elige una dominante y manténla.",
+            "de": "Gemischte CCTs streiten auf der Haut; wähle eine Dominante und halte sie."
           },
           "imageUrl": "/images/packs/photo-1524504388940-b1c1722653e1.avif",
           "imageAlt": {
             "en": "Environmental window-light portrait for mixed-color habits",
             "fr": "Portrait environnemental fenêtre — habitudes lumière mixte",
-            "es": "Retrato ambiental con ventana — hábitos de luz mixta"
+            "es": "Retrato ambiental con ventana — hábitos de luz mixta",
+            "de": "Environmentales Fensterporträt — Gewohnheiten bei Mischlicht"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -20479,7 +20667,8 @@
           "text": {
             "en": "Myth: “Softboxes always remove all shadows.” Better framing?",
             "fr": "Mythe : « Les softbox enlèvent toutes les ombres. » Meilleure nuance ?",
-            "es": "Mito: «Las softbox eliminan todas las sombras.» ¿Mejor matiz?"
+            "es": "Mito: «Las softbox eliminan todas las sombras.» ¿Mejor matiz?",
+            "de": "Mythos: „Softboxen entfernen alle Schatten.“ Bessere Nuance?"
           },
           "answers": [
             {
@@ -20487,7 +20676,8 @@
               "text": {
                 "en": "Softboxes erase the need for any fill forever",
                 "fr": "Les softbox éliminent tout besoin de fill pour toujours",
-                "es": "Las softbox eliminan cualquier necesidad de relleno para siempre"
+                "es": "Las softbox eliminan cualquier necesidad de relleno para siempre",
+                "de": "Softboxen beseitigen für immer jeden Fill-Bedarf"
               }
             },
             {
@@ -20495,7 +20685,8 @@
               "text": {
                 "en": "Softboxes only work outdoors at noon",
                 "fr": "Les softbox ne marchent qu’en extérieur à midi",
-                "es": "Las softbox solo funcionan al aire libre al mediodía"
+                "es": "Las softbox solo funcionan al aire libre al mediodía",
+                "de": "Softboxen funktionieren nur outdoor mittags"
               }
             },
             {
@@ -20503,7 +20694,8 @@
               "text": {
                 "en": "Softboxes force every catchlight to disappear",
                 "fr": "Les softbox forcent chaque catchlight à disparaître",
-                "es": "Las softbox obligan a que desaparezca cada catchlight"
+                "es": "Las softbox obligan a que desaparezca cada catchlight",
+                "de": "Softboxen zwingen jedes Catchlight zum Verschwinden"
               }
             },
             {
@@ -20511,7 +20703,8 @@
               "text": {
                 "en": "Soft light still has direction — size/distance change softness, not physics",
                 "fr": "Une lumière douce a encore une direction — taille/distance changent la douceur, pas la physique",
-                "es": "La luz suave sigue teniendo dirección — tamaño/distancia cambian la suavidad, no la física"
+                "es": "La luz suave sigue teniendo dirección — tamaño/distancia cambian la suavidad, no la física",
+                "de": "Weiches Licht hat weiter Richtung — Größe/Distanz ändern Weichheit, nicht Physik"
               }
             }
           ],
@@ -20521,7 +20714,8 @@
           "explanation": {
             "en": "Modifiers soften edges; they don’t delete directional shaping.",
             "fr": "Les modificateurs adoucissent les bords ; ils n’effacent pas le modelé directionnel.",
-            "es": "Los modificadores suavizan los bordes; no borran el modelado direccional."
+            "es": "Los modificadores suavizan los bordes; no borran el modelado direccional.",
+            "de": "Modifier weichen Kanten; sie löschen kein gerichtetes Modeling."
           }
         }
       ]
