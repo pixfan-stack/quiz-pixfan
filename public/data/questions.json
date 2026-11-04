@@ -2089,12 +2089,14 @@
       "title": {
         "en": "Composition & Framing",
         "fr": "Composition & cadrage",
-        "es": "Composición y encuadre"
+        "es": "Composición y encuadre",
+        "de": "Komposition & Bildausschnitt"
       },
       "description": {
         "en": "Rules, balance and visual storytelling — how strong images are built in the frame.",
         "fr": "Règles, équilibre et récit visuel — comment se construit une image forte dans le cadre.",
-        "es": "Reglas, equilibrio y relato visual — cómo se construye una imagen fuerte en el marco."
+        "es": "Reglas, equilibrio y relato visual — cómo se construye una imagen fuerte en el marco.",
+        "de": "Regeln, Balance und visuelle Erzählung — wie starke Bilder im Rahmen gebaut werden."
       },
       "questions": [
         {
@@ -2103,7 +2105,8 @@
           "text": {
             "en": "The “rule of thirds” suggests placing the main subject…",
             "fr": "La « règle des tiers » suggère de placer le sujet principal…",
-            "es": "La «regla de tercios» sugiere colocar el sujeto principal…"
+            "es": "La «regla de tercios» sugiere colocar el sujeto principal…",
+            "de": "Die „Drittelregel“ empfiehlt, das Hauptmotiv zu platzieren…"
           },
           "answers": [
             {
@@ -2111,7 +2114,8 @@
               "text": {
                 "en": "Only in the bottom-right corner",
                 "fr": "Uniquement dans le coin bas droit",
-                "es": "Solo en la esquina inferior derecha"
+                "es": "Solo en la esquina inferior derecha",
+                "de": "Nur in der unteren rechten Ecke"
               }
             },
             {
@@ -2119,7 +2123,8 @@
               "text": {
                 "en": "Along imaginary lines that divide the frame into thirds, or at their intersections",
                 "fr": "Sur des lignes imaginaires qui divisent le cadre en tiers, ou à leurs intersections",
-                "es": "Sobre líneas imaginarias que dividen el marco en tercios, o en sus intersecciones"
+                "es": "Sobre líneas imaginarias que dividen el marco en tercios, o en sus intersecciones",
+                "de": "Entlang imaginärer Linien, die den Rahmen in Drittel teilen, oder an ihren Schnittpunkten"
               }
             },
             {
@@ -2127,7 +2132,8 @@
               "text": {
                 "en": "Outside the frame",
                 "fr": "Hors du cadre",
-                "es": "Fuera del marco"
+                "es": "Fuera del marco",
+                "de": "Außerhalb des Rahmens"
               }
             },
             {
@@ -2135,7 +2141,8 @@
               "text": {
                 "en": "Exactly in the center every time",
                 "fr": "Exactement au centre à chaque fois",
-                "es": "Exactamente en el centro siempre"
+                "es": "Exactamente en el centro siempre",
+                "de": "Immer genau in der Mitte"
               }
             }
           ],
@@ -2145,19 +2152,22 @@
           "explanation": {
             "en": "Dividing the frame into a 3×3 grid and placing key elements on lines or intersections often creates a more dynamic balance than dead-center framing.",
             "fr": "Diviser le cadre en grille 3×3 et placer les éléments clés sur les lignes ou intersections crée souvent un équilibre plus dynamique qu'un cadrage pile au centre.",
-            "es": "Dividir el marco en una cuadrícula 3×3 y situar los elementos clave en las líneas o intersecciones suele crear un equilibrio más dinámico que un encuadre muerto al centro."
+            "es": "Dividir el marco en una cuadrícula 3×3 y situar los elementos clave en las líneas o intersecciones suele crear un equilibrio más dinámico que un encuadre muerto al centro.",
+            "de": "Den Rahmen in ein 3×3-Raster teilen und Schlüsselelemente auf Linien oder Schnittpunkte setzen schafft oft eine dynamischere Balance als eine tote Mittelposition."
           },
           "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
           "imageAlt": {
             "en": "Landscape framed by mountain ridges",
             "fr": "Paysage cadré par des crêtes montagneuses",
-            "es": "Paisaje enmarcado por crestas montañosas"
+            "es": "Paisaje enmarcado por crestas montañosas",
+            "de": "Landschaft eingerahmt von Bergkämmen"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2166,7 +2176,8 @@
           "text": {
             "en": "Which techniques can guide the viewer’s eye through a photo?",
             "fr": "Quelles techniques peuvent guider le regard dans une photo ?",
-            "es": "¿Qué técnicas pueden guiar la mirada del espectador a través de una foto?"
+            "es": "¿Qué técnicas pueden guiar la mirada del espectador a través de una foto?",
+            "de": "Welche Techniken können den Blick des Betrachters durch ein Foto führen?"
           },
           "answers": [
             {
@@ -2174,7 +2185,8 @@
               "text": {
                 "en": "Leading lines",
                 "fr": "Lignes directrices",
-                "es": "Líneas directrices"
+                "es": "Líneas directrices",
+                "de": "Führungslinien"
               }
             },
             {
@@ -2182,7 +2194,8 @@
               "text": {
                 "en": "Random heavy cropping with no subject",
                 "fr": "Un recadrage aléatoire sans sujet",
-                "es": "Un recorte pesado al azar sin sujeto"
+                "es": "Un recorte pesado al azar sin sujeto",
+                "de": "Ein schwerer Zufallsschnitt ohne Motiv"
               }
             },
             {
@@ -2190,7 +2203,8 @@
               "text": {
                 "en": "Framing within a frame (doorways, arches…)",
                 "fr": "Cadre dans le cadre (portes, arches…)",
-                "es": "Marco dentro del marco (puertas, arcos…)"
+                "es": "Marco dentro del marco (puertas, arcos…)",
+                "de": "Rahmen im Rahmen (Türen, Bögen…)"
               }
             },
             {
@@ -2198,7 +2212,8 @@
               "text": {
                 "en": "Strong contrast between subject and background",
                 "fr": "Fort contraste entre sujet et arrière-plan",
-                "es": "Fuerte contraste entre sujeto y fondo"
+                "es": "Fuerte contraste entre sujeto y fondo",
+                "de": "Starker Kontrast zwischen Motiv und Hintergrund"
               }
             }
           ],
@@ -2210,19 +2225,22 @@
           "explanation": {
             "en": "Leading lines, natural frames and contrast all help hierarchy and eye flow. Cropping without a clear subject usually weakens the image.",
             "fr": "Lignes directrices, cadres naturels et contraste renforcent la hiérarchie visuelle. Un recadrage sans sujet clair affaiblit en général l'image.",
-            "es": "Las líneas directrices, los marcos naturales y el contraste ayudan a la jerarquía y al recorrido de la mirada. Un recorte sin sujeto claro suele debilitar la imagen."
+            "es": "Las líneas directrices, los marcos naturales y el contraste ayudan a la jerarquía y al recorrido de la mirada. Un recorte sin sujeto claro suele debilitar la imagen.",
+            "de": "Führungslinien, natürliche Rahmen und Kontrast unterstützen Hierarchie und Blickführung. Ein Schnitt ohne klares Motiv schwächt das Bild oft."
           },
           "imageUrl": "/images/packs/photo-1470071459604-3b5ec3a7fe05.avif",
           "imageAlt": {
             "en": "Foggy forest landscape",
             "fr": "Paysage forestier brumeux",
-            "es": "Paisaje de bosque brumoso"
+            "es": "Paisaje de bosque brumoso",
+            "de": "Nebelige Waldlandschaft"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2231,7 +2249,8 @@
           "text": {
             "en": "What is “negative space” in photography?",
             "fr": "Qu'est-ce que l'« espace négatif » en photographie ?",
-            "es": "¿Qué es el «espacio negativo» en fotografía?"
+            "es": "¿Qué es el «espacio negativo» en fotografía?",
+            "de": "Was ist „Negativraum“ in der Fotografie?"
           },
           "answers": [
             {
@@ -2239,7 +2258,8 @@
               "text": {
                 "en": "A filter that inverts colors",
                 "fr": "Un filtre qui inverse les couleurs",
-                "es": "Un filtro que invierte los colores"
+                "es": "Un filtro que invierte los colores",
+                "de": "Ein Filter, der Farben umkehrt"
               }
             },
             {
@@ -2247,7 +2267,8 @@
               "text": {
                 "en": "The memory card free space",
                 "fr": "L'espace libre sur la carte mémoire",
-                "es": "El espacio libre de la tarjeta de memoria"
+                "es": "El espacio libre de la tarjeta de memoria",
+                "de": "Der freie Speicherplatz auf der Speicherkarte"
               }
             },
             {
@@ -2255,7 +2276,8 @@
               "text": {
                 "en": "Empty or simple areas that give the subject room to breathe",
                 "fr": "Des zones vides ou simples qui laissent le sujet respirer",
-                "es": "Zonas vacías o simples que dan al sujeto aire para respirar"
+                "es": "Zonas vacías o simples que dan al sujeto aire para respirar",
+                "de": "Leere oder einfache Flächen, die dem Motiv Luft zum Atmen geben"
               }
             },
             {
@@ -2263,7 +2285,8 @@
               "text": {
                 "en": "Pixels that are always pure black",
                 "fr": "Des pixels toujours purement noirs",
-                "es": "Píxeles que siempre son negro puro"
+                "es": "Píxeles que siempre son negro puro",
+                "de": "Pixel, die immer reines Schwarz sind"
               }
             }
           ],
@@ -2273,19 +2296,22 @@
           "explanation": {
             "en": "Negative space is the uncluttered area around the subject. Used well, it emphasizes the subject and can create calm or tension.",
             "fr": "L'espace négatif est la zone épurée autour du sujet. Bien utilisé, il met le sujet en valeur et peut créer calme ou tension.",
-            "es": "El espacio negativo es el área despejada alrededor del sujeto. Bien usado, lo enfatiza y puede crear calma o tensión."
+            "es": "El espacio negativo es el área despejada alrededor del sujeto. Bien usado, lo enfatiza y puede crear calma o tensión.",
+            "de": "Negativraum ist der freigeräumte Bereich um das Motiv. Gut eingesetzt betont er es und kann Ruhe oder Spannung erzeugen."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Mountain lake landscape",
             "fr": "Lac de montagne",
-            "es": "Paisaje de lago de montaña"
+            "es": "Paisaje de lago de montaña",
+            "de": "Bergseelandschaft"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2294,7 +2320,8 @@
           "text": {
             "en": "Shooting from a low angle (worm’s-eye view) often makes a subject look…",
             "fr": "Photographier en contre-plongée (vue d'en bas) donne souvent au sujet un aspect…",
-            "es": "Disparar desde un ángulo bajo (visión de gusano) suele hacer que el sujeto parezca…"
+            "es": "Disparar desde un ángulo bajo (visión de gusano) suele hacer que el sujeto parezca…",
+            "de": "Aus niedrigem Winkel (Froschperspektive) wirkt das Motiv meist…"
           },
           "answers": [
             {
@@ -2302,7 +2329,8 @@
               "text": {
                 "en": "More imposing or powerful",
                 "fr": "Plus imposant ou puissant",
-                "es": "Más imponente o poderoso"
+                "es": "Más imponente o poderoso",
+                "de": "Imposanter oder mächtiger"
               }
             },
             {
@@ -2310,7 +2338,8 @@
               "text": {
                 "en": "Exactly the same as eye level",
                 "fr": "Exactement comme à hauteur d'œil",
-                "es": "Exactamente igual que a la altura de los ojos"
+                "es": "Exactamente igual que a la altura de los ojos",
+                "de": "Genau wie auf Augenhöhe"
               }
             },
             {
@@ -2318,7 +2347,8 @@
               "text": {
                 "en": "Smaller and weaker",
                 "fr": "Plus petit et plus faible",
-                "es": "Más pequeño y débil"
+                "es": "Más pequeño y débil",
+                "de": "Kleiner und schwächer"
               }
             },
             {
@@ -2326,7 +2356,8 @@
               "text": {
                 "en": "Completely out of focus always",
                 "fr": "Toujours complètement flou",
-                "es": "Siempre completamente desenfocado"
+                "es": "Siempre completamente desenfocado",
+                "de": "Immer komplett unscharf"
               }
             }
           ],
@@ -2336,19 +2367,22 @@
           "explanation": {
             "en": "Low angles exaggerate height and presence. High angles (bird’s-eye) often do the opposite.",
             "fr": "La contre-plongée exagère la hauteur et la présence. La plongée produit souvent l'effet inverse.",
-            "es": "Los ángulos bajos exageran la altura y la presencia. Los ángulos altos (visión de pájaro) suelen hacer lo contrario."
+            "es": "Los ángulos bajos exageran la altura y la presencia. Los ángulos altos (visión de pájaro) suelen hacer lo contrario.",
+            "de": "Niedrige Winkel übertreiben Höhe und Präsenz. Hohe Winkel (Vogelperspektive) bewirken oft das Gegenteil."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1472214103451-9374bd1c798e.avif",
           "imageAlt": {
             "en": "Green hills landscape",
             "fr": "Collines verdoyantes",
-            "es": "Paisaje de colinas verdes"
+            "es": "Paisaje de colinas verdes",
+            "de": "Grüne Hügellandschaft"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2357,7 +2391,8 @@
           "text": {
             "en": "In a landscape, placing the horizon on the lower third typically emphasizes…",
             "fr": "Dans un paysage, placer l'horizon sur le tiers inférieur met surtout en valeur…",
-            "es": "En un paisaje, situar el horizonte en el tercio inferior suele enfatizar…"
+            "es": "En un paisaje, situar el horizonte en el tercio inferior suele enfatizar…",
+            "de": "In einer Landschaft betont ein Horizont im unteren Drittel meist…"
           },
           "answers": [
             {
@@ -2365,7 +2400,8 @@
               "text": {
                 "en": "The sky",
                 "fr": "Le ciel",
-                "es": "El cielo"
+                "es": "El cielo",
+                "de": "Den Himmel"
               }
             },
             {
@@ -2373,7 +2409,8 @@
               "text": {
                 "en": "The camera’s battery life",
                 "fr": "L'autonomie de la batterie",
-                "es": "La autonomía de la batería de la cámara"
+                "es": "La autonomía de la batería de la cámara",
+                "de": "Die Akkulaufzeit der Kamera"
               }
             },
             {
@@ -2381,7 +2418,8 @@
               "text": {
                 "en": "The foreground / ground only, never the sky",
                 "fr": "Uniquement le sol, jamais le ciel",
-                "es": "Solo el primer plano / el suelo, nunca el cielo"
+                "es": "Solo el primer plano / el suelo, nunca el cielo",
+                "de": "Nur den Vordergrund / den Boden, nie den Himmel"
               }
             },
             {
@@ -2389,7 +2427,8 @@
               "text": {
                 "en": "Nothing — horizon position does not matter",
                 "fr": "Rien — la position de l'horizon n'a aucune importance",
-                "es": "Nada — la posición del horizonte no importa"
+                "es": "Nada — la posición del horizonte no importa",
+                "de": "Nichts — die Horizontposition spielt keine Rolle"
               }
             }
           ],
@@ -2399,19 +2438,22 @@
           "explanation": {
             "en": "A low horizon gives more of the frame to the sky (dramatic clouds, color). A high horizon favors the land or foreground.",
             "fr": "Un horizon bas laisse plus de place au ciel (nuages, couleurs). Un horizon haut favorise le sol ou le premier plan.",
-            "es": "Un horizonte bajo deja más marco al cielo (nubes dramáticas, color). Un horizonte alto favorece la tierra o el primer plano."
+            "es": "Un horizonte bajo deja más marco al cielo (nubes dramáticas, color). Un horizonte alto favorece la tierra o el primer plano.",
+            "de": "Ein tiefer Horizont lässt dem Himmel mehr Rahmen (dramatische Wolken, Farbe). Ein hoher Horizont begünstigt Land oder Vordergrund."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
           "imageAlt": {
             "en": "Mountain range with a clear horizon line",
             "fr": "Chaîne de montagnes avec une ligne d’horizon nette",
-            "es": "Cordillera con una línea de horizonte clara"
+            "es": "Cordillera con una línea de horizonte clara",
+            "de": "Gebirgskette mit klarer Horizontlinie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2420,7 +2462,8 @@
           "text": {
             "en": "What is the 'S-curve' in composition?",
             "fr": "Qu'est-ce que la 'courbe en S' en composition ?",
-            "es": "¿Qué es la «curva en S» en composición?"
+            "es": "¿Qué es la «curva en S» en composición?",
+            "de": "Was ist die „S-Kurve“ in der Komposition?"
           },
           "answers": [
             {
@@ -2428,7 +2471,8 @@
               "text": {
                 "en": "A compositional technique using S-shaped lines to lead the eye through the image",
                 "fr": "Une technique compositionnelle utilisant des lignes en forme de S pour guider l'œil à travers l'image",
-                "es": "Una técnica compositiva que usa líneas en forma de S para guiar la mirada por la imagen"
+                "es": "Una técnica compositiva que usa líneas en forma de S para guiar la mirada por la imagen",
+                "de": "Eine Kompositionstechnik, die S-förmige Linien nutzt, um den Blick durch das Bild zu führen"
               }
             },
             {
@@ -2436,7 +2480,8 @@
               "text": {
                 "en": "The curvature of the earth visible in wide shots",
                 "fr": "La courbure de la terre visible dans les plans larges",
-                "es": "La curvatura de la Tierra visible en planos amplios"
+                "es": "La curvatura de la Tierra visible en planos amplios",
+                "de": "Die Erdkrümmung, sichtbar in Weitwinkelaufnahmen"
               }
             },
             {
@@ -2444,7 +2489,8 @@
               "text": {
                 "en": "A post-processing filter effect",
                 "fr": "Un effet de filtre de post-traitement",
-                "es": "Un efecto de filtro en postproducción"
+                "es": "Un efecto de filtro en postproducción",
+                "de": "Ein Filtereffekt in der Nachbearbeitung"
               }
             },
             {
@@ -2452,7 +2498,8 @@
               "text": {
                 "en": "A curve in the camera lens",
                 "fr": "Une courbe dans l'objectif de l'appareil",
-                "es": "Una curva en el objetivo de la cámara"
+                "es": "Una curva en el objetivo de la cámara",
+                "de": "Eine Krümmung im Kameraobjektiv"
               }
             }
           ],
@@ -2462,19 +2509,22 @@
           "explanation": {
             "en": "S-curves create a natural flow through the image, leading the viewer's eye on a journey from foreground to background.",
             "fr": "Les courbes en S créent un flux naturel à travers l'image, guidant l'œil du spectateur du premier plan à l'arrière-plan.",
-            "es": "Las curvas en S crean un flujo natural por la imagen y llevan la mirada en un recorrido del primer plano al fondo."
+            "es": "Las curvas en S crean un flujo natural por la imagen y llevan la mirada en un recorrido del primer plano al fondo.",
+            "de": "S-Kurven erzeugen einen natürlichen Fluss durch das Bild und führen den Blick vom Vordergrund in den Hintergrund."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1441974231531-c6227db76b6e.avif",
           "imageAlt": {
             "en": "Forest path curving through trees",
             "fr": "Sentier forestier en courbe entre les arbres",
-            "es": "Sendero del bosque que curva entre los árboles"
+            "es": "Sendero del bosque que curva entre los árboles",
+            "de": "Waldpfad, der sich zwischen den Bäumen schlängelt"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2483,7 +2533,8 @@
           "text": {
             "en": "How does symmetry in photography affect the viewer?",
             "fr": "Comment la symétrie en photographie affecte-t-elle le spectateur ?",
-            "es": "¿Cómo afecta la simetría en fotografía al espectador?"
+            "es": "¿Cómo afecta la simetría en fotografía al espectador?",
+            "de": "Wie wirkt Symmetrie in der Fotografie auf den Betrachter?"
           },
           "answers": [
             {
@@ -2491,7 +2542,8 @@
               "text": {
                 "en": "It creates a sense of balance, formality, and harmony",
                 "fr": "Elle crée un sentiment d'équilibre, de formalisme et d'harmonie",
-                "es": "Crea sensación de equilibrio, formalidad y armonía"
+                "es": "Crea sensación de equilibrio, formalidad y armonía",
+                "de": "Sie erzeugt ein Gefühl von Balance, Formalität und Harmonie"
               }
             },
             {
@@ -2499,7 +2551,8 @@
               "text": {
                 "en": "It has no effect on perception",
                 "fr": "Elle n'a aucun effet sur la perception",
-                "es": "No tiene ningún efecto en la percepción"
+                "es": "No tiene ningún efecto en la percepción",
+                "de": "Sie hat keinen Einfluss auf die Wahrnehmung"
               }
             },
             {
@@ -2507,7 +2560,8 @@
               "text": {
                 "en": "It makes the image appear chaotic",
                 "fr": "Elle donne à l'image un aspect chaotique",
-                "es": "Hace que la imagen parezca caótica"
+                "es": "Hace que la imagen parezca caótica",
+                "de": "Sie lässt das Bild chaotisch wirken"
               }
             },
             {
@@ -2515,7 +2569,8 @@
               "text": {
                 "en": "It always confuses the viewer",
                 "fr": "Elle confond toujours le spectateur",
-                "es": "Siempre confunde al espectador"
+                "es": "Siempre confunde al espectador",
+                "de": "Sie verwirrt den Betrachter immer"
               }
             }
           ],
@@ -2525,19 +2580,22 @@
           "explanation": {
             "en": "Symmetry evokes order, stability, and beauty. It's powerful in architecture, reflections, and formal portraits.",
             "fr": "La symétrie évoque l'ordre, la stabilité et la beauté. Elle est puissante en architecture, reflets et portraits formels.",
-            "es": "La simetría evoca orden, estabilidad y belleza. Es potente en arquitectura, reflejos y retratos formales."
+            "es": "La simetría evoca orden, estabilidad y belleza. Es potente en arquitectura, reflejos y retratos formales.",
+            "de": "Symmetrie vermittelt Ordnung, Stabilität und Schönheit. Sie ist stark in Architektur, Spiegelungen und formellen Porträts."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Symmetric urban square — symmetry’s calm pull",
             "fr": "Place urbaine symétrique — l’attrait calme de la symétrie",
-            "es": "Plaza urbana simétrica — el tirón calmado de la simetría"
+            "es": "Plaza urbana simétrica — el tirón calmado de la simetría",
+            "de": "Symmetrischer Stadtplatz — der ruhige Zug der Symmetrie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2546,7 +2604,8 @@
           "text": {
             "en": "Which elements contribute to visual weight in a composition?",
             "fr": "Quels éléments contribuent au poids visuel dans une composition ?",
-            "es": "¿Qué elementos contribuyen al peso visual en una composición?"
+            "es": "¿Qué elementos contribuyen al peso visual en una composición?",
+            "de": "Welche Elemente tragen zum visuellen Gewicht in einer Komposition bei?"
           },
           "answers": [
             {
@@ -2554,7 +2613,8 @@
               "text": {
                 "en": "Position in the frame (bottom/heavy looks heavier)",
                 "fr": "Position dans le cadre (bas/lourd semble plus lourd)",
-                "es": "La posición en el marco (abajo / pesado parece más pesado)"
+                "es": "La posición en el marco (abajo / pesado parece más pesado)",
+                "de": "Die Position im Rahmen (unten / schwer wirkt schwerer)"
               }
             },
             {
@@ -2562,7 +2622,8 @@
               "text": {
                 "en": "Bright colors and high contrast areas",
                 "fr": "Couleurs vives et zones de fort contraste",
-                "es": "Colores vivos y zonas de alto contraste"
+                "es": "Colores vivos y zonas de alto contraste",
+                "de": "Lebendige Farben und Bereiche mit hohem Kontrast"
               }
             },
             {
@@ -2570,7 +2631,8 @@
               "text": {
                 "en": "ISO setting",
                 "fr": "Réglage ISO",
-                "es": "El ajuste ISO"
+                "es": "El ajuste ISO",
+                "de": "Die ISO-Einstellung"
               }
             },
             {
@@ -2578,7 +2640,8 @@
               "text": {
                 "en": "Faces and eyes",
                 "fr": "Visages et yeux",
-                "es": "Rostros y ojos"
+                "es": "Rostros y ojos",
+                "de": "Gesichter und Augen"
               }
             }
           ],
@@ -2590,7 +2653,8 @@
           "explanation": {
             "en": "Visual weight is influenced by color intensity, contrast, human interest (faces), and placement. ISO is technical, not compositional.",
             "fr": "Le poids visuel est influencé par l'intensité des couleurs, le contraste, l'intérêt humain (visages) et le placement. L'ISO est technique, pas compositionnel.",
-            "es": "El peso visual depende de la intensidad del color, el contraste, el interés humano (rostros) y la colocación. El ISO es técnico, no compositivo."
+            "es": "El peso visual depende de la intensidad del color, el contraste, el interés humano (rostros) y la colocación. El ISO es técnico, no compositivo.",
+            "de": "Visuelles Gewicht hängt von Farbintensität, Kontrast, menschlichem Interesse (Gesichter) und Platzierung ab. ISO ist technisch, nicht kompositorisch."
           },
           "difficulty": "easy"
         },
@@ -2600,7 +2664,8 @@
           "text": {
             "en": "What is 'frame within a frame' composition?",
             "fr": "Qu'est-ce que la composition 'cadre dans le cadre' ?",
-            "es": "¿Qué es la composición «marco dentro del marco»?"
+            "es": "¿Qué es la composición «marco dentro del marco»?",
+            "de": "Was ist die Komposition „Rahmen im Rahmen“?"
           },
           "answers": [
             {
@@ -2608,7 +2673,8 @@
               "text": {
                 "en": "Taking multiple photos and framing them physically",
                 "fr": "Prendre plusieurs photos et les encadrer physiquement",
-                "es": "Hacer varias fotos y enmarcarlas físicamente"
+                "es": "Hacer varias fotos y enmarcarlas físicamente",
+                "de": "Mehrere Fotos machen und sie physisch einrahmen"
               }
             },
             {
@@ -2616,7 +2682,8 @@
               "text": {
                 "en": "Using natural or architectural elements to create a border around the main subject",
                 "fr": "Utiliser des éléments naturels ou architecturaux pour créer une bordure autour du sujet principal",
-                "es": "Usar elementos naturales o arquitectónicos para crear un borde alrededor del sujeto principal"
+                "es": "Usar elementos naturales o arquitectónicos para crear un borde alrededor del sujeto principal",
+                "de": "Natürliche oder architektonische Elemente nutzen, um einen Rand um das Hauptmotiv zu schaffen"
               }
             },
             {
@@ -2624,7 +2691,8 @@
               "text": {
                 "en": "Using a picture frame as the main subject",
                 "fr": "Utiliser un cadre photo comme sujet principal",
-                "es": "Usar un marco de foto como sujeto principal"
+                "es": "Usar un marco de foto como sujeto principal",
+                "de": "Einen Fotorahmen als Hauptmotiv verwenden"
               }
             },
             {
@@ -2632,7 +2700,8 @@
               "text": {
                 "en": "Editing photos with digital frames",
                 "fr": "Modifier des photos avec des cadres numériques",
-                "es": "Editar fotos con marcos digitales"
+                "es": "Editar fotos con marcos digitales",
+                "de": "Fotos mit digitalen Rahmen bearbeiten"
               }
             }
           ],
@@ -2642,19 +2711,22 @@
           "explanation": {
             "en": "This technique adds depth, focuses attention, and can provide context. Examples: windows, doorways, tree branches.",
             "fr": "Cette technique ajoute de la profondeur, concentre l'attention et peut fournir du contexte. Exemples : fenêtres, portes, branches d'arbres.",
-            "es": "Esta técnica añade profundidad, centra la atención y puede aportar contexto. Ejemplos: ventanas, puertas, ramas."
+            "es": "Esta técnica añade profundidad, centra la atención y puede aportar contexto. Ejemplos: ventanas, puertas, ramas.",
+            "de": "Diese Technik fügt Tiefe hinzu, lenkt die Aufmerksamkeit und kann Kontext liefern. Beispiele: Fenster, Türen, Äste."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1493863641943-9b68992a8d07.avif",
           "imageAlt": {
             "en": "Subject framed by a doorway arch",
             "fr": "Sujet cadré par l’arche d’une porte",
-            "es": "Sujeto enmarcado por el arco de una puerta"
+            "es": "Sujeto enmarcado por el arco de una puerta",
+            "de": "Motiv eingerahmt durch einen Türbogen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2663,7 +2735,8 @@
           "text": {
             "en": "Why is the 'golden spiral' considered more dynamic than the rule of thirds?",
             "fr": "Pourquoi la 'spiral dorée' est-elle considérée plus dynamique que la règle des tiers ?",
-            "es": "¿Por qué se considera la «espiral áurea» más dinámica que la regla de tercios?"
+            "es": "¿Por qué se considera la «espiral áurea» más dinámica que la regla de tercios?",
+            "de": "Warum gilt die „goldene Spirale“ als dynamischer als die Drittelregel?"
           },
           "answers": [
             {
@@ -2671,7 +2744,8 @@
               "text": {
                 "en": "It only works with wide-angle lenses",
                 "fr": "Elle ne fonctionne qu'avec des objectifs grand-angle",
-                "es": "Solo funciona con objetivos gran angular"
+                "es": "Solo funciona con objetivos gran angular",
+                "de": "Sie funktioniert nur mit Weitwinkelobjektiven"
               }
             },
             {
@@ -2679,7 +2753,8 @@
               "text": {
                 "en": "It's mathematically impossible to achieve",
                 "fr": "Elle est mathématiquement impossible à atteindre",
-                "es": "Es matemáticamente imposible de lograr"
+                "es": "Es matemáticamente imposible de lograr",
+                "de": "Sie ist mathematisch unmöglich umzusetzen"
               }
             },
             {
@@ -2687,7 +2762,8 @@
               "text": {
                 "en": "It creates a flowing, organic path that draws the eye inward naturally",
                 "fr": "Elle crée un chemin fluide et organique qui attire naturellement l'œil vers l'intérieur",
-                "es": "Crea un recorrido fluido y orgánico que atrae la mirada hacia dentro de forma natural"
+                "es": "Crea un recorrido fluido y orgánico que atrae la mirada hacia dentro de forma natural",
+                "de": "Sie erzeugt einen fließenden, organischen Pfad, der den Blick natürlich nach innen zieht"
               }
             },
             {
@@ -2695,7 +2771,8 @@
               "text": {
                 "en": "It requires special lenses",
                 "fr": "Elle nécessite des objectifs spéciaux",
-                "es": "Requiere objetivos especiales"
+                "es": "Requiere objetivos especiales",
+                "de": "Sie erfordert Spezialobjektive"
               }
             }
           ],
@@ -2705,7 +2782,8 @@
           "explanation": {
             "en": "Based on the Fibonacci sequence, the golden spiral creates a more natural, flowing composition that guides the eye through multiple focal points.",
             "fr": "Basée sur la suite de Fibonacci, la spirale dorée crée une composition plus naturelle et fluide qui guide l'œil à travers plusieurs points focaux.",
-            "es": "Basada en la secuencia de Fibonacci, la espiral áurea crea una composición más natural y fluida que guía la mirada por varios puntos focales."
+            "es": "Basada en la secuencia de Fibonacci, la espiral áurea crea una composición más natural y fluida que guía la mirada por varios puntos focales.",
+            "de": "Basierend auf der Fibonacci-Folge erzeugt die goldene Spirale eine natürlichere, fließendere Komposition, die den Blick über mehrere Brennpunkte führt."
           },
           "difficulty": "easy"
         },
@@ -2715,7 +2793,8 @@
           "text": {
             "en": "What are the effects of diagonal lines in composition?",
             "fr": "Quels sont les effets des lignes diagonales en composition ?",
-            "es": "¿Cuáles son los efectos de las líneas diagonales en la composición?"
+            "es": "¿Cuáles son los efectos de las líneas diagonales en la composición?",
+            "de": "Welche Wirkung haben diagonale Linien in der Komposition?"
           },
           "answers": [
             {
@@ -2723,7 +2802,8 @@
               "text": {
                 "en": "Creating a sense of movement and dynamism",
                 "fr": "Créer un sentiment de mouvement et de dynamisme",
-                "es": "Crear sensación de movimiento y dinamismo"
+                "es": "Crear sensación de movimiento y dinamismo",
+                "de": "Ein Gefühl von Bewegung und Dynamik erzeugen"
               }
             },
             {
@@ -2731,7 +2811,8 @@
               "text": {
                 "en": "Adding tension or unease",
                 "fr": "Ajouter de la tension ou de l'inquiétude",
-                "es": "Añadir tensión o inquietud"
+                "es": "Añadir tensión o inquietud",
+                "de": "Spannung oder Unruhe hinzufügen"
               }
             },
             {
@@ -2739,7 +2820,8 @@
               "text": {
                 "en": "Leading the eye through the frame",
                 "fr": "Guider l'œil à travers le cadre",
-                "es": "Guiar la mirada a través del marco"
+                "es": "Guiar la mirada a través del marco",
+                "de": "Den Blick durch den Rahmen führen"
               }
             },
             {
@@ -2747,7 +2829,8 @@
               "text": {
                 "en": "Making the image feel static and calm",
                 "fr": "Rendre l'image statique et calme",
-                "es": "Hacer que la imagen se sienta estática y calmada"
+                "es": "Hacer que la imagen se sienta estática y calmada",
+                "de": "Das Bild statisch und ruhig wirken lassen"
               }
             }
           ],
@@ -2759,19 +2842,22 @@
           "explanation": {
             "en": "Diagonals introduce energy and direction, unlike horizontal (calm) or vertical (stable) lines. They're powerful for action and drama.",
             "fr": "Les diagonales introduisent énergie et direction, contrairement aux lignes horizontales (calme) ou verticales (stabilité). Elles sont puissantes pour l'action et le drame.",
-            "es": "Las diagonales aportan energía y dirección, a diferencia de las horizontales (calma) o verticales (estabilidad). Son potentes para la acción y el drama."
+            "es": "Las diagonales aportan energía y dirección, a diferencia de las horizontales (calma) o verticales (estabilidad). Son potentes para la acción y el drama.",
+            "de": "Diagonalen bringen Energie und Richtung — anders als Horizontale (Ruhe) oder Vertikale (Stabilität). Sie sind stark für Action und Drama."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1464822759023-fed622ff2c3b.avif",
           "imageAlt": {
             "en": "Mountain ridges as diagonal energy lines",
             "fr": "Crêtes de montagne comme lignes diagonales énergiques",
-            "es": "Crestas montañosas como líneas diagonales de energía"
+            "es": "Crestas montañosas como líneas diagonales de energía",
+            "de": "Bergkämme als diagonale Energielinien"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2780,7 +2866,8 @@
           "text": {
             "en": "What is 'visual tension' in photography?",
             "fr": "Qu'est-ce que la 'tension visuelle' en photographie ?",
-            "es": "¿Qué es la «tensión visual» en fotografía?"
+            "es": "¿Qué es la «tensión visual» en fotografía?",
+            "de": "Was ist „visuelle Spannung“ in der Fotografie?"
           },
           "answers": [
             {
@@ -2788,7 +2875,8 @@
               "text": {
                 "en": "The dynamic interplay between opposing elements that engages the viewer",
                 "fr": "L'interaction dynamique entre éléments opposés qui engage le spectateur",
-                "es": "El juego dinámico entre elementos opuestos que atrapa al espectador"
+                "es": "El juego dinámico entre elementos opuestos que atrapa al espectador",
+                "de": "Das dynamische Zusammenspiel gegensätzlicher Elemente, das den Betrachter fesselt"
               }
             },
             {
@@ -2796,7 +2884,8 @@
               "text": {
                 "en": "When the subject looks uncomfortable",
                 "fr": "Quand le sujet a l'air mal à l'aise",
-                "es": "Cuando el sujeto parece incómodo"
+                "es": "Cuando el sujeto parece incómodo",
+                "de": "Wenn das Motiv unwohl wirkt"
               }
             },
             {
@@ -2804,7 +2893,8 @@
               "text": {
                 "en": "When the camera shakes during exposure",
                 "fr": "Quand l'appareil tremble pendant l'exposition",
-                "es": "Cuando la cámara tiembla durante la exposición"
+                "es": "Cuando la cámara tiembla durante la exposición",
+                "de": "Wenn die Kamera während der Belichtung wackelt"
               }
             },
             {
@@ -2812,7 +2902,8 @@
               "text": {
                 "en": "Using too many colors in one image",
                 "fr": "Utiliser trop de couleurs dans une image",
-                "es": "Usar demasiados colores en una sola imagen"
+                "es": "Usar demasiados colores en una sola imagen",
+                "de": "Zu viele Farben in einem einzigen Bild verwenden"
               }
             }
           ],
@@ -2822,7 +2913,8 @@
           "explanation": {
             "en": "Visual tension comes from imbalance, contrast, or unexpected elements, creating intrigue and keeping viewers engaged.",
             "fr": "La tension visuelle vient du déséquilibre, du contraste ou d'éléments inattendus, créant de l'intrigue et maintenant l'engagement des spectateurs.",
-            "es": "La tensión visual nace del desequilibrio, el contraste o elementos inesperados: genera intriga y mantiene la atención."
+            "es": "La tensión visual nace del desequilibrio, el contraste o elementos inesperados: genera intriga y mantiene la atención.",
+            "de": "Visuelle Spannung entsteht aus Ungleichgewicht, Kontrast oder unerwarteten Elementen: sie erzeugt Neugier und hält die Aufmerksamkeit."
           },
           "difficulty": "easy"
         },
@@ -2832,7 +2924,8 @@
           "text": {
             "en": "How does cropping affect composition?",
             "fr": "Comment le recadrage affecte-t-il la composition ?",
-            "es": "¿Cómo afecta el recorte a la composición?"
+            "es": "¿Cómo afecta el recorte a la composición?",
+            "de": "Wie beeinflusst der Bildausschnitt (Crop) die Komposition?"
           },
           "answers": [
             {
@@ -2840,7 +2933,8 @@
               "text": {
                 "en": "It only reduces image quality",
                 "fr": "Il ne fait que réduire la qualité d'image",
-                "es": "Solo reduce la calidad de la imagen"
+                "es": "Solo reduce la calidad de la imagen",
+                "de": "Er reduziert nur die Bildqualität"
               }
             },
             {
@@ -2848,7 +2942,8 @@
               "text": {
                 "en": "It only works with digital photos",
                 "fr": "Il ne fonctionne qu'avec les photos numériques",
-                "es": "Solo funciona con fotos digitales"
+                "es": "Solo funciona con fotos digitales",
+                "de": "Er funktioniert nur bei Digitalfotos"
               }
             },
             {
@@ -2856,7 +2951,8 @@
               "text": {
                 "en": "It has no impact on the final image",
                 "fr": "Il n'a aucun impact sur l'image finale",
-                "es": "No tiene impacto en la imagen final"
+                "es": "No tiene impacto en la imagen final",
+                "de": "Er hat keinen Einfluss auf das Endbild"
               }
             },
             {
@@ -2864,7 +2960,8 @@
               "text": {
                 "en": "It can strengthen or weaken the original composition by changing framing and emphasis",
                 "fr": "Il peut renforcer ou affaiblir la composition originale en changeant le cadrage et l'emphase",
-                "es": "Puede reforzar o debilitar la composición original al cambiar el encuadre y el énfasis"
+                "es": "Puede reforzar o debilitar la composición original al cambiar el encuadre y el énfasis",
+                "de": "Er kann die ursprüngliche Komposition stärken oder schwächen, indem er Rahmen und Betonung ändert"
               }
             }
           ],
@@ -2874,19 +2971,22 @@
           "explanation": {
             "en": "Cropping is a powerful compositional tool that can eliminate distractions, change perspective, and redirect viewer attention.",
             "fr": "Le recadrage est un outil compositionnel puissant qui peut éliminer les distractions, changer la perspective et rediriger l'attention du spectateur.",
-            "es": "El recorte es una herramienta compositiva potente: elimina distracciones, cambia la perspectiva y redirige la atención."
+            "es": "El recorte es una herramienta compositiva potente: elimina distracciones, cambia la perspectiva y redirige la atención.",
+            "de": "Der Bildausschnitt ist ein mächtiges Kompositionswerkzeug: er entfernt Ablenkungen, ändert die Perspektive und lenkt die Aufmerksamkeit um."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Landscape ready for a thoughtful crop decision",
             "fr": "Paysage prêt pour une décision de recadrage réfléchie",
-            "es": "Paisaje listo para una decisión de recorte meditada"
+            "es": "Paisaje listo para una decisión de recorte meditada",
+            "de": "Landschaft bereit für eine bewusste Ausschnittentscheidung"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -2895,7 +2995,8 @@
           "text": {
             "en": "Which compositional techniques work well for minimalist photography?",
             "fr": "Quelles techniques compositionnelles fonctionnent bien pour la photographie minimaliste ?",
-            "es": "¿Qué técnicas compositivas funcionan bien en fotografía minimalista?"
+            "es": "¿Qué técnicas compositivas funcionan bien en fotografía minimalista?",
+            "de": "Welche Kompositionstechniken funktionieren gut in der minimalistischen Fotografie?"
           },
           "answers": [
             {
@@ -2903,7 +3004,8 @@
               "text": {
                 "en": "Limited color palette",
                 "fr": "Palette de couleurs limitée",
-                "es": "Paleta de color limitada"
+                "es": "Paleta de color limitada",
+                "de": "Begrenzte Farbpalette"
               }
             },
             {
@@ -2911,7 +3013,8 @@
               "text": {
                 "en": "Clean lines and geometric shapes",
                 "fr": "Lignes épurées et formes géométriques",
-                "es": "Líneas limpias y formas geométricas"
+                "es": "Líneas limpias y formas geométricas",
+                "de": "Klare Linien und geometrische Formen"
               }
             },
             {
@@ -2919,7 +3022,8 @@
               "text": {
                 "en": "Busy, cluttered backgrounds",
                 "fr": "Arrière-plans encombrés et chargés",
-                "es": "Fondos saturados y abarrotados"
+                "es": "Fondos saturados y abarrotados",
+                "de": "Gesättigte, überladene Hintergründe"
               }
             },
             {
@@ -2927,7 +3031,8 @@
               "text": {
                 "en": "Negative space",
                 "fr": "Espace négatif",
-                "es": "Espacio negativo"
+                "es": "Espacio negativo",
+                "de": "Negativraum"
               }
             }
           ],
@@ -2939,7 +3044,8 @@
           "explanation": {
             "en": "Minimalism thrives on simplicity: negative space, clean geometry, and restrained colors. Clutter contradicts the style.",
             "fr": "Le minimalisme prospère sur la simplicité : espace négatif, géométrie épurée et couleurs restrintes. L'encombrement contredit le style.",
-            "es": "El minimalismo vive de la simplicidad: espacio negativo, geometría limpia y colores contenidos. El desorden contradice el estilo."
+            "es": "El minimalismo vive de la simplicidad: espacio negativo, geometría limpia y colores contenidos. El desorden contradice el estilo.",
+            "de": "Minimalismus lebt von Einfachheit: Negativraum, klare Geometrie und zurückhaltende Farben. Unordnung widerspricht dem Stil."
           },
           "difficulty": "easy"
         },
@@ -2949,7 +3055,8 @@
           "text": {
             "en": "What is 'leading room' or 'nose room' in composition?",
             "fr": "Qu'est-ce que la 'place de regard' ou 'espace de nez' en composition ?",
-            "es": "¿Qué es el «espacio de mirada» o «nose room» en composición?"
+            "es": "¿Qué es el «espacio de mirada» o «nose room» en composición?",
+            "de": "Was ist „Blickraum“ oder „Nose Room“ in der Komposition?"
           },
           "answers": [
             {
@@ -2957,7 +3064,8 @@
               "text": {
                 "en": "The area around the lens mount",
                 "fr": "La zone autour du monture d'objectif",
-                "es": "El área alrededor de la montura del objetivo"
+                "es": "El área alrededor de la montura del objetivo",
+                "de": "Der Bereich um die Objektivfassung"
               }
             },
             {
@@ -2965,7 +3073,8 @@
               "text": {
                 "en": "Space behind the subject",
                 "fr": "Espace derrière le sujet",
-                "es": "El espacio detrás del sujeto"
+                "es": "El espacio detrás del sujeto",
+                "de": "Der Raum hinter dem Motiv"
               }
             },
             {
@@ -2973,7 +3082,8 @@
               "text": {
                 "en": "Space in front of a subject looking or moving in a direction",
                 "fr": "Espace devant un sujet qui regarde ou se déplace dans une direction",
-                "es": "El espacio delante de un sujeto que mira o se mueve en una dirección"
+                "es": "El espacio delante de un sujeto que mira o se mueve en una dirección",
+                "de": "Der Raum vor einem Motiv, das in eine Richtung blickt oder sich bewegt"
               }
             },
             {
@@ -2981,7 +3091,8 @@
               "text": {
                 "en": "Room for the camera nose",
                 "fr": "Espace pour le nez de l'appareil",
-                "es": "Espacio para la nariz de la cámara"
+                "es": "Espacio para la nariz de la cámara",
+                "de": "Platz für die Kameranase"
               }
             }
           ],
@@ -2991,19 +3102,22 @@
           "explanation": {
             "en": "Giving a subject space to look or move into prevents a cramped feeling and feels more natural and balanced.",
             "fr": "Donner au sujet de l'espace pour regarder ou se déplacer évite un sentiment d'encombrement et semble plus naturel et équilibré.",
-            "es": "Dar al sujeto espacio hacia donde mira o se mueve evita la sensación de ahogo y resulta más natural y equilibrado."
+            "es": "Dar al sujeto espacio hacia donde mira o se mueve evita la sensación de ahogo y resulta más natural y equilibrado.",
+            "de": "Dem Motiv Raum in Blick- oder Bewegungsrichtung zu geben vermeidet das Gefühl des Erstickens und wirkt natürlicher und ausgewogener."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1534528741775-53994a69daeb.avif",
           "imageAlt": {
             "en": "Portrait with looking room / nose room ahead of the gaze",
             "fr": "Portrait avec espace de regard / nose room devant le regard",
-            "es": "Retrato con espacio de mirada / nose room delante de la mirada"
+            "es": "Retrato con espacio de mirada / nose room delante de la mirada",
+            "de": "Porträt mit Blickraum / Nose Room vor dem Blick"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3012,7 +3126,8 @@
           "text": {
             "en": "How does color contrast affect composition?",
             "fr": "Comment le contraste de couleur affecte-t-il la composition ?",
-            "es": "¿Cómo afecta el contraste de color a la composición?"
+            "es": "¿Cómo afecta el contraste de color a la composición?",
+            "de": "Wie beeinflusst Farbkontrast die Komposition?"
           },
           "answers": [
             {
@@ -3020,7 +3135,8 @@
               "text": {
                 "en": "It makes images look blurry",
                 "fr": "Il rend les images floues",
-                "es": "Hace que las imágenes se vean borrosas"
+                "es": "Hace que las imágenes se vean borrosas",
+                "de": "Er lässt Bilder unscharf wirken"
               }
             },
             {
@@ -3028,7 +3144,8 @@
               "text": {
                 "en": "It only affects the exposure",
                 "fr": "Il affecte uniquement l'exposition",
-                "es": "Solo afecta a la exposición"
+                "es": "Solo afecta a la exposición",
+                "de": "Er beeinflusst nur die Belichtung"
               }
             },
             {
@@ -3036,7 +3153,8 @@
               "text": {
                 "en": "It has no effect on composition",
                 "fr": "Il n'a aucun effet sur la composition",
-                "es": "No tiene efecto en la composición"
+                "es": "No tiene efecto en la composición",
+                "de": "Er hat keinen Effekt auf die Komposition"
               }
             },
             {
@@ -3044,7 +3162,8 @@
               "text": {
                 "en": "It draws attention to specific areas and creates visual interest",
                 "fr": "Il attire l'attention sur des zones spécifiques et crée un intérêt visuel",
-                "es": "Atrae la atención a zonas concretas y crea interés visual"
+                "es": "Atrae la atención a zonas concretas y crea interés visual",
+                "de": "Er zieht die Aufmerksamkeit auf bestimmte Bereiche und erzeugt visuelles Interesse"
               }
             }
           ],
@@ -3054,19 +3173,22 @@
           "explanation": {
             "en": "Complementary colors or stark contrasts create focal points and guide the viewer's eye through intentional design.",
             "fr": "Les couleurs complémentaires ou les contrastes marqués créent des points focaux et guident l'œil du spectateur par intentionnalité.",
-            "es": "Los colores complementarios o los contrastes fuertes crean focos y guían la mirada con un diseño intencional."
+            "es": "Los colores complementarios o los contrastes fuertes crean focos y guían la mirada con un diseño intencional.",
+            "de": "Komplementärfarben oder starke Kontraste schaffen Brennpunkte und führen den Blick mit bewusstem Design."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1493246507139-91e8fad9978e.avif",
           "imageAlt": {
             "en": "Strong color contrast between land and sky",
             "fr": "Fort contraste de couleur entre terre et ciel",
-            "es": "Fuerte contraste de color entre tierra y cielo"
+            "es": "Fuerte contraste de color entre tierra y cielo",
+            "de": "Starker Farbkontrast zwischen Erde und Himmel"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3075,7 +3197,8 @@
           "text": {
             "en": "Which aspects make a composition feel 'balanced'?",
             "fr": "Quels aspects donnent à une composition un aspect 'équilibré' ?",
-            "es": "¿Qué aspectos hacen que una composición se sienta «equilibrada»?"
+            "es": "¿Qué aspectos hacen que una composición se sienta «equilibrada»?",
+            "de": "Welche Aspekte lassen eine Komposition „ausgewogen“ wirken?"
           },
           "answers": [
             {
@@ -3083,7 +3206,8 @@
               "text": {
                 "en": "Equal amounts of light and dark",
                 "fr": "Quantités égales de clair et sombre",
-                "es": "Cantidades iguales de claro y oscuro"
+                "es": "Cantidades iguales de claro y oscuro",
+                "de": "Gleiche Mengen von Hell und Dunkel"
               }
             },
             {
@@ -3091,7 +3215,8 @@
               "text": {
                 "en": "Distribution of visual weight across the frame",
                 "fr": "Distribution du poids visuel à travers le cadre",
-                "es": "La distribución del peso visual en el marco"
+                "es": "La distribución del peso visual en el marco",
+                "de": "Die Verteilung des visuellen Gewichts im Rahmen"
               }
             },
             {
@@ -3099,7 +3224,8 @@
               "text": {
                 "en": "The camera's ISO setting",
                 "fr": "Le réglage ISO de l'appareil",
-                "es": "El ajuste ISO de la cámara"
+                "es": "El ajuste ISO de la cámara",
+                "de": "Die ISO-Einstellung der Kamera"
               }
             },
             {
@@ -3107,7 +3233,8 @@
               "text": {
                 "en": "Symmetry or asymmetrical balance",
                 "fr": "Symétrie ou équilibre asymétrique",
-                "es": "Simetría o equilibrio asimétrico"
+                "es": "Simetría o equilibrio asimétrico",
+                "de": "Symmetrie oder asymmetrische Balance"
               }
             }
           ],
@@ -3118,7 +3245,8 @@
           "explanation": {
             "en": "Balance relates to visual weight distribution, not literal symmetry. Asymmetrical balance can feel more dynamic while still being harmonious.",
             "fr": "L'équilibre concerne la distribution du poids visuel, pas la symétrie littérale. L'équilibre asymétrique peut sembler plus dynamique tout en restant harmonieux.",
-            "es": "El equilibrio se refiere a la distribución del peso visual, no a una simetría literal. El equilibrio asimétrico puede sentirse más dinámico y seguir siendo armonioso."
+            "es": "El equilibrio se refiere a la distribución del peso visual, no a una simetría literal. El equilibrio asimétrico puede sentirse más dinámico y seguir siendo armonioso.",
+            "de": "Balance meint die Verteilung des visuellen Gewichts, nicht wörtliche Symmetrie. Asymmetrische Balance kann dynamischer wirken und dennoch harmonisch sein."
           },
           "difficulty": "medium"
         },
@@ -3128,7 +3256,8 @@
           "text": {
             "en": "What is the effect of shooting from a high angle?",
             "fr": "Quel est l'effet de photographier en plongée ?",
-            "es": "¿Cuál es el efecto de disparar desde un ángulo alto?"
+            "es": "¿Cuál es el efecto de disparar desde un ángulo alto?",
+            "de": "Welche Wirkung hat das Fotografieren aus einem hohen Winkel?"
           },
           "answers": [
             {
@@ -3136,7 +3265,8 @@
               "text": {
                 "en": "The subject looks more powerful",
                 "fr": "Le sujet semble plus puissant",
-                "es": "El sujeto parece más poderoso"
+                "es": "El sujeto parece más poderoso",
+                "de": "Das Motiv wirkt mächtiger"
               }
             },
             {
@@ -3144,7 +3274,8 @@
               "text": {
                 "en": "It always creates distortion",
                 "fr": "Il crée toujours une distorsion",
-                "es": "Siempre crea distorsión"
+                "es": "Siempre crea distorsión",
+                "de": "Es erzeugt immer Verzerrung"
               }
             },
             {
@@ -3152,7 +3283,8 @@
               "text": {
                 "en": "It has no psychological effect",
                 "fr": "Il n'a aucun effet psychologique",
-                "es": "No tiene efecto psicológico"
+                "es": "No tiene efecto psicológico",
+                "de": "Es hat keinen psychologischen Effekt"
               }
             },
             {
@@ -3160,7 +3292,8 @@
               "text": {
                 "en": "The subject appears smaller, more vulnerable, or part of a larger scene",
                 "fr": "Le sujet apparaît plus petit, plus vulnérable, ou partie d'une scène plus large",
-                "es": "El sujeto parece más pequeño, más vulnerable o parte de una escena mayor"
+                "es": "El sujeto parece más pequeño, más vulnerable o parte de una escena mayor",
+                "de": "Das Motiv wirkt kleiner, verwundbarer oder Teil einer größeren Szene"
               }
             }
           ],
@@ -3170,19 +3303,22 @@
           "explanation": {
             "en": "High angles (looking down) can diminish a subject's presence, show context, or create a bird's-eye perspective.",
             "fr": "Les angles hauts (regarder vers le bas) peuvent diminuer la présence d'un sujet, montrer le contexte ou créer une perspective aérienne.",
-            "es": "Los ángulos altos (mirar hacia abajo) pueden disminuir la presencia del sujeto, mostrar contexto o crear una perspectiva de pájaro."
+            "es": "Los ángulos altos (mirar hacia abajo) pueden disminuir la presencia del sujeto, mostrar contexto o crear una perspectiva de pájaro.",
+            "de": "Hohe Winkel (nach unten schauen) können die Präsenz des Motivs verringern, Kontext zeigen oder eine Vogelperspektive erzeugen."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1470252649378-9c29740c9fa8.avif",
           "imageAlt": {
             "en": "High-angle overlook compressing a landscape scene",
             "fr": "Vue plongeante compressant une scène de paysage",
-            "es": "Mirador en ángulo alto que comprime una escena de paisaje"
+            "es": "Mirador en ángulo alto que comprime una escena de paisaje",
+            "de": "Hoher Aussichtspunkt, der eine Landschaftsszene verdichtet"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3191,7 +3327,8 @@
           "text": {
             "en": "What is 'pattern disruption' in composition?",
             "fr": "Qu'est-ce que la 'rupture de motif' en composition ?",
-            "es": "¿Qué es la «ruptura de patrón» en composición?"
+            "es": "¿Qué es la «ruptura de patrón» en composición?",
+            "de": "Was ist „Musterbruch“ in der Komposition?"
           },
           "answers": [
             {
@@ -3199,7 +3336,8 @@
               "text": {
                 "en": "Destroying patterns in post-processing",
                 "fr": "Détruire des motifs en post-traitement",
-                "es": "Destruir patrones en postproducción"
+                "es": "Destruir patrones en postproducción",
+                "de": "Muster in der Nachbearbeitung zerstören"
               }
             },
             {
@@ -3207,7 +3345,8 @@
               "text": {
                 "en": "Avoiding all patterns",
                 "fr": "Éviter tous les motifs",
-                "es": "Evitar todos los patrones"
+                "es": "Evitar todos los patrones",
+                "de": "Alle Muster vermeiden"
               }
             },
             {
@@ -3215,7 +3354,8 @@
               "text": {
                 "en": "Using only random elements",
                 "fr": "Utiliser uniquement des éléments aléatoires",
-                "es": "Usar solo elementos aleatorios"
+                "es": "Usar solo elementos aleatorios",
+                "de": "Nur zufällige Elemente verwenden"
               }
             },
             {
@@ -3223,7 +3363,8 @@
               "text": {
                 "en": "Breaking a repetitive pattern with a contrasting element to create focus",
                 "fr": "Rompre un motif répétitif avec un élément contrastant pour créer un focus",
-                "es": "Romper un patrón repetitivo con un elemento contrastante para crear un foco"
+                "es": "Romper un patrón repetitivo con un elemento contrastante para crear un foco",
+                "de": "Ein sich wiederholendes Muster mit einem kontrastierenden Element brechen, um einen Brennpunkt zu schaffen"
               }
             }
           ],
@@ -3233,7 +3374,8 @@
           "explanation": {
             "en": "Patterns create rhythm; disrupting one draws immediate attention and creates a compelling focal point.",
             "fr": "Les motifs créent du rythme ; en rompre un attire immédiatement l'attention et crée un point focal convaincant.",
-            "es": "Los patrones crean ritmo; romper uno atrae la atención de inmediato y genera un punto focal potente."
+            "es": "Los patrones crean ritmo; romper uno atrae la atención de inmediato y genera un punto focal potente.",
+            "de": "Muster erzeugen Rhythmus; eines zu brechen zieht sofort die Aufmerksamkeit und erzeugt einen starken Brennpunkt."
           },
           "difficulty": "medium"
         },
@@ -3243,7 +3385,8 @@
           "text": {
             "en": "Which compositional rules can be intentionally broken for creative effect?",
             "fr": "Quelles règles compositionnelles peuvent être intentionnellement rompues pour un effet créatif ?",
-            "es": "¿Qué reglas compositivas se pueden romper a propósito con efecto creativo?"
+            "es": "¿Qué reglas compositivas se pueden romper a propósito con efecto creativo?",
+            "de": "Welche Kompositionsregeln kann man absichtlich mit kreativem Effekt brechen?"
           },
           "answers": [
             {
@@ -3251,7 +3394,8 @@
               "text": {
                 "en": "Keeping horizons level",
                 "fr": "Garder les horizons nivelés",
-                "es": "Mantener los horizontes nivelados"
+                "es": "Mantener los horizontes nivelados",
+                "de": "Horizonte waagerecht halten"
               }
             },
             {
@@ -3259,7 +3403,8 @@
               "text": {
                 "en": "Rule of thirds",
                 "fr": "Règle des tiers",
-                "es": "La regla de tercios"
+                "es": "La regla de tercios",
+                "de": "Die Drittelregel"
               }
             },
             {
@@ -3267,7 +3412,8 @@
               "text": {
                 "en": "All of the above",
                 "fr": "Tout ce qui précède",
-                "es": "Todas las anteriores"
+                "es": "Todas las anteriores",
+                "de": "Alle oben genannten"
               }
             },
             {
@@ -3275,7 +3421,8 @@
               "text": {
                 "en": "Balanced compositions",
                 "fr": "Compositions équilibrées",
-                "es": "Composiciones equilibradas"
+                "es": "Composiciones equilibradas",
+                "de": "Ausgewogene Kompositionen"
               }
             }
           ],
@@ -3285,7 +3432,8 @@
           "explanation": {
             "en": "Rules are guidelines, not laws. Breaking them intentionally can create tension, unease, or unique artistic statements.",
             "fr": "Les règles sont des directives, pas des lois. Les rompre intentionnellement peut créer de la tension, de l'inquiétude ou des déclarations artistiques uniques.",
-            "es": "Las reglas son guías, no leyes. Romperlas a propósito puede crear tensión, inquietud o afirmaciones artísticas únicas."
+            "es": "Las reglas son guías, no leyes. Romperlas a propósito puede crear tensión, inquietud o afirmaciones artísticas únicas.",
+            "de": "Regeln sind Leitlinien, keine Gesetze. Sie absichtlich zu brechen kann Spannung, Unruhe oder einzigartige künstlerische Aussagen erzeugen."
           },
           "difficulty": "medium"
         },
@@ -3296,7 +3444,8 @@
           "text": {
             "en": "A runner fills the whole frame edge-to-edge with no breathing room. What’s the quickest composition fix?",
             "fr": "Un coureur colle aux bords du cadre, sans air. Quelle correction de cadrage est la plus rapide ?",
-            "es": "Un corredor llena el marco de borde a borde sin aire. ¿Cuál es el arreglo compositivo más rápido?"
+            "es": "Un corredor llena el marco de borde a borde sin aire. ¿Cuál es el arreglo compositivo más rápido?",
+            "de": "Ein Läufer füllt den Rahmen Rand zu Rand ohne Luft. Was ist die schnellste kompositorische Korrektur?"
           },
           "answers": [
             {
@@ -3304,7 +3453,8 @@
               "text": {
                 "en": "Crop tighter until only one shoe remains",
                 "fr": "Recadrer jusqu’à ne garder qu’une chaussure",
-                "es": "Recortar más hasta que solo quede un zapato"
+                "es": "Recortar más hasta que solo quede un zapato",
+                "de": "Noch enger schneiden, bis nur noch ein Schuh übrig ist"
               }
             },
             {
@@ -3312,7 +3462,8 @@
               "text": {
                 "en": "Tilt 45° so the horizon becomes diagonal by force",
                 "fr": "Incliner à 45° pour forcer une diagonale",
-                "es": "Inclinar 45° para forzar un horizonte diagonal"
+                "es": "Inclinar 45° para forzar un horizonte diagonal",
+                "de": "Um 45° neigen, um einen Diagonalhorizont zu erzwingen"
               }
             },
             {
@@ -3320,7 +3471,8 @@
               "text": {
                 "en": "Add a little space in the direction of movement",
                 "fr": "Laisser un peu d’espace dans le sens du mouvement",
-                "es": "Añadir un poco de espacio en la dirección del movimiento"
+                "es": "Añadir un poco de espacio en la dirección del movimiento",
+                "de": "Etwas Raum in Bewegungsrichtung hinzufügen"
               }
             },
             {
@@ -3328,7 +3480,8 @@
               "text": {
                 "en": "Always center the head on a grid intersection",
                 "fr": "Toujours centrer la tête sur une intersection",
-                "es": "Centrar siempre la cabeza en una intersección de la cuadrícula"
+                "es": "Centrar siempre la cabeza en una intersección de la cuadrícula",
+                "de": "Den Kopf immer auf einen Raster-Schnittpunkt zentrieren"
               }
             }
           ],
@@ -3338,18 +3491,21 @@
           "explanation": {
             "en": "Active space (lead room) lets the subject “move into” the frame and feels less cramped.",
             "fr": "L’espace actif (lead room) laisse le sujet « avancer » dans le cadre et évite l’effet étouffé.",
-            "es": "El espacio activo (lead room) deja que el sujeto «entre» en el marco y se siente menos ahogado."
+            "es": "El espacio activo (lead room) deja que el sujeto «entre» en el marco y se siente menos ahogado.",
+            "de": "Aktiver Raum (Lead Room) lässt das Motiv „in den Rahmen eintreten“ und wirkt weniger erstickt."
           },
           "imageUrl": "/images/packs/photo-1552674605-db6ffd4facb5.avif",
           "imageAlt": {
             "en": "Runner in motion",
             "fr": "Coureur en mouvement",
-            "es": "Corredor en movimiento"
+            "es": "Corredor en movimiento",
+            "de": "Läufer in Bewegung"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3359,7 +3515,8 @@
           "text": {
             "en": "You’re shooting a busy street. How do you make one person read as the hero?",
             "fr": "Rue bondée : comment faire d’une personne le héros de l’image ?",
-            "es": "Estás fotografiando una calle concurrida. ¿Cómo haces que una persona se lea como la heroína?"
+            "es": "Estás fotografiando una calle concurrida. ¿Cómo haces que una persona se lea como la heroína?",
+            "de": "Du fotografierst eine belebte Straße. Wie lässt du eine Person als Heldin lesen?"
           },
           "answers": [
             {
@@ -3367,7 +3524,8 @@
               "text": {
                 "en": "Use the widest lens and stand as far as possible",
                 "fr": "Prendre le plus grand-angle et s’éloigner au maximum",
-                "es": "Usar el objetivo más angular y situarte lo más lejos posible"
+                "es": "Usar el objetivo más angular y situarte lo más lejos posible",
+                "de": "Das weitwinkligste Objektiv nutzen und dich möglichst weit entfernen"
               }
             },
             {
@@ -3375,7 +3533,8 @@
               "text": {
                 "en": "Include every face equally so nobody feels left out",
                 "fr": "Mettre tous les visages à égalité pour personne ne soit exclu",
-                "es": "Incluir todas las caras por igual para que nadie se sienta excluido"
+                "es": "Incluir todas las caras por igual para que nadie se sienta excluido",
+                "de": "Alle Gesichter gleichmäßig einbeziehen, damit sich niemand ausgeschlossen fühlt"
               }
             },
             {
@@ -3383,7 +3542,8 @@
               "text": {
                 "en": "Turn on HDR and hope contrast sorts it out",
                 "fr": "Activer le HDR et espérer que le contraste trie",
-                "es": "Activar el HDR y esperar que el contraste lo resuelva"
+                "es": "Activar el HDR y esperar que el contraste lo resuelva",
+                "de": "HDR aktivieren und hoffen, dass der Kontrast es löst"
               }
             },
             {
@@ -3391,7 +3551,8 @@
               "text": {
                 "en": "Isolate with light, focus, color contrast, or framing",
                 "fr": "Isoler par la lumière, la MAP, le contraste de couleur ou le cadrage",
-                "es": "Aislar con luz, enfoque, contraste de color o encuadre"
+                "es": "Aislar con luz, enfoque, contraste de color o encuadre",
+                "de": "Mit Licht, Fokus, Farbkontrast oder Bildausschnitt isolieren"
               }
             }
           ],
@@ -3401,18 +3562,21 @@
           "explanation": {
             "en": "Heroes need separation: brighter light, sharper focus, complementary color, or a natural frame.",
             "fr": "Un héros a besoin de séparation : lumière, netteté, couleur complémentaire ou cadre naturel.",
-            "es": "Los héroes necesitan separación: luz más brillante, enfoque más nítido, color complementario o un marco natural."
+            "es": "Los héroes necesitan separación: luz más brillante, enfoque más nítido, color complementario o un marco natural.",
+            "de": "Helden brauchen Trennung: helleres Licht, schärferer Fokus, Komplementärfarbe oder ein natürlicher Rahmen."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Busy city street",
             "fr": "Rue de ville animée",
-            "es": "Calle urbana concurrida"
+            "es": "Calle urbana concurrida",
+            "de": "Belebte Stadtstraße"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3422,7 +3586,8 @@
           "text": {
             "en": "Which moves often make a snapshot feel more intentional?",
             "fr": "Quels gestes rendent souvent un cliché plus intentionnel ?",
-            "es": "¿Qué gestos suelen hacer que una instantánea se sienta más intencional?"
+            "es": "¿Qué gestos suelen hacer que una instantánea se sienta más intencional?",
+            "de": "Welche Gesten lassen einen Schnappschuss meist absichtlicher wirken?"
           },
           "answers": [
             {
@@ -3430,7 +3595,8 @@
               "text": {
                 "en": "Wait half a second for a cleaner gesture",
                 "fr": "Attendre une demi-seconde pour un geste plus propre",
-                "es": "Esperar medio segundo a un gesto más limpio"
+                "es": "Esperar medio segundo a un gesto más limpio",
+                "de": "Eine halbe Sekunde auf eine klarere Geste warten"
               }
             },
             {
@@ -3438,7 +3604,8 @@
               "text": {
                 "en": "Level the horizon (unless you tilt on purpose)",
                 "fr": "Remettre l’horizon droit (sauf inclinaison voulue)",
-                "es": "Nivelar el horizonte (salvo que inclines a propósito)"
+                "es": "Nivelar el horizonte (salvo que inclines a propósito)",
+                "de": "Den Horizont ausrichten (außer du neigst absichtlich)"
               }
             },
             {
@@ -3446,7 +3613,8 @@
               "text": {
                 "en": "Leave a distracting exit sign dead-center forever",
                 "fr": "Garder un panneau de sortie pile au centre pour toujours",
-                "es": "Dejar para siempre un cartel de salida distractor muerto al centro"
+                "es": "Dejar para siempre un cartel de salida distractor muerto al centro",
+                "de": "Für immer ein ablenkendes Exit-Schild tot in der Mitte lassen"
               }
             },
             {
@@ -3454,7 +3622,8 @@
               "text": {
                 "en": "Get closer / simplify the background",
                 "fr": "Se rapprocher / simplifier l’arrière-plan",
-                "es": "Acercarte / simplificar el fondo"
+                "es": "Acercarte / simplificar el fondo",
+                "de": "Näher herangehen / den Hintergrund vereinfachen"
               }
             }
           ],
@@ -3466,18 +3635,21 @@
           "explanation": {
             "en": "Intention = choices. Closer, cleaner, level, and timed beats “spray and pray”.",
             "fr": "L’intention, ce sont des choix. Plus près, plus propre, droit et bien cadencé battent le mode rafale aveugle.",
-            "es": "Intención = elecciones. Más cerca, más limpio, nivelado y a tiempo gana a «disparar y rezar»."
+            "es": "Intención = elecciones. Más cerca, más limpio, nivelado y a tiempo gana a «disparar y rezar».",
+            "de": "Absicht = Entscheidungen. Näher, klarer, waagerecht und im richtigen Moment schlägt „abschießen und beten“."
           },
           "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
           "imageAlt": {
             "en": "Intentional street framing that elevates a snapshot",
             "fr": "Cadrage de rue intentionnel qui élève un instantané",
-            "es": "Encuadre callejero intencional que eleva una instantánea"
+            "es": "Encuadre callejero intencional que eleva una instantánea",
+            "de": "Absichtlicher Straßenausschnitt, der einen Schnappschuss hebt"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3487,7 +3659,8 @@
           "text": {
             "en": "Crowded street: how do you isolate one subject without moving closer?",
             "fr": "Rue bondée : comment isoler un sujet sans te rapprocher ?",
-            "es": "Calle abarrotada: ¿cómo aíslas un sujeto sin acercarte?"
+            "es": "Calle abarrotada: ¿cómo aíslas un sujeto sin acercarte?",
+            "de": "Überfüllte Straße: Wie isolierst du ein Motiv, ohne näher zu gehen?"
           },
           "answers": [
             {
@@ -3495,7 +3668,8 @@
               "text": {
                 "en": "Widen to 16 mm and include everyone",
                 "fr": "Passer à 16 mm et tout inclure",
-                "es": "Abrir a 16 mm e incluir a todo el mundo"
+                "es": "Abrir a 16 mm e incluir a todo el mundo",
+                "de": "Auf 16 mm öffnen und alle einbeziehen"
               }
             },
             {
@@ -3503,7 +3677,8 @@
               "text": {
                 "en": "Use a longer focal length and a shallow depth of field",
                 "fr": "Utiliser une focale plus longue et une faible profondeur de champ",
-                "es": "Usar una focal más larga y una profundidad de campo reducida"
+                "es": "Usar una focal más larga y una profundidad de campo reducida",
+                "de": "Eine längere Brennweite und geringe Schärfentiefe nutzen"
               }
             },
             {
@@ -3511,7 +3686,8 @@
               "text": {
                 "en": "Always center the subject with flash",
                 "fr": "Toujours centrer le sujet au flash",
-                "es": "Centrar siempre al sujeto con flash"
+                "es": "Centrar siempre al sujeto con flash",
+                "de": "Das Motiv immer mit Blitz zentrieren"
               }
             },
             {
@@ -3519,7 +3695,8 @@
               "text": {
                 "en": "Shoot only vertical panoramas",
                 "fr": "Ne shooter que des panoramas verticaux",
-                "es": "Disparar solo panorámicas verticales"
+                "es": "Disparar solo panorámicas verticales",
+                "de": "Nur vertikale Panoramen schießen"
               }
             }
           ],
@@ -3529,18 +3706,21 @@
           "explanation": {
             "en": "Compression + blur separates the subject from clutter.",
             "fr": "La compression et le flou séparent le sujet du fouillis.",
-            "es": "La compresión + el desenfoque separan al sujeto del desorden."
+            "es": "La compresión + el desenfoque separan al sujeto del desorden.",
+            "de": "Kompression + Unschärfe trennen das Motiv vom Chaos."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Busy city street",
             "fr": "Rue de ville animée",
-            "es": "Calle urbana concurrida"
+            "es": "Calle urbana concurrida",
+            "de": "Belebte Stadtstraße"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3550,7 +3730,8 @@
           "text": {
             "en": "Myth: “Never put the subject in the center.” When is centering fine?",
             "fr": "Mythe : « Ne jamais centrer le sujet. » Quand le centrage est-il pertinent ?",
-            "es": "Mito: «Nunca pongas al sujeto en el centro.» ¿Cuándo está bien centrar?"
+            "es": "Mito: «Nunca pongas al sujeto en el centro.» ¿Cuándo está bien centrar?",
+            "de": "Mythos: „Stelle das Motiv nie in die Mitte.“ Wann ist Zentrieren in Ordnung?"
           },
           "answers": [
             {
@@ -3558,7 +3739,8 @@
               "text": {
                 "en": "Never — always use thirds",
                 "fr": "Jamais — toujours les tiers",
-                "es": "Nunca — usa siempre los tercios"
+                "es": "Nunca — usa siempre los tercios",
+                "de": "Nie — immer die Drittel nutzen"
               }
             },
             {
@@ -3566,7 +3748,8 @@
               "text": {
                 "en": "Symmetry, portraits with direct gaze, or strong graphic balance",
                 "fr": "Symétrie, portrait au regard frontal, ou équilibre graphique fort",
-                "es": "Simetría, retratos con mirada directa o un equilibrio gráfico fuerte"
+                "es": "Simetría, retratos con mirada directa o un equilibrio gráfico fuerte",
+                "de": "Symmetrie, Porträts mit direktem Blick oder starke grafische Balance"
               }
             },
             {
@@ -3574,7 +3757,8 @@
               "text": {
                 "en": "Only for screenshots of spreadsheets",
                 "fr": "Uniquement pour des captures de tableurs",
-                "es": "Solo para capturas de pantalla de hojas de cálculo"
+                "es": "Solo para capturas de pantalla de hojas de cálculo",
+                "de": "Nur für Screenshots von Tabellenkalkulationen"
               }
             },
             {
@@ -3582,7 +3766,8 @@
               "text": {
                 "en": "Only when shooting in RAW",
                 "fr": "Uniquement en RAW",
-                "es": "Solo al disparar en RAW"
+                "es": "Solo al disparar en RAW",
+                "de": "Nur beim Schießen in RAW"
               }
             }
           ],
@@ -3592,18 +3777,21 @@
           "explanation": {
             "en": "Rules are tools. Centered frames can feel intentional and powerful.",
             "fr": "Les règles sont des outils. Un cadrage centré peut être volontaire et fort.",
-            "es": "Las reglas son herramientas. Los encuadres centrados pueden sentirse intencionales y potentes."
+            "es": "Las reglas son herramientas. Los encuadres centrados pueden sentirse intencionales y potentes.",
+            "de": "Regeln sind Werkzeuge. Zentrierte Rahmen können absichtlich und stark wirken."
           },
           "imageUrl": "/images/packs/photo-1501785888041-af3ef285b470.avif",
           "imageAlt": {
             "en": "Centered mountain subject — when centering works",
             "fr": "Sujet montagneux centré — quand le centrage fonctionne",
-            "es": "Sujeto montañoso centrado — cuando centrar funciona"
+            "es": "Sujeto montañoso centrado — cuando centrar funciona",
+            "de": "Zentriertes Bergmotiv — wann Zentrieren funktioniert"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3613,7 +3801,8 @@
           "text": {
             "en": "You want leading lines into a tiny figure. Which framing mistake kills it?",
             "fr": "Tu veux des lignes directrices vers une petite silhouette. Quelle erreur casse l’effet ?",
-            "es": "Quieres líneas directrices hacia una figura diminuta. ¿Qué error de encuadre lo mata?"
+            "es": "Quieres líneas directrices hacia una figura diminuta. ¿Qué error de encuadre lo mata?",
+            "de": "Du willst Führungslinien zu einer winzigen Figur. Welcher Bildausschnitt-Fehler tötet das?"
           },
           "answers": [
             {
@@ -3621,7 +3810,8 @@
               "text": {
                 "en": "Leaving breathing room at the vanishing point",
                 "fr": "Laisser de l’air au point de fuite",
-                "es": "Dejar aire en el punto de fuga"
+                "es": "Dejar aire en el punto de fuga",
+                "de": "Luft am Fluchtpunkt lassen"
               }
             },
             {
@@ -3629,7 +3819,8 @@
               "text": {
                 "en": "Cropping so lines exit the frame before reaching the subject",
                 "fr": "Rogner pour que les lignes sortent du cadre avant d’atteindre le sujet",
-                "es": "Recortar de modo que las líneas salgan del marco antes de llegar al sujeto"
+                "es": "Recortar de modo que las líneas salgan del marco antes de llegar al sujeto",
+                "de": "So schneiden, dass die Linien den Rahmen verlassen, bevor sie das Motiv erreichen"
               }
             },
             {
@@ -3637,7 +3828,8 @@
               "text": {
                 "en": "Using a slightly lower camera angle",
                 "fr": "Utiliser un angle un peu plus bas",
-                "es": "Usar un ángulo de cámara un poco más bajo"
+                "es": "Usar un ángulo de cámara un poco más bajo",
+                "de": "Einen etwas niedrigeren Kamerawinkel nutzen"
               }
             },
             {
@@ -3645,7 +3837,8 @@
               "text": {
                 "en": "Waiting for softer light",
                 "fr": "Attendre une lumière plus douce",
-                "es": "Esperar una luz más suave"
+                "es": "Esperar una luz más suave",
+                "de": "Auf weicheres Licht warten"
               }
             }
           ],
@@ -3655,7 +3848,8 @@
           "explanation": {
             "en": "Leading lines must still point at the subject inside the frame.",
             "fr": "Les lignes doivent encore pointer vers le sujet dans le cadre.",
-            "es": "Las líneas directrices deben seguir apuntando al sujeto dentro del marco."
+            "es": "Las líneas directrices deben seguir apuntando al sujeto dentro del marco.",
+            "de": "Führungslinien müssen weiterhin auf das Motiv innerhalb des Rahmens zeigen."
           }
         },
         {
@@ -3665,7 +3859,8 @@
           "text": {
             "en": "Wedding toast: many faces. How do you keep hierarchy clear?",
             "fr": "Toast de mariage : beaucoup de visages. Comment garder une hiérarchie claire ?",
-            "es": "Brindis de boda: muchas caras. ¿Cómo mantienes clara la jerarquía?"
+            "es": "Brindis de boda: muchas caras. ¿Cómo mantienes clara la jerarquía?",
+            "de": "Hochzeitstoast: viele Gesichter. Wie hältst du die Hierarchie klar?"
           },
           "answers": [
             {
@@ -3673,7 +3868,8 @@
               "text": {
                 "en": "Focus on the speakers / couple and let others fall softer",
                 "fr": "Net sur les intervenants / le couple, les autres plus doux",
-                "es": "Enfocar a los oradores / la pareja y dejar que el resto caiga más suave"
+                "es": "Enfocar a los oradores / la pareja y dejar que el resto caiga más suave",
+                "de": "Auf die Redner / das Paar fokussieren und den Rest weicher fallen lassen"
               }
             },
             {
@@ -3681,7 +3877,8 @@
               "text": {
                 "en": "Focus on the farthest chandelier",
                 "fr": "Net sur le chandelier le plus loin",
-                "es": "Enfocar la lámpara más lejana"
+                "es": "Enfocar la lámpara más lejana",
+                "de": "Auf die entfernteste Lampe fokussieren"
               }
             },
             {
@@ -3689,7 +3886,8 @@
               "text": {
                 "en": "Always use the widest aperture on the cake",
                 "fr": "Toujours la plus grande ouverture sur le gâteau",
-                "es": "Usar siempre la apertura más abierta sobre el pastel"
+                "es": "Usar siempre la apertura más abierta sobre el pastel",
+                "de": "Immer die größte Blende auf die Torte setzen"
               }
             },
             {
@@ -3697,7 +3895,8 @@
               "text": {
                 "en": "Pan-blur every guest equally",
                 "fr": "Flouter tous les invités pareil au filé",
-                "es": "Barrer y desenfocar a todos los invitados por igual"
+                "es": "Barrer y desenfocar a todos los invitados por igual",
+                "de": "Schwenken und alle Gäste gleichmäßig unscharf machen"
               }
             }
           ],
@@ -3707,18 +3906,21 @@
           "explanation": {
             "en": "Direct attention with focus and placement — not equal sharpness everywhere.",
             "fr": "Dirige l’attention par la mise au point et le placement — pas une netteté égale partout.",
-            "es": "Dirige la atención con el enfoque y la colocación — no con nitidez igual en todas partes."
+            "es": "Dirige la atención con el enfoque y la colocación — no con nitidez igual en todas partes.",
+            "de": "Lenke die Aufmerksamkeit mit Fokus und Platzierung — nicht mit gleicher Schärfe überall."
           },
           "imageUrl": "/images/packs/photo-1519741497674-611481863552.avif",
           "imageAlt": {
             "en": "Wedding celebration moment",
             "fr": "Moment de célébration de mariage",
-            "es": "Momento de celebración de boda"
+            "es": "Momento de celebración de boda",
+            "de": "Hochzeitsfeier-Moment"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3728,7 +3930,8 @@
           "text": {
             "en": "Café table: cluttered foreground. Cleanest fix before shooting?",
             "fr": "Table de café : premier plan encombré. Correction la plus propre avant de shooter ?",
-            "es": "Mesa de café: primer plano abarrotado. ¿La corrección más limpia antes de disparar?"
+            "es": "Mesa de café: primer plano abarrotado. ¿La corrección más limpia antes de disparar?",
+            "de": "Café-Tisch: überladener Vordergrund. Die sauberste Korrektur vor dem Auslösen?"
           },
           "answers": [
             {
@@ -3736,7 +3939,8 @@
               "text": {
                 "en": "Raise ISO to 25600",
                 "fr": "Monter l’ISO à 25600",
-                "es": "Subir el ISO a 25600"
+                "es": "Subir el ISO a 25600",
+                "de": "ISO auf 25600 erhöhen"
               }
             },
             {
@@ -3744,7 +3948,8 @@
               "text": {
                 "en": "Clear or rearrange objects, or change angle to simplify",
                 "fr": "Ranger / déplacer, ou changer d’angle pour simplifier",
-                "es": "Quitar o reordenar objetos, o cambiar el ángulo para simplificar"
+                "es": "Quitar o reordenar objetos, o cambiar el ángulo para simplificar",
+                "de": "Objekte entfernen oder umordnen, oder den Winkel ändern, um zu vereinfachen"
               }
             },
             {
@@ -3752,7 +3957,8 @@
               "text": {
                 "en": "Add more napkins for texture",
                 "fr": "Ajouter des serviettes pour la texture",
-                "es": "Añadir más servilletas por textura"
+                "es": "Añadir más servilletas por textura",
+                "de": "Mehr Servietten für Textur hinzufügen"
               }
             },
             {
@@ -3760,7 +3966,8 @@
               "text": {
                 "en": "Shoot through a dirty glass for mood only",
                 "fr": "Shooter à travers un verre sale pour l’ambiance seule",
-                "es": "Disparar solo a través de un cristal sucio por el ambiente"
+                "es": "Disparar solo a través de un cristal sucio por el ambiente",
+                "de": "Nur durch schmutziges Glas schießen für Ambiente"
               }
             }
           ],
@@ -3770,18 +3977,21 @@
           "explanation": {
             "en": "Composition starts before the shutter — edit the scene.",
             "fr": "La composition commence avant le déclenchement — édite la scène.",
-            "es": "La composición empieza antes del obturador — edita la escena."
+            "es": "La composición empieza antes del obturador — edita la escena.",
+            "de": "Komposition beginnt vor dem Verschluss — editiere die Szene."
           },
           "imageUrl": "/images/packs/photo-1554118811-1e0d58224f24.avif",
           "imageAlt": {
             "en": "Cafe table scene",
             "fr": "Scène de table de café",
-            "es": "Escena de mesa de café"
+            "es": "Escena de mesa de café",
+            "de": "Café-Tischszene"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -3791,7 +4001,8 @@
           "text": {
             "en": "Street corner, strong leading lines into a cluttered background. Subject is mid-frame. Strongest fix without moving farther?",
             "fr": "Coin de rue, lignes fortes vers un fond encombré. Sujet au milieu. Meilleure correction sans reculer ?",
-            "es": "Esquina urbana, líneas directrices fuertes hacia un fondo saturado. El sujeto está a media altura. ¿El mejor arreglo sin alejarte?"
+            "es": "Esquina urbana, líneas directrices fuertes hacia un fondo saturado. El sujeto está a media altura. ¿El mejor arreglo sin alejarte?",
+            "de": "Stadt-Ecke, starke Führungslinien zu einem gesättigten Hintergrund. Das Motiv ist auf mittlerer Höhe. Beste Korrektur ohne dich zu entfernen?"
           },
           "answers": [
             {
@@ -3799,7 +4010,8 @@
               "text": {
                 "en": "Max telephoto compression only — composition doesn’t matter",
                 "fr": "Télé max seulement — la composition n’importe pas",
-                "es": "Solo tele máximo — la composición no importa"
+                "es": "Solo tele máximo — la composición no importa",
+                "de": "Nur Maximal-Tele — Komposition spielt keine Rolle"
               }
             },
             {
@@ -3807,7 +4019,8 @@
               "text": {
                 "en": "Always center and hope symmetry saves it",
                 "fr": "Toujours centrer et espérer la symétrie",
-                "es": "Centrar siempre y esperar que la simetría lo salve"
+                "es": "Centrar siempre y esperar que la simetría lo salve",
+                "de": "Immer zentrieren und hoffen, dass Symmetrie es rettet"
               }
             },
             {
@@ -3815,7 +4028,8 @@
               "text": {
                 "en": "Add a heavy vignette in-camera as the only fix",
                 "fr": "Ajouter un vignettage fort à la prise comme seul remède",
-                "es": "Añadir un viñeteado fuerte en cámara como única solución"
+                "es": "Añadir un viñeteado fuerte en cámara como única solución",
+                "de": "Eine starke In-Kamera-Vignette als einzige Lösung hinzufügen"
               }
             },
             {
@@ -3823,7 +4037,8 @@
               "text": {
                 "en": "Shift laterally / change height so lines point at a clean subject, then crop intent",
                 "fr": "Décaler latéralement / changer de hauteur pour que les lignes pointent un sujet propre, puis cadrer avec intention",
-                "es": "Desplazarte lateralmente / cambiar la altura para que las líneas apunten a un sujeto limpio, luego recortar con intención"
+                "es": "Desplazarte lateralmente / cambiar la altura para que las líneas apunten a un sujeto limpio, luego recortar con intención",
+                "de": "Seitlich verschieben / Höhe ändern, damit die Linien auf ein klares Motiv zeigen, dann bewusst schneiden"
               }
             }
           ],
@@ -3833,18 +4048,21 @@
           "explanation": {
             "en": "Leading lines are tools: aim them. Small lateral/height moves often beat zooming in place.",
             "fr": "Les lignes directrices sont des outils : oriente-les. Un petit déplacement bat souvent le zoom sur place.",
-            "es": "Las líneas directrices son herramientas: apunta con ellas. Pequeños movimientos laterales/de altura suelen ganar al zoom en el sitio."
+            "es": "Las líneas directrices son herramientas: apunta con ellas. Pequeños movimientos laterales/de altura suelen ganar al zoom en el sitio.",
+            "de": "Führungslinien sind Werkzeuge: ziele damit. Kleine seitliche/Höhenbewegungen schlagen oft Zoom am Spot."
           },
           "imageUrl": "/images/packs/photo-1449824913935-59a10b8d2000.avif",
           "imageAlt": {
             "en": "Urban street with strong perspective lines",
             "fr": "Rue urbaine avec de fortes lignes de perspective",
-            "es": "Calle urbana con fuertes líneas de perspectiva"
+            "es": "Calle urbana con fuertes líneas de perspectiva",
+            "de": "Stadtstraße mit starken Perspektivlinien"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash",
-            "es": "Foto: Unsplash"
+            "es": "Foto: Unsplash",
+            "de": "Foto: Unsplash"
           }
         },
         {
@@ -3854,7 +4072,8 @@
           "text": {
             "en": "Environmental portrait: face sharp, but a bright doorway behind competes. Best compositional decision?",
             "fr": "Portrait d’environnement : visage net, mais une porte claire derrière concurrence. Meilleure décision de cadrage ?",
-            "es": "Retrato ambiental: rostro nítido, pero una puerta brillante detrás compite. ¿Mejor decisión compositiva?"
+            "es": "Retrato ambiental: rostro nítido, pero una puerta brillante detrás compite. ¿Mejor decisión compositiva?",
+            "de": "Umweltporträt: Gesicht scharf, aber eine helle Tür dahinter konkurriert. Beste kompositorische Entscheidung?"
           },
           "answers": [
             {
@@ -3862,7 +4081,8 @@
               "text": {
                 "en": "Crop the face out to keep the doorway",
                 "fr": "Rogner le visage pour garder la porte",
-                "es": "Recortar el rostro para conservar la puerta"
+                "es": "Recortar el rostro para conservar la puerta",
+                "de": "Das Gesicht beschneiden, um die Tür zu behalten"
               }
             },
             {
@@ -3870,7 +4090,8 @@
               "text": {
                 "en": "Always leave the bright shape centered",
                 "fr": "Toujours laisser la forme claire au centre",
-                "es": "Dejar siempre la forma brillante centrada"
+                "es": "Dejar siempre la forma brillante centrada",
+                "de": "Die helle Form immer zentriert lassen"
               }
             },
             {
@@ -3878,7 +4099,8 @@
               "text": {
                 "en": "Recompose so the bright shape supports (not rivals) the face — or wait for softer light",
                 "fr": "Recadrer pour que la forme claire soutienne (pas rivalise) le visage — ou attendre une lumière plus douce",
-                "es": "Recomponer para que la forma brillante apoye (no rivalice) el rostro — o esperar una luz más suave"
+                "es": "Recomponer para que la forma brillante apoye (no rivalice) el rostro — o esperar una luz más suave",
+                "de": "Neu komponieren, damit die helle Form das Gesicht stützt (nicht rivalisiert) — oder auf weicheres Licht warten"
               }
             },
             {
@@ -3886,7 +4108,8 @@
               "text": {
                 "en": "Use the widest aperture and ignore the background entirely",
                 "fr": "Ouvrir au max et ignorer totalement le fond",
-                "es": "Usar la apertura más abierta e ignorar el fondo por completo"
+                "es": "Usar la apertura más abierta e ignorar el fondo por completo",
+                "de": "Die größte Blende nutzen und den Hintergrund komplett ignorieren"
               }
             }
           ],
@@ -3896,7 +4119,8 @@
           "explanation": {
             "en": "Brightness pulls the eye. Place or time it so it frames the subject instead of fighting it.",
             "fr": "La luminosité attire l’œil. Place-la ou attends pour qu’elle cadre le sujet au lieu de le concurrencer.",
-            "es": "El brillo atrae la mirada. Colócalo o temporízalo para que enmarque al sujeto en lugar de pelear con él."
+            "es": "El brillo atrae la mirada. Colócalo o temporízalo para que enmarque al sujeto en lugar de pelear con él.",
+            "de": "Helligkeit zieht den Blick. Platziere oder time sie so, dass sie das Motiv rahmt statt dagegen zu kämpfen."
           }
         },
         {
@@ -3906,7 +4130,8 @@
           "text": {
             "en": "When is breaking the rule of thirds often stronger than following it?",
             "fr": "Quand enfreindre la règle des tiers est souvent plus fort que la suivre ?",
-            "es": "¿Cuándo romper la regla de tercios suele ser más fuerte que seguirla?"
+            "es": "¿Cuándo romper la regla de tercios suele ser más fuerte que seguirla?",
+            "de": "Wann ist das Brechen der Drittelregel oft stärker als sie zu befolgen?"
           },
           "answers": [
             {
@@ -3914,7 +4139,8 @@
               "text": {
                 "en": "Deliberate symmetry / reflection shots",
                 "fr": "Symétrie volontaire / reflets",
-                "es": "Simetría deliberada / tomas de reflejo"
+                "es": "Simetría deliberada / tomas de reflejo",
+                "de": "Bewusste Symmetrie / Spiegelungsaufnahmen"
               }
             },
             {
@@ -3922,7 +4148,8 @@
               "text": {
                 "en": "Minimal subjects needing dead-center gravity",
                 "fr": "Sujets minimaux qui demandent une gravité centrée",
-                "es": "Sujetos minimalistas que necesitan gravedad justo al centro"
+                "es": "Sujetos minimalistas que necesitan gravedad justo al centro",
+                "de": "Minimalistische Motive, die Schwerkraft genau in der Mitte brauchen"
               }
             },
             {
@@ -3930,7 +4157,8 @@
               "text": {
                 "en": "Every snapshot — rules never help beginners",
                 "fr": "Chaque snapshot — les règles n’aident jamais les débutants",
-                "es": "Toda instantánea — las reglas nunca ayudan a principiantes"
+                "es": "Toda instantánea — las reglas nunca ayudan a principiantes",
+                "de": "Jeder Schnappschuss — Regeln helfen Anfängern nie"
               }
             },
             {
@@ -3938,7 +4166,8 @@
               "text": {
                 "en": "Patterns and architecture where center emphasizes structure",
                 "fr": "Motifs et architecture où le centre souligne la structure",
-                "es": "Patrones y arquitectura donde el centro enfatiza la estructura"
+                "es": "Patrones y arquitectura donde el centro enfatiza la estructura",
+                "de": "Muster und Architektur, wo die Mitte die Struktur betont"
               }
             }
           ],
@@ -3950,7 +4179,8 @@
           "explanation": {
             "en": "Rules guide attention; intentional center/symmetry can be clearer. Random centering is not the same as designed centering.",
             "fr": "Les règles guident l’attention ; un centre/une symétrie volontaire peuvent être plus clairs. Centrer au hasard ≠ centrer avec intention.",
-            "es": "Las reglas guían la atención; un centro/simetría intencional puede ser más claro. Centrar al azar no es lo mismo que centrar con diseño."
+            "es": "Las reglas guían la atención; un centro/simetría intencional puede ser más claro. Centrar al azar no es lo mismo que centrar con diseño.",
+            "de": "Regeln lenken die Aufmerksamkeit; ein absichtliches Zentrum/Symmetrie kann klarer sein. Zufälliges Zentrieren ist nicht dasselbe wie gestaltetes Zentrieren."
           }
         }
       ],

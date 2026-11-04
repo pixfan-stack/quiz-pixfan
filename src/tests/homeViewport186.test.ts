@@ -39,8 +39,8 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () => {
   it('docs headline cites v1.85.0+; vague 1.85/1.86 listed; no-go through 1.86+', () => {
-    expect(readme).toMatch(/v1\.8[5-7]\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.8[5-7]\.0\*\*/);
+    expect(readme).toMatch(/v1\.8[5-8]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.8[5-8]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.85**');
     expect(nextSteps).toContain('Vague **1.86**');
     expect(nextSteps).toMatch(/no-go.*1\.8[6-8]/);
@@ -242,8 +242,8 @@ describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () =>
       ])
     );
     expect(withDe.length).toBeGreaterThanOrEqual(8);
-    expect(withDe.length).toBeLessThanOrEqual(10);
-    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(5);
+    expect(withDe.length).toBeLessThanOrEqual(11);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(4);
   });
 
   it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain(+exposure-basics); ops no-gos through 1.86; SVG theme toggle', () => {
@@ -264,7 +264,8 @@ describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () =>
             q.id !== 'portrait-light' &&
             q.id !== 'public-domain' &&
             q.id !== 'exposure-basics' &&
-            q.id !== 'genres'
+            q.id !== 'genres' &&
+            q.id !== 'composition'
         )
         .every((q) => {
           const title = q.title as { de?: string };
