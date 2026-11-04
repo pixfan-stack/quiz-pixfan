@@ -12,8 +12,8 @@ import { quizLabel, toContentLang } from '../../functions/lib/sharePreview';
 describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS', () => {
   it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.80.0', () => {
     /* Docs headline moved to v1.80.0 in vague 1.81 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84)\.\d+\*\*/);
+    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.68**');
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toMatch(/no-go.*1\.69/);
@@ -84,11 +84,12 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
       .sort();
     /* portrait-light…marques-photo .es through 1.78 — série ES catalogue fermée. */
     expect(packsWithoutEs).toEqual([]); /* marques-photo .es 1.78 — série fermée */
-    /* Vague 1.79–1.85 — lexique-image-fixe + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light may ship title.de; others must not. */
+    /* Vague 1.79–1.86 — lexique-image-fixe + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain may ship title.de; others must not. */
     expect(
       questions.quizzes
         .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights' && q.id !== 'light-color' && q.id !== 'flash-studio' && q.id !== 'retouching' && q.id !== 'history-icons' &&
-            q.id !== 'portrait-light')
+            q.id !== 'portrait-light' &&
+            q.id !== 'public-domain')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';

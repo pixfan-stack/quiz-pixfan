@@ -15,7 +15,7 @@ describe('vague 1.62 — docs v1.61.0 + lumière/genres article.de expand', () =
     /* Docs headline moved to v1.63.0 in vague 1.64 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.61**');
     expect(nextSteps).toMatch(/no-go.*1\.62/);
-    expect(readme).toMatch(/v1\.(61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84)\.\d/);
+    expect(readme).toMatch(/v1\.(61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85)\.\d/);
   });
 
   it('lumière ships real article.de (DE strings, not EN stub)', () => {
