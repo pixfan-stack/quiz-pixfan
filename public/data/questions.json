@@ -13022,12 +13022,14 @@
       "title": {
         "en": "Smartphone Photography",
         "fr": "Photo au smartphone",
-        "es": "Foto con smartphone"
+        "es": "Foto con smartphone",
+        "de": "Smartphone-Fotografie"
       },
       "description": {
         "en": "Night mode, computational photography, composition and editing on your phone.",
         "fr": "Mode nuit, photo computationnelle, composition et retouche sur téléphone.",
-        "es": "Modo noche, fotografía computacional, composición y retoque en el móvil."
+        "es": "Modo noche, fotografía computacional, composición y retoque en el móvil.",
+        "de": "Nachtmodus, Computational Photography, Bildaufbau und Retusche am Handy."
       },
       "questions": [
         {
@@ -13036,7 +13038,8 @@
           "text": {
             "en": "What does “computational photography” mainly rely on?",
             "fr": "Sur quoi repose surtout la « photographie computationnelle » ?",
-            "es": "¿En qué se basa principalmente la «fotografía computacional»?"
+            "es": "¿En qué se basa principalmente la «fotografía computacional»?",
+            "de": "Worauf beruht „Computational Photography“ vor allem?"
           },
           "answers": [
             {
@@ -13044,7 +13047,8 @@
               "text": {
                 "en": "Larger optical zoom only",
                 "fr": "Uniquement un plus gros zoom optique",
-                "es": "Solo en un zoom óptico más grande"
+                "es": "Solo en un zoom óptico más grande",
+                "de": "Nur auf größerem optischen Zoom"
               }
             },
             {
@@ -13052,7 +13056,8 @@
               "text": {
                 "en": "Software combining multiple exposures/frames",
                 "fr": "Un logiciel qui combine plusieurs expositions/images",
-                "es": "En software que combina varias exposiciones / fotogramas"
+                "es": "En software que combina varias exposiciones / fotogramas",
+                "de": "Auf Software, die mehrere Belichtungen / Einzelbilder kombiniert"
               }
             },
             {
@@ -13060,7 +13065,8 @@
               "text": {
                 "en": "Disabling autofocus",
                 "fr": "La désactivation de l’autofocus",
-                "es": "En desactivar el autofoco"
+                "es": "En desactivar el autofoco",
+                "de": "Auf dem Abschalten des Autofokus"
               }
             },
             {
@@ -13068,7 +13074,8 @@
               "text": {
                 "en": "Shooting exclusively in black and white",
                 "fr": "Le fait de photographier uniquement en noir et blanc",
-                "es": "En disparar exclusivamente en blanco y negro"
+                "es": "En disparar exclusivamente en blanco y negro",
+                "de": "Auf Aufnahmen ausschließlich in Schwarzweiß"
               }
             }
           ],
@@ -13078,19 +13085,22 @@
           "explanation": {
             "en": "Phones stack frames, align them and reconstruct detail/dynamic range with algorithms.",
             "fr": "Les téléphones empilent des images, les alignent et reconstruisent détail/dynamique via des algorithmes.",
-            "es": "Los móviles apilan fotogramas, los alinean y reconstruyen detalle / rango dinámico con algoritmos."
+            "es": "Los móviles apilan fotogramas, los alinean y reconstruyen detalle / rango dinámico con algoritmos.",
+            "de": "Handys stapeln Einzelbilder, richten sie aus und rekonstruieren Detail / Dynamikumfang mit Algorithmen."
           },
           "imageUrl": "/images/packs/photo-1511707171634-5f897ff02aa9.avif",
           "imageAlt": {
             "en": "Smartphone on a desk",
             "fr": "Smartphone sur un bureau",
-            "es": "Smartphone sobre un escritorio"
+            "es": "Smartphone sobre un escritorio",
+            "de": "Smartphone auf einem Schreibtisch"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13099,7 +13109,8 @@
           "text": {
             "en": "Why can night mode look blurry if you move the phone?",
             "fr": "Pourquoi le mode nuit peut-il être flou si vous bougez le téléphone ?",
-            "es": "¿Por qué el modo noche puede salir borroso si mueves el teléfono?"
+            "es": "¿Por qué el modo noche puede salir borroso si mueves el teléfono?",
+            "de": "Warum kann der Nachtmodus unscharf wirken, wenn du das Handy bewegst?"
           },
           "answers": [
             {
@@ -13107,7 +13118,8 @@
               "text": {
                 "en": "The flash fires continuously",
                 "fr": "Le flash se déclenche en continu",
-                "es": "El flash dispara de forma continua"
+                "es": "El flash dispara de forma continua",
+                "de": "Der Blitz feuert durchgehend"
               }
             },
             {
@@ -13115,7 +13127,8 @@
               "text": {
                 "en": "Night mode disables image stabilization",
                 "fr": "Le mode nuit désactive la stabilisation",
-                "es": "El modo noche desactiva la estabilización de imagen"
+                "es": "El modo noche desactiva la estabilización de imagen",
+                "de": "Der Nachtmodus deaktiviert die Bildstabilisierung"
               }
             },
             {
@@ -13123,7 +13136,8 @@
               "text": {
                 "en": "It uses a long multi-frame capture that needs stability",
                 "fr": "Il utilise une capture multi-images longue qui exige de la stabilité",
-                "es": "Usa una captura larga de varios fotogramas que necesita estabilidad"
+                "es": "Usa una captura larga de varios fotogramas que necesita estabilidad",
+                "de": "Er nutzt eine lange Mehrbild-Aufnahme, die Stabilität braucht"
               }
             },
             {
@@ -13131,7 +13145,8 @@
               "text": {
                 "en": "ISO is locked to 50",
                 "fr": "L’ISO est verrouillé à 50",
-                "es": "El ISO queda bloqueado en 50"
+                "es": "El ISO queda bloqueado en 50",
+                "de": "ISO ist auf 50 gesperrt"
               }
             }
           ],
@@ -13141,19 +13156,22 @@
           "explanation": {
             "en": "Night mode merges several frames over time; motion between frames softens the result.",
             "fr": "Le mode nuit fusionne plusieurs images dans le temps ; le mouvement les adoucit.",
-            "es": "El modo noche fusiona varios fotogramas a lo largo del tiempo; el movimiento entre fotogramas suaviza el resultado."
+            "es": "El modo noche fusiona varios fotogramas a lo largo del tiempo; el movimiento entre fotogramas suaviza el resultado.",
+            "de": "Der Nachtmodus fusioniert mehrere Einzelbilder über die Zeit; Bewegung dazwischen weicht das Ergebnis auf."
           },
           "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Phone camera at night",
             "fr": "Caméra de téléphone la nuit",
-            "es": "Cámara del teléfono de noche"
+            "es": "Cámara del teléfono de noche",
+            "de": "Handykamera bei Nacht"
           },
           "difficulty": "easy",
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13162,7 +13180,8 @@
           "text": {
             "en": "Tap-to-focus on most phone cameras also usually sets…",
             "fr": "Sur la plupart des téléphones, le toucher pour faire le point règle aussi…",
-            "es": "Tocar para enfocar en la mayoría de cámaras de móvil también suele fijar…"
+            "es": "Tocar para enfocar en la mayoría de cámaras de móvil también suele fijar…",
+            "de": "Tippen zum Fokussieren setzt bei den meisten Handykameras meist auch…"
           },
           "answers": [
             {
@@ -13170,7 +13189,8 @@
               "text": {
                 "en": "White balance to fluorescent",
                 "fr": "La balance des blancs sur fluorescent",
-                "es": "El balance de blancos a fluorescente"
+                "es": "El balance de blancos a fluorescente",
+                "de": "Den Weißabgleich auf Leuchtstoff"
               }
             },
             {
@@ -13178,7 +13198,8 @@
               "text": {
                 "en": "Optical zoom to 10×",
                 "fr": "Le zoom optique à 10×",
-                "es": "El zoom óptico a 10×"
+                "es": "El zoom óptico a 10×",
+                "de": "Den optischen Zoom auf 10×"
               }
             },
             {
@@ -13186,7 +13207,8 @@
               "text": {
                 "en": "Shutter speed to 1/8000s",
                 "fr": "La vitesse d’obturation à 1/8000 s",
-                "es": "La velocidad de obturación a 1/8000 s"
+                "es": "La velocidad de obturación a 1/8000 s",
+                "de": "Die Verschlusszeit auf 1/8000 s"
               }
             },
             {
@@ -13194,7 +13216,8 @@
               "text": {
                 "en": "Exposure for that region",
                 "fr": "L’exposition pour cette zone",
-                "es": "La exposición de esa zona"
+                "es": "La exposición de esa zona",
+                "de": "Die Belichtung für diesen Bereich"
               }
             }
           ],
@@ -13204,19 +13227,22 @@
           "explanation": {
             "en": "AE/AF lock by tap typically meters and focuses where you tap.",
             "fr": "Le AE/AF au toucher mesure et fait le point là où vous appuyez.",
-            "es": "El bloqueo AE/AF al tocar suele medir y enfocar donde tocas."
+            "es": "El bloqueo AE/AF al tocar suele medir y enfocar donde tocas.",
+            "de": "AE/AF-Sperre per Tipp misst und fokussiert typischerweise dort, wo du tippst."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
           "imageAlt": {
             "en": "Person holding a smartphone",
             "fr": "Personne tenant un smartphone",
-            "es": "Persona sosteniendo un smartphone"
+            "es": "Persona sosteniendo un smartphone",
+            "de": "Person hält ein Smartphone"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13225,7 +13251,8 @@
           "text": {
             "en": "Which habits generally improve phone photos?",
             "fr": "Quelles habitudes améliorent généralement les photos au téléphone ?",
-            "es": "¿Qué hábitos suelen mejorar las fotos con el móvil?"
+            "es": "¿Qué hábitos suelen mejorar las fotos con el móvil?",
+            "de": "Welche Gewohnheiten verbessern Handyfotos in der Regel?"
           },
           "answers": [
             {
@@ -13233,7 +13260,8 @@
               "text": {
                 "en": "Prefer natural light when possible",
                 "fr": "Préférer la lumière naturelle si possible",
-                "es": "Preferir luz natural cuando sea posible"
+                "es": "Preferir luz natural cuando sea posible",
+                "de": "Natürliches Licht bevorzugen, wenn möglich"
               }
             },
             {
@@ -13241,7 +13269,8 @@
               "text": {
                 "en": "Hold with both hands / brace yourself",
                 "fr": "Tenir à deux mains / se caler",
-                "es": "Sujetar con las dos manos / apoyarte"
+                "es": "Sujetar con las dos manos / apoyarte",
+                "de": "Mit beiden Händen halten / abstützen"
               }
             },
             {
@@ -13249,7 +13278,8 @@
               "text": {
                 "en": "Clean the lens",
                 "fr": "Nettoyer la lentille",
-                "es": "Limpiar el objetivo"
+                "es": "Limpiar el objetivo",
+                "de": "Das Objektiv reinigen"
               }
             },
             {
@@ -13257,7 +13287,8 @@
               "text": {
                 "en": "Always max digital zoom",
                 "fr": "Toujours zoomer au maximum en numérique",
-                "es": "Usar siempre el zoom digital al máximo"
+                "es": "Usar siempre el zoom digital al máximo",
+                "de": "Immer maximalen Digitalzoom nutzen"
               }
             }
           ],
@@ -13269,19 +13300,22 @@
           "explanation": {
             "en": "Clean optics, stability and good light beat extreme digital zoom.",
             "fr": "Optique propre, stabilité et bonne lumière battent le zoom numérique extrême.",
-            "es": "Óptica limpia, estabilidad y buena luz vencen al zoom digital extremo."
+            "es": "Óptica limpia, estabilidad y buena luz vencen al zoom digital extremo.",
+            "de": "Saubere Optik, Stabilität und gutes Licht schlagen extremen Digitalzoom."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1512499617640-c74ae3a79d37.avif",
           "imageAlt": {
             "en": "Smartphone camera interface",
             "fr": "Interface caméra de smartphone",
-            "es": "Interfaz de la cámara del smartphone"
+            "es": "Interfaz de la cámara del smartphone",
+            "de": "Oberfläche der Smartphone-Kamera"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13290,7 +13324,8 @@
           "text": {
             "en": "Digital zoom mostly…",
             "fr": "Le zoom numérique…",
-            "es": "El zoom digital principalmente…"
+            "es": "El zoom digital principalmente…",
+            "de": "Digitalzoom macht vor allem…"
           },
           "answers": [
             {
@@ -13298,7 +13333,8 @@
               "text": {
                 "en": "Always improves sharpness",
                 "fr": "Améliore toujours la netteté",
-                "es": "Siempre mejora la nitidez"
+                "es": "Siempre mejora la nitidez",
+                "de": "Immer die Schärfe besser"
               }
             },
             {
@@ -13306,7 +13342,8 @@
               "text": {
                 "en": "Crops the image (often losing quality)",
                 "fr": "Recadre l’image (souvent au détriment de la qualité)",
-                "es": "Recorta la imagen (a menudo perdiendo calidad)"
+                "es": "Recorta la imagen (a menudo perdiendo calidad)",
+                "de": "Einen Bildausschnitt (oft mit Qualitätsverlust)"
               }
             },
             {
@@ -13314,7 +13351,8 @@
               "text": {
                 "en": "Increases sensor size",
                 "fr": "Augmente la taille du capteur",
-                "es": "Aumenta el tamaño del sensor"
+                "es": "Aumenta el tamaño del sensor",
+                "de": "Den Sensor größer"
               }
             },
             {
@@ -13322,7 +13360,8 @@
               "text": {
                 "en": "Moves glass elements like an SLR lens",
                 "fr": "Déplace des éléments de verre comme un objectif reflex",
-                "es": "Mueve elementos de cristal como un objetivo de réflex"
+                "es": "Mueve elementos de cristal como un objetivo de réflex",
+                "de": "Glas-Elemente wie bei einem SLR-Objektiv bewegen"
               }
             }
           ],
@@ -13332,19 +13371,22 @@
           "explanation": {
             "en": "True optical zoom changes magnification with optics; digital zoom crops/upsamples.",
             "fr": "Le vrai zoom optique change le grossissement ; le numérique recadre/interpolate.",
-            "es": "El zoom óptico verdadero cambia la ampliación con óptica; el zoom digital recorta / remuestrea."
+            "es": "El zoom óptico verdadero cambia la ampliación con óptica; el zoom digital recorta / remuestrea.",
+            "de": "Echter optischer Zoom ändert die Vergrößerung mit Optik; Digitalzoom schneidet zu / skaliert hoch."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1598327105666-5b89351aff97.avif",
           "imageAlt": {
             "en": "Smartphone camera close-up",
             "fr": "Gros plan sur l’appareil photo d’un smartphone",
-            "es": "Primer plano de la cámara de un smartphone"
+            "es": "Primer plano de la cámara de un smartphone",
+            "de": "Nahaufnahme einer Smartphone-Kamera"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13353,7 +13395,8 @@
           "text": {
             "en": "Portrait / “bokeh” mode on phones typically creates blur by…",
             "fr": "Le mode Portrait / « bokeh » crée surtout le flou en…",
-            "es": "El modo retrato / «bokeh» en móviles suele crear el desenfoque mediante…"
+            "es": "El modo retrato / «bokeh» en móviles suele crear el desenfoque mediante…",
+            "de": "Porträt- / „Bokeh“-Modus am Handy erzeugt Unschärfe typischerweise durch…"
           },
           "answers": [
             {
@@ -13361,7 +13404,8 @@
               "text": {
                 "en": "Opening a mechanical aperture to f/1.0 always",
                 "fr": "Ouvrant toujours un diaphragme mécanique à f/1.0",
-                "es": "Abrir siempre un diafragma mecánico a f/1.0"
+                "es": "Abrir siempre un diafragma mecánico a f/1.0",
+                "de": "Immer eine mechanische Blende auf f/1.0 öffnen"
               }
             },
             {
@@ -13369,7 +13413,8 @@
               "text": {
                 "en": "Depth estimation + software blur",
                 "fr": "Estimation de profondeur + flou logiciel",
-                "es": "Estimación de profundidad + desenfoque por software"
+                "es": "Estimación de profundidad + desenfoque por software",
+                "de": "Tiefenschätzung + Software-Unschärfe"
               }
             },
             {
@@ -13377,7 +13422,8 @@
               "text": {
                 "en": "Forcing JPEG compression",
                 "fr": "Forçant la compression JPEG",
-                "es": "Forzar la compresión JPEG"
+                "es": "Forzar la compresión JPEG",
+                "de": "Erzwungene JPEG-Kompression"
               }
             },
             {
@@ -13385,7 +13431,8 @@
               "text": {
                 "en": "Heating the sensor",
                 "fr": "Chauffant le capteur",
-                "es": "Calentar el sensor"
+                "es": "Calentar el sensor",
+                "de": "Erhitzen des Sensors"
               }
             }
           ],
@@ -13395,19 +13442,22 @@
           "explanation": {
             "en": "Dual cameras / LiDAR / ML segment the subject and fake shallow DOF.",
             "fr": "Double caméra / LiDAR / ML segmentent le sujet et simulent une faible PdC.",
-            "es": "Cámaras duales / LiDAR / ML segmentan el sujeto y simulan una profundidad de campo reducida."
+            "es": "Cámaras duales / LiDAR / ML segmentan el sujeto y simulan una profundidad de campo reducida.",
+            "de": "Dualkameras / LiDAR / ML segmentieren das Motiv und simulieren geringe Schärfentiefe."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1526170375885-4d8ecf77b99f.avif",
           "imageAlt": {
             "en": "Camera lens with shallow depth of field",
             "fr": "Objectif photo avec faible profondeur de champ",
-            "es": "Objetivo de cámara con poca profundidad de campo"
+            "es": "Objetivo de cámara con poca profundidad de campo",
+            "de": "Kameraobjektiv mit geringer Schärfentiefe"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13416,7 +13466,8 @@
           "text": {
             "en": "HDR on a phone is most useful when…",
             "fr": "Le HDR est surtout utile quand…",
-            "es": "El HDR en un móvil es más útil cuando…"
+            "es": "El HDR en un móvil es más útil cuando…",
+            "de": "HDR am Handy ist am nützlichsten, wenn…"
           },
           "answers": [
             {
@@ -13424,7 +13475,8 @@
               "text": {
                 "en": "You want more motion blur",
                 "fr": "Vous voulez plus de flou de mouvement",
-                "es": "Quieres más desenfoque de movimiento"
+                "es": "Quieres más desenfoque de movimiento",
+                "de": "Du mehr Bewegungsunschärfe willst"
               }
             },
             {
@@ -13432,7 +13484,8 @@
               "text": {
                 "en": "Scene contrast is very high (bright sky + dark ground)",
                 "fr": "Le contraste de scène est très élevé (ciel clair + sol sombre)",
-                "es": "El contraste de la escena es muy alto (cielo brillante + suelo oscuro)"
+                "es": "El contraste de la escena es muy alto (cielo brillante + suelo oscuro)",
+                "de": "Der Szenenkontrast sehr hoch ist (heller Himmel + dunkler Boden)"
               }
             },
             {
@@ -13440,7 +13493,8 @@
               "text": {
                 "en": "You shoot a solid gray wall in shade",
                 "fr": "Vous photographiez un mur gris uni à l’ombre",
-                "es": "Disparas una pared gris uniforme a la sombra"
+                "es": "Disparas una pared gris uniforme a la sombra",
+                "de": "Du eine einfarbig graue Wand im Schatten fotografierst"
               }
             },
             {
@@ -13448,7 +13502,8 @@
               "text": {
                 "en": "ISO must stay at 25600",
                 "fr": "L’ISO doit rester à 25600",
-                "es": "El ISO debe quedarse en 25600"
+                "es": "El ISO debe quedarse en 25600",
+                "de": "ISO bei 25600 bleiben muss"
               }
             }
           ],
@@ -13458,19 +13513,22 @@
           "explanation": {
             "en": "HDR merges exposures to keep highlight and shadow detail.",
             "fr": "Le HDR fusionne des expositions pour garder hautes lumières et ombres.",
-            "es": "El HDR fusiona exposiciones para conservar detalle en luces y sombras."
+            "es": "El HDR fusiona exposiciones para conservar detalle en luces y sombras.",
+            "de": "HDR fusioniert Belichtungen, um Detail in Lichtern und Schatten zu erhalten."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1500534314209-a25ddb2bd429.avif",
           "imageAlt": {
             "en": "Bright sky and dark foreground landscape",
             "fr": "Paysage avec ciel lumineux et premier plan sombre",
-            "es": "Paisaje con cielo brillante y primer plano oscuro"
+            "es": "Paisaje con cielo brillante y primer plano oscuro",
+            "de": "Landschaft mit hellem Himmel und dunklem Vordergrund"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13479,7 +13537,8 @@
           "text": {
             "en": "Shooting RAW/Pro on a phone mainly gives you…",
             "fr": "Photographier en RAW/Pro sur téléphone donne surtout…",
-            "es": "Disparar en RAW / modo Pro en un móvil te da sobre todo…"
+            "es": "Disparar en RAW / modo Pro en un móvil te da sobre todo…",
+            "de": "RAW / Pro-Modus am Handy gibt dir vor allem…"
           },
           "answers": [
             {
@@ -13487,7 +13546,8 @@
               "text": {
                 "en": "Smaller files than HEIC/JPEG",
                 "fr": "Des fichiers plus petits que HEIC/JPEG",
-                "es": "Archivos más pequeños que HEIC/JPEG"
+                "es": "Archivos más pequeños que HEIC/JPEG",
+                "de": "Kleinere Dateien als HEIC/JPEG"
               }
             },
             {
@@ -13495,7 +13555,8 @@
               "text": {
                 "en": "Automatic Instagram filters",
                 "fr": "Des filtres Instagram automatiques",
-                "es": "Filtros automáticos de Instagram"
+                "es": "Filtros automáticos de Instagram",
+                "de": "Automatische Instagram-Filter"
               }
             },
             {
@@ -13503,7 +13564,8 @@
               "text": {
                 "en": "More flexibility in editing (exposure, WB, detail)",
                 "fr": "Plus de latitude en retouche (exposition, BB, détail)",
-                "es": "Más flexibilidad al editar (exposición, WB, detalle)"
+                "es": "Más flexibilidad al editar (exposición, WB, detalle)",
+                "de": "Mehr Flexibilität beim Bearbeiten (Belichtung, WB, Detail)"
               }
             },
             {
@@ -13511,7 +13573,8 @@
               "text": {
                 "en": "Guaranteed sharper autofocus",
                 "fr": "Un autofocus forcément plus précis",
-                "es": "Autofoco garantizado más nítido"
+                "es": "Autofoco garantizado más nítido",
+                "de": "Garantiert schärferen Autofokus"
               }
             }
           ],
@@ -13521,19 +13584,22 @@
           "explanation": {
             "en": "RAW keeps more linear data before aggressive phone processing.",
             "fr": "Le RAW conserve plus de données avant le traitement agressif du téléphone.",
-            "es": "El RAW conserva más datos lineales antes del procesado agresivo del móvil."
+            "es": "El RAW conserva más datos lineales antes del procesado agresivo del móvil.",
+            "de": "RAW behält mehr lineare Daten vor der aggressiven Handy-Verarbeitung."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1511707171634-5f897ff02aa9.avif",
           "imageAlt": {
             "en": "Phone camera UI — RAW / Pro mode territory",
             "fr": "Interface caméra téléphone — terrain mode RAW / Pro",
-            "es": "UI de la cámara del móvil — territorio modo RAW / Pro"
+            "es": "UI de la cámara del móvil — territorio modo RAW / Pro",
+            "de": "Handykamera-UI — RAW- / Pro-Modus-Bereich"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13542,7 +13608,8 @@
           "text": {
             "en": "Which help reduce handshake blur on a phone?",
             "fr": "Qu’est-ce qui aide à réduire le flou de bougé au téléphone ?",
-            "es": "¿Qué ayuda a reducir el desenfoque por temblor en un móvil?"
+            "es": "¿Qué ayuda a reducir el desenfoque por temblor en un móvil?",
+            "de": "Was hilft gegen Verwacklungsunschärfe am Handy?"
           },
           "answers": [
             {
@@ -13550,7 +13617,8 @@
               "text": {
                 "en": "Max digital zoom while walking",
                 "fr": "Zoom numérique max en marchant",
-                "es": "Zoom digital al máximo mientras caminas"
+                "es": "Zoom digital al máximo mientras caminas",
+                "de": "Maximaler Digitalzoom beim Gehen"
               }
             },
             {
@@ -13558,7 +13626,8 @@
               "text": {
                 "en": "A tiny tripod or leaning on a wall",
                 "fr": "Un mini-trépied ou s’appuyer contre un mur",
-                "es": "Un trípode pequeño o apoyarte en una pared"
+                "es": "Un trípode pequeño o apoyarte en una pared",
+                "de": "Ein kleines Stativ oder Anlehnen an eine Wand"
               }
             },
             {
@@ -13566,7 +13635,8 @@
               "text": {
                 "en": "Optical / electronic stabilization",
                 "fr": "Stabilisation optique / électronique",
-                "es": "Estabilización óptica / electrónica"
+                "es": "Estabilización óptica / electrónica",
+                "de": "Optische / elektronische Stabilisierung"
               }
             },
             {
@@ -13574,7 +13644,8 @@
               "text": {
                 "en": "Faster shutter (brighter light or higher ISO)",
                 "fr": "Obturation plus rapide (plus de lumière ou ISO plus élevé)",
-                "es": "Obturación más rápida (más luz o ISO más alto)"
+                "es": "Obturación más rápida (más luz o ISO más alto)",
+                "de": "Kürzere Verschlusszeit (mehr Licht oder höheres ISO)"
               }
             }
           ],
@@ -13586,19 +13657,22 @@
           "explanation": {
             "en": "Stabilization, shorter exposures and bracing all help; walking + zoom hurts.",
             "fr": "Stabilisation, expositions courtes et appui aident ; marcher + zoom nuit.",
-            "es": "Estabilización, exposiciones más cortas y apoyo ayudan; caminar + zoom perjudica."
+            "es": "Estabilización, exposiciones más cortas y apoyo ayudan; caminar + zoom perjudica.",
+            "de": "Stabilisierung, kürzere Belichtungen und Abstützen helfen; Gehen + Zoom schadet."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1580910051074-3eb694886505.avif",
           "imageAlt": {
             "en": "Hands holding a smartphone steady",
             "fr": "Mains tenant un smartphone bien stable",
-            "es": "Manos sujetando un smartphone con firmeza"
+            "es": "Manos sujetando un smartphone con firmeza",
+            "de": "Hände halten ein Smartphone ruhig"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13607,7 +13681,8 @@
           "text": {
             "en": "Ultra-wide phone lenses often show…",
             "fr": "Les ultra grand-angle de téléphone montrent souvent…",
-            "es": "Los objetivos ultra gran angular del móvil suelen mostrar…"
+            "es": "Los objetivos ultra gran angular del móvil suelen mostrar…",
+            "de": "Ultraweitwinkel-Objektive am Handy zeigen oft…"
           },
           "answers": [
             {
@@ -13615,7 +13690,8 @@
               "text": {
                 "en": "No perspective change at all",
                 "fr": "Aucun changement de perspective",
-                "es": "Ningún cambio de perspectiva"
+                "es": "Ningún cambio de perspectiva",
+                "de": "Gar keine Perspektivänderung"
               }
             },
             {
@@ -13623,7 +13699,8 @@
               "text": {
                 "en": "Stronger edge distortion / stretched corners",
                 "fr": "Plus de distorsion / coins étirés",
-                "es": "Más distorsión en los bordes / esquinas estiradas"
+                "es": "Más distorsión en los bordes / esquinas estiradas",
+                "de": "Stärkere Randverzerrung / gedehnte Ecken"
               }
             },
             {
@@ -13631,7 +13708,8 @@
               "text": {
                 "en": "Mandatory flash use",
                 "fr": "L’obligation d’utiliser le flash",
-                "es": "Uso obligatorio del flash"
+                "es": "Uso obligatorio del flash",
+                "de": "Zwangshaften Blitzeinsatz"
               }
             },
             {
@@ -13639,7 +13717,8 @@
               "text": {
                 "en": "Always less noise than the main camera",
                 "fr": "Toujours moins de bruit que le module principal",
-                "es": "Siempre menos ruido que la cámara principal"
+                "es": "Siempre menos ruido que la cámara principal",
+                "de": "Immer weniger Rauschen als die Hauptkamera"
               }
             }
           ],
@@ -13649,19 +13728,22 @@
           "explanation": {
             "en": "Short focal lengths exaggerate perspective; edges can look warped.",
             "fr": "Les courtes focales exagèrent la perspective ; les bords se déforment.",
-            "es": "Las focales cortas exageran la perspectiva; los bordes pueden verse deformados."
+            "es": "Las focales cortas exageran la perspectiva; los bordes pueden verse deformados.",
+            "de": "Kurze Brennweiten übertreiben die Perspektive; Ränder können verzogen wirken."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1512499617640-c74ae3a79d37.avif",
           "imageAlt": {
             "en": "Ultra-wide phone perspective stretching a scene",
             "fr": "Perspective ultra grand-angle téléphone étirant une scène",
-            "es": "Perspectiva ultra gran angular del móvil estirando una escena"
+            "es": "Perspectiva ultra gran angular del móvil estirando una escena",
+            "de": "Ultraweitwinkel-Perspektive des Handys dehnt eine Szene"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13670,7 +13752,8 @@
           "text": {
             "en": "For flatter, more even light on a face outdoors, prefer…",
             "fr": "Pour une lumière plus douce et uniforme sur un visage en extérieur, préférez…",
-            "es": "Para una luz más plana y uniforme en un rostro al aire libre, prefieres…"
+            "es": "Para una luz más plana y uniforme en un rostro al aire libre, prefieres…",
+            "de": "Für flacheres, gleichmäßigeres Licht auf einem Gesicht im Freien bevorzugst du…"
           },
           "answers": [
             {
@@ -13678,7 +13761,8 @@
               "text": {
                 "en": "Direct flash as the only light at noon",
                 "fr": "Le flash direct comme seule lumière à midi",
-                "es": "Flash directo como única luz al mediodía"
+                "es": "Flash directo como única luz al mediodía",
+                "de": "Direkten Blitz als einziges Licht mittags"
               }
             },
             {
@@ -13686,7 +13770,8 @@
               "text": {
                 "en": "Harsh noon sun from above",
                 "fr": "Le soleil dur de midi en plongée",
-                "es": "Sol duro de mediodía desde arriba"
+                "es": "Sol duro de mediodía desde arriba",
+                "de": "Hartes Mittagslicht von oben"
               }
             },
             {
@@ -13694,7 +13779,8 @@
               "text": {
                 "en": "Shooting against a bright window without exposure compensation",
                 "fr": "Contre une fenêtre claire sans compensation d’exposition",
-                "es": "Disparar contra una ventana brillante sin compensación de exposición"
+                "es": "Disparar contra una ventana brillante sin compensación de exposición",
+                "de": "Gegen eine helle Fensterfläche ohne Belichtungskompensation"
               }
             },
             {
@@ -13702,7 +13788,8 @@
               "text": {
                 "en": "Open shade or overcast sky",
                 "fr": "L’ombre légère ou un ciel couvert",
-                "es": "Sombra abierta o cielo nublado"
+                "es": "Sombra abierta o cielo nublado",
+                "de": "Offenen Schatten oder bedeckten Himmel"
               }
             }
           ],
@@ -13712,19 +13799,22 @@
           "explanation": {
             "en": "Soft, diffused light reduces harsh shadows on faces.",
             "fr": "Une lumière douce et diffusée réduit les ombres dures sur le visage.",
-            "es": "La luz suave y difusa reduce las sombras duras en los rostros."
+            "es": "La luz suave y difusa reduce las sombras duras en los rostros.",
+            "de": "Weiches, diffuses Licht reduziert harte Schatten im Gesicht."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1611162616305-c69b3fa7fbe0.avif",
           "imageAlt": {
             "en": "Person photographing outdoors with a phone",
             "fr": "Personne photographiant en extérieur avec un téléphone",
-            "es": "Persona fotografiando al aire libre con un móvil"
+            "es": "Persona fotografiando al aire libre con un móvil",
+            "de": "Person fotografiert im Freien mit dem Handy"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13733,7 +13823,8 @@
           "text": {
             "en": "Live Photos / motion photos are best thought of as…",
             "fr": "Les Live Photos / photos animées sont surtout…",
-            "es": "Las Live Photos / fotos en movimiento se entienden mejor como…"
+            "es": "Las Live Photos / fotos en movimiento se entienden mejor como…",
+            "de": "Live Photos / Bewegungsfotos versteht man am besten als…"
           },
           "answers": [
             {
@@ -13741,7 +13832,8 @@
               "text": {
                 "en": "A short video clip around the still frame",
                 "fr": "Un court clip vidéo autour de l’image fixe",
-                "es": "Un clip de vídeo corto alrededor del fotograma fijo"
+                "es": "Un clip de vídeo corto alrededor del fotograma fijo",
+                "de": "Einen kurzen Videoclip um das Standbild herum"
               }
             },
             {
@@ -13749,7 +13841,8 @@
               "text": {
                 "en": "A RAW DNG always",
                 "fr": "Toujours un RAW DNG",
-                "es": "Siempre un RAW DNG"
+                "es": "Siempre un RAW DNG",
+                "de": "Immer ein RAW-DNG"
               }
             },
             {
@@ -13757,7 +13850,8 @@
               "text": {
                 "en": "A higher megapixel still only",
                 "fr": "Uniquement une image fixe à plus de mégapixels",
-                "es": "Solo una foto fija con más megapíxeles"
+                "es": "Solo una foto fija con más megapíxeles",
+                "de": "Nur ein Standbild mit mehr Megapixeln"
               }
             },
             {
@@ -13765,7 +13859,8 @@
               "text": {
                 "en": "A panoramic stitch",
                 "fr": "Un assemblage panoramique",
-                "es": "Un cosido panorámico"
+                "es": "Un cosido panorámico",
+                "de": "Einen Panorama-Stich"
               }
             }
           ],
@@ -13775,7 +13870,8 @@
           "explanation": {
             "en": "They capture moments before/after the shutter press as motion.",
             "fr": "Elles capturent l’avant/après du déclenchement en mouvement.",
-            "es": "Capturan instantes antes/después de pulsar el obturador como movimiento."
+            "es": "Capturan instantes antes/después de pulsar el obturador como movimiento.",
+            "de": "Sie erfassen Momente vor/nach dem Auslösen als Bewegung."
           },
           "difficulty": "easy"
         },
@@ -13785,7 +13881,8 @@
           "text": {
             "en": "Grid lines (rule of thirds) on the phone camera help you…",
             "fr": "La grille (règle des tiers) aide surtout à…",
-            "es": "Las líneas de cuadrícula (regla de tercios) en la cámara del móvil te ayudan a…"
+            "es": "Las líneas de cuadrícula (regla de tercios) en la cámara del móvil te ayudan a…",
+            "de": "Gitterlinien (Drittelregel) in der Handykamera helfen dir…"
           },
           "answers": [
             {
@@ -13793,7 +13890,8 @@
               "text": {
                 "en": "Force night mode",
                 "fr": "Forcer le mode nuit",
-                "es": "Forzar el modo noche"
+                "es": "Forzar el modo noche",
+                "de": "Den Nachtmodus zu erzwingen"
               }
             },
             {
@@ -13801,7 +13899,8 @@
               "text": {
                 "en": "Increase megapixels",
                 "fr": "Augmenter les mégapixels",
-                "es": "Aumentar los megapíxeles"
+                "es": "Aumentar los megapíxeles",
+                "de": "Die Megapixel zu erhöhen"
               }
             },
             {
@@ -13809,7 +13908,8 @@
               "text": {
                 "en": "Disable autofocus",
                 "fr": "Désactiver l’autofocus",
-                "es": "Desactivar el autofoco"
+                "es": "Desactivar el autofoco",
+                "de": "Den Autofokus abzuschalten"
               }
             },
             {
@@ -13817,7 +13917,8 @@
               "text": {
                 "en": "Compose and keep horizons level",
                 "fr": "Composer et garder l’horizon droit",
-                "es": "Componer y mantener los horizontes nivelados"
+                "es": "Componer y mantener los horizontes nivelados",
+                "de": "Zu komponieren und Horizonte gerade zu halten"
               }
             }
           ],
@@ -13827,19 +13928,22 @@
           "explanation": {
             "en": "Overlays guide framing without changing exposure technology.",
             "fr": "Les overlays guident le cadrage sans changer la technique d’exposition.",
-            "es": "Las superposiciones guían el encuadre sin cambiar la tecnología de exposición."
+            "es": "Las superposiciones guían el encuadre sin cambiar la tecnología de exposición.",
+            "de": "Overlays führen den Bildausschnitt, ohne die Belichtungstechnik zu ändern."
           },
           "difficulty": "easy",
           "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Phone held for a careful grid-aligned frame",
             "fr": "Téléphone tenu pour un cadrage soigné sur la grille",
-            "es": "Móvil sujetado para un encuadre cuidadoso alineado a la cuadrícula"
+            "es": "Móvil sujetado para un encuadre cuidadoso alineado a la cuadrícula",
+            "de": "Handy gehalten für einen sorgfältigen, gitterausgerichteten Rahmen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13848,7 +13952,8 @@
           "text": {
             "en": "Before sharing a phone photo widely, consider…",
             "fr": "Avant de partager largement une photo téléphone, pensez à…",
-            "es": "Antes de compartir ampliamente una foto del móvil, conviene considerar…"
+            "es": "Antes de compartir ampliamente una foto del móvil, conviene considerar…",
+            "de": "Bevor du ein Handyfoto weit teilst, solltest du bedenken…"
           },
           "answers": [
             {
@@ -13856,7 +13961,8 @@
               "text": {
                 "en": "Whether location metadata should be stripped",
                 "fr": "Si les métadonnées de localisation doivent être retirées",
-                "es": "Si conviene eliminar los metadatos de ubicación"
+                "es": "Si conviene eliminar los metadatos de ubicación",
+                "de": "Ob Standort-Metadaten entfernt werden sollten"
               }
             },
             {
@@ -13864,7 +13970,8 @@
               "text": {
                 "en": "Checking cropping/export size for the platform",
                 "fr": "Vérifier le recadrage / la taille d’export pour la plateforme",
-                "es": "Revisar el recorte / tamaño de exportación para la plataforma"
+                "es": "Revisar el recorte / tamaño de exportación para la plataforma",
+                "de": "Zuschnitt / Exportgröße für die Plattform zu prüfen"
               }
             },
             {
@@ -13872,7 +13979,8 @@
               "text": {
                 "en": "Always uploading the unedited RAW only",
                 "fr": "Toujours uploader uniquement le RAW non retouché",
-                "es": "Subir siempre solo el RAW sin editar"
+                "es": "Subir siempre solo el RAW sin editar",
+                "de": "Immer nur das unbearbeitete RAW hochzuladen"
               }
             },
             {
@@ -13880,7 +13988,8 @@
               "text": {
                 "en": "Whether faces/privacy need consent",
                 "fr": "Si les visages / la vie privée nécessitent un consentement",
-                "es": "Si rostros / privacidad necesitan consentimiento"
+                "es": "Si rostros / privacidad necesitan consentimiento",
+                "de": "Ob Gesichter / Privatsphäre Zustimmung brauchen"
               }
             }
           ],
@@ -13892,7 +14001,8 @@
           "explanation": {
             "en": "Privacy and platform-ready exports matter; RAW-only sharing is rarely required.",
             "fr": "Vie privée et exports adaptés comptent ; le partage RAW seul est rarement requis.",
-            "es": "La privacidad y las exportaciones listas para la plataforma importan; compartir solo RAW rara vez es necesario."
+            "es": "La privacidad y las exportaciones listas para la plataforma importan; compartir solo RAW rara vez es necesario.",
+            "de": "Privatsphäre und plattformfertige Exporte zählen; reines RAW-Teilen ist selten nötig."
           },
           "difficulty": "easy"
         },
@@ -13902,7 +14012,8 @@
           "text": {
             "en": "Macro mode on phones usually works best when…",
             "fr": "Le mode macro fonctionne généralement mieux quand…",
-            "es": "El modo macro en móviles suele funcionar mejor cuando…"
+            "es": "El modo macro en móviles suele funcionar mejor cuando…",
+            "de": "Der Makromodus am Handy funktioniert meist am besten, wenn…"
           },
           "answers": [
             {
@@ -13910,7 +14021,8 @@
               "text": {
                 "en": "You stand 20 meters away",
                 "fr": "Vous êtes à 20 mètres",
-                "es": "Estás a 20 metros de distancia"
+                "es": "Estás a 20 metros de distancia",
+                "de": "Du 20 Meter entfernt stehst"
               }
             },
             {
@@ -13918,7 +14030,8 @@
               "text": {
                 "en": "You only shoot at night without light",
                 "fr": "Vous ne photographiez que la nuit sans lumière",
-                "es": "Solo disparas de noche sin luz"
+                "es": "Solo disparas de noche sin luz",
+                "de": "Du nur nachts ohne Licht fotografierst"
               }
             },
             {
@@ -13926,7 +14039,8 @@
               "text": {
                 "en": "You disable all focus",
                 "fr": "Vous désactivez tout focus",
-                "es": "Desactivas todo el foco"
+                "es": "Desactivas todo el foco",
+                "de": "Du jeglichen Fokus abschaltest"
               }
             },
             {
@@ -13934,7 +14048,8 @@
               "text": {
                 "en": "You get close and hold steady (the DOF is tiny)",
                 "fr": "Vous vous approchez et restez stables (la PdC est minuscule)",
-                "es": "Te acercas y sujetas con firmeza (la DOF es minúscula)"
+                "es": "Te acercas y sujetas con firmeza (la DOF es minúscula)",
+                "de": "Du nah rangehst und ruhig hältst (die Schärfentiefe ist winzig)"
               }
             }
           ],
@@ -13944,19 +14059,22 @@
           "explanation": {
             "en": "Close focus means shallow depth of field; stability and light help.",
             "fr": "La mise au point proche implique une PdC faible ; stabilité et lumière aident.",
-            "es": "El foco cercano implica poca profundidad de campo; la estabilidad y la luz ayudan."
+            "es": "El foco cercano implica poca profundidad de campo; la estabilidad y la luz ayudan.",
+            "de": "Nahfokus bedeutet geringe Schärfentiefe; Stabilität und Licht helfen."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1504674900247-0877df9cc836.avif",
           "imageAlt": {
             "en": "Close food detail — phone macro territory",
             "fr": "Détail food serré — terrain macro téléphone",
-            "es": "Detalle cercano de comida — territorio macro del móvil"
+            "es": "Detalle cercano de comida — territorio macro del móvil",
+            "de": "Nahdetail von Essen — Handy-Makro-Gebiet"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -13965,7 +14083,8 @@
           "text": {
             "en": "A common downside of heavy in-phone sharpening/noise reduction is…",
             "fr": "Un inconvénient fréquent d’une accentuation / réduction de bruit trop forte est…",
-            "es": "Un inconveniente habitual del afilado / reducción de ruido agresivos en el móvil es…"
+            "es": "Un inconveniente habitual del afilado / reducción de ruido agresivos en el móvil es…",
+            "de": "Ein häufiger Nachteil starker Schärfung / Rauschreduktion im Handy ist…"
           },
           "answers": [
             {
@@ -13973,7 +14092,8 @@
               "text": {
                 "en": "Better optical zoom",
                 "fr": "Un meilleur zoom optique",
-                "es": "Mejor zoom óptico"
+                "es": "Mejor zoom óptico",
+                "de": "Besserer optischer Zoom"
               }
             },
             {
@@ -13981,7 +14101,8 @@
               "text": {
                 "en": "Larger sensors",
                 "fr": "Des capteurs plus grands",
-                "es": "Sensores más grandes"
+                "es": "Sensores más grandes",
+                "de": "Größere Sensoren"
               }
             },
             {
@@ -13989,7 +14110,8 @@
               "text": {
                 "en": "Mandatory RAW output",
                 "fr": "Une sortie RAW obligatoire",
-                "es": "Salida RAW obligatoria"
+                "es": "Salida RAW obligatoria",
+                "de": "Pflicht-RAW-Ausgabe"
               }
             },
             {
@@ -13997,7 +14119,8 @@
               "text": {
                 "en": "Plastic-looking skin / smudged fine detail",
                 "fr": "Une peau « plastique » / des détails lissés",
-                "es": "Piel con aspecto plástico / detalle fino emborronado"
+                "es": "Piel con aspecto plástico / detalle fino emborronado",
+                "de": "Plastisch wirkende Haut / verwischtes Feindetail"
               }
             }
           ],
@@ -14007,7 +14130,8 @@
           "explanation": {
             "en": "Aggressive processing can erase texture while looking “clean” on small screens.",
             "fr": "Un traitement agressif efface la texture tout en paraissant « propre » sur petit écran.",
-            "es": "El procesado agresivo puede borrar textura mientras se ve «limpio» en pantallas pequeñas."
+            "es": "El procesado agresivo puede borrar textura mientras se ve «limpio» en pantallas pequeñas.",
+            "de": "Aggressive Verarbeitung kann Textur auslöschen und auf kleinen Displays trotzdem „sauber“ wirken."
           },
           "difficulty": "medium"
         },
@@ -14017,7 +14141,8 @@
           "text": {
             "en": "For video on a phone, locking exposure/AF (AE/AF lock) helps when…",
             "fr": "Pour la vidéo, verrouiller exposition/AF (AE/AF lock) aide quand…",
-            "es": "En vídeo con el móvil, bloquear exposición/AF (bloqueo AE/AF) ayuda cuando…"
+            "es": "En vídeo con el móvil, bloquear exposición/AF (bloqueo AE/AF) ayuda cuando…",
+            "de": "Beim Video am Handy hilft AE/AF-Sperre, wenn…"
           },
           "answers": [
             {
@@ -14025,7 +14150,8 @@
               "text": {
                 "en": "You disable the microphone",
                 "fr": "Vous coupez le micro",
-                "es": "Desactivas el micrófono"
+                "es": "Desactivas el micrófono",
+                "de": "Du das Mikrofon abschaltest"
               }
             },
             {
@@ -14033,7 +14159,8 @@
               "text": {
                 "en": "Brightness would otherwise pump as the frame moves",
                 "fr": "La luminosité « pomperait » sinon quand le cadrage bouge",
-                "es": "El brillo bombearía al mover el encuadre"
+                "es": "El brillo bombearía al mover el encuadre",
+                "de": "Die Helligkeit sonst beim Schwenken pumpen würde"
               }
             },
             {
@@ -14041,7 +14168,8 @@
               "text": {
                 "en": "You want the phone to refocus every frame randomly",
                 "fr": "Vous voulez un refocus aléatoire à chaque image",
-                "es": "Quieres que el móvil reenfoque cada fotograma al azar"
+                "es": "Quieres que el móvil reenfoque cada fotograma al azar",
+                "de": "Du willst, dass das Handy jedes Bild zufällig neu fokussiert"
               }
             },
             {
@@ -14049,7 +14177,8 @@
               "text": {
                 "en": "You only shoot stills",
                 "fr": "Vous ne faites que des photos",
-                "es": "Solo disparas fotos fijas"
+                "es": "Solo disparas fotos fijas",
+                "de": "Du nur Standbilder machst"
               }
             }
           ],
@@ -14059,7 +14188,8 @@
           "explanation": {
             "en": "Locking stops continuous metering/focus hunting during a pan.",
             "fr": "Le verrouillage évite les variations de mesure/focus pendant un travelling.",
-            "es": "El bloqueo detiene la medición continua y la caza de foco durante un paneo."
+            "es": "El bloqueo detiene la medición continua y la caza de foco durante un paneo.",
+            "de": "Die Sperre stoppt kontinuierliche Messung und Fokusjagd während eines Schwenks."
           },
           "difficulty": "medium"
         },
@@ -14069,7 +14199,8 @@
           "text": {
             "en": "Useful phone editing steps before publishing include…",
             "fr": "Des étapes utiles avant publication incluent…",
-            "es": "Pasos útiles de retoque en el móvil antes de publicar incluyen…"
+            "es": "Pasos útiles de retoque en el móvil antes de publicar incluyen…",
+            "de": "Nützliche Retusche-Schritte am Handy vor dem Veröffentlichen sind…"
           },
           "answers": [
             {
@@ -14077,7 +14208,8 @@
               "text": {
                 "en": "Pushing saturation to the maximum always",
                 "fr": "Pousser toujours la saturation au maximum",
-                "es": "Subir siempre la saturación al máximo"
+                "es": "Subir siempre la saturación al máximo",
+                "de": "Sättigung immer auf Maximum"
               }
             },
             {
@@ -14085,7 +14217,8 @@
               "text": {
                 "en": "Checking the result on a calibrated or neutral display if possible",
                 "fr": "Vérifier le rendu sur un écran neutre si possible",
-                "es": "Revisar el resultado en una pantalla calibrada o neutra si es posible"
+                "es": "Revisar el resultado en una pantalla calibrada o neutra si es posible",
+                "de": "Ergebnis möglichst auf kalibriertem oder neutralem Display prüfen"
               }
             },
             {
@@ -14093,7 +14226,8 @@
               "text": {
                 "en": "Crop / straighten",
                 "fr": "Recadrer / redresser",
-                "es": "Recortar / enderezar"
+                "es": "Recortar / enderezar",
+                "de": "Zuschneiden / begradigen"
               }
             },
             {
@@ -14101,7 +14235,8 @@
               "text": {
                 "en": "Modest exposure and contrast tweaks",
                 "fr": "Ajuster modestement exposition et contraste",
-                "es": "Ajustes modestos de exposición y contraste"
+                "es": "Ajustes modestos de exposición y contraste",
+                "de": "Bescheidene Belichtungs- und Kontrastanpassungen"
               }
             }
           ],
@@ -14113,7 +14248,8 @@
           "explanation": {
             "en": "Subtle edits and a sane crop beat extreme filters.",
             "fr": "Des retouches sobres et un bon recadrage battent les filtres extrêmes.",
-            "es": "Ediciones sutiles y un recorte sensato ganan a los filtros extremos."
+            "es": "Ediciones sutiles y un recorte sensato ganan a los filtros extremos.",
+            "de": "Dezente Edits und ein sinnvoller Zuschnitt schlagen extreme Filter."
           },
           "difficulty": "medium"
         },
@@ -14123,7 +14259,8 @@
           "text": {
             "en": "Shooting into the sun with a phone often needs…",
             "fr": "Photographier face au soleil demande souvent…",
-            "es": "Disparar a contraluz con el móvil suele necesitar…"
+            "es": "Disparar a contraluz con el móvil suele necesitar…",
+            "de": "Gegenlicht mit dem Handy braucht oft…"
           },
           "answers": [
             {
@@ -14131,7 +14268,8 @@
               "text": {
                 "en": "Turning off the camera app",
                 "fr": "Éteindre l’appli appareil photo",
-                "es": "Apagar la app de la cámara"
+                "es": "Apagar la app de la cámara",
+                "de": "Die Kamera-App auszuschalten"
               }
             },
             {
@@ -14139,7 +14277,8 @@
               "text": {
                 "en": "Setting white balance to tungsten only",
                 "fr": "Régler la BB uniquement sur tungstène",
-                "es": "Fijar el balance de blancos solo a tungsteno"
+                "es": "Fijar el balance de blancos solo a tungsteno",
+                "de": "Weißabgleich nur auf Kunstlicht"
               }
             },
             {
@@ -14147,7 +14286,8 @@
               "text": {
                 "en": "Exposure compensation / HDR / shielding the lens from flare",
                 "fr": "Compensation d’exposition / HDR / protéger la lentille du flare",
-                "es": "Compensación de exposición / HDR / proteger el objetivo del flare"
+                "es": "Compensación de exposición / HDR / proteger el objetivo del flare",
+                "de": "Belichtungskompensation / HDR / Objektiv vor Flare schützen"
               }
             },
             {
@@ -14155,7 +14295,8 @@
               "text": {
                 "en": "Mandatory 10× digital zoom",
                 "fr": "Un zoom numérique 10× obligatoire",
-                "es": "Zoom digital 10× obligatorio"
+                "es": "Zoom digital 10× obligatorio",
+                "de": "Zwanghaften Digitalzoom 10×"
               }
             }
           ],
@@ -14165,19 +14306,22 @@
           "explanation": {
             "en": "Backlight scenes blow highlights; HDR and careful exposure help.",
             "fr": "Le contre-jour brûle les HL ; HDR et exposition soignée aident.",
-            "es": "Las escenas a contraluz queman las luces; el HDR y una exposición cuidadosa ayudan."
+            "es": "Las escenas a contraluz queman las luces; el HDR y una exposición cuidadosa ayudan.",
+            "de": "Gegenlicht-Szenen brennen Lichter aus; HDR und sorgfältige Belichtung helfen."
           },
           "difficulty": "medium",
           "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
           "imageAlt": {
             "en": "Shooting toward bright light — phone sun / flare control",
             "fr": "Prise de vue face à une lumière vive — contrôle soleil / flare",
-            "es": "Disparo hacia luz brillante — control de sol / flare en el móvil"
+            "es": "Disparo hacia luz brillante — control de sol / flare en el móvil",
+            "de": "Aufnahme gegen helles Licht — Sonnen- / Flare-Kontrolle am Handy"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14186,7 +14330,8 @@
           "text": {
             "en": "Compared with a large-sensor camera, phone sensors are small, so in low light they…",
             "fr": "Face à un grand capteur, les petits capteurs de téléphone en basse lumière…",
-            "es": "Comparados con una cámara de sensor grande, los sensores del móvil son pequeños, así que con poca luz…"
+            "es": "Comparados con una cámara de sensor grande, los sensores del móvil son pequeños, así que con poca luz…",
+            "de": "Im Vergleich zu einer Kamera mit großem Sensor sind Handysensoren klein, daher bei wenig Licht…"
           },
           "answers": [
             {
@@ -14194,7 +14339,8 @@
               "text": {
                 "en": "Always outperform full-frame without software",
                 "fr": "Surpassent toujours le plein format sans logiciel",
-                "es": "Siempre superan al full-frame sin software"
+                "es": "Siempre superan al full-frame sin software",
+                "de": "Immer besser als Vollformat ohne Software"
               }
             },
             {
@@ -14202,7 +14348,8 @@
               "text": {
                 "en": "Never use stabilization",
                 "fr": "N’utilisent jamais la stabilisation",
-                "es": "Nunca usan estabilización"
+                "es": "Nunca usan estabilización",
+                "de": "Nie Stabilisierung nutzen"
               }
             },
             {
@@ -14210,7 +14357,8 @@
               "text": {
                 "en": "Often rely more on multi-frame stacking and higher ISO processing",
                 "fr": "S’appuient souvent plus sur l’empilement multi-images et le traitement haut ISO",
-                "es": "Suelen depender más del apilado multi-fotograma y del procesado a ISO alto"
+                "es": "Suelen depender más del apilado multi-fotograma y del procesado a ISO alto",
+                "de": "Oft stärker auf Mehrbild-Stacking und hohe-ISO-Verarbeitung angewiesen"
               }
             },
             {
@@ -14218,7 +14366,8 @@
               "text": {
                 "en": "Cannot record color",
                 "fr": "Ne peuvent pas enregistrer la couleur",
-                "es": "No pueden registrar color"
+                "es": "No pueden registrar color",
+                "de": "Keine Farbe aufzeichnen können"
               }
             }
           ],
@@ -14228,7 +14377,8 @@
           "explanation": {
             "en": "Small photosites gather less light; computational stacking compensates.",
             "fr": "De petites photosites collectent moins de lumière ; l’empilement compense.",
-            "es": "Los fotositios pequeños recogen menos luz; el apilado computacional lo compensa."
+            "es": "Los fotositios pequeños recogen menos luz; el apilado computacional lo compensa.",
+            "de": "Kleine Fotosites sammeln weniger Licht; computergestütztes Stacking gleicht das aus."
           },
           "difficulty": "medium"
         },
@@ -14239,7 +14389,8 @@
           "text": {
             "en": "Portrait mode blurs a lamppost “glued” to your subject. Why?",
             "fr": "Le mode Portrait floute un lampadaire « collé » à ton sujet. Pourquoi ?",
-            "es": "El modo retrato desenfoca una farola «pegada» a tu sujeto. ¿Por qué?"
+            "es": "El modo retrato desenfoca una farola «pegada» a tu sujeto. ¿Por qué?",
+            "de": "Der Porträtmodus unscharf macht einen Laternenpfahl „festgeklebt“ am Motiv. Warum?"
           },
           "answers": [
             {
@@ -14247,7 +14398,8 @@
               "text": {
                 "en": "The phone’s depth map mis-segments overlapping edges",
                 "fr": "La carte de profondeur segmente mal les contours qui se chevauchent",
-                "es": "El mapa de profundidad del móvil segmenta mal los bordes solapados"
+                "es": "El mapa de profundidad del móvil segmenta mal los bordes solapados",
+                "de": "Die Tiefenkarte des Handys segmentiert überlappende Kanten falsch"
               }
             },
             {
@@ -14255,7 +14407,8 @@
               "text": {
                 "en": "ISO cannot exceed 200 near metal",
                 "fr": "L’ISO ne peut pas dépasser 200 près du métal",
-                "es": "El ISO no puede superar 200 cerca del metal"
+                "es": "El ISO no puede superar 200 cerca del metal",
+                "de": "ISO darf in der Nähe von Metall 200 nicht überschreiten"
               }
             },
             {
@@ -14263,7 +14416,8 @@
               "text": {
                 "en": "Lampposts are always at infinity in EXIF",
                 "fr": "Les lampadaires sont toujours à l’infini dans l’EXIF",
-                "es": "Las farolas están siempre al infinito en el EXIF"
+                "es": "Las farolas están siempre al infinito en el EXIF",
+                "de": "Laternenpfähle stehen im EXIF immer auf Unendlich"
               }
             },
             {
@@ -14271,7 +14425,8 @@
               "text": {
                 "en": "The polarizer is stuck on",
                 "fr": "Le polarisant est resté enclenché",
-                "es": "El polarizador está atascado"
+                "es": "El polarizador está atascado",
+                "de": "Der Polfilter klemmt"
               }
             }
           ],
@@ -14281,18 +14436,21 @@
           "explanation": {
             "en": "Computational bokeh is a guess. Overlapping edges confuse the depth mask — step aside or move the subject.",
             "fr": "Le bokeh computationnel est une estimation. Les contours qui se chevauchent trompent le masque — décale-toi ou déplace le sujet.",
-            "es": "El bokeh computacional es una estimación. Los bordes solapados confunden la máscara de profundidad: apártate o mueve al sujeto."
+            "es": "El bokeh computacional es una estimación. Los bordes solapados confunden la máscara de profundidad: apártate o mueve al sujeto.",
+            "de": "Computational Bokeh ist eine Schätzung. Überlappende Kanten verwirren die Tiefenmaske — zur Seite treten oder das Motiv bewegen."
           },
           "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Smartphone photography",
             "fr": "Photo au smartphone",
-            "es": "Fotografía con smartphone"
+            "es": "Fotografía con smartphone",
+            "de": "Smartphone-Fotografie"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14302,7 +14460,8 @@
           "text": {
             "en": "For Instagram Stories / Reels (tall 9:16), where should key faces usually sit?",
             "fr": "Pour Stories / Reels Instagram (9:16 vertical), où placer surtout les visages importants ?",
-            "es": "Para Instagram Stories / Reels (vertical 9:16), ¿dónde suelen ir mejor los rostros clave?"
+            "es": "Para Instagram Stories / Reels (vertical 9:16), ¿dónde suelen ir mejor los rostros clave?",
+            "de": "Für Instagram Stories / Reels (hoch 9:16) gehören Schlüsselgesichter meist wohin?"
           },
           "answers": [
             {
@@ -14310,7 +14469,8 @@
               "text": {
                 "en": "Dead on the very top edge under the clock UI",
                 "fr": "Pile sur le bord haut sous l’UI de l’horloge",
-                "es": "Justo en el borde superior bajo el reloj de la UI"
+                "es": "Justo en el borde superior bajo el reloj de la UI",
+                "de": "Genau an den oberen Rand unter der Uhr-UI"
               }
             },
             {
@@ -14318,7 +14478,8 @@
               "text": {
                 "en": "In the safer middle band, away from UI chrome top and bottom",
                 "fr": "Dans la bande centrale plus sûre, loin des UI haut/bas",
-                "es": "En la franja central más segura, lejos del cromo de UI arriba y abajo"
+                "es": "En la franja central más segura, lejos del cromo de UI arriba y abajo",
+                "de": "In den sichereren Mittelstreifen, weg vom UI-Chrome oben und unten"
               }
             },
             {
@@ -14326,7 +14487,8 @@
               "text": {
                 "en": "Only in the extreme bottom-left corner forever",
                 "fr": "Uniquement dans le coin bas-gauche extrême",
-                "es": "Solo en la esquina inferior izquierda para siempre"
+                "es": "Solo en la esquina inferior izquierda para siempre",
+                "de": "Für immer nur in die extreme untere linke Ecke"
               }
             },
             {
@@ -14334,7 +14496,8 @@
               "text": {
                 "en": "Upside-down to fight the algorithm",
                 "fr": "À l’envers pour tromper l’algo",
-                "es": "Al revés para pelear con el algoritmo"
+                "es": "Al revés para pelear con el algoritmo",
+                "de": "Kopfüber, um den Algorithmus zu bekämpfen"
               }
             }
           ],
@@ -14344,18 +14507,21 @@
           "explanation": {
             "en": "UI eats the top and bottom. Keep faces in the safe central zone.",
             "fr": "L’interface mange le haut et le bas. Garde les visages dans la zone centrale sûre.",
-            "es": "La UI se come arriba y abajo. Mantén los rostros en la zona central segura."
+            "es": "La UI se come arriba y abajo. Mantén los rostros en la zona central segura.",
+            "de": "Die UI frisst oben und unten. Gesichter in der sicheren Mittelzone halten."
           },
           "imageUrl": "/images/packs/photo-1556656793-08538906a9f8.avif",
           "imageAlt": {
             "en": "Tall phone screen — Stories / Reels 9:16 framing",
             "fr": "Écran téléphone vertical — cadrage Stories / Reels 9:16",
-            "es": "Pantalla vertical del móvil — encuadre Stories / Reels 9:16"
+            "es": "Pantalla vertical del móvil — encuadre Stories / Reels 9:16",
+            "de": "Hoher Handybildschirm — Stories- / Reels-Framing 9:16"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14365,7 +14531,8 @@
           "text": {
             "en": "Night mode looks soft because you moved. What’s going on?",
             "fr": "Le mode Nuit est mou parce que tu as bougé. Que se passe-t-il ?",
-            "es": "El modo noche se ve suave porque te moviste. ¿Qué pasa?"
+            "es": "El modo noche se ve suave porque te moviste. ¿Qué pasa?",
+            "de": "Der Nachtmodus wirkt weich, weil du dich bewegt hast. Was passiert?"
           },
           "answers": [
             {
@@ -14373,7 +14540,8 @@
               "text": {
                 "en": "GPS must be off for sharpness",
                 "fr": "Le GPS doit être coupé pour la netteté",
-                "es": "El GPS debe estar apagado para la nitidez"
+                "es": "El GPS debe estar apagado para la nitidez",
+                "de": "GPS muss für Schärfe aus sein"
               }
             },
             {
@@ -14381,7 +14549,8 @@
               "text": {
                 "en": "The phone stacks several frames; motion breaks alignment",
                 "fr": "Le téléphone empile plusieurs vues ; le mouvement casse l’alignement",
-                "es": "El móvil apila varios fotogramas; el movimiento rompe la alineación"
+                "es": "El móvil apila varios fotogramas; el movimiento rompe la alineación",
+                "de": "Das Handy stapelt mehrere Einzelbilder; Bewegung bricht die Ausrichtung"
               }
             },
             {
@@ -14389,7 +14558,8 @@
               "text": {
                 "en": "The shutter is stuck at 1/8000 s",
                 "fr": "L’obturateur est bloqué à 1/8000 s",
-                "es": "El obturador está atascado a 1/8000 s"
+                "es": "El obturador está atascado a 1/8000 s",
+                "de": "Der Verschluss hängt bei 1/8000 s"
               }
             },
             {
@@ -14397,7 +14567,8 @@
               "text": {
                 "en": "Night mode disables the lens entirely",
                 "fr": "Le mode Nuit désactive complètement l’objectif",
-                "es": "El modo noche desactiva el objetivo por completo"
+                "es": "El modo noche desactiva el objetivo por completo",
+                "de": "Der Nachtmodus schaltet das Objektiv komplett ab"
               }
             }
           ],
@@ -14407,18 +14578,21 @@
           "explanation": {
             "en": "Night mode is multi-frame computational photography. Hold still (or brace) while it works.",
             "fr": "Le mode Nuit est de la photo computationnelle multi-vues. Reste stable le temps du calcul.",
-            "es": "El modo noche es fotografía computacional multi-fotograma. Quédate quieto (o apóyate) mientras trabaja."
+            "es": "El modo noche es fotografía computacional multi-fotograma. Quédate quieto (o apóyate) mientras trabaja.",
+            "de": "Nachtmodus ist Mehrbild-Computational Photography. Stillhalten (oder abstützen), während er arbeitet."
           },
           "imageUrl": "/images/packs/photo-1514565131-fce0801e5785.avif",
           "imageAlt": {
             "en": "Night city lights — phone night-mode stability",
             "fr": "Lumières de ville la nuit — stabilité du mode nuit",
-            "es": "Luces de ciudad de noche — estabilidad del modo noche del móvil"
+            "es": "Luces de ciudad de noche — estabilidad del modo noche del móvil",
+            "de": "Stadtlichter bei Nacht — Stabilität im Handy-Nachtmodus"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14428,7 +14602,8 @@
           "text": {
             "en": "Night city: phone insists on ultra-wide. Why switch to 1×?",
             "fr": "Ville de nuit : le téléphone insiste sur l’ultra grand-angle. Pourquoi passer en 1× ?",
-            "es": "Ciudad de noche: el móvil insiste en ultra gran angular. ¿Por qué pasar a 1×?"
+            "es": "Ciudad de noche: el móvil insiste en ultra gran angular. ¿Por qué pasar a 1×?",
+            "de": "Stadt bei Nacht: das Handy beharrt auf Ultraweitwinkel. Warum auf 1× wechseln?"
           },
           "answers": [
             {
@@ -14436,7 +14611,8 @@
               "text": {
                 "en": "Ultra-wide always has the best sensor",
                 "fr": "L’ultra grand-angle a toujours le meilleur capteur",
-                "es": "El ultra gran angular siempre tiene el mejor sensor"
+                "es": "El ultra gran angular siempre tiene el mejor sensor",
+                "de": "Ultraweitwinkel hat immer den besten Sensor"
               }
             },
             {
@@ -14444,7 +14620,8 @@
               "text": {
                 "en": "The main camera usually gathers more light and cleaner detail",
                 "fr": "Le module principal recueille en général plus de lumière et plus de détail propre",
-                "es": "La cámara principal suele recoger más luz y detalle más limpio"
+                "es": "La cámara principal suele recoger más luz y detalle más limpio",
+                "de": "Die Hauptkamera sammelt meist mehr Licht und saubereres Detail"
               }
             },
             {
@@ -14452,7 +14629,8 @@
               "text": {
                 "en": "1× disables Night mode forever",
                 "fr": "Le 1× désactive le mode Nuit pour toujours",
-                "es": "1× desactiva el modo noche para siempre"
+                "es": "1× desactiva el modo noche para siempre",
+                "de": "1× deaktiviert den Nachtmodus für immer"
               }
             },
             {
@@ -14460,7 +14638,8 @@
               "text": {
                 "en": "Ultra-wide cannot focus outdoors",
                 "fr": "L’ultra grand-angle ne fait pas le point dehors",
-                "es": "El ultra gran angular no puede enfocar al aire libre"
+                "es": "El ultra gran angular no puede enfocar al aire libre",
+                "de": "Ultraweitwinkel kann draußen nicht fokussieren"
               }
             }
           ],
@@ -14470,18 +14649,21 @@
           "explanation": {
             "en": "Primary sensors are often larger — better for low light than tiny ultra-wide chips.",
             "fr": "Le capteur principal est souvent plus grand — meilleur en basse lumière que le mini ultra grand-angle.",
-            "es": "Los sensores principales suelen ser más grandes: mejores con poca luz que los chips minúsculos del ultra gran angular."
+            "es": "Los sensores principales suelen ser más grandes: mejores con poca luz que los chips minúsculos del ultra gran angular.",
+            "de": "Hauptsensoren sind oft größer — besser bei wenig Licht als winzige Ultraweitwinkel-Chips."
           },
           "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Smartphone photography at night",
             "fr": "Photo smartphone de nuit",
-            "es": "Fotografía con smartphone de noche"
+            "es": "Fotografía con smartphone de noche",
+            "de": "Smartphone-Fotografie bei Nacht"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14491,7 +14673,8 @@
           "text": {
             "en": "Myth: “Portrait mode blur is the same as a fast lens.” Nuance?",
             "fr": "Mythe : « Le flou Portrait mode = une optique lumineuse. » Nuance ?",
-            "es": "Mito: «el desenfoque del modo retrato es igual que un objetivo luminoso». ¿Matiz?"
+            "es": "Mito: «el desenfoque del modo retrato es igual que un objetivo luminoso». ¿Matiz?",
+            "de": "Mythos: „Porträtmodus-Unschärfe ist wie ein lichtstarkes Objektiv.“ Nuance?"
           },
           "answers": [
             {
@@ -14499,7 +14682,8 @@
               "text": {
                 "en": "Identical optically in every case",
                 "fr": "Identique optiquement dans tous les cas",
-                "es": "Idéntico ópticamente en todos los casos"
+                "es": "Idéntico ópticamente en todos los casos",
+                "de": "Optisch in jedem Fall identisch"
               }
             },
             {
@@ -14507,7 +14691,8 @@
               "text": {
                 "en": "Computational blur can look similar but may smear hair, glasses, or edges",
                 "fr": "Le flou calculé peut se ressembler mais peut bavurer cheveux, lunettes ou contours",
-                "es": "El desenfoque computacional puede parecerse, pero puede emborronar pelo, gafas o bordes"
+                "es": "El desenfoque computacional puede parecerse, pero puede emborronar pelo, gafas o bordes",
+                "de": "Computational Unschärfe kann ähnlich wirken, aber Haare, Brillen oder Kanten verwischen"
               }
             },
             {
@@ -14515,7 +14700,8 @@
               "text": {
                 "en": "Portrait mode only works underwater",
                 "fr": "Le mode Portrait ne marche que sous l’eau",
-                "es": "El modo retrato solo funciona bajo el agua"
+                "es": "El modo retrato solo funciona bajo el agua",
+                "de": "Porträtmodus funktioniert nur unter Wasser"
               }
             },
             {
@@ -14523,7 +14709,8 @@
               "text": {
                 "en": "Fast lenses cannot blur backgrounds",
                 "fr": "Les optiques lumineuses ne floutent pas les fonds",
-                "es": "Los objetivos luminosos no pueden desenfocar fondos"
+                "es": "Los objetivos luminosos no pueden desenfocar fondos",
+                "de": "Lichtstarke Objektive können Hintergründe nicht unscharf machen"
               }
             }
           ],
@@ -14533,18 +14720,21 @@
           "explanation": {
             "en": "Simulation is useful — check edges before you trust it.",
             "fr": "La simulation est utile — vérifie les contours avant de faire confiance.",
-            "es": "La simulación es útil: revisa los bordes antes de confiar en ella."
+            "es": "La simulación es útil: revisa los bordes antes de confiar en ella.",
+            "de": "Die Simulation ist nützlich — Kanten prüfen, bevor du ihr vertraust."
           },
           "imageUrl": "/images/packs/photo-1544005313-94ddf0286df2.avif",
           "imageAlt": {
             "en": "Portrait with soft background — computational blur nuance",
             "fr": "Portrait au fond doux — nuance du flou computationnel",
-            "es": "Retrato con fondo suave — matiz del desenfoque computacional"
+            "es": "Retrato con fondo suave — matiz del desenfoque computacional",
+            "de": "Porträt mit weichem Hintergrund — Nuance der Computational Unschärfe"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14554,7 +14744,8 @@
           "text": {
             "en": "You need printable detail of a distant sign. Best phone strategy?",
             "fr": "Tu as besoin de détail imprimable d’un panneau distant. Meilleure stratégie téléphone ?",
-            "es": "Necesitas detalle imprimible de un cartel lejano. ¿Mejor estrategia con el móvil?"
+            "es": "Necesitas detalle imprimible de un cartel lejano. ¿Mejor estrategia con el móvil?",
+            "de": "Du brauchst druckbares Detail eines entfernten Schildes. Beste Handy-Strategie?"
           },
           "answers": [
             {
@@ -14562,7 +14753,8 @@
               "text": {
                 "en": "Digital zoom to 20× then crop again",
                 "fr": "Zoom numérique ×20 puis recadrer encore",
-                "es": "Zoom digital a 20× y luego recortar otra vez"
+                "es": "Zoom digital a 20× y luego recortar otra vez",
+                "de": "Digitalzoom auf 20× und dann nochmals zuschneiden"
               }
             },
             {
@@ -14570,7 +14762,8 @@
               "text": {
                 "en": "Use the optical / high-quality tele module if available, brace, and shoot a burst",
                 "fr": "Utiliser le télé optique / haute qualité s’il existe, se stabiliser, et shooter en rafale",
-                "es": "Usar el módulo tele óptico / de alta calidad si existe, apoyarte y disparar una ráfaga"
+                "es": "Usar el módulo tele óptico / de alta calidad si existe, apoyarte y disparar una ráfaga",
+                "de": "Optisches / hochwertiges Tele-Modul nutzen falls vorhanden, abstützen und eine Serie schießen"
               }
             },
             {
@@ -14578,7 +14771,8 @@
               "text": {
                 "en": "Only use the selfie camera",
                 "fr": "Utiliser uniquement la caméra selfie",
-                "es": "Usar solo la cámara selfie"
+                "es": "Usar solo la cámara selfie",
+                "de": "Nur die Selfie-Kamera nutzen"
               }
             },
             {
@@ -14586,7 +14780,8 @@
               "text": {
                 "en": "Turn off all stabilization and walk while shooting",
                 "fr": "Couper toute stabilisation et marcher en shootant",
-                "es": "Apagar toda estabilización y caminar mientras disparas"
+                "es": "Apagar toda estabilización y caminar mientras disparas",
+                "de": "Alle Stabilisierung aus und während des Gehens auslösen"
               }
             }
           ],
@@ -14596,7 +14791,8 @@
           "explanation": {
             "en": "Optical reach + stability beats heavy digital zoom mush.",
             "fr": "La portée optique + la stabilité battent un zoom numérique poussé.",
-            "es": "Alcance óptico + estabilidad vencen a la papilla del zoom digital agresivo."
+            "es": "Alcance óptico + estabilidad vencen a la papilla del zoom digital agresivo.",
+            "de": "Optische Reichweite + Stabilität schlagen Matsch von aggressivem Digitalzoom."
           }
         },
         {
@@ -14606,7 +14802,8 @@
           "text": {
             "en": "Pro/RAW mode: highlights clip while the preview looked fine. Why?",
             "fr": "Mode Pro/RAW : les hautes lumières crament alors que l’aperçu semblait bon. Pourquoi ?",
-            "es": "Modo Pro/RAW: las luces se queman aunque la vista previa se veía bien. ¿Por qué?"
+            "es": "Modo Pro/RAW: las luces se queman aunque la vista previa se veía bien. ¿Por qué?",
+            "de": "Pro/RAW-Modus: Lichter clippen, obwohl die Vorschau gut aussah. Warum?"
           },
           "answers": [
             {
@@ -14614,7 +14811,8 @@
               "text": {
                 "en": "RAW cannot record highlights ever",
                 "fr": "Le RAW ne peut jamais enregistrer les hautes lumières",
-                "es": "El RAW no puede registrar luces nunca"
+                "es": "El RAW no puede registrar luces nunca",
+                "de": "RAW kann Lichter nie aufzeichnen"
               }
             },
             {
@@ -14622,7 +14820,8 @@
               "text": {
                 "en": "The screen often shows a processed preview; expose using the histogram / highlight warnings",
                 "fr": "L’écran montre souvent un aperçu traité ; expose avec l’histogramme / alertes hautes lumières",
-                "es": "La pantalla suele mostrar una vista previa procesada; expón con el histograma / avisos de luces"
+                "es": "La pantalla suele mostrar una vista previa procesada; expón con el histograma / avisos de luces",
+                "de": "Der Bildschirm zeigt oft eine verarbeitete Vorschau; belichte mit Histogramm / Lichterwarnungen"
               }
             },
             {
@@ -14630,7 +14829,8 @@
               "text": {
                 "en": "Phones ignore ISO in Pro mode",
                 "fr": "Les téléphones ignorent l’ISO en mode Pro",
-                "es": "Los móviles ignoran el ISO en modo Pro"
+                "es": "Los móviles ignoran el ISO en modo Pro",
+                "de": "Handys ignorieren ISO im Pro-Modus"
               }
             },
             {
@@ -14638,7 +14838,8 @@
               "text": {
                 "en": "Only HEIC causes clipping",
                 "fr": "Seul le HEIC provoque l’écrêtage",
-                "es": "Solo el HEIC provoca el recorte"
+                "es": "Solo el HEIC provoca el recorte",
+                "de": "Nur HEIC verursacht Clipping"
               }
             }
           ],
@@ -14648,7 +14849,8 @@
           "explanation": {
             "en": "Trust meters and histograms more than a brightened display preview.",
             "fr": "Fais plus confiance aux mesures et à l’histogramme qu’à un aperçu éclairci.",
-            "es": "Confía más en medidores e histogramas que en una vista previa aclarada de la pantalla."
+            "es": "Confía más en medidores e histogramas que en una vista previa aclarada de la pantalla.",
+            "de": "Vertraue Messern und Histogrammen mehr als einer aufgehellten Display-Vorschau."
           }
         },
         {
@@ -14658,7 +14860,8 @@
           "text": {
             "en": "You’re filming a quick reel while walking. Stabilization tip?",
             "fr": "Tu filmes un reel en marchant. Astuce de stabilisation ?",
-            "es": "Estás grabando un reel rápido mientras caminas. ¿Consejo de estabilización?"
+            "es": "Estás grabando un reel rápido mientras caminas. ¿Consejo de estabilización?",
+            "de": "Du filmst einen schnellen Reel beim Gehen. Stabilisierungs-Tipp?"
           },
           "answers": [
             {
@@ -14666,7 +14869,8 @@
               "text": {
                 "en": "Hold the phone at arm’s length fully extended",
                 "fr": "Tenir le téléphone bras tendu au maximum",
-                "es": "Sujetar el móvil a brazo completamente extendido"
+                "es": "Sujetar el móvil a brazo completamente extendido",
+                "de": "Handy mit vollständig ausgestrecktem Arm halten"
               }
             },
             {
@@ -14674,7 +14878,8 @@
               "text": {
                 "en": "Tuck elbows in, walk heel-to-toe, and enable video stabilization / a mild crop mode",
                 "fr": "Coudes rentrés, marche talon-orteil, et activer la stab vidéo / un léger recadrage",
-                "es": "Codos pegados, caminar talón-punta y activar estabilización de vídeo / un modo de recorte suave"
+                "es": "Codos pegados, caminar talón-punta y activar estabilización de vídeo / un modo de recorte suave",
+                "de": "Ellbogen anlegen, Ferse-Zehe gehen und Videostabilisierung / milden Crop-Modus aktivieren"
               }
             },
             {
@@ -14682,7 +14887,8 @@
               "text": {
                 "en": "Disable all crop and run",
                 "fr": "Désactiver tout recadrage et courir",
-                "es": "Desactivar todo recorte y correr"
+                "es": "Desactivar todo recorte y correr",
+                "de": "Jeden Crop deaktivieren und rennen"
               }
             },
             {
@@ -14690,7 +14896,8 @@
               "text": {
                 "en": "Only shoot upside down",
                 "fr": "Shooter uniquement à l’envers",
-                "es": "Solo grabar al revés"
+                "es": "Solo grabar al revés",
+                "de": "Nur kopfüber filmen"
               }
             }
           ],
@@ -14700,18 +14907,21 @@
           "explanation": {
             "en": "Body mechanics + digital stab beat a shaky outstretched arm.",
             "fr": "La mécanique du corps + la stab numérique battent un bras tendu tremblant.",
-            "es": "Mecánica corporal + estabilización digital ganan a un brazo tembloroso extendido."
+            "es": "Mecánica corporal + estabilización digital ganan a un brazo tembloroso extendido.",
+            "de": "Körpermechanik + digitale Stabilisierung schlagen einen wackeligen ausgestreckten Arm."
           },
           "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Person filming with a phone",
             "fr": "Personne filmant avec un téléphone",
-            "es": "Persona grabando con un móvil"
+            "es": "Persona grabando con un móvil",
+            "de": "Person filmt mit einem Handy"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -14721,7 +14931,8 @@
           "text": {
             "en": "Night mode stacks frames. Subject walks mid-capture. Cleanest result strategy?",
             "fr": "Le mode Nuit empile des vues. Le sujet marche pendant la prise. Meilleure stratégie ?",
-            "es": "El modo noche apila fotogramas. El sujeto camina a mitad de la captura. ¿Estrategia más limpia?"
+            "es": "El modo noche apila fotogramas. El sujeto camina a mitad de la captura. ¿Estrategia más limpia?",
+            "de": "Nachtmodus stapelt Einzelbilder. Motiv läuft mitten in der Aufnahme. Sauberste Strategie?"
           },
           "answers": [
             {
@@ -14729,7 +14940,8 @@
               "text": {
                 "en": "Ask them to hold still, brace the phone, or switch to a faster Pro/shutter mode",
                 "fr": "Leur demander de rester immobile, stabiliser le téléphone, ou passer en mode Pro/vitesse plus rapide",
-                "es": "Pedirle que se quede quieto, apoyar el móvil, o pasar a un modo Pro/obturación más rápida"
+                "es": "Pedirle que se quede quieto, apoyar el móvil, o pasar a un modo Pro/obturación más rápida",
+                "de": "Stillhalten lassen, Handy abstützen oder auf schnelleren Pro-/Verschlussmodus wechseln"
               }
             },
             {
@@ -14737,7 +14949,8 @@
               "text": {
                 "en": "Shake the phone more to ‘average’ motion",
                 "fr": "Secouer plus le téléphone pour « moyenner » le mouvement",
-                "es": "Agitar más el móvil para «promediar» el movimiento"
+                "es": "Agitar más el móvil para «promediar» el movimiento",
+                "de": "Handy stärker schütteln, um Bewegung zu „mitteln“"
               }
             },
             {
@@ -14745,7 +14958,8 @@
               "text": {
                 "en": "Night mode always freezes motion — ignore it",
                 "fr": "Le mode Nuit fige toujours — on peut ignorer",
-                "es": "El modo noche siempre congela el movimiento — ignóralo"
+                "es": "El modo noche siempre congela el movimiento — ignóralo",
+                "de": "Nachtmodus friert Bewegung immer ein — ignorieren"
               }
             },
             {
@@ -14753,7 +14967,8 @@
               "text": {
                 "en": "Force HDR+flash together every time",
                 "fr": "Forcer HDR+flash à chaque fois",
-                "es": "Forzar siempre HDR+flash juntos"
+                "es": "Forzar siempre HDR+flash juntos",
+                "de": "Immer HDR+Blitz zusammen erzwingen"
               }
             }
           ],
@@ -14763,18 +14978,21 @@
           "explanation": {
             "en": "Multi-frame night modes hate motion. Stillness or a faster single exposure beats ghosting.",
             "fr": "Les modes nuit multi-vues détestent le mouvement. L’immobilité ou une expo plus courte bat les fantômes.",
-            "es": "Los modos noche multi-fotograma odian el movimiento. Quietud o una exposición única más rápida vencen a los fantasmas."
+            "es": "Los modos noche multi-fotograma odian el movimiento. Quietud o una exposición única más rápida vencen a los fantasmas.",
+            "de": "Mehrbild-Nachtmodi hassen Bewegung. Stillstand oder eine schnellere Einzelbelichtung schlagen Geisterbilder."
           },
           "imageUrl": "/images/packs/photo-1512941937669-90a1b58e7e9c.avif",
           "imageAlt": {
             "en": "Smartphone held ready to shoot",
             "fr": "Smartphone prêt à photographier",
-            "es": "Smartphone listo para disparar"
+            "es": "Smartphone listo para disparar",
+            "de": "Smartphone bereit zum Auslösen"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash",
-            "es": "Foto: Unsplash"
+            "es": "Foto: Unsplash",
+            "de": "Foto: Unsplash"
           }
         },
         {
@@ -14784,7 +15002,8 @@
           "text": {
             "en": "Ultra-wide selfie in a small room looks warped at the edges. Smartest optical choice?",
             "fr": "Selfie ultra grand-angle dans une petite pièce : bords déformés. Meilleur choix optique ?",
-            "es": "Un selfie ultra gran angular en una habitación pequeña deforma los bordes. ¿Elección óptica más inteligente?"
+            "es": "Un selfie ultra gran angular en una habitación pequeña deforma los bordes. ¿Elección óptica más inteligente?",
+            "de": "Ultraweitwinkel-Selfie in einem kleinen Raum verzerrt die Ränder. Klügste optische Wahl?"
           },
           "answers": [
             {
@@ -14792,7 +15011,8 @@
               "text": {
                 "en": "Stay ultra-wide and crop later — distortion is free",
                 "fr": "Rester en ultra grand-angle et recadrer — la distorsion est gratuite",
-                "es": "Quedarte en ultra gran angular y recortar después — la distorsión es gratis"
+                "es": "Quedarte en ultra gran angular y recortar después — la distorsión es gratis",
+                "de": "Bei Ultraweitwinkel bleiben und später zuschneiden — Verzerrung ist gratis"
               }
             },
             {
@@ -14800,7 +15020,8 @@
               "text": {
                 "en": "Only digital zoom 10× fixes faces",
                 "fr": "Seul le zoom numérique 10× corrige les visages",
-                "es": "Solo el zoom digital 10× arregla los rostros"
+                "es": "Solo el zoom digital 10× arregla los rostros",
+                "de": "Nur Digitalzoom 10× repariert Gesichter"
               }
             },
             {
@@ -14808,7 +15029,8 @@
               "text": {
                 "en": "Turn on beauty mode as the only fix",
                 "fr": "Activer le mode beauté comme seule correction",
-                "es": "Activar el modo belleza como único arreglo"
+                "es": "Activar el modo belleza como único arreglo",
+                "de": "Beauty-Modus als einzige Lösung einschalten"
               }
             },
             {
@@ -14816,7 +15038,8 @@
               "text": {
                 "en": "Step back and use the main (or 2×) lens; keep faces away from extreme edges",
                 "fr": "Reculer et utiliser la focale principale (ou 2×) ; garder les visages loin des bords extrêmes",
-                "es": "Retroceder y usar el objetivo principal (o 2×); alejar los rostros de los bordes extremos"
+                "es": "Retroceder y usar el objetivo principal (o 2×); alejar los rostros de los bordes extremos",
+                "de": "Zurücktreten und Haupt- (oder 2×-)Objektiv nutzen; Gesichter von Extremrändern fernhalten"
               }
             }
           ],
@@ -14826,7 +15049,8 @@
           "explanation": {
             "en": "Ultra-wide stretch is geometry, not a skin problem. Prefer the main lens and distance.",
             "fr": "L’étirement ultra grand-angle est géométrique, pas un souci de peau. Préfère l’objectif principal et de la distance.",
-            "es": "El estiramiento ultra gran angular es geometría, no un problema de piel. Prefiere el objetivo principal y la distancia."
+            "es": "El estiramiento ultra gran angular es geometría, no un problema de piel. Prefiere el objetivo principal y la distancia.",
+            "de": "Ultraweitwinkel-Dehnung ist Geometrie, kein Hautproblem. Hauptlinse und Distanz bevorzugen."
           }
         },
         {
@@ -14836,7 +15060,8 @@
           "text": {
             "en": "Which habits reduce computational ‘overcooked’ look on modern phones?",
             "fr": "Quelles habitudes réduisent le rendu « trop cuit » des algos sur les téléphones modernes ?",
-            "es": "¿Qué hábitos reducen el aspecto computacional «sobreprocesado» en los móviles modernos?"
+            "es": "¿Qué hábitos reducen el aspecto computacional «sobreprocesado» en los móviles modernos?",
+            "de": "Welche Gewohnheiten reduzieren den computational „überkochen“-Look moderner Handys?"
           },
           "answers": [
             {
@@ -14844,7 +15069,8 @@
               "text": {
                 "en": "Shoot in good light so the phone stacks less aggressively",
                 "fr": "Shooter en bonne lumière pour moins forcer l’empilement",
-                "es": "Disparar con buena luz para que el móvil apile con menos agresividad"
+                "es": "Disparar con buena luz para que el móvil apile con menos agresividad",
+                "de": "Bei gutem Licht fotografieren, damit das Handy weniger aggressiv stapelt"
               }
             },
             {
@@ -14852,7 +15078,8 @@
               "text": {
                 "en": "Prefer RAW/Pro when you want natural tonality",
                 "fr": "Préférer RAW/Pro quand tu veux une tonalité naturelle",
-                "es": "Preferir RAW/Pro cuando quieras una tonalidad más natural"
+                "es": "Preferir RAW/Pro cuando quieras una tonalidad más natural",
+                "de": "RAW/Pro bevorzugen, wenn du natürlichere Tonalität willst"
               }
             },
             {
@@ -14860,7 +15087,8 @@
               "text": {
                 "en": "Max HDR + max sharpening + max contrast always",
                 "fr": "HDR max + netteté max + contraste max toujours",
-                "es": "Máximo HDR + máximo afilado + máximo contraste siempre"
+                "es": "Máximo HDR + máximo afilado + máximo contraste siempre",
+                "de": "Immer max. HDR + max. Schärfung + max. Kontrast"
               }
             },
             {
@@ -14868,7 +15096,8 @@
               "text": {
                 "en": "Gentle edit; avoid stacking heavy filters on already processed JPEGs",
                 "fr": "Retouche légère ; éviter d’empiler des filtres sur un JPEG déjà traité",
-                "es": "Edición suave; evitar apilar filtros pesados sobre JPEG ya procesados"
+                "es": "Edición suave; evitar apilar filtros pesados sobre JPEG ya procesados",
+                "de": "Sanft editieren; schwere Filter nicht auf bereits verarbeitete JPEGs stapeln"
               }
             }
           ],
@@ -14880,7 +15109,8 @@
           "explanation": {
             "en": "Phones already bake tone and detail. Start cleaner, then edit lightly.",
             "fr": "Les téléphones cuisent déjà ton et détail. Pars plus propre, puis retouche léger.",
-            "es": "Los móviles ya cuecen tono y detalle. Empieza más limpio y luego edita con suavidad."
+            "es": "Los móviles ya cuecen tono y detalle. Empieza más limpio y luego edita con suavidad.",
+            "de": "Handys backen Ton und Detail bereits ein. Sauberer starten, dann leicht editieren."
           }
         }
       ],

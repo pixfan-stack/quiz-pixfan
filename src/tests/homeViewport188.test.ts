@@ -43,7 +43,7 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
     expect(nextSteps).toMatch(/\*\*v1\.8[7-9]\.0\*\*|\*\*v1\.9\d+\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.87**');
     expect(nextSteps).toContain('Vague **1.88**');
-    expect(nextSteps).toMatch(/no-go.*1\.8[89]/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[89]|no-go.*1\.90/);
   });
 
   it('genres ships .de on all LocalizedString fields (226)', () => {
@@ -235,7 +235,7 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
     expect(withoutEs).toEqual([]);
   });
 
-  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres (+ composition allowed) have title.de', () => {
+  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres (+ composition/smartphone allowed) have title.de', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
       .map((q) => q.id)
@@ -252,6 +252,7 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
       'portrait-light',
       'public-domain',
       'retouching',
+      'smartphone',
     ]);
     expect(withDe.every((id) => allowed.has(id))).toBe(true);
     for (const id of [
@@ -271,11 +272,11 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
     expect(data.quizzes.length - withDe.length).toBeLessThanOrEqual(5);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain+exposure-basics+genres+composition; ops no-gos through 1.88+; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain+exposure-basics+genres+composition+smartphone; ops no-gos through 1.88+; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.8[89]/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[89]|no-go.*1\.90/);
     expect(
       data.quizzes
         .filter(
@@ -290,7 +291,8 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
             q.id !== 'public-domain' &&
             q.id !== 'exposure-basics' &&
             q.id !== 'genres' &&
-            q.id !== 'composition'
+            q.id !== 'composition' &&
+            q.id !== 'smartphone'
         )
         .every((q) => {
           const title = q.title as { de?: string };
