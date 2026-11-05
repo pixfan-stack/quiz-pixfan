@@ -3,15 +3,13 @@
 /sitemap.xml    /sitemap.xml    200
 /robots.txt     /robots.txt     200
 
-# Path locales (vague 1.99) — trailing slash + home ?lang= → path
+# Path locales (vague 1.99) — trailing slash only.
+# IMPORTANT: never put query-string home redirects here — CF Pages treats a
+# rule like "slash + lang query → /en/" as source "/" and 301s FR home to EN
+# (live incident after #147). Home lang query stays dual-soft (sniff + i18n).
 /en    /en/    301
 /es    /es/    301
 /de    /de/    301
-
-/?lang=en    /en/    301
-/?lang=es    /es/    301
-/?lang=de    /de/    301
-/?lang=fr    /      301
 
 # Guides under locale prefix → same static HTML (sniff reads path; no thin duplicates)
 /en/guides    /en/guides/    301
