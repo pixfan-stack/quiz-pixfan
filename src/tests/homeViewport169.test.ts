@@ -12,8 +12,8 @@ import { quizLabel, toContentLang } from '../../functions/lib/sharePreview';
 describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS', () => {
   it('docs still mention vague 1.68/1.69; no-go through 1.69; headline may be v1.80.0', () => {
     /* Docs headline moved to v1.80.0 in vague 1.81 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94)\.\d+\*\*/);
+    expect(readme).toMatch(/v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.68**');
     expect(nextSteps).toContain('Vague **1.69**');
     expect(nextSteps).toMatch(/no-go.*1\.69/);
