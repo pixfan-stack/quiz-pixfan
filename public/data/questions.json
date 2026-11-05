@@ -18689,12 +18689,14 @@
       "title": {
         "en": "Lightroom workflow (Pixfan path)",
         "fr": "Workflow Lightroom (parcours Pixfan)",
-        "es": "Flujo Lightroom (ruta Pixfan)"
+        "es": "Flujo Lightroom (ruta Pixfan)",
+        "de": "Lightroom-Workflow (Pixfan-Pfad)"
       },
       "description": {
         "en": "Catalog, Develop, masks, and clean exports — the editing path Pixfan teaches for Lightroom Classic.",
         "fr": "Catalogue, Développement, masques et exports propres — le parcours retouche que Pixfan enseigne pour Lightroom Classic.",
-        "es": "Catálogo, Revelado, máscaras y exportaciones limpias — el recorrido de retoque que Pixfan enseña para Lightroom Classic."
+        "es": "Catálogo, Revelado, máscaras y exportaciones limpias — el recorrido de retoque que Pixfan enseña para Lightroom Classic.",
+        "de": "Katalog, Entwickeln, Masken und saubere Exporte — der Retusche-Pfad, den Pixfan für Lightroom Classic lehrt."
       },
       "difficulty": "hard",
       "questions": [
@@ -18705,7 +18707,8 @@
           "text": {
             "en": "In Lightroom Classic (Pixfan’s main teaching path), photos are best managed primarily through…",
             "fr": "Dans Lightroom Classic (parcours principal enseigné par Pixfan), les photos se gèrent surtout via…",
-            "es": "En Lightroom Classic (ruta principal que enseña Pixfan), las fotos se gestionan sobre todo mediante…"
+            "es": "En Lightroom Classic (ruta principal que enseña Pixfan), las fotos se gestionan sobre todo mediante…",
+            "de": "In Lightroom Classic (Hauptpfad, den Pixfan lehrt) werden Fotos vor allem verwaltet über…"
           },
           "answers": [
             {
@@ -18713,7 +18716,8 @@
               "text": {
                 "en": "Only renaming files on the Desktop each day",
                 "fr": "Seulement renommer les fichiers sur le Bureau chaque jour",
-                "es": "Solo renombrar los archivos en el Escritorio cada día"
+                "es": "Solo renombrar los archivos en el Escritorio cada día",
+                "de": "Tägliches Umbenennen der Dateien auf dem Schreibtisch"
               }
             },
             {
@@ -18721,7 +18725,8 @@
               "text": {
                 "en": "Deleting the catalog after every export",
                 "fr": "Supprimer le catalogue après chaque export",
-                "es": "Borrar el catálogo después de cada exportación"
+                "es": "Borrar el catálogo después de cada exportación",
+                "de": "Löschen des Katalogs nach jedem Export"
               }
             },
             {
@@ -18729,7 +18734,8 @@
               "text": {
                 "en": "A catalog that references files (plus folders/collections)",
                 "fr": "Un catalogue qui référence les fichiers (plus dossiers/collections)",
-                "es": "Un catálogo que referencia los archivos (más carpetas/colecciones)"
+                "es": "Un catálogo que referencia los archivos (más carpetas/colecciones)",
+                "de": "Einen Katalog, der auf die Dateien verweist (plus Ordner/Sammlungen)"
               }
             },
             {
@@ -18737,7 +18743,8 @@
               "text": {
                 "en": "Editing only inside the Recycle Bin",
                 "fr": "Éditer uniquement dans la Corbeille",
-                "es": "Editar únicamente dentro de la Papelera"
+                "es": "Editar únicamente dentro de la Papelera",
+                "de": "Bearbeiten ausschließlich im Papierkorb"
               }
             }
           ],
@@ -18747,18 +18754,21 @@
           "explanation": {
             "en": "Classic is catalog-centric: the database tracks edits while files stay where you store them. That catalog discipline is the backbone of a clean Pixfan-style workflow.",
             "fr": "Classic est centré catalogue : la base suit les retouches pendant que les fichiers restent où tu les ranges. Cette discipline de catalogue est le socle d’un flux façon Pixfan.",
-            "es": "Classic está centrado en el catálogo: la base sigue los retoques mientras los archivos permanecen donde los guardas. Esa disciplina de catálogo es la base de un flujo limpio al estilo Pixfan."
+            "es": "Classic está centrado en el catálogo: la base sigue los retoques mientras los archivos permanecen donde los guardas. Esa disciplina de catálogo es la base de un flujo limpio al estilo Pixfan.",
+            "de": "Classic ist katalogzentriert: die Datenbank speichert die Retusche, während die Dateien dort bleiben, wo Sie sie ablegen. Diese Katalogdisziplin ist die Basis eines sauberen Pixfan-Workflows."
           },
           "imageUrl": "/images/packs/photo-1517694712202-14dd9538aa97.avif",
           "imageAlt": {
             "en": "Laptop open on a desk for a catalog / Develop session",
             "fr": "Ordinateur portable ouvert — session catalogue / Développement",
-            "es": "Portátil abierto en un escritorio para una sesión de catálogo / Revelado"
+            "es": "Portátil abierto en un escritorio para una sesión de catálogo / Revelado",
+            "de": "Offenes Laptop auf einem Schreibtisch für eine Katalog-/Entwickeln-Session"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -18768,7 +18778,8 @@
           "text": {
             "en": "A non-destructive Develop edit in Lightroom means…",
             "fr": "Une retouche Développement non destructive dans Lightroom signifie…",
-            "es": "Un retoque de Revelado no destructivo en Lightroom significa…"
+            "es": "Un retoque de Revelado no destructivo en Lightroom significa…",
+            "de": "Eine nicht-destruktive Entwickeln-Retusche in Lightroom bedeutet…"
           },
           "answers": [
             {
@@ -18776,7 +18787,8 @@
               "text": {
                 "en": "Pixels of the original file are rewritten immediately",
                 "fr": "Les pixels du fichier original sont réécrits tout de suite",
-                "es": "Que los píxeles del archivo original se reescriben al instante"
+                "es": "Que los píxeles del archivo original se reescriben al instante",
+                "de": "Dass die Pixel der Originaldatei sofort überschrieben werden"
               }
             },
             {
@@ -18784,7 +18796,8 @@
               "text": {
                 "en": "Edits are stored as instructions until you export / save out",
                 "fr": "Les retouches sont des instructions jusqu’à l’export / l’enregistrement sortant",
-                "es": "Que los ajustes se guardan como instrucciones hasta exportar / guardar fuera"
+                "es": "Que los ajustes se guardan como instrucciones hasta exportar / guardar fuera",
+                "de": "Dass Anpassungen als Anweisungen gespeichert werden, bis exportiert / extern gespeichert wird"
               }
             },
             {
@@ -18792,7 +18805,8 @@
               "text": {
                 "en": "You can only undo once ever",
                 "fr": "Tu ne peux annuler qu’une seule fois dans ta vie",
-                "es": "Que solo puedes deshacer una vez en la vida"
+                "es": "Que solo puedes deshacer una vez en la vida",
+                "de": "Dass man im Leben nur einmal rückgängig machen darf"
               }
             },
             {
@@ -18800,7 +18814,8 @@
               "text": {
                 "en": "JPEG is required for non-destructive work",
                 "fr": "Le JPEG est obligatoire pour le non-destructif",
-                "es": "Que el JPEG es obligatorio para trabajar sin destruir"
+                "es": "Que el JPEG es obligatorio para trabajar sin destruir",
+                "de": "Dass JPEG verpflichtend ist, um zerstörungsfrei zu arbeiten"
               }
             }
           ],
@@ -18810,18 +18825,21 @@
           "explanation": {
             "en": "Lightroom keeps a recipe, not a flattened file. Export (or an external edit) is when pixels are baked — keep masters non-destructive as long as you can.",
             "fr": "Lightroom garde une recette, pas un fichier aplati. L’export (ou l’édition externe) matérialise les pixels — garde les masters non destructifs aussi longtemps que possible.",
-            "es": "Lightroom guarda una receta, no un archivo aplanado. La exportación (o la edición externa) es cuando se materializan los píxeles — mantén los masters no destructivos todo el tiempo que puedas."
+            "es": "Lightroom guarda una receta, no un archivo aplanado. La exportación (o la edición externa) es cuando se materializan los píxeles — mantén los masters no destructivos todo el tiempo que puedas.",
+            "de": "Lightroom speichert ein Rezept, keine abgeflachte Datei. Der Export (oder die externe Bearbeitung) materialisiert die Pixel — behalten Sie Master so lange wie möglich nicht-destruktiv."
           },
           "imageUrl": "/images/packs/photo-1555949963-aa79dcee981c.avif",
           "imageAlt": {
             "en": "Colorful UI panels suggesting non-destructive edit recipes",
             "fr": "Panneaux UI colorés évoquant des recettes non destructives",
-            "es": "Paneles de UI coloridos que evocan recetas de edición no destructivas"
+            "es": "Paneles de UI coloridos que evocan recetas de edición no destructivas",
+            "de": "Farbenfrohe UI-Panels, die nicht-destruktive Bearbeitungsrezepte evozieren"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -18831,7 +18849,8 @@
           "text": {
             "en": "A sensible first Develop check after import (Pixfan habit) is often…",
             "fr": "Un premier réflexe Développement après import (habitude Pixfan) est souvent…",
-            "es": "Un primer chequeo sensato de Revelado tras la importación (hábito Pixfan) suele ser…"
+            "es": "Un primer chequeo sensato de Revelado tras la importación (hábito Pixfan) suele ser…",
+            "de": "Ein sinnvoller erster Entwickeln-Check nach dem Import (Pixfan-Habit) ist meist…"
           },
           "answers": [
             {
@@ -18839,7 +18858,8 @@
               "text": {
                 "en": "Crop randomly without checking horizon or intent",
                 "fr": "Rogner au hasard sans regarder l’horizon ni l’intention",
-                "es": "Recortar al azar sin mirar el horizonte ni la intención"
+                "es": "Recortar al azar sin mirar el horizonte ni la intención",
+                "de": "Zufällig freistellen ohne Horizont oder Absicht zu prüfen"
               }
             },
             {
@@ -18847,7 +18867,8 @@
               "text": {
                 "en": "Max Clarity + Dehaze before looking at exposure",
                 "fr": "Clarity + Dehaze au max avant de regarder l’expo",
-                "es": "Máxima Claridad + Deshazear antes de mirar la exposición"
+                "es": "Máxima Claridad + Deshazear antes de mirar la exposición",
+                "de": "Maximale Klarheit + Enthazen, bevor man die Belichtung anschaut"
               }
             },
             {
@@ -18855,7 +18876,8 @@
               "text": {
                 "en": "Export 100 copies at full res immediately",
                 "fr": "Exporter 100 copies en pleine définition tout de suite",
-                "es": "Exportar 100 copias a resolución completa de inmediato"
+                "es": "Exportar 100 copias a resolución completa de inmediato",
+                "de": "Sofort 100 Vollauflösungs-Kopien exportieren"
               }
             },
             {
@@ -18863,7 +18885,8 @@
               "text": {
                 "en": "Review histogram / clipping, set white balance, then global tone",
                 "fr": "Regarder histogramme / hautes lumières, régler la balance des blancs, puis le ton global",
-                "es": "Revisar histograma / recortes, fijar el balance de blancos y luego el tono global"
+                "es": "Revisar histograma / recortes, fijar el balance de blancos y luego el tono global",
+                "de": "Histogramm / Clipping prüfen, Weißabgleich setzen und dann den globalen Ton"
               }
             }
           ],
@@ -18873,18 +18896,21 @@
           "explanation": {
             "en": "See the data, neutralize cast, set the global exposure story — then local work. Jumping straight to heavy local masks usually wastes time.",
             "fr": "Voir les données, neutraliser la dominante, poser l’expo globale — puis le local. Enchaîner tout de suite sur des masques lourds fait souvent perdre du temps.",
-            "es": "Mira los datos, neutraliza la dominante, fija la historia de exposición global — después el trabajo local. Saltar directo a máscaras locales pesadas suele hacer perder tiempo."
+            "es": "Mira los datos, neutraliza la dominante, fija la historia de exposición global — después el trabajo local. Saltar directo a máscaras locales pesadas suele hacer perder tiempo.",
+            "de": "Daten lesen, Farbstich neutralisieren, globale Belichtungsgeschichte setzen — danach lokale Arbeit. Sofort zu schweren lokalen Masken zu springen kostet oft Zeit."
           },
           "imageUrl": "/images/packs/photo-1460925895917-afdab827c52f.avif",
           "imageAlt": {
             "en": "Laptop dashboard — first Develop checks after import",
             "fr": "Tableau de bord — premiers contrôles Développement après import",
-            "es": "Panel de portátil — primeros chequeos de Revelado tras importar"
+            "es": "Panel de portátil — primeros chequeos de Revelado tras importar",
+            "de": "Laptop-Panel — erste Entwickeln-Checks nach dem Import"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -18894,7 +18920,8 @@
           "text": {
             "en": "Virtual copies are useful because they…",
             "fr": "Les copies virtuelles sont utiles parce qu’elles…",
-            "es": "Las copias virtuales son útiles porque…"
+            "es": "Las copias virtuales son útiles porque…",
+            "de": "Virtuelle Kopien sind nützlich, weil…"
           },
           "answers": [
             {
@@ -18902,7 +18929,8 @@
               "text": {
                 "en": "Let you try alternate edits without extra master files",
                 "fr": "Permettent d’essayer d’autres retouches sans fichiers masters en plus",
-                "es": "Permiten probar looks alternativos sin archivos master extra"
+                "es": "Permiten probar looks alternativos sin archivos master extra",
+                "de": "Sie alternative Looks ohne zusätzliche Master-Dateien erlauben"
               }
             },
             {
@@ -18910,7 +18938,8 @@
               "text": {
                 "en": "Replace the need for backups",
                 "fr": "Remplacent le besoin de sauvegardes",
-                "es": "Sustituyen la necesidad de copias de seguridad"
+                "es": "Sustituyen la necesidad de copias de seguridad",
+                "de": "Sie Backups überflüssig machen"
               }
             },
             {
@@ -18918,7 +18947,8 @@
               "text": {
                 "en": "Duplicate full RAW files on disk each time",
                 "fr": "Dupliquent le RAW complet sur le disque à chaque fois",
-                "es": "Duplican archivos RAW completos en disco cada vez"
+                "es": "Duplican archivos RAW completos en disco cada vez",
+                "de": "Sie jedes Mal komplette RAW-Dateien auf der Festplatte duplizieren"
               }
             },
             {
@@ -18926,7 +18956,8 @@
               "text": {
                 "en": "Only work on videos",
                 "fr": "Ne marchent que sur les vidéos",
-                "es": "Solo funcionan con vídeo"
+                "es": "Solo funcionan con vídeo",
+                "de": "Sie nur bei Video funktionieren"
               }
             }
           ],
@@ -18936,18 +18967,21 @@
           "explanation": {
             "en": "Virtual copies are alternate recipes pointing at the same file.",
             "fr": "Une copie virtuelle = une autre recette pointant le même fichier.",
-            "es": "Las copias virtuales son recetas alternativas que apuntan al mismo archivo."
+            "es": "Las copias virtuales son recetas alternativas que apuntan al mismo archivo.",
+            "de": "Virtuelle Kopien sind alternative Rezepte, die auf dieselbe Datei zeigen."
           },
           "imageUrl": "/images/packs/photo-1555949963-aa79dcee981c.avif",
           "imageAlt": {
             "en": "Colorful UI panels — virtual copies for alternate looks",
             "fr": "Panneaux UI colorés — copies virtuelles pour looks alternatifs",
-            "es": "Paneles de UI coloridos — copias virtuales para looks alternativos"
+            "es": "Paneles de UI coloridos — copias virtuales para looks alternativos",
+            "de": "Farbenfrohe UI-Panels — virtuelle Kopien für alternative Looks"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -18957,7 +18991,8 @@
           "text": {
             "en": "Collections (vs folders) are mainly for…",
             "fr": "Les collections (vs dossiers) servent surtout à…",
-            "es": "Las colecciones (frente a las carpetas) sirven sobre todo para…"
+            "es": "Las colecciones (frente a las carpetas) sirven sobre todo para…",
+            "de": "Sammlungen (gegenüber Ordnern) dienen vor allem dazu…"
           },
           "answers": [
             {
@@ -18965,7 +19000,8 @@
               "text": {
                 "en": "Organizing picks/sets without moving files on disk",
                 "fr": "Organiser sélections/ensembles sans déplacer les fichiers sur le disque",
-                "es": "Organizar selecciones/series sin mover archivos en disco"
+                "es": "Organizar selecciones/series sin mover archivos en disco",
+                "de": "Auswahlen/Serien zu organisieren, ohne Dateien auf der Festplatte zu verschieben"
               }
             },
             {
@@ -18973,7 +19009,8 @@
               "text": {
                 "en": "Physically relocating every file into one folder",
                 "fr": "Déplacer physiquement chaque fichier dans un seul dossier",
-                "es": "Reubicar físicamente cada archivo en una sola carpeta"
+                "es": "Reubicar físicamente cada archivo en una sola carpeta",
+                "de": "Jede Datei physisch in einen einzigen Ordner umzulegen"
               }
             },
             {
@@ -18981,7 +19018,8 @@
               "text": {
                 "en": "Changing camera firmware",
                 "fr": "Changer le firmware du boîtier",
-                "es": "Cambiar el firmware de la cámara"
+                "es": "Cambiar el firmware de la cámara",
+                "de": "Die Kamera-Firmware zu ändern"
               }
             },
             {
@@ -18989,7 +19027,8 @@
               "text": {
                 "en": "Deleting rejected photos automatically",
                 "fr": "Supprimer auto les photos rejetées",
-                "es": "Borrar automáticamente las fotos rechazadas"
+                "es": "Borrar automáticamente las fotos rechazadas",
+                "de": "Abgelehnte Fotos automatisch zu löschen"
               }
             }
           ],
@@ -18999,18 +19038,21 @@
           "explanation": {
             "en": "Folders = disk location. Collections = editorial grouping.",
             "fr": "Dossiers = emplacement disque. Collections = regroupement éditorial.",
-            "es": "Carpetas = ubicación en disco. Colecciones = agrupación editorial."
+            "es": "Carpetas = ubicación en disco. Colecciones = agrupación editorial.",
+            "de": "Ordner = Speicherort auf der Festplatte. Sammlungen = redaktionelle Gruppierung."
           },
           "imageUrl": "/images/packs/photo-1454165804606-c3d57bc86b40.avif",
           "imageAlt": {
             "en": "Notebook and documents — collections vs disk folders",
             "fr": "Carnet et documents — collections vs dossiers sur le disque",
-            "es": "Cuaderno y documentos — colecciones frente a carpetas en disco"
+            "es": "Cuaderno y documentos — colecciones frente a carpetas en disco",
+            "de": "Notizbuch und Dokumente — Sammlungen gegenüber Festplattenordnern"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19020,7 +19062,8 @@
           "text": {
             "en": "Export sharpening ‘Screen’ vs ‘Print’ mainly differs because…",
             "fr": "La netteté d’export « Écran » vs « Impression » diffère surtout parce que…",
-            "es": "La nitidez de exportación «Pantalla» frente a «Impresión» difiere sobre todo porque…"
+            "es": "La nitidez de exportación «Pantalla» frente a «Impresión» difiere sobre todo porque…",
+            "de": "Export-Schärfung „Bildschirm“ gegenüber „Druck“ unterscheidet sich vor allem, weil…"
           },
           "answers": [
             {
@@ -19028,7 +19071,8 @@
               "text": {
                 "en": "They are identical always",
                 "fr": "Elles sont toujours identiques",
-                "es": "Son siempre idénticas"
+                "es": "Son siempre idénticas",
+                "de": "Sie immer identisch sind"
               }
             },
             {
@@ -19036,7 +19080,8 @@
               "text": {
                 "en": "Print sharpening deletes metadata",
                 "fr": "La netteté print efface les métadonnées",
-                "es": "La nitidez de impresión borra los metadatos"
+                "es": "La nitidez de impresión borra los metadatos",
+                "de": "Druckschärfung Metadaten löscht"
               }
             },
             {
@@ -19044,7 +19089,8 @@
               "text": {
                 "en": "Print usually needs stronger sharpening for viewing distance / ink spread",
                 "fr": "L’impression demande souvent plus de netteté (distance de vue / diffusion encre)",
-                "es": "La impresión suele necesitar más nitidez por la distancia de visión / difusión de la tinta"
+                "es": "La impresión suele necesitar más nitidez por la distancia de visión / difusión de la tinta",
+                "de": "Druck meist mehr Schärfung braucht wegen Betrachtungsabstand / Tintendiffusion"
               }
             },
             {
@@ -19052,7 +19098,8 @@
               "text": {
                 "en": "Screen sharpening only works in CMYK",
                 "fr": "La netteté écran ne marche qu’en CMJN",
-                "es": "La nitidez de pantalla solo funciona en CMYK"
+                "es": "La nitidez de pantalla solo funciona en CMYK",
+                "de": "Bildschirm-Schärfung nur in CMYK funktioniert"
               }
             }
           ],
@@ -19062,18 +19109,21 @@
           "explanation": {
             "en": "Output sharpening matches the medium. Don’t reuse print settings blindly for Instagram or a client web gallery.",
             "fr": "La netteté de sortie suit le support. N’applique pas des réglages impression à Instagram ou une galerie web client sans réfléchir.",
-            "es": "La nitidez de salida se adapta al medio. No reutilices a ciegas los ajustes de impresión para Instagram o una galería web de cliente."
+            "es": "La nitidez de salida se adapta al medio. No reutilices a ciegas los ajustes de impresión para Instagram o una galería web de cliente.",
+            "de": "Ausgabeschärfung passt sich dem Medium an. Übernehmen Sie Druckeinstellungen nicht blind für Instagram oder eine Kunden-Webgalerie."
           },
           "imageUrl": "/images/packs/photo-1558655146-d09347e92766.avif",
           "imageAlt": {
             "en": "Design swatches — Screen vs Print export sharpening",
             "fr": "Nuanciers — netteté d’export Screen vs Print",
-            "es": "Muestras de diseño — nitidez de exportación Pantalla frente a Impresión"
+            "es": "Muestras de diseño — nitidez de exportación Pantalla frente a Impresión",
+            "de": "Design-Farbmuster — Export-Schärfung Bildschirm gegenüber Druck"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19083,7 +19133,8 @@
           "text": {
             "en": "Profiles vs presets in modern Lightroom — accurate statement?",
             "fr": "Profils vs préréglages dans Lightroom moderne — affirmation juste ?",
-            "es": "Perfiles frente a presets en Lightroom moderno — ¿afirmación correcta?"
+            "es": "Perfiles frente a presets en Lightroom moderno — ¿afirmación correcta?",
+            "de": "Profile gegenüber Vorgaben in modernem Lightroom — richtige Aussage?"
           },
           "answers": [
             {
@@ -19091,7 +19142,8 @@
               "text": {
                 "en": "Profiles remap color/tone foundation; presets apply a stack of slider settings",
                 "fr": "Les profils remappent la base couleur/ton ; les préréglages appliquent un pile de curseurs",
-                "es": "Los perfiles remapean la base de color/tono; los presets aplican un conjunto de deslizadores"
+                "es": "Los perfiles remapean la base de color/tono; los presets aplican un conjunto de deslizadores",
+                "de": "Profile remappen die Farb-/Tongrundlage; Vorgaben wenden einen Stapel Schieberegler an"
               }
             },
             {
@@ -19099,7 +19151,8 @@
               "text": {
                 "en": "Presets replace the need for profiles forever",
                 "fr": "Les préréglages remplacent les profils pour toujours",
-                "es": "Los presets sustituyen para siempre la necesidad de perfiles"
+                "es": "Los presets sustituyen para siempre la necesidad de perfiles",
+                "de": "Vorgaben ersetzen Profile für immer"
               }
             },
             {
@@ -19107,7 +19160,8 @@
               "text": {
                 "en": "They are the same button",
                 "fr": "C’est le même bouton",
-                "es": "Son el mismo botón"
+                "es": "Son el mismo botón",
+                "de": "Sie sind dieselbe Schaltfläche"
               }
             },
             {
@@ -19115,7 +19169,8 @@
               "text": {
                 "en": "Profiles only change file names",
                 "fr": "Les profils ne changent que les noms de fichiers",
-                "es": "Los perfiles solo cambian los nombres de archivo"
+                "es": "Los perfiles solo cambian los nombres de archivo",
+                "de": "Profile ändern nur Dateinamen"
               }
             }
           ],
@@ -19125,18 +19180,21 @@
           "explanation": {
             "en": "Start with a sensible profile, then dial with presets/sliders — don’t stack conflicting looks blindly.",
             "fr": "Pars d’un profil sensé, puis ajuste avec préréglages/curseurs — n’empile pas des looks contradictoires.",
-            "es": "Empieza con un perfil sensato, luego afina con presets/deslizadores — no apiles looks conflictivos a ciegas."
+            "es": "Empieza con un perfil sensato, luego afina con presets/deslizadores — no apiles looks conflictivos a ciegas.",
+            "de": "Starten Sie mit einem sinnvollen Profil, dann feinabstimmen mit Vorgaben/Reglern — stapeln Sie nicht blind widersprüchliche Looks."
           },
           "imageUrl": "/images/packs/photo-1558655146-d09347e92766.avif",
           "imageAlt": {
             "en": "Design tools and swatches — profiles vs presets",
             "fr": "Outils de design et nuanciers — profils vs préréglages",
-            "es": "Herramientas de diseño y muestras — perfiles frente a presets"
+            "es": "Herramientas de diseño y muestras — perfiles frente a presets",
+            "de": "Design-Werkzeuge und Farbmuster — Profile gegenüber Vorgaben"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19146,7 +19204,8 @@
           "text": {
             "en": "Sync / paste Develop settings across a burst is smart when…",
             "fr": "Synchroniser / coller les réglages Développement sur une rafale est malin quand…",
-            "es": "Sincronizar / pegar ajustes de Revelado en una ráfaga es inteligente cuando…"
+            "es": "Sincronizar / pegar ajustes de Revelado en una ráfaga es inteligente cuando…",
+            "de": "Entwickeln-Einstellungen über eine Burst-Serie synchronisieren / einfügen ist klug, wenn…"
           },
           "answers": [
             {
@@ -19154,7 +19213,8 @@
               "text": {
                 "en": "Only for JPEG, never RAW",
                 "fr": "Seulement pour JPEG, jamais RAW",
-                "es": "Solo para JPEG, nunca RAW"
+                "es": "Solo para JPEG, nunca RAW",
+                "de": "Nur für JPEG, nie RAW"
               }
             },
             {
@@ -19162,7 +19222,8 @@
               "text": {
                 "en": "Lighting and intent are consistent; then tweak outliers locally",
                 "fr": "Lumière et intention sont stables ; puis peaufiner les exceptions en local",
-                "es": "La luz y la intención son coherentes; luego se afinan los outliers en local"
+                "es": "La luz y la intención son coherentes; luego se afinan los outliers en local",
+                "de": "Licht und Absicht konsistent sind; Ausreißer danach lokal nachziehen"
               }
             },
             {
@@ -19170,7 +19231,8 @@
               "text": {
                 "en": "You want to overwrite spot removals uniquely placed on each face",
                 "fr": "Tu veux écraser des corrections de taches uniques sur chaque visage",
-                "es": "Quieres sobrescribir retoques de manchas únicos en cada cara"
+                "es": "Quieres sobrescribir retoques de manchas únicos en cada cara",
+                "de": "Sie einzigartige Fleckenkorrekturen auf jedem Gesicht überschreiben wollen"
               }
             },
             {
@@ -19178,7 +19240,8 @@
               "text": {
                 "en": "Every frame has totally different WB and crop needs — sync everything anyway",
                 "fr": "Chaque vue a WB et crop totalement différents — tout sync quand même",
-                "es": "Cada fotograma tiene WB y recorte totalmente distintos — sincroniza todo igual"
+                "es": "Cada fotograma tiene WB y recorte totalmente distintos — sincroniza todo igual",
+                "de": "Jedes Bild völlig anderen WB und Zuschnitt braucht — trotzdem alles gleich synchronisieren"
               }
             }
           ],
@@ -19188,18 +19251,21 @@
           "explanation": {
             "en": "Batch the shared look; don’t blindly sync highly local fixes.",
             "fr": "Batch le look commun ; ne synchronise pas à l’aveugle les corrections très locales.",
-            "es": "Agrupa el look compartido; no sincronices a ciegas correcciones muy locales."
+            "es": "Agrupa el look compartido; no sincronices a ciegas correcciones muy locales.",
+            "de": "Bündeln Sie den gemeinsamen Look; synchronisieren Sie nicht blind stark lokale Korrekturen."
           },
           "imageUrl": "/images/packs/photo-1498050108023-c5249f4df085.avif",
           "imageAlt": {
             "en": "Laptop on a desk — syncing a shared Develop look",
             "fr": "Portable sur un bureau — synchroniser un look Développement",
-            "es": "Portátil en un escritorio — sincronizando un look de Revelado compartido"
+            "es": "Portátil en un escritorio — sincronizando un look de Revelado compartido",
+            "de": "Laptop auf einem Schreibtisch — gemeinsamer Entwickeln-Look wird synchronisiert"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19209,7 +19275,8 @@
           "text": {
             "en": "Masking (subject / sky / brush) beats a global slider when…",
             "fr": "Un masque (sujet / ciel / pinceau) bat un curseur global quand…",
-            "es": "Enmascarar (sujeto / cielo / pincel) gana a un deslizador global cuando…"
+            "es": "Enmascarar (sujeto / cielo / pincel) gana a un deslizador global cuando…",
+            "de": "Maskieren (Motiv / Himmel / Pinsel) schlägt einen globalen Schieberegler, wenn…"
           },
           "answers": [
             {
@@ -19217,7 +19284,8 @@
               "text": {
                 "en": "Global Exposure is forbidden in Lightroom",
                 "fr": "L’Exposition globale est interdite dans Lightroom",
-                "es": "La Exposición global está prohibida en Lightroom"
+                "es": "La Exposición global está prohibida en Lightroom",
+                "de": "Globale Belichtung in Lightroom verboten ist"
               }
             },
             {
@@ -19225,7 +19293,8 @@
               "text": {
                 "en": "You want identical changes on every pixel always",
                 "fr": "Tu veux le même changement sur chaque pixel toujours",
-                "es": "Quieres cambios idénticos en cada píxel siempre"
+                "es": "Quieres cambios idénticos en cada píxel siempre",
+                "de": "Sie immer identische Änderungen auf jedem Pixel wollen"
               }
             },
             {
@@ -19233,7 +19302,8 @@
               "text": {
                 "en": "You need different treatment on different regions",
                 "fr": "Tu dois traiter différemment des zones distinctes",
-                "es": "Necesitas un tratamiento distinto en regiones distintas"
+                "es": "Necesitas un tratamiento distinto en regiones distintas",
+                "de": "Sie unterschiedliche Behandlung in unterschiedlichen Regionen brauchen"
               }
             },
             {
@@ -19241,7 +19311,8 @@
               "text": {
                 "en": "Masks only work on phone exports",
                 "fr": "Les masques ne marchent que sur les exports téléphone",
-                "es": "Las máscaras solo funcionan en exportaciones de móvil"
+                "es": "Las máscaras solo funcionan en exportaciones de móvil",
+                "de": "Masken nur bei Handy-Exporten funktionieren"
               }
             }
           ],
@@ -19251,18 +19322,21 @@
           "explanation": {
             "en": "Global sets the base; masks refine the story without wrecking the rest — the usual Pixfan order: global → local.",
             "fr": "Le global pose la base ; les masques raffinent l’histoire sans casser le reste — l’ordre Pixfan habituel : global → local.",
-            "es": "Lo global fija la base; las máscaras afinan la historia sin romper el resto — el orden habitual Pixfan: global → local."
+            "es": "Lo global fija la base; las máscaras afinan la historia sin romper el resto — el orden habitual Pixfan: global → local.",
+            "de": "Global setzt die Basis; Masken verfeinern die Geschichte ohne den Rest zu zerstören — die übliche Pixfan-Reihenfolge: global → lokal."
           },
           "imageUrl": "/images/packs/photo-1498050108023-c5249f4df085.avif",
           "imageAlt": {
             "en": "Laptop on a desk suggesting a digital editing workflow",
             "fr": "Laptop sur un bureau évoquant un flux de retouche numérique",
-            "es": "Portátil en un escritorio que sugiere un flujo de edición digital"
+            "es": "Portátil en un escritorio que sugiere un flujo de edición digital",
+            "de": "Laptop auf einem Schreibtisch, der einen digitalen Bearbeitungsworkflow andeutet"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash",
-            "es": "Foto: Unsplash"
+            "es": "Foto: Unsplash",
+            "de": "Foto: Unsplash"
           }
         },
         {
@@ -19272,7 +19346,8 @@
           "text": {
             "en": "Smart Previews help most when you…",
             "fr": "Les Aperçus dynamiques aident surtout quand tu…",
-            "es": "Las Smart Previews ayudan más cuando…"
+            "es": "Las Smart Previews ayudan más cuando…",
+            "de": "Smart Previews helfen am meisten, wenn Sie…"
           },
           "answers": [
             {
@@ -19280,7 +19355,8 @@
               "text": {
                 "en": "Need print-ready TIFF embedded in the catalog",
                 "fr": "As besoin de TIFF print embarqués dans le catalogue",
-                "es": "Necesitas un TIFF listo para imprimir incrustado en el catálogo"
+                "es": "Necesitas un TIFF listo para imprimir incrustado en el catálogo",
+                "de": "Druckfertige TIFFs im Katalog eingebettet brauchen"
               }
             },
             {
@@ -19288,7 +19364,8 @@
               "text": {
                 "en": "Edit away from original files (travel/laptop) with lighter proxies",
                 "fr": "Retouches loin des originaux (voyage/laptop) via des proxies plus légers",
-                "es": "Editas lejos de los archivos originales (viaje/portátil) con proxies más ligeros"
+                "es": "Editas lejos de los archivos originales (viaje/portátil) con proxies más ligeros",
+                "de": "Fern von den Originaldateien bearbeiten (Reise/Laptop) mit leichteren Proxys"
               }
             },
             {
@@ -19296,7 +19373,8 @@
               "text": {
                 "en": "Want to permanently delete masters safely",
                 "fr": "Veux supprimer définitivement les masters en sécurité",
-                "es": "Quieres borrar los masters de forma permanente y segura"
+                "es": "Quieres borrar los masters de forma permanente y segura",
+                "de": "Master dauerhaft und sicher löschen wollen"
               }
             },
             {
@@ -19304,7 +19382,8 @@
               "text": {
                 "en": "Only shoot JPEG already",
                 "fr": "Shootes déjà uniquement en JPEG",
-                "es": "Ya disparas solo en JPEG"
+                "es": "Ya disparas solo en JPEG",
+                "de": "Bereits nur JPEG fotografieren"
               }
             }
           ],
@@ -19314,7 +19393,8 @@
           "explanation": {
             "en": "Smart Previews are portable stand-ins. Sync back when originals reconnect.",
             "fr": "Les aperçus dynamiques sont des doublures portables. On resynchronise quand les originaux reviennent.",
-            "es": "Las Smart Previews son sustitutos portátiles. Sincroniza de vuelta cuando los originales se reconectan."
+            "es": "Las Smart Previews son sustitutos portátiles. Sincroniza de vuelta cuando los originales se reconectan.",
+            "de": "Smart Previews sind portable Platzhalter. Synchronisieren Sie zurück, wenn die Originale wieder verbunden sind."
           }
         },
         {
@@ -19324,7 +19404,8 @@
           "text": {
             "en": "Lens Corrections / Enable Profile Corrections mainly fix…",
             "fr": "Corrections de l’objectif / Activer le profil corrige surtout…",
-            "es": "Correcciones de objetivo / Activar correcciones de perfil arreglan sobre todo…"
+            "es": "Correcciones de objetivo / Activar correcciones de perfil arreglan sobre todo…",
+            "de": "Objektivkorrekturen / Profilkorrekturen aktivieren beheben vor allem…"
           },
           "answers": [
             {
@@ -19332,7 +19413,8 @@
               "text": {
                 "en": "Focus missed by two meters",
                 "fr": "La mise au point ratée de deux mètres",
-                "es": "El foco fallado por dos metros"
+                "es": "El foco fallado por dos metros",
+                "de": "Fokus, der zwei Meter daneben lag"
               }
             },
             {
@@ -19340,7 +19422,8 @@
               "text": {
                 "en": "Distortion, vignetting, and often chromatic aberration for known lenses",
                 "fr": "Distorsion, vignetage, et souvent aberrations chromatiques pour objectifs connus",
-                "es": "Distorsión, viñeteado y a menudo aberración cromática de objetivos conocidos"
+                "es": "Distorsión, viñeteado y a menudo aberración cromática de objetivos conocidos",
+                "de": "Verzeichnung, Vignettierung und oft chromatische Aberration bekannter Objektive"
               }
             },
             {
@@ -19348,7 +19431,8 @@
               "text": {
                 "en": "Copyright ownership disputes",
                 "fr": "Les litiges de droit d’auteur",
-                "es": "Disputas de titularidad de copyright"
+                "es": "Disputas de titularidad de copyright",
+                "de": "Urheberrechtsstreitigkeiten"
               }
             },
             {
@@ -19356,7 +19440,8 @@
               "text": {
                 "en": "Battery drain on the camera",
                 "fr": "La batterie du boîtier",
-                "es": "El consumo de batería de la cámara"
+                "es": "El consumo de batería de la cámara",
+                "de": "Den Batterieverbrauch der Kamera"
               }
             }
           ],
@@ -19366,18 +19451,21 @@
           "explanation": {
             "en": "Optical profiles straighten known lens quirks — not creative focus mistakes.",
             "fr": "Les profils optiques redressent les défauts d’objectifs connus — pas les erreurs de focus créatives.",
-            "es": "Los perfiles ópticos corrigen rarezas conocidas del objetivo — no errores creativos de enfoque."
+            "es": "Los perfiles ópticos corrigen rarezas conocidas del objetivo — no errores creativos de enfoque.",
+            "de": "Optische Profile korrigieren bekannte Objektiv-Eigenheiten — keine kreativen Fokusfehler."
           },
           "imageUrl": "/images/packs/photo-1526170375885-4d8ecf77b99f.avif",
           "imageAlt": {
             "en": "Prime lens — Lens Corrections / profile fixes",
             "fr": "Objectif fixe — corrections d’objectif / profils",
-            "es": "Objetivo fijo — Correcciones de objetivo / ajustes de perfil"
+            "es": "Objetivo fijo — Correcciones de objetivo / ajustes de perfil",
+            "de": "Festbrennweite — Objektivkorrekturen / Profileinstellungen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19387,7 +19475,8 @@
           "text": {
             "en": "Before client delivery from Lightroom, a smart Pixfan-style last pass includes…",
             "fr": "Avant livraison client depuis Lightroom, une dernière passe façon Pixfan inclut…",
-            "es": "Antes de la entrega al cliente desde Lightroom, un último pase inteligente al estilo Pixfan incluye…"
+            "es": "Antes de la entrega al cliente desde Lightroom, un último pase inteligente al estilo Pixfan incluye…",
+            "de": "Vor der Kundenübergabe aus Lightroom enthält ein smarter letzter Pixfan-Pass…"
           },
           "answers": [
             {
@@ -19395,7 +19484,8 @@
               "text": {
                 "en": "Strip all copyright metadata always",
                 "fr": "Retirer toute métadonnée copyright toujours",
-                "es": "Quitar siempre todos los metadatos de copyright"
+                "es": "Quitar siempre todos los metadatos de copyright",
+                "de": "Immer alle Copyright-Metadaten entfernen"
               }
             },
             {
@@ -19403,7 +19493,8 @@
               "text": {
                 "en": "Export once at 72 px wide for everything",
                 "fr": "Exporter une fois en 72 px de large pour tout",
-                "es": "Exportar una sola vez a 72 px de ancho para todo"
+                "es": "Exportar una sola vez a 72 px de ancho para todo",
+                "de": "Einmal auf 72 px Breite für alles exportieren"
               }
             },
             {
@@ -19411,7 +19502,8 @@
               "text": {
                 "en": "Apply 10 random presets stacked",
                 "fr": "Empiler 10 préréglages au hasard",
-                "es": "Aplicar 10 presets aleatorios apilados"
+                "es": "Aplicar 10 presets aleatorios apilados",
+                "de": "10 zufällige Vorgaben stapeln"
               }
             },
             {
@@ -19419,7 +19511,8 @@
               "text": {
                 "en": "Spot check crops, dust, skin ethics, soft-proof if printing, and correct export size/color space",
                 "fr": "Vérifier crops, poussières, éthique peau, soft proof si print, et export taille/espace colorimétrique corrects",
-                "es": "Revisar recortes, polvo, ética de piel, soft-proof si imprimes, y el tamaño/espacio de color correctos de exportación"
+                "es": "Revisar recortes, polvo, ética de piel, soft-proof si imprimes, y el tamaño/espacio de color correctos de exportación",
+                "de": "Zuschnitte, Staub, Hautethik, Softproof bei Druck und korrekte Exportgröße/Farbraum prüfen"
               }
             }
           ],
@@ -19429,18 +19522,21 @@
           "explanation": {
             "en": "Delivery is craft + professionalism: technical QA (spots, crops, WB) and the right output recipe for the brief.",
             "fr": "La livraison = craft + pro : QA technique (poussières, cadrages, WB) et la bonne recette de sortie pour le brief.",
-            "es": "La entrega es oficio + profesionalidad: QA técnico (manchas, recortes, WB) y la receta de salida adecuada al brief."
+            "es": "La entrega es oficio + profesionalidad: QA técnico (manchas, recortes, WB) y la receta de salida adecuada al brief.",
+            "de": "Übergabe ist Handwerk + Professionalität: technisches QA (Flecken, Zuschnitte, WB) und das passende Ausgaberezept für den Brief."
           },
           "imageUrl": "/images/packs/photo-1555949963-ff9fe0c870eb.avif",
           "imageAlt": {
             "en": "Ordered workspace — client delivery QA checklist vibe",
             "fr": "Espace de travail ordonné — QA avant livraison client",
-            "es": "Espacio de trabajo ordenado — vibe de checklist QA de entrega al cliente"
+            "es": "Espacio de trabajo ordenado — vibe de checklist QA de entrega al cliente",
+            "de": "Aufgeräumter Arbeitsplatz — QA-Checklisten-Vibe für Kundenübergabe"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19450,7 +19546,8 @@
           "text": {
             "en": "Tone Curve vs Basic panel — when prefer the curve?",
             "fr": "Courbe des tons vs panneau de base — quand préférer la courbe ?",
-            "es": "Curva de tonos frente a panel Básico — ¿cuándo preferir la curva?"
+            "es": "Curva de tonos frente a panel Básico — ¿cuándo preferir la curva?",
+            "de": "Gradationskurve gegenüber Basiseinstellungen — wann die Kurve bevorzugen?"
           },
           "answers": [
             {
@@ -19458,7 +19555,8 @@
               "text": {
                 "en": "Never — curves are obsolete",
                 "fr": "Jamais — les courbes sont obsolètes",
-                "es": "Nunca — las curvas están obsoletas"
+                "es": "Nunca — las curvas están obsoletas",
+                "de": "Nie — Kurven sind veraltet"
               }
             },
             {
@@ -19466,7 +19564,8 @@
               "text": {
                 "en": "Only to change filename case",
                 "fr": "Seulement pour changer la casse des noms de fichiers",
-                "es": "Solo para cambiar mayúsculas/minúsculas del nombre de archivo"
+                "es": "Solo para cambiar mayúsculas/minúsculas del nombre de archivo",
+                "de": "Nur um Groß-/Kleinschreibung des Dateinamens zu ändern"
               }
             },
             {
@@ -19474,7 +19573,8 @@
               "text": {
                 "en": "Always instead of setting Exposure at all",
                 "fr": "Toujours à la place de régler l’Exposition",
-                "es": "Siempre en lugar de fijar Exposición en absoluto"
+                "es": "Siempre en lugar de fijar Exposición en absoluto",
+                "de": "Immer statt überhaupt Belichtung zu setzen"
               }
             },
             {
@@ -19482,7 +19582,8 @@
               "text": {
                 "en": "For precise contrast shaping / channel curves after a solid Basic exposure",
                 "fr": "Pour modeler précisément le contraste / courbes par canal après une expo Basic solide",
-                "es": "Para dar forma precisa al contraste / curvas por canal tras una exposición Básica sólida"
+                "es": "Para dar forma precisa al contraste / curvas por canal tras una exposición Básica sólida",
+                "de": "Für präzise Kontrastformung / Kanalkurven nach solider Basis-Belichtung"
               }
             }
           ],
@@ -19492,18 +19593,21 @@
           "explanation": {
             "en": "Basic gets you close; curves refine contrast and color with finer control.",
             "fr": "Le Basic rapproche ; la courbe raffine contraste et couleur avec plus de contrôle.",
-            "es": "Lo Básico te acerca; las curvas afinan contraste y color con un control más fino."
+            "es": "Lo Básico te acerca; las curvas afinan contraste y color con un control más fino.",
+            "de": "Die Basis bringt Sie nah heran; Kurven verfeinern Kontrast und Farbe mit feinerer Kontrolle."
           },
           "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
           "imageAlt": {
             "en": "Moody tones — Tone Curve vs Basic panel judgment",
             "fr": "Tons d’ambiance — jugement Courbe vs panneau Basic",
-            "es": "Tonos atmosféricos — juicio Curva de tonos frente a panel Básico"
+            "es": "Tonos atmosféricos — juicio Curva de tonos frente a panel Básico",
+            "de": "Atmosphärische Töne — Urteil Gradationskurve gegenüber Basiseinstellungen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19513,7 +19617,8 @@
           "text": {
             "en": "Range masks (luminance/color) refine a selection by…",
             "fr": "Les masques de gamme (luminance/couleur) raffinent une sélection en…",
-            "es": "Las máscaras de rango (luminancia/color) afinan una selección…"
+            "es": "Las máscaras de rango (luminancia/color) afinan una selección…",
+            "de": "Bereichsmasken (Luminanz/Farbe) verfeinern eine Auswahl…"
           },
           "answers": [
             {
@@ -19521,7 +19626,8 @@
               "text": {
                 "en": "Limiting the mask to similar brightness or hue ranges",
                 "fr": "Limitant le masque à des plages de luminosité ou de teinte similaires",
-                "es": "Limitando la máscara a rangos similares de brillo o tono"
+                "es": "Limitando la máscara a rangos similares de brillo o tono",
+                "de": "Indem sie die Maske auf ähnliche Helligkeits- oder Farbtonbereiche begrenzen"
               }
             },
             {
@@ -19529,7 +19635,8 @@
               "text": {
                 "en": "Deleting the catalog automatically",
                 "fr": "Supprimant automatiquement le catalogue",
-                "es": "Borrando el catálogo automáticamente"
+                "es": "Borrando el catálogo automáticamente",
+                "de": "Indem sie den Katalog automatisch löschen"
               }
             },
             {
@@ -19537,7 +19644,8 @@
               "text": {
                 "en": "Converting RAW to TIFF in place",
                 "fr": "Convertissant le RAW en TIFF sur place",
-                "es": "Convirtiendo RAW a TIFF in situ"
+                "es": "Convirtiendo RAW a TIFF in situ",
+                "de": "Indem sie RAW an Ort und Stelle in TIFF umwandeln"
               }
             },
             {
@@ -19545,7 +19653,8 @@
               "text": {
                 "en": "Changing shutter speed on the camera",
                 "fr": "Changeant la vitesse d’obturation sur le boîtier",
-                "es": "Cambiando la velocidad de obturación en la cámara"
+                "es": "Cambiando la velocidad de obturación en la cámara",
+                "de": "Indem sie die Verschlusszeit an der Kamera ändern"
               }
             }
           ],
@@ -19555,7 +19664,8 @@
           "explanation": {
             "en": "After a broad mask, range limits keep adjustments on the tones/colors you mean.",
             "fr": "Après un masque large, la gamme garde l’ajustement sur les tons/couleurs visés.",
-            "es": "Tras una máscara amplia, los límites de rango mantienen los ajustes en los tonos/colores que buscas."
+            "es": "Tras una máscara amplia, los límites de rango mantienen los ajustes en los tonos/colores que buscas.",
+            "de": "Nach einer breiten Maske halten Bereichsgrenzen die Anpassungen auf den Tönen/Farben, die Sie meinen."
           }
         },
         {
@@ -19565,7 +19675,8 @@
           "text": {
             "en": "AI Denoise vs sharpening: best order of thinking?",
             "fr": "Denoise IA vs netteté : meilleur ordre de pensée ?",
-            "es": "Denoise IA frente a nitidez: ¿mejor orden de pensamiento?"
+            "es": "Denoise IA frente a nitidez: ¿mejor orden de pensamiento?",
+            "de": "KI-Denoise gegenüber Schärfen: beste Denkreihenfolge?"
           },
           "answers": [
             {
@@ -19573,7 +19684,8 @@
               "text": {
                 "en": "Clean noise first (especially on high ISO), then sharpen carefully for output",
                 "fr": "Nettoyer le bruit d’abord (surtout haut ISO), puis aiguiser avec soin pour la sortie",
-                "es": "Limpiar el ruido primero (sobre todo a ISO alto), luego nítidar con cuidado para la salida"
+                "es": "Limpiar el ruido primero (sobre todo a ISO alto), luego nítidar con cuidado para la salida",
+                "de": "Zuerst Rauschen bereinigen (besonders bei hoher ISO), dann vorsichtig für die Ausgabe schärfen"
               }
             },
             {
@@ -19581,7 +19693,8 @@
               "text": {
                 "en": "Sharpen aggressively first to ‘create’ detail from noise",
                 "fr": "Aiguiser fort d’abord pour « créer » du détail depuis le bruit",
-                "es": "Nítidar a lo bestia primero para «crear» detalle a partir del ruido"
+                "es": "Nítidar a lo bestia primero para «crear» detalle a partir del ruido",
+                "de": "Zuerst aggressiv schärfen, um „Detail aus Rauschen zu erzeugen“"
               }
             },
             {
@@ -19589,7 +19702,8 @@
               "text": {
                 "en": "Denoise only after uploading to social",
                 "fr": "Débruiter seulement après upload social",
-                "es": "Denoise solo después de subir a redes"
+                "es": "Denoise solo después de subir a redes",
+                "de": "Denoise erst nach dem Social-Upload"
               }
             },
             {
@@ -19597,7 +19711,8 @@
               "text": {
                 "en": "Never denoise portraits",
                 "fr": "Ne jamais débruiter les portraits",
-                "es": "Nunca aplicar denoise a retratos"
+                "es": "Nunca aplicar denoise a retratos",
+                "de": "Porträts nie entrauschen"
               }
             }
           ],
@@ -19607,18 +19722,21 @@
           "explanation": {
             "en": "Sharpening noise makes grit. Stabilize the file, then sharpen for the medium.",
             "fr": "Aiguiser du bruit = du grain agressif. Stabilise le fichier, puis netteté selon le support.",
-            "es": "Nítidar el ruido crea granulosidad. Estabiliza el archivo, luego nítida según el medio."
+            "es": "Nítidar el ruido crea granulosidad. Estabiliza el archivo, luego nítida según el medio.",
+            "de": "Rauschen zu schärfen erzeugt Körnung. Stabilisieren Sie die Datei, dann schärfen Sie für das Medium."
           },
           "imageUrl": "/images/packs/photo-1419242902214-272b3f66ee7a.avif",
           "imageAlt": {
             "en": "Night sky with stars — denoise before sharpening",
             "fr": "Ciel nocturne étoilé — débruitage avant netteté",
-            "es": "Cielo nocturno con estrellas — denoise antes de la nitidez"
+            "es": "Cielo nocturno con estrellas — denoise antes de la nitidez",
+            "de": "Nachthimmel mit Sternen — Denoise vor dem Schärfen"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19628,7 +19746,8 @@
           "text": {
             "en": "Color Grading wheels vs HSL — when is Grading the better tool?",
             "fr": "Roues Color Grading vs HSL — quand le Grading est le meilleur outil ?",
-            "es": "Ruedas de Color Grading frente a HSL — ¿cuándo es Grading la mejor herramienta?"
+            "es": "Ruedas de Color Grading frente a HSL — ¿cuándo es Grading la mejor herramienta?",
+            "de": "Color-Grading-Räder gegenüber HSL — wann ist Grading das bessere Werkzeug?"
           },
           "answers": [
             {
@@ -19636,7 +19755,8 @@
               "text": {
                 "en": "Shaping mood across shadows/midtones/highlights as a cinematic grade",
                 "fr": "Modeler l’ambiance ombres/tons moyens/hautes lumières comme un grade cinéma",
-                "es": "Al dar forma al mood en sombras/medios/altas luces como un grade cinematográfico"
+                "es": "Al dar forma al mood en sombras/medios/altas luces como un grade cinematográfico",
+                "de": "Beim Formen der Stimmung über Schatten/Mitteltöne/Lichter wie ein filmischer Grade"
               }
             },
             {
@@ -19644,7 +19764,8 @@
               "text": {
                 "en": "Fixing a single wrong white-balance reading only",
                 "fr": "Corriger uniquement une balance des blancs fausse",
-                "es": "Solo al corregir una lectura errónea de balance de blancos"
+                "es": "Solo al corregir una lectura errónea de balance de blancos",
+                "de": "Nur beim Korrigieren einer einzelnen falschen Weißabgleich-Messung"
               }
             },
             {
@@ -19652,7 +19773,8 @@
               "text": {
                 "en": "Renaming folders",
                 "fr": "Renommer des dossiers",
-                "es": "Al renombrar carpetas"
+                "es": "Al renombrar carpetas",
+                "de": "Beim Umbenennen von Ordnern"
               }
             },
             {
@@ -19660,7 +19782,8 @@
               "text": {
                 "en": "Removing dust spots",
                 "fr": "Retirer des poussières",
-                "es": "Al quitar manchas de polvo"
+                "es": "Al quitar manchas de polvo",
+                "de": "Beim Entfernen von Staubflecken"
               }
             }
           ],
@@ -19670,18 +19793,21 @@
           "explanation": {
             "en": "HSL targets specific hues; Grading paints atmosphere across tonal regions.",
             "fr": "HSL cible des teintes ; le Grading peint une atmosphère par zones tonales.",
-            "es": "HSL apunta a tonos concretos; Grading pinta atmósfera a través de regiones tonales."
+            "es": "HSL apunta a tonos concretos; Grading pinta atmósfera a través de regiones tonales.",
+            "de": "HSL zielt auf konkrete Farbtöne; Grading malt Atmosphäre über Tonregionen."
           },
           "imageUrl": "/images/packs/photo-1500530855697-b586d89ba3ee.avif",
           "imageAlt": {
             "en": "Moody colored landscape — Color Grading atmosphere",
             "fr": "Paysage aux couleurs d’ambiance — Color Grading",
-            "es": "Paisaje de color atmosférico — atmósfera Color Grading"
+            "es": "Paisaje de color atmosférico — atmósfera Color Grading",
+            "de": "Atmosphärische farbige Landschaft — Color-Grading-Atmosphäre"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19691,7 +19817,8 @@
           "text": {
             "en": "Soft proof shows clipping warnings on a print profile. Best response?",
             "fr": "Le soft proof montre des alertes de gamut sur un profil print. Bonne réaction ?",
-            "es": "El soft proof muestra avisos de recorte en un perfil de impresión. ¿Mejor respuesta?"
+            "es": "El soft proof muestra avisos de recorte en un perfil de impresión. ¿Mejor respuesta?",
+            "de": "Softproof zeigt Clipping-Warnungen für ein Druckprofil. Beste Reaktion?"
           },
           "answers": [
             {
@@ -19699,7 +19826,8 @@
               "text": {
                 "en": "Ignore and print the screen look anyway",
                 "fr": "Ignorer et imprimer le rendu écran quand même",
-                "es": "Ignorar e imprimir igual el look de pantalla"
+                "es": "Ignorar e imprimir igual el look de pantalla",
+                "de": "Ignorieren und trotzdem den Bildschirm-Look drucken"
               }
             },
             {
@@ -19707,7 +19835,8 @@
               "text": {
                 "en": "Adjust with soft proof on (intent/rendering) until critical colors hold",
                 "fr": "Ajuster avec soft proof actif (intention de rendu) jusqu’à tenir les couleurs critiques",
-                "es": "Ajustar con soft proof activo (intento/renderizado) hasta que los colores críticos se mantengan"
+                "es": "Ajustar con soft proof activo (intento/renderizado) hasta que los colores críticos se mantengan",
+                "de": "Mit aktivem Softproof (Absicht/Rendering) nachziehen, bis kritische Farben halten"
               }
             },
             {
@@ -19715,7 +19844,8 @@
               "text": {
                 "en": "Convert to sRGB then soft-proof the same sRGB again",
                 "fr": "Convertir en sRGB puis soft-proof le même sRGB",
-                "es": "Convertir a sRGB y luego soft-proof ese mismo sRGB otra vez"
+                "es": "Convertir a sRGB y luego soft-proof ese mismo sRGB otra vez",
+                "de": "Nach sRGB konvertieren und denselben sRGB erneut softproofen"
               }
             },
             {
@@ -19723,7 +19853,8 @@
               "text": {
                 "en": "Raise Vibrance +100 to ‘force’ gamut",
                 "fr": "Monter Vibrance +100 pour « forcer » le gamut",
-                "es": "Subir Vibrance +100 para «forzar» el gamut"
+                "es": "Subir Vibrance +100 para «forzar» el gamut",
+                "de": "Dynamik +100, um den Gamut zu „erzwingen“"
               }
             }
           ],
@@ -19733,7 +19864,8 @@
           "explanation": {
             "en": "Soft proof is the rehearsal. Edit for the paper, not the glowing display.",
             "fr": "Le soft proof est la répétition. Retouche pour le papier, pas pour l’écran qui brille.",
-            "es": "El soft proof es el ensayo. Edita para el papel, no para la pantalla brillante."
+            "es": "El soft proof es el ensayo. Edita para el papel, no para la pantalla brillante.",
+            "de": "Softproof ist die Probe. Bearbeiten Sie für das Papier, nicht für das leuchtende Display."
           }
         },
         {
@@ -19743,7 +19875,8 @@
           "text": {
             "en": "Which practices keep a Lightroom catalog healthy long-term?",
             "fr": "Quelles pratiques gardent un catalogue Lightroom sain sur la durée ?",
-            "es": "¿Qué prácticas mantienen un catálogo de Lightroom sano a largo plazo?"
+            "es": "¿Qué prácticas mantienen un catálogo de Lightroom sano a largo plazo?",
+            "de": "Welche Praktiken halten einen Lightroom-Katalog langfristig gesund?"
           },
           "answers": [
             {
@@ -19751,7 +19884,8 @@
               "text": {
                 "en": "Regular catalog backups + verified disk backups of originals",
                 "fr": "Sauvegardes régulières du catalogue + backups disque vérifiés des originaux",
-                "es": "Copias de seguridad regulares del catálogo + backups verificados en disco de los originales"
+                "es": "Copias de seguridad regulares del catálogo + backups verificados en disco de los originales",
+                "de": "Regelmäßige Katalog-Backups + verifizierte Festplatten-Backups der Originale"
               }
             },
             {
@@ -19759,7 +19893,8 @@
               "text": {
                 "en": "Store the only catalog copy on a failing USB stick",
                 "fr": "Garder la seule copie du catalogue sur une clé USB mourante",
-                "es": "Guardar la única copia del catálogo en un USB que falla"
+                "es": "Guardar la única copia del catálogo en un USB que falla",
+                "de": "Die einzige Katalogkopie auf einem ausfallenden USB-Stick speichern"
               }
             },
             {
@@ -19767,7 +19902,8 @@
               "text": {
                 "en": "Use consistent folder moves inside Lightroom so links don’t break",
                 "fr": "Déplacer les dossiers via Lightroom pour ne pas casser les liens",
-                "es": "Mover carpetas de forma coherente dentro de Lightroom para que no se rompan los enlaces"
+                "es": "Mover carpetas de forma coherente dentro de Lightroom para que no se rompan los enlaces",
+                "de": "Ordner konsistent innerhalb von Lightroom verschieben, damit Links nicht brechen"
               }
             },
             {
@@ -19775,7 +19911,8 @@
               "text": {
                 "en": "Occasional Optimize Catalog / don’t ignore integrity warnings",
                 "fr": "Optimiser le catalogue de temps en temps / ne pas ignorer les alertes d’intégrité",
-                "es": "Optimizar el catálogo de vez en cuando / no ignorar avisos de integridad"
+                "es": "Optimizar el catálogo de vez en cuando / no ignorar avisos de integridad",
+                "de": "Gelegentlich Katalog optimieren / Integritätswarnungen nicht ignorieren"
               }
             }
           ],
@@ -19787,18 +19924,21 @@
           "explanation": {
             "en": "Catalog + masters both need backups. Move files through Lightroom; maintain the database.",
             "fr": "Catalogue + masters doivent être sauvegardés. Déplace via Lightroom ; entretiens la base.",
-            "es": "Catálogo + masters necesitan backup. Mueve archivos a través de Lightroom; mantén la base de datos."
+            "es": "Catálogo + masters necesitan backup. Mueve archivos a través de Lightroom; mantén la base de datos.",
+            "de": "Katalog + Master brauchen beide Backups. Verschieben Sie Dateien über Lightroom; pflegen Sie die Datenbank."
           },
           "imageUrl": "/images/packs/photo-1486312338219-ce68d2c6f44d.avif",
           "imageAlt": {
             "en": "Hands on a laptop — healthy long-term catalog habits",
             "fr": "Mains sur un portable — bonnes habitudes de catalogue",
-            "es": "Manos sobre un portátil — hábitos de catálogo sanos a largo plazo"
+            "es": "Manos sobre un portátil — hábitos de catálogo sanos a largo plazo",
+            "de": "Hände auf einem Laptop — gesunde langfristige Kataloggewohnheiten"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19808,7 +19948,8 @@
           "text": {
             "en": "You batch-synced a look, then notice one face has a healing spot cloned from another frame’s dust. Cause?",
             "fr": "Tu as synchronisé un look, puis un visage a un tampon collé depuis la poussière d’une autre vue. Cause ?",
-            "es": "Sincronizaste un look en lote y ves que una cara tiene una mancha clonada del polvo de otro fotograma. ¿Causa?"
+            "es": "Sincronizaste un look en lote y ves que una cara tiene una mancha clonada del polvo de otro fotograma. ¿Causa?",
+            "de": "Sie haben einen Look batch-synchronisiert und sehen, dass ein Gesicht einen Heilungsfleck von Staub eines anderen Bildes hat. Ursache?"
           },
           "answers": [
             {
@@ -19816,7 +19957,8 @@
               "text": {
                 "en": "Lightroom always invents spots from AI",
                 "fr": "Lightroom invente toujours des taches via IA",
-                "es": "Lightroom siempre inventa manchas con IA"
+                "es": "Lightroom siempre inventa manchas con IA",
+                "de": "Lightroom erfindet Flecken immer per KI"
               }
             },
             {
@@ -19824,7 +19966,8 @@
               "text": {
                 "en": "Export sharpening creates healing spots",
                 "fr": "La netteté d’export crée des tampons",
-                "es": "La nitidez de exportación crea manchas de corrección"
+                "es": "La nitidez de exportación crea manchas de corrección",
+                "de": "Export-Schärfung erzeugt Heilungsflecken"
               }
             },
             {
@@ -19832,7 +19975,8 @@
               "text": {
                 "en": "Virtual copies disable spot tools",
                 "fr": "Les copies virtuelles désactivent les tampons",
-                "es": "Las copias virtuales desactivan las herramientas de manchas"
+                "es": "Las copias virtuales desactivan las herramientas de manchas",
+                "de": "Virtuelle Kopien deaktivieren Fleckenwerkzeuge"
               }
             },
             {
@@ -19840,7 +19984,8 @@
               "text": {
                 "en": "Spot removal / local fixes were included in sync — deselect highly local tools when batching",
                 "fr": "Les corrections localisées / tampon étaient dans la sync — décoche les outils très locaux en batch",
-                "es": "La eliminación de manchas / ajustes locales se incluyeron en la sincronización — desmarca herramientas muy locales al hacer lotes"
+                "es": "La eliminación de manchas / ajustes locales se incluyeron en la sincronización — desmarca herramientas muy locales al hacer lotes",
+                "de": "Fleckenentfernung / lokale Korrekturen waren in der Sync dabei — stark lokale Werkzeuge beim Batchen abwählen"
               }
             }
           ],
@@ -19850,7 +19995,8 @@
           "explanation": {
             "en": "Sync checkboxes matter. Share WB/tone; keep healing unique per frame.",
             "fr": "Les cases de sync comptent. Partage WB/ton ; garde le tampon unique par vue.",
-            "es": "Las casillas de sincronización importan. Comparte WB/tono; mantén la corrección de manchas única por fotograma."
+            "es": "Las casillas de sincronización importan. Comparte WB/tono; mantén la corrección de manchas única por fotograma.",
+            "de": "Sync-Checkboxen zählen. Teilen Sie WB/Ton; behalten Sie Heilung pro Bild einzigartig."
           }
         },
         {
@@ -19860,7 +20006,8 @@
           "text": {
             "en": "Client needs sRGB web + Adobe RGB print from one master. Clean Pixfan-style workflow?",
             "fr": "Le client veut sRGB web + Adobe RGB print depuis un master. Workflow propre façon Pixfan ?",
-            "es": "El cliente necesita web sRGB + impresión Adobe RGB desde un solo master. ¿Flujo limpio al estilo Pixfan?"
+            "es": "El cliente necesita web sRGB + impresión Adobe RGB desde un solo master. ¿Flujo limpio al estilo Pixfan?",
+            "de": "Kunde braucht sRGB-Web + Adobe-RGB-Druck aus einem Master. Sauberer Pixfan-Workflow?"
           },
           "answers": [
             {
@@ -19868,7 +20015,8 @@
               "text": {
                 "en": "Convert to grayscale to ‘simplify color management’",
                 "fr": "Passer en niveaux de gris pour « simplifier » la couleur",
-                "es": "Convertir a escala de grises para «simplificar la gestión de color»"
+                "es": "Convertir a escala de grises para «simplificar la gestión de color»",
+                "de": "Nach Graustufen konvertieren, um „Farbmanagement zu vereinfachen“"
               }
             },
             {
@@ -19876,7 +20024,8 @@
               "text": {
                 "en": "Finish the master in a wide working space, soft-proof print, then separate exports with correct profiles/sizes",
                 "fr": "Finir le master en grand espace de travail, soft-proof print, puis exports séparés avec profils/tailles corrects",
-                "es": "Terminar el master en un espacio de trabajo amplio, soft-proof de impresión, luego exportaciones separadas con perfiles/tamaños correctos"
+                "es": "Terminar el master en un espacio de trabajo amplio, soft-proof de impresión, luego exportaciones separadas con perfiles/tamaños correctos",
+                "de": "Master in weitem Arbeitsfarbraum fertigstellen, Druck softproofen, dann getrennte Exporte mit korrekten Profilen/Größen"
               }
             },
             {
@@ -19884,7 +20033,8 @@
               "text": {
                 "en": "Email the .lrcat file as the deliverable",
                 "fr": "Envoyer le .lrcat comme livrable",
-                "es": "Enviar el archivo .lrcat como entregable"
+                "es": "Enviar el archivo .lrcat como entregable",
+                "de": "Die .lrcat-Datei als Lieferobjekt mailen"
               }
             },
             {
@@ -19892,7 +20042,8 @@
               "text": {
                 "en": "Export once to sRGB and upsample that for print",
                 "fr": "Exporter une fois en sRGB et sur-échantillonner pour le print",
-                "es": "Exportar una vez a sRGB y ampliar eso para imprimir"
+                "es": "Exportar una vez a sRGB y ampliar eso para imprimir",
+                "de": "Einmal nach sRGB exportieren und das für Druck hochskalieren"
               }
             }
           ],
@@ -19902,18 +20053,21 @@
           "explanation": {
             "en": "One Develop master, multiple purposeful exports — never print from a crushed web JPEG. That “one master → many outputs” habit is core Pixfan advice.",
             "fr": "Un master Développement, plusieurs exports ciblés — n’imprime jamais depuis un JPEG web écrasé. Cet habit « un master → plusieurs sorties » est au cœur des conseils Pixfan.",
-            "es": "Un master de Revelado, varias exportaciones con propósito — nunca imprimas desde un JPEG web aplastado. Ese hábito «un master → muchas salidas» es consejo central Pixfan."
+            "es": "Un master de Revelado, varias exportaciones con propósito — nunca imprimas desde un JPEG web aplastado. Ese hábito «un master → muchas salidas» es consejo central Pixfan.",
+            "de": "Ein Entwickeln-Master, mehrere zweckmäßige Exporte — nie von einem gequetschten Web-JPEG drucken. Dieser Habit „ein Master → viele Ausgaben“ ist zentraler Pixfan-Rat."
           },
           "imageUrl": "/images/packs/photo-1518182170546-07661fd94144.avif",
           "imageAlt": {
             "en": "Long-exposure waterfall suggesting careful processing of highlights and motion",
             "fr": "Cascade en pose longue suggérant un traitement soigné des hautes lumières",
-            "es": "Cascada de larga exposición que sugiere un procesado cuidadoso de luces y movimiento"
+            "es": "Cascada de larga exposición que sugiere un procesado cuidadoso de luces y movimiento",
+            "de": "Langzeitbelichtungs-Wasserfall, der sorgfältige Verarbeitung von Lichtern und Bewegung andeutet"
           },
           "imageCredit": {
             "en": "Photo: Unsplash",
             "fr": "Photo: Unsplash",
-            "es": "Foto: Unsplash"
+            "es": "Foto: Unsplash",
+            "de": "Foto: Unsplash"
           }
         },
         {
@@ -19923,7 +20077,8 @@
           "text": {
             "en": "Healthy Lightroom Classic catalog hygiene usually includes…",
             "fr": "Une hygiène saine de catalogue Lightroom Classic inclut surtout…",
-            "es": "Una higiene sana del catálogo Lightroom Classic suele incluir…"
+            "es": "Una higiene sana del catálogo Lightroom Classic suele incluir…",
+            "de": "Gesunde Lightroom-Classic-Kataloghygiene umfasst meist…"
           },
           "answers": [
             {
@@ -19931,7 +20086,8 @@
               "text": {
                 "en": "Deleting the catalog after every export “to stay light”",
                 "fr": "Supprimer le catalogue après chaque export « pour rester léger »",
-                "es": "Borrar el catálogo después de cada exportación «para ir ligero»"
+                "es": "Borrar el catálogo después de cada exportación «para ir ligero»",
+                "de": "Den Katalog nach jedem Export löschen, „um leicht zu bleiben“"
               }
             },
             {
@@ -19939,7 +20095,8 @@
               "text": {
                 "en": "Storing the only catalog copy on a USB stick you lose weekly",
                 "fr": "Garder l’unique copie sur une clé USB perdue chaque semaine",
-                "es": "Guardar la única copia del catálogo en un USB que pierdes cada semana"
+                "es": "Guardar la única copia del catálogo en un USB que pierdes cada semana",
+                "de": "Die einzige Katalogkopie auf einem USB speichern, den Sie wöchentlich verlieren"
               }
             },
             {
@@ -19947,7 +20104,8 @@
               "text": {
                 "en": "Never backing up because Smart Previews are a full archive",
                 "fr": "Ne jamais sauvegarder car les Smart Previews sont une archive complète",
-                "es": "Nunca hacer backup porque las Smart Previews son un archivo completo"
+                "es": "Nunca hacer backup porque las Smart Previews son un archivo completo",
+                "de": "Nie backuppen, weil Smart Previews ein vollständiges Archiv sind"
               }
             },
             {
@@ -19955,7 +20113,8 @@
               "text": {
                 "en": "Regular catalog backups + knowing where the .lrcat lives",
                 "fr": "Sauvegardes régulières du catalogue + savoir où vit le .lrcat",
-                "es": "Copias de seguridad regulares del catálogo + saber dónde vive el .lrcat"
+                "es": "Copias de seguridad regulares del catálogo + saber dónde vive el .lrcat",
+                "de": "Regelmäßige Katalog-Backups + wissen, wo die .lrcat liegt"
               }
             }
           ],
@@ -19965,18 +20124,21 @@
           "explanation": {
             "en": "Edits live in the catalog; backups are non-negotiable Pixfan hygiene.",
             "fr": "Les edits vivent dans le catalogue ; les sauvegardes sont non négociables façon Pixfan.",
-            "es": "Los retoques viven en el catálogo; los backups son higiene Pixfan no negociable."
+            "es": "Los retoques viven en el catálogo; los backups son higiene Pixfan no negociable.",
+            "de": "Retuschen leben im Katalog; Backups sind nicht verhandelbare Pixfan-Hygiene."
           },
           "imageUrl": "/images/packs/photo-1486312338219-ce68d2c6f44d.avif",
           "imageAlt": {
             "en": "Hands on a laptop — catalog backup discipline",
             "fr": "Mains sur un portable — discipline de sauvegarde catalogue",
-            "es": "Manos sobre un portátil — disciplina de backup del catálogo"
+            "es": "Manos sobre un portátil — disciplina de backup del catálogo",
+            "de": "Hände auf einem Laptop — Disziplin beim Katalog-Backup"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -19986,7 +20148,8 @@
           "text": {
             "en": "Before a big Develop sync across similar frames, a smart Pixfan habit is…",
             "fr": "Avant une grosse sync Développement sur des vues similaires, une bonne habitude Pixfan est…",
-            "es": "Antes de una gran sincronización de Revelado entre fotogramas similares, un hábito Pixfan inteligente es…"
+            "es": "Antes de una gran sincronización de Revelado entre fotogramas similares, un hábito Pixfan inteligente es…",
+            "de": "Vor einer großen Entwickeln-Sync über ähnliche Bilder ist ein smarter Pixfan-Habit…"
           },
           "answers": [
             {
@@ -19994,7 +20157,8 @@
               "text": {
                 "en": "Sync everything blindly including healing spots from other faces",
                 "fr": "Tout syncer à l’aveugle y compris les healing d’autres visages",
-                "es": "Sincronizar todo a ciegas incluyendo manchas de otras caras"
+                "es": "Sincronizar todo a ciegas incluyendo manchas de otras caras",
+                "de": "Alles blind synchronisieren inklusive Heilungsflecken anderer Gesichter"
               }
             },
             {
@@ -20002,7 +20166,8 @@
               "text": {
                 "en": "Disable previews so mistakes stay invisible longer",
                 "fr": "Désactiver les previews pour cacher les erreurs plus longtemps",
-                "es": "Desactivar las vistas previas para que los errores sigan invisibles más tiempo"
+                "es": "Desactivar las vistas previas para que los errores sigan invisibles más tiempo",
+                "de": "Vorschauen deaktivieren, damit Fehler länger unsichtbar bleiben"
               }
             },
             {
@@ -20010,7 +20175,8 @@
               "text": {
                 "en": "Convert the whole shoot to JPEG before syncing",
                 "fr": "Convertir tout le shooting en JPEG avant de syncer",
-                "es": "Convertir toda la sesión a JPEG antes de sincronizar"
+                "es": "Convertir toda la sesión a JPEG antes de sincronizar",
+                "de": "Die ganze Session vor dem Sync nach JPEG konvertieren"
               }
             },
             {
@@ -20018,7 +20184,8 @@
               "text": {
                 "en": "Spot-check one hero, sync deliberately, then QA outliers (faces, dust, crops)",
                 "fr": "Valider un hero, syncer exprès, puis QA les outliers (visages, poussière, crops)",
-                "es": "Revisar un héroe, sincronizar a propósito y luego QA de outliers (caras, polvo, recortes)"
+                "es": "Revisar un héroe, sincronizar a propósito y luego QA de outliers (caras, polvo, recortes)",
+                "de": "Einen Helden prüfen, bewusst synchronisieren und dann Ausreißer QA (Gesichter, Staub, Zuschnitte)"
               }
             }
           ],
@@ -20028,7 +20195,8 @@
           "explanation": {
             "en": "Sync is a multiplier — good looks and bad mistakes both scale.",
             "fr": "La sync multiplie — les beaux looks et les mauvaises erreurs aussi.",
-            "es": "La sincronización es un multiplicador — escalan los buenos looks y los malos errores."
+            "es": "La sincronización es un multiplicador — escalan los buenos looks y los malos errores.",
+            "de": "Sync ist ein Multiplikator — gute Looks und schlechte Fehler skalieren beide."
           }
         },
         {
@@ -20038,7 +20206,8 @@
           "text": {
             "en": "You need a B&W version without losing the color master. Clean approach?",
             "fr": "Tu veux une version N&B sans perdre le master couleur. Approche propre ?",
-            "es": "Necesitas una versión B&N sin perder el master en color. ¿Enfoque limpio?"
+            "es": "Necesitas una versión B&N sin perder el master en color. ¿Enfoque limpio?",
+            "de": "Sie brauchen eine S/W-Version ohne den Farb-Master zu verlieren. Sauberer Ansatz?"
           },
           "answers": [
             {
@@ -20046,7 +20215,8 @@
               "text": {
                 "en": "Export JPEG, reopen, desaturate, overwrite the RAW",
                 "fr": "Exporter JPEG, rouvrir, désaturer, écraser le RAW",
-                "es": "Exportar JPEG, reabrir, desaturar y sobrescribir el RAW"
+                "es": "Exportar JPEG, reabrir, desaturar y sobrescribir el RAW",
+                "de": "JPEG exportieren, neu öffnen, entsättigen und das RAW überschreiben"
               }
             },
             {
@@ -20054,7 +20224,8 @@
               "text": {
                 "en": "Delete all color edits so only B&W remains forever",
                 "fr": "Supprimer tous les edits couleur pour ne garder que le N&B",
-                "es": "Borrar todos los retoques de color para que solo quede B&N para siempre"
+                "es": "Borrar todos los retoques de color para que solo quede B&N para siempre",
+                "de": "Alle Farbretuschen löschen, damit für immer nur S/W bleibt"
               }
             },
             {
@@ -20062,7 +20233,8 @@
               "text": {
                 "en": "Change the camera profile to monochrome in-camera only",
                 "fr": "Changer seulement le profil monochrome dans l’appareil",
-                "es": "Cambiar el perfil de cámara a monocromo solo en la cámara"
+                "es": "Cambiar el perfil de cámara a monocromo solo en la cámara",
+                "de": "Das Kameraprofil nur in der Kamera auf Monochrom stellen"
               }
             },
             {
@@ -20070,7 +20242,8 @@
               "text": {
                 "en": "Virtual copy (or snapshot) for B&W; keep the color master intact",
                 "fr": "Copie virtuelle (ou snapshot) pour le N&B ; garder le master couleur intact",
-                "es": "Copia virtual (o instantánea) para B&N; mantener intacto el master en color"
+                "es": "Copia virtual (o instantánea) para B&N; mantener intacto el master en color",
+                "de": "Virtuelle Kopie (oder Momentaufnahme) für S/W; Farb-Master intakt lassen"
               }
             }
           ],
@@ -20080,7 +20253,8 @@
           "explanation": {
             "en": "Virtual copies keep non-destructive forks of the same master file.",
             "fr": "Les copies virtuelles gardent des forks non destructifs du même master.",
-            "es": "Las copias virtuales mantienen bifurcaciones no destructivas del mismo archivo master."
+            "es": "Las copias virtuales mantienen bifurcaciones no destructivas del mismo archivo master.",
+            "de": "Virtuelle Kopien halten nicht-destruktive Abzweigungen derselben Masterdatei."
           }
         },
         {
@@ -20090,7 +20264,8 @@
           "text": {
             "en": "Client delivery from Lightroom — which export habit is most Pixfan-solid?",
             "fr": "Livraison client depuis Lightroom — quelle habitude d’export est la plus solide façon Pixfan ?",
-            "es": "Entrega al cliente desde Lightroom — ¿qué hábito de exportación es más sólido al estilo Pixfan?"
+            "es": "Entrega al cliente desde Lightroom — ¿qué hábito de exportación es más sólido al estilo Pixfan?",
+            "de": "Kundenübergabe aus Lightroom — welcher Export-Habit ist am solidesten im Pixfan-Stil?"
           },
           "answers": [
             {
@@ -20098,7 +20273,8 @@
               "text": {
                 "en": "Always export ProPhoto JPEG at 300% size “for safety”",
                 "fr": "Toujours exporter du JPEG ProPhoto à 300 % « par sécurité »",
-                "es": "Exportar siempre JPEG ProPhoto al 300 % «por seguridad»"
+                "es": "Exportar siempre JPEG ProPhoto al 300 % «por seguridad»",
+                "de": "Immer ProPhoto-JPEG bei 300 % Größe „zur Sicherheit“ exportieren"
               }
             },
             {
@@ -20106,7 +20282,8 @@
               "text": {
                 "en": "Email the catalog file instead of rendered images",
                 "fr": "Envoyer le fichier catalogue au lieu des images rendues",
-                "es": "Enviar el archivo de catálogo en lugar de las imágenes renderizadas"
+                "es": "Enviar el archivo de catálogo en lugar de las imágenes renderizadas",
+                "de": "Die Katalogdatei statt gerenderter Bilder mailen"
               }
             },
             {
@@ -20114,7 +20291,8 @@
               "text": {
                 "en": "Skip sharpening and color profile on every web export",
                 "fr": "Sauter netteté et profil couleur sur chaque export web",
-                "es": "Omitir nitidez y perfil de color en cada exportación web"
+                "es": "Omitir nitidez y perfil de color en cada exportación web",
+                "de": "Schärfung und Farbprofil bei jedem Web-Export weglassen"
               }
             },
             {
@@ -20122,7 +20300,8 @@
               "text": {
                 "en": "Named presets per destination (web sRGB / print) + quick visual QA of exports",
                 "fr": "Préréglages nommés par destination (web sRGB / print) + QA visuelle rapide des exports",
-                "es": "Presets con nombre por destino (web sRGB / impresión) + QA visual rápida de las exportaciones"
+                "es": "Presets con nombre por destino (web sRGB / impresión) + QA visual rápida de las exportaciones",
+                "de": "Benannte Vorgaben pro Ziel (Web sRGB / Druck) + kurzes visuelles QA der Exporte"
               }
             }
           ],
@@ -20132,18 +20311,21 @@
           "explanation": {
             "en": "Repeatable export presets + a last look beat one-off guessing.",
             "fr": "Des presets d’export répétables + un dernier coup d’œil battent l’improvisation.",
-            "es": "Presets de exportación repetibles + una última mirada ganan a improvisar cada vez."
+            "es": "Presets de exportación repetibles + una última mirada ganan a improvisar cada vez.",
+            "de": "Wiederholbare Export-Vorgaben + ein letzter Blick schlagen jedes Mal Improvisieren."
           },
           "imageUrl": "/images/packs/photo-1498050108023-c5249f4df085.avif",
           "imageAlt": {
             "en": "Laptop coding desk — batch sync QA before delivery",
             "fr": "Bureau portable — QA après sync batch avant livraison",
-            "es": "Escritorio de portátil — QA de sincronización por lotes antes de la entrega"
+            "es": "Escritorio de portátil — QA de sincronización por lotes antes de la entrega",
+            "de": "Laptop-Schreibtisch — Batch-Sync-QA vor der Übergabe"
           },
           "imageCredit": {
             "en": "Unsplash — free to use (Unsplash License)",
             "fr": "Unsplash — libre d'utilisation (licence Unsplash)",
-            "es": "Unsplash — uso libre (licencia Unsplash)"
+            "es": "Unsplash — uso libre (licencia Unsplash)",
+            "de": "Unsplash — freie Nutzung (Unsplash-Lizenz)"
           }
         },
         {
@@ -20153,7 +20335,8 @@
           "text": {
             "en": "A luminance range mask is especially useful when you want to…",
             "fr": "Un masque de gamme luminance est surtout utile quand tu veux…",
-            "es": "Una máscara de rango de luminancia es especialmente útil cuando quieres…"
+            "es": "Una máscara de rango de luminancia es especialmente útil cuando quieres…",
+            "de": "Eine Luminanz-Bereichsmaske ist besonders nützlich, wenn Sie…"
           },
           "answers": [
             {
@@ -20161,7 +20344,8 @@
               "text": {
                 "en": "Replace the need for any white-balance control",
                 "fr": "Remplacer tout contrôle de balance des blancs",
-                "es": "Sustituir cualquier control de balance de blancos"
+                "es": "Sustituir cualquier control de balance de blancos",
+                "de": "Jede Weißabgleich-Steuerung ersetzen wollen"
               }
             },
             {
@@ -20169,7 +20353,8 @@
               "text": {
                 "en": "Automatically write IPTC copyright into every export",
                 "fr": "Écrire automatiquement le copyright IPTC dans chaque export",
-                "es": "Escribir automáticamente el copyright IPTC en cada exportación"
+                "es": "Escribir automáticamente el copyright IPTC en cada exportación",
+                "de": "Automatisch IPTC-Copyright in jeden Export schreiben wollen"
               }
             },
             {
@@ -20177,7 +20362,8 @@
               "text": {
                 "en": "Force every sky to neon purple regardless of selection",
                 "fr": "Forcer chaque ciel en violet néon sans sélection",
-                "es": "Forzar todos los cielos a un púrpura neón sin importar la selección"
+                "es": "Forzar todos los cielos a un púrpura neón sin importar la selección",
+                "de": "Jeden Himmel unabhängig von der Auswahl neonlila zwingen wollen"
               }
             },
             {
@@ -20185,7 +20371,8 @@
               "text": {
                 "en": "Limit a local adjustment to bright or dark tonal regions",
                 "fr": "Limiter un réglage local aux zones tonales claires ou sombres",
-                "es": "Limitar un ajuste local a regiones tonales claras u oscuras"
+                "es": "Limitar un ajuste local a regiones tonales claras u oscuras",
+                "de": "Eine lokale Anpassung auf helle oder dunkle Tonregionen begrenzen wollen"
               }
             }
           ],
@@ -20195,7 +20382,8 @@
           "explanation": {
             "en": "Range masks refine where a local edit lands by tone or color.",
             "fr": "Les masques de gamme précisent où un edit local s’applique (ton / couleur).",
-            "es": "Las máscaras de rango afinan dónde aterriza un retoque local por tono o color."
+            "es": "Las máscaras de rango afinan dónde aterriza un retoque local por tono o color.",
+            "de": "Bereichsmasken verfeinern, wo eine lokale Retusche nach Ton oder Farbe landet."
           }
         },
         {
@@ -20205,7 +20393,8 @@
           "text": {
             "en": "Myth: “More Clarity always makes a photo look more professional.” Better framing?",
             "fr": "Mythe : « Plus de Clarté = forcément plus pro. » Meilleure nuance ?",
-            "es": "Mito: «Más Claridad siempre hace que una foto parezca más profesional.» ¿Mejor marco?"
+            "es": "Mito: «Más Claridad siempre hace que una foto parezca más profesional.» ¿Mejor marco?",
+            "de": "Mythos: „Mehr Klarheit macht ein Foto immer professioneller.“ Besserer Rahmen?"
           },
           "answers": [
             {
@@ -20213,7 +20402,8 @@
               "text": {
                 "en": "Clarity only affects the blue channel in print",
                 "fr": "La Clarté n’affecte que le canal bleu à l’impression",
-                "es": "La Claridad solo afecta al canal azul en impresión"
+                "es": "La Claridad solo afecta al canal azul en impresión",
+                "de": "Klarheit betrifft im Druck nur den Blaukanal"
               }
             },
             {
@@ -20221,7 +20411,8 @@
               "text": {
                 "en": "You must max Clarity on every landscape forever",
                 "fr": "Il faut maxer la Clarté sur chaque paysage pour toujours",
-                "es": "Debes maximizar Claridad en cada paisaje para siempre"
+                "es": "Debes maximizar Claridad en cada paisaje para siempre",
+                "de": "Sie müssen Klarheit bei jeder Landschaft für immer maximieren"
               }
             },
             {
@@ -20229,7 +20420,8 @@
               "text": {
                 "en": "Clarity replaces Lens Corrections completely",
                 "fr": "La Clarté remplace totalement les Corrections d’objectif",
-                "es": "La Claridad sustituye por completo las Correcciones de objetivo"
+                "es": "La Claridad sustituye por completo las Correcciones de objetivo",
+                "de": "Klarheit ersetzt Objektivkorrekturen vollständig"
               }
             },
             {
@@ -20237,7 +20429,8 @@
               "text": {
                 "en": "Clarity is a midtone contrast tool — easy to crunch skin and haze for no gain",
                 "fr": "La Clarté est un contraste de tons moyens — facile d’écraser peau et brume sans gain",
-                "es": "La Claridad es una herramienta de contraste de medios tonos — fácil de aplastar piel y bruma sin ganar nada"
+                "es": "La Claridad es una herramienta de contraste de medios tonos — fácil de aplastar piel y bruma sin ganar nada",
+                "de": "Klarheit ist ein Mittelton-Kontrastwerkzeug — leicht Haut und Dunst zu zerquetschen ohne Gewinn"
               }
             }
           ],
@@ -20247,7 +20440,8 @@
           "explanation": {
             "en": "Use Clarity with intent; faces and soft atmospheres often want restraint.",
             "fr": "Utilise la Clarté avec intention ; visages et atmosphères douces veulent souvent de la retenue.",
-            "es": "Usa la Claridad con intención; caras y atmósferas suaves suelen pedir contención."
+            "es": "Usa la Claridad con intención; caras y atmósferas suaves suelen pedir contención.",
+            "de": "Nutzen Sie Klarheit mit Absicht; Gesichter und weiche Atmosphären wollen oft Zurückhaltung."
           }
         }
       ]

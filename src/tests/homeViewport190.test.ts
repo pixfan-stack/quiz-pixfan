@@ -256,7 +256,7 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
     expect(withoutDe).toEqual([]);
   });
 
-  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone (+ gear-lenses allowed) have title.de', () => {
+  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone (+ gear-lenses/lightroom allowed) have title.de', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
       .map((q) => q.id)
@@ -270,12 +270,12 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
       'history-icons',
       'lexique-image-fixe',
       'light-color',
+      'lightroom-workflow',
       'photo-rights',
       'portrait-light',
       'public-domain',
       'retouching',
       'smartphone',
-    'gear-lenses',
     ]);
     expect(withDe.every((id) => allowed.has(id))).toBe(true);
     for (const id of [
@@ -297,11 +297,11 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
     expect(data.quizzes.length - withDe.length).toBeLessThanOrEqual(3);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside prior packs + smartphone/gear-lenses; ops no-gos through 1.90+; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside prior packs + smartphone/gear/lightroom; ops no-gos through 1.90+; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.90|no-go.*1\.91/);
+    expect(nextSteps).toMatch(/no-go.*1\.90|no-go.*1\.91|no-go.*1\.92/);
     expect(
       data.quizzes
         .filter(
@@ -318,7 +318,8 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
             q.id !== 'genres' &&
             q.id !== 'composition' &&
             q.id !== 'smartphone' &&
-            q.id !== 'gear-lenses'
+            q.id !== 'gear-lenses' &&
+            q.id !== 'lightroom-workflow'
         )
         .every((q) => {
           const title = q.title as { de?: string };

@@ -258,6 +258,7 @@ describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
       'retouching',
       'smartphone',
     'gear-lenses',
+      'lightroom-workflow',
     ]);
     expect(withDe.every((id) => allowed.has(id))).toBe(true);
     for (const id of [
@@ -299,7 +300,8 @@ describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
             q.id !== 'genres' &&
             q.id !== 'composition' &&
             q.id !== 'smartphone' &&
-            q.id !== 'gear-lenses'
+            q.id !== 'gear-lenses' &&
+            q.id !== 'lightroom-workflow'
         )
         .every((q) => {
           const title = q.title as { de?: string };
