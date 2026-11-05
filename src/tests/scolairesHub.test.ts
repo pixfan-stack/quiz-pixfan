@@ -133,11 +133,12 @@ describe('scolaires P0–P2 hub', () => {
   });
 
   it('guides index chrome links Scolaires via real URL', () => {
+    // Softened in 1.94: label may be localized via theme.js
     expect(guidesIndex).toMatch(
       /class="guide-nav-link" href="\/guides\/scolaires\/"/
     );
-    expect(guidesIndex).toContain(
-      'href="/guides/scolaires/" class="app-footer__link">Scolaires'
+    expect(guidesIndex).toMatch(
+      /href="\/guides\/scolaires\/" class="app-footer__link">(?:Scolaires|Schools|Colegios|Schule)/
     );
   });
 
@@ -147,11 +148,12 @@ describe('scolaires P0–P2 hub', () => {
   });
 
   it('genres and retouche chrome include Scolaires footer entry', () => {
-    expect(genresGuide).toContain(
-      'href="/guides/scolaires/" class="app-footer__link">Scolaires'
+    // Softened in 1.94: visible label localized via theme.js; href stays /guides/scolaires/
+    expect(genresGuide).toMatch(
+      /href="\/guides\/scolaires\/" class="app-footer__link">(?:Scolaires|Schools|Colegios|Schule)/
     );
-    expect(retoucheGuide).toContain(
-      'href="/guides/scolaires/" class="app-footer__link">Scolaires'
+    expect(retoucheGuide).toMatch(
+      /href="\/guides\/scolaires\/" class="app-footer__link">(?:Scolaires|Schools|Colegios|Schule)/
     );
   });
 });

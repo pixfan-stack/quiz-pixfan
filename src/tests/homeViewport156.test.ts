@@ -14,7 +14,7 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
     /* Docs headline moved to v1.57.0 in vague 1.58 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.55**');
     expect(nextSteps).toMatch(/no-go.*1\.56/);
-    expect(readme).toMatch(/v1\.(55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92)\.\d/);
+    expect(readme).toMatch(/v1\.(55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93)\.\d/);
   });
 
   it('guides hub ships real article.es (not EN stub)', () => {
