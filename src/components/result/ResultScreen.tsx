@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { pickLocale } from '../../utils/locale';
-import { guideLangQuery, toContentLang } from '../../utils/lang';
+import { toContentLang, withGuideLang } from '../../utils/lang';
 import {
   getPerformanceMessageKey,
   getResultBadgeKey,
@@ -61,7 +61,14 @@ export function ResultScreen({
 }: ResultScreenProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.resolvedLanguage ?? i18n.language;
-  const scolairesLang = guideLangQuery(i18n.language);
+  const scolairesRegardHref = withGuideLang(
+    '/guides/scolaires/#c4-regard',
+    i18n.language
+  );
+  const scolairesLumiereHref = withGuideLang(
+    '/guides/scolaires/#c4-lumiere',
+    i18n.language
+  );
   const langCode = toContentLang(lang);
   const quizTitle = pickLocale(quiz.title, lang);
   const messageKey = getPerformanceMessageKey(result.percentage);
@@ -329,7 +336,7 @@ export function ResultScreen({
               </button>
               <a
                 className="btn btn--secondary result-continue-pack__scolaires"
-                href={`/guides/scolaires/${scolairesLang}#c4-regard`}
+                href={scolairesRegardHref}
                 data-testid="result-continue-scolaires"
               >
                 {t('result.continueScolairesCta')}
@@ -357,7 +364,7 @@ export function ResultScreen({
               </button>
               <a
                 className="btn btn--secondary result-continue-pack__scolaires"
-                href={`/guides/scolaires/${scolairesLang}#c4-lumiere`}
+                href={scolairesLumiereHref}
                 data-testid="result-continue-scolaires-light"
               >
                 {t('result.continueScolairesLightCta')}

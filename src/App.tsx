@@ -68,6 +68,7 @@ function prefetchQuizScreen(): void {
  */
 export default function App() {
   const { t, i18n } = useTranslation();
+  const guidesHubHref = withGuideLang('/guides/', i18n.language);
   const scolairesHubHref = withGuideLang(
     '/guides/scolaires/',
     i18n.language
@@ -361,7 +362,7 @@ export default function App() {
         </div>
 
         <div className="app-header__controls">
-          <a href="/guides/" className="guide-nav-link">
+          <a href={guidesHubHref} className="guide-nav-link">
             {t('footer.guides')}
           </a>
           <a
@@ -493,7 +494,7 @@ export default function App() {
 
       <footer className="app-footer">
         <nav className="app-footer__guides" aria-label={t('footer.guides')}>
-          <a href="/guides/" className="app-footer__link">
+          <a href={guidesHubHref} className="app-footer__link">
             {t('footer.guides')}
           </a>
           <a

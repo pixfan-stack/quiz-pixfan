@@ -30,7 +30,9 @@ describe('scolaires chrome URL + nav', () => {
   it('app chrome links to real /guides/scolaires/ (not hash-only)', () => {
     expect(appSource).toContain("'/guides/scolaires/'");
     expect(appSource).toContain('withGuideLang');
+    expect(appSource).toContain('guidesHubHref');
     expect(appSource).toContain('scolairesHubHref');
+    expect(appSource).toContain('href={guidesHubHref}');
     expect(appSource).toContain('data-testid="footer-scolaires-link"');
     expect(appSource).toContain('data-testid="header-scolaires-link"');
     expect(appSource).not.toMatch(
