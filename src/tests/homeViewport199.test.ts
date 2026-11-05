@@ -96,7 +96,9 @@ describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
     expect(localeShells).toContain("lang=\"${lang}\"");
     expect(localeShells).toMatch(/Quiz de fotografía/i);
     expect(localeShells).toContain('dist/{en,es,de}');
-    expect(redirects).toMatch(/\/\?lang=es\s+\/es\/\s+301/);
+    // CF Pages: never ship `/?lang=` → path rules (they match `/` and break FR home).
+    expect(redirects).not.toMatch(/\/\?lang=/);
+    expect(redirects).toMatch(/\/en\s+\/en\/\s+301/);
     expect(redirects).toMatch(/\/en\/guides\/\*\s+\/guides\/:splat\s+200/);
     expect(redirects).toMatch(/\/es\/guides\/\s+\/guides\/index\.html\s+200/);
   });
