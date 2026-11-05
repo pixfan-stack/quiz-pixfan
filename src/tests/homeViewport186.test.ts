@@ -39,11 +39,11 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () => {
   it('docs headline cites v1.85.0+; vague 1.85/1.86 listed; no-go through 1.86+', () => {
-    expect(readme).toMatch(/v1\.8[5-8]\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.8[5-8]\.0\*\*/);
+    expect(readme).toMatch(/v1\.8[5-9]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.8[5-9]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.85**');
     expect(nextSteps).toContain('Vague **1.86**');
-    expect(nextSteps).toMatch(/no-go.*1\.8[6-8]/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[6-9]/);
   });
 
   it('public-domain ships .de on all LocalizedString fields (194)', () => {
@@ -242,15 +242,15 @@ describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () =>
       ])
     );
     expect(withDe.length).toBeGreaterThanOrEqual(8);
-    expect(withDe.length).toBeLessThanOrEqual(11);
-    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(4);
+    expect(withDe.length).toBeLessThanOrEqual(12);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(3);
   });
 
   it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain(+exposure-basics); ops no-gos through 1.86; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.8[6-8]/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[6-9]/);
     expect(
       data.quizzes
         .filter(
@@ -265,7 +265,8 @@ describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () =>
             q.id !== 'public-domain' &&
             q.id !== 'exposure-basics' &&
             q.id !== 'genres' &&
-            q.id !== 'composition'
+            q.id !== 'composition' &&
+            q.id !== 'smartphone'
         )
         .every((q) => {
           const title = q.title as { de?: string };

@@ -38,12 +38,12 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
-  it('docs headline cites v1.88.0; vague 1.88/1.89 listed; no-go through 1.89', () => {
-    expect(readme).toContain('v1.88.0');
-    expect(nextSteps).toContain('**v1.88.0**');
+  it('docs headline cites v1.88.0 or later; vague 1.88/1.89 listed; no-go through 1.89+', () => {
+    expect(readme).toMatch(/v1\.8[89]\.0|v1\.9\d+\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.8[89]\.0\*\*|\*\*v1\.9\d+\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.88**');
     expect(nextSteps).toContain('Vague **1.89**');
-    expect(nextSteps).toMatch(/no-go.*1\.89/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[9]|no-go.*1\.90/);
   });
 
   it('composition ships .de on all LocalizedString fields (230)', () => {
@@ -238,12 +238,12 @@ describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
     expect(withoutEs).toEqual([]);
   });
 
-  it('série DE: only lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition have title.de (4 others without)', () => {
+  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition (+ smartphone allowed) have title.de', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
       .map((q) => q.id)
       .sort();
-    expect(withDe).toEqual([
+    const allowed = new Set([
       'composition',
       'exposure-basics',
       'flash-studio',
@@ -255,15 +255,32 @@ describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
       'portrait-light',
       'public-domain',
       'retouching',
+      'smartphone',
     ]);
-    expect(data.quizzes.length - withDe.length).toBe(4);
+    expect(withDe.every((id) => allowed.has(id))).toBe(true);
+    for (const id of [
+      'composition',
+      'exposure-basics',
+      'flash-studio',
+      'genres',
+      'history-icons',
+      'lexique-image-fixe',
+      'light-color',
+      'photo-rights',
+      'portrait-light',
+      'public-domain',
+      'retouching',
+    ]) {
+      expect(withDe).toContain(id);
+    }
+    expect(data.quizzes.length - withDe.length).toBeLessThanOrEqual(4);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain+exposure-basics+genres+composition; ops no-gos through 1.89; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain+exposure-basics+genres+composition+smartphone; ops no-gos through 1.89+; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.89/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[9]|no-go.*1\.90/);
     expect(
       data.quizzes
         .filter(
@@ -278,7 +295,8 @@ describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
             q.id !== 'public-domain' &&
             q.id !== 'exposure-basics' &&
             q.id !== 'genres' &&
-            q.id !== 'composition'
+            q.id !== 'composition' &&
+            q.id !== 'smartphone'
         )
         .every((q) => {
           const title = q.title as { de?: string };
