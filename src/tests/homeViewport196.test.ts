@@ -46,11 +46,13 @@ const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 
 describe('vague 1.96 — docs v1.95.0 + ROI SC measurement gate', () => {
   it('docs headline cites v1.95.0; vague 1.95/1.96 listed; no-go through 1.96', () => {
-    expect(readme).toContain('v1.95.0');
-    expect(nextSteps).toContain('**v1.95.0**');
+    // Softened in 1.97: headline may cite v1.96.0 (Livré pattern)
+    expect(readme).toMatch(/v1\.95\.0|v1\.96\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.95\.0\*\*|\*\*v1\.96\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.95**');
     expect(nextSteps).toContain('Vague **1.96**');
-    expect(nextSteps).toMatch(/no-go.*1\.96/);
+    // Softened in 1.97: no-go line may extend through 1.97
+    expect(nextSteps).toMatch(/no-go.*1\.9[67]/);
     expect(nextSteps).toMatch(/ROI|Search Console|gate/i);
     expect(nextSteps).not.toMatch(
       /suite.*path\s*`?\/es\/`?\s*`?\/de\/`?\s*comme suite automatique/i
@@ -59,7 +61,7 @@ describe('vague 1.96 — docs v1.95.0 + ROI SC measurement gate', () => {
 
   it('NEXT_STEPS announces ROI SC gate / readout (not automatic path ship)', () => {
     expect(nextSteps).toMatch(/ROI Search Console|ROI SC|measurement gate|readout/i);
-    expect(nextSteps).toMatch(/path no-go|ROI insuffisant/i);
+    expect(nextSteps).toMatch(/path no-go|ROI insuffisant|reste no-go|reste interdit/i);
     expect(nextSteps).toMatch(/roi-sc-gate|roi-sc-evidence/i);
     expect(nextSteps).not.toMatch(
       /Vague \*\*1\.96\*\*.*ship.*\/es\/|Vague \*\*1\.96\*\*.*path-locale/i
@@ -134,7 +136,8 @@ describe('vague 1.96 — docs v1.95.0 + ROI SC measurement gate', () => {
 
   it('ops no-gos through 1.96; SVG theme toggle kept in App', () => {
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.96/);
+    // Softened in 1.97: no-go line may extend through 1.97
+    expect(nextSteps).toMatch(/no-go.*1\.9[67]/);
     expect(appSource).toContain('className="dark-mode-toggle"');
     expect(appSource).toContain('dark-mode-toggle__icon');
   });
