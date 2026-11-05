@@ -60,11 +60,12 @@ test.describe('Scolaires URL + chrome', () => {
     await expect(page.locator('h1').first()).toContainText(/Guides/i, {
       timeout: 8000,
     });
+    // theme.js withLangHref always appends ?lang= (vague 1.95)
     await expect(
-      page.locator('a.guide-nav-link[href="/guides/scolaires/"]')
+      page.locator('a.guide-nav-link[href^="/guides/scolaires/"]')
     ).toBeVisible();
     await expect(
-      page.locator('a.app-footer__link[href="/guides/scolaires/"]')
+      page.locator('a.app-footer__link[href^="/guides/scolaires/"]')
     ).toBeVisible();
     await page.goto('/guides/scolaires/');
     await expect(
@@ -86,10 +87,10 @@ test.describe('Scolaires URL + chrome', () => {
         timeout: 8000,
       });
       await expect(
-        page.locator('a.guide-nav-link[href="/guides/scolaires/"]')
+        page.locator('a.guide-nav-link[href^="/guides/scolaires/"]')
       ).toBeVisible();
       await expect(
-        page.locator('a.app-footer__link[href="/guides/scolaires/"]')
+        page.locator('a.app-footer__link[href^="/guides/scolaires/"]')
       ).toBeVisible();
     }
   });
