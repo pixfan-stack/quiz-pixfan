@@ -58,30 +58,30 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
 
   it('regress: home/fiche keep hreflang es+de + sitemap twins', () => {
     expect(indexHtml).toContain(
-      '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />'
+      'hreflang="es" href="https://quiz.pixfan.fr/es/"'
     );
     expect(indexHtml).toContain(
-      '<link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/?lang=de" />'
+      'hreflang="de" href="https://quiz.pixfan.fr/de/"'
     );
     expect(fiche).toContain(
-      '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es" />'
+      'hreflang="es" href="https://quiz.pixfan.fr/es/guides/scolaires/fiche-seance.html"'
     );
     expect(fiche).toContain(
-      '<link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=de" />'
+      'hreflang="de" href="https://quiz.pixfan.fr/de/guides/scolaires/fiche-seance.html"'
     );
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/');
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es'
+      'https://quiz.pixfan.fr/es/guides/scolaires/fiche-seance.html'
     );
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=de'
+      'https://quiz.pixfan.fr/de/guides/scolaires/fiche-seance.html'
     );
   });
 
   it('still no path-locale /es/|/de/; portrait-light .es unlocked in 1.70; ops no-gos through 1.69', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.69/);
     const packsWithoutEs = questions.quizzes

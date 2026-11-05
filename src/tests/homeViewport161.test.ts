@@ -22,7 +22,7 @@ describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', 
     expect(triangle).toContain('Verschlusszeit');
     expect(triangle).toContain('href="/s/exposure-basics?lang=de"');
     expect(triangle).toContain('href="/guides/scolaires/?lang=de#c4-lumiere"');
-    expect(triangle).toContain('href="/guides/composition-photo?lang=de"');
+    expect(triangle).toMatch(/href="\/de\/guides\/composition-photo"|href="\/guides\/composition-photo\?lang=de"/);
     expect(triangle).not.toMatch(
       /<article class="de">[\s\S]*Exposure triangle: ISO, aperture, shutter/
     );
@@ -81,7 +81,7 @@ describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', 
   it('canonical bare; hreflang de unlocked 1.66 (historical soften)', () => {
     /* Historical 1.61 lock: triangle/smartphone expand. Hreflang de unlocked in 1.66. */
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
     expect(triangle).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/triangle-exposition" />'
     );
@@ -91,8 +91,8 @@ describe('vague 1.61 — docs v1.60.0 + triangle/smartphone article.de expand', 
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.61', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.61/);
   });

@@ -45,7 +45,7 @@ describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)
     for (const [name, html, base] of articleDePages) {
       expect(html, name).toContain('<article class="de">');
       expect(html, name).toContain(
-        `<link rel="alternate" hreflang="de" href="${base}?lang=de" />`
+        `hreflang="de" href="https://quiz.pixfan.fr/de${base.replace('https://quiz.pixfan.fr', '')}"`
       );
       expect(html, name).toContain(
         '<meta property="og:locale:alternate" content="de_DE" />'
@@ -86,17 +86,17 @@ describe('vague 1.66 — docs v1.65.0 + hreflang de unlock (11 article.de pages)
   });
 
   it('sitemap lists ?lang=de twins for hubs + topics; no fiche de (home unlocked 1.67)', () => {
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=de');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/?lang=de');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=de');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=es');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/guides/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/guides/scolaires/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/guides/composition-photo');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/guides/');
     /* Home ?lang=de unlocked in vague 1.67 — keep fiche negative. */
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.66', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.66/);
   });

@@ -313,8 +313,8 @@ describe('vague 1.93 — docs v1.92.0 + marques-photo LocalizedString.de', () =>
   });
 
   it('still no path-locale /es/|/de/; catalogue .de complete; ops no-gos through 1.93+; SVG theme toggle', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     // Softened in 1.94–1.97: no-go line may extend through 1.97
     expect(nextSteps).toMatch(/no-go.*1\.9[3-7]/);

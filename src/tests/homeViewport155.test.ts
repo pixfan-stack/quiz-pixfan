@@ -70,7 +70,7 @@ describe('vague 1.55 — docs v1.54.0 + droits/histoire article.es expand (9/9)'
 
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
   });
 });

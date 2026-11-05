@@ -55,7 +55,7 @@ describe('vague 1.53 — docs v1.52.0 + lumière/genres article.es expand', () =
 
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
   });
 });

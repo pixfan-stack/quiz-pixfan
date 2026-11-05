@@ -17,10 +17,10 @@
     <meta name="author" content="PixFan" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://quiz.pixfan.fr/" />
-    <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/?lang=fr" />
-    <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/?lang=en" />
-    <link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />
-    <link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/?lang=de" />
+    <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/" />
+    <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/en/" />
+    <link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/es/" />
+    <link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/de/" />
     <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/" />
 
     <!-- Open Graph -->
@@ -54,10 +54,11 @@
     <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
     <meta name="twitter:image:alt" content="Quiz PixFan — 386 photography questions, 268 illustrated, photo-reading, FR/EN/ES/DE" />
 
-    <!-- Locale sniff (?lang=) — home meta ES (1.58) + DE unlock (vague 1.67); EN parity -->
+    <!-- Locale sniff (path /en|/es|/de first, else ?lang=) — vague 1.99 path product -->
     <script>
       (function () {
-        var p = new URLSearchParams(location.search).get('lang');
+        var pathLang = (location.pathname.match(/^\/(en|es|de)(?=\/|$)/) || [])[1];
+        var p = pathLang || new URLSearchParams(location.search).get('lang');
         if (p === 'en' || p === 'fr' || p === 'es' || p === 'de') document.documentElement.lang = p;
         var desc = document.querySelector('meta[name="description"]');
         var ogTitle = document.querySelector('meta[property="og:title"]');
@@ -246,7 +247,7 @@
               "inLanguage": "fr",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "L’interface est disponible en FR, EN, ES et DE. Les guides et la fiche séance suivent la locale (?lang=). Les catalogues de questions FR, EN, ES et DE sont complets (15 packs / 386 questions). Vous pouvez changer de langue à tout moment."
+                "text": "L’interface est disponible en FR, EN, ES et DE. Les guides et la fiche séance suivent la locale (chemins /en/ /es/ /de/ ou ?lang=). Les catalogues de questions FR, EN, ES et DE sont complets (15 packs / 386 questions). Vous pouvez changer de langue à tout moment."
               }
             },
             {
@@ -255,7 +256,7 @@
               "inLanguage": "en",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The UI is available in FR, EN, ES, and DE. Guides and the lesson sheet follow the locale (?lang=). Question catalogs in FR, EN, ES, and DE are complete (15 packs / 386 questions). You can switch language anytime."
+                "text": "The UI is available in FR, EN, ES, and DE. Guides and the lesson sheet follow the locale (/en/ /es/ /de/ paths or ?lang=). Question catalogs in FR, EN, ES, and DE are complete (15 packs / 386 questions). You can switch language anytime."
               }
             },
             {
@@ -264,7 +265,7 @@
               "inLanguage": "es",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "La interfaz está disponible en FR, EN, ES y DE. Las guías y la ficha de sesión siguen el idioma (?lang=). Los catálogos de preguntas FR, EN, ES y DE están completos (15 packs / 386 preguntas). Puedes cambiar de idioma en cualquier momento."
+                "text": "La interfaz está disponible en FR, EN, ES y DE. Las guías y la ficha de sesión siguen el idioma (rutas /en/ /es/ /de/ o ?lang=). Los catálogos de preguntas FR, EN, ES y DE están completos (15 packs / 386 preguntas). Puedes cambiar de idioma en cualquier momento."
               }
             },
             {
@@ -273,7 +274,7 @@
               "inLanguage": "de",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Die Oberfläche ist in FR, EN, ES und DE verfügbar. Guides und Sitzungsblatt folgen der Locale (?lang=). Die Fragenkataloge FR, EN, ES und DE sind vollständig (15 Packs / 386 Fragen). Die Sprache lässt sich jederzeit wechseln."
+                "text": "Die Oberfläche ist in FR, EN, ES und DE verfügbar. Guides und Sitzungsblatt folgen der Locale (Pfade /en/ /es/ /de/ oder ?lang=). Die Fragenkataloge FR, EN, ES und DE sind vollständig (15 Packs / 386 Fragen). Die Sprache lässt sich jederzeit wechseln."
               }
             },
             {
@@ -412,17 +413,17 @@
           <a href="/s/photo-reading">Photo-reading</a>
         </p>
         <p>
-          <a href="/?lang=en">English</a>
+          <a href="/en/">English</a>
           ·
-          <a href="/?lang=es">Español</a>
+          <a href="/es/">Español</a>
           ·
-          <a href="/?lang=de">Deutsch</a>
+          <a href="/de/">Deutsch</a>
           ·
-          <a href="/guides/?lang=en">Guides (EN)</a>
+          <a href="/en/guides/">Guides (EN)</a>
           ·
-          <a href="/guides/?lang=es">Guías</a>
+          <a href="/es/guides/">Guías</a>
           ·
-          <a href="/guides/?lang=de">Leitfäden</a>
+          <a href="/de/guides/">Leitfäden</a>
         </p>
       </main>
     </noscript>

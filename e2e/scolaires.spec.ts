@@ -45,11 +45,11 @@ test.describe('Scolaires URL + chrome', () => {
     await expect(footer).toBeVisible();
     await expect(header).toHaveAttribute(
       'href',
-      /\/guides\/scolaires\/(\?lang=en)?$/
+      /\/(en\/)?guides\/scolaires\/(\?lang=en)?$/
     );
     await expect(footer).toHaveAttribute(
       'href',
-      /\/guides\/scolaires\/(\?lang=en)?$/
+      /\/(en\/)?guides\/scolaires\/(\?lang=en)?$/
     );
   });
 
@@ -60,7 +60,7 @@ test.describe('Scolaires URL + chrome', () => {
     await expect(page.locator('h1').first()).toContainText(/Guides/i, {
       timeout: 8000,
     });
-    // theme.js withLangHref always appends ?lang= (vague 1.95)
+    // theme.js withLangHref uses path locales (vague 1.99); ?lang= dual soft
     await expect(
       page.locator('a.guide-nav-link[href^="/guides/scolaires/"]')
     ).toBeVisible();

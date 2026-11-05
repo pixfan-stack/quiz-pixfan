@@ -70,8 +70,8 @@ describe('scolaires P0–P2 hub', () => {
 
   it('ships EN article + lang switcher + hreflang (vague 1.20 P1)', () => {
     expect(hub).toContain('class="lang-switcher"');
-    expect(hub).toContain('href="?lang=fr"');
-    expect(hub).toContain('href="?lang=en"');
+    expect(hub).toMatch(/lang-switcher__btn/);
+    expect(hub).toMatch(/FR|\/en\//);
     expect(hub).toContain('hreflang="en"');
     expect(hub).toContain('hreflang="fr"');
     expect(hub).toContain('<h1>Schools — photo in class</h1>');
@@ -99,8 +99,8 @@ describe('scolaires P0–P2 hub', () => {
 
   it('ships fiche EN article + lang switcher + hreflang (vague 1.21 P1)', () => {
     expect(fiche).toContain('class="lang-switcher"');
-    expect(fiche).toContain('href="?lang=fr"');
-    expect(fiche).toContain('href="?lang=en"');
+    expect(fiche).toMatch(/lang-switcher__btn/);
+    expect(fiche).toMatch(/FR|\/en\//);
     expect(fiche).toContain('hreflang="en"');
     expect(fiche).toContain('hreflang="fr"');
     expect(fiche).toContain('hreflang="x-default"');

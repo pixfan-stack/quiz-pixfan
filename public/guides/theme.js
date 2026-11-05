@@ -2,7 +2,8 @@
  * Day/night toggle + chrome i18n for static guide pages.
  * Shares the SPA key + class: localStorage `quiz-pixfan-dark-mode`, html.dark-mode
  * (see src/hooks/useDarkMode.ts).
- * Chrome nav/footer labels follow ?lang= / documentElement.lang (fr/en/es/de).
+ * Chrome nav/footer labels follow path locale / documentElement.lang / ?lang=
+ * (vague 1.99 path product: /en/ /es/ /de/).
  */
 (function () {
   var STORAGE_KEY = 'quiz-pixfan-dark-mode';
@@ -48,12 +49,18 @@
   };
 
   function resolveLang() {
+    try {
+      var pathLang = (location.pathname.match(/^\/(en|es|de)(?=\/|$)/) || [])[1];
+      if (pathLang) return pathLang;
+    } catch (e) {
+      /* ignore */
+    }
     var raw = (document.documentElement.lang || '').toLowerCase();
     if (raw === 'fr' || raw === 'en' || raw === 'es' || raw === 'de') return raw;
     try {
       var p = new URLSearchParams(location.search).get('lang');
       if (p === 'fr' || p === 'en' || p === 'es' || p === 'de') return p;
-    } catch (e) {
+    } catch (e2) {
       /* ignore */
     }
     return 'fr';
@@ -88,11 +95,13 @@
     el.textContent = text;
   }
 
-  /** Normalize pathname: trailing slash, no query/hash. */
+  /** Normalize pathname: strip locale prefix, trailing slash, no query/hash. */
   function chromePathname(href) {
     try {
       var u = new URL(href, 'https://quiz.pixfan.fr');
       var p = u.pathname || '/';
+      p = p.replace(/^\/(en|es|de)(?=\/|$)/, '') || '/';
+      if (p.charAt(0) !== '/') p = '/' + p;
       if (p.charAt(p.length - 1) !== '/') p += '/';
       return p;
     } catch (e) {
@@ -109,8 +118,8 @@
   }
 
   /**
-   * Preserve ?lang= on chrome hub links (vague 1.95).
-   * Keeps hash if present; never invents /es/|/de/ path prefixes.
+   * Path-locale chrome hub links (vague 1.99).
+   * FR → bare `/guides/`; EN/ES/DE → `/xx/guides/…`. Keeps hash.
    */
   function withLangHref(basePath, href) {
     var lang = resolveLang();
@@ -121,7 +130,9 @@
     } catch (e) {
       /* ignore */
     }
-    return basePath + '?lang=' + lang + hash;
+    if (lang === 'fr') return basePath + hash;
+    var path = basePath.charAt(0) === '/' ? basePath : '/' + basePath;
+    return '/' + lang + path + hash;
   }
 
   function applyChromeLabels() {

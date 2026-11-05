@@ -29,7 +29,7 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
 
   it('home exposes hreflang="es" + og:locale:alternate es_ES + JSON-LD inLanguage es', () => {
     expect(indexHtml).toContain(
-      '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />'
+      'hreflang="es" href="https://quiz.pixfan.fr/es/"'
     );
     expect(indexHtml).toContain('hreflang="fr"');
     expect(indexHtml).toContain('hreflang="en"');
@@ -43,17 +43,17 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
   });
 
   it('sitemap lists home ?lang=en and ?lang=es; no fiche de (home de in 1.67)', () => {
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=en');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/en/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/');
     /* guides ?lang=de unlocked in 1.66; home in 1.67 — fiche still forbidden */
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
   });
 
   it('no path-locale; ops no-gos through 1.58+; fiche es unlocked in 1.59 (historical)', () => {
     /* fiche gained article.es + hreflang es in vague 1.59 — keep no-de / path locks */
     expect(fiche).toContain('hreflang="de"'); /* unlocked vague 1.68 */
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.58/);
   });

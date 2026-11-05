@@ -3,5 +3,27 @@
 /sitemap.xml    /sitemap.xml    200
 /robots.txt     /robots.txt     200
 
+# Path locales (vague 1.99) — trailing slash + home ?lang= → path
+/en    /en/    301
+/es    /es/    301
+/de    /de/    301
+
+/?lang=en    /en/    301
+/?lang=es    /es/    301
+/?lang=de    /de/    301
+/?lang=fr    /      301
+
+# Guides under locale prefix → same static HTML (sniff reads path; no thin duplicates)
+/en/guides    /en/guides/    301
+/es/guides    /es/guides/    301
+/de/guides    /de/guides/    301
+/en/guides/   /guides/index.html   200
+/es/guides/   /guides/index.html   200
+/de/guides/   /guides/index.html   200
+/en/guides/*  /guides/:splat   200
+/es/guides/*  /guides/:splat   200
+/de/guides/*  /guides/:splat   200
+
 # Cloudflare Pages SPA fallback (safe even without client-side routes)
+# Real files at /en/index.html /es/index.html /de/index.html win over this catch-all.
 /*    /index.html   200

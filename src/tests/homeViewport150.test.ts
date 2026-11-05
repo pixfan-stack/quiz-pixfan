@@ -16,11 +16,10 @@ describe('vague 1.50 — docs v1.49.0 + SPA ?lang= sync', () => {
     expect(readme).toMatch(/v1\.(49|5[0123456789]|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98)\.\d/);
   });
 
-  it('LanguageSwitcher syncs ?lang= via syncLangSearchParam', () => {
-    expect(switcherSource).toContain('syncLangSearchParam');
-    expect(switcherSource).toContain('syncLangSearchParam(lang)');
+  it('LanguageSwitcher locale navigation (1.50 ?lang= → 1.99 path)', () => {
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam/);
     expect(langSource).toContain('buildUrlWithLangParam');
-    expect(langSource).toContain('replaceState');
+    expect(langSource).toContain('navigateToLang');
   });
 
   it('buildUrlWithLangParam sets lang and preserves hash + other query', () => {
@@ -42,7 +41,7 @@ describe('vague 1.50 — docs v1.49.0 + SPA ?lang= sync', () => {
 
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
   });
 });

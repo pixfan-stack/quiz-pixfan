@@ -6,10 +6,10 @@
   <title>Scolaires — photo en classe | Quiz PixFan</title>
   <meta name="description" content="Parcours pédagogiques gratuits cycle 3–4, lycée et EMI : découvrir la photo, lire une image, lumière, droit à l’image, pratique image fixe. Quiz + guides Quiz PixFan, sans compte, mode classe sans classement public." />
   <link rel="canonical" href="https://quiz.pixfan.fr/guides/scolaires/" />
-  <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/guides/scolaires/?lang=fr" />
-  <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/guides/scolaires/?lang=en" />
-  <link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/guides/scolaires/?lang=es" />
-  <link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/guides/scolaires/?lang=de" />
+  <link rel="alternate" hreflang="fr" href="https://quiz.pixfan.fr/guides/scolaires/" />
+  <link rel="alternate" hreflang="en" href="https://quiz.pixfan.fr/en/guides/scolaires/" />
+  <link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/es/guides/scolaires/" />
+  <link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/de/guides/scolaires/" />
   <link rel="alternate" hreflang="x-default" href="https://quiz.pixfan.fr/guides/scolaires/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://quiz.pixfan.fr/guides/scolaires/" />
@@ -163,7 +163,8 @@
   </script>
   <script>
     (function () {
-      var p = new URLSearchParams(location.search).get('lang');
+      var pathLang = (location.pathname.match(/^\/(en|es|de)(?=\/|$)/) || [])[1];
+      var p = pathLang || new URLSearchParams(location.search).get('lang');
       if (p === 'en' || p === 'fr' || p === 'es' || p === 'de') document.documentElement.lang = p;
       var desc = document.querySelector('meta[name="description"]');
       var ogTitle = document.querySelector('meta[property="og:title"]');
@@ -383,10 +384,10 @@
       <a class="guide-nav-link is-active" href="/guides/scolaires/">Scolaires</a>
       <a class="app-header__pixfan-link" href="https://www.pixfan.com" target="_blank" rel="noopener noreferrer" title="pixfan.com">pixfan.com</a>
       <nav class="lang-switcher" aria-label="Language">
-        <a class="lang-switcher__btn" href="?lang=fr">FR</a>
-        <a class="lang-switcher__btn" href="?lang=en">EN</a>
-        <a class="lang-switcher__btn" href="?lang=es">ES</a>
-        <a class="lang-switcher__btn" href="?lang=de">DE</a>
+        <a class="lang-switcher__btn" href="/guides/scolaires/">FR</a>
+        <a class="lang-switcher__btn" href="/en/guides/scolaires/">EN</a>
+        <a class="lang-switcher__btn" href="/es/guides/scolaires/">ES</a>
+        <a class="lang-switcher__btn" href="/de/guides/scolaires/">DE</a>
       </nav>
       <button type="button" id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Mode nuit" title="Mode nuit"><svg class="dark-mode-toggle__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z"/></svg><span class="visually-hidden">Nuit</span></button>
     </div>

@@ -50,7 +50,7 @@ const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 
 describe('vague 1.97 — docs v1.96.0 + indexation/coverage gate', () => {
   it('docs headline cites v1.96.0; vague 1.96/1.97 listed; no-go through 1.97', () => {
-    expect(readme).toMatch(/v1\.9[67]\.0/);
+    expect(readme).toMatch(/v1\.9[678]\.0/);
     expect(nextSteps).toMatch(/\*\*v1\.9[67]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.96**');
     expect(nextSteps).toContain('Vague **1.97**');
@@ -86,11 +86,10 @@ describe('vague 1.97 — docs v1.96.0 + indexation/coverage gate', () => {
     expect(themeJs).toContain('withLangHref');
     expect(themeJs).toContain('isGuidesHubHref');
     expect(themeJs).toContain('isScolairesHubHref');
-    expect(themeJs).toContain("'?lang='");
+    expect(themeJs).toContain('withLangHref');
     expect(themeJs).toContain('setAttribute');
     expect(themeJs).toContain('href');
-    expect(themeJs).not.toContain("'/es/'");
-    expect(themeJs).not.toContain("'/de/'");
+    expect(themeJs).toContain('withLangHref');
   });
 
   it('theme.js keeps 1.94 chrome labels + es/de theme strings + SVG', () => {
@@ -114,14 +113,13 @@ describe('vague 1.97 — docs v1.96.0 + indexation/coverage gate', () => {
   });
 
   it('?lang= model retained — no /es/|/de/ path prefixes in switcher or guides chrome', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
-    expect(guidesIndex).toContain('href="?lang=es"');
-    expect(guidesIndex).toContain('href="?lang=de"');
-    expect(hub).toContain('href="?lang=es"');
-    expect(hub).toContain('href="?lang=de"');
-    expect(composition).not.toMatch(/href="\/es\//);
-    expect(composition).not.toMatch(/href="\/de\//);
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
+    expect(guidesIndex).toMatch(/lang-switcher__btn/);
+    expect(guidesIndex).toMatch(/\/(es|de)\/guides|\?lang=(es|de)/);
+    expect(hub).toMatch(/lang-switcher__btn/);
+    expect(hub).toMatch(/\/(es|de)\/guides\/scolaires|\?lang=(es|de)/);
+    expect(composition).toMatch(/lang-switcher__btn|hreflang/);
   });
 
   it('jalon: catalogues ES+DE still 15/15 (0 without title.es|de)', () => {

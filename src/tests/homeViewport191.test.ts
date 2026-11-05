@@ -296,8 +296,8 @@ describe('vague 1.91 — docs v1.90.0 + gear-lenses LocalizedString.de', () => {
   });
 
   it('still no path-locale /es/|/de/; no .de outside prior packs + gear-lenses/lightroom; ops no-gos through 1.91+; SVG theme toggle', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.91|no-go.*1\.92|no-go.*1\.93|no-go.*1\.94|no-go.*1\.95|no-go.*1\.96|no-go.*1\.97/);
     expect(

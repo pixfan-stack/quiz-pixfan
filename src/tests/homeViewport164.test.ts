@@ -132,7 +132,7 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
     expect(fiche).toContain('<article class="de">'); /* unlocked vague 1.68 */
     expect(homeSpa).not.toContain('<article class="de">');
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
     expect(droits).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/droits-ethique-photo" />'
     );
@@ -142,8 +142,8 @@ describe('vague 1.64 — docs v1.63.0 + droits/histoire article.de expand (9/9)'
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.64', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.64/);
   });

@@ -1,9 +1,10 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.97.0**).
+Document à jour avec l’état réel du dépôt (**v1.98.0**).
 
 ## ✅ Livré
 
+- Vague **1.99** : **path locales** `/en/` `/es/` `/de/` (FR = `/` x-default) · shells home build · LanguageSwitcher path · guides rewrite+sniff · sitemap path locs (74) · `/?lang=` → path 301 · armor 199 — Web Push · salon · 16ᵉ **no-go** through **1.99**
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
 - Vague **1.98** : **sitemap lastmod refresh** (74 locs · floor 2026-11-05) · inventaire CI (`sitemapHygiene`) · textes crawlables Googlebot (FAQ catalogues complets · meta FR/EN/ES/DE · `<noscript>` home · hub guides lead) · docs v1.97.0 · armor 198 — **pas** path `/es/` `/de/` · **pas** inventer D1–D5 GSC
 - Vague **1.97** : docs v1.96.0 · **indexation / coverage** gate (checklist D1–D5 + remédiation ops ; **pas** path `/es/` `/de/`) · armor 197 — crawlability locks (robots Allow · sitemap · no noindex home) · SVG + `withLangHref` + catalogues 15/15 inchangés
@@ -207,10 +208,16 @@ Gate + evidence : store `docs/roi-sc-gate.md` · `docs/roi-sc-evidence-1-96.md`.
 
 Checklist store : `docs/indexation-coverage-1-97.md` (D1–D5 — **slots vides** en attente readout GSC/CF Antony). Path `/es/` `/de/` **reste no-go**.
 
-### Sitemap + crawl text — vague 1.98 (**pas** path)
+### Sitemap + crawl text — vague 1.98
 
 Demande Antony : sitemap à jour + URLs/textes lisibles Googlebot.  
 Livré : `public/sitemap.xml` lastmod **2026-11-05** · `sitemapHygiene` inventaire strict (74 locs · packs sync) · `index.html` FAQ/meta/noscript · hub guides lead.  
-D1–D5 GSC/CF **reste awaiting** (pas inventé). Path `/es/` `/de/` **reste no-go** through **1.98**.
+D1–D5 GSC/CF **reste awaiting** (pas inventé).
 
-Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt. · Scolaires `.es` complets · non-scolaires `.es` **complets (3/3)** · catalogues ES+DE **complets (15/15)** · scolaires DE **complets** · chrome Guides/Schools static i18n **fermé** (1.94) · préservation `?lang=` href chrome **fermée** (1.95) · ROI SC gate (1.96) · indexation/coverage ops (1.97) · **sitemap + crawl text** (1.98) — **pas** path `/es/` `/de/` comme suite automatique (path seulement si indexation réelle + ROI Search Console documenté + oui). Web Push · salon · 16ᵉ **no-go** through **1.98**.
+### Path locales — vague 1.99 (**override ROI Antony**)
+
+Override : « go path `/es/` `/de/` `/en` ».  
+Livré : shells `/en/` `/es/` `/de/` · SPA path detect · LanguageSwitcher path · guides `_redirects` rewrite + sniff · sitemap path locs (74, remplace `?lang=` twins) · home `/?lang=` → 301 path.  
+`/s/*` reste `?lang=` runtime. Web Push · salon · 16ᵉ **no-go** through **1.99**.
+
+Contenu : `public/data/questions.json`. Catalogues ES+DE **complets (15/15)**. Web Push · salon · 16ᵉ **no-go** through **1.99**.

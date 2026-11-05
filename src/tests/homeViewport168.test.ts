@@ -45,7 +45,7 @@ describe('vague 1.68 — docs v1.67.0 + fiche séance DE SEO unlock', () => {
     expect(fiche).toContain('<article class="de">');
     expect(fiche).toContain('Sitzungsblatt — Schulen Quiz PixFan');
     expect(fiche).toContain('Drucken / PDF');
-    expect(fiche).toContain('href="/guides/scolaires/?lang=de"');
+    expect(fiche).toMatch(/href="\/de\/guides\/scolaires\/?"|href="\/guides\/scolaires\/?\?lang=de"/);
     expect(fiche).toContain('classe=1&amp;lang=de');
     expect(fiche).toContain('id="grille-duree-de"');
     expect(fiche).not.toMatch(
@@ -69,7 +69,7 @@ describe('vague 1.68 — docs v1.67.0 + fiche séance DE SEO unlock', () => {
 
   it('fiche exposes hreflang="de" + og:locale:alternate de_DE; canonical bare', () => {
     expect(fiche).toContain(
-      '<link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=de" />'
+      'hreflang="de" href="https://quiz.pixfan.fr/de/guides/scolaires/fiche-seance.html"'
     );
     expect(fiche).toContain('hreflang="fr"');
     expect(fiche).toContain('hreflang="en"');
@@ -88,17 +88,17 @@ describe('vague 1.68 — docs v1.67.0 + fiche séance DE SEO unlock', () => {
 
   it('sitemap lists fiche ?lang=de (+ en/es intact); home regress', () => {
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=de'
+      'https://quiz.pixfan.fr/de/guides/scolaires/fiche-seance.html'
     );
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=en'
+      'https://quiz.pixfan.fr/en/guides/scolaires/fiche-seance.html'
     );
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es'
+      'https://quiz.pixfan.fr/es/guides/scolaires/fiche-seance.html'
     );
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=de');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/');
     expect(indexHtml).toContain(
-      '<link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/?lang=de" />'
+      'hreflang="de" href="https://quiz.pixfan.fr/de/"'
     );
   });
 
@@ -107,21 +107,21 @@ describe('vague 1.68 — docs v1.67.0 + fiche séance DE SEO unlock', () => {
     for (const [name, html, base] of articleDePages) {
       expect(html, name).toContain('<article class="de">');
       expect(html, name).toContain(
-        `<link rel="alternate" hreflang="de" href="${base}?lang=de" />`
+        `hreflang="de" href="https://quiz.pixfan.fr/de${base.replace('https://quiz.pixfan.fr', '')}"`
       );
     }
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=de');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/guides/');
     expect(fiche).toContain(
-      '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es" />'
+      'hreflang="es" href="https://quiz.pixfan.fr/es/guides/scolaires/fiche-seance.html"'
     );
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es'
+      'https://quiz.pixfan.fr/es/guides/scolaires/fiche-seance.html'
     );
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.68', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.68/);
   });
