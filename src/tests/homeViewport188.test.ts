@@ -43,7 +43,7 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
     expect(nextSteps).toMatch(/\*\*v1\.8[7-9]\.0\*\*|\*\*v1\.9\d+\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.87**');
     expect(nextSteps).toContain('Vague **1.88**');
-    expect(nextSteps).toMatch(/no-go.*1\.8[89]|no-go.*1\.90/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[89]|no-go.*1\.90|no-go.*1\.91/);
   });
 
   it('genres ships .de on all LocalizedString fields (226)', () => {
@@ -244,6 +244,7 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
       'composition',
       'exposure-basics',
       'flash-studio',
+      'gear-lenses',
       'genres',
       'history-icons',
       'lexique-image-fixe',
@@ -253,6 +254,7 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
       'public-domain',
       'retouching',
       'smartphone',
+    'gear-lenses',
     ]);
     expect(withDe.every((id) => allowed.has(id))).toBe(true);
     for (const id of [
@@ -276,7 +278,7 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.8[89]|no-go.*1\.90/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[89]|no-go.*1\.90|no-go.*1\.91/);
     expect(
       data.quizzes
         .filter(
@@ -292,7 +294,8 @@ describe('vague 1.88 — docs v1.87.0 + genres LocalizedString.de', () => {
             q.id !== 'exposure-basics' &&
             q.id !== 'genres' &&
             q.id !== 'composition' &&
-            q.id !== 'smartphone'
+            q.id !== 'smartphone' &&
+            q.id !== 'gear-lenses'
         )
         .every((q) => {
           const title = q.title as { de?: string };

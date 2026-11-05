@@ -40,8 +40,8 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 describe('vague 1.81 — docs v1.80.0 + light-color LocalizedString.de', () => {
   it('docs still mention vague 1.80/1.81; no-go through 1.81; headline may be v1.81.0', () => {
     /* Docs headline moved to v1.83.0 in vague 1.84 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(80|81|82|83|84|85|86|87|88|89)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(80|81|82|83|84|85|86|87|88|89)\.\d+\*\*/);
+    expect(readme).toMatch(/v1\.(80|81|82|83|84|85|86|87|88|89|90)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(80|81|82|83|84|85|86|87|88|89|90)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.80**');
     expect(nextSteps).toContain('Vague **1.81**');
     expect(nextSteps).toMatch(/no-go.*1\.(81|82|83|84|85|86)/);
@@ -160,8 +160,8 @@ describe('vague 1.81 — docs v1.80.0 + light-color LocalizedString.de', () => {
       ])
     );
     expect(withDe.length).toBeGreaterThanOrEqual(3);
-    expect(withDe.length).toBeLessThanOrEqual(12);
-    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(3);
+    expect(withDe.length).toBeLessThanOrEqual(13);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(2);
   });
 
   it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio; ops no-gos through 1.81; SVG theme toggle', () => {
@@ -184,7 +184,8 @@ describe('vague 1.81 — docs v1.80.0 + light-color LocalizedString.de', () => {
             q.id !== 'exposure-basics' &&
             q.id !== 'genres' &&
             q.id !== 'composition' &&
-            q.id !== 'smartphone'
+            q.id !== 'smartphone' &&
+            q.id !== 'gear-lenses'
         )
         .every((q) => {
           const title = q.title as { de?: string };
