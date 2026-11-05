@@ -39,11 +39,11 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.91 — docs v1.90.0 + gear-lenses LocalizedString.de', () => {
   it('docs headline cites v1.90.0 or later; vague 1.90/1.91 listed; no-go through 1.91+', () => {
-    expect(readme).toMatch(/v1\.90\.0|v1\.91\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.90\.0\*\*|\*\*v1\.91\.0\*\*/);
+    expect(readme).toMatch(/v1\.90\.0|v1\.91\.0|v1\.92\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.90\.0\*\*|\*\*v1\.91\.0\*\*|\*\*v1\.92\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.90**');
     expect(nextSteps).toContain('Vague **1.91**');
-    expect(nextSteps).toMatch(/no-go.*1\.91|no-go.*1\.92/);
+    expect(nextSteps).toMatch(/no-go.*1\.91|no-go.*1\.92|no-go.*1\.93/);
   });
 
   it('gear-lenses ships .de on all LocalizedString fields (192)', () => {
@@ -289,16 +289,17 @@ describe('vague 1.91 — docs v1.90.0 + gear-lenses LocalizedString.de', () => {
     ]) {
       expect(withDe.has(id), id).toBe(true);
     }
-    // lightroom-workflow may appear once vague 1.92 ships
+    // lightroom-workflow / marques-photo may appear once vague 1.92/1.93 ship
     expect(withDe.size).toBeGreaterThanOrEqual(13);
-    expect(data.quizzes.length - withDe.size).toBeLessThanOrEqual(2);
+    expect(withDe.size).toBeLessThanOrEqual(15);
+    expect(data.quizzes.length - withDe.size).toBeLessThanOrEqual(2); // marques-photo may ship in 1.93
   });
 
   it('still no path-locale /es/|/de/; no .de outside prior packs + gear-lenses/lightroom; ops no-gos through 1.91+; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.91|no-go.*1\.92/);
+    expect(nextSteps).toMatch(/no-go.*1\.91|no-go.*1\.92|no-go.*1\.93/);
     expect(
       data.quizzes
         .filter(
@@ -316,7 +317,8 @@ describe('vague 1.91 — docs v1.90.0 + gear-lenses LocalizedString.de', () => {
             q.id !== 'composition' &&
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
-            q.id !== 'lightroom-workflow'
+            q.id !== 'lightroom-workflow' &&
+            q.id !== 'marques-photo'
         )
         .every((q) => {
           const title = q.title as { de?: string };

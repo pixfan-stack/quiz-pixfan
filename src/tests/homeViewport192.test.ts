@@ -38,12 +38,12 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', () => {
-  it('docs headline cites v1.91.0; vague 1.91/1.92 listed; no-go through 1.92', () => {
-    expect(readme).toContain('v1.91.0');
-    expect(nextSteps).toContain('**v1.91.0**');
+  it('docs headline cites v1.91.0 or later; vague 1.91/1.92 listed; no-go through 1.92+', () => {
+    expect(readme).toMatch(/v1\.91\.0|v1\.92\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.91\.0\*\*|\*\*v1\.92\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.91**');
     expect(nextSteps).toContain('Vague **1.92**');
-    expect(nextSteps).toMatch(/no-go.*1\.92/);
+    expect(nextSteps).toMatch(/no-go.*1\.92|no-go.*1\.93/);
   });
 
   it('lightroom-workflow ships .de on all LocalizedString fields (194)', () => {
@@ -274,12 +274,13 @@ describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', 
     expect(withoutDe).toEqual([]);
   });
 
-  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone + gear-lenses + lightroom-workflow have title.de (1 other without)', () => {
-    const withDe = data.quizzes
-      .filter((q) => q.title.de != null && q.title.de !== '')
-      .map((q) => q.id)
-      .sort();
-    expect(withDe).toEqual([
+  it('série DE: lexique + … + lightroom-workflow (+ marques-photo allowed) have title.de', () => {
+    const withDe = new Set(
+      data.quizzes
+        .filter((q) => q.title.de != null && q.title.de !== '')
+        .map((q) => q.id)
+    );
+    for (const id of [
       'composition',
       'exposure-basics',
       'flash-studio',
@@ -294,15 +295,20 @@ describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', 
       'public-domain',
       'retouching',
       'smartphone',
-    ]);
-    expect(data.quizzes.length - withDe.length).toBe(1);
+    ]) {
+      expect(withDe.has(id), id).toBe(true);
+    }
+    // marques-photo may appear once vague 1.93 ships
+    expect(withDe.size).toBeGreaterThanOrEqual(14);
+    expect(withDe.size).toBeLessThanOrEqual(15);
+    expect(data.quizzes.length - withDe.size).toBeLessThanOrEqual(1);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside prior packs + lightroom-workflow; ops no-gos through 1.92; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside prior packs + lightroom/marques; ops no-gos through 1.92+; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.92/);
+    expect(nextSteps).toMatch(/no-go.*1\.92|no-go.*1\.93/);
     expect(
       data.quizzes
         .filter(
@@ -320,7 +326,8 @@ describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', 
             q.id !== 'composition' &&
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
-            q.id !== 'lightroom-workflow'
+            q.id !== 'lightroom-workflow' &&
+            q.id !== 'marques-photo'
         )
         .every((q) => {
           const title = q.title as { de?: string };
