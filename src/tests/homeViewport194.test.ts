@@ -47,8 +47,8 @@ const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 describe('vague 1.94 — docs v1.93.0 + Guides/Schools chrome i18n residual', () => {
   it('docs headline cites v1.93.0+; vague 1.93/1.94 listed; no-go through 1.94+', () => {
     // Softened in 1.95–1.97: headline may cite later Livré versions
-    expect(readme).toMatch(/v1\.9[3-6]\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.9[3-6]\.0\*\*/);
+    expect(readme).toMatch(/v1\.9[3-8]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.9[3-8]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.93**');
     expect(nextSteps).toContain('Vague **1.94**');
     expect(nextSteps).toMatch(/no-go.*1\.9[4-7]/);

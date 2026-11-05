@@ -47,8 +47,8 @@ const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 describe('vague 1.96 — docs v1.95.0 + ROI SC measurement gate', () => {
   it('docs headline cites v1.95.0; vague 1.95/1.96 listed; no-go through 1.96', () => {
     // Softened in 1.97: headline may cite v1.96.0 (Livré pattern)
-    expect(readme).toMatch(/v1\.95\.0|v1\.96\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.95\.0\*\*|\*\*v1\.96\.0\*\*/);
+    expect(readme).toMatch(/v1\.95\.0|v1\.96\.0|v1\.97\.0|v1\.98\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.95\.0\*\*|\*\*v1\.96\.0\*\*|\*\*v1\.97\.0\*\*|\*\*v1\.98\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.95**');
     expect(nextSteps).toContain('Vague **1.96**');
     // Softened in 1.97: no-go line may extend through 1.97
