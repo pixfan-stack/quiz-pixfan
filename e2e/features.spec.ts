@@ -86,6 +86,42 @@ test.describe('Language Switching', () => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   });
 
+  test('bare / stays French after visiting /en/ (stale localStorage)', async ({
+    page,
+  }) => {
+    await page.goto('/en/');
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Read real photos',
+      { timeout: 5000 }
+    );
+
+    await page.goto('/');
+    await expect(page).toHaveURL(/\/?$/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Lisez de vraies photos',
+      { timeout: 5000 }
+    );
+    await expect(page.getByRole('button', { name: 'FR', exact: true })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+  });
+
+  test('language switcher FR from /en/ returns to French home', async ({
+    page,
+  }) => {
+    await page.goto('/en/');
+    await page.getByRole('button', { name: 'FR', exact: true }).click();
+    await expect(page).toHaveURL(/\/?$/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Lisez de vraies photos',
+      { timeout: 5000 }
+    );
+  });
+
   test('quiz questions display in selected language', async ({ page }) => {
     await page.goto('/');
     

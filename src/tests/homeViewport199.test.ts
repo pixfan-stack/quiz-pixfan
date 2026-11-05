@@ -18,6 +18,7 @@ import viteConfig from '../../vite.config.ts?raw';
 import questionsData from '../../public/data/questions.json';
 import {
   detectPathLang,
+  lookupPathLocalePreference,
   navigateToLang,
   stripLocalePrefix,
   withGuideLang,
@@ -81,9 +82,21 @@ describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
     expect(typeof navigateToLang).toBe('function');
   });
 
+  it('bare `/` is FR x-default; ?lang= defers; path prefixes win', () => {
+    expect(lookupPathLocalePreference('/', '')).toBe('fr');
+    expect(lookupPathLocalePreference('/guides/', '')).toBe('fr');
+    expect(lookupPathLocalePreference('/', '?lang=en')).toBeUndefined();
+    expect(lookupPathLocalePreference('/en/', '')).toBe('en');
+    expect(lookupPathLocalePreference('/es/guides/', '?lang=fr')).toBe('es');
+    expect(langSource).toContain('lookupPathLocalePreference');
+    expect(langSource).toContain("localStorage.setItem('i18nextLng'");
+    expect(i18nSource).toContain('lookupPathLocalePreference');
+    expect(themeJs).toMatch(/Bare guide paths = FR x-default/);
+  });
+
   it('i18n detects pathLocale before querystring', () => {
     expect(i18nSource).toContain('pathLocale');
-    expect(i18nSource).toContain('detectPathLang');
+    expect(i18nSource).toContain('lookupPathLocalePreference');
     expect(i18nSource).toMatch(
       /order:\s*\[[^\]]*pathLocale[^\]]*querystring/
     );

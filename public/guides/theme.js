@@ -55,14 +55,13 @@
     } catch (e) {
       /* ignore */
     }
-    var raw = (document.documentElement.lang || '').toLowerCase();
-    if (raw === 'fr' || raw === 'en' || raw === 'es' || raw === 'de') return raw;
     try {
       var p = new URLSearchParams(location.search).get('lang');
       if (p === 'fr' || p === 'en' || p === 'es' || p === 'de') return p;
     } catch (e2) {
       /* ignore */
     }
+    // Bare guide paths = FR x-default (do not trust a stale html[lang] from SPA).
     return 'fr';
   }
 

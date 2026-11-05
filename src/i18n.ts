@@ -27,14 +27,19 @@ export {
   SUPPORTED_LANGUAGES,
   type SupportedLanguage,
 } from './utils/lang';
-import { detectPathLang, SUPPORTED_LANGUAGES } from './utils/lang';
+import { lookupPathLocalePreference, SUPPORTED_LANGUAGES } from './utils/lang';
 
 const languageDetector = new LanguageDetector();
 languageDetector.addDetector({
   name: 'pathLocale',
   lookup() {
     if (typeof window === 'undefined') return undefined;
-    return detectPathLang(window.location.pathname) ?? undefined;
+    // Bare `/` (and other non-prefixed paths) → FR x-default so stale
+    // localStorage from `/en/` cannot keep the French home in English.
+    return lookupPathLocalePreference(
+      window.location.pathname,
+      window.location.search
+    );
   },
 });
 
@@ -55,6 +60,8 @@ void i18n
     },
     detection: {
       // Path locales (vague 1.99) before ?lang= / localStorage / navigator.
+      // pathLocale returns FR for bare paths (no prefix, no ?lang=) so `/`
+      // stays French after visiting `/en|/es|/de`.
       order: ['pathLocale', 'querystring', 'localStorage', 'navigator'],
       caches: ['localStorage'],
       lookupQuerystring: 'lang',

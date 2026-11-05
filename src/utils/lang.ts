@@ -52,6 +52,31 @@ export function detectPathLang(
   return m[1]!.toLowerCase() as PathLocale;
 }
 
+/**
+ * i18n path-locale lookup (vague 1.99 FR hotfix).
+ *
+ * - `/en|/es|/de` → that locale
+ * - bare path with `?lang=` → `undefined` so the querystring detector runs (dual soft)
+ * - bare path without `?lang=` → `'fr'` (x-default), ignoring stale localStorage/navigator
+ *
+ * Without the bare-FR default, visiting `/` after `/en/` kept EN from i18nextLng
+ * and French home looked broken.
+ */
+export function lookupPathLocalePreference(
+  pathname: string | null | undefined,
+  search: string | null | undefined
+): SupportedLanguage | undefined {
+  const pathLang = detectPathLang(pathname);
+  if (pathLang) return pathLang;
+  const raw = search ?? '';
+  const params = new URLSearchParams(raw.startsWith('?') ? raw.slice(1) : raw);
+  const q = params.get('lang');
+  if (q && isSupportedLanguage(q.toLowerCase().slice(0, 2))) {
+    return undefined;
+  }
+  return 'fr';
+}
+
 /** Strip leading `/en|/es|/de` prefix; empty → `/`. */
 export function stripLocalePrefix(pathname: string): string {
   const stripped = pathname.replace(/^\/(en|es|de)(?=\/|$)/i, '');
@@ -148,10 +173,17 @@ export function syncLangSearchParam(lang: string | null | undefined): void {
 /**
  * Navigate to the path-locale URL for `lang` (vague 1.99).
  * Full assign so home locale shells re-bake meta; preserves hash; drops `?lang=`.
+ * Persists i18nextLng synchronously before assign so FR (bare `/`) cannot lose
+ * a race against unload when leaving `/en|/es|/de`.
  */
 export function navigateToLang(lang: string | null | undefined): void {
   if (typeof window === 'undefined') return;
   const ui = resolveUiLang(lang);
+  try {
+    window.localStorage.setItem('i18nextLng', ui);
+  } catch {
+    /* private mode / quota — detection still has path / bare-FR default */
+  }
   const nextPath = withLocalePath(window.location.pathname, ui);
   const next = nextPath + window.location.hash;
   const current =
