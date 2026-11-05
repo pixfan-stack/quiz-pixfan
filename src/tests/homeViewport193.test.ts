@@ -38,12 +38,13 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.93 — docs v1.92.0 + marques-photo LocalizedString.de', () => {
-  it('docs headline cites v1.92.0; vague 1.92/1.93 listed; no-go through 1.93', () => {
-    expect(readme).toContain('v1.92.0');
-    expect(nextSteps).toContain('**v1.92.0**');
+  it('docs headline cites v1.92.0+; vague 1.92/1.93 listed; no-go through 1.93+', () => {
+    // Softened in 1.94: headline may cite v1.93.0 (Livré pattern)
+    expect(readme).toMatch(/v1\.9[23]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.9[23]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.92**');
     expect(nextSteps).toContain('Vague **1.93**');
-    expect(nextSteps).toMatch(/no-go.*1\.93/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[34]/);
   });
 
   it('marques-photo ships .de on all LocalizedString fields (194)', () => {
@@ -311,11 +312,12 @@ describe('vague 1.93 — docs v1.92.0 + marques-photo LocalizedString.de', () =>
     expect(nextSteps).toMatch(/complets \(15\/15\)/);
   });
 
-  it('still no path-locale /es/|/de/; catalogue .de complete; ops no-gos through 1.93; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; catalogue .de complete; ops no-gos through 1.93+; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.93/);
+    // Softened in 1.94: no-go line may extend through 1.94
+    expect(nextSteps).toMatch(/no-go.*1\.9[34]/);
     expect(
       data.quizzes.every((q) => {
         const title = q.title as { de?: string };

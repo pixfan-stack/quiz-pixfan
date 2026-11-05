@@ -38,7 +38,8 @@ describe('scolaires chrome URL + nav', () => {
     );
   });
 
-  it('every top-level guide ships Scolaires in header + footer chrome', () => {
+  it('every top-level guide ships Scolaires href in header + footer chrome', () => {
+    // Softened in 1.94: visible label may be localized via theme.js (Schools/Colegios/Schule)
     expect(guidePages.length).toBe(10);
     for (const { name, html } of guidePages) {
       expect(
@@ -48,15 +49,21 @@ describe('scolaires chrome URL + nav', () => {
       expect(
         html,
         `${name} missing footer Scolaires → /guides/scolaires/`
-      ).toContain('href="/guides/scolaires/" class="app-footer__link">Scolaires');
+      ).toMatch(
+        /href="\/guides\/scolaires\/" class="app-footer__link">(?:Scolaires|Schools|Colegios|Schule)/
+      );
+      expect(html, `${name} missing theme.js chrome helper`).toContain(
+        'src="/guides/theme.js"'
+      );
     }
   });
 
-  it('hub keeps Scolaires in chrome', () => {
+  it('hub keeps Scolaires href in chrome', () => {
     expect(hub).toMatch(/href="\/guides\/scolaires\/"/);
-    expect(hub).toContain(
-      'href="/guides/scolaires/" class="app-footer__link">Scolaires'
+    expect(hub).toMatch(
+      /href="\/guides\/scolaires\/" class="app-footer__link">(?:Scolaires|Schools|Colegios|Schule)/
     );
+    expect(hub).toContain('src="/guides/theme.js"');
   });
 
   it('triangle / smartphone / matériel expose Pour la classe as secondary CTA (vague 1.27)', () => {

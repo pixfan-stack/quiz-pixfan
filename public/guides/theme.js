@@ -1,7 +1,8 @@
 /**
- * Day/night toggle for static guide pages.
+ * Day/night toggle + chrome i18n for static guide pages.
  * Shares the SPA key + class: localStorage `quiz-pixfan-dark-mode`, html.dark-mode
  * (see src/hooks/useDarkMode.ts).
+ * Chrome nav/footer labels follow ?lang= / documentElement.lang (fr/en/es/de).
  */
 (function () {
   var STORAGE_KEY = 'quiz-pixfan-dark-mode';
@@ -10,6 +11,53 @@
     '<svg class="dark-mode-toggle__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z"/></svg>';
   var ICON_SUN =
     '<svg class="dark-mode-toggle__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M12 2.5v2.25M12 19.25V21.5M2.5 12h2.25M19.25 12H21.5M5.05 5.05l1.6 1.6M17.35 17.35l1.6 1.6M5.05 18.95l1.6-1.6M17.35 6.65l1.6-1.6"/></svg>';
+
+  /** Short chrome labels (nav + footer) — vague 1.94 */
+  var CHROME = {
+    fr: { guides: 'Guides', scolaires: 'Scolaires' },
+    en: { guides: 'Guides', scolaires: 'Schools' },
+    es: { guides: 'Guías', scolaires: 'Colegios' },
+    de: { guides: 'Leitfäden', scolaires: 'Schule' },
+  };
+
+  var THEME_LABELS = {
+    fr: {
+      dark: 'Mode nuit',
+      light: 'Mode jour',
+      darkShort: 'Nuit',
+      lightShort: 'Jour',
+    },
+    en: {
+      dark: 'Dark mode',
+      light: 'Light mode',
+      darkShort: 'Dark',
+      lightShort: 'Light',
+    },
+    es: {
+      dark: 'Modo noche',
+      light: 'Modo día',
+      darkShort: 'Noche',
+      lightShort: 'Día',
+    },
+    de: {
+      dark: 'Nachtmodus',
+      light: 'Tagmodus',
+      darkShort: 'Nacht',
+      lightShort: 'Tag',
+    },
+  };
+
+  function resolveLang() {
+    var raw = (document.documentElement.lang || '').toLowerCase();
+    if (raw === 'fr' || raw === 'en' || raw === 'es' || raw === 'de') return raw;
+    try {
+      var p = new URLSearchParams(location.search).get('lang');
+      if (p === 'fr' || p === 'en' || p === 'es' || p === 'de') return p;
+    } catch (e) {
+      /* ignore */
+    }
+    return 'fr';
+  }
 
   function systemPrefersDark() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -26,19 +74,55 @@
   }
 
   function labels(isDark) {
-    var en = document.documentElement.lang !== 'fr';
-    if (isDark) {
-      return en ? 'Light mode' : 'Mode jour';
-    }
-    return en ? 'Dark mode' : 'Mode nuit';
+    var pack = THEME_LABELS[resolveLang()] || THEME_LABELS.fr;
+    return isDark ? pack.light : pack.dark;
   }
 
   function shortLabel(isDark) {
-    var en = document.documentElement.lang !== 'fr';
-    if (isDark) {
-      return en ? 'Light' : 'Jour';
-    }
-    return en ? 'Dark' : 'Nuit';
+    var pack = THEME_LABELS[resolveLang()] || THEME_LABELS.fr;
+    return isDark ? pack.lightShort : pack.darkShort;
+  }
+
+  function setText(el, text) {
+    if (!el) return;
+    el.textContent = text;
+  }
+
+  function applyChromeLabels() {
+    var lang = resolveLang();
+    var pack = CHROME[lang] || CHROME.fr;
+    var guidesHref = '/guides/';
+    var scolairesHref = '/guides/scolaires/';
+
+    document.querySelectorAll('a.guide-nav-link').forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      if (href === guidesHref || href.indexOf(guidesHref + '?') === 0) {
+        setText(a, pack.guides);
+      } else if (
+        href === scolairesHref ||
+        href.indexOf(scolairesHref + '?') === 0 ||
+        href.indexOf(scolairesHref + '#') === 0
+      ) {
+        setText(a, pack.scolaires);
+      }
+    });
+
+    document.querySelectorAll('a.app-footer__link').forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      if (href === guidesHref || href.indexOf(guidesHref + '?') === 0) {
+        setText(a, pack.guides);
+      } else if (
+        href === scolairesHref ||
+        href.indexOf(scolairesHref + '?') === 0 ||
+        href.indexOf(scolairesHref + '#') === 0
+      ) {
+        setText(a, pack.scolaires);
+      }
+    });
+
+    document.querySelectorAll('nav.app-footer__guides').forEach(function (nav) {
+      nav.setAttribute('aria-label', pack.guides);
+    });
   }
 
   function syncToggle(isDark) {
@@ -74,10 +158,15 @@
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindToggle);
-  } else {
+  function onReady() {
+    applyChromeLabels();
     bindToggle();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onReady);
+  } else {
+    onReady();
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {

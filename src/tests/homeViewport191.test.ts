@@ -39,7 +39,7 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.91 — docs v1.90.0 + gear-lenses LocalizedString.de', () => {
   it('docs headline cites v1.90.0 or later; vague 1.90/1.91 listed; no-go through 1.91+', () => {
-    expect(readme).toMatch(/v1\.90\.0|v1\.91\.0|v1\.92\.0/);
+    expect(readme).toMatch(/v1\.90\.0|v1\.91\.0|v1\.92\.0|v1\.93\.0/);
     expect(nextSteps).toMatch(/\*\*v1\.90\.0\*\*|\*\*v1\.91\.0\*\*|\*\*v1\.92\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.90**');
     expect(nextSteps).toContain('Vague **1.91**');

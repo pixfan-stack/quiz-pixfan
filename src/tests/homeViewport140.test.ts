@@ -42,7 +42,7 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     /* Docs headline moved to v1.40.0 in vague 1.41 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.39**');
     expect(nextSteps).toMatch(/no-go.*1\.40/);
-    expect(readme).toMatch(/v1\.(4[0123456789]|5[0123456789]|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92)\.\d/);
+    expect(readme).toMatch(/v1\.(4[0123456789]|5[0123456789]|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93)\.\d/);
   });
 
   it('SUPPORTED_LANGUAGES includes es and de; i18n imports stubs', () => {
@@ -98,7 +98,10 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     expect(guidesI18nCss).toContain('html[lang="es"] .en');
     expect(guidesI18nCss).toContain('html[lang="de"] .en');
     expect(guidesI18nCss).toContain('html[lang="es"] .fr');
-    expect(themeJs).toContain("document.documentElement.lang !== 'fr'");
+    // Softened in 1.94: theme.js uses resolveLang() + es/de labels (no binary non-FR→EN)
+    expect(themeJs).toMatch(/resolveLang|document\.documentElement\.lang/);
+    expect(themeJs).toContain("'Modo noche'");
+    expect(themeJs).toContain("'Nachtmodus'");
     /* Hub gained article.es sniff in vague 1.56; de hub meta landed in 1.65 — EN stays own branch. */
     expect(hub).toContain("p === 'es'");
     expect(hub).toContain("p === 'en'");
