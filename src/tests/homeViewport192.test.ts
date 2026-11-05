@@ -39,11 +39,11 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', () => {
   it('docs headline cites v1.91.0 or later; vague 1.91/1.92 listed; no-go through 1.92+', () => {
-    expect(readme).toMatch(/v1\.91\.0|v1\.92\.0|v1\.93\.0|v1\.94\.0|v1\.95\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.91\.0\*\*|\*\*v1\.92\.0\*\*|\*\*v1\.93\.0\*\*/);
+    expect(readme).toMatch(/v1\.91\.0|v1\.92\.0|v1\.93\.0|v1\.94\.0|v1\.95\.0|v1\.96\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.91\.0\*\*|\*\*v1\.92\.0\*\*|\*\*v1\.93\.0\*\*|\*\*v1\.96\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.91**');
     expect(nextSteps).toContain('Vague **1.92**');
-    expect(nextSteps).toMatch(/no-go.*1\.9[2-6]/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[2-7]/);
   });
 
   it('lightroom-workflow ships .de on all LocalizedString fields (194)', () => {
@@ -308,7 +308,7 @@ describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', 
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.92|no-go.*1\.93|no-go.*1\.94|no-go.*1\.95|no-go.*1\.96/);
+    expect(nextSteps).toMatch(/no-go.*1\.92|no-go.*1\.93|no-go.*1\.94|no-go.*1\.95|no-go.*1\.96|no-go.*1\.97/);
     expect(
       data.quizzes
         .filter(

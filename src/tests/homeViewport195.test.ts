@@ -46,12 +46,12 @@ const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 
 describe('vague 1.95 — docs v1.94.0 + chrome ?lang= href preservation', () => {
   it('docs headline cites v1.94.0+; vague 1.94/1.95 listed; no-go through 1.95+', () => {
-    // Softened in 1.96: headline may cite v1.95.0 (Livré pattern)
-    expect(readme).toMatch(/v1\.9[45]\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.9[45]\.0\*\*/);
+    // Softened in 1.96/1.97: headline may cite v1.95.0 (Livré pattern)
+    expect(readme).toMatch(/v1\.9[4-6]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.9[4-6]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.94**');
     expect(nextSteps).toContain('Vague **1.95**');
-    expect(nextSteps).toMatch(/no-go.*1\.9[56]/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[5-7]/);
     expect(nextSteps).toMatch(/\?lang=/);
     expect(nextSteps).toMatch(/href.*chrome|préserv/i);
     expect(nextSteps).not.toMatch(
@@ -127,8 +127,8 @@ describe('vague 1.95 — docs v1.94.0 + chrome ?lang= href preservation', () => 
 
   it('ops no-gos through 1.95+; SVG theme toggle kept in App', () => {
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    // Softened in 1.96: no-go line may extend through 1.96
-    expect(nextSteps).toMatch(/no-go.*1\.9[56]/);
+    // Softened in 1.96/1.97: no-go line may extend through 1.97
+    expect(nextSteps).toMatch(/no-go.*1\.9[5-7]/);
     expect(appSource).toContain('className="dark-mode-toggle"');
     expect(appSource).toContain('dark-mode-toggle__icon');
   });

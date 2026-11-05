@@ -39,12 +39,12 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.93 — docs v1.92.0 + marques-photo LocalizedString.de', () => {
   it('docs headline cites v1.92.0+; vague 1.92/1.93 listed; no-go through 1.93+', () => {
-    // Softened in 1.94–1.96: headline may cite later Livré versions
-    expect(readme).toMatch(/v1\.9[2-5]\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.9[2-5]\.0\*\*/);
+    // Softened in 1.94–1.97: headline may cite later Livré versions
+    expect(readme).toMatch(/v1\.9[2-6]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.9[2-6]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.92**');
     expect(nextSteps).toContain('Vague **1.93**');
-    expect(nextSteps).toMatch(/no-go.*1\.9[3-6]/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[3-7]/);
   });
 
   it('marques-photo ships .de on all LocalizedString fields (194)', () => {
@@ -316,8 +316,8 @@ describe('vague 1.93 — docs v1.92.0 + marques-photo LocalizedString.de', () =>
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    // Softened in 1.94–1.96: no-go line may extend through 1.96
-    expect(nextSteps).toMatch(/no-go.*1\.9[3-6]/);
+    // Softened in 1.94–1.97: no-go line may extend through 1.97
+    expect(nextSteps).toMatch(/no-go.*1\.9[3-7]/);
     expect(
       data.quizzes.every((q) => {
         const title = q.title as { de?: string };

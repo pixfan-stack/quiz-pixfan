@@ -28,7 +28,7 @@ describe('vague 1.43 — docs v1.42.0 + topics twitter×9', () => {
     /* Docs headline moved to v1.43.0 in vague 1.44 — keep historical Livré lock. */
     expect(nextSteps).toContain('Vague **1.42**');
     expect(nextSteps).toMatch(/no-go.*1\.43/);
-    expect(readme).toMatch(/v1\.(4[23456789]|5[0123456789]|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95)\.\d/);
+    expect(readme).toMatch(/v1\.(4[23456789]|5[0123456789]|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96)\.\d/);
   });
 
   it('nine topic guides ship twitter + og:locale:alternate + EN sniff', () => {
