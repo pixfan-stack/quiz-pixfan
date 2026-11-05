@@ -39,11 +39,11 @@ describe('EN hub lang + share meta (vague 1.38)', () => {
     expect(heroSource).toContain("'/guides/scolaires/#c4-regard'");
     expect(appSource).toContain('scolairesHubHref');
     expect(appSource).toContain('withGuideLang');
-    expect(resultSource).toContain('scolairesLang');
-    expect(resultSource).toContain('guideLangQuery');
-    expect(resultSource).toContain(
-      'href={`/guides/scolaires/${scolairesLang}#c4-regard`}'
-    );
+    expect(resultSource).toContain('scolairesRegardHref');
+    expect(resultSource).toContain('scolairesLumiereHref');
+    expect(resultSource).toContain('withGuideLang');
+    expect(resultSource).toContain("'/guides/scolaires/#c4-regard'");
+    expect(resultSource).toContain("'/guides/scolaires/#c4-lumiere'");
   });
 
   it('hub and fiche ship twitter + og:locale:alternate; EN sniff updates twitter', () => {

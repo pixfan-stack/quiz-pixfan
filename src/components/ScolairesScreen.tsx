@@ -7,7 +7,7 @@ import {
   isPhotoReadingQuizId,
 } from '../utils/photoReading';
 import { SCOLAIRES_PARCOURS } from '../utils/scolaires';
-import { guideLangQuery } from '../utils/lang';
+import { withGuideLang } from '../utils/lang';
 
 interface ScolairesScreenProps {
   quizzes: Quiz[];
@@ -27,7 +27,11 @@ export function ScolairesScreen({
   classeMode = false,
 }: ScolairesScreenProps) {
   const { t, i18n } = useTranslation();
-  const langQuery = guideLangQuery(i18n.language);
+  const hubHref = withGuideLang('/guides/scolaires/', i18n.language);
+  const ficheHref = withGuideLang(
+    '/guides/scolaires/fiche-seance.html',
+    i18n.language
+  );
 
   useEffect(() => {
     void trackHabitEvent('scolaires_hub');
@@ -98,13 +102,10 @@ export function ScolairesScreen({
       </ul>
 
       <nav className="scolaires__links" aria-label={t('scolaires.moreLinks')}>
-        <a className="cta-secondary" href={`/guides/scolaires/${langQuery}`}>
+        <a className="cta-secondary" href={hubHref}>
           {t('scolaires.openHub')}
         </a>
-        <a
-          className="cta-secondary"
-          href={`/guides/scolaires/fiche-seance.html${langQuery}`}
-        >
+        <a className="cta-secondary" href={ficheHref}>
           {t('scolaires.printSheet')}
         </a>
         <button type="button" className="btn btn--ghost" onClick={onHome}>

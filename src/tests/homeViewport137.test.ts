@@ -46,13 +46,12 @@ describe('EN meta/og + quiet chrome (vague 1.37)', () => {
     expect(fr.scolaires.openHub).toBe('Hub Scolaires');
     expect(fr.scolaires.openHub).not.toMatch(/^Page /);
     expect(en.scolaires.openHub).toBe('Schools guides hub');
-    expect(scolairesSource).toContain('langQuery');
-    expect(scolairesSource).toContain('guideLangQuery');
+    expect(scolairesSource).toContain('withGuideLang');
+    expect(scolairesSource).toContain('hubHref');
+    expect(scolairesSource).toContain('ficheHref');
+    expect(scolairesSource).toContain("'/guides/scolaires/'");
     expect(scolairesSource).toContain(
-      'href={`/guides/scolaires/${langQuery}`}'
-    );
-    expect(scolairesSource).toContain(
-      'href={`/guides/scolaires/fiche-seance.html${langQuery}`}'
+      "'/guides/scolaires/fiche-seance.html'"
     );
   });
 });
