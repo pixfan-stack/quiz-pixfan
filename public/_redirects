@@ -4,9 +4,9 @@
 /robots.txt     /robots.txt     200
 
 # Path locales (vague 1.99) — trailing slash only.
-# IMPORTANT: do NOT use `/?lang=xx` rules here — Cloudflare Pages treats
-# `/?lang=en` as source `/` and would 301 the FR home to /en/ (live incident).
-# Home ?lang= stays dual-soft (sniff + i18n); switcher uses path navigation.
+# IMPORTANT: never put query-string home redirects here — CF Pages treats a
+# rule like "slash + lang query → /en/" as source "/" and 301s FR home to EN
+# (live incident after #147). Home lang query stays dual-soft (sniff + i18n).
 /en    /en/    301
 /es    /es/    301
 /de    /de/    301

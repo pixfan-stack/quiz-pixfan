@@ -109,8 +109,12 @@ describe('sitemap / SEO hygiene', () => {
   it('excludes sitemap/robots from SPA catch-all; path-locale redirects before catch-all', () => {
     expect(redirects).toMatch(/\/sitemap\.xml\s+\/sitemap\.xml\s+200/);
     expect(redirects).toMatch(/\/robots\.txt\s+\/robots\.txt\s+200/);
-    // No `/?lang=` rules — CF Pages would treat them as `/` → locale (home break).
-    expect(redirects).not.toMatch(/\/\?lang=/);
+    // No active query-string home redirect rules (comments excluded).
+    const activeRedirects = redirects
+      .split('\n')
+      .filter((l) => l.trim() && !l.trim().startsWith('#'))
+      .join('\n');
+    expect(activeRedirects).not.toMatch(/\?lang=/);
     expect(redirects).toMatch(/\/en\s+\/en\/\s+301/);
     expect(redirects).toMatch(/\/en\/guides\/\s+\/guides\/index\.html\s+200/);
     expect(redirects).toMatch(/\/es\/guides\/\*\s+\/guides\/:splat\s+200/);
