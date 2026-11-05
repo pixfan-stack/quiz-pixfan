@@ -38,12 +38,12 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
-  it('docs headline cites v1.89.0; vague 1.89/1.90 listed; no-go through 1.90', () => {
-    expect(readme).toContain('v1.89.0');
-    expect(nextSteps).toContain('**v1.89.0**');
+  it('docs headline cites v1.89.0 or later; vague 1.89/1.90 listed; no-go through 1.90+', () => {
+    expect(readme).toMatch(/v1\.89\.0|v1\.9\d+\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.89\.0\*\*|\*\*v1\.9\d+\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.89**');
     expect(nextSteps).toContain('Vague **1.90**');
-    expect(nextSteps).toMatch(/no-go.*1\.90/);
+    expect(nextSteps).toMatch(/no-go.*1\.90|no-go.*1\.91/);
   });
 
   it('smartphone ships .de on all LocalizedString fields (230)', () => {
@@ -256,12 +256,29 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
     expect(withoutDe).toEqual([]);
   });
 
-  it('série DE: only lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone have title.de (3 others without)', () => {
+  it('série DE: lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone (+ gear-lenses allowed) have title.de', () => {
     const withDe = data.quizzes
       .filter((q) => q.title.de != null && q.title.de !== '')
       .map((q) => q.id)
       .sort();
-    expect(withDe).toEqual([
+    const allowed = new Set([
+      'composition',
+      'exposure-basics',
+      'flash-studio',
+      'gear-lenses',
+      'genres',
+      'history-icons',
+      'lexique-image-fixe',
+      'light-color',
+      'photo-rights',
+      'portrait-light',
+      'public-domain',
+      'retouching',
+      'smartphone',
+    'gear-lenses',
+    ]);
+    expect(withDe.every((id) => allowed.has(id))).toBe(true);
+    for (const id of [
       'composition',
       'exposure-basics',
       'flash-studio',
@@ -274,15 +291,17 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
       'public-domain',
       'retouching',
       'smartphone',
-    ]);
-    expect(data.quizzes.length - withDe.length).toBe(3);
+    ]) {
+      expect(withDe).toContain(id);
+    }
+    expect(data.quizzes.length - withDe.length).toBeLessThanOrEqual(3);
   });
 
-  it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain+exposure-basics+genres+composition+smartphone; ops no-gos through 1.90; SVG theme toggle', () => {
+  it('still no path-locale /es/|/de/; no .de outside prior packs + smartphone/gear-lenses; ops no-gos through 1.90+; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.90/);
+    expect(nextSteps).toMatch(/no-go.*1\.90|no-go.*1\.91/);
     expect(
       data.quizzes
         .filter(
@@ -298,7 +317,8 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
             q.id !== 'exposure-basics' &&
             q.id !== 'genres' &&
             q.id !== 'composition' &&
-            q.id !== 'smartphone'
+            q.id !== 'smartphone' &&
+            q.id !== 'gear-lenses'
         )
         .every((q) => {
           const title = q.title as { de?: string };
