@@ -9,10 +9,10 @@
     <meta name="color-scheme" content="light dark" />
 
     <!-- SEO -->
-    <title>Quiz photo gratuit — 386 questions FR/EN | Quiz PixFan</title>
+    <title>Quiz photo gratuit — 386 questions FR/EN/ES/DE | Quiz PixFan</title>
     <meta
       name="description"
-      content="Testez vos connaissances photo gratuitement : 386 questions dont 268 illustrées, 15 catégories, mode photo-reading, défi du jour, compte léger et saisons. Bilangue FR/EN."
+      content="Testez vos connaissances photo gratuitement : 386 questions dont 268 illustrées, 15 catégories, mode photo-reading, défi du jour, compte léger et saisons. Interface FR/EN/ES/DE — catalogues complets."
     />
     <meta name="author" content="PixFan" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -29,7 +29,7 @@
     <meta property="og:title" content="Quiz photo gratuit — 386 questions | Quiz PixFan" />
     <meta
       property="og:description"
-      content="386 questions photo (268 illustrées), photo-reading, défi du jour, compte léger. Gratuit, FR/EN. Partagez votre score !"
+      content="386 questions photo (268 illustrées), photo-reading, défi du jour, compte léger. Gratuit, FR/EN/ES/DE. Partagez votre score !"
     />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:locale:alternate" content="en_US" />
@@ -40,7 +40,7 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Quiz PixFan — 386 questions photo, 268 illustrées, photo-reading, FR/EN" />
+    <meta property="og:image:alt" content="Quiz PixFan — 386 questions photo, 268 illustrées, photo-reading, FR/EN/ES/DE" />
     <meta property="og:site_name" content="Quiz PixFan" />
     <meta property="fb:app_id" content="1845182679783128" />
 
@@ -49,10 +49,10 @@
     <meta name="twitter:title" content="Quiz photo gratuit — 386 questions | Quiz PixFan" />
     <meta
       name="twitter:description"
-      content="386 questions photo (268 illustrées), photo-reading, défi du jour. Gratuit, bilangue FR/EN."
+      content="386 questions photo (268 illustrées), photo-reading, défi du jour. Gratuit, FR/EN/ES/DE."
     />
     <meta name="twitter:image" content="https://quiz.pixfan.fr/og-image.png?v=4" />
-    <meta name="twitter:image:alt" content="Quiz PixFan — 386 photography questions, 268 illustrated, photo-reading, FR/EN" />
+    <meta name="twitter:image:alt" content="Quiz PixFan — 386 photography questions, 268 illustrated, photo-reading, FR/EN/ES/DE" />
 
     <!-- Locale sniff (?lang=) — home meta ES (1.58) + DE unlock (vague 1.67); EN parity -->
     <script>
@@ -97,12 +97,12 @@
           if (twTitle) twTitle.setAttribute('content', deTitle);
           if (twDesc) twDesc.setAttribute('content', deOgDesc);
         } else if (p === 'en') {
-          document.title = 'Free photography quiz — 386 questions FR/EN | Quiz PixFan';
+          document.title = 'Free photography quiz — 386 questions FR/EN/ES/DE | Quiz PixFan';
           var enTitle = 'Free photography quiz — 386 questions | Quiz PixFan';
           var enDescMeta =
-            'Test your photography knowledge for free: 386 questions including 268 illustrated, 15 categories, photo-reading mode, daily challenge, light account and seasons. Bilingual FR/EN.';
+            'Test your photography knowledge for free: 386 questions including 268 illustrated, 15 categories, photo-reading mode, daily challenge, light account and seasons. UI FR/EN/ES/DE — full catalogs.';
           var enOgDesc =
-            '386 photography questions (268 illustrated), photo-reading, daily challenge, light account. Free, FR/EN. Share your score!';
+            '386 photography questions (268 illustrated), photo-reading, daily challenge, light account. Free, FR/EN/ES/DE. Share your score!';
           if (desc) desc.setAttribute('content', enDescMeta);
           if (ogTitle) ogTitle.setAttribute('content', enTitle);
           if (ogDesc) ogDesc.setAttribute('content', enOgDesc);
@@ -133,7 +133,7 @@
           "@id": "https://quiz.pixfan.fr/#app",
           "name": "Quiz PixFan",
           "alternateName": ["Quiz photo PixFan", "Photography Quiz PixFan"],
-          "description": "Quiz photo gratuit bilangue FR/EN : 386 questions (268 illustrées), 15 catégories, photo-reading, défi du jour, compte léger et saisons.",
+          "description": "Quiz photo gratuit FR/EN/ES/DE : 386 questions (268 illustrées), 15 catégories, photo-reading, défi du jour, compte léger et saisons. Catalogues complets.",
           "url": "https://quiz.pixfan.fr/",
           "applicationCategory": "EducationalApplication",
           "operatingSystem": "Web",
@@ -246,7 +246,7 @@
               "inLanguage": "fr",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "L’interface est disponible en FR, EN, ES et DE. Les guides et la fiche séance suivent la locale (?lang=). Le catalogue de questions est complet en FR/EN ; plusieurs packs ont déjà une version ES ; le catalogue DE n’est pas encore traduit. Vous pouvez changer de langue à tout moment."
+                "text": "L’interface est disponible en FR, EN, ES et DE. Les guides et la fiche séance suivent la locale (?lang=). Les catalogues de questions FR, EN, ES et DE sont complets (15 packs / 386 questions). Vous pouvez changer de langue à tout moment."
               }
             },
             {
@@ -255,7 +255,7 @@
               "inLanguage": "en",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The UI is available in FR, EN, ES, and DE. Guides and the lesson sheet follow the locale (?lang=). The question catalog is complete in FR/EN; several packs already have an ES version; the DE catalog is not translated yet. You can switch language anytime."
+                "text": "The UI is available in FR, EN, ES, and DE. Guides and the lesson sheet follow the locale (?lang=). Question catalogs in FR, EN, ES, and DE are complete (15 packs / 386 questions). You can switch language anytime."
               }
             },
             {
@@ -264,7 +264,7 @@
               "inLanguage": "es",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "La interfaz está disponible en FR, EN, ES y DE. Las guías y la ficha de sesión siguen el idioma (?lang=). El catálogo de preguntas está completo en FR/EN; varios packs ya tienen versión ES; el catálogo DE aún no está traducido. Puedes cambiar de idioma en cualquier momento."
+                "text": "La interfaz está disponible en FR, EN, ES y DE. Las guías y la ficha de sesión siguen el idioma (?lang=). Los catálogos de preguntas FR, EN, ES y DE están completos (15 packs / 386 preguntas). Puedes cambiar de idioma en cualquier momento."
               }
             },
             {
@@ -273,7 +273,7 @@
               "inLanguage": "de",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Die Oberfläche ist in FR, EN, ES und DE verfügbar. Guides und Sitzungsblatt folgen der Locale (?lang=). Der Fragenkatalog ist vollständig in FR/EN; mehrere Packs haben bereits eine ES-Version; der DE-Katalog ist noch nicht übersetzt. Die Sprache lässt sich jederzeit wechseln."
+                "text": "Die Oberfläche ist in FR, EN, ES und DE verfügbar. Guides und Sitzungsblatt folgen der Locale (?lang=). Die Fragenkataloge FR, EN, ES und DE sind vollständig (15 Packs / 386 Fragen). Die Sprache lässt sich jederzeit wechseln."
               }
             },
             {
@@ -394,6 +394,38 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Crawlable shell for Googlebot / no-JS (vague 1.98). SPA replaces #root when JS runs. -->
+    <noscript>
+      <main id="seo-crawl">
+        <h1>Quiz PixFan — quiz photo gratuit</h1>
+        <p>
+          386 questions photo (268 illustrées), 15 catégories, photo-reading, défi du jour.
+          Interface et catalogues FR / EN / ES / DE.
+        </p>
+        <p>
+          <a href="/guides/">Guides photo</a>
+          ·
+          <a href="/guides/scolaires/">Parcours scolaires</a>
+          ·
+          <a href="/s/daily">Défi du jour</a>
+          ·
+          <a href="/s/photo-reading">Photo-reading</a>
+        </p>
+        <p>
+          <a href="/?lang=en">English</a>
+          ·
+          <a href="/?lang=es">Español</a>
+          ·
+          <a href="/?lang=de">Deutsch</a>
+          ·
+          <a href="/guides/?lang=en">Guides (EN)</a>
+          ·
+          <a href="/guides/?lang=es">Guías</a>
+          ·
+          <a href="/guides/?lang=de">Leitfäden</a>
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

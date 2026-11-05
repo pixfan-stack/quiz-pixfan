@@ -2,9 +2,44 @@ import { describe, expect, it } from 'vitest';
 import sitemap from '../../public/sitemap.xml?raw';
 import redirects from '../../public/_redirects?raw';
 import headers from '../../public/_headers?raw';
+import questionsData from '../../public/data/questions.json';
 
-/** Floor: home / hub scolaires must not lag behind the last catalog vague. */
-const LASTMOD_FLOOR = '2026-10-22';
+/** Floor: must track catalogue-complete SEO refresh (vague 1.98). */
+const LASTMOD_FLOOR = '2026-11-05';
+
+const GUIDE_TOPICS = [
+  'triangle-exposition',
+  'composition-photo',
+  'photo-smartphone',
+  'lumiere-photo',
+  'retouche-lightroom',
+  'genres-photo',
+  'materiel-photo',
+  'droits-ethique-photo',
+  'histoire-photo',
+] as const;
+
+const GUIDE_BASES = [
+  'https://quiz.pixfan.fr/',
+  'https://quiz.pixfan.fr/guides/',
+  'https://quiz.pixfan.fr/guides/scolaires/',
+  'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html',
+  ...GUIDE_TOPICS.map((slug) => `https://quiz.pixfan.fr/guides/${slug}`),
+] as const;
+
+const SHARE_MODES = [
+  'daily',
+  'photo-reading',
+  'weak-spots',
+  'random',
+  'mix-easy',
+  'mix-medium',
+  'mix-hard',
+] as const;
+
+const LANGS = ['en', 'es', 'de'] as const;
+
+const data = questionsData as { quizzes: Array<{ id: string }> };
 
 function lastmodForLoc(loc: string): string | null {
   const escaped = loc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -16,116 +51,55 @@ function lastmodForLoc(loc: string): string | null {
   return match?.[1] ?? null;
 }
 
+function allLocs(): string[] {
+  return [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]!);
+}
+
 describe('sitemap / SEO hygiene', () => {
-  it('lists lexique + scolaires and keeps home/hub lastmod ≥ floor', () => {
+  it('lists expected inventory (74 locs) with lastmod ≥ floor; syncs packs', () => {
     expect(sitemap.startsWith('<?xml')).toBe(true);
     expect(sitemap).toContain('<urlset');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/s/marques-photo');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/s/flash-studio');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/s/lexique-image-fixe');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/');
-    expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html'
-    );
 
-    const home = lastmodForLoc('https://quiz.pixfan.fr/');
-    const hub = lastmodForLoc('https://quiz.pixfan.fr/guides/scolaires/');
-    const fiche = lastmodForLoc(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html'
-    );
-    expect(home).toBeTruthy();
-    expect(hub).toBeTruthy();
-    expect(fiche).toBeTruthy();
-    expect(home! >= LASTMOD_FLOOR).toBe(true);
-    expect(hub! >= LASTMOD_FLOOR).toBe(true);
-    expect(fiche! >= LASTMOD_FLOOR).toBe(true);
+    const locs = allLocs();
+    expect(locs).toHaveLength(74);
+    // Path-locale must never appear in the sitemap.
+    expect(sitemap).not.toMatch(/quiz\.pixfan\.fr\/(es|de|en|fr)\//);
 
-    // Guides index + topic pages (vague 1.35 armor).
-    const guidesIndex = lastmodForLoc('https://quiz.pixfan.fr/guides/');
-    expect(guidesIndex).toBeTruthy();
-    expect(guidesIndex! >= LASTMOD_FLOOR).toBe(true);
-    const guideTopics = [
-      'triangle-exposition',
-      'composition-photo',
-      'photo-smartphone',
-      'lumiere-photo',
-      'retouche-lightroom',
-      'genres-photo',
-      'materiel-photo',
-      'droits-ethique-photo',
-      'histoire-photo',
-    ];
-    for (const slug of guideTopics) {
-      const loc = `https://quiz.pixfan.fr/guides/${slug}`;
-      const mod = lastmodForLoc(loc);
-      expect(mod, loc).toBeTruthy();
-      expect(mod! >= LASTMOD_FLOOR, loc).toBe(true);
+    // Home + guides + fiche: bare + ?lang= twins.
+    for (const base of GUIDE_BASES) {
+      expect(locs, base).toContain(base);
+      for (const lang of LANGS) {
+        const twin = `${base}?lang=${lang}`;
+        expect(locs, twin).toContain(twin);
+      }
     }
 
-    // Pack / mode deep-links must not lag the catalog floor (vague 1.33).
-    const packLocs = [...sitemap.matchAll(/<loc>(https:\/\/quiz\.pixfan\.fr\/s\/[^<]+)<\/loc>/g)].map(
-      (m) => m[1]
-    );
-    expect(packLocs.length).toBeGreaterThan(10);
-    for (const loc of packLocs) {
-      const mod = lastmodForLoc(loc);
-      expect(mod, loc).toBeTruthy();
-      expect(mod! >= LASTMOD_FLOOR, loc).toBe(true);
+    // Pack deep-links must match questions.json 1:1.
+    const packIds = data.quizzes.map((q) => q.id);
+    expect(packIds).toHaveLength(15);
+    for (const id of packIds) {
+      const loc = `https://quiz.pixfan.fr/s/${id}`;
+      expect(locs, loc).toContain(loc);
     }
 
-    // Guard against accidental rollback to pre-lexique dates.
-    expect(sitemap).not.toContain('<lastmod>2026-09-24</lastmod>');
+    for (const mode of SHARE_MODES) {
+      const loc = `https://quiz.pixfan.fr/s/${mode}`;
+      expect(locs, loc).toContain(loc);
+    }
+
+    // Every loc has a fresh lastmod (stale sitemap fails CI).
+    for (const loc of locs) {
+      const mod = lastmodForLoc(loc);
+      expect(mod, loc).toBeTruthy();
+      expect(mod! >= LASTMOD_FLOOR, `${loc} lastmod ${mod}`).toBe(true);
+    }
+
+    // Guard against accidental rollback to pre-catalogue dates.
+    expect(sitemap).not.toContain('<lastmod>2026-10-22</lastmod>');
+    expect(sitemap).not.toContain('<lastmod>2026-10-28</lastmod>');
+    expect(sitemap).not.toContain('<lastmod>2026-10-31</lastmod>');
     expect(sitemap).not.toMatch(/<lastmod>2026-09-\d{2}<\/lastmod>/);
-
-    // Vague 1.57–1.59: ?lang= twins for ES-ready guides + home + fiche.
-    const esReady = [
-      'https://quiz.pixfan.fr/',
-      'https://quiz.pixfan.fr/guides/',
-      'https://quiz.pixfan.fr/guides/scolaires/',
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html',
-      'https://quiz.pixfan.fr/guides/composition-photo',
-      'https://quiz.pixfan.fr/guides/triangle-exposition',
-      'https://quiz.pixfan.fr/guides/photo-smartphone',
-      'https://quiz.pixfan.fr/guides/lumiere-photo',
-      'https://quiz.pixfan.fr/guides/retouche-lightroom',
-      'https://quiz.pixfan.fr/guides/genres-photo',
-      'https://quiz.pixfan.fr/guides/materiel-photo',
-      'https://quiz.pixfan.fr/guides/droits-ethique-photo',
-      'https://quiz.pixfan.fr/guides/histoire-photo',
-    ];
-    for (const base of esReady) {
-      expect(sitemap, base).toContain(`<loc>${base}?lang=en</loc>`);
-      expect(sitemap, base).toContain(`<loc>${base}?lang=es</loc>`);
-      const enMod = lastmodForLoc(`${base}?lang=en`);
-      const esMod = lastmodForLoc(`${base}?lang=es`);
-      expect(enMod, `${base}?lang=en`).toBeTruthy();
-      expect(esMod, `${base}?lang=es`).toBeTruthy();
-      expect(enMod! >= LASTMOD_FLOOR, `${base}?lang=en`).toBe(true);
-      expect(esMod! >= LASTMOD_FLOOR, `${base}?lang=es`).toBe(true);
-    }
-
-    // Vague 1.66–1.68: ?lang=de twins for DE-ready guides + home + fiche.
-    const deReady = [
-      'https://quiz.pixfan.fr/',
-      'https://quiz.pixfan.fr/guides/',
-      'https://quiz.pixfan.fr/guides/scolaires/',
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html',
-      'https://quiz.pixfan.fr/guides/composition-photo',
-      'https://quiz.pixfan.fr/guides/triangle-exposition',
-      'https://quiz.pixfan.fr/guides/photo-smartphone',
-      'https://quiz.pixfan.fr/guides/lumiere-photo',
-      'https://quiz.pixfan.fr/guides/retouche-lightroom',
-      'https://quiz.pixfan.fr/guides/genres-photo',
-      'https://quiz.pixfan.fr/guides/materiel-photo',
-      'https://quiz.pixfan.fr/guides/droits-ethique-photo',
-      'https://quiz.pixfan.fr/guides/histoire-photo',
-    ];
-    for (const base of deReady) {
-      expect(sitemap, base).toContain(`<loc>${base}?lang=de</loc>`);
-      const deMod = lastmodForLoc(`${base}?lang=de`);
-      expect(deMod, `${base}?lang=de`).toBeTruthy();
-      expect(deMod! >= LASTMOD_FLOOR, `${base}?lang=de`).toBe(true);
-    }
+    expect(sitemap).not.toMatch(/<lastmod>2026-10-\d{2}<\/lastmod>/);
   });
 
   it('excludes sitemap and robots from bare SPA catch-all precedence', () => {

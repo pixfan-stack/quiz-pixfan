@@ -39,7 +39,7 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', () => {
   it('docs headline cites v1.91.0 or later; vague 1.91/1.92 listed; no-go through 1.92+', () => {
-    expect(readme).toMatch(/v1\.91\.0|v1\.92\.0|v1\.93\.0|v1\.94\.0|v1\.95\.0|v1\.96\.0/);
+    expect(readme).toMatch(/v1\.91\.0|v1\.92\.0|v1\.93\.0|v1\.94\.0|v1\.95\.0|v1\.96\.0|v1\.97\.0|v1\.98\.0/);
     expect(nextSteps).toMatch(/\*\*v1\.91\.0\*\*|\*\*v1\.92\.0\*\*|\*\*v1\.93\.0\*\*|\*\*v1\.96\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.91**');
     expect(nextSteps).toContain('Vague **1.92**');

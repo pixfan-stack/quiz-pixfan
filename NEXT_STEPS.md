@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.96.0**).
+Document à jour avec l’état réel du dépôt (**v1.97.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.98** : **sitemap lastmod refresh** (74 locs · floor 2026-11-05) · inventaire CI (`sitemapHygiene`) · textes crawlables Googlebot (FAQ catalogues complets · meta FR/EN/ES/DE · `<noscript>` home · hub guides lead) · docs v1.97.0 · armor 198 — **pas** path `/es/` `/de/` · **pas** inventer D1–D5 GSC
 - Vague **1.97** : docs v1.96.0 · **indexation / coverage** gate (checklist D1–D5 + remédiation ops ; **pas** path `/es/` `/de/`) · armor 197 — crawlability locks (robots Allow · sitemap · no noindex home) · SVG + `withLangHref` + catalogues 15/15 inchangés
 - Vague **1.96** : docs v1.95.0 · **ROI Search Console measurement gate / readout** (checklist + evidence ou blocker) · armor 196 — **pas** path `/es/` `/de/` (path seulement si ROI SC documenté + oui) · chrome static **fermé** · SVG + `withLangHref` inchangés
 - Vague **1.95** : préserver `?lang=` sur href chrome Guides/Schools (nav+footer `/guides/` ↔ `/guides/scolaires/`) · docs v1.94.0 · armor 195 — **pas** path `/es/` `/de/` · labels i18n 1.94 + SVG inchangés
@@ -195,16 +196,21 @@ Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Pu
 - [x] Préserver `?lang=` sur href chrome Guides/Schools (nav+footer) · docs v1.94.0 · armor 195 (vague **1.95**) — **pas** path `/es/` `/de/` · SVG + labels 1.94 inchangés
 - [x] ROI Search Console measurement gate + baseline readout · docs v1.95.0 · armor 196 (vague **1.96**) — checklist Q1–Q5 + pass/fail path · evidence ou blocker daté — **pas** path `/es/` `/de/` shippé · **pas** suite automatique path
 - [x] Indexation / coverage gate · docs v1.96.0 · armor 197 (vague **1.97**) — checklist D1–D5 (GSC Sitemaps · Coverage · URL Inspection · CF Bot Fight · propriété) · remédiation **ops-only** en attendant captures Antony — **pas** path `/es/` `/de/` · **pas** patch SEO cosmétique sans Inspection
+- [x] Sitemap lastmod + textes crawlables Googlebot · docs v1.97.0 · armor 198 (vague **1.98**) — 74 locs · floor 2026-11-05 · inventaire CI · FAQ catalogues complets · noscript home · hub guides lead FR/EN/ES/DE — **pas** path `/es/` `/de/` · **pas** inventer D1–D5
 
 ### ROI SC — verdict 1.96
 
 Gate + evidence : store `docs/roi-sc-gate.md` · `docs/roi-sc-evidence-1-96.md`.  
 **Verdict :** **ROI insuffisant → path no-go** (GSC UI Antony 2026-11-05 : **0 pages indexées** · **0 clics** ; **aucun** chiffre inventé). Path `/es/` `/de/` **reste interdit**.
 
-### Indexation / coverage — vague 1.97 (suite, **pas** path)
+### Indexation / coverage — vague 1.97 (ops, **pas** path)
 
-Priorité produit = **pourquoi GSC voit 0 pages indexées** (sitemap non traité · Coverage · CF Bot Fight) — **pas** path-locale.  
-Checklist store : `docs/indexation-coverage-1-97.md` (D1–D5 — **slots vides** en attente readout GSC/CF Antony).  
-Remédiation : **ops-only** jusqu’à D1–D5 ; **aucun** commit SEO cosmétique (`index.html` / sitemap / `_redirects` / `theme.js`) sans verdict Inspection. Path `/es/` `/de/` **reste no-go**.
+Checklist store : `docs/indexation-coverage-1-97.md` (D1–D5 — **slots vides** en attente readout GSC/CF Antony). Path `/es/` `/de/` **reste no-go**.
 
-Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt. · Scolaires `.es` complets · non-scolaires `.es` **complets (3/3)** · catalogues ES+DE **complets (15/15)** · scolaires DE **complets** · chrome Guides/Schools static i18n **fermé** (1.94) · préservation `?lang=` href chrome **fermée** (1.95) · ROI SC gate (1.96) · **indexation / coverage** (1.97) — **pas** path `/es/` `/de/` comme suite automatique (path seulement si indexation réelle + ROI Search Console documenté + oui).
+### Sitemap + crawl text — vague 1.98 (**pas** path)
+
+Demande Antony : sitemap à jour + URLs/textes lisibles Googlebot.  
+Livré : `public/sitemap.xml` lastmod **2026-11-05** · `sitemapHygiene` inventaire strict (74 locs · packs sync) · `index.html` FAQ/meta/noscript · hub guides lead.  
+D1–D5 GSC/CF **reste awaiting** (pas inventé). Path `/es/` `/de/` **reste no-go** through **1.98**.
+
+Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt. · Scolaires `.es` complets · non-scolaires `.es` **complets (3/3)** · catalogues ES+DE **complets (15/15)** · scolaires DE **complets** · chrome Guides/Schools static i18n **fermé** (1.94) · préservation `?lang=` href chrome **fermée** (1.95) · ROI SC gate (1.96) · indexation/coverage ops (1.97) · **sitemap + crawl text** (1.98) — **pas** path `/es/` `/de/` comme suite automatique (path seulement si indexation réelle + ROI Search Console documenté + oui). Web Push · salon · 16ᵉ **no-go** through **1.98**.

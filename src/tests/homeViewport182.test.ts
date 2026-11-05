@@ -40,8 +40,8 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 describe('vague 1.82 — docs v1.81.0 + flash-studio LocalizedString.de', () => {
   it('docs still mention vague 1.81/1.82; no-go through 1.82; headline may be v1.82.0', () => {
     /* Docs headline moved to v1.83.0 in vague 1.84 — keep historical Livré lock. */
-    expect(readme).toMatch(/v1\.(81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96)\.\d/);
-    expect(nextSteps).toMatch(/\*\*v1\.(81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96)\.\d+\*\*/);
+    expect(readme).toMatch(/v1\.(81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98)\.\d/);
+    expect(nextSteps).toMatch(/\*\*v1\.(81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.81**');
     expect(nextSteps).toContain('Vague **1.82**');
     expect(nextSteps).toMatch(/no-go.*1\.(82|83|84|85|86)/);

@@ -50,11 +50,11 @@ const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 
 describe('vague 1.97 — docs v1.96.0 + indexation/coverage gate', () => {
   it('docs headline cites v1.96.0; vague 1.96/1.97 listed; no-go through 1.97', () => {
-    expect(readme).toContain('v1.96.0');
-    expect(nextSteps).toContain('**v1.96.0**');
+    expect(readme).toMatch(/v1\.9[67]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.9[67]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.96**');
     expect(nextSteps).toContain('Vague **1.97**');
-    expect(nextSteps).toMatch(/no-go.*1\.97/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[78]/);
     expect(nextSteps).not.toMatch(
       /suite.*path\s*`?\/es\/`?\s*`?\/de\/`?\s*comme suite automatique/i
     );
@@ -150,7 +150,7 @@ describe('vague 1.97 — docs v1.96.0 + indexation/coverage gate', () => {
 
   it('ops no-gos through 1.97; SVG theme toggle kept in App', () => {
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.97/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[78]/);
     expect(appSource).toContain('className="dark-mode-toggle"');
     expect(appSource).toContain('dark-mode-toggle__icon');
   });

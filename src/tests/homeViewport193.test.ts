@@ -40,8 +40,8 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 describe('vague 1.93 — docs v1.92.0 + marques-photo LocalizedString.de', () => {
   it('docs headline cites v1.92.0+; vague 1.92/1.93 listed; no-go through 1.93+', () => {
     // Softened in 1.94–1.97: headline may cite later Livré versions
-    expect(readme).toMatch(/v1\.9[2-6]\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.9[2-6]\.0\*\*/);
+    expect(readme).toMatch(/v1\.9[2-8]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.9[2-8]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.92**');
     expect(nextSteps).toContain('Vague **1.93**');
     expect(nextSteps).toMatch(/no-go.*1\.9[3-7]/);
