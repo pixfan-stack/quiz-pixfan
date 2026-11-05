@@ -84,7 +84,7 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
       .sort();
     /* portrait-light…marques-photo .es through 1.78 — série ES catalogue fermée. */
     expect(packsWithoutEs).toEqual([]); /* marques-photo .es 1.78 — série fermée */
-    /* Vague 1.79–1.87 — lexique-image-fixe + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics may ship title.de; others must not. */
+    /* Vague 1.79–1.92 — DE série through lightroom-workflow may ship title.de; others must not. */
     expect(
       questions.quizzes
         .filter((q) => q.id !== 'lexique-image-fixe' && q.id !== 'photo-rights' && q.id !== 'light-color' && q.id !== 'flash-studio' && q.id !== 'retouching' && q.id !== 'history-icons' &&
@@ -92,7 +92,8 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
             q.id !== 'public-domain' && q.id !== 'exposure-basics' &&
             q.id !== 'genres' &&
             q.id !== 'composition' && q.id !== 'smartphone' &&
-            q.id !== 'gear-lenses')
+            q.id !== 'gear-lenses' &&
+            q.id !== 'lightroom-workflow')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';
