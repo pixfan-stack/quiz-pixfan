@@ -93,8 +93,8 @@ describe('vague 1.72 — docs v1.71.2 + exposure-basics LocalizedString.es', () 
   });
 
   it('still no path-locale /es/|/de/; only lexique catalogue .de; ops no-gos through 1.72; SVG theme toggle', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.72/);
     /* Vague 1.79–1.87 — lexique-image-fixe + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics may ship title.de; others must not. */

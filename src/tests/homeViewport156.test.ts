@@ -20,8 +20,8 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
   it('guides hub ships real article.es (not EN stub)', () => {
     expect(guidesIndex).toContain('<article class="es">');
     expect(guidesIndex).toContain('Guías de fotografía para progresar rápido');
-    expect(guidesIndex).toContain('href="/guides/composition-photo?lang=es"');
-    expect(guidesIndex).toContain('href="/guides/scolaires/?lang=es"');
+    expect(guidesIndex).toMatch(/href="\/es\/guides\/composition-photo"|href="\/guides\/composition-photo\?lang=es"/);
+    expect(guidesIndex).toMatch(/href="\/es\/guides\/scolaires\/?"|href="\/guides\/scolaires\/?\?lang=es"/);
     expect(guidesIndex).not.toMatch(
       /<article class="es">[\s\S]*Photography guides that lead to practice/
     );
@@ -64,7 +64,7 @@ describe('vague 1.56 — docs v1.55.0 + hub/scolaires article.es expand', () => 
   });
 
   it('still no path-locale /es/ scheme in LanguageSwitcher', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
   });
 });

@@ -4,7 +4,7 @@ import redirects from '../../public/_redirects?raw';
 import headers from '../../public/_headers?raw';
 import questionsData from '../../public/data/questions.json';
 
-/** Floor: must track catalogue-complete SEO refresh (vague 1.98). */
+/** Floor: must track catalogue-complete SEO refresh (vague 1.98+). */
 const LASTMOD_FLOOR = '2026-11-05';
 
 const GUIDE_TOPICS = [
@@ -37,7 +37,7 @@ const SHARE_MODES = [
   'mix-hard',
 ] as const;
 
-const LANGS = ['en', 'es', 'de'] as const;
+const PATH_LANGS = ['en', 'es', 'de'] as const;
 
 const data = questionsData as { quizzes: Array<{ id: string }> };
 
@@ -55,21 +55,27 @@ function allLocs(): string[] {
   return [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]!);
 }
 
+function pathTwin(base: string, lang: string): string {
+  const u = new URL(base);
+  if (u.pathname === '/') return `https://quiz.pixfan.fr/${lang}/`;
+  return `https://quiz.pixfan.fr/${lang}${u.pathname}`;
+}
+
 describe('sitemap / SEO hygiene', () => {
-  it('lists expected inventory (74 locs) with lastmod ≥ floor; syncs packs', () => {
+  it('lists expected inventory (74 locs) with path locales + lastmod ≥ floor', () => {
     expect(sitemap.startsWith('<?xml')).toBe(true);
     expect(sitemap).toContain('<urlset');
 
     const locs = allLocs();
     expect(locs).toHaveLength(74);
-    // Path-locale must never appear in the sitemap.
-    expect(sitemap).not.toMatch(/quiz\.pixfan\.fr\/(es|de|en|fr)\//);
+    // No legacy ?lang= twins in sitemap (vague 1.99 path product).
+    expect(sitemap).not.toMatch(/\?lang=/);
 
-    // Home + guides + fiche: bare + ?lang= twins.
+    // Home + guides + fiche: bare FR + /en|/es|/de path twins.
     for (const base of GUIDE_BASES) {
       expect(locs, base).toContain(base);
-      for (const lang of LANGS) {
-        const twin = `${base}?lang=${lang}`;
+      for (const lang of PATH_LANGS) {
+        const twin = pathTwin(base, lang);
         expect(locs, twin).toContain(twin);
       }
     }
@@ -87,14 +93,12 @@ describe('sitemap / SEO hygiene', () => {
       expect(locs, loc).toContain(loc);
     }
 
-    // Every loc has a fresh lastmod (stale sitemap fails CI).
     for (const loc of locs) {
       const mod = lastmodForLoc(loc);
       expect(mod, loc).toBeTruthy();
       expect(mod! >= LASTMOD_FLOOR, `${loc} lastmod ${mod}`).toBe(true);
     }
 
-    // Guard against accidental rollback to pre-catalogue dates.
     expect(sitemap).not.toContain('<lastmod>2026-10-22</lastmod>');
     expect(sitemap).not.toContain('<lastmod>2026-10-28</lastmod>');
     expect(sitemap).not.toContain('<lastmod>2026-10-31</lastmod>');
@@ -102,13 +106,18 @@ describe('sitemap / SEO hygiene', () => {
     expect(sitemap).not.toMatch(/<lastmod>2026-10-\d{2}<\/lastmod>/);
   });
 
-  it('excludes sitemap and robots from bare SPA catch-all precedence', () => {
+  it('excludes sitemap/robots from SPA catch-all; path-locale redirects before catch-all', () => {
     expect(redirects).toMatch(/\/sitemap\.xml\s+\/sitemap\.xml\s+200/);
     expect(redirects).toMatch(/\/robots\.txt\s+\/robots\.txt\s+200/);
+    expect(redirects).toMatch(/\/\?lang=es\s+\/es\/\s+301/);
+    expect(redirects).toMatch(/\/en\/guides\/\s+\/guides\/index\.html\s+200/);
+    expect(redirects).toMatch(/\/es\/guides\/\*\s+\/guides\/:splat\s+200/);
     const sitemapIdx = redirects.indexOf('/sitemap.xml');
     const spaIdx = redirects.indexOf('/*');
     expect(sitemapIdx).toBeGreaterThanOrEqual(0);
     expect(spaIdx).toBeGreaterThan(sitemapIdx);
+    expect(redirects.indexOf('/en/guides/')).toBeGreaterThan(sitemapIdx);
+    expect(redirects.indexOf('/en/guides/')).toBeLessThan(spaIdx);
   });
 
   it('declares application/xml for sitemap via _headers', () => {

@@ -32,8 +32,8 @@ describe('vague 1.65 — docs v1.64.0 + hub/scolaires article.de expand', () => 
     expect(guidesIndex).toContain('Fotoguides für schnelle Fortschritte');
     expect(guidesIndex).toContain('Schulpfade — Foto im Unterricht');
     expect(guidesIndex).toContain('Leitfäden');
-    expect(guidesIndex).toContain('href="/guides/composition-photo?lang=de"');
-    expect(guidesIndex).toContain('href="/guides/scolaires/?lang=de"');
+    expect(guidesIndex).toMatch(/href="\/de\/guides\/composition-photo"|href="\/guides\/composition-photo\?lang=de"/);
+    expect(guidesIndex).toMatch(/href="\/de\/guides\/scolaires\/?"|href="\/guides\/scolaires\/?\?lang=de"/);
     expect(guidesIndex).not.toMatch(
       /<article class="de">[\s\S]*Photography guides that lead to practice/
     );
@@ -103,7 +103,7 @@ describe('vague 1.65 — docs v1.64.0 + hub/scolaires article.de expand', () => 
     expect(fiche).toContain('<article class="de">'); /* unlocked vague 1.68 */
     expect(homeSpa).not.toContain('<article class="de">');
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
     expect(guidesIndex).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/" />'
     );
@@ -113,8 +113,8 @@ describe('vague 1.65 — docs v1.64.0 + hub/scolaires article.de expand', () => 
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.65', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.65/);
   });

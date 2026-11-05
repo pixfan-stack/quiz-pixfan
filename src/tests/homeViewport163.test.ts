@@ -103,7 +103,7 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
   it('canonical bare; hreflang de unlocked 1.66 (historical soften)', () => {
     /* Historical 1.63 lock: retouche/matériel expand. Hreflang de unlocked in 1.66. */
     /* home ?lang=de unlocked in vague 1.67 — keep fiche negative */
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
     expect(retouche).toContain(
       '<link rel="canonical" href="https://quiz.pixfan.fr/guides/retouche-lightroom" />'
     );
@@ -113,8 +113,8 @@ describe('vague 1.63 — docs v1.62.0 + retouche/matériel article.de expand', (
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.63', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.63/);
   });

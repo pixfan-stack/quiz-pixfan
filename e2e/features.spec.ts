@@ -58,6 +58,34 @@ test.describe('Language Switching', () => {
     );
   });
 
+
+  test('switches to Spanish UI via /es/ path', async ({ page }) => {
+    await page.goto('/es/');
+
+    await expect(page.locator('html')).toHaveAttribute('lang', 'es');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Lee fotos reales — composición, luz, encuadre.',
+      { timeout: 5000 }
+    );
+  });
+
+  test('switches to German UI via /de/ path', async ({ page }) => {
+    await page.goto('/de/');
+
+    await expect(page.locator('html')).toHaveAttribute('lang', 'de');
+    await expect(page.locator('.home-hero__lead')).toContainText(
+      'Echte Fotos lesen — Komposition, Licht, Bildausschnitt.',
+      { timeout: 5000 }
+    );
+  });
+
+  test('language switcher navigates to /en/ path', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('button', { name: 'EN', exact: true }).click();
+    await expect(page).toHaveURL(/\/en\/?/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  });
+
   test('quiz questions display in selected language', async ({ page }) => {
     await page.goto('/');
     

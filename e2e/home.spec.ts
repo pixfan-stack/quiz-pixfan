@@ -35,7 +35,7 @@ test.describe('Homepage', () => {
     const teachers = page.getByTestId('home-hero-scolaires');
     await expect(teachers).toHaveAttribute(
       'href',
-      /\/guides\/scolaires\/(\?lang=en)?#c4-regard/
+      /\/(en\/)?guides\/scolaires\/(\?lang=en)?#c4-regard/
     );
   });
 
@@ -105,13 +105,13 @@ test.describe('Homepage', () => {
     await expect(link).toBeVisible({ timeout: 8000 });
     await expect(link).toHaveAttribute(
       'href',
-      /\/guides\/scolaires\/(\?lang=en)?#c4-regard/
+      /\/(en\/)?guides\/scolaires\/(\?lang=en)?#c4-regard/
     );
     await link.click();
     await expect(
       page.locator('article.fr h1, article.en h1').first()
     ).toContainText(/Scolaires|Schools/i, { timeout: 8000 });
-    expect(page.url()).toMatch(/\/guides\/scolaires\/(\?lang=en)?#c4-regard/);
+    expect(page.url()).toMatch(/\/(en\/)?guides\/scolaires\/(\?lang=en)?#c4-regard/);
     await expect(
       page.locator('[data-parcours="c4-regard"]:visible')
     ).toBeVisible();

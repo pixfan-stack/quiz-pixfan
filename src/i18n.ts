@@ -12,7 +12,7 @@
  * ES and DE are real UI translations (see public/locales/STUBS.md).
  *
  * Language preference is detected and persisted via i18next-browser-languagedetector
- * (localStorage key: "i18nextLng").
+ * (localStorage key: "i18nextLng"). Vague 1.99: path prefix `/en|/es|/de` wins first.
  */
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
@@ -27,10 +27,19 @@ export {
   SUPPORTED_LANGUAGES,
   type SupportedLanguage,
 } from './utils/lang';
-import { SUPPORTED_LANGUAGES } from './utils/lang';
+import { detectPathLang, SUPPORTED_LANGUAGES } from './utils/lang';
+
+const languageDetector = new LanguageDetector();
+languageDetector.addDetector({
+  name: 'pathLocale',
+  lookup() {
+    if (typeof window === 'undefined') return undefined;
+    return detectPathLang(window.location.pathname) ?? undefined;
+  },
+});
 
 void i18n
-  .use(LanguageDetector)
+  .use(languageDetector)
   .use(initReactI18next)
   .init({
     resources: {
@@ -45,8 +54,8 @@ void i18n
       escapeValue: false,
     },
     detection: {
-      // `?lang=fr|en|es|de` supports hreflang / share links before localStorage.
-      order: ['querystring', 'localStorage', 'navigator'],
+      // Path locales (vague 1.99) before ?lang= / localStorage / navigator.
+      order: ['pathLocale', 'querystring', 'localStorage', 'navigator'],
       caches: ['localStorage'],
       lookupQuerystring: 'lang',
       lookupLocalStorage: 'i18nextLng',

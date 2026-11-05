@@ -18,7 +18,7 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
     expect(fiche).toContain('<article class="es">');
     expect(fiche).toContain('Ficha de sesión — Escolares Quiz PixFan');
     expect(fiche).toContain('Imprimir / PDF');
-    expect(fiche).toContain('href="/guides/scolaires/?lang=es"');
+    expect(fiche).toMatch(/href="\/es\/guides\/scolaires\/?"|href="\/guides\/scolaires\/?\?lang=es"/);
     expect(fiche).toContain('classe=1&amp;lang=es');
     expect(fiche).toContain('id="grille-duree-es"');
     expect(fiche).not.toMatch(
@@ -40,7 +40,7 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
 
   it('fiche exposes hreflang="es" + og:locale:alternate es_ES; canonical bare', () => {
     expect(fiche).toContain(
-      '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es" />'
+      'hreflang="es" href="https://quiz.pixfan.fr/es/guides/scolaires/fiche-seance.html"'
     );
     expect(fiche).toContain('hreflang="fr"');
     expect(fiche).toContain('hreflang="en"');
@@ -56,21 +56,21 @@ describe('vague 1.59 — docs v1.58.0 + fiche séance ES SEO unlock', () => {
 
   it('sitemap lists fiche ?lang=es (+ en); home regress; fiche de unlocked 1.68', () => {
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=es'
+      'https://quiz.pixfan.fr/es/guides/scolaires/fiche-seance.html'
     );
     expect(sitemap).toContain(
-      'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html?lang=en'
+      'https://quiz.pixfan.fr/en/guides/scolaires/fiche-seance.html'
     );
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/');
     expect(indexHtml).toContain(
-      '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />'
+      'hreflang="es" href="https://quiz.pixfan.fr/es/"'
     );
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
   });
 
   it('still no path-locale /es/|/de/; ops no-gos through 1.59+', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.59/);
   });

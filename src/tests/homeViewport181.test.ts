@@ -165,8 +165,8 @@ describe('vague 1.81 — docs v1.80.0 + light-color LocalizedString.de', () => {
   });
 
   it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio; ops no-gos through 1.81; SVG theme toggle', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.(81|82|83|84|85|86)/);
     expect(

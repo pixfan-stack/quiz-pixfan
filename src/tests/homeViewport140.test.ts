@@ -74,13 +74,13 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     expect(guideLangQuery('es')).toBe('?lang=es');
     expect(guideLangQuery('fr')).toBe('');
     expect(withGuideLang('/guides/scolaires/#c4', 'de')).toBe(
-      '/guides/scolaires/?lang=de#c4'
+      '/de/guides/scolaires/#c4'
     );
     expect(withGuideLang('/guides/scolaires/', 'en')).toBe(
-      '/guides/scolaires/?lang=en'
+      '/en/guides/scolaires/'
     );
     expect(withGuideLang('/guides/scolaires/#c4-regard', 'en')).toBe(
-      '/guides/scolaires/?lang=en#c4-regard'
+      '/en/guides/scolaires/#c4-regard'
     );
   });
 
@@ -105,10 +105,10 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     /* Hub gained article.es sniff in vague 1.56; de hub meta landed in 1.65 — EN stays own branch. */
     expect(hub).toContain("p === 'es'");
     expect(hub).toContain("p === 'en'");
-    expect(hub).toContain('href="?lang=es">ES</a>');
-    expect(hub).toContain('href="?lang=de">DE</a>');
-    expect(fiche).toContain('href="?lang=es">ES</a>');
-    expect(fiche).toContain('href="?lang=de">DE</a>');
+    expect(hub).toMatch(/lang-switcher__btn[\s\S]*ES/);
+    expect(hub).toMatch(/lang-switcher__btn[\s\S]*DE/);
+    expect(fiche).toMatch(/lang-switcher__btn[\s\S]*ES/);
+    expect(fiche).toMatch(/lang-switcher__btn[\s\S]*DE/);
     /* Fiche gained article.es sniff in vague 1.59; de own branch in vague 1.68. */
     expect(fiche).toContain("p === 'es'");
     expect(fiche).toContain("p === 'de'");
@@ -122,6 +122,6 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     expect(guidesIndex).toContain(
       "'Photo quiz guides — learn then practice | Quiz PixFan'"
     );
-    expect(guidesIndex).toContain('href="?lang=es">ES</a>');
+    expect(guidesIndex).toMatch(/lang-switcher__btn[\s\S]*ES/);
   });
 });

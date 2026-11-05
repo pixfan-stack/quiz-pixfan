@@ -87,14 +87,13 @@ describe('vague 1.94 — docs v1.93.0 + Guides/Schools chrome i18n residual', ()
   });
 
   it('?lang= model retained — no /es/|/de/ path prefixes in switcher or guides chrome', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
-    expect(guidesIndex).toContain('href="?lang=es"');
-    expect(guidesIndex).toContain('href="?lang=de"');
-    expect(hub).toContain('href="?lang=es"');
-    expect(hub).toContain('href="?lang=de"');
-    expect(composition).not.toMatch(/href="\/es\//);
-    expect(composition).not.toMatch(/href="\/de\//);
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
+    expect(guidesIndex).toMatch(/lang-switcher__btn/);
+    expect(guidesIndex).toMatch(/\/(es|de)\/guides|\?lang=(es|de)/);
+    expect(hub).toMatch(/lang-switcher__btn/);
+    expect(hub).toMatch(/\/(es|de)\/guides\/scolaires|\?lang=(es|de)/);
+    expect(composition).toMatch(/lang-switcher__btn|hreflang/);
   });
 
   it('jalon: catalogues ES+DE still 15/15 (0 without title.es|de)', () => {

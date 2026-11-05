@@ -58,7 +58,7 @@ describe('vague 1.67 — docs v1.66.0 + home SPA DE SEO unlock', () => {
 
   it('home exposes hreflang="de" + og:locale:alternate de_DE + JSON-LD inLanguage de', () => {
     expect(indexHtml).toContain(
-      '<link rel="alternate" hreflang="de" href="https://quiz.pixfan.fr/?lang=de" />'
+      'hreflang="de" href="https://quiz.pixfan.fr/de/"'
     );
     expect(indexHtml).toContain('hreflang="fr"');
     expect(indexHtml).toContain('hreflang="en"');
@@ -71,10 +71,10 @@ describe('vague 1.67 — docs v1.66.0 + home SPA DE SEO unlock', () => {
   });
 
   it('sitemap lists home ?lang=de (+ en/es intact); fiche de unlocked 1.68', () => {
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=de');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=en');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/en/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/');
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
   });
 
   it('regress: 11 guides keep hreflang="de" + ?lang=de twins; ES home intact', () => {
@@ -82,21 +82,21 @@ describe('vague 1.67 — docs v1.66.0 + home SPA DE SEO unlock', () => {
     for (const [name, html, base] of articleDePages) {
       expect(html, name).toContain('<article class="de">');
       expect(html, name).toContain(
-        `<link rel="alternate" hreflang="de" href="${base}?lang=de" />`
+        `hreflang="de" href="https://quiz.pixfan.fr/de${base.replace('https://quiz.pixfan.fr', '')}"`
       );
     }
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=de');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/de/guides/');
     expect(indexHtml).toContain(
-      '<link rel="alternate" hreflang="es" href="https://quiz.pixfan.fr/?lang=es" />'
+      'hreflang="es" href="https://quiz.pixfan.fr/es/"'
     );
-    expect(sitemap).toContain('https://quiz.pixfan.fr/?lang=es');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/');
   });
 
   it('no path-locale; ops through 1.67; fiche DE unlocked in 1.68 (historical)', () => {
     expect(fiche).toContain('<article class="de">'); /* unlocked vague 1.68 */
     expect(fiche).toContain('hreflang="de"');
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.67/);
   });

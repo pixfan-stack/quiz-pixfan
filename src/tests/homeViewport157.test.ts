@@ -43,7 +43,7 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
     for (const [name, html, base] of articleEsPages) {
       expect(html, name).toContain('<article class="es">');
       expect(html, name).toContain(
-        `<link rel="alternate" hreflang="es" href="${base}?lang=es" />`
+        `hreflang="es" href="https://quiz.pixfan.fr/es${base.replace('https://quiz.pixfan.fr', '')}"`
       );
       expect(html, name).toContain(
         '<meta property="og:locale:alternate" content="es_ES" />'
@@ -74,17 +74,17 @@ describe('vague 1.57 — docs v1.56.0 + hreflang es unlock (11 article.es pages)
   });
 
   it('sitemap lists ?lang=en and ?lang=es twins for hubs + topics; de unlocked 1.66', () => {
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/?lang=es');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/scolaires/?lang=es');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=es');
-    expect(sitemap).toContain('https://quiz.pixfan.fr/guides/composition-photo?lang=en');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/guides/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/guides/scolaires/');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/es/guides/composition-photo');
+    expect(sitemap).toContain('https://quiz.pixfan.fr/en/guides/composition-photo');
     /* ?lang=de twins unlocked in vague 1.66 for guides; home in 1.67 — fiche still absent */
-    expect(sitemap).toContain('fiche-seance.html?lang=de'); /* unlocked vague 1.68 */
+    expect(sitemap).toContain('/de/guides/scolaires/fiche-seance.html'); /* unlocked vague 1.68 */
   });
 
   it('still no path-locale /es/|/de/; ops no-gos unchanged', () => {
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
+    /* path product 1.99 — switcher navigates via helpers */
+    expect(switcherSource).toMatch(/navigateToLang|syncLangSearchParam|changeLanguage/);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
     expect(nextSteps).toMatch(/no-go.*1\.57/);
   });

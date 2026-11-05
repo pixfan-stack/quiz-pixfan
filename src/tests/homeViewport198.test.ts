@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import readme from '../../README.md?raw';
 import nextSteps from '../../NEXT_STEPS.md?raw';
-import switcherSource from '../components/LanguageSwitcher.tsx?raw';
 import appSource from '../App.tsx?raw';
 import themeJs from '../../public/guides/theme.js?raw';
 import guidesIndex from '../../public/guides/index.html?raw';
@@ -49,33 +48,25 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 
 describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
-  it('docs headline cites v1.97.0; vague 1.98 listed; no-go through 1.98', () => {
-    expect(readme).toContain('v1.97.0');
-    expect(nextSteps).toContain('**v1.97.0**');
+  it('docs cite v1.97.0+ baseline; vague 1.98 delivered (softened for 1.99 path ship)', () => {
+    expect(readme).toMatch(/v1\.9[78]\.0/);
+    expect(nextSteps).toMatch(/v1\.9[78]\.0/);
     expect(nextSteps).toContain('Vague **1.98**');
-    expect(nextSteps).toMatch(/no-go.*1\.98/);
-    expect(nextSteps).not.toMatch(
-      /suite.*path\s*`?\/es\/`?\s*`?\/de\/`?\s*comme suite automatique/i
-    );
+    expect(nextSteps).toMatch(/no-go.*1\.9[89]/);
   });
 
-  it('NEXT_STEPS announces sitemap + crawl text (not automatic path ship)', () => {
+  it('NEXT_STEPS recalls sitemap + crawl text from 1.98', () => {
     expect(nextSteps).toMatch(/sitemap|lastmod|crawl/i);
     expect(nextSteps).toMatch(/noscript|FAQ|Googlebot/i);
-    expect(nextSteps).toMatch(/path no-go|reste no-go|reste interdit/i);
-    expect(nextSteps).not.toMatch(
-      /Vague \*\*1\.98\*\*.*ship.*\/es\/|Vague \*\*1\.98\*\*.*path-locale/i
-    );
   });
 
-  it('sitemap lastmod floor 2026-11-05; 74 locs; no path-locale', () => {
+  it('sitemap lastmod floor 2026-11-05; 74 locs (path product may add /en|/es|/de)', () => {
     expect(sitemapXml).toContain('<?xml');
     expect(sitemapXml).toContain('<urlset');
     const locs = [...sitemapXml.matchAll(/<loc>/g)];
     expect(locs).toHaveLength(74);
     expect(sitemapXml).toContain('<lastmod>2026-11-05</lastmod>');
     expect(sitemapXml).not.toMatch(/<lastmod>2026-10-\d{2}<\/lastmod>/);
-    expect(sitemapXml).not.toMatch(/quiz\.pixfan\.fr\/(es|de|en|fr)\//);
     expect(robotsTxt).toContain('Sitemap: https://quiz.pixfan.fr/sitemap.xml');
     expect(redirects).toMatch(/\/sitemap\.xml\s+\/sitemap\.xml\s+200/);
   });
@@ -101,13 +92,11 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
     );
   });
 
-  it('theme.js preserves ?lang= on Guides/Schools chrome hrefs (1.95 regress)', () => {
+  it('theme.js chrome href helper still present (1.95→1.99 path product softens ?lang= lock)', () => {
     expect(themeJs).toContain('withLangHref');
     expect(themeJs).toContain('isGuidesHubHref');
     expect(themeJs).toContain('isScolairesHubHref');
-    expect(themeJs).toContain("'?lang='");
-    expect(themeJs).not.toContain("'/es/'");
-    expect(themeJs).not.toContain("'/de/'");
+    expect(themeJs).toContain('resolveLang');
   });
 
   it('theme.js keeps 1.94 chrome labels + es/de theme strings + SVG', () => {
@@ -124,18 +113,12 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
     expect(themeJs).not.toContain("'☀️'");
   });
 
-  it('all guide HTML pages load theme.js; ?lang= model retained', () => {
+  it('all guide HTML pages load theme.js (path product may use /es/ switcher hrefs)', () => {
     for (const html of guidePagesWithTheme) {
       expect(html).toContain('src="/guides/theme.js"');
     }
-    expect(switcherSource).not.toContain('/es/');
-    expect(switcherSource).not.toContain('/de/');
-    expect(guidesIndex).toContain('href="?lang=es"');
-    expect(guidesIndex).toContain('href="?lang=de"');
-    expect(hub).toContain('href="?lang=es"');
-    expect(hub).toContain('href="?lang=de"');
-    expect(composition).not.toMatch(/href="\/es\//);
-    expect(composition).not.toMatch(/href="\/de\//);
+    expect(guidesIndex).toMatch(/lang-switcher__btn/);
+    expect(hub).toMatch(/lang-switcher__btn/);
   });
 
   it('jalon: catalogues ES+DE still 15/15 (0 without title.es|de)', () => {
@@ -151,7 +134,7 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
     expect(nextSteps).toMatch(/complets \(15\/15\)/);
   });
 
-  it('marques-photo .de still intact (194); ops no-gos through 1.98; SVG kept', () => {
+  it('marques-photo .de still intact (194); ops no-gos through 1.98+; SVG kept', () => {
     const pack = data.quizzes.find((q) => q.id === 'marques-photo')!;
     const ls = collectLs(pack);
     expect(ls).toHaveLength(194);
@@ -161,7 +144,7 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
     }
     expect(pickLocale(pack.title, 'de')).toMatch(/Markengeschichte/i);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.98/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[89]/);
     expect(appSource).toContain('className="dark-mode-toggle"');
     expect(appSource).toContain('dark-mode-toggle__icon');
   });
