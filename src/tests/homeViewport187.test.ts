@@ -39,11 +39,11 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.87 — docs v1.86.0 + exposure-basics LocalizedString.de', () => {
   it('docs headline cites v1.86.0+; vague 1.86/1.87 listed; no-go through 1.87+', () => {
-    expect(readme).toMatch(/v1\.8[6-8]\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.8[6-8]\.0\*\*/);
+    expect(readme).toMatch(/v1\.8[6-9]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.8[6-9]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.86**');
     expect(nextSteps).toContain('Vague **1.87**');
-    expect(nextSteps).toMatch(/no-go.*1\.8[78]/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[7-9]/);
   });
 
   it('exposure-basics ships .de on all LocalizedString fields (226)', () => {
@@ -253,15 +253,15 @@ describe('vague 1.87 — docs v1.86.0 + exposure-basics LocalizedString.de', () 
       ])
     );
     expect(withDe.length).toBeGreaterThanOrEqual(9);
-    expect(withDe.length).toBeLessThanOrEqual(10);
-    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(5);
+    expect(withDe.length).toBeLessThanOrEqual(11);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(4);
   });
 
   it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain+exposure-basics(+genres); ops no-gos through 1.87; SVG theme toggle', () => {
     expect(switcherSource).not.toContain('/es/');
     expect(switcherSource).not.toContain('/de/');
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.8[78]/);
+    expect(nextSteps).toMatch(/no-go.*1\.8[7-9]/);
     expect(
       data.quizzes
         .filter(
@@ -275,7 +275,8 @@ describe('vague 1.87 — docs v1.86.0 + exposure-basics LocalizedString.de', () 
             q.id !== 'portrait-light' &&
             q.id !== 'public-domain' &&
             q.id !== 'exposure-basics' &&
-            q.id !== 'genres'
+            q.id !== 'genres' &&
+            q.id !== 'composition'
         )
         .every((q) => {
           const title = q.title as { de?: string };

@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.87.0**).
+Document à jour avec l’état réel du dépôt (**v1.88.0**).
 
 ## ✅ Livré
 
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Vague **1.89** : `composition` LocalizedString.de ×230 · docs v1.88.0 · armor 189 — **11ᵉ scolaire `.de`** (miroir ES 1.74) — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition
 - Vague **1.88** : `genres` LocalizedString.de ×226 · docs v1.87.0 · armor 188 — **10ᵉ scolaire `.de`** (miroir ES 1.73) — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres
 - Vague **1.87** : `exposure-basics` LocalizedString.de ×226 · docs v1.86.0 · armor 187 — **9ᵉ scolaire `.de`** (miroir ES 1.72) — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics
 - Vague **1.86** : `public-domain` LocalizedString.de ×194 · docs v1.85.0 · armor 186 — **8ᵉ scolaire `.de`** (miroir ES 1.71) — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain
@@ -91,6 +92,7 @@ Document à jour avec l’état réel du dépôt (**v1.87.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
+- [x] Docs headline → **v1.88.0** + 15 quiz · 386 Q · 268 illus (vague 1.89 P0 ; baseline live post-1.88.0)
 - [x] Docs headline → **v1.87.0** + 15 quiz · 386 Q · 268 illus (vague 1.88 P0 ; baseline live post-1.87.0)
 - [x] Docs headline → **v1.86.0** + 15 quiz · 386 Q · 268 illus (vague 1.87 P0 ; baseline live post-1.86.0)
 - [x] Docs headline → **v1.85.0** + 15 quiz · 386 Q · 268 illus (vague 1.86 P0 ; baseline live post-1.85.0)
@@ -104,7 +106,7 @@ Document à jour avec l’état réel du dépôt (**v1.87.0**).
 - [x] Docs headline → **v1.77.0** + 15 quiz · 386 Q · 268 illus (vague 1.78 P0 ; baseline live post-1.77.0)
 - [x] Docs headline → **v1.76.0** + 15 quiz · 386 Q · 268 illus (vague 1.77 P0 ; baseline live post-1.76.0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79 / 1.80 / 1.81 / 1.82 / 1.83 / 1.84 / 1.85 / 1.86 / 1.87 / 1.88
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79 / 1.80 / 1.81 / 1.82 / 1.83 / 1.84 / 1.85 / 1.86 / 1.87 / 1.88 / 1.89
 
 ### Ops Antony — checklist P0.4 (hors code)
 
@@ -168,5 +170,6 @@ Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Pu
 - [x] `public-domain` LocalizedString.de ×194 · docs v1.85.0 · armor 186 (vague **1.86**) — **8ᵉ scolaire `.de`** — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain
 - [x] `exposure-basics` LocalizedString.de ×226 · docs v1.86.0 · armor 187 (vague **1.87**) — **9ᵉ scolaire `.de`** — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics
 - [x] `genres` LocalizedString.de ×226 · docs v1.87.0 · armor 188 (vague **1.88**) — **10ᵉ scolaire `.de`** — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres
+- [x] `composition` LocalizedString.de ×230 · docs v1.88.0 · armor 189 (vague **1.89**) — **11ᵉ scolaire `.de`** — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition
 
-Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt. · Scolaires `.es` complets · non-scolaires `.es` **complets (3/3)** · catalogue `.de` : lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres · suite hors vague : packs scolaires `.de` suivants (ex. `composition` / `smartphone`) / path-locale si ROI Search Console.
+Contenu : `public/data/questions.json`. Priorisation : docs vague / release notes hors dépôt. · Scolaires `.es` complets · non-scolaires `.es` **complets (3/3)** · catalogue `.de` : lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition · suite hors vague : packs scolaires `.de` suivants (ex. `smartphone`) / path-locale si ROI Search Console.
