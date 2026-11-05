@@ -45,12 +45,13 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 const guidePagesWithTheme = [guidesIndex, hub, composition, fiche];
 
 describe('vague 1.94 — docs v1.93.0 + Guides/Schools chrome i18n residual', () => {
-  it('docs headline cites v1.93.0; vague 1.93/1.94 listed; no-go through 1.94', () => {
-    expect(readme).toContain('v1.93.0');
-    expect(nextSteps).toContain('**v1.93.0**');
+  it('docs headline cites v1.93.0+; vague 1.93/1.94 listed; no-go through 1.94+', () => {
+    // Softened in 1.95: headline may cite v1.94.0 (Livré pattern)
+    expect(readme).toMatch(/v1\.9[34]\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.9[34]\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.93**');
     expect(nextSteps).toContain('Vague **1.94**');
-    expect(nextSteps).toMatch(/no-go.*1\.94/);
+    expect(nextSteps).toMatch(/no-go.*1\.9[45]/);
     expect(nextSteps).toMatch(/chrome|residual/i);
     expect(nextSteps).not.toMatch(
       /suite.*path\s*`?\/es\/`?\s*`?\/de\/`?\s*comme suite automatique/i
@@ -130,9 +131,10 @@ describe('vague 1.94 — docs v1.93.0 + Guides/Schools chrome i18n residual', ()
     }
   });
 
-  it('ops no-gos through 1.94; SVG theme toggle kept', () => {
+  it('ops no-gos through 1.94+; SVG theme toggle kept', () => {
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.94/);
+    // Softened in 1.95: no-go line may extend through 1.95
+    expect(nextSteps).toMatch(/no-go.*1\.9[45]/);
     expect(themeJs).toContain('ICON_MOON');
     expect(themeJs).toContain('ICON_SUN');
     expect(themeJs).toContain('dark-mode-toggle__icon');

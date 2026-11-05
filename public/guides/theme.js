@@ -88,6 +88,42 @@
     el.textContent = text;
   }
 
+  /** Normalize pathname: trailing slash, no query/hash. */
+  function chromePathname(href) {
+    try {
+      var u = new URL(href, 'https://quiz.pixfan.fr');
+      var p = u.pathname || '/';
+      if (p.charAt(p.length - 1) !== '/') p += '/';
+      return p;
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function isGuidesHubHref(href) {
+    return chromePathname(href) === '/guides/';
+  }
+
+  function isScolairesHubHref(href) {
+    return chromePathname(href) === '/guides/scolaires/';
+  }
+
+  /**
+   * Preserve ?lang= on chrome hub links (vague 1.95).
+   * Keeps hash if present; never invents /es/|/de/ path prefixes.
+   */
+  function withLangHref(basePath, href) {
+    var lang = resolveLang();
+    var hash = '';
+    try {
+      var u = new URL(href || basePath, 'https://quiz.pixfan.fr');
+      hash = u.hash || '';
+    } catch (e) {
+      /* ignore */
+    }
+    return basePath + '?lang=' + lang + hash;
+  }
+
   function applyChromeLabels() {
     var lang = resolveLang();
     var pack = CHROME[lang] || CHROME.fr;
@@ -96,27 +132,23 @@
 
     document.querySelectorAll('a.guide-nav-link').forEach(function (a) {
       var href = a.getAttribute('href') || '';
-      if (href === guidesHref || href.indexOf(guidesHref + '?') === 0) {
+      if (isGuidesHubHref(href)) {
         setText(a, pack.guides);
-      } else if (
-        href === scolairesHref ||
-        href.indexOf(scolairesHref + '?') === 0 ||
-        href.indexOf(scolairesHref + '#') === 0
-      ) {
+        a.setAttribute('href', withLangHref(guidesHref, href));
+      } else if (isScolairesHubHref(href)) {
         setText(a, pack.scolaires);
+        a.setAttribute('href', withLangHref(scolairesHref, href));
       }
     });
 
     document.querySelectorAll('a.app-footer__link').forEach(function (a) {
       var href = a.getAttribute('href') || '';
-      if (href === guidesHref || href.indexOf(guidesHref + '?') === 0) {
+      if (isGuidesHubHref(href)) {
         setText(a, pack.guides);
-      } else if (
-        href === scolairesHref ||
-        href.indexOf(scolairesHref + '?') === 0 ||
-        href.indexOf(scolairesHref + '#') === 0
-      ) {
+        a.setAttribute('href', withLangHref(guidesHref, href));
+      } else if (isScolairesHubHref(href)) {
         setText(a, pack.scolaires);
+        a.setAttribute('href', withLangHref(scolairesHref, href));
       }
     });
 
