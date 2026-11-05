@@ -44,7 +44,8 @@ describe('home + scolaires polish (vague 1.26 P1–P2)', () => {
     );
     expect(resultSource).toContain('#c4-regard');
     expect(resultSource).toContain('#c4-lumiere');
-    expect(resultSource).toContain('scolairesLang');
+    expect(resultSource).toContain('scolairesRegardHref');
+    expect(resultSource).toContain('scolairesLumiereHref');
   });
 
   it('hub: EN parcours ids, jump to c4-regard, CTA before step list', () => {
