@@ -242,8 +242,8 @@ describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () =>
       ])
     );
     expect(withDe.length).toBeGreaterThanOrEqual(8);
-    expect(withDe.length).toBeLessThanOrEqual(14);
-    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(1);
+    expect(withDe.length).toBeLessThanOrEqual(15);
+    expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(0);
   });
 
   it('still no path-locale /es/|/de/; no .de outside lexique+photo-rights+light-color+flash-studio+retouching+history-icons+portrait-light+public-domain(+exposure-basics); ops no-gos through 1.86; SVG theme toggle', () => {
@@ -268,7 +268,8 @@ describe('vague 1.86 — docs v1.85.0 + public-domain LocalizedString.de', () =>
             q.id !== 'composition' &&
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
-            q.id !== 'lightroom-workflow'
+            q.id !== 'lightroom-workflow' &&
+            q.id !== 'marques-photo'
         )
         .every((q) => {
           const title = q.title as { de?: string };

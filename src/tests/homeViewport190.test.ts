@@ -271,6 +271,7 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
       'lexique-image-fixe',
       'light-color',
       'lightroom-workflow',
+      'marques-photo',
       'photo-rights',
       'portrait-light',
       'public-domain',
@@ -319,7 +320,8 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
             q.id !== 'composition' &&
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
-            q.id !== 'lightroom-workflow'
+            q.id !== 'lightroom-workflow' &&
+            q.id !== 'marques-photo'
         )
         .every((q) => {
           const title = q.title as { de?: string };
