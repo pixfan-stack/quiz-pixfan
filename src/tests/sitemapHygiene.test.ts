@@ -21,6 +21,7 @@ const GUIDE_TOPICS = [
 
 const GUIDE_BASES = [
   'https://quiz.pixfan.fr/',
+  'https://quiz.pixfan.fr/partenaires/',
   'https://quiz.pixfan.fr/guides/',
   'https://quiz.pixfan.fr/guides/scolaires/',
   'https://quiz.pixfan.fr/guides/scolaires/fiche-seance.html',
@@ -62,12 +63,12 @@ function pathTwin(base: string, lang: string): string {
 }
 
 describe('sitemap / SEO hygiene', () => {
-  it('lists expected inventory (74 locs) with path locales + lastmod ≥ floor', () => {
+  it('lists expected inventory (78 locs) with path locales + lastmod ≥ floor', () => {
     expect(sitemap.startsWith('<?xml')).toBe(true);
     expect(sitemap).toContain('<urlset');
 
     const locs = allLocs();
-    expect(locs).toHaveLength(74);
+    expect(locs).toHaveLength(78);
     // No legacy ?lang= twins in sitemap (vague 1.99 path product).
     expect(sitemap).not.toMatch(/\?lang=/);
 
@@ -118,12 +119,18 @@ describe('sitemap / SEO hygiene', () => {
     expect(redirects).toMatch(/\/en\s+\/en\/\s+301/);
     expect(redirects).toMatch(/\/en\/guides\/\s+\/guides\/index\.html\s+200/);
     expect(redirects).toMatch(/\/es\/guides\/\*\s+\/guides\/:splat\s+200/);
+    expect(redirects).toMatch(
+      /\/en\/partenaires\/\s+\/partenaires\/index\.html\s+200/
+    );
     const sitemapIdx = redirects.indexOf('/sitemap.xml');
-    const spaIdx = redirects.indexOf('/*');
+    // SPA catch-all is `/*    /index.html` — not `/guides/*` splat rules.
+    const spaIdx = redirects.indexOf('/*    /index.html');
     expect(sitemapIdx).toBeGreaterThanOrEqual(0);
     expect(spaIdx).toBeGreaterThan(sitemapIdx);
     expect(redirects.indexOf('/en/guides/')).toBeGreaterThan(sitemapIdx);
     expect(redirects.indexOf('/en/guides/')).toBeLessThan(spaIdx);
+    expect(redirects.indexOf('/en/partenaires/')).toBeGreaterThan(sitemapIdx);
+    expect(redirects.indexOf('/en/partenaires/')).toBeLessThan(spaIdx);
   });
 
   it('declares application/xml for sitemap via _headers', () => {

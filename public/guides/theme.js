@@ -13,12 +13,12 @@
   var ICON_SUN =
     '<svg class="dark-mode-toggle__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M12 2.5v2.25M12 19.25V21.5M2.5 12h2.25M19.25 12H21.5M5.05 5.05l1.6 1.6M17.35 17.35l1.6 1.6M5.05 18.95l1.6-1.6M17.35 6.65l1.6-1.6"/></svg>';
 
-  /** Short chrome labels (nav + footer) — vague 1.94 */
+  /** Short chrome labels (nav + footer) — vague 1.94 (+ partenaires 1.102) */
   var CHROME = {
-    fr: { guides: 'Guides', scolaires: 'Scolaires' },
-    en: { guides: 'Guides', scolaires: 'Schools' },
-    es: { guides: 'Guías', scolaires: 'Colegios' },
-    de: { guides: 'Leitfäden', scolaires: 'Schule' },
+    fr: { guides: 'Guides', scolaires: 'Scolaires', partenaires: 'Partenaires' },
+    en: { guides: 'Guides', scolaires: 'Schools', partenaires: 'Partners' },
+    es: { guides: 'Guías', scolaires: 'Colegios', partenaires: 'Socios' },
+    de: { guides: 'Leitfäden', scolaires: 'Schule', partenaires: 'Partner' },
   };
 
   var THEME_LABELS = {
@@ -116,6 +116,10 @@
     return chromePathname(href) === '/guides/scolaires/';
   }
 
+  function isPartenairesHref(href) {
+    return chromePathname(href) === '/partenaires/';
+  }
+
   /**
    * Path-locale chrome hub links (vague 1.99).
    * FR → bare `/guides/`; EN/ES/DE → `/xx/guides/…`. Keeps hash.
@@ -139,6 +143,7 @@
     var pack = CHROME[lang] || CHROME.fr;
     var guidesHref = '/guides/';
     var scolairesHref = '/guides/scolaires/';
+    var partenairesHref = '/partenaires/';
 
     document.querySelectorAll('a.guide-nav-link').forEach(function (a) {
       var href = a.getAttribute('href') || '';
@@ -159,6 +164,9 @@
       } else if (isScolairesHubHref(href)) {
         setText(a, pack.scolaires);
         a.setAttribute('href', withLangHref(scolairesHref, href));
+      } else if (isPartenairesHref(href)) {
+        setText(a, pack.partenaires);
+        a.setAttribute('href', withLangHref(partenairesHref, href));
       }
     });
 
