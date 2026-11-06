@@ -120,9 +120,9 @@ describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
     expect(redirects).toMatch(/\/es\/guides\/\s+\/guides\/index\.html\s+200/);
   });
 
-  it('sitemap uses path locs (no ?lang=); 74 inventory', () => {
+  it('sitemap uses path locs (no ?lang=); 78 inventory', () => {
     const locs = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]!);
-    expect(locs).toHaveLength(74);
+    expect(locs).toHaveLength(78);
     expect(sitemapXml).not.toMatch(/\?lang=/);
     expect(locs).toContain('https://quiz.pixfan.fr/en/');
     expect(locs).toContain('https://quiz.pixfan.fr/es/');

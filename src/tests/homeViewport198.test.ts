@@ -60,11 +60,11 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
     expect(nextSteps).toMatch(/noscript|FAQ|Googlebot/i);
   });
 
-  it('sitemap lastmod floor 2026-11-05; 74 locs (path product may add /en|/es|/de)', () => {
+  it('sitemap lastmod floor 2026-11-05; 78 locs (path product may add /en|/es|/de)', () => {
     expect(sitemapXml).toContain('<?xml');
     expect(sitemapXml).toContain('<urlset');
     const locs = [...sitemapXml.matchAll(/<loc>/g)];
-    expect(locs).toHaveLength(74);
+    expect(locs).toHaveLength(78);
     expect(sitemapXml).toContain('<lastmod>2026-11-05</lastmod>');
     expect(sitemapXml).not.toMatch(/<lastmod>2026-10-\d{2}<\/lastmod>/);
     expect(robotsTxt).toContain('Sitemap: https://quiz.pixfan.fr/sitemap.xml');
