@@ -11,13 +11,12 @@
 /es    /es/    301
 /de    /de/    301
 
-# Guides under locale prefix → same static HTML (sniff reads path; no thin duplicates)
+# Guides under locale prefix (vague 1.99 / 1.103).
+# Hub + scolaires shells are real files at /{en,es,de}/guides[/scolaires]/index.html
+# (baked at build) — those win over rewrites. Topic/fiche pages still rewrite.
 /en/guides    /en/guides/    301
 /es/guides    /es/guides/    301
 /de/guides    /de/guides/    301
-/en/guides/   /guides/index.html   200
-/es/guides/   /guides/index.html   200
-/de/guides/   /guides/index.html   200
 /en/guides/*  /guides/:splat   200
 /es/guides/*  /guides/:splat   200
 /de/guides/*  /guides/:splat   200
