@@ -4,7 +4,7 @@ Document à jour avec l’état réel du dépôt (**v1.102.0**).
 
 ## ✅ Livré
 
-- Vague **1.103** : **guides path shells** `/en|es|de/guides/` (+ scolaires) baked lang/meta/canonical/hreflang · plus de fallback HTML FR pour les hubs · topics restent rewrite+sniff · armor 103 — Web Push · salon · 16ᵉ **no-go** through **1.103**
+- Vague **1.103** : **guides path shells** `/en|es|de/guides/` (+ scolaires) baked lang/meta/canonical/hreflang · hotfix `_redirects` `:slug` (pas `/*` splat qui réécrivait le hub en FR) · topics rewrite+sniff · armor 103 — Web Push · salon · 16ᵉ **no-go** through **1.103**
 - Vague **1.102** : page **partenaires** liens retour HTTPS · footer guides · sitemap 78 locs · armor 102
 - Vague **1.101** / **1.100** : hotfix FR path-locale + Guides/Scolaires suivent la locale affichée
 - Vague **1.99** : **path locales** `/en/` `/es/` `/de/` (FR = `/` x-default) · shells home build · LanguageSwitcher path · guides rewrite+sniff · sitemap path locs · armor 199
