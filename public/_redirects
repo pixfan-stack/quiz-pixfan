@@ -11,15 +11,23 @@
 /es    /es/    301
 /de    /de/    301
 
-# Guides under locale prefix (vague 1.99 / 1.103).
-# Hub + scolaires shells are real files at /{en,es,de}/guides[/scolaires]/index.html
-# (baked at build) — those win over rewrites. Topic/fiche pages still rewrite.
+# Guides under locale prefix (vague 1.99 / 1.103 hotfix).
+# Hubs + scolaires shells are REAL files at /{en,es,de}/guides[/scolaires]/index.html
+# (baked at build). Do NOT use /xx/guides/* splat — it matches the hub itself and
+# proxies to FR /guides/ (live bug after #152: /en/guides/ stayed lang=fr).
+# Topics use :slug (single segment, no trailing slash). Fiche is explicit.
 /en/guides    /en/guides/    301
 /es/guides    /es/guides/    301
 /de/guides    /de/guides/    301
-/en/guides/*  /guides/:splat   200
-/es/guides/*  /guides/:splat   200
-/de/guides/*  /guides/:splat   200
+/en/guides/scolaires    /en/guides/scolaires/    301
+/es/guides/scolaires    /es/guides/scolaires/    301
+/de/guides/scolaires    /de/guides/scolaires/    301
+/en/guides/scolaires/fiche-seance.html    /guides/scolaires/fiche-seance.html    200
+/es/guides/scolaires/fiche-seance.html    /guides/scolaires/fiche-seance.html    200
+/de/guides/scolaires/fiche-seance.html    /guides/scolaires/fiche-seance.html    200
+/en/guides/:slug    /guides/:slug    200
+/es/guides/:slug    /guides/:slug    200
+/de/guides/:slug    /guides/:slug    200
 
 # Partenaires page (vague 1.102) — same static HTML under path locales
 /partenaires    /partenaires/    301

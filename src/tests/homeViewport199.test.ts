@@ -116,8 +116,9 @@ describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
       .join('\n');
     expect(activeRedirects).not.toMatch(/\?lang=/);
     expect(redirects).toMatch(/\/en\s+\/en\/\s+301/);
-    expect(redirects).toMatch(/\/en\/guides\/\*\s+\/guides\/:splat\s+200/);
-    expect(redirects).toMatch(/\/es\/guides\/\*\s+\/guides\/:splat\s+200/);
+    // 1.103 hotfix: :slug topics (not /* splat — that ate hub shells on CF).
+    expect(redirects).toMatch(/\/en\/guides\/:slug\s+\/guides\/:slug\s+200/);
+    expect(redirects).toMatch(/\/es\/guides\/:slug\s+\/guides\/:slug\s+200/);
   });
 
   it('sitemap uses path locs (no ?lang=); 78 inventory', () => {

@@ -79,12 +79,17 @@ describe('vague 1.103 — path-locale guides hub (+scolaires) shells', () => {
     expect(out).not.toMatch(/\?lang=en/);
   });
 
-  it('redirects keep topic splat; hub shells are real files (no FR index rewrite)', () => {
+  it('redirects use :slug for topics (not splat); hubs are real files', () => {
     const active = redirects
       .split('\n')
       .filter((l) => l.trim() && !l.trim().startsWith('#'))
       .join('\n');
-    expect(active).toMatch(/\/en\/guides\/\*\s+\/guides\/:splat\s+200/);
+    // Splat matched the hub itself on CF Pages (#152 live bug) — forbidden.
+    expect(active).not.toMatch(/\/en\/guides\/\*\s+/);
+    expect(active).toMatch(/\/en\/guides\/:slug\s+\/guides\/:slug\s+200/);
+    expect(active).toMatch(
+      /\/en\/guides\/scolaires\/fiche-seance\.html\s+\/guides\/scolaires\/fiche-seance\.html\s+200/
+    );
     expect(active).not.toMatch(
       /\/en\/guides\/\s+\/guides\/index\.html\s+200/
     );
