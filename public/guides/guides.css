@@ -255,11 +255,17 @@ a:hover {
   text-decoration: none;
 }
 
+/* Active lang: path locales (/en/…) and legacy ?lang= twins */
 html:not([lang="en"]):not([lang="es"]):not([lang="de"]) .lang-switcher__btn[href*="lang=fr"],
 html[lang="fr"] .lang-switcher__btn[href*="lang=fr"],
+html:not([lang="en"]):not([lang="es"]):not([lang="de"]) .lang-switcher__btn[href^="/guides"],
+html[lang="fr"] .lang-switcher__btn[href^="/guides"],
 html[lang="en"] .lang-switcher__btn[href*="lang=en"],
+html[lang="en"] .lang-switcher__btn[href^="/en/"],
 html[lang="es"] .lang-switcher__btn[href*="lang=es"],
-html[lang="de"] .lang-switcher__btn[href*="lang=de"] {
+html[lang="es"] .lang-switcher__btn[href^="/es/"],
+html[lang="de"] .lang-switcher__btn[href*="lang=de"],
+html[lang="de"] .lang-switcher__btn[href^="/de/"] {
   background: var(--color-surface);
   color: var(--pixfan-pink);
   box-shadow: var(--shadow-xs);
@@ -544,9 +550,14 @@ html[lang="de"] span.en {
 
 .dark-mode:not([lang="en"]):not([lang="es"]):not([lang="de"]) .lang-switcher__btn[href*="lang=fr"],
 .dark-mode[lang="fr"] .lang-switcher__btn[href*="lang=fr"],
+.dark-mode:not([lang="en"]):not([lang="es"]):not([lang="de"]) .lang-switcher__btn[href^="/guides"],
+.dark-mode[lang="fr"] .lang-switcher__btn[href^="/guides"],
 .dark-mode[lang="en"] .lang-switcher__btn[href*="lang=en"],
+.dark-mode[lang="en"] .lang-switcher__btn[href^="/en/"],
 .dark-mode[lang="es"] .lang-switcher__btn[href*="lang=es"],
-.dark-mode[lang="de"] .lang-switcher__btn[href*="lang=de"] {
+.dark-mode[lang="es"] .lang-switcher__btn[href^="/es/"],
+.dark-mode[lang="de"] .lang-switcher__btn[href*="lang=de"],
+.dark-mode[lang="de"] .lang-switcher__btn[href^="/de/"] {
   background: var(--color-surface);
   color: var(--pixfan-pink);
 }

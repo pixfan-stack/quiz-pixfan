@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import type { Plugin } from 'vite';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { localeGuideShellsPlugin } from './vite/localeGuideShells';
 import { localeHomeShellsPlugin } from './vite/localeHomeShells';
 
 const appVersion = (
@@ -10,9 +11,10 @@ const appVersion = (
 ).version;
 
 /**
- * Dev/preview parity for path locales (vague 1.99).
+ * Dev/preview parity for path locales (vague 1.99 / 1.103).
  * - `/en|/es|/de` home → SPA index (dev) or baked shell (preview/dist)
- * - `/xx/guides/*` → strip prefix and serve static guides
+ * - `/xx/guides/` + `/xx/guides/scolaires/` → baked shells in preview when present
+ * - other `/xx/guides/*` → strip prefix and serve static guides
  */
 function pathLocaleDevParity(): Plugin {
   const stripGuide = (raw: string): string | null => {
@@ -31,6 +33,20 @@ function pathLocaleDevParity(): Plugin {
     if (existsSync(`${base}.html`)) return `${base}.html`;
     const idx = join(base, 'index.html');
     return existsSync(idx) ? idx : null;
+  };
+
+  /** Prefer baked locale shells at dist/{lang}/guides/... (vague 1.103). */
+  const resolveBakedGuideShell = (raw: string): string | null => {
+    const m = raw.match(/^\/(en|es|de)\/guides(\/.*)?$/i);
+    if (!m) return null;
+    const lang = m[1]!.toLowerCase();
+    const rest = m[2] ?? '/';
+    const under = join(process.cwd(), 'dist', lang, 'guides');
+    if (rest === '/' || rest === '') {
+      const idx = join(under, 'index.html');
+      return existsSync(idx) ? idx : null;
+    }
+    return resolveGuideFile(join(process.cwd(), 'dist', lang), `/guides${rest}`);
   };
 
   return {
@@ -68,6 +84,12 @@ function pathLocaleDevParity(): Plugin {
             res.end(readFileSync(shell));
             return;
           }
+        }
+        const baked = resolveBakedGuideShell(raw);
+        if (baked) {
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.end(readFileSync(baked));
+          return;
         }
         const guide = stripGuide(raw);
         if (guide) {
@@ -138,6 +160,7 @@ export default defineConfig({
     pathLocaleDevParity(),
     publicDirIndex(),
     localeHomeShellsPlugin(),
+    localeGuideShellsPlugin(),
   ],
   define: {
     __APP_VERSION__: JSON.stringify(appVersion),

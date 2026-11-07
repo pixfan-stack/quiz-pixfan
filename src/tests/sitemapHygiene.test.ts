@@ -117,8 +117,12 @@ describe('sitemap / SEO hygiene', () => {
       .join('\n');
     expect(activeRedirects).not.toMatch(/\?lang=/);
     expect(redirects).toMatch(/\/en\s+\/en\/\s+301/);
-    expect(redirects).toMatch(/\/en\/guides\/\s+\/guides\/index\.html\s+200/);
+    // Hub shells are real files (vague 1.103); topics still splat-rewrite.
+    expect(redirects).toMatch(/\/en\/guides\/\*\s+\/guides\/:splat\s+200/);
     expect(redirects).toMatch(/\/es\/guides\/\*\s+\/guides\/:splat\s+200/);
+    expect(activeRedirects).not.toMatch(
+      /\/en\/guides\/\s+\/guides\/index\.html\s+200/
+    );
     expect(redirects).toMatch(
       /\/en\/partenaires\/\s+\/partenaires\/index\.html\s+200/
     );

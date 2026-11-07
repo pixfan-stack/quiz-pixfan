@@ -1,10 +1,13 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.98.0**).
+Document à jour avec l’état réel du dépôt (**v1.102.0**).
 
 ## ✅ Livré
 
-- Vague **1.99** : **path locales** `/en/` `/es/` `/de/` (FR = `/` x-default) · shells home build · LanguageSwitcher path · guides rewrite+sniff · sitemap path locs (74) · `/?lang=` → path 301 · armor 199 — Web Push · salon · 16ᵉ **no-go** through **1.99**
+- Vague **1.103** : **guides path shells** `/en|es|de/guides/` (+ scolaires) baked lang/meta/canonical/hreflang · plus de fallback HTML FR pour les hubs · topics restent rewrite+sniff · armor 103 — Web Push · salon · 16ᵉ **no-go** through **1.103**
+- Vague **1.102** : page **partenaires** liens retour HTTPS · footer guides · sitemap 78 locs · armor 102
+- Vague **1.101** / **1.100** : hotfix FR path-locale + Guides/Scolaires suivent la locale affichée
+- Vague **1.99** : **path locales** `/en/` `/es/` `/de/` (FR = `/` x-default) · shells home build · LanguageSwitcher path · guides rewrite+sniff · sitemap path locs · armor 199
 - Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
 - Vague **1.98** : **sitemap lastmod refresh** (74 locs · floor 2026-11-05) · inventaire CI (`sitemapHygiene`) · textes crawlables Googlebot (FAQ catalogues complets · meta FR/EN/ES/DE · `<noscript>` home · hub guides lead) · docs v1.97.0 · armor 198 — **pas** path `/es/` `/de/` · **pas** inventer D1–D5 GSC
 - Vague **1.97** : docs v1.96.0 · **indexation / coverage** gate (checklist D1–D5 + remédiation ops ; **pas** path `/es/` `/de/`) · armor 197 — crawlability locks (robots Allow · sitemap · no noindex home) · SVG + `withLangHref` + catalogues 15/15 inchangés
@@ -124,7 +127,7 @@ Document à jour avec l’état réel du dépôt (**v1.98.0**).
 - [x] Docs headline → **v1.77.0** + 15 quiz · 386 Q · 268 illus (vague 1.78 P0 ; baseline live post-1.77.0)
 - [x] Docs headline → **v1.76.0** + 15 quiz · 386 Q · 268 illus (vague 1.77 P0 ; baseline live post-1.76.0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79 / 1.80 / 1.81 / 1.82 / 1.83 / 1.84 / 1.85 / 1.86 / 1.87 / 1.88 / 1.89 / 1.90 / 1.91 / 1.92 / 1.93 / 1.94 / 1.95 / 1.96 / 1.97
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79 / 1.80 / 1.81 / 1.82 / 1.83 / 1.84 / 1.85 / 1.86 / 1.87 / 1.88 / 1.89 / 1.90 / 1.91 / 1.92 / 1.93 / 1.94 / 1.95 / 1.96 / 1.97 / 1.98 / 1.99 / 1.100 / 1.101 / 1.102 / **1.103**
 
 ### Ops Antony — checklist P0.4 (hors code)
 

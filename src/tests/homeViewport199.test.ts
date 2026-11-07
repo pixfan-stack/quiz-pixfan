@@ -57,11 +57,11 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 }
 
 describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
-  it('docs headline cites v1.98.0; vague 1.99 listed; no-go through 1.99', () => {
-    expect(readme).toContain('v1.98.0');
-    expect(nextSteps).toContain('**v1.98.0**');
+  it('docs cite path locales / vague 1.99+; no-go through 1.99+', () => {
+    expect(readme).toMatch(/v1\.(98|99|10[0-3])\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(98|99|10[0-3])\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.99**');
-    expect(nextSteps).toMatch(/no-go.*1\.99/);
+    expect(nextSteps).toMatch(/no-go.*1\.(99|10[0-3])/);
     expect(nextSteps).toMatch(/\/en\/|path-locale|path locales/i);
   });
 
@@ -117,7 +117,7 @@ describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
     expect(activeRedirects).not.toMatch(/\?lang=/);
     expect(redirects).toMatch(/\/en\s+\/en\/\s+301/);
     expect(redirects).toMatch(/\/en\/guides\/\*\s+\/guides\/:splat\s+200/);
-    expect(redirects).toMatch(/\/es\/guides\/\s+\/guides\/index\.html\s+200/);
+    expect(redirects).toMatch(/\/es\/guides\/\*\s+\/guides\/:splat\s+200/);
   });
 
   it('sitemap uses path locs (no ?lang=); 78 inventory', () => {
@@ -159,7 +159,7 @@ describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
     expect(collectLs(pack)).toHaveLength(194);
     expect(pickLocale(pack.title, 'de')).toMatch(/Markengeschichte/i);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.99/);
+    expect(nextSteps).toMatch(/no-go.*1\.(99|10[0-3])/);
     expect(appSource).toContain('className="dark-mode-toggle"');
     expect(appSource).toContain('dark-mode-toggle__icon');
   });
