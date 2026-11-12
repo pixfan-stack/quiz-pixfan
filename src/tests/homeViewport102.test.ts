@@ -30,7 +30,9 @@ describe('vague 1.102 armor — partenaires page + reciprocal links', () => {
     expect(locs).toContain('https://quiz.pixfan.fr/en/partenaires/');
     expect(locs).toContain('https://quiz.pixfan.fr/es/partenaires/');
     expect(locs).toContain('https://quiz.pixfan.fr/de/partenaires/');
-    expect(redirects).toMatch(
+    // 1.104: locale partenaires are baked real files (rewrite 200 was ignored live).
+    expect(redirects).toMatch(/\/en\/partenaires\s+\/en\/partenaires\/\s+301/);
+    expect(redirects).not.toMatch(
       /\/en\/partenaires\/\s+\/partenaires\/index\.html\s+200/
     );
     expect(guidesIndex).toMatch(/href="\/partenaires\/"/);

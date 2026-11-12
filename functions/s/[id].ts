@@ -21,7 +21,9 @@ export const onRequestGet: PagesFunction<{ id: string }> = async (context) => {
 
   const url = new URL(context.request.url);
   const score = parseScore(url.searchParams.get('score'));
-  const lang = parseLang(url.searchParams.get('lang'));
+  // Prefer ?lang=; else path locale from /en|es|de/s/:id (vague 1.104 rewrite).
+  const pathLang = url.pathname.match(/^\/(en|es|de)(?:\/|$)/i)?.[1] ?? null;
+  const lang = parseLang(url.searchParams.get('lang') ?? pathLang);
   const classeRaw = url.searchParams.get('classe');
   const classe = classeRaw === '1' || classeRaw === 'true';
   const origin = url.origin;

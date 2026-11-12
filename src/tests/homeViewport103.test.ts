@@ -14,12 +14,12 @@ import {
 } from '../utils/localeGuideShellBake';
 
 describe('vague 1.103 — path-locale guides hub (+scolaires) shells', () => {
-  it('NEXT_STEPS cites v1.102.0 + vague 1.103; no-go through 1.103', () => {
+  it('NEXT_STEPS cites vague 1.103; no-go through 1.103+', () => {
     // README stays on historical armor baseline (v1.98.0); live tip is package.json.
     expect(readme).toMatch(/v1\.98\.0/);
-    expect(nextSteps).toContain('**v1.102.0**');
+    expect(nextSteps).toMatch(/\*\*v1\.(102|103)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.103**');
-    expect(nextSteps).toMatch(/no-go.*1\.103/);
+    expect(nextSteps).toMatch(/no-go.*1\.10[34]/);
   });
 
   it('vite builds locale guide shells for hubs + scolaires', () => {
@@ -96,8 +96,8 @@ describe('vague 1.103 — path-locale guides hub (+scolaires) shells', () => {
     expect(active).not.toMatch(/\?lang=/);
   });
 
-  it('ops no-gos through 1.103; catalogues unchanged', () => {
+  it('ops no-gos through 1.103+; catalogues unchanged', () => {
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.103/);
+    expect(nextSteps).toMatch(/no-go.*1\.10[34]/);
   });
 });

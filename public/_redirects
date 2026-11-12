@@ -29,15 +29,23 @@
 /es/guides/:slug    /guides/:slug    200
 /de/guides/:slug    /guides/:slug    200
 
-# Partenaires page (vague 1.102) — same static HTML under path locales
+# Partenaires (vague 1.102 / 1.104). Locale shells are REAL files at
+# /{en,es,de}/partenaires/index.html (baked at build). Do NOT 200-rewrite to
+# /partenaires/index.html — live CF ignored that rule and fell through to the
+# SPA catch-all, injecting homepage FAQ JSON-LD (QP-291).
 /partenaires    /partenaires/    301
 /en/partenaires    /en/partenaires/    301
 /es/partenaires    /es/partenaires/    301
 /de/partenaires    /de/partenaires/    301
-/en/partenaires/   /partenaires/index.html   200
-/es/partenaires/   /partenaires/index.html   200
-/de/partenaires/   /partenaires/index.html   200
+
+# Share landings under locale prefix (vague 1.104 / QP-291).
+# Without this, /en|es|de/s/* hit SPA catch-all → homepage FAQ JSON-LD.
+# Bare /s/:id stays the Pages Function (no homepage graph).
+/en/s/:id    /s/:id    200
+/es/s/:id    /s/:id    200
+/de/s/:id    /s/:id    200
 
 # Cloudflare Pages SPA fallback (safe even without client-side routes)
-# Real files at /en/index.html /es/index.html /de/index.html win over this catch-all.
+# Real files at /en/index.html /es/index.html /de/index.html (+ partenaires
+# shells) win over this catch-all.
 /*    /index.html   200
