@@ -5,22 +5,29 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { localeGuideShellsPlugin } from './vite/localeGuideShells';
 import { localeHomeShellsPlugin } from './vite/localeHomeShells';
+import { localePartenairesShellsPlugin } from './vite/localePartenairesShells';
 
 const appVersion = (
   JSON.parse(readFileSync('./package.json', 'utf-8')) as { version: string }
 ).version;
 
 /**
- * Dev/preview parity for path locales (vague 1.99 / 1.103).
+ * Dev/preview parity for path locales (vague 1.99 / 1.103 / 1.104).
  * - `/en|/es|/de` home → SPA index (dev) or baked shell (preview/dist)
  * - `/xx/guides/` + `/xx/guides/scolaires/` → baked shells in preview when present
  * - other `/xx/guides/*` → strip prefix and serve static guides
+ * - `/xx/partenaires/` → baked shells in preview when present (else FR public)
  */
 function pathLocaleDevParity(): Plugin {
   const stripGuide = (raw: string): string | null => {
     const m = raw.match(/^\/(en|es|de)\/guides(\/.*)?$/i);
     if (!m) return null;
     return `/guides${m[2] ?? '/'}`;
+  };
+
+  const stripPartenaires = (raw: string): string | null => {
+    if (/^\/(en|es|de)\/partenaires\/?$/i.test(raw)) return '/partenaires/';
+    return null;
   };
 
   const resolveGuideFile = (root: string, guidePath: string): string | null => {
@@ -49,6 +56,20 @@ function pathLocaleDevParity(): Plugin {
     return resolveGuideFile(join(process.cwd(), 'dist', lang), `/guides${rest}`);
   };
 
+  /** Prefer baked locale shells at dist/{lang}/partenaires/... (vague 1.104). */
+  const resolveBakedPartenairesShell = (raw: string): string | null => {
+    const m = raw.match(/^\/(en|es|de)\/partenaires\/?$/i);
+    if (!m) return null;
+    const idx = join(
+      process.cwd(),
+      'dist',
+      m[1]!.toLowerCase(),
+      'partenaires',
+      'index.html'
+    );
+    return existsSync(idx) ? idx : null;
+  };
+
   return {
     name: 'path-locale-dev-parity',
     configureServer(server) {
@@ -59,6 +80,15 @@ function pathLocaleDevParity(): Plugin {
           req.url = '/' + (req.url?.includes('?') ? req.url.slice(req.url.indexOf('?')) : '');
           next();
           return;
+        }
+        const partenaires = stripPartenaires(raw);
+        if (partenaires) {
+          const file = resolveGuideFile(join(process.cwd(), 'public'), partenaires);
+          if (file) {
+            _res.setHeader('Content-Type', 'text/html; charset=utf-8');
+            _res.end(readFileSync(file));
+            return;
+          }
         }
         const guide = stripGuide(raw);
         if (guide) {
@@ -84,6 +114,12 @@ function pathLocaleDevParity(): Plugin {
             res.end(readFileSync(shell));
             return;
           }
+        }
+        const bakedPartenaires = resolveBakedPartenairesShell(raw);
+        if (bakedPartenaires) {
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.end(readFileSync(bakedPartenaires));
+          return;
         }
         const baked = resolveBakedGuideShell(raw);
         if (baked) {
@@ -161,6 +197,7 @@ export default defineConfig({
     publicDirIndex(),
     localeHomeShellsPlugin(),
     localeGuideShellsPlugin(),
+    localePartenairesShellsPlugin(),
   ],
   define: {
     __APP_VERSION__: JSON.stringify(appVersion),
