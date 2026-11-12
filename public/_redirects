@@ -38,14 +38,14 @@
 /es/partenaires    /es/partenaires/    301
 /de/partenaires    /de/partenaires/    301
 
-# Share landings under locale prefix (vague 1.104 / QP-291).
-# Without this, /en|es|de/s/* hit SPA catch-all → homepage FAQ JSON-LD.
-# Bare /s/:id stays the Pages Function (no homepage graph).
-/en/s/:id    /s/:id    200
-/es/s/:id    /s/:id    200
-/de/s/:id    /s/:id    200
+# Share landings under locale prefix (vague 1.105 / QP-293).
+# Do NOT 200-proxy /xx/s/:id → /s/:id — CF Pages proxying only resolves
+# static assets (docs: redirects apply to static asset responses). Destination
+# /s/:id is a Pages Function, so the 1.104 rewrite was ignored and the SPA
+# catch-all injected homepage FAQ JSON-LD (live residual after #154).
+# Locale sessions are served by Functions at functions/{en,es,de}/s/[id].ts.
 
 # Cloudflare Pages SPA fallback (safe even without client-side routes)
 # Real files at /en/index.html /es/index.html /de/index.html (+ partenaires
-# shells) win over this catch-all.
+# shells) win over this catch-all. Functions match before static/SPA.
 /*    /index.html   200

@@ -1,10 +1,11 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.103.0**).
+Document à jour avec l’état réel du dépôt (**v1.104.0**).
 
 ## ✅ Livré
 
-- Vague **1.104** : **JSON-LD home syntax** (`]` parasite FAQ `mainEntity`) · bake shells **partenaires** path-locale (rewrite 200 ignoré live → SPA FAQ) · `_redirects` `/xx/s/:id → /s/:id` · armor 104 — Web Push · salon · 16ᵉ **no-go** through **1.104** (QP-291)
+- Vague **1.105** : **locale sessions** `/en|es|de/s/*` via Pages Functions (pas proxy `_redirects` — CF 200 = static only, Function miss → SPA FAQ) · armor 105 — Web Push · salon · 16ᵉ **no-go** through **1.105** (QP-293)
+- Vague **1.104** : **JSON-LD home syntax** (`]` parasite FAQ `mainEntity`) · bake shells **partenaires** path-locale (rewrite 200 ignoré live → SPA FAQ) · attempt `_redirects` `/xx/s/:id → /s/:id` (residual CF) · armor 104 — Web Push · salon · 16ᵉ **no-go** through **1.104** (QP-291)
 - Vague **1.103** : **guides path shells** `/en|es|de/guides/` (+ scolaires) baked lang/meta/canonical/hreflang · hotfix `_redirects` `:slug` (pas `/*` splat qui réécrivait le hub en FR) · topics rewrite+sniff · armor 103
 - Vague **1.102** : page **partenaires** liens retour HTTPS · footer guides · sitemap 78 locs · armor 102
 - Vague **1.101** / **1.100** : hotfix FR path-locale + Guides/Scolaires suivent la locale affichée

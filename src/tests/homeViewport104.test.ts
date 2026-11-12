@@ -5,7 +5,7 @@ import partenaires from '../../public/partenaires/index.html?raw';
 import nextSteps from '../../NEXT_STEPS.md?raw';
 import viteConfig from '../../vite.config.ts?raw';
 import localePartenairesShells from '../../vite/localePartenairesShells.ts?raw';
-import shareHandler from '../../functions/s/[id].ts?raw';
+import shareLanding from '../../functions/lib/shareLanding.ts?raw';
 import {
   bakeLocalePartenairesHtml,
 } from '../utils/localePartenairesShellBake';
@@ -22,10 +22,11 @@ function extractLdJsonBlocks(html: string): string[] {
 }
 
 describe('vague 1.104 — homepage JSON-LD syntax + locale injection (QP-291)', () => {
-  it('NEXT_STEPS cites v1.103.0 + vague 1.104; no-go through 1.104', () => {
-    expect(nextSteps).toContain('**v1.103.0**');
+  it('NEXT_STEPS cites vague 1.104; no-go through 1.104+', () => {
+    // Live tip moves with package.json; armor accepts 1.103/1.104 baseline.
+    expect(nextSteps).toMatch(/\*\*v1\.(103|104)\.\d+\*\*/);
     expect(nextSteps).toContain('Vague **1.104**');
-    expect(nextSteps).toMatch(/no-go.*1\.104/);
+    expect(nextSteps).toMatch(/no-go.*1\.10[45]/);
   });
 
   it('homepage FAQ JSON-LD parses as valid JSON (no extra ] after mainEntity)', () => {
@@ -81,7 +82,7 @@ describe('vague 1.104 — homepage JSON-LD syntax + locale injection (QP-291)', 
     );
   });
 
-  it('vite bakes partenaires shells; redirects drop broken rewrite + add /xx/s/:id', () => {
+  it('vite bakes partenaires shells; redirects drop broken partenaires rewrite', () => {
     expect(viteConfig).toContain('localePartenairesShellsPlugin');
     expect(localePartenairesShells).toContain('writeLocalePartenairesShells');
     expect(localePartenairesShells).toContain('bakeLocalePartenairesHtml');
@@ -90,9 +91,9 @@ describe('vague 1.104 — homepage JSON-LD syntax + locale injection (QP-291)', 
       /\/en\/partenaires\/\s+\/partenaires\/index\.html\s+200/
     );
     expect(redirects).toMatch(/\/en\/partenaires\s+\/en\/partenaires\/\s+301/);
-    expect(redirects).toMatch(/\/en\/s\/:id\s+\/s\/:id\s+200/);
-    expect(redirects).toMatch(/\/es\/s\/:id\s+\/s\/:id\s+200/);
-    expect(redirects).toMatch(/\/de\/s\/:id\s+\/s\/:id\s+200/);
-    expect(shareHandler).toMatch(/pathLang/);
+    // 1.105: /xx/s/:id → /s/:id 200 proxy was ignored live (Function target);
+    // locale sessions are Pages Functions — see homeViewport105.
+    expect(redirects).not.toMatch(/\/en\/s\/:id\s+\/s\/:id\s+200/);
+    expect(shareLanding).toMatch(/pathLang/);
   });
 });
