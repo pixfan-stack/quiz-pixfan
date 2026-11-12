@@ -1,51 +1,8 @@
-import {
-  buildShareHtml,
-  normalizeQuizId,
-  parseLang,
-  parseScore,
-  themeOgImageUrl,
-} from '../lib/sharePreview';
+import { handleShareLanding } from '../lib/shareLanding';
 
 /**
  * Crawlable share landing page with dynamic OG tags.
  * GET /s/:id?score=80&lang=fr&classe=1 → redirects humans to /#/quiz/:id?…
  */
-export const onRequestGet: PagesFunction<{ id: string }> = async (context) => {
-  const rawId = context.params.id;
-  const quizId = normalizeQuizId(
-    Array.isArray(rawId) ? (rawId[0] ?? '') : (rawId ?? '')
-  );
-  if (!quizId) {
-    return Response.redirect(new URL('/', context.request.url).toString(), 302);
-  }
-
-  const url = new URL(context.request.url);
-  const score = parseScore(url.searchParams.get('score'));
-  // Prefer ?lang=; else path locale from /en|es|de/s/:id (vague 1.104 rewrite).
-  const pathLang = url.pathname.match(/^\/(en|es|de)(?:\/|$)/i)?.[1] ?? null;
-  const lang = parseLang(url.searchParams.get('lang') ?? pathLang);
-  const classeRaw = url.searchParams.get('classe');
-  const classe = classeRaw === '1' || classeRaw === 'true';
-  const origin = url.origin;
-  // Theme PNG (+ score tier) — Facebook / LinkedIn / X / Slack reject SVG.
-  const ogImageUrl = themeOgImageUrl(origin, quizId, score);
-
-  const pageUrl = url.toString();
-  const html = buildShareHtml({
-    quizId,
-    score,
-    lang,
-    pageUrl,
-    ogImageUrl,
-    appOrigin: origin,
-    classe,
-  });
-
-  return new Response(html, {
-    status: 200,
-    headers: {
-      'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'public, max-age=300',
-    },
-  });
-};
+export const onRequestGet: PagesFunction<{ id: string }> = async (context) =>
+  handleShareLanding(context);

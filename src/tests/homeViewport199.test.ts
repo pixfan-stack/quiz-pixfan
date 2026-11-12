@@ -58,10 +58,10 @@ function collectLs(pack: (typeof data.quizzes)[number]): LocalizedString[] {
 
 describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
   it('docs cite path locales / vague 1.99+; no-go through 1.99+', () => {
-    expect(readme).toMatch(/v1\.(98|99|10[0-3])\.0/);
-    expect(nextSteps).toMatch(/\*\*v1\.(98|99|10[0-3])\.0\*\*/);
+    expect(readme).toMatch(/v1\.(98|99|10[0-5])\.0/);
+    expect(nextSteps).toMatch(/\*\*v1\.(98|99|10[0-5])\.0\*\*/);
     expect(nextSteps).toContain('Vague **1.99**');
-    expect(nextSteps).toMatch(/no-go.*1\.(99|10[0-3])/);
+    expect(nextSteps).toMatch(/no-go.*1\.(99|10[0-5])/);
     expect(nextSteps).toMatch(/\/en\/|path-locale|path locales/i);
   });
 
@@ -160,7 +160,7 @@ describe('vague 1.99 — path locales /en/ /es/ /de/', () => {
     expect(collectLs(pack)).toHaveLength(194);
     expect(pickLocale(pack.title, 'de')).toMatch(/Markengeschichte/i);
     expect(nextSteps).toMatch(/Web Push.*salon.*16/);
-    expect(nextSteps).toMatch(/no-go.*1\.(99|10[0-3])/);
+    expect(nextSteps).toMatch(/no-go.*1\.(99|10[0-5])/);
     expect(appSource).toContain('className="dark-mode-toggle"');
     expect(appSource).toContain('dark-mode-toggle__icon');
   });

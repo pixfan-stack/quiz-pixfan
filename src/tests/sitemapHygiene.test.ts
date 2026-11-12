@@ -124,12 +124,15 @@ describe('sitemap / SEO hygiene', () => {
     expect(activeRedirects).not.toMatch(
       /\/en\/guides\/\s+\/guides\/index\.html\s+200/
     );
-    // 1.104: partenaires shells are real files (no 200 rewrite); /xx/s/:id → share.
+    // 1.104: partenaires shells are real files (no 200 rewrite).
+    // 1.105: do NOT proxy /xx/s/:id → /s/:id (CF proxy = static only; Function miss).
     expect(activeRedirects).not.toMatch(
       /\/en\/partenaires\/\s+\/partenaires\/index\.html\s+200/
     );
     expect(redirects).toMatch(/\/en\/partenaires\s+\/en\/partenaires\/\s+301/);
-    expect(redirects).toMatch(/\/en\/s\/:id\s+\/s\/:id\s+200/);
+    expect(activeRedirects).not.toMatch(/\/en\/s\/:id\s+\/s\/:id\s+200/);
+    expect(activeRedirects).not.toMatch(/\/es\/s\/:id\s+\/s\/:id\s+200/);
+    expect(activeRedirects).not.toMatch(/\/de\/s\/:id\s+\/s\/:id\s+200/);
     const sitemapIdx = redirects.indexOf('/sitemap.xml');
     // SPA catch-all is `/*    /index.html` — not `/guides/*` splat rules.
     const spaIdx = redirects.indexOf('/*    /index.html');
@@ -139,8 +142,6 @@ describe('sitemap / SEO hygiene', () => {
     expect(redirects.indexOf('/en/guides/')).toBeLessThan(spaIdx);
     expect(redirects.indexOf('/en/partenaires')).toBeGreaterThan(sitemapIdx);
     expect(redirects.indexOf('/en/partenaires')).toBeLessThan(spaIdx);
-    expect(redirects.indexOf('/en/s/:id')).toBeGreaterThan(sitemapIdx);
-    expect(redirects.indexOf('/en/s/:id')).toBeLessThan(spaIdx);
   });
 
   it('declares application/xml for sitemap via _headers', () => {
