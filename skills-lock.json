@@ -1,11 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
+    "ste80-humanizer": {
+      "source": "Dodaios/ste80-humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "497f9d766aa46766142150244fccb89cd0fdbaddd6382e294639c35f20e7f7fd"
+    },
     "typesafe-ai": {
       "source": "typesafe-ai/skills",
       "sourceType": "github",
       "skillPath": "skills/typesafe-ai/SKILL.md",
-      "computedHash": "9cd84c5e535dec8dec59917c110f9c00b4a61faadb86b432ec7e41051170af12"
+      "computedHash": "e2d1f6d68a1a79d44d401b9c6ba1afa042b14787ea8fdb0c78b8ff5f4740db80"
     }
   }
 }
