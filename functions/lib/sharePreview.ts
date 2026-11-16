@@ -3,7 +3,10 @@
 export const QUIZ_ID_RE =
   /^(?:[a-z0-9][a-z0-9-]{0,62}|daily-\d{4}-\d{2}-\d{2}|duel-[a-z0-9]{6,16}|random(?:-mix)?|weak-spots|photo-reading|mix-(?:easy|medium|hard))$/;
 
-const LABELS: Record<string, { en: string; fr: string; es: string; de: string }> = {
+export const LABELS: Record<
+  string,
+  { en: string; fr: string; es: string; de: string }
+> = {
   'exposure-basics': {
     en: 'Exposure basics',
     fr: 'Bases de l’exposition',
@@ -281,12 +284,17 @@ export function parseScore(raw: string | null): number | null {
   return Math.round(Math.min(100, Math.max(0, n)));
 }
 
+/**
+ * Share / OG locale. Bare `/s/:id` (no `?lang=` / path prefix) is FR x-default —
+ * matching site home `/` — not English.
+ */
 export function parseLang(raw: string | null): ShareLang {
   const s = (raw ?? '').toLowerCase();
-  if (s.startsWith('fr')) return 'fr';
+  if (s.startsWith('en')) return 'en';
   if (s.startsWith('es')) return 'es';
   if (s.startsWith('de')) return 'de';
-  return 'en';
+  if (s.startsWith('fr')) return 'fr';
+  return 'fr';
 }
 
 const DAILY_PREFIX: Record<ContentLang, string> = {

@@ -34,6 +34,8 @@ describe('sharePreview', () => {
     expect(parseScore('-5')).toBe(0);
     expect(parseScore('x')).toBeNull();
     expect(parseLang('fr-FR')).toBe('fr');
+    expect(parseLang(null)).toBe('fr');
+    expect(parseLang('')).toBe('fr');
     expect(parseLang('en')).toBe('en');
     expect(parseLang('es')).toBe('es');
     expect(parseLang('de-DE')).toBe('de');
