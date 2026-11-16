@@ -6,8 +6,8 @@ Quiz photo multilingue (FR / EN / ES / DE) — **React + TypeScript + Vite**, d�
 
 ## Contenu actuel
 
-- **15 quiz** · **386 questions** · **268 illustrées**
-- Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes, **histoire des marques**, **flash & studio**, **lexique image fixe** (scolaires)
+- **17 quiz** · **478 questions** · **268 illustrées**
+- Triangle d’exposition, composition, lumière & couleur, matériel, histoire & icônes, **histoire des marques**, **histoire de Nikon**, **histoire de Tamron**, **flash & studio**, **lexique image fixe** (scolaires)
 - Galerie domaine public, genres, smartphone, droits & éthique, retouche, workflow Lightroom, **portrait & lumière**
 - Modes générés : défi du jour, photo-reading, duel, mix difficulté, points faibles, aléatoire
 - Guides locaux : exposition, composition, lumière, retouche, smartphone, genres, **matériel**, **droits & éthique**, **histoire** + hub **scolaires** (BreadcrumbList JSON-LD)

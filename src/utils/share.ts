@@ -82,6 +82,8 @@ export function ogImageUrl(
     'marques-photo',
     'flash-studio',
     'lexique-image-fixe',
+    'nikon-histoire',
+    'tamron-histoire',
     'random',
     'weak-spots',
     'photo-reading',

@@ -1,22 +1,23 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.104.0**).
+Document à jour avec l’état réel du dépôt (**v1.105.0** ; tip vague 1.104 docs : **v1.104.0**).
 
 ## ✅ Livré
 
+- Vague **1.106** : packs **`nikon-histoire`** (67 Q) + **`tamron-histoire`** (25 Q) FR/EN/ES/DE · CTA history · daily history week · OG/sitemap · guide histoire · catalog **17 / 478 / 268** · armor 106 — Web Push · salon **no-go** through **1.106** (QP-294 ; brand packs demandés)
 - Vague **1.105** : **locale sessions** `/en|es|de/s/*` via Pages Functions (pas proxy `_redirects` — CF 200 = static only, Function miss → SPA FAQ) · armor 105 — Web Push · salon · 16ᵉ **no-go** through **1.105** (QP-293)
 - Vague **1.104** : **JSON-LD home syntax** (`]` parasite FAQ `mainEntity`) · bake shells **partenaires** path-locale (rewrite 200 ignoré live → SPA FAQ) · attempt `_redirects` `/xx/s/:id → /s/:id` (residual CF) · armor 104 — Web Push · salon · 16ᵉ **no-go** through **1.104** (QP-291)
 - Vague **1.103** : **guides path shells** `/en|es|de/guides/` (+ scolaires) baked lang/meta/canonical/hreflang · hotfix `_redirects` `:slug` (pas `/*` splat qui réécrivait le hub en FR) · topics rewrite+sniff · armor 103
 - Vague **1.102** : page **partenaires** liens retour HTTPS · footer guides · sitemap 78 locs · armor 102
 - Vague **1.101** / **1.100** : hotfix FR path-locale + Guides/Scolaires suivent la locale affichée
 - Vague **1.99** : **path locales** `/en/` `/es/` `/de/` (FR = `/` x-default) · shells home build · LanguageSwitcher path · guides rewrite+sniff · sitemap path locs · armor 199
-- Contenu : **15 quiz · 386 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
+- Contenu : **17 quiz · 478 questions · 268 illustrées** (`public/data/questions.json`), dont packs **`marques-photo`**, **`nikon-histoire`**, **`tamron-histoire`**, **`flash-studio`** et **`lexique-image-fixe`** (Lexique image fixe · scolaires)
 - Vague **1.98** : **sitemap lastmod refresh** (74 locs · floor 2026-11-05) · inventaire CI (`sitemapHygiene`) · textes crawlables Googlebot (FAQ catalogues complets · meta FR/EN/ES/DE · `<noscript>` home · hub guides lead) · docs v1.97.0 · armor 198 — **pas** path `/es/` `/de/` · **pas** inventer D1–D5 GSC
-- Vague **1.97** : docs v1.96.0 · **indexation / coverage** gate (checklist D1–D5 + remédiation ops ; **pas** path `/es/` `/de/`) · armor 197 — crawlability locks (robots Allow · sitemap · no noindex home) · SVG + `withLangHref` + catalogues 15/15 inchangés
+- Vague **1.97** : docs v1.96.0 · **indexation / coverage** gate (checklist D1–D5 + remédiation ops ; **pas** path `/es/` `/de/`) · armor 197 — crawlability locks (robots Allow · sitemap · no noindex home) · SVG + `withLangHref` + catalogues 17/17 inchangés
 - Vague **1.96** : docs v1.95.0 · **ROI Search Console measurement gate / readout** (checklist + evidence ou blocker) · armor 196 — **pas** path `/es/` `/de/` (path seulement si ROI SC documenté + oui) · chrome static **fermé** · SVG + `withLangHref` inchangés
 - Vague **1.95** : préserver `?lang=` sur href chrome Guides/Schools (nav+footer `/guides/` ↔ `/guides/scolaires/`) · docs v1.94.0 · armor 195 — **pas** path `/es/` `/de/` · labels i18n 1.94 + SVG inchangés
-- Vague **1.94** : chrome Guides/Schools static i18n (nav+footer + theme.js es/de) · docs v1.93.0 · armor 194 — catalogues ES+DE **complets (15/15)** — residual chrome — **pas** path `/es/` `/de/` comme suite
-- Vague **1.93** : `marques-photo` LocalizedString.de ×194 · docs v1.92.0 · armor 193 — **3ᵉ non-scolaire `.de`** (miroir ES 1.78) — catalogue `.de` **complets (15/15)** — **pas** path `/es/` `/de/` · **pas** autre pack hors catalogue
+- Vague **1.94** : chrome Guides/Schools static i18n (nav+footer + theme.js es/de) · docs v1.93.0 · armor 194 — catalogues ES+DE **complets (17/17)** — residual chrome — **pas** path `/es/` `/de/` comme suite
+- Vague **1.93** : `marques-photo` LocalizedString.de ×194 · docs v1.92.0 · armor 193 — **3ᵉ non-scolaire `.de`** (miroir ES 1.78) — catalogue `.de` **complets (17/17)** — **pas** path `/es/` `/de/` · **pas** autre pack hors catalogue
 - Vague **1.92** : `lightroom-workflow` LocalizedString.de ×194 · docs v1.91.0 · armor 192 — **2ᵉ non-scolaire `.de`** (miroir ES 1.77) — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone + gear-lenses + lightroom-workflow — suite annoncée : `marques-photo` `.de`
 - Vague **1.91** : `gear-lenses` LocalizedString.de ×192 · docs v1.90.0 · armor 191 — **1ʳᵉ non-scolaire `.de`** (miroir ES 1.76) — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone + gear-lenses
 - Vague **1.90** : `smartphone` LocalizedString.de ×230 · docs v1.89.0 · armor 190 — **12ᵉ scolaire `.de`** (miroir ES 1.75) — scolaires DE **complets** — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone
@@ -107,27 +108,27 @@ Document à jour avec l’état réel du dépôt (**v1.104.0**).
 - [x] **Vague 1.20 ops — Admin Analytics lu** (2026-09-29) — chiffres réels ; **Web Push / salon / 16ᵉ pack = no-go** (volume insuffisant). Doc store `ops-admin-1-20`. Re-lire slots CTA primary/secondary dans ~7–14 j post-1.20.
 - [x] Rate-limit soft `POST /api/analytics` (Cache API / IP, 1 s) — repo vague 1.17 P0
 - [x] Admin modes : ventiler `mix-*` / `random-mix` hors `packs` — **client + Functions** (`functions/lib/attemptModes.ts`, vague 1.18 P0)
-- [x] Docs headline → **v1.96.0** + 15 quiz · 386 Q · 268 illus (vague 1.97 P0 ; baseline live post-1.96.0)
-- [x] Docs headline → **v1.95.0** + 15 quiz · 386 Q · 268 illus (vague 1.96 P0 ; baseline live post-1.95.0)
-- [x] Docs headline → **v1.94.0** + 15 quiz · 386 Q · 268 illus (vague 1.95 P0 ; baseline live post-1.94.0)
-- [x] Docs headline → **v1.93.0** + 15 quiz · 386 Q · 268 illus (vague 1.94 P0 ; baseline live post-1.93.0)
-- [x] Docs headline → **v1.92.0** + 15 quiz · 386 Q · 268 illus (vague 1.93 P0 ; baseline live post-1.92.0)
-- [x] Docs headline → **v1.91.0** + 15 quiz · 386 Q · 268 illus (vague 1.92 P0 ; baseline live post-1.91.0)
-- [x] Docs headline → **v1.90.0** + 15 quiz · 386 Q · 268 illus (vague 1.91 P0 ; baseline live post-1.90.0)
-- [x] Docs headline → **v1.89.0** + 15 quiz · 386 Q · 268 illus (vague 1.90 P0 ; baseline live post-1.89.0)
-- [x] Docs headline → **v1.88.0** + 15 quiz · 386 Q · 268 illus (vague 1.89 P0 ; baseline live post-1.88.0)
-- [x] Docs headline → **v1.87.0** + 15 quiz · 386 Q · 268 illus (vague 1.88 P0 ; baseline live post-1.87.0)
-- [x] Docs headline → **v1.86.0** + 15 quiz · 386 Q · 268 illus (vague 1.87 P0 ; baseline live post-1.86.0)
-- [x] Docs headline → **v1.85.0** + 15 quiz · 386 Q · 268 illus (vague 1.86 P0 ; baseline live post-1.85.0)
-- [x] Docs headline → **v1.84.0** + 15 quiz · 386 Q · 268 illus (vague 1.85 P0 ; baseline live post-1.84.0)
-- [x] Docs headline → **v1.83.0** + 15 quiz · 386 Q · 268 illus (vague 1.84 P0 ; baseline live post-1.83.0)
-- [x] Docs headline → **v1.82.0** + 15 quiz · 386 Q · 268 illus (vague 1.83 P0 ; baseline live post-1.82.0)
-- [x] Docs headline → **v1.81.0** + 15 quiz · 386 Q · 268 illus (vague 1.82 P0 ; baseline live post-1.81.0)
-- [x] Docs headline → **v1.80.0** + 15 quiz · 386 Q · 268 illus (vague 1.81 P0 ; baseline live post-1.80.0)
-- [x] Docs headline → **v1.79.0** + 15 quiz · 386 Q · 268 illus (vague 1.80 P0 ; baseline live post-1.79.0)
-- [x] Docs headline → **v1.78.0** + 15 quiz · 386 Q · 268 illus (vague 1.79 P0 ; baseline live post-1.78.0)
-- [x] Docs headline → **v1.77.0** + 15 quiz · 386 Q · 268 illus (vague 1.78 P0 ; baseline live post-1.77.0)
-- [x] Docs headline → **v1.76.0** + 15 quiz · 386 Q · 268 illus (vague 1.77 P0 ; baseline live post-1.76.0)
+- [x] Docs headline → **v1.96.0** + 17 quiz · 478 Q · 268 illus (vague 1.97 P0 ; baseline live post-1.96.0)
+- [x] Docs headline → **v1.95.0** + 17 quiz · 478 Q · 268 illus (vague 1.96 P0 ; baseline live post-1.95.0)
+- [x] Docs headline → **v1.94.0** + 17 quiz · 478 Q · 268 illus (vague 1.95 P0 ; baseline live post-1.94.0)
+- [x] Docs headline → **v1.93.0** + 17 quiz · 478 Q · 268 illus (vague 1.94 P0 ; baseline live post-1.93.0)
+- [x] Docs headline → **v1.92.0** + 17 quiz · 478 Q · 268 illus (vague 1.93 P0 ; baseline live post-1.92.0)
+- [x] Docs headline → **v1.91.0** + 17 quiz · 478 Q · 268 illus (vague 1.92 P0 ; baseline live post-1.91.0)
+- [x] Docs headline → **v1.90.0** + 17 quiz · 478 Q · 268 illus (vague 1.91 P0 ; baseline live post-1.90.0)
+- [x] Docs headline → **v1.89.0** + 17 quiz · 478 Q · 268 illus (vague 1.90 P0 ; baseline live post-1.89.0)
+- [x] Docs headline → **v1.88.0** + 17 quiz · 478 Q · 268 illus (vague 1.89 P0 ; baseline live post-1.88.0)
+- [x] Docs headline → **v1.87.0** + 17 quiz · 478 Q · 268 illus (vague 1.88 P0 ; baseline live post-1.87.0)
+- [x] Docs headline → **v1.86.0** + 17 quiz · 478 Q · 268 illus (vague 1.87 P0 ; baseline live post-1.86.0)
+- [x] Docs headline → **v1.85.0** + 17 quiz · 478 Q · 268 illus (vague 1.86 P0 ; baseline live post-1.85.0)
+- [x] Docs headline → **v1.84.0** + 17 quiz · 478 Q · 268 illus (vague 1.85 P0 ; baseline live post-1.84.0)
+- [x] Docs headline → **v1.83.0** + 17 quiz · 478 Q · 268 illus (vague 1.84 P0 ; baseline live post-1.83.0)
+- [x] Docs headline → **v1.82.0** + 17 quiz · 478 Q · 268 illus (vague 1.83 P0 ; baseline live post-1.82.0)
+- [x] Docs headline → **v1.81.0** + 17 quiz · 478 Q · 268 illus (vague 1.82 P0 ; baseline live post-1.81.0)
+- [x] Docs headline → **v1.80.0** + 17 quiz · 478 Q · 268 illus (vague 1.81 P0 ; baseline live post-1.80.0)
+- [x] Docs headline → **v1.79.0** + 17 quiz · 478 Q · 268 illus (vague 1.80 P0 ; baseline live post-1.79.0)
+- [x] Docs headline → **v1.78.0** + 17 quiz · 478 Q · 268 illus (vague 1.79 P0 ; baseline live post-1.78.0)
+- [x] Docs headline → **v1.77.0** + 17 quiz · 478 Q · 268 illus (vague 1.78 P0 ; baseline live post-1.77.0)
+- [x] Docs headline → **v1.76.0** + 17 quiz · 478 Q · 268 illus (vague 1.77 P0 ; baseline live post-1.76.0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
 - [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79 / 1.80 / 1.81 / 1.82 / 1.83 / 1.84 / 1.85 / 1.86 / 1.87 / 1.88 / 1.89 / 1.90 / 1.91 / 1.92 / 1.93 / 1.94 / 1.95 / 1.96 / 1.97 / 1.98 / 1.99 / 1.100 / 1.101 / 1.102 / 1.103 / **1.104**
 
@@ -197,8 +198,8 @@ Lecture **faite** 2026-09-29 (all-time + 14 j) — voir `ops-admin-1-20`. Web Pu
 - [x] `smartphone` LocalizedString.de ×230 · docs v1.89.0 · armor 190 (vague **1.90**) — **12ᵉ scolaire `.de`** — scolaires DE **complets** — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone
 - [x] `gear-lenses` LocalizedString.de ×192 · docs v1.90.0 · armor 191 (vague **1.91**) — **1ʳᵉ non-scolaire `.de`** (miroir ES 1.76) — title.de « Ausrüstung & Objektive » — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone + gear-lenses — suite annoncée : `lightroom-workflow` / `marques-photo` `.de`
 - [x] `lightroom-workflow` LocalizedString.de ×194 · docs v1.91.0 · armor 192 (vague **1.92**) — **2ᵉ non-scolaire `.de`** (miroir ES 1.77) — title.de « Lightroom-Workflow (Pixfan-Pfad) » — **pas** path `/es/` `/de/` · **pas** autre pack `.de` hors lexique + photo-rights + light-color + flash-studio + retouching + history-icons + portrait-light + public-domain + exposure-basics + genres + composition + smartphone + gear-lenses + lightroom-workflow — suite annoncée : `marques-photo` `.de`
-- [x] `marques-photo` LocalizedString.de ×194 · docs v1.92.0 · armor 193 (vague **1.93**) — **3ᵉ non-scolaire `.de`** (miroir ES 1.78) — title.de « Markengeschichte » — catalogue `.de` **complets (15/15)** — **pas** path `/es/` `/de/`
-- [x] Chrome Guides/Schools static i18n (nav+footer + theme.js es/de) · docs v1.93.0 · armor 194 (vague **1.94**) — catalogues ES+DE **complets (15/15)** — residual chrome — **pas** path `/es/` `/de/` comme suite
+- [x] `marques-photo` LocalizedString.de ×194 · docs v1.92.0 · armor 193 (vague **1.93**) — **3ᵉ non-scolaire `.de`** (miroir ES 1.78) — title.de « Markengeschichte » — catalogue `.de` **complets (17/17)** — **pas** path `/es/` `/de/`
+- [x] Chrome Guides/Schools static i18n (nav+footer + theme.js es/de) · docs v1.93.0 · armor 194 (vague **1.94**) — catalogues ES+DE **complets (17/17)** — residual chrome — **pas** path `/es/` `/de/` comme suite
 - [x] Préserver `?lang=` sur href chrome Guides/Schools (nav+footer) · docs v1.94.0 · armor 195 (vague **1.95**) — **pas** path `/es/` `/de/` · SVG + labels 1.94 inchangés
 - [x] ROI Search Console measurement gate + baseline readout · docs v1.95.0 · armor 196 (vague **1.96**) — checklist Q1–Q5 + pass/fail path · evidence ou blocker daté — **pas** path `/es/` `/de/` shippé · **pas** suite automatique path
 - [x] Indexation / coverage gate · docs v1.96.0 · armor 197 (vague **1.97**) — checklist D1–D5 (GSC Sitemaps · Coverage · URL Inspection · CF Bot Fight · propriété) · remédiation **ops-only** en attendant captures Antony — **pas** path `/es/` `/de/` · **pas** patch SEO cosmétique sans Inspection
@@ -225,4 +226,4 @@ Override : « go path `/es/` `/de/` `/en` ».
 Livré : shells `/en/` `/es/` `/de/` · SPA path detect · LanguageSwitcher path · guides `_redirects` rewrite + sniff · sitemap path locs (74, remplace `?lang=` twins) · home `/?lang=` → 301 path.  
 `/s/*` reste `?lang=` runtime. Web Push · salon · 16ᵉ **no-go** through **1.99**.
 
-Contenu : `public/data/questions.json`. Catalogues ES+DE **complets (15/15)**. Web Push · salon · 16ᵉ **no-go** through **1.99**.
+Contenu : `public/data/questions.json`. Catalogues ES+DE **complets (17/17)**. Web Push · salon · 16ᵉ **no-go** through **1.99**.

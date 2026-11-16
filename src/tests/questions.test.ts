@@ -7,15 +7,19 @@ describe('questions.json', () => {
       id: string;
       difficulty?: string;
       tags?: string[];
-      title: { en: string; fr: string };
-      description: { en: string; fr: string };
+      title: { en: string; fr: string; es?: string; de?: string };
+      description: { en: string; fr: string; es?: string; de?: string };
       questions: Array<{
         id: string;
         type: string;
         difficulty?: string;
-        text: { en: string; fr: string };
-        answers: Array<{ id: string; text: { en: string; fr: string } }>;
+        text: { en: string; fr: string; es?: string; de?: string };
+        answers: Array<{
+          id: string;
+          text: { en: string; fr: string; es?: string; de?: string };
+        }>;
         correctAnswers: string[];
+        explanation?: { en: string; fr: string; es?: string; de?: string };
         imageUrl?: string;
         imageCredit?: { en: string; fr: string };
       }>;
@@ -37,10 +41,12 @@ describe('questions.json', () => {
     'portrait-light',
     'marques-photo',
     'flash-studio',
+    'nikon-histoire',
+    'tamron-histoire',
   ] as const;
 
-  it('has exactly 15 category quizzes', () => {
-    expect(data.quizzes.length).toBe(15);
+  it('has exactly 17 category quizzes', () => {
+    expect(data.quizzes.length).toBe(17);
   });
 
   it('keeps a solid question count per quiz', () => {
@@ -88,7 +94,7 @@ describe('questions.json', () => {
     for (const quiz of tagged) {
       expect(quiz.tags).toContain('scolaires');
     }
-    expect(data.quizzes.length).toBe(15);
+    expect(data.quizzes.length).toBe(17);
     const lexique = data.quizzes.find((q) => q.id === 'lexique-image-fixe');
     expect(lexique).toBeDefined();
     expect(lexique!.questions.length).toBeLessThanOrEqual(15);
@@ -382,6 +388,49 @@ describe('questions.json', () => {
     for (const term of ['ttl', 'softbox', 'hss', 'sync'] as const) {
       expect(blob).toContain(term);
     }
+  });
+
+  it('nikon-histoire ships full FR/EN/ES/DE culture pack', () => {
+    const quiz = data.quizzes.find((q) => q.id === 'nikon-histoire');
+    expect(quiz).toBeDefined();
+    expect(quiz!.difficulty).toBe('medium');
+    expect(quiz!.questions.length).toBe(67);
+    expect(quiz!.title.fr).toMatch(/Nikon/i);
+    expect(quiz!.title.en).toMatch(/Nikon/i);
+    expect(quiz!.title.es).toMatch(/Nikon/i);
+    expect(quiz!.title.de).toMatch(/Nikon/i);
+    for (const q of quiz!.questions) {
+      expect(q.text.es).toBeTruthy();
+      expect(q.text.de).toBeTruthy();
+      expect(q.explanation?.es).toBeTruthy();
+      expect(q.explanation?.de).toBeTruthy();
+      expect(q.type).toBe('single');
+      expect(q.correctAnswers).toHaveLength(1);
+    }
+    const blob = JSON.stringify(quiz).toLowerCase();
+    expect(blob).toContain('nippon kogaku');
+    expect(blob).toContain('nikkor');
+  });
+
+  it('tamron-histoire ships full FR/EN/ES/DE culture pack', () => {
+    const quiz = data.quizzes.find((q) => q.id === 'tamron-histoire');
+    expect(quiz).toBeDefined();
+    expect(quiz!.difficulty).toBe('medium');
+    expect(quiz!.questions.length).toBe(25);
+    expect(quiz!.title.fr).toMatch(/Tamron/i);
+    expect(quiz!.title.en).toMatch(/Tamron/i);
+    expect(quiz!.title.es).toMatch(/Tamron/i);
+    expect(quiz!.title.de).toMatch(/Tamron/i);
+    for (const q of quiz!.questions) {
+      expect(q.text.es).toBeTruthy();
+      expect(q.text.de).toBeTruthy();
+      expect(q.explanation?.es).toBeTruthy();
+      expect(q.explanation?.de).toBeTruthy();
+      expect(q.type).toBe('single');
+      expect(q.correctAnswers).toHaveLength(1);
+    }
+    const blob = JSON.stringify(quiz).toLowerCase();
+    expect(blob).toMatch(/t-mount|t mount|adaptall/);
   });
 
   it('exposes at least one hard pack for the difficulty filter', () => {

@@ -72,6 +72,12 @@ describe('sharePreview', () => {
     expect(quizLabel('lexique-image-fixe', 'fr')).toBe('Lexique image fixe');
     expect(quizLabel('lexique-image-fixe', 'en')).toBe('Still-image lexicon');
     expect(normalizeQuizId('lexique-image-fixe')).toBe('lexique-image-fixe');
+    expect(quizLabel('nikon-histoire', 'fr')).toBe('Histoire de Nikon');
+    expect(quizLabel('nikon-histoire', 'en')).toBe('Nikon history');
+    expect(normalizeQuizId('nikon-histoire')).toBe('nikon-histoire');
+    expect(quizLabel('tamron-histoire', 'fr')).toBe('Histoire de Tamron');
+    expect(quizLabel('tamron-histoire', 'en')).toBe('Tamron history');
+    expect(normalizeQuizId('tamron-histoire')).toBe('tamron-histoire');
     expect(quizLabel('duel-abcd2345', 'en')).toBe('Friend duel');
     expect(quizLabel('duel-abcd2345', 'es')).toBe('Duelo entre amigos');
     expect(quizLabel('duel-abcd2345', 'de')).toBe('Freundschaftsduell');
@@ -101,6 +107,8 @@ describe('sharePreview', () => {
     expect(ogThemeSlug('composition')).toBe('composition');
     expect(ogThemeSlug('flash-studio')).toBe('flash-studio');
     expect(ogThemeSlug('lexique-image-fixe')).toBe('lexique-image-fixe');
+    expect(ogThemeSlug('nikon-histoire')).toBe('nikon-histoire');
+    expect(ogThemeSlug('tamron-histoire')).toBe('tamron-histoire');
     expect(ogThemeSlug('daily-2026-09-21')).toBe('daily');
     expect(ogThemeSlug('duel-abcd2345')).toBe('duel');
     expect(ogThemeSlug('random-mix')).toBe('random');

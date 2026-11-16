@@ -24,6 +24,8 @@ describe('pixfanCta', () => {
     expect(resolvePixfanTopic('portrait-light')).toBe('light');
     expect(resolvePixfanTopic('flash-studio')).toBe('light');
     expect(resolvePixfanTopic('marques-photo')).toBe('history');
+    expect(resolvePixfanTopic('nikon-histoire')).toBe('history');
+    expect(resolvePixfanTopic('tamron-histoire')).toBe('history');
     expect(resolvePixfanTopic('history-icons')).toBe('history');
     expect(resolvePixfanTopic('photo-reading')).toBe('composition');
   });
@@ -163,6 +165,13 @@ describe('pixfanCta', () => {
     expect(brands.topic).toBe('history');
     expect(brands.primaryTarget).toBe('guide');
     expect(brands.primaryUrl).toContain('/guides/histoire-photo');
+
+    for (const id of ['nikon-histoire', 'tamron-histoire'] as const) {
+      const brandPack = getPixfanCta(id);
+      expect(brandPack.topic).toBe('history');
+      expect(brandPack.primaryTarget).toBe('guide');
+      expect(brandPack.primaryUrl).toContain('/guides/histoire-photo');
+    }
 
     const flashStudio = getPixfanCta('flash-studio');
     expect(flashStudio.topic).toBe('light');

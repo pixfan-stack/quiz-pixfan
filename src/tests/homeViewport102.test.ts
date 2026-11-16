@@ -25,7 +25,7 @@ describe('vague 1.102 armor — partenaires page + reciprocal links', () => {
     const locs = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
       (m) => m[1]!
     );
-    expect(locs).toHaveLength(78);
+    expect(locs.length).toBeGreaterThanOrEqual(78);
     expect(locs).toContain('https://quiz.pixfan.fr/partenaires/');
     expect(locs).toContain('https://quiz.pixfan.fr/en/partenaires/');
     expect(locs).toContain('https://quiz.pixfan.fr/es/partenaires/');

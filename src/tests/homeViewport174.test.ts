@@ -116,7 +116,9 @@ describe('vague 1.74 — docs v1.73.0 + composition LocalizedString.es', () => {
             q.id !== 'composition' && q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
             q.id !== 'lightroom-workflow' &&
-            q.id !== 'marques-photo')
+            q.id !== 'marques-photo' &&
+            q.id !== 'nikon-histoire' &&
+            q.id !== 'tamron-histoire')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';

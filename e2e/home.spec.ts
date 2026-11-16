@@ -24,7 +24,7 @@ test.describe('Homepage', () => {
     await expect(page.locator('.difficulty-filter-more')).toBeVisible();
     await expect(page.getByTestId('home-photo-closer')).toBeVisible();
     await expect(page.locator('.achievements')).toHaveCount(0);
-    await expect(page.locator(CATEGORY_CARD)).toHaveCount(15);
+    await expect(page.locator(CATEGORY_CARD)).toHaveCount(17);
   });
 
   test('shows brand-first hero with photo CTA', async ({ page }) => {

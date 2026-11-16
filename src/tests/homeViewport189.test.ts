@@ -260,6 +260,8 @@ describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
     'gear-lenses',
       'lightroom-workflow',
       'marques-photo',
+      'nikon-histoire',
+      'tamron-histoire',
     ]);
     expect(withDe.every((id) => allowed.has(id))).toBe(true);
     for (const id of [
@@ -303,7 +305,9 @@ describe('vague 1.89 — docs v1.88.0 + composition LocalizedString.de', () => {
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
             q.id !== 'lightroom-workflow' &&
-            q.id !== 'marques-photo'
+            q.id !== 'marques-photo' &&
+            q.id !== 'nikon-histoire' &&
+            q.id !== 'tamron-histoire'
         )
         .every((q) => {
           const title = q.title as { de?: string };

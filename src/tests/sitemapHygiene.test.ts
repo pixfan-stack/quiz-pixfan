@@ -63,12 +63,12 @@ function pathTwin(base: string, lang: string): string {
 }
 
 describe('sitemap / SEO hygiene', () => {
-  it('lists expected inventory (78 locs) with path locales + lastmod ≥ floor', () => {
+  it('lists expected inventory (80 locs) with path locales + lastmod ≥ floor', () => {
     expect(sitemap.startsWith('<?xml')).toBe(true);
     expect(sitemap).toContain('<urlset');
 
     const locs = allLocs();
-    expect(locs).toHaveLength(78);
+    expect(locs).toHaveLength(80);
     // No legacy ?lang= twins in sitemap (vague 1.99 path product).
     expect(sitemap).not.toMatch(/\?lang=/);
 
@@ -83,7 +83,7 @@ describe('sitemap / SEO hygiene', () => {
 
     // Pack deep-links must match questions.json 1:1.
     const packIds = data.quizzes.map((q) => q.id);
-    expect(packIds).toHaveLength(15);
+    expect(packIds).toHaveLength(17);
     for (const id of packIds) {
       const loc = `https://quiz.pixfan.fr/s/${id}`;
       expect(locs, loc).toContain(loc);

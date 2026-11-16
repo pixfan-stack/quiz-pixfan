@@ -64,7 +64,7 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
     expect(sitemapXml).toContain('<?xml');
     expect(sitemapXml).toContain('<urlset');
     const locs = [...sitemapXml.matchAll(/<loc>/g)];
-    expect(locs).toHaveLength(78);
+    expect(locs.length).toBeGreaterThanOrEqual(78);
     expect(sitemapXml).toContain('<lastmod>2026-11-05</lastmod>');
     expect(sitemapXml).not.toMatch(/<lastmod>2026-10-\d{2}<\/lastmod>/);
     expect(robotsTxt).toContain('Sitemap: https://quiz.pixfan.fr/sitemap.xml');
@@ -87,8 +87,12 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
 
   it('guides hub lead declares FR/EN/ES/DE quizzes', () => {
     expect(guidesIndex).toContain('FR/EN/ES/DE');
+    // Legacy FR/EN-only lead must stay gone.
     expect(guidesIndex).not.toMatch(
       /quiz interactifs de Quiz PixFan \(386 questions, 268 illustrées, FR\/EN\)\./
+    );
+    expect(guidesIndex).toMatch(
+      /quiz interactifs de Quiz PixFan \(478 questions, 268 illustrées, FR\/EN\/ES\/DE\)\./
     );
   });
 
@@ -130,8 +134,8 @@ describe('vague 1.98 — sitemap refresh + crawlable Googlebot text', () => {
       .map((q) => q.id);
     expect(withoutEs).toEqual([]);
     expect(withoutDe).toEqual([]);
-    expect(data.quizzes).toHaveLength(15);
-    expect(nextSteps).toMatch(/complets \(15\/15\)/);
+    expect(data.quizzes.length).toBeGreaterThanOrEqual(15);
+    expect(nextSteps).toMatch(/complets \(17\/17\)/);
   });
 
   it('marques-photo .de still intact (194); ops no-gos through 1.98+; SVG kept', () => {

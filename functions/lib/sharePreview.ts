@@ -94,6 +94,18 @@ const LABELS: Record<string, { en: string; fr: string; es: string; de: string }>
     es: 'Léxico de imagen fija',
     de: 'Standbild-Lexikon',
   },
+  'nikon-histoire': {
+    en: 'Nikon history',
+    fr: 'Histoire de Nikon',
+    es: 'Historia de Nikon',
+    de: 'Nikon-Geschichte',
+  },
+  'tamron-histoire': {
+    en: 'Tamron history',
+    fr: 'Histoire de Tamron',
+    es: 'Historia de Tamron',
+    de: 'Tamron-Geschichte',
+  },
   random: {
     en: 'Random mix',
     fr: 'Mix aléatoire',

@@ -126,7 +126,13 @@ export const DAILY_THEME_ROTATION: readonly DailyTheme[] = [
   },
   {
     id: 'history',
-    quizIds: ['history-icons', 'public-domain', 'marques-photo'],
+    quizIds: [
+      'history-icons',
+      'public-domain',
+      'marques-photo',
+      'nikon-histoire',
+      'tamron-histoire',
+    ],
     title: {
       en: 'Daily challenge · History week',
       fr: 'Défi du jour · semaine histoire',

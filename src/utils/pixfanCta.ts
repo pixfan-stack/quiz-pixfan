@@ -94,7 +94,9 @@ export function resolvePixfanTopic(quizId: string): PixfanTopic {
   if (
     quizId === 'history-icons' ||
     quizId === 'public-domain' ||
-    quizId === 'marques-photo'
+    quizId === 'marques-photo' ||
+    quizId === 'nikon-histoire' ||
+    quizId === 'tamron-histoire'
   ) {
     return 'history';
   }
