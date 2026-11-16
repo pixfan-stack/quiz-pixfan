@@ -95,6 +95,8 @@
     "mastery_master": "Meister",
     "masteryNext": "Noch {{need}} % bis {{tier}}",
     "featuredSection": "Empfohlen",
+    "latestSection": "Neu",
+    "latestSectionHint": "Zuletzt hinzugefügte Packs im Katalog",
     "morePacks": "Weitere Quizze",
     "morePacksHint": "Mixe, Kategorien und Schwachstellen",
     "copyDailyLink": "Link der heutigen Herausforderung kopieren",

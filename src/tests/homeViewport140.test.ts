@@ -56,7 +56,7 @@ describe('vague 1.40 — docs + ES/DE foundation + guides index meta', () => {
     const enKeys = leafKeys(enLocale).sort();
     const esKeys = leafKeys(esLocale).sort();
     const deKeys = leafKeys(deLocale).sort();
-    expect(enKeys.length).toBe(508);
+    expect(enKeys.length).toBe(510);
     expect(esKeys).toEqual(enKeys);
     expect(deKeys).toEqual(enKeys);
   });

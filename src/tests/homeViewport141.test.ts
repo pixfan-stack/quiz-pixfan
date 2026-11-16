@@ -45,7 +45,7 @@ describe('vague 1.41 — docs v1.40.0 + real ES UI + DE stub', () => {
     const enKeys = leafEntries(enLocale).map(([k]) => k).sort();
     const esKeys = leafEntries(esLocale).map(([k]) => k).sort();
     const deKeys = leafEntries(deLocale).map(([k]) => k).sort();
-    expect(enKeys.length).toBe(508);
+    expect(enKeys.length).toBe(510);
     expect(esKeys).toEqual(enKeys);
     expect(deKeys).toEqual(enKeys);
   });

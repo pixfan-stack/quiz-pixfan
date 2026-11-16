@@ -95,6 +95,8 @@
     "mastery_master": "Maître",
     "masteryNext": "Encore {{need}} % pour {{tier}}",
     "featuredSection": "À la une",
+    "latestSection": "Nouveautés",
+    "latestSectionHint": "Derniers packs ajoutés au catalogue",
     "morePacks": "Autres quiz",
     "morePacksHint": "Mix, catégories et points faibles",
     "copyDailyLink": "Copier le lien du défi du jour",

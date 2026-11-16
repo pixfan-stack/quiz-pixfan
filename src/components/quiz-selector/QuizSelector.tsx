@@ -14,8 +14,13 @@ import { QuizSettingsBar } from './QuizSettingsBar';
 import { HomeHero } from './HomeHero';
 import { FeaturedQuizCards } from './FeaturedQuizCards';
 import { HomePhotoCloser } from './HomePhotoCloser';
+import { LatestQuizzesSection } from './LatestQuizzesSection';
 import { MorePacksSection } from './MorePacksSection';
 import { hasCompletedAnyQuiz } from '../../utils/reengage';
+import {
+  getLatestPacks,
+  latestPackIdSet,
+} from '../../utils/latestPacks';
 
 export function QuizSelector({
   quizzes,
@@ -42,6 +47,12 @@ export function QuizSelector({
   // Hero owns the photo-reading Start on the Persuade home; keep the
   // featured photo card only in classe mode (no daily/duel peers).
   const showPhotoFeatured = classeMode;
+  const latestQuizzes = getLatestPacks(quizzes);
+  const latestIds = latestPackIdSet(quizzes);
+  // Dedupe only when the Nouveautés encart is shown (hidden in classe mode).
+  const morePackQuizzes = !classeMode
+    ? state.visibleQuizzes.filter((q) => !latestIds.has(q.id))
+    : state.visibleQuizzes;
 
   return (
     <section className="home">
@@ -106,12 +117,22 @@ export function QuizSelector({
         />
       )}
 
+      {!classeMode && (
+        <LatestQuizzesSection
+          latestQuizzes={latestQuizzes}
+          lang={state.lang}
+          getBestScore={state.getBestScore}
+          onPrefetchQuiz={onPrefetchQuiz}
+          onStartQuiz={state.handleStartQuiz}
+        />
+      )}
+
       <MorePacksSection
         morePacksOpen={state.morePacksOpen}
         setMorePacksOpen={state.setMorePacksOpen}
         difficultyFilter={state.difficultyFilter}
         setDifficultyFilter={state.setDifficultyFilter}
-        visibleQuizzes={state.visibleQuizzes}
+        visibleQuizzes={morePackQuizzes}
         quizzes={quizzes}
         playCounts={state.playCounts}
         vaultCount={state.vaultCount}
