@@ -1,9 +1,10 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.107.0** ; tip vague 1.106 : **v1.106.0** ; tip vague 1.105 docs : **v1.105.0** ; 1.104 : **v1.104.0**).
+Document à jour avec l’état réel du dépôt (**v1.109.0** ; tip vague 1.108 : **v1.108.0** ; tip vague 1.107 : **v1.107.0**).
 
 ## ✅ Livré
 
+- Vague **1.109** : home **Nouveautés** encart = last 2 catalog packs (`flash-studio` · `lexique-image-fixe`) · FR/EN/ES/DE · dedupe Autres quiz · armor 109 — Web Push · salon **no-go** through **1.109** (QP-300 / QP-301)
 - Vague **1.108** : **Nikon/Tamron in home menu** — SW **v21** + `/data/questions.json` **network-first** · catalog order after `marques-photo` · armor 108 · e2e titles — Web Push · salon **no-go** through **1.108** (QP-298 ; stale SWR catalog)
 - Vague **1.107** : **bare `/s/:id` FR titles** — `parseLang` x-default **fr** (plus EN) · armor 107 — Web Push · salon **no-go** through **1.107** (QP-296 ; live Nikon/Tamron + tous packs)
 - Vague **1.106** : packs **`nikon-histoire`** (67 Q) + **`tamron-histoire`** (25 Q) FR/EN/ES/DE · CTA history · daily history week · OG/sitemap · guide histoire · catalog **17 / 478 / 268** · armor 106 — Web Push · salon **no-go** through **1.106** (QP-294 ; brand packs demandés)
