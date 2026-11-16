@@ -17,6 +17,21 @@ test.describe('Homepage', () => {
     await expect(page.getByTestId('home-hero-cta')).toBeVisible();
     await expect(page.locator('.home-more-packs')).toBeVisible();
 
+    // QP-300: catalog-tail encart visible without opening Autres quiz.
+    const latest = page.getByTestId('home-latest-packs');
+    await expect(latest).toBeVisible();
+    await expect(page.getByTestId('latest-quiz-card')).toHaveCount(2);
+    await expect(
+      latest.getByTestId('latest-quiz-card').filter({
+        hasText: /Flash.*[Ss]tudio|Blitz.*Studio/i,
+      })
+    ).toBeVisible();
+    await expect(
+      latest.getByTestId('latest-quiz-card').filter({
+        hasText: /Lexique|Still-image|Léxico|Lexikon/i,
+      })
+    ).toBeVisible();
+
     await openMorePacks(page);
 
     await expect(page.locator('.quiz-card--random')).toBeVisible();
@@ -24,7 +39,8 @@ test.describe('Homepage', () => {
     await expect(page.locator('.difficulty-filter-more')).toBeVisible();
     await expect(page.getByTestId('home-photo-closer')).toBeVisible();
     await expect(page.locator('.achievements')).toHaveCount(0);
-    await expect(page.locator(CATEGORY_CARD)).toHaveCount(17);
+    // 17 packs − 2 shown in Nouveautés (deduped from Autres quiz).
+    await expect(page.locator(CATEGORY_CARD)).toHaveCount(15);
     // QP-298: brand histoire packs must appear in Autres quiz (not share-only).
     await expect(
       page.locator(CATEGORY_CARD).filter({ hasText: /Histoire de Nikon|Nikon history/i })

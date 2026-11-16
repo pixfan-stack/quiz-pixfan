@@ -43,11 +43,11 @@ describe('vague 1.42 — docs v1.41.0 + real DE UI', () => {
     expect(stubsMd).toMatch(/es\/translation\.json.*real Spanish/s);
   });
 
-  it('es/de keep 508-key parity with en', () => {
+  it('es/de keep 510-key parity with en', () => {
     const enKeys = leafEntries(enLocale).map(([k]) => k).sort();
     const esKeys = leafEntries(esLocale).map(([k]) => k).sort();
     const deKeys = leafEntries(deLocale).map(([k]) => k).sort();
-    expect(enKeys.length).toBe(508);
+    expect(enKeys.length).toBe(510);
     expect(esKeys).toEqual(enKeys);
     expect(deKeys).toEqual(enKeys);
   });

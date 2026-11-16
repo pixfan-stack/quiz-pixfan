@@ -727,6 +727,30 @@ a {
   margin-bottom: 1.1rem;
 }
 
+.home-latest-packs {
+  margin: 0 0 1.15rem;
+}
+
+.home-latest-packs__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  margin: 0 0 0.65rem;
+}
+
+.home-latest-packs__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.home-latest-packs__hint {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+}
+
 .home-more-packs {
   margin: 0 0 1.25rem;
   border: 1px solid var(--color-border);

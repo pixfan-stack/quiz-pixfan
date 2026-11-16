@@ -124,11 +124,11 @@ test.describe('Scolaires P2 / mode classe', () => {
     expect(page.url()).toMatch(/#\/quiz\/portrait-light/);
   });
 
-  test('lexique-image-fixe card is visible in more packs', async ({ page }) => {
+  test('lexique-image-fixe card is visible in latest encart', async ({ page }) => {
     await page.goto('/');
-    await openMorePacks(page);
+    // QP-300: catalog-tail packs live in Nouveautés (deduped from Autres quiz).
     const lexique = page
-      .locator(CATEGORY_CARD)
+      .getByTestId('latest-quiz-card')
       .filter({ hasText: /Lexique image fixe|Still-image lexicon/i });
     await expect(lexique).toBeVisible({ timeout: 8000 });
   });
