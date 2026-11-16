@@ -20,6 +20,8 @@ describe('functions/lib/attemptModes', () => {
       'exposure-basics',
       'marques-photo',
       'flash-studio',
+      'nikon-histoire',
+      'tamron-histoire',
       'mix-easy',
       'mix-medium',
       'mix-hard',

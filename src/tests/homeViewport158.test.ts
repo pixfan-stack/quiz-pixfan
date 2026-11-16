@@ -17,13 +17,13 @@ describe('vague 1.58 — docs v1.57.0 + home SPA ES SEO unlock', () => {
   it('home sniff sets Spanish share meta for ?lang=es (real ES, not EN stub)', () => {
     expect(indexHtml).toContain("p === 'es'");
     expect(indexHtml).toContain("setLocales('es_ES', 'fr_FR')");
-    expect(indexHtml).toContain('Quiz de fotografía gratis — 386 preguntas | Quiz PixFan');
+    expect(indexHtml).toContain('Quiz de fotografía gratis — 478 preguntas | Quiz PixFan');
     expect(indexHtml).toContain(
-      'Pon a prueba tus conocimientos de fotografía gratis: 386 preguntas (268 ilustradas), 15 categorías'
+      'Pon a prueba tus conocimientos de fotografía gratis: 478 preguntas (268 ilustradas), 17 categorías'
     );
     /* DE sniff separated from EN in vague 1.67 — keep EN parity lock */
     expect(indexHtml).toContain("} else if (p === 'en') {");
-    expect(indexHtml).toContain('Free photography quiz — 386 questions | Quiz PixFan');
+    expect(indexHtml).toContain('Free photography quiz — 478 questions | Quiz PixFan');
     expect(indexHtml).toContain("setLocales('fr_FR', 'en_US')");
   });
 

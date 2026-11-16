@@ -301,15 +301,17 @@ describe('vague 1.93 — docs v1.92.0 + marques-photo LocalizedString.de', () =>
       'light-color',
       'lightroom-workflow',
       'marques-photo',
+      'nikon-histoire',
       'photo-rights',
       'portrait-light',
       'public-domain',
       'retouching',
       'smartphone',
+      'tamron-histoire',
     ]);
     expect(data.quizzes.length - withDe.length).toBe(0);
-    expect(nextSteps).toMatch(/complets \(15\/15\)/);
-    expect(nextSteps).toMatch(/complets \(15\/15\)/);
+    expect(nextSteps).toMatch(/complets \(17\/17\)/);
+    expect(nextSteps).toMatch(/complets \(17\/17\)/);
   });
 
   it('still no path-locale /es/|/de/; catalogue .de complete; ops no-gos through 1.93+; SVG theme toggle', () => {

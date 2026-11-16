@@ -32,7 +32,7 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
     expect(indexHtml).toContain('Which languages are available?');
     expect(indexHtml).not.toContain('bilingues FR/EN');
     expect(indexHtml).not.toContain('bilingual FR/EN');
-    // Softened in 1.98: FAQ langues now declares catalogues FR/EN/ES/DE complets (15/15).
+    // Softened in 1.98: FAQ langues now declares catalogues FR/EN/ES/DE complets (17/17).
     expect(indexHtml).toMatch(
       /catalogues? de questions FR, EN, ES et DE sont complets|plusieurs packs ont déjà une version ES/i
     );
@@ -100,7 +100,9 @@ describe('vague 1.69 — docs v1.68.0 + FAQ JSON-LD ES/DE + sharePreview LABELS'
             q.id !== 'composition' && q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
             q.id !== 'lightroom-workflow' &&
-            q.id !== 'marques-photo')
+            q.id !== 'marques-photo' &&
+            q.id !== 'nikon-histoire' &&
+            q.id !== 'tamron-histoire')
         .every((q) => {
           const title = q.title as { de?: string };
           return title.de == null || title.de === '';

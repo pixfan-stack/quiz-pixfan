@@ -27,57 +27,57 @@ const META: Record<
   }
 > = {
   en: {
-    title: 'Free photography quiz — 386 questions FR/EN/ES/DE | Quiz PixFan',
+    title: 'Free photography quiz — 478 questions FR/EN/ES/DE | Quiz PixFan',
     description:
-      'Test your photography knowledge for free: 386 questions including 268 illustrated, 15 categories, photo-reading mode, daily challenge, light account and seasons. UI FR/EN/ES/DE — full catalogs.',
-    ogTitle: 'Free photography quiz — 386 questions | Quiz PixFan',
+      'Test your photography knowledge for free: 478 questions including 268 illustrated, 17 categories, photo-reading mode, daily challenge, light account and seasons. UI FR/EN/ES/DE — full catalogs.',
+    ogTitle: 'Free photography quiz — 478 questions | Quiz PixFan',
     ogDescription:
       '386 photography questions (268 illustrated), photo-reading, daily challenge, light account. Free, FR/EN/ES/DE. Share your score!',
     ogLocale: 'en_US',
-    twitterTitle: 'Free photography quiz — 386 questions | Quiz PixFan',
+    twitterTitle: 'Free photography quiz — 478 questions | Quiz PixFan',
     twitterDescription:
       '386 photography questions (268 illustrated), photo-reading, daily challenge. Free, FR/EN/ES/DE.',
     noscriptH1: 'Quiz PixFan — free photography quiz',
     noscriptLead:
-      '386 photography questions (268 illustrated), 15 categories, photo-reading, daily challenge. UI and catalogs FR / EN / ES / DE.',
+      '386 photography questions (268 illustrated), 17 categories, photo-reading, daily challenge. UI and catalogs FR / EN / ES / DE.',
     guidesLabel: 'Photo guides',
     schoolsLabel: 'School paths',
     dailyLabel: 'Daily challenge',
     photoReadingLabel: 'Photo-reading',
   },
   es: {
-    title: 'Quiz de fotografía gratis — 386 preguntas | Quiz PixFan',
+    title: 'Quiz de fotografía gratis — 478 preguntas | Quiz PixFan',
     description:
-      'Pon a prueba tus conocimientos de fotografía gratis: 386 preguntas (268 ilustradas), 15 categorías, modo photo-reading, reto del día, cuenta ligera y temporadas. Interfaz ES/FR/EN/DE.',
-    ogTitle: 'Quiz de fotografía gratis — 386 preguntas | Quiz PixFan',
+      'Pon a prueba tus conocimientos de fotografía gratis: 478 preguntas (268 ilustradas), 17 categorías, modo photo-reading, reto del día, cuenta ligera y temporadas. Interfaz ES/FR/EN/DE.',
+    ogTitle: 'Quiz de fotografía gratis — 478 preguntas | Quiz PixFan',
     ogDescription:
-      '386 preguntas de fotografía (268 ilustradas), photo-reading, reto del día, cuenta ligera. Gratis. ¡Comparte tu puntuación!',
+      '478 preguntas de fotografía (268 ilustradas), photo-reading, reto del día, cuenta ligera. Gratis. ¡Comparte tu puntuación!',
     ogLocale: 'es_ES',
-    twitterTitle: 'Quiz de fotografía gratis — 386 preguntas | Quiz PixFan',
+    twitterTitle: 'Quiz de fotografía gratis — 478 preguntas | Quiz PixFan',
     twitterDescription:
-      '386 preguntas de fotografía (268 ilustradas), photo-reading, reto del día. Gratis.',
+      '478 preguntas de fotografía (268 ilustradas), photo-reading, reto del día. Gratis.',
     noscriptH1: 'Quiz PixFan — quiz de fotografía gratis',
     noscriptLead:
-      '386 preguntas de fotografía (268 ilustradas), 15 categorías, photo-reading, reto del día. Interfaz y catálogos FR / EN / ES / DE.',
+      '478 preguntas de fotografía (268 ilustradas), 17 categorías, photo-reading, reto del día. Interfaz y catálogos FR / EN / ES / DE.',
     guidesLabel: 'Guías de foto',
     schoolsLabel: 'Recorridos escolares',
     dailyLabel: 'Reto del día',
     photoReadingLabel: 'Photo-reading',
   },
   de: {
-    title: 'Kostenloses Fotografie-Quiz — 386 Fragen | Quiz PixFan',
+    title: 'Kostenloses Fotografie-Quiz — 478 Fragen | Quiz PixFan',
     description:
-      'Teste dein Fotografie-Wissen kostenlos: 386 Fragen (268 illustriert), 15 Kategorien, Photo-Reading-Modus, Tageschallenge, leichtes Konto und Saisons. Oberfläche DE/FR/EN/ES.',
-    ogTitle: 'Kostenloses Fotografie-Quiz — 386 Fragen | Quiz PixFan',
+      'Teste dein Fotografie-Wissen kostenlos: 478 Fragen (268 illustriert), 17 Kategorien, Photo-Reading-Modus, Tageschallenge, leichtes Konto und Saisons. Oberfläche DE/FR/EN/ES.',
+    ogTitle: 'Kostenloses Fotografie-Quiz — 478 Fragen | Quiz PixFan',
     ogDescription:
       '386 Fotografie-Fragen (268 illustriert), Photo-Reading, Tageschallenge, leichtes Konto. Kostenlos. Teile deinen Score!',
     ogLocale: 'de_DE',
-    twitterTitle: 'Kostenloses Fotografie-Quiz — 386 Fragen | Quiz PixFan',
+    twitterTitle: 'Kostenloses Fotografie-Quiz — 478 Fragen | Quiz PixFan',
     twitterDescription:
       '386 Fotografie-Fragen (268 illustriert), Photo-Reading, Tageschallenge. Kostenlos.',
     noscriptH1: 'Quiz PixFan — kostenloses Fotografie-Quiz',
     noscriptLead:
-      '386 Fotografie-Fragen (268 illustriert), 15 Kategorien, Photo-Reading, Tageschallenge. Oberfläche und Kataloge FR / EN / ES / DE.',
+      '386 Fotografie-Fragen (268 illustriert), 17 Kategorien, Photo-Reading, Tageschallenge. Oberfläche und Kataloge FR / EN / ES / DE.',
     guidesLabel: 'Foto-Leitfäden',
     schoolsLabel: 'Schulpfade',
     dailyLabel: 'Tageschallenge',

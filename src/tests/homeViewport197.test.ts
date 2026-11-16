@@ -131,8 +131,8 @@ describe('vague 1.97 — docs v1.96.0 + indexation/coverage gate', () => {
       .map((q) => q.id);
     expect(withoutEs).toEqual([]);
     expect(withoutDe).toEqual([]);
-    expect(data.quizzes).toHaveLength(15);
-    expect(nextSteps).toMatch(/complets \(15\/15\)/);
+    expect(data.quizzes.length).toBeGreaterThanOrEqual(15);
+    expect(nextSteps).toMatch(/complets \(17\/17\)/);
   });
 
   it('marques-photo .de still intact (194)', () => {

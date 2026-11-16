@@ -44,13 +44,13 @@ describe('vague 1.67 — docs v1.66.0 + home SPA DE SEO unlock', () => {
   it('home sniff sets German share meta for ?lang=de (real DE, not EN stub)', () => {
     expect(indexHtml).toContain("p === 'de'");
     expect(indexHtml).toContain("setLocales('de_DE', 'fr_FR')");
-    expect(indexHtml).toContain('Kostenloses Fotografie-Quiz — 386 Fragen | Quiz PixFan');
+    expect(indexHtml).toContain('Kostenloses Fotografie-Quiz — 478 Fragen | Quiz PixFan');
     expect(indexHtml).toContain(
-      'Teste dein Fotografie-Wissen kostenlos: 386 Fragen (268 illustriert), 15 Kategorien'
+      'Teste dein Fotografie-Wissen kostenlos: 478 Fragen (268 illustriert), 17 Kategorien'
     );
     expect(indexHtml).toContain("} else if (p === 'en') {");
     expect(indexHtml).not.toMatch(/p === 'en' \|\| p === 'de'/);
-    expect(indexHtml).toContain('Free photography quiz — 386 questions | Quiz PixFan');
+    expect(indexHtml).toContain('Free photography quiz — 478 questions | Quiz PixFan');
     expect(indexHtml).toContain("p === 'es'");
     expect(indexHtml).toContain("setLocales('es_ES', 'fr_FR')");
     expect(indexHtml).toContain('<link rel="canonical" href="https://quiz.pixfan.fr/" />');

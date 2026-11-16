@@ -300,7 +300,7 @@ describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', 
     }
     // marques-photo may appear once vague 1.93 ships
     expect(withDe.size).toBeGreaterThanOrEqual(14);
-    expect(withDe.size).toBeLessThanOrEqual(15);
+    expect(withDe.size).toBeLessThanOrEqual(17);
     expect(data.quizzes.length - withDe.size).toBeLessThanOrEqual(1);
   });
 
@@ -327,7 +327,9 @@ describe('vague 1.92 — docs v1.91.0 + lightroom-workflow LocalizedString.de', 
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
             q.id !== 'lightroom-workflow' &&
-            q.id !== 'marques-photo'
+            q.id !== 'marques-photo' &&
+            q.id !== 'nikon-histoire' &&
+            q.id !== 'tamron-histoire'
         )
         .every((q) => {
           const title = q.title as { de?: string };

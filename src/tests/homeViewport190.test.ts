@@ -272,6 +272,8 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
       'light-color',
       'lightroom-workflow',
       'marques-photo',
+      'nikon-histoire',
+      'tamron-histoire',
       'photo-rights',
       'portrait-light',
       'public-domain',
@@ -321,7 +323,9 @@ describe('vague 1.90 — docs v1.89.0 + smartphone LocalizedString.de', () => {
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
             q.id !== 'lightroom-workflow' &&
-            q.id !== 'marques-photo'
+            q.id !== 'marques-photo' &&
+            q.id !== 'nikon-histoire' &&
+            q.id !== 'tamron-histoire'
         )
         .every((q) => {
           const title = q.title as { de?: string };

@@ -27,6 +27,8 @@ const THEMES = [
   ['marques-photo', 'Brand history', 'Histoire des marques'],
   ['flash-studio', 'Flash & studio', 'Flash & studio'],
   ['lexique-image-fixe', 'Still-image lexicon', 'Lexique image fixe'],
+  ['nikon-histoire', 'Nikon history', 'Histoire de Nikon'],
+  ['tamron-histoire', 'Tamron history', 'Histoire de Tamron'],
   ['daily', 'Daily challenge', 'Défi du jour'],
   ['duel', 'Friend duel', 'Duel entre amis'],
   ['random', 'Random mix', 'Mix aléatoire'],

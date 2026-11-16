@@ -160,7 +160,7 @@ describe('vague 1.81 — docs v1.80.0 + light-color LocalizedString.de', () => {
       ])
     );
     expect(withDe.length).toBeGreaterThanOrEqual(3);
-    expect(withDe.length).toBeLessThanOrEqual(15);
+    expect(withDe.length).toBeLessThanOrEqual(17);
     expect(data.quizzes.length - withDe.length).toBeGreaterThanOrEqual(0);
   });
 
@@ -187,7 +187,9 @@ describe('vague 1.81 — docs v1.80.0 + light-color LocalizedString.de', () => {
             q.id !== 'smartphone' &&
             q.id !== 'gear-lenses' &&
             q.id !== 'lightroom-workflow' &&
-            q.id !== 'marques-photo'
+            q.id !== 'marques-photo' &&
+            q.id !== 'nikon-histoire' &&
+            q.id !== 'tamron-histoire'
         )
         .every((q) => {
           const title = q.title as { de?: string };
