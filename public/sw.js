@@ -3,12 +3,13 @@
  *
  * - Navigations: network-first, offline shell fallback
  * - Guides (/guides/*): network-first, cache last-opened + shell (not SPA index)
+ * - Catalog (/data/questions.json): network-first (new packs must appear in menu)
  * - Static assets: stale-while-revalidate
  * - Same-origin /images/: cache-first (photo-reading / public-domain offline)
  * - API: network only (no stale leaderboard cache)
  */
 
-const CACHE_NAME = 'quiz-pixfan-v20';
+const CACHE_NAME = 'quiz-pixfan-v21';
 const IMAGE_CACHE_NAME = 'quiz-pixfan-images-v6';
 
 const OFFLINE_URLS = [
@@ -216,6 +217,25 @@ self.addEventListener('fetch', (event) => {
             headers: { 'Content-Type': 'application/json' },
           })
       )
+    );
+    return;
+  }
+
+  // Quiz catalog: network-first so new packs appear in the home menu after deploy.
+  // SWR previously left returning PWAs on a stale 15-pack questions.json (QP-298).
+  if (url.pathname === '/data/questions.json') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.ok) {
+            const forCache = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              void cache.put(event.request, forCache);
+            });
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached))
     );
     return;
   }

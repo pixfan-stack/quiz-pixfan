@@ -3,9 +3,9 @@ import sw from '../../public/sw.js?raw';
 import achievementsPanel from '../components/AchievementsPanel.tsx?raw';
 
 describe('P2 a11y / PWA hygiene', () => {
-  it('bumps SW cache to v16 and precaches guides shell', () => {
-    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v20'");
-    expect(sw).not.toContain("CACHE_NAME = 'quiz-pixfan-v19'");
+  it('bumps SW cache to v21 and precaches guides shell', () => {
+    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v21'");
+    expect(sw).not.toContain("CACHE_NAME = 'quiz-pixfan-v20'");
     expect(sw).toContain('/locales/es/translation.json');
     expect(sw).toContain('/locales/de/translation.json');
     expect(sw).toContain("'/guides/'");
@@ -15,6 +15,13 @@ describe('P2 a11y / PWA hygiene', () => {
     expect(sw).toContain("'/guides/scolaires/'");
     expect(sw).toContain("'/guides/scolaires/index.html'");
     expect(sw).toContain("'/guides/scolaires/fiche-seance.html'");
+  });
+
+  it('serves questions.json network-first so new catalog packs appear in the menu', () => {
+    expect(sw).toContain("url.pathname === '/data/questions.json'");
+    expect(sw).toMatch(
+      /questions\.json[\s\S]*?fetch\(event\.request\)[\s\S]*?caches\.match/
+    );
   });
 
   it('keeps guide navigations out of the SPA index.html offline fallback path', () => {
