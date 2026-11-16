@@ -35,7 +35,7 @@ export async function handleShareLanding(
     options.pathLang ??
     url.pathname.match(/^\/(en|es|de)(?:\/|$)/i)?.[1] ??
     null;
-  // Prefer ?lang=; else path locale (vague 1.104 / 1.105).
+  // Prefer ?lang=; else path locale; else FR x-default (bare /s/:id — QP-296).
   const lang = parseLang(url.searchParams.get('lang') ?? pathLang);
   const classeRaw = url.searchParams.get('classe');
   const classe = classeRaw === '1' || classeRaw === 'true';

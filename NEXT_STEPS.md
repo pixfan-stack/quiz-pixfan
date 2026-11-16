@@ -1,9 +1,10 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.105.0** ; tip vague 1.104 docs : **v1.104.0**).
+Document à jour avec l’état réel du dépôt (**v1.106.0** ; tip vague 1.105 docs : **v1.105.0** ; 1.104 : **v1.104.0**).
 
 ## ✅ Livré
 
+- Vague **1.107** : **bare `/s/:id` FR titles** — `parseLang` x-default **fr** (plus EN) · armor 107 — Web Push · salon **no-go** through **1.107** (QP-296 ; live Nikon/Tamron + tous packs)
 - Vague **1.106** : packs **`nikon-histoire`** (67 Q) + **`tamron-histoire`** (25 Q) FR/EN/ES/DE · CTA history · daily history week · OG/sitemap · guide histoire · catalog **17 / 478 / 268** · armor 106 — Web Push · salon **no-go** through **1.106** (QP-294 ; brand packs demandés)
 - Vague **1.105** : **locale sessions** `/en|es|de/s/*` via Pages Functions (pas proxy `_redirects` — CF 200 = static only, Function miss → SPA FAQ) · armor 105 — Web Push · salon · 16ᵉ **no-go** through **1.105** (QP-293)
 - Vague **1.104** : **JSON-LD home syntax** (`]` parasite FAQ `mainEntity`) · bake shells **partenaires** path-locale (rewrite 200 ignoré live → SPA FAQ) · attempt `_redirects` `/xx/s/:id → /s/:id` (residual CF) · armor 104 — Web Push · salon · 16ᵉ **no-go** through **1.104** (QP-291)
@@ -130,7 +131,7 @@ Document à jour avec l’état réel du dépôt (**v1.105.0** ; tip vague 1.104
 - [x] Docs headline → **v1.77.0** + 17 quiz · 478 Q · 268 illus (vague 1.78 P0 ; baseline live post-1.77.0)
 - [x] Docs headline → **v1.76.0** + 17 quiz · 478 Q · 268 illus (vague 1.77 P0 ; baseline live post-1.76.0)
 - [x] Sitemap harden (`_redirects` SEO exceptions + `_headers` MIME) + `/s/lexique-image-fixe` + `lastmod` home/scolaires/fiche/`/s/*` ≥ 2026-10-22 (vague 1.19–1.37)
-- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79 / 1.80 / 1.81 / 1.82 / 1.83 / 1.84 / 1.85 / 1.86 / 1.87 / 1.88 / 1.89 / 1.90 / 1.91 / 1.92 / 1.93 / 1.94 / 1.95 / 1.96 / 1.97 / 1.98 / 1.99 / 1.100 / 1.101 / 1.102 / 1.103 / **1.104**
+- [x] Web Push / salon / 16ᵉ pack restent **no-go** (ops 1.20) — inchangé en 1.22 / 1.23 / 1.24 / 1.25 / 1.26 / 1.27 / 1.28 / 1.29 / 1.30 / 1.31 / 1.32 / 1.33 / 1.34 / 1.35 / 1.36 / 1.37 / 1.38 / 1.39 / 1.40 / 1.41 / 1.42 / 1.43 / 1.44 / 1.45 / 1.46 / 1.47 / 1.48 / 1.49 / 1.50 / 1.51 / 1.52 / 1.53 / 1.54 / 1.55 / 1.56 / 1.57 / 1.58 / 1.59 / 1.60 / 1.61 / 1.62 / 1.63 / 1.64 / 1.65 / 1.66 / 1.67 / 1.68 / 1.69 / 1.70 / 1.71 / 1.72 / 1.73 / 1.74 / 1.75 / 1.76 / 1.77 / 1.78 / 1.79 / 1.80 / 1.81 / 1.82 / 1.83 / 1.84 / 1.85 / 1.86 / 1.87 / 1.88 / 1.89 / 1.90 / 1.91 / 1.92 / 1.93 / 1.94 / 1.95 / 1.96 / 1.97 / 1.98 / 1.99 / 1.100 / 1.101 / 1.102 / 1.103 / 1.104 / 1.105 / 1.106 / **1.107**
 
 ### Ops Antony — checklist P0.4 (hors code)
 
