@@ -115,7 +115,9 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    fetch('/data/questions.json')
+    // no-cache: pair with SW network-first for /data/questions.json (QP-298)
+    // so returning PWAs do not keep a stale catalog in the home menu.
+    fetch('/data/questions.json', { cache: 'no-cache' })
       .then((r) => r.json())
       .then((data) => setQuizzes((data as QuizzesData).quizzes));
   }, []);

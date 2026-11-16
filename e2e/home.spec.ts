@@ -25,6 +25,13 @@ test.describe('Homepage', () => {
     await expect(page.getByTestId('home-photo-closer')).toBeVisible();
     await expect(page.locator('.achievements')).toHaveCount(0);
     await expect(page.locator(CATEGORY_CARD)).toHaveCount(17);
+    // QP-298: brand histoire packs must appear in Autres quiz (not share-only).
+    await expect(
+      page.locator(CATEGORY_CARD).filter({ hasText: /Histoire de Nikon|Nikon history/i })
+    ).toBeVisible();
+    await expect(
+      page.locator(CATEGORY_CARD).filter({ hasText: /Histoire de Tamron|Tamron history/i })
+    ).toBeVisible();
   });
 
   test('shows brand-first hero with photo CTA', async ({ page }) => {

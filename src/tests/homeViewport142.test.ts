@@ -84,8 +84,8 @@ describe('vague 1.42 — docs v1.41.0 + real DE UI', () => {
     expect(differing).toBeGreaterThan(450);
   });
 
-  it('SW precaches German locale bundle (v20)', () => {
-    expect(sw).toContain("CACHE_NAME = 'quiz-pixfan-v20'");
+  it('SW precaches German locale bundle (v20+; tip v21 after QP-298)', () => {
+    expect(sw).toMatch(/CACHE_NAME = 'quiz-pixfan-v2[1-9]'/);
     expect(sw).toContain('/locales/de/translation.json');
     expect(sw).toContain('/locales/es/translation.json');
   });
