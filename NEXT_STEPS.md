@@ -1,6 +1,6 @@
 # Prochaines étapes — Quiz PixFan
 
-Document à jour avec l’état réel du dépôt (**v1.110.0** → tip vague **1.111** CSP Analytics ; tip vague 1.109 : **v1.109.0** ; tip vague 1.108 : **v1.108.0** ; tip vague 1.107 : **v1.107.0** ; tip vague 1.106 : **v1.106.0** ; tip vague 1.105 docs : **v1.105.0** ; 1.104 : **v1.104.0** ; 1.103 : **v1.103.0** ; path locales tip **v1.99.0** / **v1.98.0**).
+Document à jour avec l’état réel du dépôt (**v1.111.0** ; tip vague 1.110 : **v1.110.0** ; tip vague 1.109 : **v1.109.0** ; tip vague 1.108 : **v1.108.0** ; tip vague 1.107 : **v1.107.0** ; tip vague 1.106 : **v1.106.0** ; tip vague 1.105 docs : **v1.105.0** ; 1.104 : **v1.104.0** ; 1.103 : **v1.103.0** ; path locales tip **v1.99.0** / **v1.98.0**).
 
 ## ✅ Livré
 
