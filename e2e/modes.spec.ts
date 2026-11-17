@@ -8,25 +8,22 @@ async function completeCurrentQuiz(
   for (let i = 0; i < maxQuestions; i++) {
     await expect(page.locator('.question-text')).toBeVisible({ timeout: 8000 });
     await page.locator('.answer-option').first().click();
+    // Exact name — answer copy can contain « Vérifier… » (daily multi Q).
     await page
-      .locator('button:has-text("Vérifier"), button:has-text("Check answer")')
-      .first()
+      .getByRole('button', { name: /^(Vérifier|Check answer)$/ })
       .click();
     await expect(page.locator('.feedback')).toBeVisible({ timeout: 3000 });
 
-    const finishBtn = page
-      .locator('button:has-text("Voir les résultats"), button:has-text("See results")')
-      .first();
+    const finishBtn = page.getByRole('button', {
+      name: /^(Voir les résultats|See results)$/,
+    });
     if (await finishBtn.isVisible().catch(() => false)) {
       await finishBtn.click({ force: true });
       break;
     }
 
     await page
-      .locator(
-        'button:has-text("Question suivante"), button:has-text("Next question")'
-      )
-      .first()
+      .getByRole('button', { name: /^(Question suivante|Next question)$/ })
       .click({ force: true });
   }
   await expect(page.locator('.result-section')).toBeVisible({ timeout: 8000 });
